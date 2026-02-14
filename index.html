@@ -123,35 +123,96 @@
         </div>
     </div>
 
-    <!-- Results Section -->
-    <section class="results-section">
-        <div class="container">
-            <div class="section-header">
-                <h2><i class="fas fa-star"></i> Generated Name Styles</h2>
-                <!-- results count hidden (optional) -->
-            </div>
-            <div id="result" class="results-grid">
-                <!-- Content loaded by JavaScript -->
-            </div>
+<!-- Results Section -->
+<section class="results-section">
+    <div class="container">
+        <div class="section-header">
+            <h2><i class="fas fa-star"></i> Generated Name Styles</h2>
+            <!-- results count hidden -->
+        </div>
+        <div id="result" class="results-grid">
+            <!-- Content loaded by JavaScript -->
+        </div>
 
-            <!-- Suggestions Tray (always visible) -->
-            <div id="suggestionsTray" class="suggestions-tray">
-                <div class="suggestions-header">
-                    <h3><i class="fas fa-fire"></i> Trending in <span id="currentCategoryName">Love</span></h3>
-                    <span class="trending-badge" id="suggestionCount">3 suggestions</span>
+        <!-- Suggestions Tray -->
+        <div id="suggestionsTray" class="suggestions-tray">
+            <div class="suggestions-header">
+                <h3><i class="fas fa-fire"></i> Trending in <span id="currentCategoryName">Love</span></h3>
+                <span class="trending-badge" id="suggestionCount">3 suggestions</span>
+            </div>
+            <div id="miniSuggestions" class="suggestions-mini-grid">
+                <!-- Mini suggestions will load here -->
+            </div>
+            <button id="seeMoreBtn" class="see-more-btn" onclick="toggleFullSuggestions()">
+                <i class="fas fa-chevron-down"></i> See more ideas
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- AdSense Placeholder (hidden, will be cloned) -->
+<div class="ad-single" style="display: none;"></div>
+
+    <!-- ===== HOW TO USE GUIDE ===== -->
+    <section class="guide-section">
+        <div class="container">
+            <h2><i class="fas fa-book-open"></i> How to Create Stylish Names</h2>
+            <div class="guide-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Enter Your Name</h3>
+                    <p>Type your original name or nickname in the input box above.</p>
                 </div>
-                <div id="miniSuggestions" class="suggestions-mini-grid">
-                    <!-- Mini suggestions will load here -->
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Choose Category</h3>
+                    <p>Select from Love, Gamer, Fancy, or Font styles based on your preference.</p>
                 </div>
-                <button id="seeMoreBtn" class="see-more-btn" onclick="toggleFullSuggestions()">
-                    <i class="fas fa-chevron-down"></i> See more ideas
-                </button>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Generate & Copy</h3>
+                    <p>Click generate and copy your favorite style with one click.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Use Anywhere</h3>
+                    <p>Use your new stylish name in games, social media, or anywhere online.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- AdSense Placeholder (simple, one per category) -->
-    <div class="ad-single" style="display: none;"></div> <!-- hidden placeholder, will be cloned -->
+    <!-- ===== WHY CHOOSE OUR GENERATOR ===== -->
+    <section class="features-section">
+        <div class="container">
+            <h2><i class="fas fa-award"></i> Why Choose Our Generator</h2>
+            <div class="features-grid">
+                <div class="feature">
+                    <i class="fas fa-bolt"></i>
+                    <h3>Instant Generation</h3>
+                    <p>Create 100+ name styles in seconds with our optimized algorithm.</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Mobile Friendly</h3>
+                    <p>Perfectly optimized for mobile devices and touch screens.</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-lock"></i>
+                    <h3>Privacy Protected</h3>
+                    <p>Your names are processed locally, never stored on servers.</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-sync-alt"></i>
+                    <h3>Always Updated</h3>
+                    <p>Regular updates with new styles and symbols added weekly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AdSense Placeholder (hidden, will be cloned) -->
+    <div class="ad-single" style="display: none;"></div>
 
     <!-- Full Suggestions Modal -->
     <div class="modal" id="fullSuggestionsModal">
