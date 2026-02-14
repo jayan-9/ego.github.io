@@ -139,7 +139,7 @@ p { margin-bottom: 1rem; color: var(--gray); }
 /* ===== STICKY TOOLBAR ===== */
 .sticky-toolbar {
     position: sticky;
-    top: 0;  /* 👈 ab bilkul top se sticky */
+    top: 70px;  /* 👈 ye change karna hai */
     background: var(--light);
     padding: 1rem 0;
     box-shadow: var(--shadow);
