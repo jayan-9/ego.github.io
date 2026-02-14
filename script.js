@@ -951,7 +951,7 @@ function loadMiniSuggestions() {
         return;
     }
     const shuffled = [...categorySuggestions].sort(() => Math.random() - 0.5);
-    currentMiniSuggestions = shuffled.slice(0, 3);
+    currentMiniSuggestions = shuffled.slice(0, 50);
     suggestionCount.textContent = categorySuggestions.length;
     let html = '';
     currentMiniSuggestions.forEach(s => {
