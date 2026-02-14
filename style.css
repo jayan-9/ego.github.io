@@ -138,8 +138,12 @@ p { margin-bottom: 1rem; color: var(--gray); }
 
 /* ===== STICKY TOOLBAR ===== */
 .sticky-toolbar {
-    position: sticky; top: 70px; background: var(--light); padding: 1rem 0;
-    box-shadow: var(--shadow); z-index: 999;
+    position: sticky;
+    top: 0;  /* 👈 ab bilkul top se sticky */
+    background: var(--light);
+    padding: 1rem 0;
+    box-shadow: var(--shadow);
+    z-index: 999;
 }
 .toolbar-content { display: flex; gap: 1rem; align-items: center; }
 .input-group { flex: 1; display: flex; gap: 0.5rem; }
