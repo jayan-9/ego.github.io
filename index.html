@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nickname Generator – Stylish Names for Games & Social</title>
+    <meta name="description" content="Free online nickname generator. Create stylish names, fancy fonts, cool symbols for Free Fire, PUBG, BGMI, Instagram, YouTube.">
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="logo">
+                <h1>Nickname<span class="logo-dot">.</span>com</h1>
+                <p class="tagline">Style Your Identity</p>
+            </div>
+            <div class="theme-toggle" id="themeToggle">
+                <i class="fas fa-moon"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sidebar Menu -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h3>Menu</h3>
+            <button class="close-sidebar" id="closeSidebar">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="sidebar-content">
+            <div class="sidebar-item" onclick="toggleTheme()">
+                <i class="fas fa-palette"></i>
+                <span>Theme</span>
+                <span class="theme-status" id="themeStatus">Light</span>
+            </div>
+            <div class="sidebar-item" onclick="openSymbolModal()">
+                <i class="fas fa-symbols"></i>
+                <span>Symbols Library</span>
+            </div>
+            <div class="sidebar-item" onclick="showGuide()">
+                <i class="fas fa-book"></i>
+                <span>How to Use</span>
+            </div>
+            <div class="sidebar-item" id="noteSection">
+                <i class="fas fa-sticky-note"></i>
+                <span>Quick Notes</span>
+                <span class="note-badge" id="noteCount">0/100</span>
+            </div>
+            <div class="sidebar-item coming-soon">
+                <i class="fas fa-robot"></i>
+                <span>AI Name Generator</span>
+                <span class="badge">Soon</span>
+            </div>
+            <div class="sidebar-divider"></div>
+            <div class="sidebar-item" onclick="window.location.href='about.html'">
+                <i class="fas fa-info-circle"></i>
+                <span>About Us</span>
+            </div>
+            <div class="sidebar-item" onclick="window.location.href='contact.html'">
+                <i class="fas fa-envelope"></i>
+                <span>Contact</span>
+            </div>
+            <div class="sidebar-item" onclick="window.location.href='privacy-policy.html'">
+                <i class="fas fa-shield-alt"></i>
+                <span>Privacy Policy</span>
+            </div>
+        </div>
+        <div class="note-editor" id="noteEditor">
+            <textarea placeholder="Type your notes here... (Max 100 words)" maxlength="500" id="noteText"></textarea>
+            <div class="note-actions">
+                <button onclick="saveNote()" class="save-note">
+                    <i class="fas fa-save"></i> Save
+                </button>
+                <button onclick="clearNote()" class="clear-note">
+                    <i class="fas fa-trash"></i> Clear
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sticky Toolbar -->
+    <div class="sticky-toolbar">
+        <div class="container">
+            <div class="toolbar-content">
+                <div class="input-group">
+                    <input type="text" id="nameInput" placeholder="Enter your name or nickname..." autocomplete="off">
+                    <button class="symbol-btn" onclick="openSymbolModal()" title="Insert Symbols">
+                        ☺
+                    </button>
+                </div>
+                <button class="generate-btn" onclick="generateStyles()">
+                    <i class="fas fa-wand-magic-sparkles"></i> Generate
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Categories -->
+    <div class="categories-section">
+        <div class="container">
+            <div class="categories-scroll">
+                <button class="category-btn active" onclick="selectCategory('love')">
+                    <i class="fas fa-heart"></i> Love
+                </button>
+                <button class="category-btn" onclick="selectCategory('gamer')">
+                    <i class="fas fa-gamepad"></i> Gamer
+                </button>
+                <button class="category-btn" onclick="selectCategory('fancy')">
+                    <i class="fas fa-crown"></i> Fancy
+                </button>
+                <button class="category-btn" onclick="selectCategory('font')">
+                    <i class="fas fa-font"></i> Fonts
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Results Section -->
+    <section class="results-section">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fas fa-star"></i> Generated Name Styles</h2>
+                <!-- results count hidden (optional) -->
+            </div>
+            <div id="result" class="results-grid">
+                <!-- Content loaded by JavaScript -->
+            </div>
+
+            <!-- Suggestions Tray (always visible) -->
+            <div id="suggestionsTray" class="suggestions-tray">
+                <div class="suggestions-header">
+                    <h3><i class="fas fa-fire"></i> Trending in <span id="currentCategoryName">Love</span></h3>
+                    <span class="trending-badge" id="suggestionCount">3 suggestions</span>
+                </div>
+                <div id="miniSuggestions" class="suggestions-mini-grid">
+                    <!-- Mini suggestions will load here -->
+                </div>
+                <button id="seeMoreBtn" class="see-more-btn" onclick="toggleFullSuggestions()">
+                    <i class="fas fa-chevron-down"></i> See more ideas
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- AdSense Placeholder (simple, one per category) -->
+    <div class="ad-single" style="display: none;"></div> <!-- hidden placeholder, will be cloned -->
+
+    <!-- Full Suggestions Modal -->
+    <div class="modal" id="fullSuggestionsModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-lightbulb"></i> <span id="modalCategoryName">Love</span> Name Ideas</h3>
+                <button class="close-modal" onclick="closeFullSuggestions()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div id="fullSuggestionsGrid" class="suggestions-grid-full">
+                    <!-- Full suggestions will load here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Symbol Modal -->
+    <div class="modal" id="symbolModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-symbols"></i> Symbol Picker</h3>
+                <button class="close-modal" onclick="closeSymbolModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="symbol-categories" id="symbolCategories">
+                    <!-- Categories loaded by JavaScript -->
+                </div>
+                <div class="symbols-grid" id="symbolsGrid">
+                    <!-- Symbols loaded by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Guide Modal -->
+    <div class="modal guide-modal" id="guideModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-book"></i> How to Use This Tool</h3>
+                <button class="close-modal" onclick="closeGuide()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="guide-content">
+                    <h4>Complete Guide to Creating Perfect Nicknames</h4>
+                    <div class="guide-section">
+                        <h5>Getting Started</h5>
+                        <p>Our nickname generator is designed to be simple and intuitive. Follow these steps to create the perfect stylish name:</p>
+                        <ul>
+                            <li><strong>Step 1:</strong> Enter your desired name in the input field at the top</li>
+                            <li><strong>Step 2:</strong> Choose a category that matches your style preference</li>
+                            <li><strong>Step 3:</strong> Click "Generate" to see hundreds of variations</li>
+                            <li><strong>Step 4:</strong> Click the copy button next to your favorite style</li>
+                        </ul>
+                    </div>
+                    <div class="guide-section">
+                        <h5>Category Descriptions</h5>
+                        <p><span class="category-tag love-tag"><i class="fas fa-heart"></i> Love</span> – Romantic and affectionate styles.</p>
+                        <p><span class="category-tag gamer-tag"><i class="fas fa-gamepad"></i> Gamer</span> – Bold and aggressive gaming styles.</p>
+                        <p><span class="category-tag fancy-tag"><i class="fas fa-crown"></i> Fancy</span> – Elegant and sophisticated styles.</p>
+                        <p><span class="category-tag font-tag"><i class="fas fa-font"></i> Fonts</span> – Unique text transformations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Nickname</h3>
+                    <p>Create unique and stylish names for gaming and social media. 100% free online tool.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#" onclick="showGuide()">How to Use</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Nickname. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
