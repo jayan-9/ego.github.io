@@ -70,10 +70,10 @@ p { margin-bottom: 1rem; color: var(--gray); }
     background: var(--light);
     box-shadow: var(--shadow);
     padding: 1rem 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    /* position: sticky;  <- HATA DIYA */
+    width: 100%;
 }
+
 .navbar .container {
     display: flex;
     align-items: center;
@@ -139,7 +139,7 @@ p { margin-bottom: 1rem; color: var(--gray); }
 /* ===== STICKY TOOLBAR ===== */
 .sticky-toolbar {
     position: sticky;
-    top: 70px;  /* 👈 ye change karna hai */
+    top: 0;  /* ab bilkul top se sticky */
     background: var(--light);
     padding: 1rem 0;
     box-shadow: var(--shadow);
