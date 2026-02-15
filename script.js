@@ -978,28 +978,21 @@ function loadMiniSuggestions() {
         `;
         
         // 20 suggestions ke baad IMAGE ADD KARO
-        if (index === 19) {  // 0 se count start hota hai, to 20th suggestion ke baad
-            html += `
-                <div style="grid-column: 1 / -1; margin: 20px 0; text-align: center;">
-                    <div style="
-                        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-                        border-radius: 16px;
-                        padding: 30px 20px;
-                        color: white;
-                        box-shadow: var(--shadow-lg);
-                    ">
-                        <div style="font-size: 3rem; margin-bottom: 10px;">🏆</div>
-                        <h3 style="color: white; margin-bottom: 5px;">I'm Stylish</h3>
-                        <p style="color: rgba(255,255,255,0.9); font-size: 1.2rem; margin-bottom: 5px;">324728</p>
-                        <p style="color: rgba(255,255,255,0.8);">I know Stylish • 220659</p>
-                        <div style="display: flex; justify-content: center; gap: 30px; margin-top: 15px;">
-                            <span><i class="fas fa-thumbs-up"></i> 39,778</span>
-                            <span><i class="fas fa-thumbs-down"></i> 124,639</span>
-                        </div>
-                    </div>
-                </div>
-            `;
-        }
+        if (index === 19) {
+    html += `
+        <div style="grid-column: 1 / -1; margin: 20px 0; text-align: center;">
+            <img src="https://jayan-9.github.io/ego.github.io/stylish.jpg" 
+                 alt="Stylish Design"
+                 style="
+                    max-width: 100%;
+                    height: auto;
+                    border-radius: 16px;
+                    box-shadow: var(--shadow-lg);
+                    border: 1px solid var(--gray-light);
+                 ">
+        </div>
+    `;
+}
     });
     
     miniGrid.innerHTML = html;
