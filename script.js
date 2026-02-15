@@ -937,27 +937,71 @@ function selectCategory(type) {
     loadMiniSuggestions();
 }
 
-// ===== SUGGESTIONS TRAY =====
+// ===== LOAD MINI SUGGESTIONS WITH IMAGE AFTER 20 =====
 function loadMiniSuggestions() {
     const miniGrid = document.getElementById('miniSuggestions');
     const categoryName = document.getElementById('currentCategoryName');
     const suggestionCount = document.getElementById('suggestionCount');
+    
     if (!miniGrid || !categoryName || !suggestionCount) return;
+    
     categoryName.textContent = currentFilter.charAt(0).toUpperCase() + currentFilter.slice(1);
     const categorySuggestions = suggestionsData[currentFilter] || [];
+    
     if (categorySuggestions.length === 0) {
-        miniGrid.innerHTML = '<p style="color: var(--gray);">No suggestions yet</p>';
+        miniGrid.innerHTML = '<p style="color: var(--gray); text-align: center; padding: 1rem;">No suggestions yet</p>';
         suggestionCount.textContent = '0';
         return;
     }
+    
+    // Random order me dikhao
     const shuffled = [...categorySuggestions].sort(() => Math.random() - 0.5);
-    currentMiniSuggestions = shuffled.slice(0, 50);
+    
+    // Sab suggestions dikhao (50)
+    currentMiniSuggestions = shuffled;
     suggestionCount.textContent = categorySuggestions.length;
+    
     let html = '';
-    currentMiniSuggestions.forEach(s => {
-        const es = s.replace(/'/g,"\\'").replace(/"/g,'&quot;');
-        html += `<div class="suggestion-mini-card"><span class="suggestion-mini-text" title="${s}">${s}</span><button class="suggestion-mini-copy" onclick="copyText('${es}')"><i class="fas fa-copy"></i></button></div>`;
+    
+    // Har suggestion ke liye loop
+    currentMiniSuggestions.forEach((suggestion, index) => {
+        const escapedSuggestion = suggestion.replace(/'/g, "\\'").replace(/"/g, '&quot;');
+        
+        // Normal suggestion card (pehle jaisa)
+        html += `
+            <div class="suggestion-mini-card">
+                <span class="suggestion-mini-text" title="${suggestion}">${suggestion}</span>
+                <button class="suggestion-mini-copy" onclick="copyText('${escapedSuggestion}')" title="Copy">
+                    <i class="fas fa-copy"></i>
+                </button>
+            </div>
+        `;
+        
+        // 20 suggestions ke baad IMAGE ADD KARO
+        if (index === 19) {  // 0 se count start hota hai, to 20th suggestion ke baad
+            html += `
+                <div style="grid-column: 1 / -1; margin: 20px 0; text-align: center;">
+                    <div style="
+                        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                        border-radius: 16px;
+                        padding: 30px 20px;
+                        color: white;
+                        box-shadow: var(--shadow-lg);
+                    ">
+                        <div style="font-size: 3rem; margin-bottom: 10px;">🏆</div>
+                        <h3 style="color: white; margin-bottom: 5px;">I'm Stylish</h3>
+                        <p style="color: rgba(255,255,255,0.9); font-size: 1.2rem; margin-bottom: 5px;">324728</p>
+                        <p style="color: rgba(255,255,255,0.8);">I know Stylish • 220659</p>
+                        <div style="display: flex; justify-content: center; gap: 30px; margin-top: 15px;">
+                            <span><i class="fas fa-thumbs-up"></i> 39,778</span>
+                            <span><i class="fas fa-thumbs-down"></i> 124,639</span>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
     });
+    
     miniGrid.innerHTML = html;
 }
 
