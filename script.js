@@ -872,6 +872,7 @@ function convert(name, map) {
     }).join("");
 }
 
+// kya bat hai
 // ===== GENERATE STYLES (with examples when input empty) =====
 function generateStyles() {
     const name = document.getElementById('nameInput')?.value.trim();
