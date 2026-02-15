@@ -912,7 +912,7 @@ function generateStyles() {
                 imgDiv.style.padding = '0';
                 imgDiv.style.overflow = 'hidden';
                 imgDiv.innerHTML = `
-                    <img src="https://jayan-9.github.io/ego.github.io/stylish.jpg" 
+                    <img src="https://jayan-9.github.io/ego.github.io/photo.gif" 
                          alt="Stylish Design"
                          style="width: 100%; height: auto; display: block; border-radius: 8px;">
                 `;
