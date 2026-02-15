@@ -886,13 +886,11 @@ function generateStyles() {
         const shuffled = [...examples].sort(() => Math.random() - 0.5);
         const selected = shuffled.slice(0, 12);
         
-        // Pehle saare examples generate karo
         selected.forEach((example, index) => {
             const div = document.createElement('div');
             div.className = 'style-card';
             let html = `<div class="style-text">${example.text}</div>`;
             
-            // symbols
             if (example.symbols && example.symbols.length) {
                 html += `<div style="display:flex; flex-wrap:wrap; gap:0.3rem; margin-top:0.5rem;">`;
                 example.symbols.slice(0,4).forEach(sym => {
@@ -905,8 +903,8 @@ function generateStyles() {
             div.innerHTML = html;
             result.appendChild(div);
             
-            // 👇 YAHAN IMAGE ADD KARO - 6th example ke baad
-            if (index === 5) {  // 6th example ke baad
+            // Image in examples - 6th ke baad
+            if (index === 5) {
                 const imgDiv = document.createElement('div');
                 imgDiv.className = 'style-card';
                 imgDiv.style.padding = '0';
@@ -938,6 +936,20 @@ function generateStyles() {
         div.className = 'style-card';
         div.innerHTML = `<div class="style-text">${styled}</div><button class="copy-btn" onclick="copyText('${escaped}', this)"><i class="fas fa-copy"></i> Copy</button>`;
         result.appendChild(div);
+        
+        // 👇 IMAGE IN GENERATED STYLES - 50th style ke baad
+        if (index === 49) {  // 50th style ke baad
+            const imgDiv = document.createElement('div');
+            imgDiv.className = 'style-card';
+            imgDiv.style.padding = '0';
+            imgDiv.style.overflow = 'hidden';
+            imgDiv.innerHTML = `
+                <img src="https://jayan-9.github.io/ego.github.io/photo.gif" 
+                     alt="Stylish Design"
+                     style="width: 100%; height: auto; display: block; border-radius: 8px;">
+            `;
+            result.appendChild(imgDiv);
+        }
         
         // one ad after 12th style
         if (index === 11 && shuffled.length > 12) {
