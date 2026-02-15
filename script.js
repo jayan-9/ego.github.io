@@ -872,56 +872,76 @@ function convert(name, map) {
     }).join("");
 }
 
-// ===== GENERATE STYLES (with examples when input empty) =====
+// ===== GENERATE STYLES =====
 function generateStyles() {
     const name = document.getElementById('nameInput')?.value.trim();
     const result = document.getElementById('result');
+    
     if (!result) return;
     result.innerHTML = "";
-
-    // If name is empty, show examples
+    
+    // Agar name nahi hai to DEFAULT EXAMPLES dikhao
     if (!name) {
         const examples = categoryExamples[currentFilter] || categoryExamples.love;
         const shuffled = [...examples].sort(() => Math.random() - 0.5);
         const selected = shuffled.slice(0, 12);
-        selected.forEach(example => {
+        
+        selected.forEach((example, index) => {
             const div = document.createElement('div');
             div.className = 'style-card';
-            let html = `<div class="style-text">${example.text}</div>`;
-            // show some symbols as chips (optional)
-            if (example.symbols && example.symbols.length) {
-                html += `<div style="display:flex; flex-wrap:wrap; gap:0.3rem; margin-top:0.5rem;">`;
-                example.symbols.slice(0,4).forEach(sym => {
-                    html += `<span style="background:var(--gray-light); padding:0.2rem 0.5rem; border-radius:12px; font-size:0.8rem; cursor:pointer;" onclick="copyText('${sym.replace(/'/g,"\\'")}', event)">${sym} <i class="fas fa-copy"></i></span>`;
-                });
-                html += `</div>`;
-            }
-            html += `<button class="copy-btn" onclick="copyText('${example.text.replace(/'/g,"\\'").replace(/"/g,'&quot;')}', this)"><i class="fas fa-copy"></i> Copy</button>`;
-            div.innerHTML = html;
+            div.innerHTML = `
+                <div class="style-text">${example.text}</div>
+                <button class="copy-btn" onclick="copyText('${example.text.replace(/'/g, "\\'").replace(/"/g, '&quot;')}', this)">
+                    <i class="fas fa-copy"></i> Copy
+                </button>
+            `;
             result.appendChild(div);
+            
+            // 6th example ke baad image
+            if (index === 5) {
+                const imgDiv = document.createElement('div');
+                imgDiv.className = 'style-card';
+                imgDiv.style.padding = '0';
+                imgDiv.style.overflow = 'hidden';
+                imgDiv.innerHTML = `
+                    <img src="https://jayan-9.github.io/ego.github.io/stylish.jpg" 
+                         alt="Stylish Design"
+                         style="width: 100%; height: auto; display: block; border-radius: 8px;">
+                `;
+                result.appendChild(imgDiv);
+            }
         });
         return;
     }
-
-    // Name exists: generate actual styles
+    
+    // Agar name hai to STYLES GENERATE karo
     const styles = stylesByCategory[currentFilter] || [];
+    
     if (styles.length === 0) {
-        result.innerHTML = `<div class="empty-state"><i class="fas fa-exclamation-circle"></i><p>No styles for this category yet.</p></div>`;
+        result.innerHTML = `<div class="empty-state"><i class="fas fa-exclamation-circle"></i><p>No styles available for this category yet.</p></div>`;
         return;
     }
+    
     const shuffled = [...styles].sort(() => Math.random() - 0.5);
+    
     shuffled.forEach((style, index) => {
         const styled = style.prefix + convert(name, style.map) + style.suffix;
-        const escaped = styled.replace(/'/g,"\\'").replace(/"/g,'&quot;');
+        const escapedStyled = styled.replace(/'/g, "\\'").replace(/"/g, '&quot;');
+        
         const div = document.createElement('div');
         div.className = 'style-card';
-        div.innerHTML = `<div class="style-text">${styled}</div><button class="copy-btn" onclick="copyText('${escaped}', this)"><i class="fas fa-copy"></i> Copy</button>`;
+        div.innerHTML = `
+            <div class="style-text">${styled}</div>
+            <button class="copy-btn" onclick="copyText('${escapedStyled}', this)">
+                <i class="fas fa-copy"></i> Copy
+            </button>
+        `;
         result.appendChild(div);
-        // one ad after 12th style
-        if (index === 11 && shuffled.length > 12) {
-            const ad = document.createElement('div');
-            ad.className = 'ad-single';
-            result.appendChild(ad);
+        
+        if (i === 11 && shuffled.length > 12) {
+            const adDiv = document.createElement('div');
+            adDiv.className = 'ad-single';
+            result.appendChild(adDiv);
         }
     });
 }
