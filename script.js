@@ -873,32 +873,40 @@ function convert(name, map) {
 }
 
 // ===== GENERATE STYLES =====
+// ===== GENERATE STYLES (with examples when input empty) =====
 function generateStyles() {
     const name = document.getElementById('nameInput')?.value.trim();
     const result = document.getElementById('result');
-    
     if (!result) return;
     result.innerHTML = "";
-    
-    // Agar name nahi hai to DEFAULT EXAMPLES dikhao
+
+    // If name is empty, show examples
     if (!name) {
         const examples = categoryExamples[currentFilter] || categoryExamples.love;
         const shuffled = [...examples].sort(() => Math.random() - 0.5);
         const selected = shuffled.slice(0, 12);
         
+        // Pehle saare examples generate karo
         selected.forEach((example, index) => {
             const div = document.createElement('div');
             div.className = 'style-card';
-            div.innerHTML = `
-                <div class="style-text">${example.text}</div>
-                <button class="copy-btn" onclick="copyText('${example.text.replace(/'/g, "\\'").replace(/"/g, '&quot;')}', this)">
-                    <i class="fas fa-copy"></i> Copy
-                </button>
-            `;
+            let html = `<div class="style-text">${example.text}</div>`;
+            
+            // symbols
+            if (example.symbols && example.symbols.length) {
+                html += `<div style="display:flex; flex-wrap:wrap; gap:0.3rem; margin-top:0.5rem;">`;
+                example.symbols.slice(0,4).forEach(sym => {
+                    html += `<span style="background:var(--gray-light); padding:0.2rem 0.5rem; border-radius:12px; font-size:0.8rem; cursor:pointer;" onclick="copyText('${sym.replace(/'/g,"\\'")}', event)">${sym} <i class="fas fa-copy"></i></span>`;
+                });
+                html += `</div>`;
+            }
+            
+            html += `<button class="copy-btn" onclick="copyText('${example.text.replace(/'/g,"\\'").replace(/"/g,'&quot;')}', this)"><i class="fas fa-copy"></i> Copy</button>`;
+            div.innerHTML = html;
             result.appendChild(div);
             
-            // 6th example ke baad image
-            if (index === 5) {
+            // 👇 YAHAN IMAGE ADD KARO - 6th example ke baad
+            if (index === 5) {  // 6th example ke baad
                 const imgDiv = document.createElement('div');
                 imgDiv.className = 'style-card';
                 imgDiv.style.padding = '0';
@@ -913,12 +921,11 @@ function generateStyles() {
         });
         return;
     }
-    
-    // Agar name hai to STYLES GENERATE karo
+
+    // Name exists: generate actual styles
     const styles = stylesByCategory[currentFilter] || [];
-    
     if (styles.length === 0) {
-        result.innerHTML = `<div class="empty-state"><i class="fas fa-exclamation-circle"></i><p>No styles available for this category yet.</p></div>`;
+        result.innerHTML = `<div class="empty-state"><i class="fas fa-exclamation-circle"></i><p>No styles for this category yet.</p></div>`;
         return;
     }
     
@@ -926,22 +933,17 @@ function generateStyles() {
     
     shuffled.forEach((style, index) => {
         const styled = style.prefix + convert(name, style.map) + style.suffix;
-        const escapedStyled = styled.replace(/'/g, "\\'").replace(/"/g, '&quot;');
-        
+        const escaped = styled.replace(/'/g,"\\'").replace(/"/g,'&quot;');
         const div = document.createElement('div');
         div.className = 'style-card';
-        div.innerHTML = `
-            <div class="style-text">${styled}</div>
-            <button class="copy-btn" onclick="copyText('${escapedStyled}', this)">
-                <i class="fas fa-copy"></i> Copy
-            </button>
-        `;
+        div.innerHTML = `<div class="style-text">${styled}</div><button class="copy-btn" onclick="copyText('${escaped}', this)"><i class="fas fa-copy"></i> Copy</button>`;
         result.appendChild(div);
         
-        if (i === 11 && shuffled.length > 12) {
-            const adDiv = document.createElement('div');
-            adDiv.className = 'ad-single';
-            result.appendChild(adDiv);
+        // one ad after 12th style
+        if (index === 11 && shuffled.length > 12) {
+            const ad = document.createElement('div');
+            ad.className = 'ad-single';
+            result.appendChild(ad);
         }
     });
 }
