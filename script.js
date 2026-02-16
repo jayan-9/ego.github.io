@@ -12201,17 +12201,143 @@ addStyle('gamer', 'gamer_style11', '『ᴳᴬᴹᴱᴿ』', ' ⚠༒︎', {
     a: "α", b: "в", c: "c", d: "ɗ", e: "ᥱ", f: "ƒ", g: "ɠ", h: "ħ", i: "ɪ", j: "נ", k: "κ", l: "ℓ", m: "м", n: "η", o: "ο", p: "թ", q: "զ", r: "ř", s: "ѕ", t: "τ", u: "υ", v: "ν", w: "ω", x: "ẋ", y: "ʏ", z: "ƶ"
 });
 
-// Style 12: ╰⁔╯N⃗ame₊˚⊹亗
-addStyle('gamer', 'gamer_style12', '╰⁔╯', '₊˚⊹亗', {
-    A: "A⃗", B: "B⃗", C: "C⃗", D: "D⃗", E: "E⃗", F: "F⃗", G: "G⃗", H: "H⃗", I: "I⃗", J: "J⃗", K: "K⃗", L: "L⃗", M: "M⃗", N: "N⃗", O: "O⃗", P: "P⃗", Q: "Q⃗", R: "R⃗", S: "S⃗", T: "T⃗", U: "U⃗", V: "V⃗", W: "W⃗", X: "X⃗", Y: "Y⃗", Z: "Z⃗",
-    a: "a", b: "b", c: "c", d: "d", e: "e", f: "f", g: "g", h: "h", i: "I", j: "j", k: "k", l: "l", m: "m", n: "n", o: "o", p: "p", q: "q", r: "r", s: "s", t: "t", u: "u", v: "v", w: "w", x: "x", y: "y", z: "z"
-});
-
 // Style 13: 𖣿Nᰰaᰰmᰰeᰰ ˙ᵕ˙࿐𝟶𝟷
 addStyle('gamer', 'gamer_style13', '𖣿', ' ˙ᵕ˙࿐𝟶𝟷', {
     A: "Aᰰ", B: "Bᰰ", C: "Cᰰ", D: "Dᰰ", E: "Eᰰ", F: "Fᰰ", G: "Gᰰ", H: "Hᰰ", I: "Iᰰ", J: "Jᰰ", K: "Kᰰ", L: "Lᰰ", M: "Mᰰ", N: "Nᰰ", O: "Oᰰ", P: "Pᰰ", Q: "Qᰰ", R: "Rᰰ", S: "Sᰰ", T: "Tᰰ", U: "Uᰰ", V: "Vᰰ", W: "Wᰰ", X: "Xᰰ", Y: "Yᰰ", Z: "Zᰰ",
     a: "aᰰ", b: "bᰰ", c: "cᰰ", d: "dᰰ", e: "eᰰ", f: "fᰰ", g: "gᰰ", h: "hᰰ", i: "iᰰ", j: "jᰰ", k: "kᰰ", l: "lᰰ", m: "mᰰ", n: "nᰰ", o: "oᰰ", p: "pᰰ", q: "qᰰ", r: "rᰰ", s: "sᰰ", t: "tᰰ", u: "uᰰ", v: "vᰰ", w: "wᰰ", x: "xᰰ", y: "yᰰ", z: "zᰰ"
 });
+
+// Style 1: N♥a♥m♥e♥
+addStyle('font', 'font_style1', '', '', {
+    A: "A♥", B: "B♥", C: "C♥", D: "D♥", E: "E♥", F: "F♥", G: "G♥", H: "H♥", I: "I♥", J: "J♥", K: "K♥", L: "L♥", M: "M♥", N: "N♥", O: "O♥", P: "P♥", Q: "Q♥", R: "R♥", S: "S♥", T: "T♥", U: "U♥", V: "V♥", W: "W♥", X: "X♥", Y: "Y♥", Z: "Z♥",
+    a: "a♥", b: "b♥", c: "c♥", d: "d♥", e: "e♥", f: "f♥", g: "g♥", h: "h♥", i: "i♥", j: "j♥", k: "k♥", l: "l♥", m: "m♥", n: "n♥", o: "o♥", p: "p♥", q: "q♥", r: "r♥", s: "s♥", t: "t♥", u: "u♥", v: "v♥", w: "w♥", x: "x♥", y: "y♥", z: "z♥"
+});
+
+// Style 2: N͎a͎m͎e͎
+addStyle('font', 'font_style2', '', '', {
+    A: "A͎", B: "B͎", C: "C͎", D: "D͎", E: "E͎", F: "F͎", G: "G͎", H: "H͎", I: "I͎", J: "J͎", K: "K͎", L: "L͎", M: "M͎", N: "N͎", O: "O͎", P: "P͎", Q: "Q͎", R: "R͎", S: "S͎", T: "T͎", U: "U͎", V: "V͎", W: "W͎", X: "X͎", Y: "Y͎", Z: "Z͎",
+    a: "a͎", b: "b͎", c: "c͎", d: "d͎", e: "e͎", f: "f͎", g: "g͎", h: "h͎", i: "i͎", j: "j͎", k: "k͎", l: "l͎", m: "m͎", n: "n͎", o: "o͎", p: "p͎", q: "q͎", r: "r͎", s: "s͎", t: "t͎", u: "u͎", v: "v͎", w: "w͎", x: "x͎", y: "y͎", z: "z͎"
+});
+
+// Style 3: N᷿a᷿m᷿e᷿
+addStyle('font', 'font_style3', '', '', {
+    A: "A᷿", B: "B᷿", C: "C᷿", D: "D᷿", E: "E᷿", F: "F᷿", G: "G᷿", H: "H᷿", I: "I᷿", J: "J᷿", K: "K᷿", L: "L᷿", M: "M᷿", N: "N᷿", O: "O᷿", P: "P᷿", Q: "Q᷿", R: "R᷿", S: "S᷿", T: "T᷿", U: "U᷿", V: "V᷿", W: "W᷿", X: "X᷿", Y: "Y᷿", Z: "Z᷿",
+    a: "a᷿", b: "b᷿", c: "c᷿", d: "d᷿", e: "e᷿", f: "f᷿", g: "g᷿", h: "h᷿", i: "i᷿", j: "j᷿", k: "k᷿", l: "l᷿", m: "m᷿", n: "n᷿", o: "o᷿", p: "p᷿", q: "q᷿", r: "r᷿", s: "s᷿", t: "t᷿", u: "u᷿", v: "v᷿", w: "w᷿", x: "x᷿", y: "y᷿", z: "z᷿"
+});
+
+// Style 4: N͛a͛m͛e͛
+addStyle('font', 'font_style4', '', '', {
+    A: "A͛", B: "B͛", C: "C͛", D: "D͛", E: "E͛", F: "F͛", G: "G͛", H: "H͛", I: "I͛", J: "J͛", K: "K͛", L: "L͛", M: "M͛", N: "N͛", O: "O͛", P: "P͛", Q: "Q͛", R: "R͛", S: "S͛", T: "T͛", U: "U͛", V: "V͛", W: "W͛", X: "X͛", Y: "Y͛", Z: "Z͛",
+    a: "a͛", b: "b͛", c: "c͛", d: "d͛", e: "e͛", f: "f͛", g: "g͛", h: "h͛", i: "i͛", j: "j͛", k: "k͛", l: "l͛", m: "m͛", n: "n͛", o: "o͛", p: "p͛", q: "q͛", r: "r͛", s: "s͛", t: "t͛", u: "u͛", v: "v͛", w: "w͛", x: "x͛", y: "y͛", z: "z͛"
+});
+
+// Style 5: N҈a҈m҈e҈
+addStyle('font', 'font_style5', '', '', {
+    A: "A҈", B: "B҈", C: "C҈", D: "D҈", E: "E҈", F: "F҈", G: "G҈", H: "H҈", I: "I҈", J: "J҈", K: "K҈", L: "L҈", M: "M҈", N: "N҈", O: "O҈", P: "P҈", Q: "Q҈", R: "R҈", S: "S҈", T: "T҈", U: "U҈", V: "V҈", W: "W҈", X: "X҈", Y: "Y҈", Z: "Z҈",
+    a: "a҈", b: "b҈", c: "c҈", d: "d҈", e: "e҈", f: "f҈", g: "g҈", h: "h҈", i: "i҈", j: "j҈", k: "k҈", l: "l҈", m: "m҈", n: "n҈", o: "o҈", p: "p҈", q: "q҈", r: "r҈", s: "s҈", t: "t҈", u: "u҈", v: "v҈", w: "w҈", x: "x҈", y: "y҈", z: "z҈"
+});
+
+// Style 6: Nͥaͣmͫeͤ
+addStyle('font', 'font_style6', '', '', {
+    A: "Aͣ", B: "Bͤ", C: "Cͨ", D: "Dͩ", E: "Eͤ", F: "Fͦ", G: "Gͧ", H: "Hͪ", I: "Iͥ", J: "Jͩ", K: "Kͪ", L: "Lͥ", M: "Mͫ", N: "Nͪ", O: "Oͦ", P: "Pͦ", Q: "Qͦ", R: "Rͬ", S: "Sͧ", T: "Tͭ", U: "Uͧ", V: "Vͮ", W: "Wͭ", X: "Xͮ", Y: "Yͭ", Z: "Zͫ",
+    a: "aͣ", b: "bͤ", c: "cͨ", d: "dͩ", e: "eͤ", f: "fͦ", g: "gͧ", h: "hͪ", i: "iͥ", j: "jͩ", k: "kͪ", l: "lͥ", m: "mͫ", n: "nͪ", o: "oͦ", p: "pͦ", q: "qͦ", r: "rͬ", s: "sͧ", t: "tͭ", u: "uͧ", v: "vͮ", w: "wͭ", x: "xͮ", y: "yͭ", z: "zͫ"
+});
+
+// Style 7: N᷄a᷄m᷄e᷄
+addStyle('font', 'font_style7', '', '', {
+    A: "A᷄", B: "B᷄", C: "C᷄", D: "D᷄", E: "E᷄", F: "F᷄", G: "G᷄", H: "H᷄", I: "I᷄", J: "J᷄", K: "K᷄", L: "L᷄", M: "M᷄", N: "N᷄", O: "O᷄", P: "P᷄", Q: "Q᷄", R: "R᷄", S: "S᷄", T: "T᷄", U: "U᷄", V: "V᷄", W: "W᷄", X: "X᷄", Y: "Y᷄", Z: "Z᷄",
+    a: "a᷄", b: "b᷄", c: "c᷄", d: "d᷄", e: "e᷄", f: "f᷄", g: "g᷄", h: "h᷄", i: "i᷄", j: "j᷄", k: "k᷄", l: "l᷄", m: "m᷄", n: "n᷄", o: "o᷄", p: "p᷄", q: "q᷄", r: "r᷄", s: "s᷄", t: "t᷄", u: "u᷄", v: "v᷄", w: "w᷄", x: "x᷄", y: "y᷄", z: "z᷄"
+});
+
+// Style 8: N᷃a᷃m᷃e᷃
+addStyle('font', 'font_style8', '', '', {
+    A: "A᷃", B: "B᷃", C: "C᷃", D: "D᷃", E: "E᷃", F: "F᷃", G: "G᷃", H: "H᷃", I: "I᷃", J: "J᷃", K: "K᷃", L: "L᷃", M: "M᷃", N: "N᷃", O: "O᷃", P: "P᷃", Q: "Q᷃", R: "R᷃", S: "S᷃", T: "T᷃", U: "U᷃", V: "V᷃", W: "W᷃", X: "X᷃", Y: "Y᷃", Z: "Z᷃",
+    a: "a᷃", b: "b᷃", c: "c᷃", d: "d᷃", e: "e᷃", f: "f᷃", g: "g᷃", h: "h᷃", i: "i᷃", j: "j᷃", k: "k᷃", l: "l᷃", m: "m᷃", n: "n᷃", o: "o᷃", p: "p᷃", q: "q᷃", r: "r᷃", s: "s᷃", t: "t᷃", u: "u᷃", v: "v᷃", w: "w᷃", x: "x᷃", y: "y᷃", z: "z᷃"
+});
+
+// Style 9: N᷈a᷈m᷈e᷈
+addStyle('font', 'font_style9', '', '', {
+    A: "A᷈", B: "B᷈", C: "C᷈", D: "D᷈", E: "E᷈", F: "F᷈", G: "G᷈", H: "H᷈", I: "I᷈", J: "J᷈", K: "K᷈", L: "L᷈", M: "M᷈", N: "N᷈", O: "O᷈", P: "P᷈", Q: "Q᷈", R: "R᷈", S: "S᷈", T: "T᷈", U: "U᷈", V: "V᷈", W: "W᷈", X: "X᷈", Y: "Y᷈", Z: "Z᷈",
+    a: "a᷈", b: "b᷈", c: "c᷈", d: "d᷈", e: "e᷈", f: "f᷈", g: "g᷈", h: "h᷈", i: "i᷈", j: "j᷈", k: "k᷈", l: "l᷈", m: "m᷈", n: "n᷈", o: "o᷈", p: "p᷈", q: "q᷈", r: "r᷈", s: "s᷈", t: "t᷈", u: "u᷈", v: "v᷈", w: "w᷈", x: "x᷈", y: "y᷈", z: "z᷈"
+});
+
+// Style 11: NᏗᎷᏋ
+addStyle('font', 'font_style11', '', '', {
+    A: "Ꮧ", B: "Ᏸ", C: "ፈ", D: "Ꮄ", E: "Ꮛ", F: "Ꭶ", G: "Ꮆ", H: "Ꮒ", I: "Ꭵ", J: "Ꮰ", K: "Ꮶ", L: "Ꮭ", M: "Ꮇ", N: "Ꮑ", O: "Ꭷ", P: "Ꭾ", Q: "Ꭴ", R: "Ꮢ", S: "Ꮥ", T: "Ꮦ", U: "Ꮼ", V: "Ꮙ", W: "Ꮗ", X: "ጀ", Y: "Ꭹ", Z: "ፚ",
+    a: "Ꮧ", b: "Ᏸ", c: "ፈ", d: "Ꮄ", e: "Ꮛ", f: "Ꭶ", g: "Ꮆ", h: "Ꮒ", i: "Ꭵ", j: "Ꮰ", k: "Ꮶ", l: "Ꮭ", m: "Ꮇ", n: "Ꮑ", o: "Ꭷ", p: "Ꭾ", q: "Ꭴ", r: "Ꮢ", s: "Ꮥ", t: "Ꮦ", u: "Ꮼ", v: "Ꮙ", w: "Ꮗ", x: "ጀ", y: "Ꭹ", z: "ፚ"
+});
+
+// Style 12: N͟a͟m͟e͟
+addStyle('font', 'font_style12', '', '', {
+    A: "A͟", B: "B͟", C: "C͟", D: "D͟", E: "E͟", F: "F͟", G: "G͟", H: "H͟", I: "I͟", J: "J͟", K: "K͟", L: "L͟", M: "M͟", N: "N͟", O: "O͟", P: "P͟", Q: "Q͟", R: "R͟", S: "S͟", T: "T͟", U: "U͟", V: "V͟", W: "W͟", X: "X͟", Y: "Y͟", Z: "Z͟",
+    a: "a͟", b: "b͟", c: "c͟", d: "d͟", e: "e͟", f: "f͟", g: "g͟", h: "h͟", i: "i͟", j: "j͟", k: "k͟", l: "l͟", m: "m͟", n: "n͟", o: "o͟", p: "p͟", q: "q͟", r: "r͟", s: "s͟", t: "t͟", u: "u͟", v: "v͟", w: "w͟", x: "x͟", y: "y͟", z: "z͟"
+});
+
+// Style 13: N̤̮a̤̮m̤̮e̤̮
+addStyle('font', 'font_style13', '', '', {
+    A: "A̤̮", B: "B̤̮", C: "C̤̮", D: "D̤̮", E: "E̤̮", F: "F̤̮", G: "G̤̮", H: "H̤̮", I: "I̤̮", J: "J̤̮", K: "K̤̮", L: "L̤̮", M: "M̤̮", N: "N̤̮", O: "O̤̮", P: "P̤̮", Q: "Q̤̮", R: "R̤̮", S: "S̤̮", T: "T̤̮", U: "Ṳ̮", V: "V̤̮", W: "W̤̮", X: "X̤̮", Y: "Y̤̮", Z: "Z̤̮",
+    a: "a̤̮", b: "b̤̮", c: "c̤̮", d: "d̤̮", e: "e̤̮", f: "f̤̮", g: "g̤̮", h: "h̤̮", i: "i̤̮", j: "j̤̮", k: "k̤̮", l: "l̤̮", m: "m̤̮", n: "n̤̮", o: "o̤̮", p: "p̤̮", q: "q̤̮", r: "r̤̮", s: "s̤̮", t: "t̤̮", u: "ṳ̮", v: "v̤̮", w: "w̤̮", x: "x̤̮", y: "y̤̮", z: "z̤̮"
+});
+
+// Style 14: Nᰔᩚaᰔᩚmᰔᩚeᰔᩚ
+addStyle('font', 'font_style14', '', '', {
+    A: "Aᰔᩚ", B: "Bᰔᩚ", C: "Cᰔᩚ", D: "Dᰔᩚ", E: "Eᰔᩚ", F: "Fᰔᩚ", G: "Gᰔᩚ", H: "Hᰔᩚ", I: "Iᰔᩚ", J: "Jᰔᩚ", K: "Kᰔᩚ", L: "Lᰔᩚ", M: "Mᰔᩚ", N: "Nᰔᩚ", O: "Oᰔᩚ", P: "Pᰔᩚ", Q: "Qᰔᩚ", R: "Rᰔᩚ", S: "Sᰔᩚ", T: "Tᰔᩚ", U: "Uᰔᩚ", V: "Vᰔᩚ", W: "Wᰔᩚ", X: "Xᰔᩚ", Y: "Yᰔᩚ", Z: "Zᰔᩚ",
+    a: "aᰔᩚ", b: "bᰔᩚ", c: "cᰔᩚ", d: "dᰔᩚ", e: "eᰔᩚ", f: "fᰔᩚ", g: "gᰔᩚ", h: "hᰔᩚ", i: "iᰔᩚ", j: "jᰔᩚ", k: "kᰔᩚ", l: "lᰔᩚ", m: "mᰔᩚ", n: "nᰔᩚ", o: "oᰔᩚ", p: "pᰔᩚ", q: "qᰔᩚ", r: "rᰔᩚ", s: "sᰔᩚ", t: "tᰔᩚ", u: "uᰔᩚ", v: "vᰔᩚ", w: "wᰔᩚ", x: "xᰔᩚ", y: "yᰔᩚ", z: "zᰔᩚ"
+});
+
+// Style 15: Nᝪaᝪmᝪeᝪ
+addStyle('font', 'font_style15', '', '', {
+    A: "Aᝪ", B: "Bᝪ", C: "Cᝪ", D: "Dᝪ", E: "Eᝪ", F: "Fᝪ", G: "Gᝪ", H: "Hᝪ", I: "Iᝪ", J: "Jᝪ", K: "Kᝪ", L: "Lᝪ", M: "Mᝪ", N: "Nᝪ", O: "Oᝪ", P: "Pᝪ", Q: "Qᝪ", R: "Rᝪ", S: "Sᝪ", T: "Tᝪ", U: "Uᝪ", V: "Vᝪ", W: "Wᝪ", X: "Xᝪ", Y: "Yᝪ", Z: "Zᝪ",
+    a: "aᝪ", b: "bᝪ", c: "cᝪ", d: "dᝪ", e: "eᝪ", f: "fᝪ", g: "gᝪ", h: "hᝪ", i: "iᝪ", j: "jᝪ", k: "kᝪ", l: "lᝪ", m: "mᝪ", n: "nᝪ", o: "oᝪ", p: "pᝪ", q: "qᝪ", r: "rᝪ", s: "sᝪ", t: "tᝪ", u: "uᝪ", v: "vᝪ", w: "wᝪ", x: "xᝪ", y: "yᝪ", z: "zᝪ"
+});
+
+// Style 16: N𓋴a𓋴m𓋴e𓋴
+addStyle('font', 'font_style16', '', '', {
+    A: "A𓋴", B: "B𓋴", C: "C𓋴", D: "D𓋴", E: "E𓋴", F: "F𓋴", G: "G𓋴", H: "H𓋴", I: "I𓋴", J: "J𓋴", K: "K𓋴", L: "L𓋴", M: "M𓋴", N: "N𓋴", O: "O𓋴", P: "P𓋴", Q: "Q𓋴", R: "R𓋴", S: "S𓋴", T: "T𓋴", U: "U𓋴", V: "V𓋴", W: "W𓋴", X: "X𓋴", Y: "Y𓋴", Z: "Z𓋴",
+    a: "a𓋴", b: "b𓋴", c: "c𓋴", d: "d𓋴", e: "e𓋴", f: "f𓋴", g: "g𓋴", h: "h𓋴", i: "i𓋴", j: "j𓋴", k: "k𓋴", l: "l𓋴", m: "m𓋴", n: "n𓋴", o: "o𓋴", p: "p𓋴", q: "q𓋴", r: "r𓋴", s: "s𓋴", t: "t𓋴", u: "u𓋴", v: "v𓋴", w: "w𓋴", x: "x𓋴", y: "y𓋴", z: "z𓋴"
+});
+
+// Style 17: Nᰰaᰰmᰰeᰰ
+addStyle('font', 'font_style17', '', '', {
+    A: "Aᰰ", B: "Bᰰ", C: "Cᰰ", D: "Dᰰ", E: "Eᰰ", F: "Fᰰ", G: "Gᰰ", H: "Hᰰ", I: "Iᰰ", J: "Jᰰ", K: "Kᰰ", L: "Lᰰ", M: "Mᰰ", N: "Nᰰ", O: "Oᰰ", P: "Pᰰ", Q: "Qᰰ", R: "Rᰰ", S: "Sᰰ", T: "Tᰰ", U: "Uᰰ", V: "Vᰰ", W: "Wᰰ", X: "Xᰰ", Y: "Yᰰ", Z: "Zᰰ",
+    a: "aᰰ", b: "bᰰ", c: "cᰰ", d: "dᰰ", e: "eᰰ", f: "fᰰ", g: "gᰰ", h: "hᰰ", i: "iᰰ", j: "jᰰ", k: "kᰰ", l: "lᰰ", m: "mᰰ", n: "nᰰ", o: "oᰰ", p: "pᰰ", q: "qᰰ", r: "rᰰ", s: "sᰰ", t: "tᰰ", u: "uᰰ", v: "vᰰ", w: "wᰰ", x: "xᰰ", y: "yᰰ", z: "zᰰ"
+});
+
+// Style 18: N𓍯a𓍯m𓍯e𓍯
+addStyle('font', 'font_style18', '', '', {
+    A: "A𓍯", B: "B𓍯", C: "C𓍯", D: "D𓍯", E: "E𓍯", F: "F𓍯", G: "G𓍯", H: "H𓍯", I: "I𓍯", J: "J𓍯", K: "K𓍯", L: "L𓍯", M: "M𓍯", N: "N𓍯", O: "O𓍯", P: "P𓍯", Q: "Q𓍯", R: "R𓍯", S: "S𓍯", T: "T𓍯", U: "U𓍯", V: "V𓍯", W: "W𓍯", X: "X𓍯", Y: "Y𓍯", Z: "Z𓍯",
+    a: "a𓍯", b: "b𓍯", c: "c𓍯", d: "d𓍯", e: "e𓍯", f: "f𓍯", g: "g𓍯", h: "h𓍯", i: "i𓍯", j: "j𓍯", k: "k𓍯", l: "l𓍯", m: "m𓍯", n: "n𓍯", o: "o𓍯", p: "p𓍯", q: "q𓍯", r: "r𓍯", s: "s𓍯", t: "t𓍯", u: "u𓍯", v: "v𓍯", w: "w𓍯", x: "x𓍯", y: "y𓍯", z: "z𓍯"
+});
+
+// Style 19: N꘡a꘡m꘡e꘡
+addStyle('font', 'font_style19', '', '', {
+    A: "A꘡", B: "B꘡", C: "C꘡", D: "D꘡", E: "E꘡", F: "F꘡", G: "G꘡", H: "H꘡", I: "I꘡", J: "J꘡", K: "K꘡", L: "L꘡", M: "M꘡", N: "N꘡", O: "O꘡", P: "P꘡", Q: "Q꘡", R: "R꘡", S: "S꘡", T: "T꘡", U: "U꘡", V: "V꘡", W: "W꘡", X: "X꘡", Y: "Y꘡", Z: "Z꘡",
+    a: "a꘡", b: "b꘡", c: "c꘡", d: "d꘡", e: "e꘡", f: "f꘡", g: "g꘡", h: "h꘡", i: "i꘡", j: "j꘡", k: "k꘡", l: "l꘡", m: "m꘡", n: "n꘡", o: "o꘡", p: "p꘡", q: "q꘡", r: "r꘡", s: "s꘡", t: "t꘡", u: "u꘡", v: "v꘡", w: "w꘡", x: "x꘡", y: "y꘡", z: "z꘡"
+});
+
+// Style 20: N᭡a᭡m᭡e᭡
+addStyle('font', 'font_style20', '', '', {
+    A: "A᭡", B: "B᭡", C: "C᭡", D: "D᭡", E: "E᭡", F: "F᭡", G: "G᭡", H: "H᭡", I: "I᭡", J: "J᭡", K: "K᭡", L: "L᭡", M: "M᭡", N: "N᭡", O: "O᭡", P: "P᭡", Q: "Q᭡", R: "R᭡", S: "S᭡", T: "T᭡", U: "U᭡", V: "V᭡", W: "W᭡", X: "X᭡", Y: "Y᭡", Z: "Z᭡",
+    a: "a᭡", b: "b᭡", c: "c᭡", d: "d᭡", e: "e᭡", f: "f᭡", g: "g᭡", h: "h᭡", i: "i᭡", j: "j᭡", k: "k᭡", l: "l᭡", m: "m᭡", n: "n᭡", o: "o᭡", p: "p᭡", q: "q᭡", r: "r᭡", s: "s᭡", t: "t᭡", u: "u᭡", v: "v᭡", w: "w᭡", x: "x᭡", y: "y᭡", z: "z᭡"
+});
+
+// Style 21: N𓆩♡𓆪a𓆩♡𓆪m𓆩♡𓆪e𓆩♡𓆪
+addStyle('font', 'font_style21', '', '', {
+    A: "A𓆩♡𓆪", B: "B𓆩♡𓆪", C: "C𓆩♡𓆪", D: "D𓆩♡𓆪", E: "E𓆩♡𓆪", F: "F𓆩♡𓆪", G: "G𓆩♡𓆪", H: "H𓆩♡𓆪", I: "I𓆩♡𓆪", J: "J𓆩♡𓆪", K: "K𓆩♡𓆪", L: "L𓆩♡𓆪", M: "M𓆩♡𓆪", N: "N𓆩♡𓆪", O: "O𓆩♡𓆪", P: "P𓆩♡𓆪", Q: "Q𓆩♡𓆪", R: "R𓆩♡𓆪", S: "S𓆩♡𓆪", T: "T𓆩♡𓆪", U: "U𓆩♡𓆪", V: "V𓆩♡𓆪", W: "W𓆩♡𓆪", X: "X𓆩♡𓆪", Y: "Y𓆩♡𓆪", Z: "Z𓆩♡𓆪",
+    a: "a𓆩♡𓆪", b: "b𓆩♡𓆪", c: "c𓆩♡𓆪", d: "d𓆩♡𓆪", e: "e𓆩♡𓆪", f: "f𓆩♡𓆪", g: "g𓆩♡𓆪", h: "h𓆩♡𓆪", i: "i𓆩♡𓆪", j: "j𓆩♡𓆪", k: "k𓆩♡𓆪", l: "l𓆩♡𓆪", m: "m𓆩♡𓆪", n: "n𓆩♡𓆪", o: "o𓆩♡𓆪", p: "p𓆩♡𓆪", q: "q𓆩♡𓆪", r: "r𓆩♡𓆪", s: "s𓆩♡𓆪", t: "t𓆩♡𓆪", u: "u𓆩♡𓆪", v: "v𓆩♡𓆪", w: "w𓆩♡𓆪", x: "x𓆩♡𓆪", y: "y𓆩♡𓆪", z: "z𓆩♡𓆪"
+});
+
+// Style 22: N𓆩a𓆩m𓆩e𓆩
+addStyle('font', 'font_style22', '', '', {
+    A: "A𓆩", B: "B𓆩", C: "C𓆩", D: "D𓆩", E: "E𓆩", F: "F𓆩", G: "G𓆩", H: "H𓆩", I: "I𓆩", J: "J𓆩", K: "K𓆩", L: "L𓆩", M: "M𓆩", N: "N𓆩", O: "O𓆩", P: "P𓆩", Q: "Q𓆩", R: "R𓆩", S: "S𓆩", T: "T𓆩", U: "U𓆩", V: "V𓆩", W: "W𓆩", X: "X𓆩", Y: "Y𓆩", Z: "Z𓆩",
+    a: "a𓆩", b: "b𓆩", c: "c𓆩", d: "d𓆩", e: "e𓆩", f: "f𓆩", g: "g𓆩", h: "h𓆩", i: "i𓆩", j: "j𓆩", k: "k𓆩", l: "l𓆩", m: "m𓆩", n: "n𓆩", o: "o𓆩", p: "p𓆩", q: "q𓆩", r: "r𓆩", s: "s𓆩", t: "t𓆩", u: "u𓆩", v: "v𓆩", w: "w𓆩", x: "x𓆩", y: "y𓆩", z: "z𓆩"
+});
+
+// Style 23: N͟a͟me͟
+addStyle('font', 'font_style23', '', '', {
+    A: "A͟", B: "B͟", C: "C͟", D: "D͟", E: "E͟", F: "F͟", G: "G͟", H: "H͟", I: "I͟", J: "J͟", K: "K͟", L: "L͟", M: "M͟", N: "N͟", O: "O͟", P: "P͟", Q: "Q͟", R: "R͟", S: "S͟", T: "T͟", U: "U͟", V: "V͟", W: "W͟", X: "X͟", Y: "Y͟", Z: "Z͟",
+    a: "a", b: "b", c: "c", d: "d", e: "e͟", f: "f", g: "g", h: "h", i: "i͟", j: "j", k: "k", l: "l", m: "m", n: "n", o: "o͟", p: "p", q: "q", r: "r", s: "s", t: "t", u: "u͟", v: "v", w: "w", x: "x", y: "y", z: "z"
+});    
     
     generateStyles();
     loadMiniSuggestions();
