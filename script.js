@@ -1040,7 +1040,7 @@ function generateStyles() {
     if (!name) {
         const examples = categoryExamples[currentFilter] || categoryExamples.love;
         const shuffled = [...examples].sort(() => Math.random() - 0.5);
-        const selected = shuffled.slice(0, 19);
+        const selected = shuffled.slice(0, 39);
         
         selected.forEach((example, index) => {
             const div = document.createElement('div');
@@ -1060,7 +1060,7 @@ function generateStyles() {
             result.appendChild(div);
             
             // Image in examples - 6th ke baad
-            if (index === 5) {
+            if (index === 18) {
                 const imgDiv = document.createElement('div');
                 imgDiv.className = 'style-card';
                 imgDiv.style.padding = '0';
