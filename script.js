@@ -1094,7 +1094,7 @@ function generateStyles() {
         result.appendChild(div);
         
         // 👇 IMAGE IN GENERATED STYLES - 50th style ke baad
-        if (index === 49) {  // 50th style ke baad
+        if (index === 3) {  // 50th style ke baad
             const imgDiv = document.createElement('div');
             imgDiv.className = 'style-card';
             imgDiv.style.padding = '0';
@@ -1107,7 +1107,7 @@ function generateStyles() {
             result.appendChild(imgDiv);
         }
 
-       if (index === 139) {  // 50th style ke baad
+       if (index === 159) {  // 50th style ke baad
             const imgDiv = document.createElement('div');
             imgDiv.className = 'style-card';
             imgDiv.style.padding = '0';
