@@ -216,21 +216,22 @@ p { margin-bottom: 1rem; color: var(--gray); }
     align-items: center;
 }
 .copy-btn {
-    padding: 0.5rem 1rem;  /* smaller */
-    background: var(--gray-light);  /* not blue */
+    padding: 0.3rem 0.8rem;  /* और छोटा */
+    background: var(--gray-light);
     color: var(--dark);
     border: 1px solid var(--gray);
-    border-radius: 20px;  /* pill shape */
-    font-size: 0.8rem;
+    border-radius: 20px;
+    font-size: 0.75rem;  /* फ़ॉन्ट और छोटा */
     font-weight: 500;
     cursor: pointer;
     transition: var(--transition);
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.3rem;
+    gap: 0.2rem;
     width: fit-content;
-    align-self: flex-end;
+    margin: 0 auto;  /* यह लाइन डालो - center में लाएगा */
+    margin-top: 8px;  /* ऊपर से थोड़ी दूरी (optional) */
 }
 .copy-btn:hover {
     background: var(--gray);
