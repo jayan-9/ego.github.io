@@ -189,7 +189,7 @@ p { margin-bottom: 1rem; color: var(--gray); }
 .section-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; }
 .results-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 1rem;
 }
 .style-card {
@@ -208,7 +208,7 @@ p { margin-bottom: 1rem; color: var(--gray); }
     transform: translateY(-4px);
 }
 .style-text {
-    font-size: 1.25rem;
+    font-size: 1rem;
     font-weight: 500;
     word-break: break-word;
     min-height: 60px;
