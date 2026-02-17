@@ -1106,6 +1106,19 @@ function generateStyles() {
             `;
             result.appendChild(imgDiv);
         }
+
+       if (index === 139) {  // 50th style ke baad
+            const imgDiv = document.createElement('div');
+            imgDiv.className = 'style-card';
+            imgDiv.style.padding = '0';
+            imgDiv.style.overflow = 'hidden';
+            imgDiv.innerHTML = `
+                <img src="https://jayan-9.github.io/ego.github.io/photos.gif" 
+                     alt="Stylish Design"
+                     style="width: 100%; height: auto; display: block; border-radius: 8px;">
+            `;
+            result.appendChild(imgDiv);
+        } 
         
         // one ad after 12th style
         if (index === 11 && shuffled.length > 12) {
