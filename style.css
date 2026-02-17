@@ -563,10 +563,10 @@ p { margin-bottom: 1rem; color: var(--gray); }
     color: #ccc;
 }
 
-/* ===== CATEGORY HEADER - SIMPLE ===== */
 .category-header {
+    text-align: center;
     margin-bottom: 15px;
-    text-align: left;
+    width: 100%;
 }
 
 .category-title {
@@ -574,17 +574,13 @@ p { margin-bottom: 1rem; color: var(--gray); }
     font-weight: 500;
     color: var(--gray);
     margin: 0;
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    gap: 5px;
+    gap: 8px;
+    justify-content: center;
 }
 
 .category-title i {
     font-size: 0.9rem;
     color: var(--gray);
-}
-
-/* Dark theme */
-.dark-theme .category-title {
-    color: #999;
 }
