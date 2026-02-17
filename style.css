@@ -561,3 +561,29 @@ p { margin-bottom: 1rem; color: var(--gray); }
 .dark-theme .tip-text {
     color: #ccc;
 }
+
+/* ===== CATEGORY HEADER - SIMPLE ===== */
+.category-header {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.category-title {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--gray);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.category-title i {
+    font-size: 0.9rem;
+    color: var(--gray);
+}
+
+/* Dark theme */
+.dark-theme .category-title {
+    color: #999;
+}
