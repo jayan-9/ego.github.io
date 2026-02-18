@@ -186,7 +186,12 @@ p { margin-bottom: 1rem; color: var(--gray); }
 
 /* ===== RESULTS SECTION ===== */
 .results-section { padding: 2rem 0; }
-.section-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; }
+.section-header { 
+    display: flex; 
+    justify-content: center;  /* ← CENTER KAR DIYA */
+    align-items: center; 
+    margin-bottom: 2rem; 
+}
 .results-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
