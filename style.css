@@ -566,27 +566,27 @@ p { margin-bottom: 1rem; color: var(--gray); }
 /* catagory titel agjs */
 .category-full-bar {
     text-align: center;
-    margin: 25px 0;
-    padding: 15px 0;
+    margin: 15px 0;
+    padding: 8px 0;
     background: var(--gray-light);
     width: 100%;
-    border-top: 2px solid var(--primary);
-    border-bottom: 2px solid var(--primary);
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
 }
 
 .category-full-bar p {
     margin: 0;
     color: var(--dark);
-    font-size: 1.2rem;
-    font-weight: 600;
-    letter-spacing: 1px;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
 }
 
 /* Dark theme */
 .dark-theme .category-full-bar {
     background: #2d2d2d;
-    border-top-color: var(--primary);
-    border-bottom-color: var(--primary);
+    border-top-color: #666;
+    border-bottom-color: #666;
 }
 
 .dark-theme .category-full-bar p {
