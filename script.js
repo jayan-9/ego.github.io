@@ -1114,20 +1114,6 @@ function generateStyles() {
             result.appendChild(imgDiv);
         }
 
-        // 👇 IMAGE IN GENERATED STYLES - 160th style ke baad (index 159)
-        if (index === 159) {
-            const imgDiv = document.createElement('div');
-            imgDiv.className = 'style-card';
-            imgDiv.style.padding = '0';
-            imgDiv.style.overflow = 'hidden';
-            imgDiv.innerHTML = `
-                <img src="https://jayan-9.github.io/ego.github.io/photos.gif" 
-                     alt="Stylish Design"
-                     style="width: 100%; height: auto; display: block; border-radius: 8px;">
-            `;
-            result.appendChild(imgDiv);
-        } 
-        
         // one ad after 12th style
         if (index === 11 && shuffled.length > 12) {
             const ad = document.createElement('div');
