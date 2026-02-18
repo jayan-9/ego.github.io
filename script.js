@@ -1045,8 +1045,12 @@ function generateStyles() {
         selected.forEach((example, index) => {
             const div = document.createElement('div');
             div.className = 'style-card';
+            div.setAttribute('onclick', `copyText('${example.text.replace(/'/g,"\\'").replace(/"/g,'&quot;')}')`);
+            div.setAttribute('title', 'Click to copy');
+            
             let html = `<div class="style-text">${example.text}</div>`;
             
+            // Symbols (optional, tum rakhna chahe to rakh sakte ho)
             if (example.symbols && example.symbols.length) {
                 html += `<div style="display:flex; flex-wrap:wrap; gap:0.3rem; margin-top:0.5rem;">`;
                 example.symbols.slice(0,4).forEach(sym => {
@@ -1055,11 +1059,10 @@ function generateStyles() {
                 html += `</div>`;
             }
             
-            html += `<button class="copy-btn" onclick="copyText('${example.text.replace(/'/g,"\\'").replace(/"/g,'&quot;')}', this)"><i class="fas fa-copy"></i> Copy</button>`;
             div.innerHTML = html;
             result.appendChild(div);
             
-            // Image in examples - 6th ke baad
+            // Image in examples - 32nd ke baad (index 31)
             if (index === 31) {
                 const imgDiv = document.createElement('div');
                 imgDiv.className = 'style-card';
@@ -1088,13 +1091,17 @@ function generateStyles() {
     shuffled.forEach((style, index) => {
         const styled = style.prefix + convert(name, style.map) + style.suffix;
         const escaped = styled.replace(/'/g,"\\'").replace(/"/g,'&quot;');
+        
+        // Style card - without copy button
         const div = document.createElement('div');
         div.className = 'style-card';
-        div.innerHTML = `<div class="style-text">${styled}</div><button class="copy-btn" onclick="copyText('${escaped}', this)"><i class="fas fa-copy"></i> Copy</button>`;
+        div.setAttribute('onclick', `copyText('${escaped}')`);
+        div.setAttribute('title', 'Click to copy');
+        div.innerHTML = `<div class="style-text">${styled}</div>`;
         result.appendChild(div);
         
-        // 👇 IMAGE IN GENERATED STYLES - 50th style ke baad
-        if (index === 3) {  // 50th style ke baad
+        // 👇 IMAGE IN GENERATED STYLES - 4th style ke baad (index 3)
+        if (index === 3) {
             const imgDiv = document.createElement('div');
             imgDiv.className = 'style-card';
             imgDiv.style.padding = '0';
@@ -1107,7 +1114,8 @@ function generateStyles() {
             result.appendChild(imgDiv);
         }
 
-       if (index === 159) {  // 50th style ke baad
+        // 👇 IMAGE IN GENERATED STYLES - 160th style ke baad (index 159)
+        if (index === 159) {
             const imgDiv = document.createElement('div');
             imgDiv.className = 'style-card';
             imgDiv.style.padding = '0';
