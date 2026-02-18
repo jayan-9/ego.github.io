@@ -1060,7 +1060,7 @@ function generateStyles() {
             result.appendChild(div);
             
             // Image in examples - 6th ke baad
-            if (index === 18) {
+            if (index === 31) {
                 const imgDiv = document.createElement('div');
                 imgDiv.className = 'style-card';
                 imgDiv.style.padding = '0';
