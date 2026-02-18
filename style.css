@@ -562,3 +562,33 @@ p { margin-bottom: 1rem; color: var(--gray); }
 .dark-theme .tip-text {
     color: #ccc;
 }
+
+/* catagory titel agjs */
+.category-full-bar {
+    text-align: center;
+    margin: 25px 0;
+    padding: 15px 0;
+    background: var(--gray-light);
+    width: 100%;
+    border-top: 2px solid var(--primary);
+    border-bottom: 2px solid var(--primary);
+}
+
+.category-full-bar p {
+    margin: 0;
+    color: var(--dark);
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* Dark theme */
+.dark-theme .category-full-bar {
+    background: #2d2d2d;
+    border-top-color: var(--primary);
+    border-bottom-color: var(--primary);
+}
+
+.dark-theme .category-full-bar p {
+    color: #f0f0f0;
+}
