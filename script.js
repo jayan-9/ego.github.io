@@ -1101,7 +1101,7 @@ function generateStyles() {
         result.appendChild(div);
         
         // 👇 IMAGE IN GENERATED STYLES - 4th style ke baad (index 3)
-        if (index === 3) {
+        if (index === 133) {
             const imgDiv = document.createElement('div');
             imgDiv.className = 'style-card';
             imgDiv.style.padding = '0';
