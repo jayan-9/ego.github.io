@@ -597,52 +597,69 @@ p { margin-bottom: 1rem; color: var(--gray); }
     color: #f0f0f0;
 }
 
-/* Simple welcome text - only center and smaller */
+/* ===== WELCOME TEXT - ONLY CENTER & SMALL ===== */
 .welcome-text-container {
     text-align: center;
-    max-width: 900px;
-    margin: 0 auto 10px auto;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
     padding: 10px 15px;
 }
 
 .welcome-heading {
     font-size: 1.1rem;
-    font-weight: normal;
     margin: 5px 0;
+    font-weight: 500;
 }
 
 .welcome-subheading {
     font-size: 0.9rem;
     margin: 5px 0;
+    color: #555;
 }
 
 .name-showcase {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 8px;
+    gap: 6px 8px;
     margin: 10px 0;
 }
 
 .name-item {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     padding: 3px 8px;
-    background: #f0f0f0;
+    background: #f2f2f2;
     border-radius: 4px;
+    color: #333;
+    white-space: nowrap;
 }
 
 .welcome-description {
     font-size: 0.85rem;
     margin: 8px 0;
     line-height: 1.4;
+    color: #444;
 }
 
 .welcome-footer {
     font-size: 0.9rem;
     margin: 8px 0;
+    font-weight: 500;
 }
 
 /* Dark theme - sirf background adjust */
+.dark-theme .welcome-heading,
+.dark-theme .welcome-footer {
+    color: #f0f0f0;
+}
+
+.dark-theme .welcome-subheading,
+.dark-theme .welcome-description {
+    color: #aaa;
+}
+
 .dark-theme .name-item {
     background: #2d2d2d;
+    color: #ccc;
 }
