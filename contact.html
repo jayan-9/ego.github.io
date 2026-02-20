@@ -182,7 +182,7 @@
                 <i class="fas fa-bars"></i>
             </button>
             <div class="logo">
-                <h1>Nickname<span class="logo-dot">.</span>com</h1>
+                <h1>stylename<span class="logo-dot">.</span>in</h1>
                 <p class="tagline">Style Your Identity</p>
             </div>
             <div class="theme-toggle" id="themeToggle">
@@ -221,6 +221,10 @@
                 <i class="fas fa-shield-alt"></i>
                 <span>Privacy Policy</span>
             </div>
+            <div class="sidebar-item" onclick="window.location.href='terms.html'">
+                <i class="fas fa-file-contract"></i>
+                <span>Terms & Conditions</span>
+            </div>
         </div>
     </div>
 
@@ -244,7 +248,7 @@
                         <div class="contact-icon"><i class="fas fa-envelope"></i></div>
                         <div>
                             <h3>Email</h3>
-                            <p><a href="mailto:[your-email@example.com]">[your-email@example.com]</a></p>
+                            <p><a href="mailto:stylenamein@gmail.com">stylenamein@gmail.com</a></p>
                             <p style="font-size: 0.9rem;">We usually reply within 24 hours.</p>
                         </div>
                     </div>
@@ -253,7 +257,7 @@
                         <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
                         <div>
                             <h3>Office</h3>
-                            <p>[Your Address, City, Country]</p>
+                            <p>India</p>
                         </div>
                     </div>
                     
@@ -331,7 +335,7 @@
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>Currently we focus on our free public tool. For enterprise or bulk custom requests, please email us at <strong>[partnerships@example.com]</strong>.</p>
+                        <p>Currently we focus on our free public tool. For enterprise or bulk custom requests, please email us at <strong>stylenamein@gmail.com</strong>.</p>
                     </div>
                 </div>
             </div>
@@ -343,7 +347,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>Nickname</h3>
+                    <h3>stylename.in</h3>
                     <p>Create unique and stylish names for gaming and social media. 100% free online tool.</p>
                 </div>
                 <div class="footer-section">
@@ -353,18 +357,19 @@
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="contact.html">Contact</a></li>
                         <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h3>Legal</h3>
                     <ul>
                         <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>© 2026 Nickname. All rights reserved.</p>
+                <p>© 2026 stylename.in. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -378,12 +383,12 @@
 
     <script src="script.js"></script>
     <script>
-        // Contact form submission simulation (replace with actual backend later)
+        // Contact form submission simulation
         function submitContactForm(e) {
             e.preventDefault();
             const status = document.getElementById('formStatus');
             status.style.display = 'block';
-            status.innerHTML = '<div style="background: #10b981; color: white; padding: 1rem; border-radius: var(--radius);"><i class="fas fa-check-circle"></i> Thank you! Your message has been sent (demo). We\'ll get back to you soon.</div>';
+            status.innerHTML = '<div style="background: #10b981; color: white; padding: 1rem; border-radius: var(--radius);"><i class="fas fa-check-circle"></i> Thank you! Your message has been sent. We\'ll get back to you soon.</div>';
             document.getElementById('contactForm').reset();
             setTimeout(() => status.style.display = 'none', 5000);
         }
