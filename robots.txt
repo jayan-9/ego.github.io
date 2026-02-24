@@ -1,6 +1,7 @@
 # robots.txt for stylename.in
-# Last updated: 2026-02-20
+# Last Updated: February 24, 2026
 
+# Allow all search engines to crawl everything
 User-agent: *
 Allow: /
 Allow: /index.html
@@ -11,16 +12,37 @@ Allow: /terms.html
 Allow: /sitemap.xml
 Allow: /style.css
 Allow: /script.js
+Allow: /favicon.png
 
-# Disallow nothing - all pages are public
+# Allow all article pages
+Allow: /how-to-use-stylename-generator.html
+Allow: /how-to-use-symbols-on-stylename.html
+Allow: /which-font-is-best-for-which-category.html
+Allow: /social-media-bio-ideas-for-whatsapp-instagram.html
+Allow: /girls-and-boys-name-style-guide.html
+Allow: /how-to-see-name-suggestions-on-stylename.html
+Allow: /frequently-asked-questions-about-stylename.html
+Allow: /instagram-stylish-names-2026.html
+Allow: /pubg-stylish-names-with-symbols.html
+Allow: /free-fire-stylish-nicknames.html
+Allow: /attitude-names-for-boys.html
+Allow: /youtube-channel-stylish-name-ideas.html
+Allow: /romantic-names-for-couples.html
+Allow: /website-suggestions-original-guide.html
+Allow: /royal-and-vip-names.html
+Allow: /our-purpose.html
+Allow: /unique-username-ideas.html
+Allow: /crazy-names-ideas.html
+Allow: /hindi-name-collection.html
+Allow: /stylish-name-tips-guide.html
 
 # Sitemap location
 Sitemap: https://stylename.in/sitemap.xml
 
-# Crawl delay (optional)
-Crawl-delay: 1
+# Crawl delay - be gentle to server
+Crawl-delay: 2
 
-# Specific rules for search engines
+# Specific rules for major search engines
 User-agent: Googlebot
 Allow: /
 Crawl-delay: 1
@@ -33,7 +55,15 @@ User-agent: Yahoo! Slurp
 Allow: /
 Crawl-delay: 2
 
-# Block bad bots (optional)
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 3
+
+User-agent: YandexBot
+Allow: /
+Crawl-delay: 2
+
+# Block bad bots (optional - helps save server resources)
 User-agent: MJ12bot
 Disallow: /
 
@@ -42,3 +72,22 @@ Disallow: /
 
 User-agent: SemrushBot
 Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: MegaIndex.ru
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+User-agent: aiHitBot
+Disallow: /
+
+# Block any bot trying to access admin areas (if any)
+User-agent: *
+Disallow: /admin/
+Disallow: /private/
+Disallow: /cgi-bin/
+Disallow: /tmp/
