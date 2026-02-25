@@ -1037,47 +1037,65 @@ function generateStyles() {
     result.innerHTML = "";
 
     // If name is empty, show examples
-    if (!name) {
-        const examples = categoryExamples[currentFilter] || categoryExamples.love;
-        const shuffled = [...examples].sort(() => Math.random() - 0.5);
-        const selected = shuffled.slice(0, 39);
+if (!name) {
+    const examples = categoryExamples[currentFilter] || categoryExamples.love;
+    const shuffled = [...examples].sort(() => Math.random() - 0.5);
+    const selected = shuffled.slice(0, 45);
+    
+    selected.forEach((example, index) => {
+        const div = document.createElement('div');
+        div.className = 'style-card';
+        div.setAttribute('onclick', `copyText('${example.text.replace(/'/g,"\\'").replace(/"/g,'&quot;')}')`);
+        div.setAttribute('title', 'Click to copy');
         
-        selected.forEach((example, index) => {
-            const div = document.createElement('div');
-            div.className = 'style-card';
-            div.setAttribute('onclick', `copyText('${example.text.replace(/'/g,"\\'").replace(/"/g,'&quot;')}')`);
-            div.setAttribute('title', 'Click to copy');
-            
-            let html = `<div class="style-text">${example.text}</div>`;
-            
-            // Symbols (optional, tum rakhna chahe to rakh sakte ho)
-            if (example.symbols && example.symbols.length) {
-                html += `<div style="display:flex; flex-wrap:wrap; gap:0.3rem; margin-top:0.5rem;">`;
-                example.symbols.slice(0,4).forEach(sym => {
-                    html += `<span style="background:var(--gray-light); padding:0.2rem 0.5rem; border-radius:12px; font-size:0.8rem; cursor:pointer;" onclick="copyText('${sym.replace(/'/g,"\\'")}', event)">${sym} <i class="fas fa-copy"></i></span>`;
-                });
-                html += `</div>`;
-            }
-            
-            div.innerHTML = html;
-            result.appendChild(div);
-            
-            // Image in examples - 32nd ke baad (index 31)
-            if (index === 31) {
-                const imgDiv = document.createElement('div');
-                imgDiv.className = 'style-card';
-                imgDiv.style.padding = '0';
-                imgDiv.style.overflow = 'hidden';
-                imgDiv.innerHTML = `
-                    <img src="https://jayan-9.github.io/ego.github.io/photo.gif" 
-                         alt="Stylish Design"
-                         style="width: 100%; height: auto; display: block; border-radius: 8px;">
-                `;
-                result.appendChild(imgDiv);
-            }
-        });
-        return;
-    }
+        let html = `<div class="style-text">${example.text}</div>`;
+        
+        // Symbols (optional)
+        if (example.symbols && example.symbols.length) {
+            html += `<div style="display:flex; flex-wrap:wrap; gap:0.3rem; margin-top:0.5rem;">`;
+            example.symbols.slice(0,4).forEach(sym => {
+                html += `<span style="background:var(--gray-light); padding:0.2rem 0.5rem; border-radius:12px; font-size:0.8rem; cursor:pointer;" onclick="copyText('${sym.replace(/'/g,"\\'")}', event)">${sym} <i class="fas fa-copy"></i></span>`;
+            });
+            html += `</div>`;
+        }
+        
+        div.innerHTML = html;
+        result.appendChild(div);
+        
+        // 👇 LINKS - 15th EXAMPLE KE BAAD (index 14)
+        if (index === 34) {
+            const linksDiv = document.createElement('div');
+            linksDiv.className = 'style-card';
+            linksDiv.style.padding = '15px';
+            linksDiv.style.background = 'var(--light)';
+            linksDiv.style.border = '2px dashed var(--primary)';
+            linksDiv.style.textAlign = 'center';
+            linksDiv.innerHTML = `
+                <div style="margin-bottom: 10px; color: var(--primary); font-weight: bold;">✨ Recommended Articles ✨</div>
+                <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px;">
+                    <a href="royal-and-vip-names.html" style="color: var(--primary); text-decoration: none; border-bottom: 1px dotted var(--gray); padding: 5px 10px;">👑 Royal & VIP</a>
+                    <a href="social-media-bio-ideas-for-whatsapp-instagram.html" style="color: var(--primary); text-decoration: none; border-bottom: 1px dotted var(--gray); padding: 5px 10px;">💬 Bio Ideas</a>
+                </div>
+            `;
+            result.appendChild(linksDiv);
+        }
+        
+        // Image in examples - 32nd ke baad (index 31)
+        if (index === 31) {
+            const imgDiv = document.createElement('div');
+            imgDiv.className = 'style-card';
+            imgDiv.style.padding = '0';
+            imgDiv.style.overflow = 'hidden';
+            imgDiv.innerHTML = `
+                <img src="https://jayan-9.github.io/ego.github.io/photo.gif" 
+                     alt="Stylish Design"
+                     style="width: 100%; height: auto; display: block; border-radius: 8px;">
+            `;
+            result.appendChild(imgDiv);
+        }
+    });
+    return;
+}
 
     // Name exists: generate actual styles
     const styles = stylesByCategory[currentFilter] || [];
