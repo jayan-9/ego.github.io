@@ -1062,23 +1062,23 @@ if (!name) {
         div.innerHTML = html;
         result.appendChild(div);
         
-        // 👇 LINKS - 15th EXAMPLE KE BAAD (index 14)
-        if (index === 34) {
-            const linksDiv = document.createElement('div');
-            linksDiv.className = 'style-card';
-            linksDiv.style.padding = '15px';
-            linksDiv.style.background = 'var(--light)';
-            linksDiv.style.border = '2px dashed var(--primary)';
-            linksDiv.style.textAlign = 'center';
-            linksDiv.innerHTML = `
-                <div style="margin-bottom: 10px; color: var(--primary); font-weight: bold;">✨ Recommended Articles ✨</div>
-                <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px;">
-                    <a href="royal-and-vip-names.html" style="color: var(--primary); text-decoration: none; border-bottom: 1px dotted var(--gray); padding: 5px 10px;">👑 Royal & VIP</a>
-                    <a href="social-media-bio-ideas-for-whatsapp-instagram.html" style="color: var(--primary); text-decoration: none; border-bottom: 1px dotted var(--gray); padding: 5px 10px;">💬 Bio Ideas</a>
-                </div>
-            `;
-            result.appendChild(linksDiv);
-        }
+        // 👇 LINKS - 35th EXAMPLE KE BAAD (index 34) - SIMPLE VERSION
+if (index === 34) {
+    const linksDiv = document.createElement('div');
+    linksDiv.className = 'style-card';
+    linksDiv.style.padding = '10px 0';
+    linksDiv.style.background = 'transparent';
+    linksDiv.style.border = 'none';
+    linksDiv.style.boxShadow = 'none';
+    linksDiv.style.cursor = 'default';
+    linksDiv.innerHTML = `
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+            <a href="royal-and-vip-names.html" style="color: var(--primary); text-decoration: none; border-bottom: 1px dotted var(--gray); padding: 3px 0; display: block;">👑 Royal & VIP</a>
+            <a href="social-media-bio-ideas-for-whatsapp-instagram.html" style="color: var(--primary); text-decoration: none; border-bottom: 1px dotted var(--gray); padding: 3px 0; display: block;">💬 Bio Ideas</a>
+        </div>
+    `;
+    result.appendChild(linksDiv);
+}
 
         // 👇 LINKS IN EXAMPLES - 20th example ke baad (index 19)
 if (index === 5) {
