@@ -393,19 +393,6 @@ p { margin-bottom: 1rem; color: var(--gray); }
 .insert-btn:hover { background:var(--primary-dark); }
 .copy-symbol-btn:hover { background:var(--gray); }
 
-/* ===== GUIDE MODAL ===== */
-.guide-content { max-width:800px; }
-.guide-content h4 { margin-bottom:1.5rem; color:var(--primary); }
-.guide-section { margin-bottom:2rem; }
-.guide-section h5 { margin-bottom:1rem; color:var(--dark); }
-.category-tag {
-    display:inline-flex; align-items:center; gap:0.5rem; padding:0.5rem 1rem; border-radius:20px; font-weight:500; margin-bottom:0.5rem;
-}
-.love-tag { background:#fecaca; color:#dc2626; }
-.gamer-tag { background:#bfdbfe; color:#1d4ed8; }
-.fancy-tag { background:#fef3c7; color:#d97706; }
-.font-tag { background:#d1fae5; color:#059669; }
-
 /* ===== FOOTER ===== */
 .footer {
     background: var(--dark); color: white; padding: 3rem 0 1.5rem;
