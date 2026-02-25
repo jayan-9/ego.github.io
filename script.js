@@ -1098,47 +1098,66 @@ if (!name) {
 }
 
     // Name exists: generate actual styles
-    const styles = stylesByCategory[currentFilter] || [];
-    if (styles.length === 0) {
-        result.innerHTML = `<div class="empty-state"><i class="fas fa-exclamation-circle"></i><p>No styles for this category yet.</p></div>`;
-        return;
+const styles = stylesByCategory[currentFilter] || [];
+if (styles.length === 0) {
+    result.innerHTML = `<div class="empty-state"><i class="fas fa-exclamation-circle"></i><p>No styles for this category yet.</p></div>`;
+    return;
+}
+
+const shuffled = [...styles].sort(() => Math.random() - 0.5);
+
+shuffled.forEach((style, index) => {
+    const styled = style.prefix + convert(name, style.map) + style.suffix;
+    const escaped = styled.replace(/'/g,"\\'").replace(/"/g,'&quot;');
+    
+    // Style card - without copy button
+    const div = document.createElement('div');
+    div.className = 'style-card';
+    div.setAttribute('onclick', `copyText('${escaped}')`);
+    div.setAttribute('title', 'Click to copy');
+    div.innerHTML = `<div class="style-text">${styled}</div>`;
+    result.appendChild(div);
+    
+    // 👇 LINKS IN GENERATED STYLES - 50th style ke baad (index 49)
+    if (index === 159) {
+        const linksDiv = document.createElement('div');
+        linksDiv.className = 'style-card';
+        linksDiv.style.padding = '15px 20px';
+        linksDiv.style.background = 'transparent';
+        linksDiv.style.border = 'none';
+        linksDiv.style.boxShadow = 'none';
+        linksDiv.style.cursor = 'default';
+        linksDiv.innerHTML = `
+            <div style="display: flex; flex-direction: column; gap: 12px;">
+                <a href="pubg-stylish-names-with-symbols.html" style="color: var(--primary); text-decoration: none; border-bottom: 1px dotted var(--gray); padding: 5px 0; display: block;">🎯 PUBG Names</a>
+                <a href="free-fire-stylish-nicknames.html" style="color: var(--primary); text-decoration: none; border-bottom: 1px dotted var(--gray); padding: 5px 0; display: block;">🔥 Free Fire Names</a>
+                <a href="attitude-names-for-boys.html" style="color: var(--primary); text-decoration: none; border-bottom: 1px dotted var(--gray); padding: 5px 0; display: block;">⚡ Attitude Names</a>
+            </div>
+        `;
+        result.appendChild(linksDiv);
     }
     
-    const shuffled = [...styles].sort(() => Math.random() - 0.5);
-    
-    shuffled.forEach((style, index) => {
-        const styled = style.prefix + convert(name, style.map) + style.suffix;
-        const escaped = styled.replace(/'/g,"\\'").replace(/"/g,'&quot;');
-        
-        // Style card - without copy button
-        const div = document.createElement('div');
-        div.className = 'style-card';
-        div.setAttribute('onclick', `copyText('${escaped}')`);
-        div.setAttribute('title', 'Click to copy');
-        div.innerHTML = `<div class="style-text">${styled}</div>`;
-        result.appendChild(div);
-        
-        // 👇 IMAGE IN GENERATED STYLES - 4th style ke baad (index 3)
-        if (index === 133) {
-            const imgDiv = document.createElement('div');
-            imgDiv.className = 'style-card';
-            imgDiv.style.padding = '0';
-            imgDiv.style.overflow = 'hidden';
-            imgDiv.innerHTML = `
-                <img src="https://jayan-9.github.io/ego.github.io/photo.gif" 
-                     alt="Stylish Design"
-                     style="width: 100%; height: auto; display: block; border-radius: 8px;">
-            `;
-            result.appendChild(imgDiv);
-        }
+    // 👇 IMAGE IN GENERATED STYLES - 133rd style ke baad (index 133)
+    if (index === 133) {
+        const imgDiv = document.createElement('div');
+        imgDiv.className = 'style-card';
+        imgDiv.style.padding = '0';
+        imgDiv.style.overflow = 'hidden';
+        imgDiv.innerHTML = `
+            <img src="https://jayan-9.github.io/ego.github.io/photo.gif" 
+                 alt="Stylish Design"
+                 style="width: 100%; height: auto; display: block; border-radius: 8px;">
+        `;
+        result.appendChild(imgDiv);
+    }
 
-        // one ad after 12th style
-        if (index === 11 && shuffled.length > 12) {
-            const ad = document.createElement('div');
-            ad.className = 'ad-single';
-            result.appendChild(ad);
-        }
-    });
+    // one ad after 12th style
+    if (index === 11 && shuffled.length > 12) {
+        const ad = document.createElement('div');
+        ad.className = 'ad-single';
+        result.appendChild(ad);
+    }
+ });
 }
 
 // ===== SELECT CATEGORY =====
