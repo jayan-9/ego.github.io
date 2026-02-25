@@ -1079,6 +1079,25 @@ if (!name) {
             `;
             result.appendChild(linksDiv);
         }
+
+        // 👇 LINKS IN EXAMPLES - 20th example ke baad (index 19)
+if (index === 5) {
+    const linksDiv = document.createElement('div');
+    linksDiv.className = 'style-card';
+    linksDiv.style.padding = '15px 20px';
+    linksDiv.style.background = 'transparent';
+    linksDiv.style.border = 'none';
+    linksDiv.style.boxShadow = 'none';
+    linksDiv.style.cursor = 'default';
+    linksDiv.innerHTML = `
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+            <a href="how-to-use-stylename-generator.html" style="color: var(--primary); text-decoration: none; border-bottom: 1px dotted var(--gray); padding: 5px 0; display: block;">📘 How to Use</a>
+            <a href="how-to-use-symbols-on-stylename.html" style="color: var(--primary); text-decoration: none; border-bottom: 1px dotted var(--gray); padding: 5px 0; display: block;">🔣 Symbol Guide</a>
+            <a href="which-font-is-best-for-which-category.html" style="color: var(--primary); text-decoration: none; border-bottom: 1px dotted var(--gray); padding: 5px 0; display: block;">🔤 Font Guide</a>
+        </div>
+    `;
+    result.appendChild(linksDiv);
+}
         
         // Image in examples - 32nd ke baad (index 31)
         if (index === 31) {
