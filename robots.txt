@@ -1,5 +1,5 @@
 # robots.txt for stylename.in
-# Last Updated: February 24, 2026
+# Last Updated: February 28, 2026
 
 # Allow all search engines to crawl everything
 User-agent: *
@@ -26,15 +26,13 @@ Allow: /instagram-stylish-names-2026.html
 Allow: /pubg-stylish-names-with-symbols.html
 Allow: /free-fire-stylish-nicknames.html
 Allow: /attitude-names-for-boys.html
-Allow: /youtube-channel-stylish-name-ideas.html
 Allow: /romantic-names-for-couples.html
 Allow: /website-suggestions-original-guide.html
 Allow: /royal-and-vip-names.html
 Allow: /our-purpose.html
-Allow: /unique-username-ideas.html
-Allow: /crazy-names-ideas.html
 Allow: /hindi-name-collection.html
 Allow: /stylish-name-tips-guide.html
+Allow: /anime-stylish-names-collection.html
 
 # Sitemap location
 Sitemap: https://stylename.in/sitemap.xml
