@@ -1175,7 +1175,7 @@ if (index === 179) {
     result.appendChild(linksDiv);
 }
 
-    if (index === 144) {
+    if (index === 61) {
         const linksDiv = document.createElement('div');
         linksDiv.className = 'style-card';
         linksDiv.style.padding = '15px 20px';
