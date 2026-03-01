@@ -1,5 +1,5 @@
 # robots.txt for stylename.in
-# Last Updated: February 28, 2026
+# Last Updated: February 24, 2026
 
 # Allow all search engines to crawl everything
 User-agent: *
