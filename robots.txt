@@ -33,6 +33,7 @@ Allow: /our-purpose.html
 Allow: /hindi-name-collection.html
 Allow: /stylish-name-tips-guide.html
 Allow: /anime-stylish-names-collection.html
+Allow: /nicknamefider-for-free-fire-max.html
 
 # Sitemap location
 Sitemap: https://stylename.in/sitemap.xml
