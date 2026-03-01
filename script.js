@@ -1174,7 +1174,25 @@ if (index === 179) {
     `;
     result.appendChild(linksDiv);
 }
-    
+
+    if (index === 144) {
+        const linksDiv = document.createElement('div');
+        linksDiv.className = 'style-card';
+        linksDiv.style.padding = '15px 20px';
+        linksDiv.style.background = 'transparent';
+        linksDiv.style.border = 'none';
+        linksDiv.style.boxShadow = 'none';
+        linksDiv.style.cursor = 'default';
+        linksDiv.innerHTML = `
+            <div style="display: flex; flex-direction: column; gap: 12px;">
+                <a href="anime-stylish-names-collection.html" style="color: var(--primary); text-decoration: none; border-bottom: 1px dotted var(--gray); padding: 5px 0; display: block;">🌀 Anime Names</a>
+                <a href="pubg-stylish-names-with-symbols.html" style="color: var(--primary); text-decoration: none; border-bottom: 1px dotted var(--gray); padding: 5px 0; display: block;">🎯 PUBG Names</a>
+                <a href="attitude-names-for-boys.html" style="color: var(--primary); text-decoration: none; border-bottom: 1px dotted var(--gray); padding: 5px 0; display: block;">⚡ Attitude Names</a>
+            </div>
+        `;
+        result.appendChild(linksDiv);
+    }
+ 
     // 👇 IMAGE IN GENERATED STYLES - 133rd style ke baad (index 133)
     if (index === 133) {
         const imgDiv = document.createElement('div');
