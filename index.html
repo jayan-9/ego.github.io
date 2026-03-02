@@ -224,59 +224,82 @@
        <!-- 👇 50px KHALI SPACE -->
 <div style="height: 20px;"></div>
         
-        <!-- Quick Tips Section - Simple but Informative -->
-<div class="pro-tips-container">
-    <div class="tip-row">
-        <span class="tip-icon">📌</span>
-        <span class="tip-title">Quick Tips:</span>
-        <span class="tip-text">Click on any symbol to copy — </span>
-        <span class="clickable-symbol" onclick="copyText('☺')">☺</span>
-        <span class="clickable-symbol" onclick="copyText('❤️')">❤️</span>
-        <span class="clickable-symbol" onclick="copyText('✨')">✨</span>
-        <span class="clickable-symbol" onclick="copyText('🔥')">🔥</span>
-        <span class="clickable-symbol" onclick="copyText('💕')">💕</span>
+<!-- Quick Tips Section - Detailed Version -->
+<div class="quick-tips-container">
+    <div class="tip-block">
+        <span class="tip-emoji">📌</span>
+        <span class="tip-label">Quick Tips:</span>
+        <span class="tip-text">Click on any symbol to copy it directly to your clipboard — </span>
+        <span class="symbol-click" onclick="copyText('☺')">☺</span>
+        <span class="symbol-click" onclick="copyText('❤️')">❤️</span>
+        <span class="symbol-click" onclick="copyText('✨')">✨</span>
+        <span class="symbol-click" onclick="copyText('🔥')">🔥</span>
+        <span class="symbol-click" onclick="copyText('💕')">💕</span>
+        <span class="tip-text"> and many more. Just click and paste anywhere!</span>
     </div>
-    <div class="tip-row">
-        <span class="tip-icon">💡</span>
-        <span class="tip-title">Symbol Guide:</span>
-        <span class="tip-text">Use </span>
-        <button class="tip-symbol-btn" onclick="openSymbolModal()">☺</button>
-        <span class="tip-text">Clicking the 😊 symbol button instantly opens a powerful and fully organized Symbol Library featuring a wide range of categories including Gaming, Love, Stars, Arrows, Decorative, Faces, Attitude, Stylish, Aesthetic, Cute, Cool, Savage, Royal, Magical, Fancy, Pro, VIP, and many more. Each category contains hundreds of unique and creative symbols that can be used for name styling, bios, usernames, social media posts, gaming profiles, chats, or any type of text customization. All symbols are completely free to use, require no login or payment, and can be copied instantly with a single click. This complete symbol collection gives you the flexibility to create everything from simple designs to ultra-stylish and premium text formats in one convenient place</span>
+
+    <div class="tip-block">
+        <span class="tip-emoji">💡</span>
+        <span class="tip-label">Symbol Guide:</span>
+        <span class="tip-text">Click the </span>
+        <button class="mini-symbol-trigger" onclick="openSymbolModal()">☺</button>
+        <span class="tip-text"> button next to the input field to open our complete Symbol Library. Inside you'll find hundreds of symbols organized into categories like Gaming, Love, Stars, Arrows, Decorative Symbols, Faces, Attitude Icons, Stylish Elements, Aesthetic Designs, Cute Characters, Cool Signs, Savage Symbols, Royal Crowns, Magical Icons, Fancy Decorations, Pro Player Signs, VIP Badges, and many more. Each category contains dozens of unique symbols that you can insert or copy with one click. This complete collection gives you unlimited creative freedom to customize your names, bios, usernames, gaming profiles, social media posts, and chats without any restrictions. No login required, no payments – completely free forever!</span>
     </div>
-    <div class="tip-row">
-    <span class="tip-icon">🎮</span>
-    <span class="tip-title">Gaming Tip:</span>
-    <span class="tip-text">Take your gaming username, in-game profile, clan identity, or competitive tag to the next level by adding powerful and expressive symbols such as </span>
-    <span class="tip-example">⚔</span>
-    <span class="tip-text"> to represent a fearless warrior mindset, battle-ready attitude, strength, courage, and domination in every match you enter, </span>
-    <span class="tip-example">♛</span>
-    <span class="tip-text"> to highlight a royal king presence that reflects leadership, authority, confidence, premium status, and champion mentality, and </span>
-    <span class="tip-example">☠</span>
-    <span class="tip-text"> to create a bold skull-inspired style symbolizing danger, intensity, mystery, power, hardcore gameplay energy, and an unstoppable pro gamer personality that instantly grabs attention across platforms</span>
-</div>
 
-<div class="tip-row">
-    <span class="tip-icon">💕</span>
-    <span class="tip-title">Love Tip:</span>
-    <span class="tip-text">Design beautiful, romantic, and emotionally expressive name styles by incorporating elegant symbols like </span>
-    <span class="tip-example">♡</span>
-    <span class="tip-example">♥</span>
-    <span class="tip-example">❥</span>
-    <span class="tip-example">❀</span>
-    <span class="tip-text"> to convey affection, warmth, sweetness, deep emotional connection, charm, passion, cuteness, aesthetic softness, and loving vibes that are perfect for couple usernames, relationship bios, special nicknames, social media profiles, chat names, and personalized romantic branding</span>
-</div>
+    <div class="tip-block">
+        <span class="tip-emoji">🎮</span>
+        <span class="tip-label">Gaming Tip:</span>
+        <span class="tip-text">Transform your gaming identity from ordinary to legendary by incorporating powerful symbols into your username, clan tag, or profile. Add </span>
+        <span class="symbol-click" onclick="copyText('⚔️')">⚔️</span>
+        <span class="tip-text"> crossed swords to represent your warrior spirit, fearless combat style, and domination in every match. Use </span>
+        <span class="symbol-click" onclick="copyText('🛡️')">🛡️</span>
+        <span class="tip-text"> shields to show your defensive strength and unbreakable protection. Place </span>
+        <span class="symbol-click" onclick="copyText('♛')">♛</span>
+        <span class="tip-text"> crowns to establish your royal status, leadership qualities, and champion mentality. Add </span>
+        <span class="symbol-click" onclick="copyText('☠')">☠</span>
+        <span class="tip-text"> skulls for that dangerous, intense, hardcore gamer vibe that makes opponents think twice before challenging you. Include </span>
+        <span class="symbol-click" onclick="copyText('⚡')">⚡</span>
+        <span class="tip-text"> lightning bolts to showcase your lightning-fast reflexes, incredible speed, and electrifying gameplay. These symbols instantly communicate your gaming personality, attitude, and skill level to everyone you play with or against.</span>
+    </div>
 
-<div class="tip-row">
-    <span class="tip-icon">✏️</span>
-    <span class="tip-title">Font Tip:</span>
-    <span class="tip-text">Explore and experiment with stylish, decorative, and visually distinctive font variations such as </span>
-    <span class="tip-example">𝓼𝓬𝓻𝓲𝓹𝓽</span>
-    <span class="tip-example">𝕓𝕠𝕝𝕕</span>
-    <span class="tip-example">𝒸𝓊𝓇𝓈𝒾𝓋𝑒</span>
-    <span class="tip-text"> to transform ordinary text into a premium, artistic, eye-catching presentation that enhances readability, strengthens personal branding, adds creative personality, and makes your bios, usernames, captions, gaming tags, and social posts stand out with a unique, professional, and high-quality appearance</span>
-</div>
-</div>
+    <div class="tip-block">
+        <span class="tip-emoji">💕</span>
+        <span class="tip-label">Love Tip:</span>
+        <span class="tip-text">Create beautiful, heartwarming, and emotionally expressive names that perfectly capture your romantic side. Add </span>
+        <span class="symbol-click" onclick="copyText('♡')">♡</span>
+        <span class="tip-text"> white hearts for pure, innocent love and sweet affection. Use </span>
+        <span class="symbol-click" onclick="copyText('♥')">♥</span>
+        <span class="tip-text"> black hearts for deep, passionate, intense romantic connections. Include </span>
+        <span class="symbol-click" onclick="copyText('❥')">❥</span>
+        <span class="tip-text"> rotated hearts for unique, artistic love expressions. Add </span>
+        <span class="symbol-click" onclick="copyText('❣')">❣</span>
+        <span class="tip-text"> heart exclamation marks for excited, joyful declarations of love. Use </span>
+        <span class="symbol-click" onclick="copyText('💕')">💕</span>
+        <span class="tip-text"> two hearts for couples, partners, and shared love. Place </span>
+        <span class="symbol-click" onclick="copyText('💖')">💖</span>
+        <span class="tip-text"> sparkling hearts to show your love shines bright and brings happiness. Combine these with </span>
+        <span class="symbol-click" onclick="copyText('🌸')">🌸</span>
+        <span class="tip-text"> cherry blossoms, </span>
+        <span class="symbol-click" onclick="copyText('🌹')">🌹</span>
+        <span class="tip-text"> roses, and </span>
+        <span class="symbol-click" onclick="copyText('✨')">✨</span>
+        <span class="tip-text"> sparkles to create dreamy, romantic, and absolutely adorable usernames perfect for couples, crushes, partners, love birds, or anyone who wants to express their affectionate side through their online identity.</span>
+    </div>
 
+    <div class="tip-block">
+        <span class="tip-emoji">✏️</span>
+        <span class="tip-label">Font Tip:</span>
+        <span class="tip-text">Don't settle for boring, plain, ordinary text when you can transform your words into stunning, eye-catching, professionally styled masterpieces. Experiment with </span>
+        <span class="symbol-click" onclick="copyText('𝓼𝓬𝓻𝓲𝓹𝓽')">𝓼𝓬𝓻𝓲𝓹𝓽</span>
+        <span class="tip-text"> elegant cursive fonts for a sophisticated, artistic look that adds grace and beauty to your bios and usernames. Try </span>
+        <span class="symbol-click" onclick="copyText('𝕓𝕠𝕝𝕕')">𝕓𝕠𝕝𝕕</span>
+        <span class="tip-text"> double-struck bold fonts to make your words stand out with strength, confidence, and undeniable presence. Use </span>
+        <span class="symbol-click" onclick="copyText('𝒸𝓊𝓇𝓈𝒾𝓋𝑒')">𝒸𝓊𝓇𝓈𝒾𝓋𝑒</span>
+        <span class="tip-text"> flowing script fonts for a romantic, dreamy, whimsical appearance that captures attention and hearts. Apply </span>
+        <span class="symbol-click" onclick="copyText('🅼🅾🅳🅴🆁🅽')">🅼🅾🅳🅴🆁🅽</span>
+        <span class="tip-text"> square-enclosed letters for a clean, contemporary, urban aesthetic perfect for modern profiles. Mix and match different font styles to create truly unique, personalized, and memorable names, bios, captions, gaming tags, and social media posts that reflect your individual personality and creative vision.</span>
+    </div>
+</div>
        <!-- 👇 50px KHALI SPACE -->
 <div style="height: 40px;"></div>
 
