@@ -1091,6 +1091,7 @@ if (index === 5) {
     linksDiv.style.cursor = 'default';
     linksDiv.innerHTML = `
         <div style="display: flex; flex-direction: column; gap: 12px;">
+            <a href="tiktok-username-ideas.html" style="color: var(--primary); text-decoration: none; border-bottom: 1px dotted var(--gray); font-size: 1rem;">🎵 TikTok Names</a>
             <a href="which-font-is-best-for-which-category.html" style="color: var(--primary); text-decoration: none; border-bottom: 1px dotted var(--gray); padding: 5px 0; display: block;">🔤 Font Guide</a>
         </div>
     `;
