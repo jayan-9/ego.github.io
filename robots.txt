@@ -34,6 +34,9 @@ Allow: /nicknamefider-for-free-fire-max.html
 # Allow Korean Stylish Names article
 Allow: /korean-stylish-names-2026.html
 
+# Allow TikTok Username Ideas article
+Allow: /tiktok-username-ideas.html
+
 # Sitemap location
 Sitemap: https://stylename.in/sitemap.xml
 
