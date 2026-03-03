@@ -37,20 +37,6 @@
     <priority>0.5</priority>
   </url>
 
-  <!-- ===== GUIDE & HOW-TO ARTICLES ===== -->
-  <url>
-    <loc>https://stylename.in/how-to-use-stylename-generator.html</loc>
-    <lastmod>2026-02-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>https://stylename.in/how-to-use-symbols-on-stylename.html</loc>
-    <lastmod>2026-02-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
   
   <url>
     <loc>https://stylename.in/which-font-is-best-for-which-category.html</loc>
@@ -68,13 +54,6 @@
   
   <url>
     <loc>https://stylename.in/girls-and-boys-name-style-guide.html</loc>
-    <lastmod>2026-02-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>https://stylename.in/how-to-see-name-suggestions-on-stylename.html</loc>
     <lastmod>2026-02-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -104,13 +83,6 @@
   <!-- ===== GAMING NAMES ARTICLES ===== -->
   <url>
     <loc>https://stylename.in/pubg-stylish-names-with-symbols.html</loc>
-    <lastmod>2026-02-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://stylename.in/free-fire-stylish-nicknames.html</loc>
     <lastmod>2026-02-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
