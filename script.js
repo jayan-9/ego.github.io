@@ -1091,8 +1091,6 @@ if (index === 5) {
     linksDiv.style.cursor = 'default';
     linksDiv.innerHTML = `
         <div style="display: flex; flex-direction: column; gap: 12px;">
-            <a href="how-to-use-stylename-generator.html" style="color: var(--primary); text-decoration: none; border-bottom: 1px dotted var(--gray); padding: 5px 0; display: block;">📘 How to Use</a>
-            <a href="how-to-use-symbols-on-stylename.html" style="color: var(--primary); text-decoration: none; border-bottom: 1px dotted var(--gray); padding: 5px 0; display: block;">🔣 Symbol Guide</a>
             <a href="which-font-is-best-for-which-category.html" style="color: var(--primary); text-decoration: none; border-bottom: 1px dotted var(--gray); padding: 5px 0; display: block;">🔤 Font Guide</a>
         </div>
     `;
