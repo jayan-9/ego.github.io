@@ -31,6 +31,9 @@ Allow: /stylish-name-tips-guide.html
 Allow: /anime-stylish-names-collection.html
 Allow: /nicknamefider-for-free-fire-max.html
 
+# Allow Korean Stylish Names article
+Allow: /korean-stylish-names-2026.html
+
 # Sitemap location
 Sitemap: https://stylename.in/sitemap.xml
 
