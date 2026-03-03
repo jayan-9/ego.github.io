@@ -15,16 +15,12 @@ Allow: /script.js
 Allow: /favicon.png
 
 # Allow all article pages
-Allow: /how-to-use-stylename-generator.html
-Allow: /how-to-use-symbols-on-stylename.html
 Allow: /which-font-is-best-for-which-category.html
 Allow: /social-media-bio-ideas-for-whatsapp-instagram.html
 Allow: /girls-and-boys-name-style-guide.html
-Allow: /how-to-see-name-suggestions-on-stylename.html
 Allow: /frequently-asked-questions-about-stylename.html
 Allow: /instagram-stylish-names-2026.html
 Allow: /pubg-stylish-names-with-symbols.html
-Allow: /free-fire-stylish-nicknames.html
 Allow: /attitude-names-for-boys.html
 Allow: /romantic-names-for-couples.html
 Allow: /website-suggestions-original-guide.html
