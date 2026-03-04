@@ -162,5 +162,13 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
 </url>
+
+  <!-- Free Fire Nickname Tips -->
+<url>
+    <loc>https://stylename.in/free-fire-nickname-tips.html</loc>
+    <lastmod>2026-03-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+</url>
   
 </urlset>
