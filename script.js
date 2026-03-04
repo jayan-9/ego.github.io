@@ -1191,6 +1191,42 @@ if (index === 179) {
         `;
         result.appendChild(linksDiv);
     }
+
+    // 👇 LINKS - 45th STYLE KE BAAD (index 44)
+if (index === 44) {
+    const linksDiv = document.createElement('div');
+    linksDiv.className = 'style-card';
+    linksDiv.style.padding = '15px 20px';
+    linksDiv.style.background = 'transparent';
+    linksDiv.style.border = 'none';
+    linksDiv.style.boxShadow = 'none';
+    linksDiv.style.cursor = 'default';
+    linksDiv.innerHTML = `
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+            <a href="love-nicknames-2026-collection.html" style="color: var(--primary); text-decoration: none; border-bottom: 1px dotted var(--gray); padding: 5px 0; display: block;">❤️ Love Nicknames 2026</a>
+            <a href="tiktok-username-ideas.html" style="color: var(--primary); text-decoration: none; border-bottom: 1px dotted var(--gray); padding: 5px 0; display: block;">🎵 TikTok Username Ideas</a>
+        </div>
+    `;
+    result.appendChild(linksDiv);
+}
+
+    if (index === 299) {
+        const linksDiv = document.createElement('div');
+        linksDiv.className = 'style-card';
+        linksDiv.style.padding = '15px 20px';
+        linksDiv.style.background = 'transparent';
+        linksDiv.style.border = 'none';
+        linksDiv.style.boxShadow = 'none';
+        linksDiv.style.cursor = 'default';
+        linksDiv.innerHTML = `
+            <div style="display: flex; flex-direction: column; gap: 12px;">
+                <a href="pubg-stylish-names-with-symbols.html" style="color: var(--primary); text-decoration: none; border-bottom: 1px dotted var(--gray); padding: 5px 0; display: block;">🎯 PUBG Names</a>
+                <a href="nicknamefider-for-free-fire-max.html" style="color: var(--primary); text-decoration: none; border-bottom: 1px dotted var(--gray); font-size: 0.9rem;">✨ Free Fire Max</a>
+                <a href="attitude-names-for-boys.html" style="color: var(--primary); text-decoration: none; border-bottom: 1px dotted var(--gray); padding: 5px 0; display: block;">⚡ Attitude Names</a>
+            </div>
+        `;
+        result.appendChild(linksDiv);
+    }
  
     // 👇 IMAGE IN GENERATED STYLES - 133rd style ke baad (index 133)
     if (index === 133) {
