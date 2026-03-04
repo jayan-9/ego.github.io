@@ -1549,6 +1549,16 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('themeToggle')?.addEventListener('click', toggleTheme);
     document.getElementById('noteText')?.addEventListener('input', updateNoteCount);
     document.getElementById('nameInput')?.addEventListener('keypress', e => { if (e.key === 'Enter') generateStyles(); });
+
+    // 👇 AUTO GENERATE ON INPUT - SINGLE CODE
+let autoGenerateTimer;
+document.getElementById('nameInput').addEventListener('input', function() {
+    clearTimeout(autoGenerateTimer);
+    autoGenerateTimer = setTimeout(() => {
+        generateStyles();
+    }, 500);
+});
+    
     document.querySelectorAll('.modal').forEach(m => {
         m.addEventListener('click', function(e) {
             if (e.target === this) {
