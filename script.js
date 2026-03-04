@@ -1193,7 +1193,7 @@ if (index === 179) {
     }
 
     // 👇 LINKS - 45th STYLE KE BAAD (index 44)
-if (index === 81) {
+if (index === 98) {
     const linksDiv = document.createElement('div');
     linksDiv.className = 'style-card';
     linksDiv.style.padding = '15px 20px';
@@ -1241,6 +1241,23 @@ if (index === 81) {
             <a href="royal-and-vip-names.html" style="color: var(--primary); text-decoration: none; border-bottom: 1px dotted var(--gray); padding: 5px 0; display: block;">👑 Royal & VIP</a>
             <a href="social-media-bio-ideas-for-whatsapp-instagram.html" style="color: var(--primary); text-decoration: none; border-bottom: 1px dotted var(--gray); padding: 5px 0; display: block;">💬 Bio Ideas</a>
             <a href="stylish-name-tips-guide.html" style="color: var(--primary); text-decoration: none; border-bottom: 1px dotted var(--gray); padding: 5px 0; display: block;">✨ Name Tips</a>
+        </div>
+    `;
+    result.appendChild(linksDiv);
+    }
+
+    if (index === 348) {
+    const linksDiv = document.createElement('div');
+    linksDiv.className = 'style-card';
+    linksDiv.style.padding = '15px 20px';
+    linksDiv.style.background = 'transparent';
+    linksDiv.style.border = 'none';
+    linksDiv.style.boxShadow = 'none';
+    linksDiv.style.cursor = 'default';
+    linksDiv.innerHTML = `
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+            <a href="love-nicknames-2026-collection.html" style="color: var(--primary); text-decoration: none; border-bottom: 1px dotted var(--gray); padding: 5px 0; display: block;">❤️ Love Nicknames 2026</a>
+            <a href="tiktok-username-ideas.html" style="color: var(--primary); text-decoration: none; border-bottom: 1px dotted var(--gray); padding: 5px 0; display: block;">🎵 TikTok Username Ideas</a>
         </div>
     `;
     result.appendChild(linksDiv);
