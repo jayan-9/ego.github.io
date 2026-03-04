@@ -40,6 +40,9 @@ Allow: /tiktok-username-ideas.html
 # Allow Love Nicknames article
 Allow: /love-nicknames-2026-collection.html
 
+# Allow Free Fire Nickname Tips article
+Allow: /free-fire-nickname-tips.html
+
 # Sitemap location
 Sitemap: https://stylename.in/sitemap.xml
 
