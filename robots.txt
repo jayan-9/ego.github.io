@@ -37,6 +37,9 @@ Allow: /korean-stylish-names-2026.html
 # Allow TikTok Username Ideas article
 Allow: /tiktok-username-ideas.html
 
+# Allow Love Nicknames article
+Allow: /love-nicknames-2026-collection.html
+
 # Sitemap location
 Sitemap: https://stylename.in/sitemap.xml
 
