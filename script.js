@@ -1148,7 +1148,6 @@ shuffled.forEach((style, index) => {
         linksDiv.innerHTML = `
             <div style="display: flex; flex-direction: column; gap: 12px;">
                 <a href="pubg-stylish-names-with-symbols.html" style="color: var(--primary); text-decoration: none; border-bottom: 1px dotted var(--gray); padding: 5px 0; display: block;">🎯 PUBG Names</a>
-                <a href="nicknamefider-for-free-fire-max.html" style="color: var(--primary); text-decoration: none; border-bottom: 1px dotted var(--gray); font-size: 0.9rem;">✨ Free Fire Max</a>
                 <a href="attitude-names-for-boys.html" style="color: var(--primary); text-decoration: none; border-bottom: 1px dotted var(--gray); padding: 5px 0; display: block;">⚡ Attitude Names</a>
             </div>
         `;
@@ -1220,8 +1219,7 @@ if (index === 98) {
         linksDiv.style.cursor = 'default';
         linksDiv.innerHTML = `
             <div style="display: flex; flex-direction: column; gap: 12px;">
-                <a href="pubg-stylish-names-with-symbols.html" style="color: var(--primary); text-decoration: none; border-bottom: 1px dotted var(--gray); padding: 5px 0; display: block;">🎯 PUBG Names</a>
-                <a href="nicknamefider-for-free-fire-max.html" style="color: var(--primary); text-decoration: none; border-bottom: 1px dotted var(--gray); font-size: 0.9rem;">✨ Free Fire Max</a>
+                <a href="pubg-stylish-names-with-symbols.html" style="color: var(--primary); text-decoration: none; border-bottom: 1px dotted var(--gray); padding: 5px 0; display: block;">🎯 PUBG Names</a>     
                 <a href="attitude-names-for-boys.html" style="color: var(--primary); text-decoration: none; border-bottom: 1px dotted var(--gray); padding: 5px 0; display: block;">⚡ Attitude Names</a>
             </div>
         `;
