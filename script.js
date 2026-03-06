@@ -1353,23 +1353,6 @@ function loadMiniSuggestions() {
 }
     });
 
-    // 👇 40 SUGGESTIONS KE BAAD AUTO AD PLACEHOLDER
-if (index === 39) {
-    html += `
-        <div style="grid-column: 1 / -1; margin: 20px 0;">
-            <ins class="adsbygoogle"
-                 style="display:block"
-                 data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-                 data-ad-slot="XXXXXXXXXX"
-                 data-ad-format="auto"
-                 data-full-width-responsive="true"></ins>
-            <script>
-                 (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
-        </div>
-    `;
-}
-    
     miniGrid.innerHTML = html;
 }
 
