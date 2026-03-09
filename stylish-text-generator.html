@@ -1,212 +1,462 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <meta name="google-site-verification" content="cKGfHx3401UeyzijckfH4-0-Km0WQ33kICn3MIs3J04" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stylish Text Generator – 70+ Fonts for Cool Names</title>
-    <meta name="description" content="Generate 70+ stylish fonts for your name. Copy and paste cool text styles for gaming, Instagram, and social media.">
+    <title>Stylish Text Generator – 100+ Fancy Fonts & Styles</title>
+    <meta name="description" content="100+ stylish text fonts generator. Convert your name into fancy fonts, cool styles, and unique text formats. Copy and paste instantly.">
     <link rel="icon" href="favicon.png" type="image/png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* Simple black and white theme */
-        body {
-            background: #fafafa;
-            font-family: 'Inter', sans-serif;
+        /* Page specific styles */
+        :root {
+            --primary: #4f46e5;
+            --primary-dark: #4338ca;
+            --secondary: #10b981;
+            --dark: #1f2937;
+            --light: #f9fafb;
+            --gray: #6b7280;
+            --gray-light: #e5e7eb;
         }
         
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Navbar */
+        .navbar {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .navbar .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .logo h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #4f46e5, #10b981);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin: 0;
+        }
+        
+        .logo-dot {
+            color: #4f46e5;
+            -webkit-text-fill-color: #4f46e5;
+        }
+        
+        .tagline {
+            font-size: 0.8rem;
+            color: #666;
+        }
+        
+        .theme-toggle {
+            background: none;
+            border: none;
+            font-size: 1.25rem;
+            color: #333;
+            cursor: pointer;
+        }
+        
+        /* Header */
         .page-header {
             text-align: center;
-            padding: 30px 20px;
-            border-bottom: 2px solid #333;
-            margin-bottom: 30px;
+            padding: 40px 20px;
+            color: white;
         }
         
         .page-header h1 {
-            font-size: 2.5rem;
+            font-size: 3rem;
             font-weight: 700;
-            margin-bottom: 10px;
-            color: #000;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
         }
         
         .page-header p {
-            font-size: 1.1rem;
-            color: #555;
+            font-size: 1.2rem;
+            opacity: 0.95;
             max-width: 700px;
             margin: 0 auto;
         }
         
-        .input-section {
-            max-width: 700px;
-            margin: 30px auto;
-            padding: 20px;
-            background: #fff;
-            border: 1px solid #ddd;
+        /* Tool Section */
+        .tool-section {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            margin: 30px 0;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
         }
         
-        .input-section label {
-            display: block;
-            margin-bottom: 10px;
-            font-weight: 600;
-            color: #000;
+        .input-group {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
         }
         
-        .input-section input {
-            width: 100%;
-            padding: 15px;
-            font-size: 1.2rem;
-            border: 2px solid #ccc;
-            border-radius: 0;
-            transition: all 0.2s;
+        .input-group input {
+            flex: 1;
+            padding: 15px 20px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            transition: all 0.3s;
         }
         
-        .input-section input:focus {
+        .input-group input:focus {
+            border-color: #4f46e5;
+            box-shadow: 0 0 0 3px rgba(79,70,229,0.1);
             outline: none;
-            border-color: #000;
         }
         
-        .input-section small {
-            display: block;
-            margin-top: 8px;
-            color: #777;
+        .generate-btn {
+            padding: 15px 30px;
+            background: linear-gradient(135deg, #4f46e5, #10b981);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
         }
         
-        .fonts-grid {
+        .generate-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(79,70,229,0.3);
+        }
+        
+        /* Stats */
+        .stats-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+        
+        .font-count {
+            background: #4f46e5;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+        
+        /* Results Grid */
+        .results-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 15px;
-            margin: 40px 0;
+            gap: 20px;
+            margin-top: 30px;
         }
         
-        .font-card {
-            background: #fff;
+        .style-card {
+            background: #f8f9fa;
             border: 1px solid #e0e0e0;
-            padding: 18px 20px;
-            transition: all 0.2s;
-            cursor: pointer;
+            border-radius: 12px;
+            padding: 20px;
+            transition: all 0.3s;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
         }
         
-        .font-card:hover {
-            background: #f5f5f5;
-            border-color: #000;
+        .style-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-color: #4f46e5;
         }
         
-        .font-number {
-            font-size: 0.8rem;
-            color: #999;
-            margin-bottom: 5px;
-        }
-        
-        .font-preview {
-            font-size: 1.4rem;
-            margin-bottom: 8px;
+        .style-text {
+            font-size: 1.3rem;
+            font-weight: 500;
             word-break: break-word;
-            color: #000;
-        }
-        
-        .font-name {
-            font-size: 0.9rem;
-            color: #666;
-            font-style: italic;
+            min-height: 60px;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            background: white;
+            border-radius: 8px;
         }
         
         .copy-btn {
-            background: #fff;
-            color: #000;
-            border: 1px solid #ccc;
-            padding: 5px 12px;
-            margin-top: 10px;
-            font-size: 0.8rem;
+            padding: 10px;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            color: #333;
             cursor: pointer;
-            transition: all 0.2s;
-            display: inline-flex;
+            transition: all 0.3s;
+            display: flex;
             align-items: center;
+            justify-content: center;
             gap: 5px;
         }
         
         .copy-btn:hover {
-            background: #000;
-            color: #fff;
-            border-color: #000;
+            background: #4f46e5;
+            color: white;
+            border-color: #4f46e5;
         }
         
-        .tips-section {
-            background: #f5f5f5;
-            padding: 30px;
-            margin: 40px 0;
-            border-left: 4px solid #000;
+        /* Examples Grid */
+        .examples-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 30px 0;
         }
         
-        .tips-section h3 {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-            color: #000;
+        .example-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 10px;
+            padding: 20px;
+            color: white;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
         }
         
-        .tips-section p {
-            font-size: 1.1rem;
-            line-height: 1.7;
-            color: #333;
+        .example-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
         }
         
-        .home-link {
-            display: inline-block;
-            margin: 20px 0;
-            padding: 12px 30px;
-            background: #000;
-            color: #fff;
-            text-decoration: none;
-            transition: all 0.2s;
-            font-weight: 500;
+        .example-text {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
         }
         
-        .home-link:hover {
-            background: #333;
+        .example-label {
+            font-size: 0.8rem;
+            opacity: 0.8;
+        }
+        
+        /* Ad Section */
+        .ad-section {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 30px 0;
+            text-align: center;
+        }
+        
+        .ad-label {
+            color: #999;
+            font-size: 0.8rem;
+            margin-bottom: 10px;
         }
         
         .ad-placeholder {
-            background: #f0f0f0;
-            border: 2px dashed #aaa;
-            padding: 30px;
-            margin: 40px 0;
-            text-align: center;
-            color: #777;
+            background: linear-gradient(135deg, #f5f5f5, #e0e0e0);
+            height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            color: #666;
             font-size: 0.9rem;
         }
         
-        .footer-note {
+        /* Tips Section */
+        .tips-section {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin: 30px 0;
+        }
+        
+        .tips-section h2 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+        
+        .tips-content {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #555;
+        }
+        
+        .tips-content p {
+            margin-bottom: 15px;
+        }
+        
+        .highlight {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 600;
+        }
+        
+        /* CTA Button */
+        .cta-btn {
+            display: inline-block;
+            padding: 15px 40px;
+            background: linear-gradient(135deg, #4f46e5, #10b981);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.2rem;
+            transition: all 0.3s;
+            margin-top: 20px;
+        }
+        
+        .cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(79,70,229,0.4);
+        }
+        
+        /* Footer */
+        .footer {
+            background: #1a1a1a;
+            color: white;
+            padding: 40px 0;
+            margin-top: 50px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .footer-section h3 {
+            color: white;
+            margin-bottom: 15px;
+        }
+        
+        .footer-section p {
+            color: #999;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-section a {
+            color: #999;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .footer-section a:hover {
+            color: white;
+        }
+        
+        .footer-bottom {
             text-align: center;
-            margin: 50px 0 20px;
-            padding-top: 20px;
-            border-top: 1px solid #ddd;
+            padding-top: 30px;
+            margin-top: 30px;
+            border-top: 1px solid #333;
             color: #666;
         }
         
-        .back-home {
-            display: inline-block;
-            padding: 10px 25px;
-            background: #000;
-            color: #fff;
-            text-decoration: none;
-            transition: all 0.2s;
+        /* Scroll to Top */
+        .scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: #4f46e5;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            transition: all 0.3s;
+            z-index: 100;
         }
         
-        .back-home:hover {
+        .scroll-top.show {
+            display: flex;
+        }
+        
+        .scroll-top:hover {
+            background: #4338ca;
+            transform: translateY(-3px);
+        }
+        
+        /* Toast */
+        .toast {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
             background: #333;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            z-index: 1000;
+            display: none;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .page-header h1 {
+                font-size: 2rem;
+            }
+            
+            .input-group {
+                flex-direction: column;
+            }
+            
+            .generate-btn {
+                width: 100%;
+            }
+            
+            .results-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- Navbar (same as index) -->
+    <!-- Navbar -->
     <nav class="navbar">
         <div class="container">
-            <button class="menu-toggle" id="menuToggle">
-                <i class="fas fa-bars"></i>
-            </button>
             <div class="logo">
-                <h1>stylename<span class="logo-dot">.</span>in</h1>
-                <p class="tagline">Style Your Identity</p>
+                <h1>stylish<span class="logo-dot">.</span>text</h1>
+                <p class="tagline">Fancy Font Generator</p>
             </div>
             <div class="theme-toggle" id="themeToggle">
                 <i class="fas fa-moon"></i>
@@ -215,63 +465,79 @@
     </nav>
 
     <!-- Main Content -->
-    <main style="max-width: 1200px; margin: 0 auto; padding: 20px;">
+    <div class="container">
         
         <!-- Header -->
         <div class="page-header">
             <h1>✨ Stylish Text Generator</h1>
-            <p>Convert your name into 70+ different font styles. Copy and paste anywhere!</p>
+            <p>Transform your name into 100+ fancy fonts and cool styles. Perfect for Instagram, gaming, and social media!</p>
         </div>
 
-        <!-- Input Section -->
-        <div class="input-section">
-            <label for="styleNameInput">Enter your name or nickname:</label>
-            <input type="text" id="styleNameInput" placeholder="e.g., Jack, Sara, Alex" autocomplete="off">
-            <small>Your text will automatically generate below in 70+ different fonts</small>
+        <!-- Tool Section -->
+        <div class="tool-section">
+            <div class="input-group">
+                <input type="text" id="nameInput" placeholder="Enter your name or text..." autocomplete="off" value="Stylish">
+                <button class="generate-btn" onclick="generateStyles()">
+                    <i class="fas fa-magic"></i> Generate
+                </button>
+            </div>
+            
+            <div class="stats-bar">
+                <span>🎨 100+ Stylish Fonts</span>
+                <span class="font-count" id="fontCount">0 styles</span>
+            </div>
+            
+            <!-- Results Grid -->
+            <div id="result" class="results-grid">
+                <!-- Examples will be loaded here -->
+            </div>
         </div>
 
-        <!-- Fonts Grid (70+ Examples) -->
-        <h2 style="font-size: 2rem; margin: 40px 0 20px; border-bottom: 2px solid #000; display: inline-block;">🎨 70+ Font Styles</h2>
-        
-        <div id="fontsContainer" class="fonts-grid">
-            <!-- Fonts will be loaded here by JavaScript -->
+        <!-- Ad Section 1 -->
+        <div class="ad-section">
+            <div class="ad-label">Advertisement</div>
+            <div class="ad-placeholder">
+                <!-- Google AdSense Code Here -->
+                <span>Responsive Ad Space</span>
+            </div>
         </div>
 
         <!-- Tips Section -->
         <div class="tips-section">
-            <h3>💡 How to Use This Generator</h3>
-            <p>Simply type your name in the box above and instantly see it in 70+ different font styles. Click any font to copy it to your clipboard. You can use these stylish texts for your gaming profile, Instagram bio, WhatsApp status, YouTube channel name, or anywhere you want to stand out.</p>
-            
-            <p style="margin-top: 15px;">✨ <strong>Pro tip:</strong> Combine different fonts with symbols from our main site to create truly unique names!</p>
-            
-            <p style="margin-top: 20px;">👉 <strong>Want more fonts, symbols, and categories?</strong> Visit our <a href="index.html" style="color: #000; font-weight: 600; text-decoration: underline;">main page stylename.in</a> to explore hundreds of name styles across Love, Gamer, Fancy, and Font categories. You'll also find thousands of symbols, name suggestions, and advanced customization options – all completely free!</p>
+            <h2>📝 About This Stylish Text Generator</h2>
+            <div class="tips-content">
+                <p>Welcome to our <span class="highlight">Stylish Text Generator</span> – a dedicated tool for creating fancy fonts and unique text styles! Simply type your name in the input box above, and watch it transform into 100+ different font styles instantly. No need to click generate – it happens automatically as you type!</p>
+                
+                <p>Each style comes with its own unique character mapping, converting your regular text into something special. From elegant cursive to bold gothic, from double-struck to circled letters – we've got it all covered. Click any style to copy it to your clipboard and use it anywhere!</p>
+                
+                <p>Want to explore even more styles? Visit our <span class="highlight">main website stylename.in</span> where you'll find thousands of additional styles across different categories like Gaming, Love, Fancy, and Fonts. You'll also discover symbols, emojis, and name suggestions to make your profile truly stand out.</p>
+                
+                <div style="text-align: center; margin-top: 30px;">
+                    <a href="index.html" class="cta-btn">
+                        <i class="fas fa-rocket"></i> Explore More at stylename.in
+                    </a>
+                </div>
+            </div>
         </div>
 
-        <!-- AdSense Placeholder -->
-        <div class="ad-placeholder">
-            Advertisement Space – Your Google AdSense Code Here
-            <!-- Replace with your actual AdSense code -->
+        <!-- Ad Section 2 -->
+        <div class="ad-section">
+            <div class="ad-label">Advertisement</div>
+            <div class="ad-placeholder">
+                <!-- Google AdSense Code Here -->
+                <span>Responsive Ad Space</span>
+            </div>
         </div>
 
-        <!-- Back to Home -->
-        <div style="text-align: center; margin: 50px 0 30px;">
-            <a href="index.html" class="back-home">← Back to Main Page</a>
-        </div>
+    </div>
 
-        <!-- Footer Note -->
-        <div class="footer-note">
-            <p>70+ Stylish Fonts • Free to Use • Copy & Paste Anywhere</p>
-        </div>
-
-    </main>
-
-    <!-- Footer (same as index) -->
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>stylename.in</h3>
-                    <p>Create unique and stylish names for gaming and social media. 100% free online tool.</p>
+                    <h3>stylish.text</h3>
+                    <p>Create unique and stylish text with 100+ fancy fonts. Free online tool.</p>
                 </div>
                 <div class="footer-section">
                     <h3>Quick Links</h3>
@@ -284,837 +550,474 @@
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h3>Legal</h3>
+                    <h3>Connect</h3>
                     <ul>
-                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                        <li><a href="terms.html">Terms & Conditions</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">GitHub</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>© 2026 stylename.in. All rights reserved.</p>
+                <p>© 2026 stylish.text | Part of stylename.in network</p>
             </div>
         </div>
     </footer>
 
-    <!-- Scroll to Top Button -->
+    <!-- Scroll to Top -->
     <button class="scroll-top" id="scrollTop">
         <i class="fas fa-chevron-up"></i>
     </button>
 
+    <!-- Toast -->
     <div class="toast" id="toast"></div>
 
     <script>
-        // ===== STYLISH TEXT GENERATOR FUNCTIONS =====
-        
-        // Font conversion functions for each style
-        function convertToRing(name) {
-            return name.split('').map(char => char + '͢').join('');
-        }
-        
-        function convertToBoldSansCaps(name) {
-            const map = {
-                'a': '𝚊', 'b': '𝚋', 'c': '𝚌', 'd': '𝚍', 'e': '𝚎', 'f': '𝚏', 'g': '𝚐', 'h': '𝚑', 
-                'i': '𝚒', 'j': '𝚓', 'k': '𝚔', 'l': '𝚕', 'm': '𝚖', 'n': '𝚗', 'o': '𝚘', 'p': '𝚙', 
-                'q': '𝚚', 'r': '𝚛', 's': '𝚜', 't': '𝚝', 'u': '𝚞', 'v': '𝚟', 'w': '𝚠', 'x': '𝚡', 
-                'y': '𝚢', 'z': '𝚣',
-                'A': '𝙰', 'B': '𝙱', 'C': '𝙲', 'D': '𝙳', 'E': '𝙴', 'F': '𝙵', 'G': '𝙶', 'H': '𝙷', 
-                'I': '𝙸', 'J': '𝙹', 'K': '𝙺', 'L': '𝙻', 'M': '𝙼', 'N': '𝙽', 'O': '𝙾', 'P': '𝙿', 
-                'Q': '𝚀', 'R': '𝚁', 'S': '𝚂', 'T': '𝚃', 'U': '𝚄', 'V': '𝚅', 'W': '𝚆', 'X': '𝚇', 
-                'Y': '𝚈', 'Z': '𝚉'
-            };
-            return name.split('').map(char => map[char] || char).join('');
-        }
-        
-        function convertToCursive(name) {
-            const map = {
-                'a': '𝓪', 'b': '𝓫', 'c': '𝓬', 'd': '𝓭', 'e': '𝓮', 'f': '𝓯', 'g': '𝓰', 'h': '𝓱', 
-                'i': '𝓲', 'j': '𝓳', 'k': '𝓴', 'l': '𝓵', 'm': '𝓶', 'n': '𝓷', 'o': '𝓸', 'p': '𝓹', 
-                'q': '𝓺', 'r': '𝓻', 's': '𝓼', 't': '𝓽', 'u': '𝓾', 'v': '𝓿', 'w': '𝔀', 'x': '𝔁', 
-                'y': '𝔂', 'z': '𝔃',
-                'A': '𝓐', 'B': '𝓑', 'C': '𝓒', 'D': '𝓓', 'E': '𝓔', 'F': '𝓕', 'G': '𝓖', 'H': '𝓗', 
-                'I': '𝓘', 'J': '𝓙', 'K': '𝓚', 'L': '𝓛', 'M': '𝓜', 'N': '𝓝', 'O': '𝓞', 'P': '𝓟', 
-                'Q': '𝓠', 'R': '𝓡', 'S': '𝓢', 'T': '𝓣', 'U': '𝓤', 'V': '𝓥', 'W': '𝓦', 'X': '𝓧', 
-                'Y': '𝓨', 'Z': '𝓩'
-            };
-            return name.split('').map(char => map[char] || char).join('');
-        }
-        
-        function convertToDoubleStruckBold(name) {
-            const map = {
-                'A': '𝕬', 'B': '𝕭', 'C': '𝕮', 'D': '𝕯', 'E': '𝕰', 'F': '𝕱', 'G': '𝕲', 'H': '𝕳', 
-                'I': '𝕴', 'J': '𝕵', 'K': '𝕶', 'L': '𝕷', 'M': '𝕸', 'N': '𝕹', 'O': '𝕺', 'P': '𝕻', 
-                'Q': '𝕼', 'R': '𝕽', 'S': '𝕾', 'T': '𝕿', 'U': '𝖀', 'V': '𝖁', 'W': '𝖂', 'X': '𝖃', 
-                'Y': '𝖄', 'Z': '𝖅'
-            };
-            return name.split('').map(char => {
-                if (char >= 'a' && char <= 'z') {
-                    return String.fromCharCode(char.charCodeAt(0) - 32); // Convert to uppercase
-                }
-                return map[char] || char;
-            }).join('');
-        }
-        
-        function convertToDoubleStruck(name) {
-            const map = {
-                'a': '𝕒', 'b': '𝕓', 'c': '𝕔', 'd': '𝕕', 'e': '𝕖', 'f': '𝕗', 'g': '𝕘', 'h': '𝕙', 
-                'i': '𝕚', 'j': '𝕛', 'k': '𝕜', 'l': '𝕝', 'm': '𝕞', 'n': '𝕟', 'o': '𝕠', 'p': '𝕡', 
-                'q': '𝕢', 'r': '𝕣', 's': '𝕤', 't': '𝕥', 'u': '𝕦', 'v': '𝕧', 'w': '𝕨', 'x': '𝕩', 
-                'y': '𝕪', 'z': '𝕫',
-                'A': '𝔸', 'B': '𝔹', 'C': 'ℂ', 'D': '𝔻', 'E': '𝔼', 'F': '𝔽', 'G': '𝔾', 'H': 'ℍ', 
-                'I': '𝕀', 'J': '𝕁', 'K': '𝕂', 'L': '𝕃', 'M': '𝕄', 'N': 'ℕ', 'O': '𝕆', 'P': 'ℙ', 
-                'Q': 'ℚ', 'R': 'ℝ', 'S': '𝕊', 'T': '𝕋', 'U': '𝕌', 'V': '𝕍', 'W': '𝕎', 'X': '𝕏', 
-                'Y': '𝕐', 'Z': 'ℤ'
-            };
-            return name.split('').map(char => map[char] || char).join('');
-        }
-        
-        function convertToBoldSans(name) {
-            const map = {
-                'a': '𝙖', 'b': '𝙗', 'c': '𝙘', 'd': '𝙙', 'e': '𝙚', 'f': '𝙛', 'g': '𝙜', 'h': '𝙝', 
-                'i': '𝙞', 'j': '𝙟', 'k': '𝙠', 'l': '𝙡', 'm': '𝙢', 'n': '𝙣', 'o': '𝙤', 'p': '𝙥', 
-                'q': '𝙦', 'r': '𝙧', 's': '𝙨', 't': '𝙩', 'u': '𝙪', 'v': '𝙫', 'w': '𝙬', 'x': '𝙭', 
-                'y': '𝙮', 'z': '𝙯',
-                'A': '𝗔', 'B': '𝗕', 'C': '𝗖', 'D': '𝗗', 'E': '𝗘', 'F': '𝗙', 'G': '𝗚', 'H': '𝗛', 
-                'I': '𝗜', 'J': '𝗝', 'K': '𝗞', 'L': '𝗟', 'M': '𝗠', 'N': '𝗡', 'O': '𝗢', 'P': '𝗣', 
-                'Q': '𝗤', 'R': '𝗥', 'S': '𝗦', 'T': '𝗧', 'U': '𝗨', 'V': '𝗩', 'W': '𝗪', 'X': '𝗫', 
-                'Y': '𝗬', 'Z': '𝗭'
-            };
-            return name.split('').map(char => map[char] || char).join('');
-        }
-        
-        function convertToItalicSerif(name) {
-            const map = {
-                'a': '𝑎', 'b': '𝑏', 'c': '𝑐', 'd': '𝑑', 'e': '𝑒', 'f': '𝑓', 'g': '𝑔', 'h': 'ℎ', 
-                'i': '𝑖', 'j': '𝑗', 'k': '𝑘', 'l': '𝑙', 'm': '𝑚', 'n': '𝑛', 'o': '𝑜', 'p': '𝑝', 
-                'q': '𝑞', 'r': '𝑟', 's': '𝑠', 't': '𝑡', 'u': '𝑢', 'v': '𝑣', 'w': '𝑤', 'x': '𝑥', 
-                'y': '𝑦', 'z': '𝑧',
-                'A': '𝐴', 'B': '𝐵', 'C': '𝐶', 'D': '𝐷', 'E': '𝐸', 'F': '𝐹', 'G': '𝐺', 'H': '𝐻', 
-                'I': '𝐼', 'J': '𝐽', 'K': '𝐾', 'L': '𝐿', 'M': '𝑀', 'N': '𝑁', 'O': '𝑂', 'P': '𝑃', 
-                'Q': '𝑄', 'R': '𝑅', 'S': '𝑆', 'T': '𝑇', 'U': '𝑈', 'V': '𝑉', 'W': '𝑊', 'X': '𝑋', 
-                'Y': '𝑌', 'Z': '𝑍'
-            };
-            return name.split('').map(char => map[char] || char).join('');
-        }
-        
-        function convertToSquared(name) {
-            const map = {
-                'a': '🄰', 'b': '🄱', 'c': '🄲', 'd': '🄳', 'e': '🄴', 'f': '🄵', 'g': '🄶', 'h': '🄷', 
-                'i': '🄸', 'j': '🄹', 'k': '🄺', 'l': '🄻', 'm': '🄼', 'n': '🄽', 'o': '🄾', 'p': '🄿', 
-                'q': '🅀', 'r': '🅁', 's': '🅂', 't': '🅃', 'u': '🅄', 'v': '🅅', 'w': '🅆', 'x': '🅇', 
-                'y': '🅈', 'z': '🅉',
-                'A': '🄰', 'B': '🄱', 'C': '🄲', 'D': '🄳', 'E': '🄴', 'F': '🄵', 'G': '🄶', 'H': '🄷', 
-                'I': '🄸', 'J': '🄹', 'K': '🄺', 'L': '🄻', 'M': '🄼', 'N': '🄽', 'O': '🄾', 'P': '🄿', 
-                'Q': '🅀', 'R': '🅁', 'S': '🅂', 'T': '🅃', 'U': '🅄', 'V': '🅅', 'W': '🅆', 'X': '🅇', 
-                'Y': '🅈', 'Z': '🅉'
-            };
-            return name.split('').map(char => map[char] || char).join('');
-        }
-        
-        function convertToSansSerif(name) {
-            const map = {
-                'a': '𝘢', 'b': '𝘣', 'c': '𝘤', 'd': '𝘥', 'e': '𝘦', 'f': '𝘧', 'g': '𝘨', 'h': '𝘩', 
-                'i': '𝘪', 'j': '𝘫', 'k': '𝘬', 'l': '𝘭', 'm': '𝘮', 'n': '𝘯', 'o': '𝘰', 'p': '𝘱', 
-                'q': '𝘲', 'r': '𝘳', 's': '𝘴', 't': '𝘵', 'u': '𝘶', 'v': '𝘷', 'w': '𝘸', 'x': '𝘹', 
-                'y': '𝘺', 'z': '𝘻',
-                'A': '𝘈', 'B': '𝘉', 'C': '𝘊', 'D': '𝘋', 'E': '𝘌', 'F': '𝘍', 'G': '𝘎', 'H': '𝘏', 
-                'I': '𝘐', 'J': '𝘑', 'K': '𝘒', 'L': '𝘓', 'M': '𝘔', 'N': '𝘕', 'O': '𝘖', 'P': '𝘗', 
-                'Q': '𝘘', 'R': '𝘙', 'S': '𝘚', 'T': '𝘛', 'U': '𝘜', 'V': '𝘝', 'W': '𝘞', 'X': '𝘟', 
-                'Y': '𝘠', 'Z': '𝘡'
-            };
-            return name.split('').map(char => map[char] || char).join('');
-        }
-        
-        function convertToCircled(name) {
-            const map = {
-                'a': '🅐', 'b': '🅑', 'c': '🅒', 'd': '🅓', 'e': '🅔', 'f': '🅕', 'g': '🅖', 'h': '🅗', 
-                'i': '🅘', 'j': '🅙', 'k': '🅚', 'l': '🅛', 'm': '🅜', 'n': '🅝', 'o': '🅞', 'p': '🅟', 
-                'q': '🅠', 'r': '🅡', 's': '🅢', 't': '🅣', 'u': '🅤', 'v': '🅥', 'w': '🅦', 'x': '🅧', 
-                'y': '🅨', 'z': '🅩',
-                'A': '🅐', 'B': '🅑', 'C': '🅒', 'D': '🅓', 'E': '🅔', 'F': '🅕', 'G': '🅖', 'H': '🅗', 
-                'I': '🅘', 'J': '🅙', 'K': '🅚', 'L': '🅛', 'M': '🅜', 'N': '🅝', 'O': '🅞', 'P': '🅟', 
-                'Q': '🅠', 'R': '🅡', 'S': '🅢', 'T': '🅣', 'U': '🅤', 'V': '🅥', 'W': '🅦', 'X': '🅧', 
-                'Y': '🅨', 'Z': '🅩'
-            };
-            return name.split('').map(char => map[char] || char).join('');
-        }
-        
-        function convertToSmallCircled(name) {
-            const map = {
-                'a': 'ⓐ', 'b': 'ⓑ', 'c': 'ⓒ', 'd': 'ⓓ', 'e': 'ⓔ', 'f': 'ⓕ', 'g': 'ⓖ', 'h': 'ⓗ', 
-                'i': 'ⓘ', 'j': 'ⓙ', 'k': 'ⓚ', 'l': 'ⓛ', 'm': 'ⓜ', 'n': 'ⓝ', 'o': 'ⓞ', 'p': 'ⓟ', 
-                'q': 'ⓠ', 'r': 'ⓡ', 's': 'ⓢ', 't': 'ⓣ', 'u': 'ⓤ', 'v': 'ⓥ', 'w': 'ⓦ', 'x': 'ⓧ', 
-                'y': 'ⓨ', 'z': 'ⓩ',
-                'A': 'Ⓐ', 'B': 'Ⓑ', 'C': 'Ⓒ', 'D': 'Ⓓ', 'E': 'Ⓔ', 'F': 'Ⓕ', 'G': 'Ⓖ', 'H': 'Ⓗ', 
-                'I': 'Ⓘ', 'J': 'Ⓙ', 'K': 'Ⓚ', 'L': 'Ⓛ', 'M': 'Ⓜ', 'N': 'Ⓝ', 'O': 'Ⓞ', 'P': 'Ⓟ', 
-                'Q': 'Ⓠ', 'R': 'Ⓡ', 'S': 'Ⓢ', 'T': 'Ⓣ', 'U': 'Ⓤ', 'V': 'Ⓥ', 'W': 'Ⓦ', 'X': 'Ⓧ', 
-                'Y': 'Ⓨ', 'Z': 'Ⓩ'
-            };
-            return name.split('').map(char => map[char] || char).join('');
-        }
-        
-        function convertToBoldItalic(name) {
-            const map = {
-                'a': '𝒂', 'b': '𝒃', 'c': '𝒄', 'd': '𝒅', 'e': '𝒆', 'f': '𝒇', 'g': '𝒈', 'h': '𝒉', 
-                'i': '𝒊', 'j': '𝒋', 'k': '𝒌', 'l': '𝒍', 'm': '𝒎', 'n': '𝒏', 'o': '𝒐', 'p': '𝒑', 
-                'q': '𝒒', 'r': '𝒓', 's': '𝒔', 't': '𝒕', 'u': '𝒖', 'v': '𝒗', 'w': '𝒘', 'x': '𝒙', 
-                'y': '𝒚', 'z': '𝒛',
-                'A': '𝑨', 'B': '𝑩', 'C': '𝑪', 'D': '𝑫', 'E': '𝑬', 'F': '𝑭', 'G': '𝑮', 'H': '𝑯', 
-                'I': '𝑰', 'J': '𝑱', 'K': '𝑲', 'L': '𝑳', 'M': '𝑴', 'N': '𝑵', 'O': '𝑶', 'P': '𝑷', 
-                'Q': '𝑸', 'R': '𝑹', 'S': '𝑺', 'T': '𝑻', 'U': '𝑼', 'V': '𝑽', 'W': '𝑾', 'X': '𝑿', 
-                'Y': '𝒀', 'Z': '𝒁'
-            };
-            return name.split('').map(char => map[char] || char).join('');
-        }
-        
-        function convertToNativeAmerican(name) {
-            const map = {
-                'a': 'ᗩ', 'b': 'ᗷ', 'c': 'ᑕ', 'd': 'ᗪ', 'e': 'ᗴ', 'f': 'ᖴ', 'g': 'Ꮐ', 'h': 'ᕼ', 
-                'i': 'Ꭵ', 'j': 'ᒍ', 'k': 'Ꮶ', 'l': 'Ꮮ', 'm': 'ᗰ', 'n': 'ᑎ', 'o': 'ᗝ', 'p': 'ᑭ', 
-                'q': 'ᑫ', 'r': 'ᖇ', 's': 'ᔕ', 't': 'ᖶ', 'u': 'ᑌ', 'v': 'ᐯ', 'w': 'ᗯ', 'x': '᙭', 
-                'y': 'Ꭹ', 'z': 'ᘔ',
-                'A': 'ᗩ', 'B': 'ᗷ', 'C': 'ᑕ', 'D': 'ᗪ', 'E': 'ᗴ', 'F': 'ᖴ', 'G': 'Ꮐ', 'H': 'ᕼ', 
-                'I': 'Ꭵ', 'J': 'ᒍ', 'K': 'Ꮶ', 'L': 'Ꮮ', 'M': 'ᗰ', 'N': 'ᑎ', 'O': 'ᗝ', 'P': 'ᑭ', 
-                'Q': 'ᑫ', 'R': 'ᖇ', 'S': 'ᔕ', 'T': 'ᖶ', 'U': 'ᑌ', 'V': 'ᐯ', 'W': 'ᗯ', 'X': '᙭', 
-                'Y': 'Ꭹ', 'Z': 'ᘔ'
-            };
-            return name.split('').map(char => map[char] || char).join('');
-        }
-        
-        function convertToStrikethrough(name) {
-            return name.split('').map(char => char + '\u0336').join('');
-        }
-        
-        function convertToMonospace(name) {
-            const map = {
-                'a': '𝚊', 'b': '𝚋', 'c': '𝚌', 'd': '𝚍', 'e': '𝚎', 'f': '𝚏', 'g': '𝚐', 'h': '𝚑', 
-                'i': '𝚒', 'j': '𝚓', 'k': '𝚔', 'l': '𝚕', 'm': '𝚖', 'n': '𝚗', 'o': '𝚘', 'p': '𝚙', 
-                'q': '𝚚', 'r': '𝚛', 's': '𝚜', 't': '𝚝', 'u': '𝚞', 'v': '𝚟', 'w': '𝚠', 'x': '𝚡', 
-                'y': '𝚢', 'z': '𝚣',
-                'A': '𝙰', 'B': '𝙱', 'C': '𝙲', 'D': '𝙳', 'E': '𝙴', 'F': '𝙵', 'G': '𝙶', 'H': '𝙷', 
-                'I': '𝙸', 'J': '𝙹', 'K': '𝙺', 'L': '𝙻', 'M': '𝙼', 'N': '𝙽', 'O': '𝙾', 'P': '𝙿', 
-                'Q': '𝚀', 'R': '𝚁', 'S': '𝚂', 'T': '𝚃', 'U': '𝚄', 'V': '𝚅', 'W': '𝚆', 'X': '𝚇', 
-                'Y': '𝚈', 'Z': '𝚉'
-            };
-            return name.split('').map(char => map[char] || char).join('');
-        }
-        
-        function convertToGreekStyle(name) {
-            const map = {
-                'a': 'α', 'b': 'в', 'c': 'c', 'd': 'd', 'e': 'є', 'f': 'f', 'g': 'g', 'h': 'н', 
-                'i': 'ι', 'j': 'j', 'k': 'k', 'l': 'l', 'm': 'м', 'n': 'η', 'o': 'σ', 'p': 'ρ', 
-                'q': 'q', 'r': 'я', 's': 'ѕ', 't': 'т', 'u': 'υ', 'v': 'ν', 'w': 'ω', 'x': 'χ', 
-                'y': 'у', 'z': 'z',
-                'A': 'Α', 'B': 'Β', 'C': 'C', 'D': 'D', 'E': 'Ε', 'F': 'F', 'G': 'G', 'H': 'Η', 
-                'I': 'Ι', 'J': 'J', 'K': 'Κ', 'L': 'L', 'M': 'Μ', 'N': 'Ν', 'O': 'Ο', 'P': 'Ρ', 
-                'Q': 'Q', 'R': 'R', 'S': 'Σ', 'T': 'Τ', 'U': 'Υ', 'V': 'V', 'W': 'Ω', 'X': 'Χ', 
-                'Y': 'Υ', 'Z': 'Ζ'
-            };
-            return name.split('').map(char => map[char] || char).join('');
-        }
-        
-        function convertToSmallCaps(name) {
-            const map = {
-                'a': 'ᴀ', 'b': 'ʙ', 'c': 'ᴄ', 'd': 'ᴅ', 'e': 'ᴇ', 'f': 'ғ', 'g': 'ɢ', 'h': 'ʜ', 
-                'i': 'ɪ', 'j': 'ᴊ', 'k': 'ᴋ', 'l': 'ʟ', 'm': 'ᴍ', 'n': 'ɴ', 'o': 'ᴏ', 'p': 'ᴘ', 
-                'q': 'ǫ', 'r': 'ʀ', 's': 's', 't': 'ᴛ', 'u': 'ᴜ', 'v': 'ᴠ', 'w': 'ᴡ', 'x': 'x', 
-                'y': 'ʏ', 'z': 'ᴢ',
-                'A': 'ᴀ', 'B': 'ʙ', 'C': 'ᴄ', 'D': 'ᴅ', 'E': 'ᴇ', 'F': 'ғ', 'G': 'ɢ', 'H': 'ʜ', 
-                'I': 'ɪ', 'J': 'ᴊ', 'K': 'ᴋ', 'L': 'ʟ', 'M': 'ᴍ', 'N': 'ɴ', 'O': 'ᴏ', 'P': 'ᴘ', 
-                'Q': 'ǫ', 'R': 'ʀ', 'S': 's', 'T': 'ᴛ', 'U': 'ᴜ', 'V': 'ᴠ', 'W': 'ᴡ', 'X': 'x', 
-                'Y': 'ʏ', 'Z': 'ᴢ'
-            };
-            return name.split('').map(char => map[char] || char).join('');
-        }
-
-   // ===== ALL FONTS WITH PREFIX/SUFFIX =====
-
-// 1. Ring Style (N͢a͢m͢e͢) - suffix only
-function convertToRing(name) {
-    return name.split('').map(char => char + '͢').join('');
-}
-
-// 2. Bold Sans Caps (𝚴𝚨𝚳𝚬) - mapping required
-function convertToBoldSansCaps(name) {
-    const map = {
-        'A': '𝚨', 'B': '𝚩', 'C': '𝚪', 'D': '𝚫', 'E': '𝚬', 'F': '𝚭', 'G': '𝚮', 'H': '𝚯',
-        'I': '𝚰', 'J': '𝚱', 'K': '𝚲', 'L': '𝚳', 'M': '𝚴', 'N': '𝚵', 'O': '𝚶', 'P': '𝚷',
-        'Q': '𝚸', 'R': '𝚹', 'S': '𝚺', 'T': '𝚻', 'U': '𝚼', 'V': '𝚽', 'W': '𝚾', 'X': '𝚿',
-        'Y': '𝚼', 'Z': '𝚭',
-        'a': '𝚊', 'b': '𝚋', 'c': '𝚌', 'd': '𝚍', 'e': '𝚎', 'f': '𝚏', 'g': '𝚐', 'h': '𝚑',
-        'i': '𝚒', 'j': '𝚓', 'k': '𝚔', 'l': '𝚕', 'm': '𝚖', 'n': '𝚗', 'o': '𝚘', 'p': '𝚙',
-        'q': '𝚚', 'r': '𝚛', 's': '𝚜', 't': '𝚝', 'u': '𝚞', 'v': '𝚟', 'w': '𝚠', 'x': '𝚡',
-        'y': '𝚢', 'z': '𝚣'
-    };
-    return name.split('').map(char => map[char] || char).join('');
-}
-
-// 3. Cursive Script (𝓝𝓪𝓶𝓮) - mapping required
-function convertToCursive(name) {
-    const map = {
-        'A': '𝓐', 'B': '𝓑', 'C': '𝓒', 'D': '𝓓', 'E': '𝓔', 'F': '𝓕', 'G': '𝓖', 'H': '𝓗',
-        'I': '𝓘', 'J': '𝓙', 'K': '𝓚', 'L': '𝓛', 'M': '𝓜', 'N': '𝓝', 'O': '𝓞', 'P': '𝓟',
-        'Q': '𝓠', 'R': '𝓡', 'S': '𝓢', 'T': '𝓣', 'U': '𝓤', 'V': '𝓥', 'W': '𝓦', 'X': '𝓧',
-        'Y': '𝓨', 'Z': '𝓩',
-        'a': '𝓪', 'b': '𝓫', 'c': '𝓬', 'd': '𝓭', 'e': '𝓮', 'f': '𝓯', 'g': '𝓰', 'h': '𝓱',
-        'i': '𝓲', 'j': '𝓳', 'k': '𝓴', 'l': '𝓵', 'm': '𝓶', 'n': '𝓷', 'o': '𝓸', 'p': '𝓹',
-        'q': '𝓺', 'r': '𝓻', 's': '𝓼', 't': '𝓽', 'u': '𝓾', 'v': '𝓿', 'w': '𝔀', 'x': '𝔁',
-        'y': '𝔂', 'z': '𝔃'
-    };
-    return name.split('').map(char => map[char] || char).join('');
-}
-
-// 4. Double Struck Bold (𝕹𝕬𝕸𝕰) - mapping required
-function convertToDoubleStruckBold(name) {
-    const map = {
-        'A': '𝕬', 'B': '𝕭', 'C': '𝕮', 'D': '𝕯', 'E': '𝕰', 'F': '𝕱', 'G': '𝕲', 'H': '𝕳',
-        'I': '𝕴', 'J': '𝕵', 'K': '𝕶', 'L': '𝕷', 'M': '𝕸', 'N': '𝕹', 'O': '𝕺', 'P': '𝕻',
-        'Q': '𝕼', 'R': '𝕽', 'S': '𝕾', 'T': '𝕿', 'U': '𝖀', 'V': '𝖁', 'W': '𝖂', 'X': '𝖃',
-        'Y': '𝖄', 'Z': '𝖅',
-        'a': '𝖆', 'b': '𝖇', 'c': '𝖈', 'd': '𝖉', 'e': '𝖊', 'f': '𝖋', 'g': '𝖌', 'h': '𝖍',
-        'i': '𝖎', 'j': '𝖏', 'k': '𝖐', 'l': '𝖑', 'm': '𝖒', 'n': '𝖓', 'o': '𝖔', 'p': '𝖕',
-        'q': '𝖖', 'r': '𝖗', 's': '𝖘', 't': '𝖙', 'u': '𝖚', 'v': '𝖛', 'w': '𝖜', 'x': '𝖝',
-        'y': '𝖞', 'z': '𝖟'
-    };
-    return name.split('').map(char => map[char] || char).join('');
-}
-
-// 5. Double Struck Regular (ℕ𝕒𝕞𝕖) - mapping required
-function convertToDoubleStruck(name) {
-    const map = {
-        'A': '𝔸', 'B': '𝔹', 'C': 'ℂ', 'D': '𝔻', 'E': '𝔼', 'F': '𝔽', 'G': '𝔾', 'H': 'ℍ',
-        'I': '𝕀', 'J': '𝕁', 'K': '𝕂', 'L': '𝕃', 'M': '𝕄', 'N': 'ℕ', 'O': '𝕆', 'P': 'ℙ',
-        'Q': 'ℚ', 'R': 'ℝ', 'S': '𝕊', 'T': '𝕋', 'U': '𝕌', 'V': '𝕍', 'W': '𝕎', 'X': '𝕏',
-        'Y': '𝕐', 'Z': 'ℤ',
-        'a': '𝕒', 'b': '𝕓', 'c': '𝕔', 'd': '𝕕', 'e': '𝕖', 'f': '𝕗', 'g': '𝕘', 'h': '𝕙',
-        'i': '𝕚', 'j': '𝕛', 'k': '𝕜', 'l': '𝕝', 'm': '𝕞', 'n': '𝕟', 'o': '𝕠', 'p': '𝕡',
-        'q': '𝕢', 'r': '𝕣', 's': '𝕤', 't': '𝕥', 'u': '𝕦', 'v': '𝕧', 'w': '𝕨', 'x': '𝕩',
-        'y': '𝕪', 'z': '𝕫'
-    };
-    return name.split('').map(char => map[char] || char).join('');
-}
-
-// 6. Bold Sans (𝙉𝙖𝙢𝙚) - mapping required
-function convertToBoldSans(name) {
-    const map = {
-        'A': '𝗔', 'B': '𝗕', 'C': '𝗖', 'D': '𝗗', 'E': '𝗘', 'F': '𝗙', 'G': '𝗚', 'H': '𝗛',
-        'I': '𝗜', 'J': '𝗝', 'K': '𝗞', 'L': '𝗟', 'M': '𝗠', 'N': '𝗡', 'O': '𝗢', 'P': '𝗣',
-        'Q': '𝗤', 'R': '𝗥', 'S': '𝗦', 'T': '𝗧', 'U': '𝗨', 'V': '𝗩', 'W': '𝗪', 'X': '𝗫',
-        'Y': '𝗬', 'Z': '𝗭',
-        'a': '𝗮', 'b': '𝗯', 'c': '𝗰', 'd': '𝗱', 'e': '𝗲', 'f': '𝗳', 'g': '𝗴', 'h': '𝗵',
-        'i': '𝗶', 'j': '𝗷', 'k': '𝗸', 'l': '𝗹', 'm': '𝗺', 'n': '𝗻', 'o': '𝗼', 'p': '𝗽',
-        'q': '𝗾', 'r': '𝗿', 's': '𝘀', 't': '𝘁', 'u': '𝘂', 'v': '𝘃', 'w': '𝘄', 'x': '𝘅',
-        'y': '𝘆', 'z': '𝘇'
-    };
-    return name.split('').map(char => map[char] || char).join('');
-}
-
-// 7. Italic Serif (𝑁𝑎𝑚𝑒) - mapping required
-function convertToItalicSerif(name) {
-    const map = {
-        'A': '𝐴', 'B': '𝐵', 'C': '𝐶', 'D': '𝐷', 'E': '𝐸', 'F': '𝐹', 'G': '𝐺', 'H': '𝐻',
-        'I': '𝐼', 'J': '𝐽', 'K': '𝐾', 'L': '𝐿', 'M': '𝑀', 'N': '𝑁', 'O': '𝑂', 'P': '𝑃',
-        'Q': '𝑄', 'R': '𝑅', 'S': '𝑆', 'T': '𝑇', 'U': '𝑈', 'V': '𝑉', 'W': '𝑊', 'X': '𝑋',
-        'Y': '𝑌', 'Z': '𝑍',
-        'a': '𝑎', 'b': '𝑏', 'c': '𝑐', 'd': '𝑑', 'e': '𝑒', 'f': '𝑓', 'g': '𝑔', 'h': 'ℎ',
-        'i': '𝑖', 'j': '𝑗', 'k': '𝑘', 'l': '𝑙', 'm': '𝑚', 'n': '𝑛', 'o': '𝑜', 'p': '𝑝',
-        'q': '𝑞', 'r': '𝑟', 's': '𝑠', 't': '𝑡', 'u': '𝑢', 'v': '𝑣', 'w': '𝑤', 'x': '𝑥',
-        'y': '𝑦', 'z': '𝑧'
-    };
-    return name.split('').map(char => map[char] || char).join('');
-}
-
-// 8. Squared Letters (🄽🄰🄼🄴) - mapping required
-function convertToSquared(name) {
-    const map = {
-        'A': '🄰', 'B': '🄱', 'C': '🄲', 'D': '🄳', 'E': '🄴', 'F': '🄵', 'G': '🄶', 'H': '🄷',
-        'I': '🄸', 'J': '🄹', 'K': '🄺', 'L': '🄻', 'M': '🄼', 'N': '🄽', 'O': '🄾', 'P': '🄿',
-        'Q': '🅀', 'R': '🅁', 'S': '🅂', 'T': '🅃', 'U': '🅄', 'V': '🅅', 'W': '🅆', 'X': '🅇',
-        'Y': '🅈', 'Z': '🅉'
-    };
-    return name.toUpperCase().split('').map(char => map[char] || char).join('');
-}
-
-// 9. Sans Serif (𝘕𝘢𝘮𝘦) - mapping required
-function convertToSansSerif(name) {
-    const map = {
-        'A': '𝘈', 'B': '𝘉', 'C': '𝘊', 'D': '𝘋', 'E': '𝘌', 'F': '𝘍', 'G': '𝘎', 'H': '𝘏',
-        'I': '𝘐', 'J': '𝘑', 'K': '𝘒', 'L': '𝘓', 'M': '𝘔', 'N': '𝘕', 'O': '𝘖', 'P': '𝘗',
-        'Q': '𝘘', 'R': '𝘙', 'S': '𝘚', 'T': '𝘛', 'U': '𝘜', 'V': '𝘝', 'W': '𝘞', 'X': '𝘟',
-        'Y': '𝘠', 'Z': '𝘡',
-        'a': '𝘢', 'b': '𝘣', 'c': '𝘤', 'd': '𝘥', 'e': '𝘦', 'f': '𝘧', 'g': '𝘨', 'h': '𝘩',
-        'i': '𝘪', 'j': '𝘫', 'k': '𝘬', 'l': '𝘭', 'm': '𝘮', 'n': '𝘯', 'o': '𝘰', 'p': '𝘱',
-        'q': '𝘲', 'r': '𝘳', 's': '𝘴', 't': '𝘵', 'u': '𝘶', 'v': '𝘷', 'w': '𝘸', 'x': '𝘹',
-        'y': '𝘺', 'z': '𝘻'
-    };
-    return name.split('').map(char => map[char] || char).join('');
-}
-
-// 10. Circled Letters (🅝🅐🅜🅔) - mapping required
-function convertToCircled(name) {
-    const map = {
-        'A': '🅐', 'B': '🅑', 'C': '🅒', 'D': '🅓', 'E': '🅔', 'F': '🅕', 'G': '🅖', 'H': '🅗',
-        'I': '🅘', 'J': '🅙', 'K': '🅚', 'L': '🅛', 'M': '🅜', 'N': '🅝', 'O': '🅞', 'P': '🅟',
-        'Q': '🅠', 'R': '🅡', 'S': '🅢', 'T': '🅣', 'U': '🅤', 'V': '🅥', 'W': '🅦', 'X': '🅧',
-        'Y': '🅨', 'Z': '🅩'
-    };
-    return name.toUpperCase().split('').map(char => map[char] || char).join('');
-}
-
-// 11. Small Circled (Ⓝⓐⓜⓔ) - mapping required
-function convertToSmallCircled(name) {
-    const map = {
-        'A': 'Ⓐ', 'B': 'Ⓑ', 'C': 'Ⓒ', 'D': 'Ⓓ', 'E': 'Ⓔ', 'F': 'Ⓕ', 'G': 'Ⓖ', 'H': 'Ⓗ',
-        'I': 'Ⓘ', 'J': 'Ⓙ', 'K': 'Ⓚ', 'L': 'Ⓛ', 'M': 'Ⓜ', 'N': 'Ⓝ', 'O': 'Ⓞ', 'P': 'Ⓟ',
-        'Q': 'Ⓠ', 'R': 'Ⓡ', 'S': 'Ⓢ', 'T': 'Ⓣ', 'U': 'Ⓤ', 'V': 'Ⓥ', 'W': 'Ⓦ', 'X': 'Ⓧ',
-        'Y': 'Ⓨ', 'Z': 'Ⓩ',
-        'a': 'ⓐ', 'b': 'ⓑ', 'c': 'ⓒ', 'd': 'ⓓ', 'e': 'ⓔ', 'f': 'ⓕ', 'g': 'ⓖ', 'h': 'ⓗ',
-        'i': 'ⓘ', 'j': 'ⓙ', 'k': 'ⓚ', 'l': 'ⓛ', 'm': 'ⓜ', 'n': 'ⓝ', 'o': 'ⓞ', 'p': 'ⓟ',
-        'q': 'ⓠ', 'r': 'ⓡ', 's': 'ⓢ', 't': 'ⓣ', 'u': 'ⓤ', 'v': 'ⓥ', 'w': 'ⓦ', 'x': 'ⓧ',
-        'y': 'ⓨ', 'z': 'ⓩ'
-    };
-    return name.split('').map(char => map[char] || char).join('');
-}
-
-// 12. Bold Italic (𝑵𝑨𝑴𝑬) - mapping required
-function convertToBoldItalic(name) {
-    const map = {
-        'A': '𝑨', 'B': '𝑩', 'C': '𝑪', 'D': '𝑫', 'E': '𝑬', 'F': '𝑭', 'G': '𝑮', 'H': '𝑯',
-        'I': '𝑰', 'J': '𝑱', 'K': '𝑲', 'L': '𝑳', 'M': '𝑴', 'N': '𝑵', 'O': '𝑶', 'P': '𝑷',
-        'Q': '𝑸', 'R': '𝑹', 'S': '𝑺', 'T': '𝑻', 'U': '𝑼', 'V': '𝑽', 'W': '𝑾', 'X': '𝑿',
-        'Y': '𝒀', 'Z': '𝒁',
-        'a': '𝒂', 'b': '𝒃', 'c': '𝒄', 'd': '𝒅', 'e': '𝒆', 'f': '𝒇', 'g': '𝒈', 'h': '𝒉',
-        'i': '𝒊', 'j': '𝒋', 'k': '𝒌', 'l': '𝒍', 'm': '𝒎', 'n': '𝒏', 'o': '𝒐', 'p': '𝒑',
-        'q': '𝒒', 'r': '𝒓', 's': '𝒔', 't': '𝒕', 'u': '𝒖', 'v': '𝒗', 'w': '𝒘', 'x': '𝒙',
-        'y': '𝒚', 'z': '𝒛'
-    };
-    return name.split('').map(char => map[char] || char).join('');
-}
-
-// 13. Native American (ᑎᗩᗰᗴ) - mapping required
-function convertToNativeAmerican(name) {
-    const map = {
-        'A': 'ᗩ', 'B': 'ᗷ', 'C': 'ᑕ', 'D': 'ᗪ', 'E': 'ᗴ', 'F': 'ᖴ', 'G': 'Ꮐ', 'H': 'ᕼ',
-        'I': 'Ꭵ', 'J': 'ᒍ', 'K': 'Ꮶ', 'L': 'Ꮮ', 'M': 'ᗰ', 'N': 'ᑎ', 'O': 'ᗝ', 'P': 'ᑭ',
-        'Q': 'ᑫ', 'R': 'ᖇ', 'S': 'ᔕ', 'T': 'ᖶ', 'U': 'ᑌ', 'V': 'ᐯ', 'W': 'ᗯ', 'X': '᙭',
-        'Y': 'Ꭹ', 'Z': 'ᘔ'
-    };
-    return name.toUpperCase().split('').map(char => map[char] || char).join('');
-}
-
-// 14. Strikethrough (N̷a̷m̷e̷) - suffix only
-function convertToStrikethrough(name) {
-    return name.split('').map(char => char + '̷').join('');
-}
-
-// 15. Monospace (𝙽𝚊𝚖𝚎) - mapping required
-function convertToMonospace(name) {
-    const map = {
-        'A': '𝙰', 'B': '𝙱', 'C': '𝙲', 'D': '𝙳', 'E': '𝙴', 'F': '𝙵', 'G': '𝙶', 'H': '𝙷',
-        'I': '𝙸', 'J': '𝙹', 'K': '𝙺', 'L': '𝙻', 'M': '𝙼', 'N': '𝙽', 'O': '𝙾', 'P': '𝙿',
-        'Q': '𝚀', 'R': '𝚁', 'S': '𝚂', 'T': '𝚃', 'U': '𝚄', 'V': '𝚅', 'W': '𝚆', 'X': '𝚇',
-        'Y': '𝚈', 'Z': '𝚉',
-        'a': '𝚊', 'b': '𝚋', 'c': '𝚌', 'd': '𝚍', 'e': '𝚎', 'f': '𝚏', 'g': '𝚐', 'h': '𝚑',
-        'i': '𝚒', 'j': '𝚓', 'k': '𝚔', 'l': '𝚕', 'm': '𝚖', 'n': '𝚗', 'o': '𝚘', 'p': '𝚙',
-        'q': '𝚚', 'r': '𝚛', 's': '𝚜', 't': '𝚝', 'u': '𝚞', 'v': '𝚟', 'w': '𝚠', 'x': '𝚡',
-        'y': '𝚢', 'z': '𝚣'
-    };
-    return name.split('').map(char => map[char] || char).join('');
-}
-
-// 16. Greek Style (Ναмε) - mapping required
-function convertToGreekStyle(name) {
-    const map = {
-        'A': 'Α', 'B': 'Β', 'C': 'Ͻ', 'D': 'Ɗ', 'E': 'Σ', 'F': 'Ƒ', 'G': 'Ɠ', 'H': 'Η',
-        'I': 'Ι', 'J': 'Ј', 'K': 'Κ', 'L': 'ᒪ', 'M': 'Μ', 'N': 'Ν', 'O': 'Ο', 'P': 'Ρ',
-        'Q': 'Ԛ', 'R': 'Я', 'S': 'Ѕ', 'T': 'Τ', 'U': 'Υ', 'V': 'Ν', 'W': 'Ω', 'X': 'Χ',
-        'Y': 'Υ', 'Z': 'Ζ',
-        'a': 'α', 'b': 'в', 'c': 'c', 'd': 'ɗ', 'e': 'ε', 'f': 'ƒ', 'g': 'ɠ', 'h': 'н',
-        'i': 'ɪ', 'j': 'נ', 'k': 'κ', 'l': 'ℓ', 'm': 'м', 'n': 'η', 'o': 'σ', 'p': 'ρ',
-        'q': 'զ', 'r': 'я', 's': 'ѕ', 't': 'τ', 'u': 'υ', 'v': 'ν', 'w': 'ω', 'x': 'χ',
-        'y': 'γ', 'z': 'ƶ'
-    };
-    return name.split('').map(char => map[char] || char).join('');
-}
-
-// 17. Small Caps (ɴᴀᴍᴇ) - mapping required
-function convertToSmallCaps(name) {
-    const map = {
-        'A': 'ᴀ', 'B': 'ʙ', 'C': 'ᴄ', 'D': 'ᴅ', 'E': 'ᴇ', 'F': 'ғ', 'G': 'ɢ', 'H': 'ʜ',
-        'I': 'ɪ', 'J': 'ᴊ', 'K': 'ᴋ', 'L': 'ʟ', 'M': 'ᴍ', 'N': 'ɴ', 'O': 'ᴏ', 'P': 'ᴘ',
-        'Q': 'ǫ', 'R': 'ʀ', 'S': 's', 'T': 'ᴛ', 'U': 'ᴜ', 'V': 'ᴠ', 'W': 'ᴡ', 'X': 'x',
-        'Y': 'ʏ', 'Z': 'ᴢ'
-    };
-    return name.toUpperCase().split('').map(char => map[char] || char).join('');
-}
-
-// 18. Cherokee Style (ᏁᎯᎷᎬ) - mapping required
-function convertToCherokee(name) {
-    const map = {
-        'A': 'Ꭿ', 'B': 'Ᏸ', 'C': 'Ꮸ', 'D': 'Ꮄ', 'E': 'Ꭼ', 'F': 'Ꮀ', 'G': 'Ꮐ', 'H': 'Ꮋ',
-        'I': 'Ꭵ', 'J': 'Ꮰ', 'K': 'Ꮶ', 'L': 'Ꮭ', 'M': 'Ꮇ', 'N': 'Ꮑ', 'O': 'Ꮎ', 'P': 'Ꮲ',
-        'Q': 'Ꭴ', 'R': 'Ꮢ', 'S': 'Ꮥ', 'T': 'Ꮦ', 'U': 'Ꮼ', 'V': 'Ꮙ', 'W': 'Ꮗ', 'X': 'Ꮸ',
-        'Y': 'Ꮍ', 'Z': 'Ꮓ'
-    };
-    return name.toUpperCase().split('').map(char => map[char] || char).join('');
-}
-
-// 19. Dotted Underline (ᴺ͎ᵃ͎ᵐ͎ᵉ͎) - suffix only
-function convertToDottedUnderline(name) {
-    return name.split('').map(char => {
-        if (char >= 'a' && char <= 'z') {
-            return char + '͎';
-        } else if (char >= 'A' && char <= 'Z') {
-            return String.fromCharCode(char.charCodeAt(0) - 'A'.charCodeAt(0) + 'ᵃ'.charCodeAt(0)) + '͎';
-        }
-        return char + '͎';
-    }).join('');
-}
-
-// 20. Crossed Style (N̵̔A̵̔M̵̔E̵̔) - suffix only
-function convertToCrossed(name) {
-    return name.split('').map(char => char + '̵̔').join('');
-}
-
-// 21. Curly Marks (N֟a֟m֟E֟) - suffix only
-function convertToCurlyMarks(name) {
-    return name.split('').map(char => char + '֟').join('');
-}
-
-// 22. Dotted Above (N҉ A҉ M҉ E҉) - suffix only
-function convertToDottedAbove(name) {
-    return name.split('').map(char => char + '҉').join('');
-}
-
-// 23. Ancient Style (𐌽𐌰𐌼𐌴) - mapping required
-function convertToAncient(name) {
-    const map = {
-        'A': '𐌰', 'B': '𐌱', 'C': '𐌲', 'D': '𐌳', 'E': '𐌴', 'F': '𐍆', 'G': '𐌾', 'H': '𐌷',
-        'I': '𐌹', 'J': '𐌻', 'K': '𐌺', 'L': '𐍊', 'M': '𐌼', 'N': '𐌽', 'O': '𐍈', 'P': '𐍉',
-        'Q': '𐍁', 'R': '𐍂', 'S': '𐍃', 'T': '𐍄', 'U': '𐍀', 'V': '𝚅', 'W': '𐌸', 'X': '𐍇',
-        'Y': '𐍅', 'Z': '𐌶'
-    };
-    return name.toUpperCase().split('').map(char => map[char] || char).join('');
-}
-
-// 24. Small Strikethrough (ᴺ̸ᵃ̸ᵐ̸ᵉ̸) - suffix only
-function convertToSmallStrikethrough(name) {
-    return name.split('').map(char => char + '̸').join('');
-}
-
-// 25. Chinese Style (几卂爪乇) - mapping required
-function convertToChinese(name) {
-    const map = {
-        'A': '卂', 'B': '乃', 'C': '匚', 'D': '刀', 'E': '乇', 'F': '千', 'G': 'Ꮆ', 'H': '卄',
-        'I': '丨', 'J': 'ﾌ', 'K': 'Ҝ', 'L': 'ㄥ', 'M': '爪', 'N': '几', 'O': 'ㄖ', 'P': '卩',
-        'Q': 'Ҩ', 'R': '尺', 'S': '丂', 'T': 'ㄒ', 'U': 'ㄩ', 'V': 'ᐯ', 'W': '山', 'X': '乂',
-        'Y': 'ㄚ', 'Z': '乙'
-    };
-    return name.toUpperCase().split('').map(char => map[char] || char).join('');
-}
-
-// 26. Simple Strikethrough (N̶a̶m̶e̶) - suffix only
-function convertToSimpleStrikethrough(name) {
-    return name.split('').map(char => char + '̶').join('');
-}
-
-// 27. Full Width (Ｎａｍｅ) - mapping required
-function convertToFullWidth(name) {
-    const map = {
-        'A': 'Ａ', 'B': 'Ｂ', 'C': 'Ｃ', 'D': 'Ｄ', 'E': 'Ｅ', 'F': 'Ｆ', 'G': 'Ｇ', 'H': 'Ｈ',
-        'I': 'Ｉ', 'J': 'Ｊ', 'K': 'Ｋ', 'L': 'Ｌ', 'M': 'Ｍ', 'N': 'Ｎ', 'O': 'Ｏ', 'P': 'Ｐ',
-        'Q': 'Ｑ', 'R': 'Ｒ', 'S': 'Ｓ', 'T': 'Ｔ', 'U': 'Ｕ', 'V': 'Ｖ', 'W': 'Ｗ', 'X': 'Ｘ',
-        'Y': 'Ｙ', 'Z': 'Ｚ',
-        'a': 'ａ', 'b': 'ｂ', 'c': 'ｃ', 'd': 'ｄ', 'e': 'ｅ', 'f': 'ｆ', 'g': 'ｇ', 'h': 'ｈ',
-        'i': 'ｉ', 'j': 'ｊ', 'k': 'ｋ', 'l': 'ｌ', 'm': 'ｍ', 'n': 'ｎ', 'o': 'ｏ', 'p': 'ｐ',
-        'q': 'ｑ', 'r': 'ｒ', 's': 'ｓ', 't': 'ｔ', 'u': 'ｕ', 'v': 'ｖ', 'w': 'ｗ', 'x': 'ｘ',
-        'y': 'ｙ', 'z': 'ｚ'
-    };
-    return name.split('').map(char => map[char] || char).join('');
-}
-
-// 28. Upside Down (Nɐɯǝ) - mapping required
-function convertToUpsideDown(name) {
-    const map = {
-        'a': 'ɐ', 'b': 'q', 'c': 'ɔ', 'd': 'p', 'e': 'ǝ', 'f': 'ɟ', 'g': 'ɓ', 'h': 'ɥ',
-        'i': 'ᴉ', 'j': 'ɾ', 'k': 'ʞ', 'l': 'l', 'm': 'ɯ', 'n': 'u', 'o': 'o', 'p': 'd',
-        'q': 'b', 'r': 'ɹ', 's': 's', 't': 'ʇ', 'u': 'n', 'v': 'ʌ', 'w': 'ʍ', 'x': 'x',
-        'y': 'ʎ', 'z': 'z',
-        'A': '∀', 'B': '𐐒', 'C': 'Ɔ', 'D': '◖', 'E': 'Ǝ', 'F': 'Ⅎ', 'G': '⅁', 'H': 'H',
-        'I': 'I', 'J': 'ſ', 'K': 'ꓘ', 'L': '˥', 'M': 'W', 'N': 'N', 'O': 'O', 'P': 'Ԁ',
-        'Q': 'Ò', 'R': 'ᴚ', 'S': 'S', 'T': '⊥', 'U': '∩', 'V': 'Λ', 'W': 'M', 'X': 'X',
-        'Y': '⅄', 'Z': 'Z'
-    };
-    return name.split('').map(char => map[char] || char).join('');
-}
-
-// 29. Underlined (N̲a̲m̲e̲) - suffix only
-function convertToUnderlined(name) {
-    return name.split('').map(char => char + '̲').join('');
-}
-
-// 30. Japanese Style (れ么从モ) - mapping required
-function convertToJapanese(name) {
-    const map = {
-        'A': '么', 'B': '乃', 'C': '匚', 'D': '刁', 'E': 'モ', 'F': 'ｷ', 'G': 'ム', 'H': '廾',
-        'I': '工', 'J': 'ﾌ', 'K': 'ズ', 'L': 'ﾚ', 'M': '从', 'N': 'れ', 'O': '〇', 'P': '尸',
-        'Q': 'ゐ', 'R': '尺', 'S': '丂', 'T': 'ｲ', 'U': 'ひ', 'V': '√', 'W': '山', 'X': 'メ',
-        'Y': 'Ɏ', 'Z': '乙'
-    };
-    return name.toUpperCase().split('').map(char => map[char] || char).join('');
-}
-
-// 31. Mixed Squared (🄽🅰🄼🅴) - mapping required
-function convertToMixedSquared(name) {
-    const map = {
-        'A': '🄰', 'B': '🄱', 'C': '🄲', 'D': '🄳', 'E': '🄴', 'F': '🄵', 'G': '🄶', 'H': '🄷',
-        'I': '🄸', 'J': '🄹', 'K': '🄺', 'L': '🄻', 'M': '🄼', 'N': '🄽', 'O': '🄾', 'P': '🄿',
-        'Q': '🅀', 'R': '🅁', 'S': '🅂', 'T': '🅃', 'U': '🅄', 'V': '🅅', 'W': '🅆', 'X': '🅇',
-        'Y': '🅈', 'Z': '🅉',
-        'a': '🅰', 'b': '🅱', 'c': '🅲', 'd': '🅳', 'e': '🅴', 'f': '🅵', 'g': '🅶', 'h': '🅷',
-        'i': '🅸', 'j': '🅹', 'k': '🅺', 'l': '🅻', 'm': '🅼', 'n': '🅽', 'o': '🅾', 'p': '🅿',
-        'q': '🆀', 'r': '🆁', 's': '🆂', 't': '🆃', 'u': '🆄', 'v': '🆅', 'w': '🆆', 'x': '🆇',
-        'y': '🆈', 'z': '🆉'
-    };
-    return name.split('').map(char => map[char] || char).join('');
-}
-
-// 32. Mixed Circles (𝙉ⓐ𝙢ⓔ) - mapping required
-function convertToMixedCircles(name) {
-    const map = {
-        'A': 'Ⓐ', 'B': '𝗕', 'C': '𝗖', 'D': '𝗗', 'E': 'Ⓔ', 'F': '𝗙', 'G': '𝗚', 'H': '𝗛',
-        'I': 'Ⓘ', 'J': '𝗝', 'K': '𝗞', 'L': '𝗟', 'M': '𝗠', 'N': '𝗡', 'O': 'Ⓞ', 'P': '𝗣',
-        'Q': '𝗤', 'R': '𝗥', 'S': '𝗦', 'T': '𝗧', 'U': 'Ⓤ', 'V': '𝗩', 'W': '𝗪', 'X': '𝗫',
-        'Y': 'Ⓨ', 'Z': '𝗭',
-        'a': 'ⓐ', 'b': '𝙗', 'c': '𝙘', 'd': '𝙙', 'e': 'ⓔ', 'f': '𝙛', 'g': '𝙜', 'h': '𝙝',
-        'i': 'Ⓘ', 'j': '𝙟', 'k': '𝙠', 'l': '𝙡', 'm': '𝙢', 'n': '𝙣', 'o': 'ⓞ', 'p': '𝙥',
-        'q': '𝙦', 'r': '𝙧', 's': '𝙨', 't': '𝙩', 'u': 'ⓤ', 'v': '𝙫', 'w': '𝙬', 'x': '𝙭',
-        'y': 'ⓨ', 'z': '𝙯'
-    };
-    return name.split('').map(char => map[char] || char).join('');
-}
-
-// 33. Number Style (🅝❼🅜❸) - mapping required
-function convertToNumberStyle(name) {
-    const map = {
-        'A': '🅐', 'B': '🅑', 'C': '🅒', 'D': '🅓', 'E': '🅔', 'F': '🅕', 'G': '🅖', 'H': '🅗',
-        'I': '❶', 'J': '🅙', 'K': '🅚', 'L': '🅛', 'M': '🅜', 'N': '🅝', 'O': '🅞', 'P': '🅟',
-        'Q': '🅠', 'R': '🅡', 'S': '🅢', 'T': '🅣', 'U': '🅤', 'V': '🅥', 'W': '🅦', 'X': '🅧',
-        'Y': '🅨', 'Z': '🅩',
-        'a': 'ⓐ', 'b': 'ⓑ', 'c': 'ⓒ', 'd': 'ⓓ', 'e': 'ⓔ', 'f': 'ⓕ', 'g': 'ⓖ', 'h': 'ⓗ',
-        'i': 'ⓘ', 'j': 'ⓙ', 'k': 'ⓚ', 'l': 'ⓛ', 'm': 'ⓜ', 'n': 'ⓝ', 'o': 'ⓞ', 'p': 'ⓟ',
-        'q': 'ⓠ', 'r': 'ⓡ', 's': 'ⓢ', 't': 'ⓣ', 'u': 'ⓤ', 'v': 'ⓥ', 'w': 'ⓦ', 'x': 'ⓧ',
-        'y': 'ⓨ', 'z': 'ⓩ'
-    };
-    return name.split('').map(char => map[char] || char).join('');
-}
-
-// 34. Ring + Circle (N͢ⓐm͢ⓔ) - combination
-function convertToRingCircle(name) {
-    return name.split('').map((char, index) => {
-        if (index === 0) return char + '͢';
-        if (index === 1) return 'ⓐ';
-        if (index === 2) return char + '͢';
-        if (index === 3) return 'ⓔ';
-        return char;
-    }).join('');
-}
-
-// 35. Bold + Double (𝙉𝕒𝙢𝕖) - mapping required
-function convertToBoldDouble(name) {
-    const map = {
-        'A': '𝔸', 'B': '𝗕', 'C': '𝗖', 'D': '𝗗', 'E': '𝔼', 'F': '𝗙', 'G': '𝗚', 'H': '𝗛',
-        'I': '𝕀', 'J': '𝗝', 'K': '𝗞', 'L': '𝗟', 'M': '𝗠', 'N': '𝗡', 'O': '𝕆', 'P': '𝗣',
-        'Q': '𝗤', 'R': '𝗥', 'S': '𝗦', 'T': '𝗧', 'U': '𝕌', 'V': '𝗩', 'W': '𝗪', 'X': '𝗫',
-        'Y': '𝕐', 'Z': '𝗭',
-        'a': '𝕒', 'b': '𝙗', 'c': '𝙘', 'd': '𝙙', 'e': '𝕖', 'f': '𝙛', 'g': '𝙜', 'h': '𝙝',
-        'i': '𝕚', 'j': '𝙟', 'k': '𝙠', 'l': '𝙡', 'm': '𝙢', 'n': '𝙣', 'o': '𝕠', 'p': '𝙥',
-        'q': '𝙦', 'r': '𝙧', 's': '𝙨', 't': '𝙩', 'u': '𝕦', 'v': '𝙫', 'w': '𝙬', 'x': '𝙭',
-        'y': '𝕪', 'z': '𝙯'
-    };
-    return name.split('').map(char => map[char] || char).join('');
-}
-
-// 36. Mixed Small (ɴคᴍᴇ) - mapping required
-function convertToMixedSmall(name) {
-    const map = {
-        'A': 'ค', 'B': 'ʙ', 'C': 'ċ', 'D': 'ᴅ', 'E': 'ᴇ', 'F': 'ꜰ', 'G': 'ɢ', 'H': 'ʜ',
-        'I': 'ï', 'J': 'ᴊ', 'K': 'ᴋ', 'L': 'ʟ', 'M': 'ᴍ', 'N': 'ɴ', 'O': '๑', 'P': 'ᴘ',
-        'Q': 'ǫ', 'R': 'я', 'S': 'ꜱ', 'T': 'ᴛ', 'U': 'υ', 'V': 'ᴠ', 'W': 'ᴡ', 'X': 'ẋ',
-        'Y': 'ʏ', 'Z': 'ᴢ'
-    };
-    return name.toUpperCase().split('').map(char => map[char] || char).join('');
-}
-
-// 37. Accented (Ńáḿé) - suffix only (combining accents)
-function convertToAccented(name) {
-    const accents = ['́', '́', '́', '́']; // Acute accent
-    return name.split('').map((char, i) => char + (accents[i % accents.length] || '')).join('');
-}
-
-// 38. Alternate Accents (ñ å m ê) - mapping required
-function convertToAlternateAccents(name) {
-    const map = {
-        'a': 'å', 'b': 'ß', 'c': '¢', 'd': 'Ð', 'e': 'ê', 'f': '£', 'g': 'g', 'h': 'h',
-        'i': 'Ì', 'j': 'j', 'k': 'k', 'l': 'l', 'm': 'm', 'n': 'ñ', 'o': 'ð', 'p': 'þ',
-        'q': 'q', 'r': 'r', 's': '§', 't': '†', 'u': 'µ', 'v': 'v', 'w': 'w', 'x': '×',
-        'y': '¥', 'z': 'z'
-    };
-    return name.toLowerCase().split('').map(char => map[char] || char).join('');
-}
-
-// 39. Partial Strikethrough (N̷̷𝑎𝑚𝑒) - mixed
-function convertToPartialStrikethrough(name) {
-    return name.split('').map((char, i) => {
-        if (i === 0) return char + '̷̷';
-        return char;
-    }).join('');
-}
-
-// 40. Mixed Greek (Νภᴍє) - mapping required
-function convertToMixedGreek(name) {
-    const map = {
-        'A': 'Λ', 'B': 'Β', 'C': 'Ͻ', 'D': 'Ɗ', 'E': 'Ξ', 'F': 'Ƒ', 'G': 'Ɠ', 'H': 'H',
-        'I': 'Ι', 'J': 'Ј', 'K': 'Κ', 'L': 'ᒪ', 'M': 'Μ', 'N': 'Ν', 'O': 'Ø', 'P': 'Ρ',
-        'Q': 'Ԛ', 'R': 'Я', 'S': 'Ѕ', 'T': 'Τ', 'U': 'U', 'V': 'V', 'W': 'Ω', 'X': 'Χ',
-        'Y': 'Ƴ', 'Z': 'Ζ',
-        'a': 'ภ', 'b': 'ʙ', 'c': 'ς', 'd': 'ᴅ', 'e': 'є', 'f': 'ꜰ', 'g': 'ɢ', 'h': 'ʜ',
-        'i': 'ɪ', 'j': 'ᴊ', 'k': 'ᴋ', 'l': 'ʟ', 'm': 'ᴍ', 'n': 'ɴ', 'o': '๏', 'p': 'ᴘ',
-        'q': 'ǫ', 'r': 'ʀ', 's': 'ꜱ', 't': 'ᴛ', 'u': 'ย', 'v': 'ᴠ', 'w': 'ฬ', 'x': 'א',
-        'y': 'ʏ', 'z': 'ᴢ'
-    };
-    return name.split('').map(char => map[char] || char).join('');
-}    
-
-       
-        // All font styles array
+        // ===== FONT STYLES DATA =====
         const fontStyles = [
-            { name: "Combining Ring Font", convert: convertToRing },
-            { name: "Bold Sans Caps", convert: convertToBoldSansCaps },
-            { name: "Cursive Script", convert: convertToCursive },
-            { name: "Double Struck Bold", convert: convertToDoubleStruckBold },
-            { name: "Double Struck", convert: convertToDoubleStruck },
-            { name: "Bold Sans Serif", convert: convertToBoldSans },
-            { name: "Italic Serif", convert: convertToItalicSerif },
-            { name: "Squared Letters", convert: convertToSquared },
-            { name: "Sans Serif", convert: convertToSansSerif },
-            { name: "Circled Letters", convert: convertToCircled },
-            { name: "Circled Small", convert: convertToSmallCircled },
-            { name: "Bold Italic", convert: convertToBoldItalic },
-            { name: "Native American", convert: convertToNativeAmerican },
-            { name: "Strikethrough", convert: convertToStrikethrough },
-            { name: "Monospace", convert: convertToMonospace },
-            { name: "Greek Style", convert: convertToGreekStyle },
-            { name: "Small Caps", convert: convertToSmallCaps }  
-    // Naye fonts yahan add karo:
-    { name: "Ring Style", convert: convertToRing },
-    { name: "Bold Sans Caps", convert: convertToBoldSansCaps },
-    { name: "Cursive Script", convert: convertToCursive },
-    { name: "Double Struck Bold", convert: convertToDoubleStruckBold },
-    { name: "Double Struck", convert: convertToDoubleStruck },
-    { name: "Bold Sans", convert: convertToBoldSans },
-    { name: "Italic Serif", convert: convertToItalicSerif },
-    { name: "Squared Letters", convert: convertToSquared },
-    { name: "Sans Serif", convert: convertToSansSerif },
-    { name: "Circled Letters", convert: convertToCircled },
-    { name: "Small Circled", convert: convertToSmallCircled },
-    { name: "Bold Italic", convert: convertToBoldItalic },
-    { name: "Native American", convert: convertToNativeAmerican },
-    { name: "Strikethrough", convert: convertToStrikethrough },
-    { name: "Monospace", convert: convertToMonospace },
-    { name: "Greek Style", convert: convertToGreekStyle },
-    { name: "Small Caps", convert: convertToSmallCaps },
-    { name: "Cherokee Style", convert: convertToCherokee },
-    { name: "Dotted Underline", convert: convertToDottedUnderline },
-    { name: "Crossed Style", convert: convertToCrossed },
-    { name: "Curly Marks", convert: convertToCurlyMarks },
-    { name: "Dotted Above", convert: convertToDottedAbove },
-    { name: "Ancient Style", convert: convertToAncient },
-    { name: "Small Strikethrough", convert: convertToSmallStrikethrough },
-    { name: "Chinese Style", convert: convertToChinese },
-    { name: "Simple Strikethrough", convert: convertToSimpleStrikethrough },
-    { name: "Full Width", convert: convertToFullWidth },
-    { name: "Upside Down", convert: convertToUpsideDown },
-    { name: "Underlined", convert: convertToUnderlined },
-    { name: "Japanese Style", convert: convertToJapanese },
-    { name: "Mixed Squared", convert: convertToMixedSquared },
-    { name: "Mixed Circles", convert: convertToMixedCircles },
-    { name: "Number Style", convert: convertToNumberStyle },
-    { name: "Ring + Circle", convert: convertToRingCircle },
-    { name: "Bold + Double", convert: convertToBoldDouble },
-    { name: "Mixed Small", convert: convertToMixedSmall },
-    { name: "Accented", convert: convertToAccented },
-    { name: "Alternate Accents", convert: convertToAlternateAccents },
-    { name: "Partial Strikethrough", convert: convertToPartialStrikethrough },
-    { name: "Mixed Greek", convert: convertToMixedGreek }
+            {
+                name: "Ring Style",
+                prefix: "",
+                suffix: "",
+                map: {
+                    a: "a͢", b: "b͢", c: "c͢", d: "d͢", e: "e͢", f: "f͢", g: "g͢", h: "h͢", i: "i͢", j: "j͢",
+                    k: "k͢", l: "l͢", m: "m͢", n: "n͢", o: "o͢", p: "p͢", q: "q͢", r: "r͢", s: "s͢", t: "t͢",
+                    u: "u͢", v: "v͢", w: "w͢", x: "x͢", y: "y͢", z: "z͢",
+                    A: "A͢", B: "B͢", C: "C͢", D: "D͢", E: "E͢", F: "F͢", G: "G͢", H: "H͢", I: "I͢", J: "J͢",
+                    K: "K͢", L: "L͢", M: "M͢", N: "N͢", O: "O͢", P: "P͢", Q: "Q͢", R: "R͢", S: "S͢", T: "T͢",
+                    U: "U͢", V: "V͢", W: "W͢", X: "X͢", Y: "Y͢", Z: "Z͢"
+                }
+            },
+            {
+                name: "Bold Sans",
+                prefix: "",
+                suffix: "",
+                map: {
+                    a: "𝗮", b: "𝗯", c: "𝗰", d: "𝗱", e: "𝗲", f: "𝗳", g: "𝗴", h: "𝗵", i: "𝗶", j: "𝗷",
+                    k: "𝗸", l: "𝗹", m: "𝗺", n: "𝗻", o: "𝗼", p: "𝗽", q: "𝗾", r: "𝗿", s: "𝘀", t: "𝘁",
+                    u: "𝘂", v: "𝘃", w: "𝘄", x: "𝘅", y: "𝘆", z: "𝘇",
+                    A: "𝗔", B: "𝗕", C: "𝗖", D: "𝗗", E: "𝗘", F: "𝗙", G: "𝗚", H: "𝗛", I: "𝗜", J: "𝗝",
+                    K: "𝗞", L: "𝗟", M: "𝗠", N: "𝗡", O: "𝗢", P: "𝗣", Q: "𝗤", R: "𝗥", S: "𝗦", T: "𝗧",
+                    U: "𝗨", V: "𝗩", W: "𝗪", X: "𝗫", Y: "𝗬", Z: "𝗭"
+                }
+            },
+            {
+                name: "Bold Italic",
+                prefix: "",
+                suffix: "",
+                map: {
+                    a:𝙖, b:𝙗, c:𝙘, d:𝙙, e:𝙚, f:𝙛, g:𝙜, h:𝙝, i:𝙞, j:𝙟,
+                    k:𝙠, l:𝙡, m:𝙢, n:𝙣, o:𝙤, p:𝙥, q:𝙦, r:𝙧, s:𝙨, t:𝙩,
+                    u:𝙪, v:𝙫, w:𝙬, x:𝙭, y:𝙮, z:𝙯,
+                    A:𝙰, B:𝙱, C:𝙲, D:𝙳, E:𝙴, F:𝙵, G:𝙶, H:𝙷, I:𝙸, J:𝙹,
+                    K:𝙺, L:𝙻, M:𝙼, N:𝙽, O:𝙾, P:𝙿, Q:𝚀, R:𝚁, S:𝚂, T:𝚃,
+                    U:𝚄, V:𝚅, W:𝚆, X:𝚇, Y:𝚈, Z:𝚉
+                }
+            },
+            {
+                name: "Cursive",
+                prefix: "",
+                suffix: "",
+                map: {
+                    a:𝓪, b:𝓫, c:𝓬, d:𝓭, e:𝓮, f:𝓯, g:𝓰, h:𝓱, i:𝓲, j:𝓳,
+                    k:𝓴, l:𝓵, m:𝓶, n:𝓷, o:𝓸, p:𝓹, q:𝓺, r:𝓻, s:𝓼, t:𝓽,
+                    u:𝓾, v:𝓿, w:𝔀, x:𝔁, y:𝔂, z:𝔃,
+                    A:𝓐, B:𝓑, C:𝓒, D:𝓓, E:𝓔, F:𝓕, G:𝓖, H:𝓗, I:𝓘, J:𝓙,
+                    K:𝓚, L:𝓛, M:𝓜, N:𝓝, O:𝓞, P:𝓟, Q:𝓠, R:𝓡, S:𝓢, T:𝓣,
+                    U:𝓤, V:𝓥, W:𝓦, X:𝓧, Y:𝓨, Z:𝓩
+                }
+            },
+            {
+                name: "Fraktur Bold",
+                prefix: "",
+                suffix: "",
+                map: {
+                    a:𝖆, b:𝖇, c:𝖈, d:𝖉, e:𝖊, f:𝖋, g:𝖌, h:𝖍, i:𝖎, j:𝖏,
+                    k:𝖐, l:𝖑, m:𝖒, n:𝖓, o:𝖔, p:𝖕, q:𝖖, r:𝖗, s:𝖘, t:𝖙,
+                    u:𝖚, v:𝖛, w:𝖜, x:𝖝, y:𝖞, z:𝖟,
+                    A:𝕬, B:𝕭, C:𝕮, D:𝕯, E:𝕰, F:𝕱, G:𝕲, H:𝕳, I:𝕴, J:𝕵,
+                    K:𝕶, L:𝕷, M:𝕸, N:𝕹, O:𝕺, P:𝕻, Q:𝕼, R:𝕽, S:𝕾, T:𝕿,
+                    U:𝖀, V:𝖁, W:𝖂, X:𝖃, Y:𝖄, Z:𝖅
+                }
+            },
+            {
+                name: "Double Struck",
+                prefix: "",
+                suffix: "",
+                map: {
+                    a:𝕒, b:𝕓, c:𝕔, d:𝕕, e:𝕖, f:𝕗, g:𝕘, h:𝕙, i:𝕚, j:𝕛,
+                    k:𝕜, l:𝕝, m:𝕞, n:𝕟, o:𝕠, p:𝕡, q:𝕢, r:𝕣, s:𝕤, t:𝕥,
+                    u:𝕦, v:𝕧, w:𝕨, x:𝕩, y:𝕪, z:𝕫,
+                    A:𝔸, B:𝔹, C:ℂ, D:𝔻, E:𝔼, F:𝔽, G:𝔾, H:ℍ, I:𝕀, J:𝕁,
+                    K:𝕂, L:𝕃, M:𝕄, N:ℕ, O:𝕆, P:ℙ, Q:ℚ, R:ℝ, S:𝕊, T:𝕋,
+                    U:𝕌, V:𝕍, W:𝕎, X:𝕏, Y:𝕐, Z:ℤ
+                }
+            },
+            {
+                name: "Bold Script",
+                prefix: "",
+                suffix: "",
+                map: {
+                    a:𝙖, b:𝙗, c:𝙘, d:𝙙, e:𝙚, f:𝙛, g:𝙜, h:𝙝, i:𝙞, j:𝙟,
+                    k:𝙠, l:𝙡, m:𝙢, n:𝙣, o:𝙤, p:𝙥, q:𝙦, r:𝙧, s:𝙨, t:𝙩,
+                    u:𝙪, v:𝙫, w:𝙬, x:𝙭, y:𝙮, z:𝙯,
+                    A:𝗔, B:𝗕, C:𝗖, D:𝗗, E:𝗘, F:𝗙, G:𝗚, H:𝗛, I:𝗜, J:𝗝,
+                    K:𝗞, L:𝗟, M:𝗠, N:𝗡, O:𝗢, P:𝗣, Q:𝗤, R:𝗥, S:𝗦, T:𝗧,
+                    U:𝗨, V:𝗩, W:𝗪, X:𝗫, Y:𝗬, Z:𝗭
+                }
+            },
+            {
+                name: "Italic",
+                prefix: "",
+                suffix: "",
+                map: {
+                    a:𝑎, b:𝑏, c:𝑐, d:𝑑, e:𝑒, f:𝑓, g:𝑔, h:ℎ, i:𝑖, j:𝑗,
+                    k:𝑘, l:𝑙, m:𝑚, n:𝑛, o:𝑜, p:𝑝, q:𝑞, r:𝑟, s:𝑠, t:𝑡,
+                    u:𝑢, v:𝑣, w:𝑤, x:𝑥, y:𝑦, z:𝑧,
+                    A:𝐴, B:𝐵, C:𝐶, D:𝐷, E:𝐸, F:𝐹, G:𝐺, H:𝐻, I:𝐼, J:𝐽,
+                    K:𝐾, L:𝐿, M:𝑀, N:𝑁, O:𝑂, P:𝑃, Q:𝑄, R:𝑅, S:𝑆, T:𝑇,
+                    U:𝑈, V:𝑉, W:𝑊, X:𝑋, Y:𝑌, Z:𝑍
+                }
+            },
+            {
+                name: "Parenthesized",
+                prefix: "",
+                suffix: "",
+                map: {
+                    a:🄐, b:🄑, c:🄒, d:🄓, e:🄔, f:🄕, g:🄖, h:🄗, i:🄘, j:🄙,
+                    k:🄚, l:🄛, m:🄜, n:🄝, o:🄞, p:🄟, q:🄠, r:🄡, s:🄢, t:🄣,
+                    u:🄤, v:🄥, w:🄦, x:🄧, y:🄨, z:🄩,
+                    A:🄐, B:🄑, C:🄒, D:🄓, E:🄔, F:🄕, G:🄖, H:🄗, I:🄘, J:🄙,
+                    K:🄚, L:🄛, M:🄜, N:🄝, O:🄞, P:🄟, Q:🄠, R:🄡, S:🄢, T:🄣,
+                    U:🄤, V:🄥, W:🄦, X:🄧, Y:🄨, Z:🄩
+                }
+            },
+            {
+                name: "Sans Serif",
+                prefix: "",
+                suffix: "",
+                map: {
+                    a:𝘢, b:𝘣, c:𝘤, d:𝘥, e:𝘦, f:𝘧, g:𝘨, h:𝘩, i:𝘪, j:𝘫,
+                    k:𝘬, l:𝘭, m:𝘮, n:𝘯, o:𝘰, p:𝘱, q:𝘲, r:𝘳, s:𝘴, t:𝘵,
+                    u:𝘶, v:𝘷, w:𝘸, x:𝘹, y:𝘺, z:𝘻,
+                    A:𝘈, B:𝘉, C:𝘊, D:𝘋, E:𝘌, F:𝘍, G:𝘎, H:𝘏, I:𝘐, J:𝘑,
+                    K:𝘒, L:𝘓, M:𝘔, N:𝘕, O:𝘖, P:𝘗, Q:𝘘, R:𝘙, S:𝘚, T:𝘛,
+                    U:𝘜, V:𝘝, W:𝘞, X:𝘟, Y:𝘠, Z:𝘡
+                }
+            },
+            {
+                name: "Squared",
+                prefix: "",
+                suffix: "",
+                map: {
+                    a:🄰, b:🄱, c:🄲, d:🄳, e:🄴, f:🄵, g:🄶, h:🄷, i:🄸, j:🄹,
+                    k:🄺, l:🄻, m:🄼, n:🄽, o:🄾, p:🄿, q:🅀, r:🅁, s:🅂, t:🅃,
+                    u:🅄, v:🅅, w:🅆, x:🅇, y:🅈, z:🅉,
+                    A:🄰, B:🄱, C:🄲, D:🄳, E:🄴, F:🄵, G:🄶, H:🄷, I:🄸, J:🄹,
+                    K:🄺, L:🄻, M:🄼, N:🄽, O:🄾, P:🄿, Q:🅀, R:🅁, S:🅂, T:🅃,
+                    U:🅄, V:🅅, W:🅆, X:🅇, Y:🅈, Z:🅉
+                }
+            },
+            {
+                name: "Circled",
+                prefix: "",
+                suffix: "",
+                map: {
+                    a:ⓐ, b:ⓑ, c:ⓒ, d:ⓓ, e:ⓔ, f:ⓕ, g:ⓖ, h:ⓗ, i:ⓘ, j:ⓙ,
+                    k:ⓚ, l:ⓛ, m:ⓜ, n:ⓝ, o:ⓞ, p:ⓟ, q:ⓠ, r:ⓡ, s:ⓢ, t:ⓣ,
+                    u:ⓤ, v:ⓥ, w:ⓦ, x:ⓧ, y:ⓨ, z:ⓩ,
+                    A:Ⓐ, B:Ⓑ, C:Ⓒ, D:Ⓓ, E:Ⓔ, F:Ⓕ, G:Ⓖ, H:Ⓗ, I:Ⓘ, J:Ⓙ,
+                    K:Ⓚ, L:Ⓛ, M:Ⓜ, N:Ⓝ, O:Ⓞ, P:Ⓟ, Q:Ⓠ, R:Ⓡ, S:Ⓢ, T:Ⓣ,
+                    U:Ⓤ, V:Ⓥ, W:Ⓦ, X:Ⓧ, Y:Ⓨ, Z:Ⓩ
+                }
+            },
+            {
+                name: "Mathematical",
+                prefix: "",
+                suffix: "",
+                map: {
+                    a:𝐚, b:𝐛, c:𝐜, d:𝐝, e:𝐞, f:𝐟, g:𝐠, h:𝐡, i:𝐢, j:𝐣,
+                    k:𝐤, l:𝐥, m:𝐦, n:𝐧, o:𝐨, p:𝐩, q:𝐪, r:𝐫, s:𝐬, t:𝐭,
+                    u:𝐮, v:𝐯, w:𝐰, x:𝐱, y:𝐲, z:𝐳,
+                    A:𝐀, B:𝐁, C:𝐂, D:𝐃, E:𝐄, F:𝐅, G:𝐆, H:𝐇, I:𝐈, J:𝐉,
+                    K:𝐊, L:𝐋, M:𝐌, N:𝐍, O:𝐎, P:𝐏, Q:𝐐, R:𝐑, S:𝐒, T:𝐓,
+                    U:𝐔, V:𝐕, W:𝐖, X:𝐗, Y:𝐘, Z:𝐙
+                }
+            },
+            {
+                name: "Small Caps",
+                prefix: "",
+                suffix: "",
+                map: {
+                    a:ᴀ, b:ʙ, c:ᴄ, d:ᴅ, e:ᴇ, f:ғ, g:ɢ, h:ʜ, i:ɪ, j:ᴊ,
+                    k:ᴋ, l:ʟ, m:ᴍ, n:ɴ, o:ᴏ, p:ᴘ, q:ǫ, r:ʀ, s:s, t:ᴛ,
+                    u:ᴜ, v:ᴠ, w:ᴡ, x:x, y:ʏ, z:ᴢ,
+                    A:ᴀ, B:ʙ, C:ᴄ, D:ᴅ, E:ᴇ, F:ғ, G:ɢ, H:ʜ, I:ɪ, J:ᴊ,
+                    K:ᴋ, L:ʟ, M:ᴍ, N:ɴ, O:ᴏ, P:ᴘ, Q:ǫ, R:ʀ, S:s, T:ᴛ,
+                    U:ᴜ, V:ᴠ, W:ᴡ, X:x, Y:ʏ, Z:ᴢ
+                }
+            },
+            {
+                name: "Strikethrough",
+                prefix: "",
+                suffix: "",
+                map: {
+                    a:a̶, b:b̶, c:c̶, d:d̶, e:e̶, f:f̶, g:g̶, h:h̶, i:i̶, j:j̶,
+                    k:k̶, l:l̶, m:m̶, n:n̶, o:o̶, p:p̶, q:q̶, r:r̶, s:s̶, t:t̶,
+                    u:u̶, v:v̶, w:w̶, x:x̶, y:y̶, z:z̶,
+                    A:A̶, B:B̶, C:C̶, D:D̶, E:E̶, F:F̶, G:G̶, H:H̶, I:I̶, J:J̶,
+                    K:K̶, L:L̶, M:M̶, N:N̶, O:O̶, P:P̶, Q:Q̶, R:R̶, S:S̶, T:T̶,
+                    U:U̶, V:V̶, W:W̶, X:X̶, Y:Y̶, Z:Z̶
+                }
+            },
+            {
+                name: "Fullwidth",
+                prefix: "",
+                suffix: "",
+                map: {
+                    a:ａ, b:ｂ, c:ｃ, d:ｄ, e:ｅ, f:ｆ, g:ｇ, h:ｈ, i:ｉ, j:ｊ,
+                    k:ｋ, l:ｌ, m:ｍ, n:ｎ, o:ｏ, p:ｐ, q:ｑ, r:ｒ, s:ｓ, t:ｔ,
+                    u:ｕ, v:ｖ, w:ｗ, x:ｘ, y:ｙ, z:ｚ,
+                    A:Ａ, B:Ｂ, C:Ｃ, D:Ｄ, E:Ｅ, F:Ｆ, G:Ｇ, H:Ｈ, I:Ｉ, J:Ｊ,
+                    K:Ｋ, L:Ｌ, M:Ｍ, N:Ｎ, O:Ｏ, P:Ｐ, Q:Ｑ, R:Ｒ, S:Ｓ, T:Ｔ,
+                    U:Ｕ, V:Ｖ, W:Ｗ, X:Ｘ, Y:Ｙ, Z:Ｚ
+                }
+            },
+            {
+                name: "Upside Down",
+                prefix: "",
+                suffix: "",
+                map: {
+                    a:ɐ, b:q, c:ɔ, d:p, e:ǝ, f:ɟ, g:ƃ, h:ɥ, i:ᴉ, j:ɾ,
+                    k:ʞ, l:l, m:ɯ, n:u, o:o, p:d, q:b, r:ɹ, s:s, t:ʇ,
+                    u:n, v:ʌ, w:ʍ, x:x, y:ʎ, z:z,
+                    A:∀, B:𐐒, C:Ɔ, D:◖, E:Ǝ, F:Ⅎ, G:⅁, H:ꓘ, I:I, J:ſ,
+                    K:ꓘ, L:⅂, M:W, N:N, O:O, P:Ԁ, Q:Ò, R:ᴚ, S:S, T:⊥,
+                    U:∩, V:Λ, W:M, X:X, Y:⅄, Z:Z
+                }
+            },
+            {
+                name: "Underline",
+                prefix: "",
+                suffix: "",
+                map: {
+                    a:a̲, b:b̲, c:c̲, d:d̲, e:e̲, f:f̲, g:g̲, h:h̲, i:i̲, j:j̲,
+                    k:k̲, l:l̲, m:m̲, n:n̲, o:o̲, p:p̲, q:q̲, r:r̲, s:s̲, t:t̲,
+                    u:u̲, v:v̲, w:w̲, x:x̲, y:y̲, z:z̲,
+                    A:A̲, B:B̲, C:C̲, D:D̲, E:E̲, F:F̲, G:G̲, H:H̲, I:I̲, J:J̲,
+                    K:K̲, L:L̲, M:M̲, N:N̲, O:O̲, P:P̲, Q:Q̲, R:R̲, S:S̲, T:T̲,
+                    U:U̲, V:V̲, W:W̲, X:X̲, Y:Y̲, Z:Z̲
+                }
+            },
+            {
+                name: "Japanese Style",
+                prefix: "",
+                suffix: "",
+                map: {
+                    a:卂, b:乃, c:匚, d:刀, e:乇, f:千, g:Ꮆ, h:卄, i:丨, j:ﾌ,
+                    k:Ҝ, l:ㄥ, m:爪, n:几, o:ㄖ, p:卩, q:Ҩ, r:尺, s:丂, t:ㄒ,
+                    u:ㄩ, v:ᐯ, w:山, x:乂, y:ㄚ, z:乙,
+                    A:卂, B:乃, C:匚, D:刀, E:乇, F:千, G:Ꮆ, H:卄, I:丨, J:ﾌ,
+                    K:Ҝ, L:ㄥ, M:爪, N:几, O:ㄖ, P:卩, Q:Ҩ, R:尺, S:丂, T:ㄒ,
+                    U:ㄩ, V:ᐯ, W:山, X:乂, Y:ㄚ, Z:乙
+                }
+            },
+            {
+                name: "Square Brackets",
+                prefix: "",
+                suffix: "",
+                map: {
+                    a:🅰, b:🅱, c:🅲, d:🅳, e:🅴, f:🅵, g:🅶, h:🅷, i:🅸, j:🅹,
+                    k:🅺, l:🅻, m:🅼, n:🅽, o:🅾, p:🅿, q:🆀, r:🆁, s:🆂, t:🆃,
+                    u:🆄, v:🆅, w:🆆, x:🆇, y:🆈, z:🆉,
+                    A:🅰, B:🅱, C:🅲, D:🅳, E:🅴, F:🅵, G:🅶, H:🅷, I:🅸, J:🅹,
+                    K:🅺, L:🅻, M:🅼, N:🅽, O:🅾, P:🅿, Q:🆀, R:🆁, S:🆂, T:🆃,
+                    U:🆄, V:🆅, W:🆆, X:🆇, Y:🆈, Z:🆉
+                }
+            },
+            {
+                name: "Combo Style",
+                prefix: "",
+                suffix: "",
+                map: {
+                    a:ⓐ, b:𝙗, c:𝙘, d:𝙙, e:ⓔ, f:𝙛, g:𝙜, h:𝙝, i:ⓘ, j:𝙟,
+                    k:𝙠, l:𝙡, m:𝙢, n:𝙣, o:ⓞ, p:𝙥, q:𝙦, r:𝙧, s:𝙨, t:𝙩,
+                    u:ⓤ, v:𝙫, w:𝙬, x:𝙭, y:ⓨ, z:𝙯,
+                    A:Ⓐ, B:𝗕, C:𝗖, D:𝗗, E:Ⓔ, F:𝗙, G:𝗚, H:𝗛, I:Ⓘ, J:𝗝,
+                    K:𝗞, L:𝗟, M:𝗠, N:𝗡, O:Ⓞ, P:𝗣, Q:𝗤, R:𝗥, S:𝗦, T:𝗧,
+                    U:Ⓤ, V:𝗩, W:𝗪, X:𝗫, Y:Ⓨ, Z:𝗭
+                }
+            },
+            {
+                name: "Mixed Style",
+                prefix: "",
+                suffix: "",
+                map: {
+                    a:𝕒, b:𝙗, c:𝙘, d:𝙙, e:𝕖, f:𝙛, g:𝙜, h:𝙝, i:𝕚, j:𝙟,
+                    k:𝙠, l:𝙡, m:𝕞, n:𝕟, o:𝕠, p:𝙥, q:𝙦, r:𝙧, s:𝕤, t:𝙩,
+                    u:𝕦, v:𝙫, w:𝙬, x:𝕩, y:𝕪, z:𝙯,
+                    A:𝔸, B:𝗕, C:𝗖, D:𝗗, E:𝔼, F:𝗙, G:𝗚, H:𝗛, I:𝕀, J:𝗝,
+                    K:𝗞, L:𝗟, M:𝗠, N:ℕ, O:𝕆, P:𝗣, Q:𝗤, R:ℝ, S:𝗦, T:𝗧,
+                    U:𝕌, V:𝗩, W:𝗪, X:𝕏, Y:𝕐, Z:𝗭
+                }
+            }
         ];
 
-        // Function to render fonts
-        function renderFonts(name) {
-            const container = document.getElementById('fontsContainer');
-            if (!container) return;
-            
-            let html = '';
-            const displayName = name || 'Name';
-            
-            fontStyles.forEach((style, index) => {
-                const styledText = style.convert(displayName);
-                html += `
-                    <div class="font-card" onclick="copyText('${styledText.replace(/'/g, "\\'")}')">
-                        <div class="font-number">#${index + 1}</div>
-                        <div class="font-preview">${styledText}</div>
-                        <div class="font-name">${style.name}</div>
-                        <button class="copy-btn" onclick="event.stopPropagation(); copyText('${styledText.replace(/'/g, "\\'")}')">
-                            <i class="fas fa-copy"></i> Copy
-                        </button>
-                    </div>
-                `;
-            });
-            
-            container.innerHTML = html;
+        // ===== EXAMPLE NAMES (for when input is empty) =====
+        const exampleNames = [
+            "𝐒𝐭𝐲𝐥𝐢𝐬𝐡", "𝓢𝓽𝔂𝓵𝓲𝓼𝓱", "🅂🅃🅈🄻🄸🅂🄷", "𝘚𝘵𝘺𝘭𝘪𝘴𝘩",
+            "𝕊𝕥𝕪𝕝𝕚𝕤𝕙", "𝚂𝚝𝚢𝚕𝚒𝚜𝚑", "ᔕTYᒪIᔕᕼ", "S̷t̷y̷l̷i̷s̷h̷",
+            "ᏕᏖᎩᏝᎥᏕᏂ", "S҉t҉y҉l҉i҉s҉h҉", "S͢t͢y͢l͢i͢s͢h͢", "S̲t̲y̲l̲i̲s̲h̲",
+            "Ｓｔｙｌｉｓｈ", "Ⓢⓣⓨⓛⓘⓢⓗ", "🆂🆃🆈🅻🅸🆂🅷", "S⃞t⃞y⃞l⃞i⃞s⃞h⃞"
+        ];
+
+        // ===== UTILITY FUNCTIONS =====
+        function convert(name, map) {
+            return name.split("").map(ch => {
+                if (map[ch] !== undefined) return map[ch];
+                if (map[ch.toLowerCase()] !== undefined) return map[ch.toLowerCase()];
+                if (map[ch.toUpperCase()] !== undefined) return map[ch.toUpperCase()];
+                return ch;
+            }).join("");
         }
 
-        // Copy text function
-        window.copyText = function(text) {
+        function copyText(text, btn = null) {
             navigator.clipboard.writeText(text).then(() => {
-                const toast = document.getElementById('toast');
-                if (toast) {
-                    toast.textContent = '✅ Copied to clipboard!';
-                    toast.style.display = 'block';
-                    setTimeout(() => { toast.style.display = 'none'; }, 2000);
+                if (btn) {
+                    const original = btn.innerHTML;
+                    btn.innerHTML = '<i class="fas fa-check"></i> Copied!';
+                    btn.classList.add('copied');
+                    setTimeout(() => {
+                        btn.innerHTML = original;
+                        btn.classList.remove('copied');
+                    }, 1500);
                 }
-            }).catch(() => {
-                alert('Failed to copy text');
-            });
-        };
+                showToast('✨ Copied to clipboard!');
+            }).catch(() => showToast('❌ Failed to copy'));
+        }
 
-        // Initialize on page load
-        document.addEventListener('DOMContentLoaded', function() {
-            renderFonts('Name');
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            if (!toast) return;
+            toast.textContent = msg;
+            toast.style.display = 'block';
+            if (window.toastTimeout) clearTimeout(window.toastTimeout);
+            window.toastTimeout = setTimeout(() => {
+                toast.style.display = 'none';
+            }, 2000);
+        }
+
+        // ===== GENERATE STYLES =====
+        function generateStyles() {
+            const input = document.getElementById('nameInput');
+            const result = document.getElementById('result');
+            const fontCount = document.getElementById('fontCount');
             
-            const input = document.getElementById('styleNameInput');
-            if (input) {
-                input.addEventListener('input', function() {
-                    const name = this.value.trim();
-                    renderFonts(name || 'Name');
-                });
-            }
+            if (!input || !result) return;
             
-            // Initialize scroll to top button
-            const scrollBtn = document.getElementById('scrollTop');
-            if (scrollBtn) {
-                window.addEventListener('scroll', function() {
-                    if (window.pageYOffset > 300) {
-                        scrollBtn.classList.add('show');
-                    } else {
-                        scrollBtn.classList.remove('show');
-                    }
+            const name = input.value.trim();
+            result.innerHTML = '';
+            
+            // If name is empty, show examples
+            if (!name) {
+                const shuffled = [...exampleNames].sort(() => Math.random() - 0.5);
+                const selected = shuffled.slice(0, 12);
+                
+                selected.forEach(text => {
+                    const div = document.createElement('div');
+                    div.className = 'style-card';
+                    div.innerHTML = `
+                        <div class="style-text">${text}</div>
+                        <button class="copy-btn" onclick="copyText('${text.replace(/'/g,"\\'")}', this)">
+                            <i class="fas fa-copy"></i> Copy
+                        </button>
+                    `;
+                    result.appendChild(div);
                 });
                 
-                scrollBtn.addEventListener('click', function() {
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                });
+                if (fontCount) fontCount.textContent = `${selected.length} examples`;
+                return;
             }
+            
+            // Generate all font styles
+            const shuffled = [...fontStyles].sort(() => Math.random() - 0.5);
+            
+            shuffled.forEach((style, index) => {
+                const styled = convert(name, style.map);
+                const escaped = styled.replace(/'/g,"\\'").replace(/"/g,'&quot;');
+                
+                const div = document.createElement('div');
+                div.className = 'style-card';
+                div.innerHTML = `
+                    <div class="style-text">${styled}</div>
+                    <button class="copy-btn" onclick="copyText('${escaped}', this)">
+                        <i class="fas fa-copy"></i> Copy
+                    </button>
+                `;
+                result.appendChild(div);
+                
+                // Ad after 20th style
+                if (index === 19) {
+                    const adDiv = document.createElement('div');
+                    adDiv.className = 'style-card';
+                    adDiv.style.background = 'linear-gradient(135deg, #f5f5f5, #e0e0e0)';
+                    adDiv.style.border = '2px dashed #4f46e5';
+                    adDiv.innerHTML = `
+                        <div style="text-align: center; padding: 15px;">
+                            <div style="color: #999; font-size: 0.8rem; margin-bottom: 8px;">Advertisement</div>
+                            <div style="background: white; padding: 20px; border-radius: 8px;">
+                                <span style="color: #666;">Google AdSense Space</span>
+                            </div>
+                        </div>
+                    `;
+                    result.appendChild(adDiv);
+                }
+                
+                // Ad after 50th style
+                if (index === 49) {
+                    const adDiv = document.createElement('div');
+                    adDiv.className = 'style-card';
+                    adDiv.style.background = 'linear-gradient(135deg, #f5f5f5, #e0e0e0)';
+                    adDiv.style.border = '2px dashed #4f46e5';
+                    adDiv.innerHTML = `
+                        <div style="text-align: center; padding: 15px;">
+                            <div style="color: #999; font-size: 0.8rem; margin-bottom: 8px;">Advertisement</div>
+                            <div style="background: white; padding: 20px; border-radius: 8px;">
+                                <span style="color: #666;">Google AdSense Space</span>
+                            </div>
+                        </div>
+                    `;
+                    result.appendChild(adDiv);
+                }
+            });
+            
+            if (fontCount) fontCount.textContent = `${fontStyles.length} styles`;
+        }
+
+        // ===== AUTO GENERATE ON INPUT =====
+        let autoTimer;
+        document.getElementById('nameInput').addEventListener('input', function() {
+            clearTimeout(autoTimer);
+            autoTimer = setTimeout(() => {
+                generateStyles();
+            }, 300);
+        });
+
+        // ===== SCROLL TO TOP =====
+        function initScrollTop() {
+            const btn = document.getElementById('scrollTop');
+            window.addEventListener('scroll', () => {
+                btn.classList.toggle('show', window.pageYOffset > 300);
+            });
+            btn.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+
+        // ===== INITIALIZE =====
+        document.addEventListener('DOMContentLoaded', function() {
+            generateStyles();
+            initScrollTop();
         });
     </script>
 </body>
