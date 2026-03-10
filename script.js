@@ -3,10 +3,9 @@ let currentFilter = "love";
 let isDarkTheme = false;
 let currentMiniSuggestions = [];
 // For top three feature
-let currentTopThreeSource = [];      // current source array (examples or styles)
-let currentTopThreeType = '';        // 'example' or 'generated'
-let currentTopThreeName = '';        // name input value (for generated case)
-let currentTopThreeCategory = '';    // current category
+let currentTopThreeSource = [];
+let currentTopThreeType = '';
+let currentTopThreeName = '';
 
 // ===== EXAMPLE NAMES DATA (for empty input) =====
 const categoryExamples = {
