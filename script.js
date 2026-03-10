@@ -1409,7 +1409,8 @@ function renderTopThree(items, type, nameValue = '') {
     selected.forEach(item => {
         let text = '';
         if (type === 'example') {
-            text = item.text;
+            // Check if item is an object with text property or just a string
+            text = (typeof item === 'object' && item.text) ? item.text : item;
         } else {
             text = item.prefix + convert(nameValue, item.map) + item.suffix;
         }
@@ -1435,7 +1436,8 @@ function refreshTopThree() {
     selected.forEach(item => {
         let text = '';
         if (currentTopThreeType === 'example') {
-            text = item.text;
+            // Check if item is an object with text property or just a string
+            text = (typeof item === 'object' && item.text) ? item.text : item;
         } else {
             text = item.prefix + convert(currentTopThreeName, item.map) + item.suffix;
         }
