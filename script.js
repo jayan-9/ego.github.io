@@ -1164,38 +1164,98 @@ if (!name) {
             if (index === 5) {
                 const linksDiv = document.createElement('div');
                 linksDiv.className = 'style-card';
-                linksDiv.style.padding = '15px 20px';
-                linksDiv.style.background = 'transparent';
-                linksDiv.style.border = 'none';
-                linksDiv.style.boxShadow = 'none';
-                linksDiv.style.cursor = 'default';
-                linksDiv.innerHTML = `
-                    <div style="display: flex; flex-direction: column; gap: 12px;">
-                        <a href="tiktok-username-ideas.html" style="color: var(--primary); text-decoration: none; border-bottom: 1px dotted var(--gray); font-size: 1rem;">🎵 TikTok Names</a>
-                        <a href="which-font-is-best-for-which-category.html" style="color: var(--primary); text-decoration: none; border-bottom: 1px dotted var(--gray); padding: 5px 0; display: block;">🔤 Font Guide</a>
-                    </div>
-                `;
-                result.appendChild(linksDiv);
-            }
-            
-            // Image in examples - 32nd ke baad (index 31)
-            if (index === 31) {
-                const imgDiv = document.createElement('div');
-                imgDiv.className = 'style-card';
-                imgDiv.style.padding = '0';
-                imgDiv.style.overflow = 'hidden';
-                imgDiv.innerHTML = `
-                    <img src="https://jayan-9.github.io/ego.github.io/photo.gif" 
-                         alt="Stylish Design"
-                         style="width: 100%; height: auto; display: block; border-radius: 8px;">
-                `;
-                result.appendChild(imgDiv);
-            }
-        });
+// If name is empty, show examples
+if (!name) {
+    // 1. SUGGESTIONS DATA se Top 3 ke liye
+    const suggestions = suggestionsData[currentFilter] || [];
+    let topThreeItems = [];
+    
+    if (suggestions.length > 0) {
+        const shuffledSuggestions = [...suggestions].sort(() => Math.random() - 0.5);
+        topThreeItems = shuffledSuggestions.slice(0, 3);
     }
+    
+    // Top 3 dikhao (suggestions se)
+    renderTopThree(topThreeItems.map(s => ({ text: s })), 'example');
+    
+    // 2. EXAMPLES DATA se baaki 52 examples
+    const examples = categoryExamples[currentFilter] || categoryExamples.love;
+    const shuffledExamples = [...examples].sort(() => Math.random() - 0.5);
+    const selectedExamples = shuffledExamples.slice(0, 52); // 55 total - 3 top = 52
+    
+    selectedExamples.forEach((example, index) => {
+        const div = document.createElement('div');
+        div.className = 'style-card';
+        div.setAttribute('onclick', `copyText('${example.text.replace(/'/g,"\\'").replace(/"/g,'&quot;')}')`);
+        div.setAttribute('title', 'Click to copy');
+        
+        let html = `<div class="style-text">${example.text}</div>`;
+        
+        // Symbols (optional)
+        if (example.symbols && example.symbols.length) {
+            html += `<div style="display:flex; flex-wrap:wrap; gap:0.3rem; margin-top:0.5rem;">`;
+            example.symbols.slice(0,4).forEach(sym => {
+                html += `<span style="background:var(--gray-light); padding:0.2rem 0.5rem; border-radius:12px; font-size:0.8rem; cursor:pointer;" onclick="copyText('${sym.replace(/'/g,"\\'")}', event)">${sym} <i class="fas fa-copy"></i></span>`;
+            });
+            html += `</div>`;
+        }
+        
+        div.innerHTML = html;
+        result.appendChild(div);
+        
+        // 👇 LINKS - 35th EXAMPLE KE BAAD (index 34)
+        if (index === 34) {
+            const linksDiv = document.createElement('div');
+            linksDiv.className = 'style-card';
+            linksDiv.style.padding = '10px 0';
+            linksDiv.style.background = 'transparent';
+            linksDiv.style.border = 'none';
+            linksDiv.style.boxShadow = 'none';
+            linksDiv.style.cursor = 'default';
+            linksDiv.innerHTML = `
+                <div style="display: flex; flex-direction: column; gap: 8px;">
+                    <a href="royal-and-vip-names.html" style="color: var(--primary); text-decoration: none; border-bottom: 1px dotted var(--gray); padding: 3px 0; display: block;">👑 Royal & VIP</a>
+                    <a href="social-media-bio-ideas-for-whatsapp-instagram.html" style="color: var(--primary); text-decoration: none; border-bottom: 1px dotted var(--gray); padding: 3px 0; display: block;">💬 Bio Ideas</a>
+                </div>
+            `;
+            result.appendChild(linksDiv);
+        }
+
+        // 👇 LINKS IN EXAMPLES - 5th example ke baad (index 5)
+        if (index === 5) {
+            const linksDiv = document.createElement('div');
+            linksDiv.className = 'style-card';
+            linksDiv.style.padding = '15px 20px';
+            linksDiv.style.background = 'transparent';
+            linksDiv.style.border = 'none';
+            linksDiv.style.boxShadow = 'none';
+            linksDiv.style.cursor = 'default';
+            linksDiv.innerHTML = `
+                <div style="display: flex; flex-direction: column; gap: 12px;">
+                    <a href="tiktok-username-ideas.html" style="color: var(--primary); text-decoration: none; border-bottom: 1px dotted var(--gray); font-size: 1rem;">🎵 TikTok Names</a>
+                    <a href="which-font-is-best-for-which-category.html" style="color: var(--primary); text-decoration: none; border-bottom: 1px dotted var(--gray); padding: 5px 0; display: block;">🔤 Font Guide</a>
+                </div>
+            `;
+            result.appendChild(linksDiv);
+        }
+        
+        // Image in examples - 32nd ke baad (index 31)
+        if (index === 31) {
+            const imgDiv = document.createElement('div');
+            imgDiv.className = 'style-card';
+            imgDiv.style.padding = '0';
+            imgDiv.style.overflow = 'hidden';
+            imgDiv.innerHTML = `
+                <img src="https://jayan-9.github.io/ego.github.io/photo.gif" 
+                     alt="Stylish Design"
+                     style="width: 100%; height: auto; display: block; border-radius: 8px;">
+            `;
+            result.appendChild(imgDiv);
+        }
+    });
+    
     return;
 }
-
     // Name exists: generate actual styles
 const styles = stylesByCategory[currentFilter] || [];
 if (styles.length === 0) {
