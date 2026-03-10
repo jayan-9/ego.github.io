@@ -1032,31 +1032,25 @@ function convert(name, map) {
     }).join("");
 }
 
-// kya bat hai
-// ===== GENERATE STYLES =====
+// ===== GENERATE STYLES (with examples when input empty) =====
 function generateStyles() {
     const name = document.getElementById('nameInput')?.value.trim();
     const result = document.getElementById('result');
+    const topThreeContainer = document.getElementById('topThreeContainer');
+    
     if (!result) return;
     result.innerHTML = "";
-    
-    // ===== IF NAME IS EMPTY - SHOW EXAMPLES =====
+
+    // If name is empty, show examples
     if (!name) {
-        // TOP 3 ke liye SUGGESTIONS use karo (agar hain to)
-        const suggestions = suggestionsData[currentFilter] || [];
-        if (suggestions.length > 0) {
-            const shuffledSuggestions = [...suggestions].sort(() => Math.random() - 0.5);
-            const topThree = shuffledSuggestions.slice(0, 3);
-            renderTopThree(topThree.map(s => ({ text: s })), 'example');
-        } else {
-            // Agar suggestions nahi hain to empty render karo
-            renderTopThree([], 'example');
-        }
-        
-        // BAAKI SAB EXAMPLES categoryExamples se
         const examples = categoryExamples[currentFilter] || categoryExamples.love;
         const shuffled = [...examples].sort(() => Math.random() - 0.5);
-        const selected = shuffled.slice(0, 55);
+        const selected = shuffled.slice(0, 39);
+        
+        // Show Top 3 examples
+        if (topThreeContainer) {
+            renderTopThree(selected, 'example');
+        }
         
         selected.forEach((example, index) => {
             const div = document.createElement('div');
@@ -1078,42 +1072,6 @@ function generateStyles() {
             div.innerHTML = html;
             result.appendChild(div);
             
-            // LINKS - 35th EXAMPLE KE BAAD (index 34)
-            if (index === 34) {
-                const linksDiv = document.createElement('div');
-                linksDiv.className = 'style-card';
-                linksDiv.style.padding = '10px 0';
-                linksDiv.style.background = 'transparent';
-                linksDiv.style.border = 'none';
-                linksDiv.style.boxShadow = 'none';
-                linksDiv.style.cursor = 'default';
-                linksDiv.innerHTML = `
-                    <div style="display: flex; flex-direction: column; gap: 8px;">
-                        <a href="royal-and-vip-names.html" style="color: var(--primary); text-decoration: none; border-bottom: 1px dotted var(--gray); padding: 3px 0; display: block;">👑 Royal & VIP</a>
-                        <a href="social-media-bio-ideas-for-whatsapp-instagram.html" style="color: var(--primary); text-decoration: none; border-bottom: 1px dotted var(--gray); padding: 3px 0; display: block;">💬 Bio Ideas</a>
-                    </div>
-                `;
-                result.appendChild(linksDiv);
-            }
-
-            // LINKS - 5th EXAMPLE KE BAAD (index 5)
-            if (index === 5) {
-                const linksDiv = document.createElement('div');
-                linksDiv.className = 'style-card';
-                linksDiv.style.padding = '15px 20px';
-                linksDiv.style.background = 'transparent';
-                linksDiv.style.border = 'none';
-                linksDiv.style.boxShadow = 'none';
-                linksDiv.style.cursor = 'default';
-                linksDiv.innerHTML = `
-                    <div style="display: flex; flex-direction: column; gap: 12px;">
-                        <a href="tiktok-username-ideas.html" style="color: var(--primary); text-decoration: none; border-bottom: 1px dotted var(--gray); font-size: 1rem;">🎵 TikTok Names</a>
-                        <a href="which-font-is-best-for-which-category.html" style="color: var(--primary); text-decoration: none; border-bottom: 1px dotted var(--gray); padding: 5px 0; display: block;">🔤 Font Guide</a>
-                    </div>
-                `;
-                result.appendChild(linksDiv);
-            }
-            
             // Image in examples - 32nd ke baad (index 31)
             if (index === 31) {
                 const imgDiv = document.createElement('div');
@@ -1130,20 +1088,19 @@ function generateStyles() {
         });
         return;
     }
-    
-    // ===== NAME EXISTS - GENERATE ACTUAL STYLES =====
+
+    // Name exists: generate actual styles
     const styles = stylesByCategory[currentFilter] || [];
     if (styles.length === 0) {
         result.innerHTML = `<div class="empty-state"><i class="fas fa-exclamation-circle"></i><p>No styles for this category yet.</p></div>`;
+        if (topThreeContainer) topThreeContainer.innerHTML = '';
         return;
     }
-
-    // TOP 3 from generated styles
-    renderTopThree(styles.map(s => ({
-        prefix: s.prefix,
-        suffix: s.suffix,
-        map: s.map
-    })), 'generated', name);
+    
+    // Show Top 3 generated styles
+    if (topThreeContainer) {
+        renderTopThree(styles, 'generated', name);
+    }
     
     const shuffled = [...styles].sort(() => Math.random() - 0.5);
     
@@ -1151,6 +1108,7 @@ function generateStyles() {
         const styled = style.prefix + convert(name, style.map) + style.suffix;
         const escaped = styled.replace(/'/g,"\\'").replace(/"/g,'&quot;');
         
+        // Style card - without copy button
         const div = document.createElement('div');
         div.className = 'style-card';
         div.setAttribute('onclick', `copyText('${escaped}')`);
@@ -1158,131 +1116,8 @@ function generateStyles() {
         div.innerHTML = `<div class="style-text">${styled}</div>`;
         result.appendChild(div);
         
-        // ===== YOUR EXISTING LINK CONDITIONS - SAB RAHEGA =====
-        if (index === 159) {
-            const linksDiv = document.createElement('div');
-            linksDiv.className = 'style-card';
-            linksDiv.style.padding = '15px 20px';
-            linksDiv.style.background = 'transparent';
-            linksDiv.style.border = 'none';
-            linksDiv.style.boxShadow = 'none';
-            linksDiv.style.cursor = 'default';
-            linksDiv.innerHTML = `
-                <div style="display: flex; flex-direction: column; gap: 12px;">
-                    <a href="pubg-stylish-names-with-symbols.html" style="color: var(--primary); text-decoration: none; border-bottom: 1px dotted var(--gray); padding: 5px 0; display: block;">🎯 PUBG Names</a>
-                    <a href="attitude-names-for-boys.html" style="color: var(--primary); text-decoration: none; border-bottom: 1px dotted var(--gray); padding: 5px 0; display: block;">⚡ Attitude Names</a>
-                </div>
-            `;
-            result.appendChild(linksDiv);
-        }
-
-        if (index === 179) {
-            const linksDiv = document.createElement('div');
-            linksDiv.className = 'style-card';
-            linksDiv.style.padding = '15px 20px';
-            linksDiv.style.background = 'transparent';
-            linksDiv.style.border = 'none';
-            linksDiv.style.boxShadow = 'none';
-            linksDiv.style.cursor = 'default';
-            linksDiv.innerHTML = `
-                <div style="display: flex; flex-direction: column; gap: 12px;">
-                    <a href="royal-and-vip-names.html" style="color: var(--primary); text-decoration: none; border-bottom: 1px dotted var(--gray); padding: 5px 0; display: block;">👑 Royal & VIP</a>
-                    <a href="social-media-bio-ideas-for-whatsapp-instagram.html" style="color: var(--primary); text-decoration: none; border-bottom: 1px dotted var(--gray); padding: 5px 0; display: block;">💬 Bio Ideas</a>
-                    <a href="stylish-name-tips-guide.html" style="color: var(--primary); text-decoration: none; border-bottom: 1px dotted var(--gray); padding: 5px 0; display: block;">✨ Name Tips</a>
-                </div>
-            `;
-            result.appendChild(linksDiv);
-        }
-
-        if (index === 61) {
-            const linksDiv = document.createElement('div');
-            linksDiv.className = 'style-card';
-            linksDiv.style.padding = '15px 20px';
-            linksDiv.style.background = 'transparent';
-            linksDiv.style.border = 'none';
-            linksDiv.style.boxShadow = 'none';
-            linksDiv.style.cursor = 'default';
-            linksDiv.innerHTML = `
-                <div style="display: flex; flex-direction: column; gap: 12px;">
-                    <a href="anime-stylish-names-collection.html" style="color: var(--primary); text-decoration: none; border-bottom: 1px dotted var(--gray); padding: 5px 0; display: block;">🌀 Anime Names</a>
-                    <a href="pubg-stylish-names-with-symbols.html" style="color: var(--primary); text-decoration: none; border-bottom: 1px dotted var(--gray); padding: 5px 0; display: block;">🎯 PUBG Names</a>
-                    <a href="attitude-names-for-boys.html" style="color: var(--primary); text-decoration: none; border-bottom: 1px dotted var(--gray); padding: 5px 0; display: block;">⚡ Attitude Names</a>
-                </div>
-            `;
-            result.appendChild(linksDiv);
-        }
-
-        if (index === 98) {
-            const linksDiv = document.createElement('div');
-            linksDiv.className = 'style-card';
-            linksDiv.style.padding = '15px 20px';
-            linksDiv.style.background = 'transparent';
-            linksDiv.style.border = 'none';
-            linksDiv.style.boxShadow = 'none';
-            linksDiv.style.cursor = 'default';
-            linksDiv.innerHTML = `
-                <div style="display: flex; flex-direction: column; gap: 12px;">
-                    <a href="love-nicknames-2026-collection.html" style="color: var(--primary); text-decoration: none; border-bottom: 1px dotted var(--gray); padding: 5px 0; display: block;">❤️ Love Nicknames 2026</a>
-                    <a href="tiktok-username-ideas.html" style="color: var(--primary); text-decoration: none; border-bottom: 1px dotted var(--gray); padding: 5px 0; display: block;">🎵 TikTok Username Ideas</a>
-                </div>
-            `;
-            result.appendChild(linksDiv);
-        }
-
-        if (index === 299) {
-            const linksDiv = document.createElement('div');
-            linksDiv.className = 'style-card';
-            linksDiv.style.padding = '15px 20px';
-            linksDiv.style.background = 'transparent';
-            linksDiv.style.border = 'none';
-            linksDiv.style.boxShadow = 'none';
-            linksDiv.style.cursor = 'default';
-            linksDiv.innerHTML = `
-                <div style="display: flex; flex-direction: column; gap: 12px;">
-                    <a href="pubg-stylish-names-with-symbols.html" style="color: var(--primary); text-decoration: none; border-bottom: 1px dotted var(--gray); padding: 5px 0; display: block;">🎯 PUBG Names</a>     
-                    <a href="attitude-names-for-boys.html" style="color: var(--primary); text-decoration: none; border-bottom: 1px dotted var(--gray); padding: 5px 0; display: block;">⚡ Attitude Names</a>
-                </div>
-            `;
-            result.appendChild(linksDiv);
-        }
-
-        if (index === 326) {
-            const linksDiv = document.createElement('div');
-            linksDiv.className = 'style-card';
-            linksDiv.style.padding = '15px 20px';
-            linksDiv.style.background = 'transparent';
-            linksDiv.style.border = 'none';
-            linksDiv.style.boxShadow = 'none';
-            linksDiv.style.cursor = 'default';
-            linksDiv.innerHTML = `
-                <div style="display: flex; flex-direction: column; gap: 12px;">
-                    <a href="royal-and-vip-names.html" style="color: var(--primary); text-decoration: none; border-bottom: 1px dotted var(--gray); padding: 5px 0; display: block;">👑 Royal & VIP</a>
-                    <a href="social-media-bio-ideas-for-whatsapp-instagram.html" style="color: var(--primary); text-decoration: none; border-bottom: 1px dotted var(--gray); padding: 5px 0; display: block;">💬 Bio Ideas</a>
-                    <a href="stylish-name-tips-guide.html" style="color: var(--primary); text-decoration: none; border-bottom: 1px dotted var(--gray); padding: 5px 0; display: block;">✨ Name Tips</a>
-                </div>
-            `;
-            result.appendChild(linksDiv);
-        }
-
-        if (index === 348) {
-            const linksDiv = document.createElement('div');
-            linksDiv.className = 'style-card';
-            linksDiv.style.padding = '15px 20px';
-            linksDiv.style.background = 'transparent';
-            linksDiv.style.border = 'none';
-            linksDiv.style.boxShadow = 'none';
-            linksDiv.style.cursor = 'default';
-            linksDiv.innerHTML = `
-                <div style="display: flex; flex-direction: column; gap: 12px;">
-                    <a href="love-nicknames-2026-collection.html" style="color: var(--primary); text-decoration: none; border-bottom: 1px dotted var(--gray); padding: 5px 0; display: block;">❤️ Love Nicknames 2026</a>
-                    <a href="tiktok-username-ideas.html" style="color: var(--primary); text-decoration: none; border-bottom: 1px dotted var(--gray); padding: 5px 0; display: block;">🎵 TikTok Username Ideas</a>
-                </div>
-            `;
-            result.appendChild(linksDiv);
-        }
-     
-        // IMAGE IN GENERATED STYLES
-        if (index === 133) {
+        // 👇 IMAGE IN GENERATED STYLES - 50th style ke baad (index 49)
+        if (index === 49) {
             const imgDiv = document.createElement('div');
             imgDiv.className = 'style-card';
             imgDiv.style.padding = '0';
@@ -1295,7 +1130,21 @@ function generateStyles() {
             result.appendChild(imgDiv);
         }
 
-        // Ad after 12th style
+        // 👇 IMAGE IN GENERATED STYLES - 150th style ke baad (index 149)
+        if (index === 149) {
+            const imgDiv = document.createElement('div');
+            imgDiv.className = 'style-card';
+            imgDiv.style.padding = '0';
+            imgDiv.style.overflow = 'hidden';
+            imgDiv.innerHTML = `
+                <img src="https://jayan-9.github.io/ego.github.io/photos.gif" 
+                     alt="Stylish Design"
+                     style="width: 100%; height: auto; display: block; border-radius: 8px;">
+            `;
+            result.appendChild(imgDiv);
+        } 
+        
+        // one ad after 12th style
         if (index === 11 && shuffled.length > 12) {
             const ad = document.createElement('div');
             ad.className = 'ad-single';
@@ -1313,62 +1162,6 @@ function selectCategory(type) {
     });
     generateStyles();
     loadMiniSuggestions();
-}
-
-// ===== SIMPLE TOP THREE FUNCTIONS =====
-function renderTopThree(items, type, nameValue = '') {
-    const container = document.getElementById('topThreeContainer');
-    if (!container) return;
-    
-    if (!items || items.length === 0) {
-        container.innerHTML = '';
-        return;
-    }
-    
-    let html = `
-        <div class="top-three-simple">
-            <div class="top-three-header">
-                <div class="top-three-title">🔥 Top 3 Picks</div>
-                <button class="generate-another-btn" onclick="refreshTopThree()">GENERATE ANOTHER</button>
-            </div>
-            <div class="top-three-grid">
-    `;
-    
-    items.forEach(item => {
-        const text = (typeof item === 'object' && item.text) ? item.text : item;
-        const escaped = text.replace(/'/g, "\\'").replace(/"/g, '&quot;');
-        html += `<div class="top-three-item" onclick="copyText('${escaped}')">${text}</div>`;
-    });
-    
-    html += '</div></div>';
-    container.innerHTML = html;
-    
-    currentTopThreeSource = items;
-    currentTopThreeType = type;
-    currentTopThreeName = nameValue;
-}
-
-function refreshTopThree() {
-    if (!currentTopThreeSource || currentTopThreeSource.length === 0) return;
-    
-    const shuffled = [...currentTopThreeSource].sort(() => Math.random() - 0.5);
-    const selected = shuffled.slice(0, 3);
-    
-    const container = document.getElementById('topThreeContainer');
-    if (!container) return;
-    
-    let itemsHtml = '';
-    selected.forEach(item => {
-        const text = (typeof item === 'object' && item.text) ? item.text : item;
-        const escaped = text.replace(/'/g, "\\'").replace(/"/g, '&quot;');
-        itemsHtml += `<div class="top-three-item" onclick="copyText('${escaped}')">${text}</div>`;
-    });
-    
-    const existingContainer = container.querySelector('.top-three-simple');
-    if (existingContainer) {
-        const header = existingContainer.querySelector('.top-three-header');
-        existingContainer.innerHTML = `${header ? header.outerHTML : ''}<div class="top-three-grid">${itemsHtml}</div>`;
-    }
 }
 
 // ===== LOAD MINI SUGGESTIONS WITH IMAGE AFTER 20 =====
@@ -1430,6 +1223,62 @@ function loadMiniSuggestions() {
     });
 
     miniGrid.innerHTML = html;
+}
+
+// ===== SIMPLE TOP THREE FUNCTIONS =====
+function renderTopThree(items, type, nameValue = '') {
+    const container = document.getElementById('topThreeContainer');
+    if (!container) return;
+    
+    if (!items || items.length === 0) {
+        container.innerHTML = '';
+        return;
+    }
+    
+    let html = `
+        <div class="top-three-simple">
+            <div class="top-three-header">
+                <div class="top-three-title">🔥 Top 3 Picks</div>
+                <button class="generate-another-btn" onclick="refreshTopThree()">GENERATE ANOTHER</button>
+            </div>
+            <div class="top-three-grid">
+    `;
+    
+    items.forEach(item => {
+        const text = (typeof item === 'object' && item.text) ? item.text : item;
+        const escaped = text.replace(/'/g, "\\'").replace(/"/g, '&quot;');
+        html += `<div class="top-three-item" onclick="copyText('${escaped}')">${text}</div>`;
+    });
+    
+    html += '</div></div>';
+    container.innerHTML = html;
+    
+    currentTopThreeSource = items;
+    currentTopThreeType = type;
+    currentTopThreeName = nameValue;
+}
+
+function refreshTopThree() {
+    if (!currentTopThreeSource || currentTopThreeSource.length === 0) return;
+    
+    const shuffled = [...currentTopThreeSource].sort(() => Math.random() - 0.5);
+    const selected = shuffled.slice(0, 3);
+    
+    const container = document.getElementById('topThreeContainer');
+    if (!container) return;
+    
+    let itemsHtml = '';
+    selected.forEach(item => {
+        const text = (typeof item === 'object' && item.text) ? item.text : item;
+        const escaped = text.replace(/'/g, "\\'").replace(/"/g, '&quot;');
+        itemsHtml += `<div class="top-three-item" onclick="copyText('${escaped}')">${text}</div>`;
+    });
+    
+    const existingContainer = container.querySelector('.top-three-simple');
+    if (existingContainer) {
+        const header = existingContainer.querySelector('.top-three-header');
+        existingContainer.innerHTML = `${header ? header.outerHTML : ''}<div class="top-three-grid">${itemsHtml}</div>`;
+    }
 }
 
 function toggleFullSuggestions() {
