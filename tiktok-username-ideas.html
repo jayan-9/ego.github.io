@@ -311,6 +311,103 @@
     </script>
 </div>
 
+         <style>
+.faq-container{
+  max-width:800px;
+  margin:auto;
+  font-family:Arial, sans-serif;
+}
+
+.faq-item{
+  border-bottom:1px solid #ddd;
+}
+
+.faq-question{
+  width:100%;
+  padding:15px;
+  font-size:18px;
+  text-align:left;
+  background:#f7f7f7;
+  border:none;
+  outline:none;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.faq-question:hover{
+  background:#ececec;
+}
+
+.faq-answer{
+  display:none;
+  padding:15px;
+  font-size:16px;
+  background:#fff;
+}
+</style>
+
+<div class="faq-container">
+
+<div class="faq-item">
+<button class="faq-question">1. IS THIS FREE?</button>
+<div class="faq-answer">
+YES! 😊 THIS IS 100% FREE. YOU DO NOT NEED TO MAKE ANY PAYMENT.
+</div>
+</div>
+
+<div class="faq-item">
+<button class="faq-question">2. WHAT IS SPECIAL ABOUT STYLENAME.IN?</button>
+<div class="faq-answer">
+EVERYTHING ON STYLENAME.IN IS FREE. 💯 YOU GET DIFFERENT STYLES IN 4 CATEGORIES AND CAN FIND YOUR FAVORITE STYLISH NAMES. ✨🤞🏻
+</div>
+</div>
+
+<div class="faq-item">
+<button class="faq-question">3. CAN WE GENERATE VERY LONG NAMES?</button>
+<div class="faq-answer">
+SINCE THIS IS A NAME GENERATOR YOU CAN GENERATE NAMES 😍 BUT YOU SHOULD NOT WRITE VERY LONG TEXT (MORE THAN ABOUT 100 WORDS) BECAUSE THE STYLE MAY BREAK. ⚠️
+</div>
+</div>
+
+<div class="faq-item">
+<button class="faq-question">4. CAN I USE NICKNAMES FOR FREE FIRE OR PUBG?</button>
+<div class="faq-answer">
+YES! IF YOU PLAY FF OR PUBG WE HAVE DESIGNED MANY STYLES FOR YOU. 😈 GO TO THE GAMER CATEGORY AND GENERATE NAMES! 🎮
+</div>
+</div>
+
+<div class="faq-item">
+<button class="faq-question">5. IS STYLENAME.IN DIFFICULT TO USE?</button>
+<div class="faq-answer">
+NO! EVEN A CHILD CAN USE IT. WE MADE IT VERY SIMPLE.
+</div>
+</div>
+
+<div class="faq-item">
+<button class="faq-question">6. WHAT ELSE IS SPECIAL ABOUT STYLENAME.IN?</button>
+<div class="faq-answer">
+IT HAS MANY FEATURES SUCH AS SYMBOLS, ICONS, UNIQUE STYLES AND SUGGESTIONS. 🧿✨
+</div>
+</div>
+
+<div class="faq-item">
+<button class="faq-question">7. DOES IT HAVE DIFFERENT FONTS?</button>
+<div class="faq-answer">
+YES! THERE IS A SPECIAL FONT CATEGORY SO YOU CAN USE DIFFERENT FONTS EASILY. ♥️
+</div>
+</div>
+
+</div>
+
+<script>
+document.querySelectorAll(".faq-question").forEach(button=>{
+  button.addEventListener("click",()=>{
+    const answer=button.nextElementSibling;
+    answer.style.display=answer.style.display==="block"?"none":"block";
+  });
+});
+</script>
+
         <!-- Footer Note -->
         <div class="footer-note">
             <p>Choose your vibe, pick your name, and rock your TikTok profile! ✨</p>
