@@ -1032,113 +1032,6 @@ function convert(name, map) {
     }).join("");
 }
 
-// ===== TOP THREE FUNCTIONS =====
-function renderTopThree(items, type, nameValue = '') {
-    const container = document.getElementById('topThreeContainer');
-    if (!container) return;
-    
-    if (!items || items.length === 0) {
-        container.innerHTML = '';
-        return;
-    }
-    
-    // Pick 3 random items
-    const shuffled = [...items].sort(() => Math.random() - 0.5);
-    const selected = shuffled.slice(0, 3);
-    
-    // Store source for later refresh
-    currentTopThreeSource = items;
-    currentTopThreeType = type;
-    currentTopThreeName = nameValue;
-    currentTopThreeCategory = currentFilter;
-    
-    let html = `
-        <div class="top-three-header">
-            <div class="top-three-title">
-                <i class="fas fa-crown"></i> Top 3 Picks
-            </div>
-            <button class="generate-another-btn" onclick="refreshTopThree()">
-                <i class="fas fa-sync-alt"></i> GENERATE ANOTHER
-            </button>
-        </div>
-        <div class="top-three-grid">
-    `;
-    
-    selected.forEach(item => {
-        let text = '';
-        if (type === 'example') {
-            text = item.text;
-        } else {
-            // type === 'generated' – item is a style object
-            text = item.prefix + convert(nameValue, item.map) + item.suffix;
-        }
-        const escaped = text.replace(/'/g,"\\'").replace(/"/g,'&quot;');
-        
-        html += `
-            <div class="top-three-card">
-                <div class="style-text">${text}</div>
-                <button class="copy-btn" onclick="copyText('${escaped}', this)">
-                    <i class="fas fa-copy"></i> Copy
-                </button>
-            </div>
-        `;
-    });
-    
-    html += '</div>';
-    container.innerHTML = html;
-}
-
-function refreshTopThree() {
-    if (!currentTopThreeSource || currentTopThreeSource.length === 0) return;
-    
-    const container = document.getElementById('topThreeContainer');
-    if (!container) return;
-    
-    // Agar category change ho gayi to kuch mat karo
-    if (currentFilter !== currentTopThreeCategory) return;
-    
-    // Re-pick 3 random from the stored source
-    const shuffled = [...currentTopThreeSource].sort(() => Math.random() - 0.5);
-    const selected = shuffled.slice(0, 3);
-    
-    // Generate new HTML for the grid (keep header and button intact)
-    let gridHtml = '';
-    selected.forEach(item => {
-        let text = '';
-        if (currentTopThreeType === 'example') {
-            text = item.text;
-        } else {
-            text = item.prefix + convert(currentTopThreeName, item.map) + item.suffix;
-        }
-        const escaped = text.replace(/'/g,"\\'").replace(/"/g,'&quot;');
-        
-        gridHtml += `
-            <div class="top-three-card">
-                <div class="style-text">${text}</div>
-                <button class="copy-btn" onclick="copyText('${escaped}', this)">
-                    <i class="fas fa-copy"></i> Copy
-                </button>
-            </div>
-        `;
-    });
-    
-    // Update only the grid part
-    const existingHeader = container.querySelector('.top-three-header');
-    container.innerHTML = `
-        ${existingHeader ? existingHeader.outerHTML : `
-        <div class="top-three-header">
-            <div class="top-three-title">
-                <i class="fas fa-crown"></i> Top 3 Picks
-            </div>
-            <button class="generate-another-btn" onclick="refreshTopThree()">
-                <i class="fas fa-sync-alt"></i> GENERATE ANOTHER
-            </button>
-        </div>
-        `}
-        <div class="top-three-grid">${gridHtml}</div>
-    `;
-}
-
 // kya bat hai
 // ===== GENERATE STYLES (with examples when input empty) =====
 function generateStyles() {
@@ -1409,6 +1302,80 @@ function selectCategory(type) {
     });
     generateStyles();
     loadMiniSuggestions();
+}
+
+// ===== SIMPLE TOP THREE FUNCTIONS =====
+function renderTopThree(items, type, nameValue = '') {
+    const container = document.getElementById('topThreeContainer');
+    if (!container) return;
+    
+    if (!items || items.length === 0) {
+        container.innerHTML = '';
+        return;
+    }
+    
+    // Random 3 items
+    const shuffled = [...items].sort(() => Math.random() - 0.5);
+    const selected = shuffled.slice(0, 3);
+    
+    // Store for refresh
+    currentTopThreeSource = items;
+    currentTopThreeType = type;
+    currentTopThreeName = nameValue;
+    
+    let html = `
+        <div class="top-three-simple">
+            <div class="top-three-header">
+                <div class="top-three-title">🔥 Top 3 Picks</div>
+                <button class="generate-another-btn" onclick="refreshTopThree()">GENERATE ANOTHER</button>
+            </div>
+            <div class="top-three-grid">
+    `;
+    
+    selected.forEach(item => {
+        let text = '';
+        if (type === 'example') {
+            text = item.text;
+        } else {
+            text = item.prefix + convert(nameValue, item.map) + item.suffix;
+        }
+        const escaped = text.replace(/'/g, "\\'").replace(/"/g, '&quot;');
+        
+        html += `<div class="top-three-item" onclick="copyText('${escaped}')">${text}</div>`;
+    });
+    
+    html += '</div></div>';
+    container.innerHTML = html;
+}
+
+function refreshTopThree() {
+    if (!currentTopThreeSource || currentTopThreeSource.length === 0) return;
+    
+    const shuffled = [...currentTopThreeSource].sort(() => Math.random() - 0.5);
+    const selected = shuffled.slice(0, 3);
+    
+    const container = document.getElementById('topThreeContainer');
+    if (!container) return;
+    
+    let itemsHtml = '';
+    selected.forEach(item => {
+        let text = '';
+        if (currentTopThreeType === 'example') {
+            text = item.text;
+        } else {
+            text = item.prefix + convert(currentTopThreeName, item.map) + item.suffix;
+        }
+        const escaped = text.replace(/'/g, "\\'").replace(/"/g, '&quot;');
+        
+        itemsHtml += `<div class="top-three-item" onclick="copyText('${escaped}')">${text}</div>`;
+    });
+    
+    // Update only the grid
+    const existingContainer = container.querySelector('.top-three-simple');
+    if (existingContainer) {
+        const header = existingContainer.querySelector('.top-three-header');
+        existingContainer.innerHTML = `${header ? header.outerHTML : ''}<div class="top-three-grid">${itemsHtml}</div>`;
+    }
 }
 
 // ===== LOAD MINI SUGGESTIONS WITH IMAGE AFTER 20 =====
