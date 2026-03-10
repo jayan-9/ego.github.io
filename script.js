@@ -1448,15 +1448,6 @@ function renderTopThree(items, type, nameValue = '') {
         return;
     }
     
-    // Random 3 items
-    const shuffled = [...items].sort(() => Math.random() - 0.5);
-    const selected = shuffled.slice(0, 3);
-    
-    // Store for refresh
-    currentTopThreeSource = items;
-    currentTopThreeType = type;
-    currentTopThreeName = nameValue;
-    
     let html = `
         <div class="top-three-simple">
             <div class="top-three-header">
@@ -1466,21 +1457,18 @@ function renderTopThree(items, type, nameValue = '') {
             <div class="top-three-grid">
     `;
     
-    selected.forEach(item => {
-        let text = '';
-        if (type === 'example') {
-            // Check if item is an object with text property or just a string
-            text = (typeof item === 'object' && item.text) ? item.text : item;
-        } else {
-            text = item.prefix + convert(nameValue, item.map) + item.suffix;
-        }
+    items.forEach(item => {
+        const text = (typeof item === 'object' && item.text) ? item.text : item;
         const escaped = text.replace(/'/g, "\\'").replace(/"/g, '&quot;');
-        
         html += `<div class="top-three-item" onclick="copyText('${escaped}')">${text}</div>`;
     });
     
     html += '</div></div>';
     container.innerHTML = html;
+    
+    currentTopThreeSource = items;
+    currentTopThreeType = type;
+    currentTopThreeName = nameValue;
 }
 
 function refreshTopThree() {
@@ -1494,19 +1482,11 @@ function refreshTopThree() {
     
     let itemsHtml = '';
     selected.forEach(item => {
-        let text = '';
-        if (currentTopThreeType === 'example') {
-            // Check if item is an object with text property or just a string
-            text = (typeof item === 'object' && item.text) ? item.text : item;
-        } else {
-            text = item.prefix + convert(currentTopThreeName, item.map) + item.suffix;
-        }
+        const text = (typeof item === 'object' && item.text) ? item.text : item;
         const escaped = text.replace(/'/g, "\\'").replace(/"/g, '&quot;');
-        
         itemsHtml += `<div class="top-three-item" onclick="copyText('${escaped}')">${text}</div>`;
     });
     
-    // Update only the grid
     const existingContainer = container.querySelector('.top-three-simple');
     if (existingContainer) {
         const header = existingContainer.querySelector('.top-three-header');
