@@ -1018,29 +1018,6 @@ let symbolsData = {
     ]
 };
 
-// ===== TOP 3 NAMES FEATURE =====
-let currentTopNames = [];
-
-function generateTopThree() {
-    const name = document.getElementById('nameInput')?.value.trim();
-    if (!name) return [];
-    
-    const styles = stylesByCategory[currentFilter] || [];
-    if (styles.length === 0) return [];
-    
-    // Random 3 styles select karo
-    const shuffled = [...styles].sort(() => Math.random() - 0.5);
-    const selected = shuffled.slice(0, 3);
-    
-    return selected.map(style => {
-        const styled = style.prefix + convert(name, style.map) + style.suffix;
-        return {
-            text: styled,
-            escaped: styled.replace(/'/g,"\\'").replace(/"/g,'&quot;')
-        };
-    });
-}
-
 function refreshTopNames() {
     const topContainer = document.getElementById('topNamesContainer');
     if (!topContainer) return;
