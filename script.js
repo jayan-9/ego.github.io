@@ -1175,15 +1175,22 @@ if (!name) {
         topThreeItems = shuffledSuggestions.slice(0, 3);
     }
     
-    // Top 3 dikhao (suggestions se)
-    renderTopThree(topThreeItems.map(s => ({ text: s })), 'example');
+// If name is empty, show examples
+if (!name) {
+    // 1. TOP 3 ke liye SUGGESTIONS use karo
+    const suggestions = suggestionsData[currentFilter] || [];
+    if (suggestions.length > 0) {
+        const shuffledSuggestions = [...suggestions].sort(() => Math.random() - 0.5);
+        const topThree = shuffledSuggestions.slice(0, 3);
+        renderTopThree(topThree.map(s => ({ text: s })), 'example');
+    }
     
-    // 2. EXAMPLES DATA se baaki 52 examples
+    // 2. BAAKI SAB - PEHLE JAISA (categoryExamples)
     const examples = categoryExamples[currentFilter] || categoryExamples.love;
-    const shuffledExamples = [...examples].sort(() => Math.random() - 0.5);
-    const selectedExamples = shuffledExamples.slice(0, 52); // 55 total - 3 top = 52
+    const shuffled = [...examples].sort(() => Math.random() - 0.5);
+    const selected = shuffled.slice(0, 55);
     
-    selectedExamples.forEach((example, index) => {
+    selected.forEach((example, index) => {
         const div = document.createElement('div');
         div.className = 'style-card';
         div.setAttribute('onclick', `copyText('${example.text.replace(/'/g,"\\'").replace(/"/g,'&quot;')}')`);
@@ -1253,7 +1260,6 @@ if (!name) {
             result.appendChild(imgDiv);
         }
     });
-    
     return;
 }
     // Name exists: generate actual styles
