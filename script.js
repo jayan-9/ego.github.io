@@ -1154,6 +1154,9 @@ if (!name) {
     const shuffled = [...examples].sort(() => Math.random() - 0.5);
     const selected = shuffled.slice(0, 55);
     
+    // Show top 3 from examples
+renderTopThree(selected, 'example');
+    
     selected.forEach((example, index) => {
         const div = document.createElement('div');
         div.className = 'style-card';
@@ -1234,6 +1237,8 @@ if (styles.length === 0) {
     return;
 }
 
+    // Show top 3 from generated styles
+renderTopThree(styles, 'generated', name);
 const shuffled = [...styles].sort(() => Math.random() - 0.5);
 
 shuffled.forEach((style, index) => {
