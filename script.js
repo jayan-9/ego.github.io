@@ -1018,6 +1018,51 @@ let symbolsData = {
     ]
 };
 
+// ===== TOP 3 NAMES FEATURE =====
+let currentTopNames = [];
+
+function generateTopThree() {
+    const name = document.getElementById('nameInput')?.value.trim();
+    if (!name) return [];
+    
+    const styles = stylesByCategory[currentFilter] || [];
+    if (styles.length === 0) return [];
+    
+    // Random 3 styles select karo
+    const shuffled = [...styles].sort(() => Math.random() - 0.5);
+    const selected = shuffled.slice(0, 3);
+    
+    return selected.map(style => {
+        const styled = style.prefix + convert(name, style.map) + style.suffix;
+        return {
+            text: styled,
+            escaped: styled.replace(/'/g,"\\'").replace(/"/g,'&quot;')
+        };
+    });
+}
+
+function refreshTopNames() {
+    const topContainer = document.getElementById('topNamesContainer');
+    if (!topContainer) return;
+    
+    const topNames = generateTopThree();
+    currentTopNames = topNames;
+    
+    let html = '';
+    topNames.forEach(name => {
+        html += `
+            <div class="top-name-card">
+                <div class="top-name-text">${name.text}</div>
+                <button class="top-copy-btn" onclick="copyText('${name.escaped}', this)">
+                    <i class="fas fa-copy"></i> Copy
+                </button>
+            </div>
+        `;
+    });
+    
+    topContainer.innerHTML = html;
+}
+
 // ===== CORE FUNCTIONS =====
 function convert(name, map) {
     return name.split("").map(ch => {
