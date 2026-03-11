@@ -1050,6 +1050,59 @@ function convert(name, map) {
     }).join("");
 }
 
+// ===== LOAD TOP 3 STYLES =====
+function loadTop3Styles() {
+    const top3Grid = document.getElementById('top3Styles');
+    if (!top3Grid) return;
+    
+    // Get random styles based on current category
+    const styles = getRandomStyles(3);
+    
+    let html = '';
+    styles.forEach(style => {
+        const escapedStyle = style.replace(/'/g, "\\'").replace(/"/g, '&quot;');
+        html += `
+            <div class="top3-card" onclick="copyText('${escapedStyle}')" title="Click to copy">
+                ${style}
+            </div>
+        `;
+    });
+    
+    top3Grid.innerHTML = html;
+}
+
+// ===== GET RANDOM STYLES FROM CURRENT CATEGORY =====
+function getRandomStyles(count) {
+    let allItems = [];
+    
+    // 1. Try to get from suggestions first
+    const categorySuggestions = suggestionsData[currentFilter] || [];
+    if (categorySuggestions.length > 0) {
+        const shuffled = [...categorySuggestions].sort(() => Math.random() - 0.5);
+        allItems = allItems.concat(shuffled.slice(0, 3));
+    }
+    
+    // 2. If not enough, get from category examples
+    if (allItems.length < count) {
+        const examples = categoryExamples[currentFilter] || categoryExamples.love;
+        const shuffled = [...examples].sort(() => Math.random() - 0.5);
+        shuffled.slice(0, count - allItems.length).forEach(ex => {
+            allItems.push(ex.text);
+        });
+    }
+    
+    // 3. Shuffle and return requested count
+    const shuffled = [...allItems].sort(() => Math.random() - 0.5);
+    return shuffled.slice(0, count);
+}
+
+// ===== REFRESH TOP 3 STYLES =====
+function refreshTop3Styles() {
+    loadTop3Styles();
+    // Optional: show a small toast notification
+    showToast('✨ New styles generated!');
+}
+
 // kya bat hai
 // ===== GENERATE STYLES (with examples when input empty) =====
 function generateStyles() {
@@ -1315,6 +1368,8 @@ function selectCategory(type) {
     });
     generateStyles();
     loadMiniSuggestions();
+// 👇 TOP 3 STYLES UPDATE KARO
+loadTop3Styles();
 }
 
 // ===== LOAD MINI SUGGESTIONS WITH IMAGE AFTER 20 =====
@@ -12604,4 +12659,6 @@ addStyle('font', 'font_style23', '', '', {
     
     generateStyles();
     loadMiniSuggestions();
+    // 👇 TOP 3 STYLES LOAD KARO
+    loadTop3Styles();
 });
