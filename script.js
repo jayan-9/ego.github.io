@@ -1277,145 +1277,134 @@ shuffled.forEach((style, index) => {
     div.innerHTML = `<div class="style-text">${styled}</div>`;
     result.appendChild(div);
     
-    // 👇 LINKS IN GENERATED STYLES - 50th style ke baad (index 49)
-    if (index === 159) {
-        const linksDiv = document.createElement('div');
-        linksDiv.className = 'style-card';
-        linksDiv.style.padding = '15px 20px';
-        linksDiv.style.background = 'transparent';
-        linksDiv.style.border = 'none';
-        linksDiv.style.boxShadow = 'none';
-        linksDiv.style.cursor = 'default';
-        linksDiv.innerHTML = `
-            <div style="display: flex; flex-direction: column; gap: 12px;">
-                <a href="pubg-stylish-names-with-symbols.html" style="color: var(--primary); text-decoration: none; border-bottom: 1px dotted var(--gray); padding: 5px 0; display: block;">🎯 PUBG Names</a>
-                <a href="attitude-names-for-boys.html" style="color: var(--primary); text-decoration: none; border-bottom: 1px dotted var(--gray); padding: 5px 0; display: block;">⚡ Attitude Names</a>
-            </div>
-        `;
-        result.appendChild(linksDiv);
-    }
+  // 👇 PUBG & Attitude Links - 159th style ke baad
+if (index === 159) {
+    const linksDiv = document.createElement('div');
+    linksDiv.className = 'style-card generated-links-card';
+    linksDiv.style.padding = '0';
+    linksDiv.style.background = 'transparent';
+    linksDiv.style.border = 'none';
+    linksDiv.innerHTML = `
+        <div class="generated-links-container">
+            <a href="pubg-stylish-names-with-symbols.html" class="generated-link-item">🎯 PUBG Names</a>
+            <a href="attitude-names-for-boys.html" class="generated-link-item">⚡ Attitude Names</a>
+        </div>
+    `;
+    result.appendChild(linksDiv);
+}
 
-    // 👇 3 NEW LINKS - 75th style ke baad (index 74)
+// 👇 Royal, Bio & Name Tips - 179th style ke baad
 if (index === 179) {
     const linksDiv = document.createElement('div');
-    linksDiv.className = 'style-card';
-    linksDiv.style.padding = '15px 20px';
+    linksDiv.className = 'style-card generated-links-card';
+    linksDiv.style.padding = '0';
     linksDiv.style.background = 'transparent';
     linksDiv.style.border = 'none';
-    linksDiv.style.boxShadow = 'none';
-    linksDiv.style.cursor = 'default';
     linksDiv.innerHTML = `
-        <div style="display: flex; flex-direction: column; gap: 12px;">
-            <a href="royal-and-vip-names.html" style="color: var(--primary); text-decoration: none; border-bottom: 1px dotted var(--gray); padding: 5px 0; display: block;">👑 Royal & VIP</a>
-            <a href="social-media-bio-ideas-for-whatsapp-instagram.html" style="color: var(--primary); text-decoration: none; border-bottom: 1px dotted var(--gray); padding: 5px 0; display: block;">💬 Bio Ideas</a>
-            <a href="stylish-name-tips-guide.html" style="color: var(--primary); text-decoration: none; border-bottom: 1px dotted var(--gray); padding: 5px 0; display: block;">✨ Name Tips</a>
+        <div class="generated-links-container">
+            <a href="royal-and-vip-names.html" class="generated-link-item">👑 Royal & VIP</a>
+            <a href="social-media-bio-ideas-for-whatsapp-instagram.html" class="generated-link-item">💬 Bio Ideas</a>
+            <a href="stylish-name-tips-guide.html" class="generated-link-item">✨ Name Tips</a>
         </div>
     `;
     result.appendChild(linksDiv);
 }
 
-    if (index === 61) {
-        const linksDiv = document.createElement('div');
-        linksDiv.className = 'style-card';
-        linksDiv.style.padding = '15px 20px';
-        linksDiv.style.background = 'transparent';
-        linksDiv.style.border = 'none';
-        linksDiv.style.boxShadow = 'none';
-        linksDiv.style.cursor = 'default';
-        linksDiv.innerHTML = `
-            <div style="display: flex; flex-direction: column; gap: 12px;">
-                <a href="anime-stylish-names-collection.html" style="color: var(--primary); text-decoration: none; border-bottom: 1px dotted var(--gray); padding: 5px 0; display: block;">🌀 Anime Names</a>
-                <a href="pubg-stylish-names-with-symbols.html" style="color: var(--primary); text-decoration: none; border-bottom: 1px dotted var(--gray); padding: 5px 0; display: block;">🎯 PUBG Names</a>
-                <a href="attitude-names-for-boys.html" style="color: var(--primary); text-decoration: none; border-bottom: 1px dotted var(--gray); padding: 5px 0; display: block;">⚡ Attitude Names</a>
-            </div>
-        `;
-        result.appendChild(linksDiv);
-    }
+// 👇 Anime, PUBG & Attitude - 61st style ke baad
+if (index === 61) {
+    const linksDiv = document.createElement('div');
+    linksDiv.className = 'style-card generated-links-card';
+    linksDiv.style.padding = '0';
+    linksDiv.style.background = 'transparent';
+    linksDiv.style.border = 'none';
+    linksDiv.innerHTML = `
+        <div class="generated-links-container">
+            <a href="anime-stylish-names-collection.html" class="generated-link-item">🌀 Anime Names</a>
+            <a href="pubg-stylish-names-with-symbols.html" class="generated-link-item">🎯 PUBG Names</a>
+            <a href="attitude-names-for-boys.html" class="generated-link-item">⚡ Attitude Names</a>
+        </div>
+    `;
+    result.appendChild(linksDiv);
+}
 
-    // 👇 LINKS - 45th STYLE KE BAAD (index 44)
+// 👇 Love & TikTok - 98th style ke baad
 if (index === 98) {
     const linksDiv = document.createElement('div');
-    linksDiv.className = 'style-card';
-    linksDiv.style.padding = '15px 20px';
+    linksDiv.className = 'style-card generated-links-card';
+    linksDiv.style.padding = '0';
     linksDiv.style.background = 'transparent';
     linksDiv.style.border = 'none';
-    linksDiv.style.boxShadow = 'none';
-    linksDiv.style.cursor = 'default';
     linksDiv.innerHTML = `
-        <div style="display: flex; flex-direction: column; gap: 12px;">
-            <a href="love-nicknames-2026-collection.html" style="color: var(--primary); text-decoration: none; border-bottom: 1px dotted var(--gray); padding: 5px 0; display: block;">❤️ Love Nicknames 2026</a>
-            <a href="tiktok-username-ideas.html" style="color: var(--primary); text-decoration: none; border-bottom: 1px dotted var(--gray); padding: 5px 0; display: block;">🎵 TikTok Username Ideas</a>
+        <div class="generated-links-container">
+            <a href="love-nicknames-2026-collection.html" class="generated-link-item">❤️ Love Nicknames 2026</a>
+            <a href="tiktok-username-ideas.html" class="generated-link-item">🎵 TikTok Username Ideas</a>
         </div>
     `;
     result.appendChild(linksDiv);
 }
 
-    if (index === 299) {
-        const linksDiv = document.createElement('div');
-        linksDiv.className = 'style-card';
-        linksDiv.style.padding = '15px 20px';
-        linksDiv.style.background = 'transparent';
-        linksDiv.style.border = 'none';
-        linksDiv.style.boxShadow = 'none';
-        linksDiv.style.cursor = 'default';
-        linksDiv.innerHTML = `
-            <div style="display: flex; flex-direction: column; gap: 12px;">
-                <a href="pubg-stylish-names-with-symbols.html" style="color: var(--primary); text-decoration: none; border-bottom: 1px dotted var(--gray); padding: 5px 0; display: block;">🎯 PUBG Names</a>     
-                <a href="attitude-names-for-boys.html" style="color: var(--primary); text-decoration: none; border-bottom: 1px dotted var(--gray); padding: 5px 0; display: block;">⚡ Attitude Names</a>
-            </div>
-        `;
-        result.appendChild(linksDiv);
-    }
-
-    if (index === 326) {
+// 👇 PUBG & Attitude - 299th style ke baad
+if (index === 299) {
     const linksDiv = document.createElement('div');
-    linksDiv.className = 'style-card';
-    linksDiv.style.padding = '15px 20px';
+    linksDiv.className = 'style-card generated-links-card';
+    linksDiv.style.padding = '0';
     linksDiv.style.background = 'transparent';
     linksDiv.style.border = 'none';
-    linksDiv.style.boxShadow = 'none';
-    linksDiv.style.cursor = 'default';
     linksDiv.innerHTML = `
-        <div style="display: flex; flex-direction: column; gap: 12px;">
-            <a href="royal-and-vip-names.html" style="color: var(--primary); text-decoration: none; border-bottom: 1px dotted var(--gray); padding: 5px 0; display: block;">👑 Royal & VIP</a>
-            <a href="social-media-bio-ideas-for-whatsapp-instagram.html" style="color: var(--primary); text-decoration: none; border-bottom: 1px dotted var(--gray); padding: 5px 0; display: block;">💬 Bio Ideas</a>
-            <a href="stylish-name-tips-guide.html" style="color: var(--primary); text-decoration: none; border-bottom: 1px dotted var(--gray); padding: 5px 0; display: block;">✨ Name Tips</a>
+        <div class="generated-links-container">
+            <a href="pubg-stylish-names-with-symbols.html" class="generated-link-item">🎯 PUBG Names</a>
+            <a href="attitude-names-for-boys.html" class="generated-link-item">⚡ Attitude Names</a>
         </div>
     `;
     result.appendChild(linksDiv);
-    }
+}
 
-    if (index === 348) {
+// 👇 Royal, Bio & Name Tips - 326th style ke baad
+if (index === 326) {
     const linksDiv = document.createElement('div');
-    linksDiv.className = 'style-card';
-    linksDiv.style.padding = '15px 20px';
+    linksDiv.className = 'style-card generated-links-card';
+    linksDiv.style.padding = '0';
     linksDiv.style.background = 'transparent';
     linksDiv.style.border = 'none';
-    linksDiv.style.boxShadow = 'none';
-    linksDiv.style.cursor = 'default';
     linksDiv.innerHTML = `
-        <div style="display: flex; flex-direction: column; gap: 12px;">
-            <a href="love-nicknames-2026-collection.html" style="color: var(--primary); text-decoration: none; border-bottom: 1px dotted var(--gray); padding: 5px 0; display: block;">❤️ Love Nicknames 2026</a>
-            <a href="tiktok-username-ideas.html" style="color: var(--primary); text-decoration: none; border-bottom: 1px dotted var(--gray); padding: 5px 0; display: block;">🎵 TikTok Username Ideas</a>
+        <div class="generated-links-container">
+            <a href="royal-and-vip-names.html" class="generated-link-item">👑 Royal & VIP</a>
+            <a href="social-media-bio-ideas-for-whatsapp-instagram.html" class="generated-link-item">💬 Bio Ideas</a>
+            <a href="stylish-name-tips-guide.html" class="generated-link-item">✨ Name Tips</a>
         </div>
     `;
     result.appendChild(linksDiv);
-    }
- 
-    // 👇 IMAGE IN GENERATED STYLES - 133rd style ke baad (index 133)
-    if (index === 133) {
-        const imgDiv = document.createElement('div');
-        imgDiv.className = 'style-card';
-        imgDiv.style.padding = '0';
-        imgDiv.style.overflow = 'hidden';
-        imgDiv.innerHTML = `
-            <img src="https://jayan-9.github.io/ego.github.io/photo.gif" 
-                 alt="Stylish Design"
-                 style="width: 100%; height: auto; display: block; border-radius: 8px;">
-        `;
-        result.appendChild(imgDiv);
-    }
+}
 
+// 👇 Love & TikTok - 348th style ke baad
+if (index === 348) {
+    const linksDiv = document.createElement('div');
+    linksDiv.className = 'style-card generated-links-card';
+    linksDiv.style.padding = '0';
+    linksDiv.style.background = 'transparent';
+    linksDiv.style.border = 'none';
+    linksDiv.innerHTML = `
+        <div class="generated-links-container">
+            <a href="love-nicknames-2026-collection.html" class="generated-link-item">❤️ Love Nicknames 2026</a>
+            <a href="tiktok-username-ideas.html" class="generated-link-item">🎵 TikTok Username Ideas</a>
+        </div>
+    `;
+    result.appendChild(linksDiv);
+}
+
+// 👇 Image - 133rd style ke baad
+if (index === 133) {
+    const imgDiv = document.createElement('div');
+    imgDiv.className = 'style-card';
+    imgDiv.style.padding = '0';
+    imgDiv.style.overflow = 'hidden';
+    imgDiv.innerHTML = `
+        <img src="https://jayan-9.github.io/ego.github.io/photo.gif" 
+             alt="Stylish Design"
+             style="width: 100%; height: auto; display: block; border-radius: 8px;">
+    `;
+    result.appendChild(imgDiv);
+}
     // one ad after 12th style
     if (index === 11 && shuffled.length > 12) {
         const ad = document.createElement('div');
