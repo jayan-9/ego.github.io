@@ -1282,15 +1282,15 @@ if (index === 159) {
     const linksDiv = document.createElement('div');
     linksDiv.className = 'style-card';
     linksDiv.style.padding = '20px';
-    linksDiv.style.background = '#2a2a2a';
-    linksDiv.style.border = '1px solid #444';
+    linksDiv.style.background = '#f5f5f5';
+    linksDiv.style.border = '1px solid #ddd';
     linksDiv.style.borderRadius = '10px';
-    linksDiv.style.boxShadow = '0 4px 8px rgba(0,0,0,0.1)';
+    linksDiv.style.boxShadow = '0 2px 5px rgba(0,0,0,0.05)';
     linksDiv.style.cursor = 'default';
     linksDiv.innerHTML = `
-        <div style="display: flex; flex-direction: column; gap: 15px;">
-            <a href="pubg-stylish-names-with-symbols.html" style="color: #fff; text-decoration: none; border-bottom: 1px solid #555; padding: 10px 0; display: block; font-size: 1.1rem; transition: all 0.2s;" onmouseover="this.style.color='#87CEEB'; this.style.borderBottomColor='#87CEEB';" onmouseout="this.style.color='#fff'; this.style.borderBottomColor='#555';">🎯 PUBG Names</a>
-            <a href="attitude-names-for-boys.html" style="color: #fff; text-decoration: none; border-bottom: 1px solid #555; padding: 10px 0; display: block; font-size: 1.1rem; transition: all 0.2s;" onmouseover="this.style.color='#87CEEB'; this.style.borderBottomColor='#87CEEB';" onmouseout="this.style.color='#fff'; this.style.borderBottomColor='#555';">⚡ Attitude Names</a>
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+            <a href="pubg-stylish-names-with-symbols.html" style="color: #333; text-decoration: none; border-bottom: 1px solid #ccc; padding: 8px 0; display: block; font-size: 1.1rem; transition: all 0.2s;" onmouseover="this.style.color='#4f46e5'; this.style.borderBottomColor='#4f46e5';" onmouseout="this.style.color='#333'; this.style.borderBottomColor='#ccc';">🎯 PUBG Names</a>
+            <a href="attitude-names-for-boys.html" style="color: #333; text-decoration: none; border-bottom: 1px solid #ccc; padding: 8px 0; display: block; font-size: 1.1rem; transition: all 0.2s;" onmouseover="this.style.color='#4f46e5'; this.style.borderBottomColor='#4f46e5';" onmouseout="this.style.color='#333'; this.style.borderBottomColor='#ccc';">⚡ Attitude Names</a>
         </div>
     `;
     result.appendChild(linksDiv);
@@ -1301,16 +1301,16 @@ if (index === 179) {
     const linksDiv = document.createElement('div');
     linksDiv.className = 'style-card';
     linksDiv.style.padding = '20px';
-    linksDiv.style.background = '#2a2a2a';
-    linksDiv.style.border = '1px solid #444';
+    linksDiv.style.background = '#f5f5f5';
+    linksDiv.style.border = '1px solid #ddd';
     linksDiv.style.borderRadius = '10px';
-    linksDiv.style.boxShadow = '0 4px 8px rgba(0,0,0,0.1)';
+    linksDiv.style.boxShadow = '0 2px 5px rgba(0,0,0,0.05)';
     linksDiv.style.cursor = 'default';
     linksDiv.innerHTML = `
-        <div style="display: flex; flex-direction: column; gap: 15px;">
-            <a href="royal-and-vip-names.html" style="color: #fff; text-decoration: none; border-bottom: 1px solid #555; padding: 10px 0; display: block; font-size: 1.1rem; transition: all 0.2s;" onmouseover="this.style.color='#87CEEB'; this.style.borderBottomColor='#87CEEB';" onmouseout="this.style.color='#fff'; this.style.borderBottomColor='#555';">👑 Royal & VIP</a>
-            <a href="social-media-bio-ideas-for-whatsapp-instagram.html" style="color: #fff; text-decoration: none; border-bottom: 1px solid #555; padding: 10px 0; display: block; font-size: 1.1rem; transition: all 0.2s;" onmouseover="this.style.color='#87CEEB'; this.style.borderBottomColor='#87CEEB';" onmouseout="this.style.color='#fff'; this.style.borderBottomColor='#555';">💬 Bio Ideas</a>
-            <a href="stylish-name-tips-guide.html" style="color: #fff; text-decoration: none; border-bottom: 1px solid #555; padding: 10px 0; display: block; font-size: 1.1rem; transition: all 0.2s;" onmouseover="this.style.color='#87CEEB'; this.style.borderBottomColor='#87CEEB';" onmouseout="this.style.color='#fff'; this.style.borderBottomColor='#555';">✨ Name Tips</a>
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+            <a href="royal-and-vip-names.html" style="color: #333; text-decoration: none; border-bottom: 1px solid #ccc; padding: 8px 0; display: block; font-size: 1.1rem; transition: all 0.2s;" onmouseover="this.style.color='#4f46e5'; this.style.borderBottomColor='#4f46e5';" onmouseout="this.style.color='#333'; this.style.borderBottomColor='#ccc';">👑 Royal & VIP</a>
+            <a href="social-media-bio-ideas-for-whatsapp-instagram.html" style="color: #333; text-decoration: none; border-bottom: 1px solid #ccc; padding: 8px 0; display: block; font-size: 1.1rem; transition: all 0.2s;" onmouseover="this.style.color='#4f46e5'; this.style.borderBottomColor='#4f46e5';" onmouseout="this.style.color='#333'; this.style.borderBottomColor='#ccc';">💬 Bio Ideas</a>
+            <a href="stylish-name-tips-guide.html" style="color: #333; text-decoration: none; border-bottom: 1px solid #ccc; padding: 8px 0; display: block; font-size: 1.1rem; transition: all 0.2s;" onmouseover="this.style.color='#4f46e5'; this.style.borderBottomColor='#4f46e5';" onmouseout="this.style.color='#333'; this.style.borderBottomColor='#ccc';">✨ Name Tips</a>
         </div>
     `;
     result.appendChild(linksDiv);
@@ -1321,16 +1321,16 @@ if (index === 61) {
     const linksDiv = document.createElement('div');
     linksDiv.className = 'style-card';
     linksDiv.style.padding = '20px';
-    linksDiv.style.background = '#2a2a2a';
-    linksDiv.style.border = '1px solid #444';
+    linksDiv.style.background = '#f5f5f5';
+    linksDiv.style.border = '1px solid #ddd';
     linksDiv.style.borderRadius = '10px';
-    linksDiv.style.boxShadow = '0 4px 8px rgba(0,0,0,0.1)';
+    linksDiv.style.boxShadow = '0 2px 5px rgba(0,0,0,0.05)';
     linksDiv.style.cursor = 'default';
     linksDiv.innerHTML = `
-        <div style="display: flex; flex-direction: column; gap: 15px;">
-            <a href="anime-stylish-names-collection.html" style="color: #fff; text-decoration: none; border-bottom: 1px solid #555; padding: 10px 0; display: block; font-size: 1.1rem; transition: all 0.2s;" onmouseover="this.style.color='#87CEEB'; this.style.borderBottomColor='#87CEEB';" onmouseout="this.style.color='#fff'; this.style.borderBottomColor='#555';">🌀 Anime Names</a>
-            <a href="pubg-stylish-names-with-symbols.html" style="color: #fff; text-decoration: none; border-bottom: 1px solid #555; padding: 10px 0; display: block; font-size: 1.1rem; transition: all 0.2s;" onmouseover="this.style.color='#87CEEB'; this.style.borderBottomColor='#87CEEB';" onmouseout="this.style.color='#fff'; this.style.borderBottomColor='#555';">🎯 PUBG Names</a>
-            <a href="attitude-names-for-boys.html" style="color: #fff; text-decoration: none; border-bottom: 1px solid #555; padding: 10px 0; display: block; font-size: 1.1rem; transition: all 0.2s;" onmouseover="this.style.color='#87CEEB'; this.style.borderBottomColor='#87CEEB';" onmouseout="this.style.color='#fff'; this.style.borderBottomColor='#555';">⚡ Attitude Names</a>
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+            <a href="anime-stylish-names-collection.html" style="color: #333; text-decoration: none; border-bottom: 1px solid #ccc; padding: 8px 0; display: block; font-size: 1.1rem; transition: all 0.2s;" onmouseover="this.style.color='#4f46e5'; this.style.borderBottomColor='#4f46e5';" onmouseout="this.style.color='#333'; this.style.borderBottomColor='#ccc';">🌀 Anime Names</a>
+            <a href="pubg-stylish-names-with-symbols.html" style="color: #333; text-decoration: none; border-bottom: 1px solid #ccc; padding: 8px 0; display: block; font-size: 1.1rem; transition: all 0.2s;" onmouseover="this.style.color='#4f46e5'; this.style.borderBottomColor='#4f46e5';" onmouseout="this.style.color='#333'; this.style.borderBottomColor='#ccc';">🎯 PUBG Names</a>
+            <a href="attitude-names-for-boys.html" style="color: #333; text-decoration: none; border-bottom: 1px solid #ccc; padding: 8px 0; display: block; font-size: 1.1rem; transition: all 0.2s;" onmouseover="this.style.color='#4f46e5'; this.style.borderBottomColor='#4f46e5';" onmouseout="this.style.color='#333'; this.style.borderBottomColor='#ccc';">⚡ Attitude Names</a>
         </div>
     `;
     result.appendChild(linksDiv);
@@ -1341,15 +1341,15 @@ if (index === 98) {
     const linksDiv = document.createElement('div');
     linksDiv.className = 'style-card';
     linksDiv.style.padding = '20px';
-    linksDiv.style.background = '#2a2a2a';
-    linksDiv.style.border = '1px solid #444';
+    linksDiv.style.background = '#f5f5f5';
+    linksDiv.style.border = '1px solid #ddd';
     linksDiv.style.borderRadius = '10px';
-    linksDiv.style.boxShadow = '0 4px 8px rgba(0,0,0,0.1)';
+    linksDiv.style.boxShadow = '0 2px 5px rgba(0,0,0,0.05)';
     linksDiv.style.cursor = 'default';
     linksDiv.innerHTML = `
-        <div style="display: flex; flex-direction: column; gap: 15px;">
-            <a href="love-nicknames-2026-collection.html" style="color: #fff; text-decoration: none; border-bottom: 1px solid #555; padding: 10px 0; display: block; font-size: 1.1rem; transition: all 0.2s;" onmouseover="this.style.color='#87CEEB'; this.style.borderBottomColor='#87CEEB';" onmouseout="this.style.color='#fff'; this.style.borderBottomColor='#555';">❤️ Love Nicknames 2026</a>
-            <a href="tiktok-username-ideas.html" style="color: #fff; text-decoration: none; border-bottom: 1px solid #555; padding: 10px 0; display: block; font-size: 1.1rem; transition: all 0.2s;" onmouseover="this.style.color='#87CEEB'; this.style.borderBottomColor='#87CEEB';" onmouseout="this.style.color='#fff'; this.style.borderBottomColor='#555';">🎵 TikTok Username Ideas</a>
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+            <a href="love-nicknames-2026-collection.html" style="color: #333; text-decoration: none; border-bottom: 1px solid #ccc; padding: 8px 0; display: block; font-size: 1.1rem; transition: all 0.2s;" onmouseover="this.style.color='#4f46e5'; this.style.borderBottomColor='#4f46e5';" onmouseout="this.style.color='#333'; this.style.borderBottomColor='#ccc';">❤️ Love Nicknames 2026</a>
+            <a href="tiktok-username-ideas.html" style="color: #333; text-decoration: none; border-bottom: 1px solid #ccc; padding: 8px 0; display: block; font-size: 1.1rem; transition: all 0.2s;" onmouseover="this.style.color='#4f46e5'; this.style.borderBottomColor='#4f46e5';" onmouseout="this.style.color='#333'; this.style.borderBottomColor='#ccc';">🎵 TikTok Username Ideas</a>
         </div>
     `;
     result.appendChild(linksDiv);
@@ -1360,15 +1360,15 @@ if (index === 299) {
     const linksDiv = document.createElement('div');
     linksDiv.className = 'style-card';
     linksDiv.style.padding = '20px';
-    linksDiv.style.background = '#2a2a2a';
-    linksDiv.style.border = '1px solid #444';
+    linksDiv.style.background = '#f5f5f5';
+    linksDiv.style.border = '1px solid #ddd';
     linksDiv.style.borderRadius = '10px';
-    linksDiv.style.boxShadow = '0 4px 8px rgba(0,0,0,0.1)';
+    linksDiv.style.boxShadow = '0 2px 5px rgba(0,0,0,0.05)';
     linksDiv.style.cursor = 'default';
     linksDiv.innerHTML = `
-        <div style="display: flex; flex-direction: column; gap: 15px;">
-            <a href="pubg-stylish-names-with-symbols.html" style="color: #fff; text-decoration: none; border-bottom: 1px solid #555; padding: 10px 0; display: block; font-size: 1.1rem; transition: all 0.2s;" onmouseover="this.style.color='#87CEEB'; this.style.borderBottomColor='#87CEEB';" onmouseout="this.style.color='#fff'; this.style.borderBottomColor='#555';">🎯 PUBG Names</a>
-            <a href="attitude-names-for-boys.html" style="color: #fff; text-decoration: none; border-bottom: 1px solid #555; padding: 10px 0; display: block; font-size: 1.1rem; transition: all 0.2s;" onmouseover="this.style.color='#87CEEB'; this.style.borderBottomColor='#87CEEB';" onmouseout="this.style.color='#fff'; this.style.borderBottomColor='#555';">⚡ Attitude Names</a>
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+            <a href="pubg-stylish-names-with-symbols.html" style="color: #333; text-decoration: none; border-bottom: 1px solid #ccc; padding: 8px 0; display: block; font-size: 1.1rem; transition: all 0.2s;" onmouseover="this.style.color='#4f46e5'; this.style.borderBottomColor='#4f46e5';" onmouseout="this.style.color='#333'; this.style.borderBottomColor='#ccc';">🎯 PUBG Names</a>
+            <a href="attitude-names-for-boys.html" style="color: #333; text-decoration: none; border-bottom: 1px solid #ccc; padding: 8px 0; display: block; font-size: 1.1rem; transition: all 0.2s;" onmouseover="this.style.color='#4f46e5'; this.style.borderBottomColor='#4f46e5';" onmouseout="this.style.color='#333'; this.style.borderBottomColor='#ccc';">⚡ Attitude Names</a>
         </div>
     `;
     result.appendChild(linksDiv);
@@ -1379,16 +1379,16 @@ if (index === 326) {
     const linksDiv = document.createElement('div');
     linksDiv.className = 'style-card';
     linksDiv.style.padding = '20px';
-    linksDiv.style.background = '#2a2a2a';
-    linksDiv.style.border = '1px solid #444';
+    linksDiv.style.background = '#f5f5f5';
+    linksDiv.style.border = '1px solid #ddd';
     linksDiv.style.borderRadius = '10px';
-    linksDiv.style.boxShadow = '0 4px 8px rgba(0,0,0,0.1)';
+    linksDiv.style.boxShadow = '0 2px 5px rgba(0,0,0,0.05)';
     linksDiv.style.cursor = 'default';
     linksDiv.innerHTML = `
-        <div style="display: flex; flex-direction: column; gap: 15px;">
-            <a href="royal-and-vip-names.html" style="color: #fff; text-decoration: none; border-bottom: 1px solid #555; padding: 10px 0; display: block; font-size: 1.1rem; transition: all 0.2s;" onmouseover="this.style.color='#87CEEB'; this.style.borderBottomColor='#87CEEB';" onmouseout="this.style.color='#fff'; this.style.borderBottomColor='#555';">👑 Royal & VIP</a>
-            <a href="social-media-bio-ideas-for-whatsapp-instagram.html" style="color: #fff; text-decoration: none; border-bottom: 1px solid #555; padding: 10px 0; display: block; font-size: 1.1rem; transition: all 0.2s;" onmouseover="this.style.color='#87CEEB'; this.style.borderBottomColor='#87CEEB';" onmouseout="this.style.color='#fff'; this.style.borderBottomColor='#555';">💬 Bio Ideas</a>
-            <a href="stylish-name-tips-guide.html" style="color: #fff; text-decoration: none; border-bottom: 1px solid #555; padding: 10px 0; display: block; font-size: 1.1rem; transition: all 0.2s;" onmouseover="this.style.color='#87CEEB'; this.style.borderBottomColor='#87CEEB';" onmouseout="this.style.color='#fff'; this.style.borderBottomColor='#555';">✨ Name Tips</a>
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+            <a href="royal-and-vip-names.html" style="color: #333; text-decoration: none; border-bottom: 1px solid #ccc; padding: 8px 0; display: block; font-size: 1.1rem; transition: all 0.2s;" onmouseover="this.style.color='#4f46e5'; this.style.borderBottomColor='#4f46e5';" onmouseout="this.style.color='#333'; this.style.borderBottomColor='#ccc';">👑 Royal & VIP</a>
+            <a href="social-media-bio-ideas-for-whatsapp-instagram.html" style="color: #333; text-decoration: none; border-bottom: 1px solid #ccc; padding: 8px 0; display: block; font-size: 1.1rem; transition: all 0.2s;" onmouseover="this.style.color='#4f46e5'; this.style.borderBottomColor='#4f46e5';" onmouseout="this.style.color='#333'; this.style.borderBottomColor='#ccc';">💬 Bio Ideas</a>
+            <a href="stylish-name-tips-guide.html" style="color: #333; text-decoration: none; border-bottom: 1px solid #ccc; padding: 8px 0; display: block; font-size: 1.1rem; transition: all 0.2s;" onmouseover="this.style.color='#4f46e5'; this.style.borderBottomColor='#4f46e5';" onmouseout="this.style.color='#333'; this.style.borderBottomColor='#ccc';">✨ Name Tips</a>
         </div>
     `;
     result.appendChild(linksDiv);
@@ -1399,15 +1399,15 @@ if (index === 348) {
     const linksDiv = document.createElement('div');
     linksDiv.className = 'style-card';
     linksDiv.style.padding = '20px';
-    linksDiv.style.background = '#2a2a2a';
-    linksDiv.style.border = '1px solid #444';
+    linksDiv.style.background = '#f5f5f5';
+    linksDiv.style.border = '1px solid #ddd';
     linksDiv.style.borderRadius = '10px';
-    linksDiv.style.boxShadow = '0 4px 8px rgba(0,0,0,0.1)';
+    linksDiv.style.boxShadow = '0 2px 5px rgba(0,0,0,0.05)';
     linksDiv.style.cursor = 'default';
     linksDiv.innerHTML = `
-        <div style="display: flex; flex-direction: column; gap: 15px;">
-            <a href="love-nicknames-2026-collection.html" style="color: #fff; text-decoration: none; border-bottom: 1px solid #555; padding: 10px 0; display: block; font-size: 1.1rem; transition: all 0.2s;" onmouseover="this.style.color='#87CEEB'; this.style.borderBottomColor='#87CEEB';" onmouseout="this.style.color='#fff'; this.style.borderBottomColor='#555';">❤️ Love Nicknames 2026</a>
-            <a href="tiktok-username-ideas.html" style="color: #fff; text-decoration: none; border-bottom: 1px solid #555; padding: 10px 0; display: block; font-size: 1.1rem; transition: all 0.2s;" onmouseover="this.style.color='#87CEEB'; this.style.borderBottomColor='#87CEEB';" onmouseout="this.style.color='#fff'; this.style.borderBottomColor='#555';">🎵 TikTok Username Ideas</a>
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+            <a href="love-nicknames-2026-collection.html" style="color: #333; text-decoration: none; border-bottom: 1px solid #ccc; padding: 8px 0; display: block; font-size: 1.1rem; transition: all 0.2s;" onmouseover="this.style.color='#4f46e5'; this.style.borderBottomColor='#4f46e5';" onmouseout="this.style.color='#333'; this.style.borderBottomColor='#ccc';">❤️ Love Nicknames 2026</a>
+            <a href="tiktok-username-ideas.html" style="color: #333; text-decoration: none; border-bottom: 1px solid #ccc; padding: 8px 0; display: block; font-size: 1.1rem; transition: all 0.2s;" onmouseover="this.style.color='#4f46e5'; this.style.borderBottomColor='#4f46e5';" onmouseout="this.style.color='#333'; this.style.borderBottomColor='#ccc';">🎵 TikTok Username Ideas</a>
         </div>
     `;
     result.appendChild(linksDiv);
