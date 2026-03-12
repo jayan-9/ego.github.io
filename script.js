@@ -1202,37 +1202,37 @@ if (index === 5) {
     const linksDiv = document.createElement('div');
     linksDiv.className = 'style-card';
     linksDiv.style.padding = '20px';
-    linksDiv.style.background = '#2a2a2a';
-    linksDiv.style.border = '1px solid #444';
+    linksDiv.style.background = '#f5f5f5';
+    linksDiv.style.border = '1px solid #e0e0e0';
     linksDiv.style.borderRadius = '12px';
-    linksDiv.style.boxShadow = '0 4px 12px rgba(0,0,0,0.15)';
+    linksDiv.style.boxShadow = '0 2px 8px rgba(0,0,0,0.05)';
     linksDiv.style.margin = '15px 0';
     linksDiv.innerHTML = `
         <div style="display: flex; flex-direction: column; gap: 12px;">
             <a href="tiktok-username-ideas.html" style="
                 display: block;
                 width: 100%;
-                padding: 15px;
-                background: #333;
-                border: 1px solid #555;
+                padding: 14px;
+                background: white;
+                border: 1px solid #ddd;
                 border-radius: 8px;
-                color: #f0f0f0;
+                color: #333;
                 text-decoration: none;
-                font-size: 1.1rem;
-                text-align: center;
+                font-size: 1rem;
+                text-align: left;
             ">🎵 TikTok Username Ideas</a>
             
             <a href="which-font-is-best-for-which-category.html" style="
                 display: block;
                 width: 100%;
-                padding: 15px;
-                background: #333;
-                border: 1px solid #555;
+                padding: 14px;
+                background: white;
+                border: 1px solid #ddd;
                 border-radius: 8px;
-                color: #f0f0f0;
+                color: #333;
                 text-decoration: none;
-                font-size: 1.1rem;
-                text-align: center;
+                font-size: 1rem;
+                text-align: left;
             ">🔤 Font Guide</a>
         </div>
     `;
