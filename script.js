@@ -1141,15 +1141,57 @@ if (!name) {
 if (index === 34) {
     const linksDiv = document.createElement('div');
     linksDiv.className = 'style-card';
-    linksDiv.style.padding = '10px 0';
-    linksDiv.style.background = 'transparent';
-    linksDiv.style.border = 'none';
-    linksDiv.style.boxShadow = 'none';
+    linksDiv.style.padding = '15px 20px';
+    linksDiv.style.background = 'var(--light)';
+    linksDiv.style.border = '1px solid var(--gray-light)';
+    linksDiv.style.borderRadius = '50px';
+    linksDiv.style.boxShadow = '0 2px 5px rgba(0,0,0,0.05)';
     linksDiv.style.cursor = 'default';
+    linksDiv.style.margin = '10px 0';
     linksDiv.innerHTML = `
-        <div style="display: flex; flex-direction: column; gap: 8px;">
-            <a href="royal-and-vip-names.html" style="color: var(--primary); text-decoration: none; border-bottom: 1px dotted var(--gray); padding: 3px 0; display: block;">👑 Royal & VIP</a>
-            <a href="social-media-bio-ideas-for-whatsapp-instagram.html" style="color: var(--primary); text-decoration: none; border-bottom: 1px dotted var(--gray); padding: 3px 0; display: block;">💬 Bio Ideas</a>
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+            <a href="royal-and-vip-names.html" style="
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+                width: 100%;
+                padding: 12px 20px;
+                background: var(--light);
+                border: 1px solid var(--gray-light);
+                border-radius: 50px;
+                color: var(--dark);
+                text-decoration: none;
+                font-size: 1rem;
+                font-weight: 500;
+                transition: all 0.3s ease;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            " onmouseover="this.style.background='var(--primary)'; this.style.color='white'; this.style.borderColor='var(--primary)'" 
+               onmouseout="this.style.background='var(--light)'; this.style.color='var(--dark)'; this.style.borderColor='var(--gray-light)'">
+                <span style="font-size:1.2rem;">👑</span>
+                Royal & VIP
+            </a>
+            <a href="social-media-bio-ideas-for-whatsapp-instagram.html" style="
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+                width: 100%;
+                padding: 12px 20px;
+                background: var(--light);
+                border: 1px solid var(--gray-light);
+                border-radius: 50px;
+                color: var(--dark);
+                text-decoration: none;
+                font-size: 1rem;
+                font-weight: 500;
+                transition: all 0.3s ease;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            " onmouseover="this.style.background='var(--primary)'; this.style.color='white'; this.style.borderColor='var(--primary)'" 
+               onmouseout="this.style.background='var(--light)'; this.style.color='var(--dark)'; this.style.borderColor='var(--gray-light)'">
+                <span style="font-size:1.2rem;">💬</span>
+                Bio Ideas
+            </a>
         </div>
     `;
     result.appendChild(linksDiv);
