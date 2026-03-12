@@ -1201,15 +1201,39 @@ if (index === 34) {
 if (index === 5) {
     const linksDiv = document.createElement('div');
     linksDiv.className = 'style-card';
-    linksDiv.style.padding = '15px 20px';
-    linksDiv.style.background = 'transparent';
-    linksDiv.style.border = 'none';
-    linksDiv.style.boxShadow = 'none';
-    linksDiv.style.cursor = 'default';
+    linksDiv.style.padding = '20px';
+    linksDiv.style.background = '#2a2a2a';
+    linksDiv.style.border = '1px solid #444';
+    linksDiv.style.borderRadius = '12px';
+    linksDiv.style.boxShadow = '0 4px 12px rgba(0,0,0,0.15)';
+    linksDiv.style.margin = '15px 0';
     linksDiv.innerHTML = `
         <div style="display: flex; flex-direction: column; gap: 12px;">
-            <a href="tiktok-username-ideas.html" style="color: var(--primary); text-decoration: none; border-bottom: 1px dotted var(--gray); font-size: 1rem;">🎵 TikTok Names</a>
-            <a href="which-font-is-best-for-which-category.html" style="color: var(--primary); text-decoration: none; border-bottom: 1px dotted var(--gray); padding: 5px 0; display: block;">🔤 Font Guide</a>
+            <a href="tiktok-username-ideas.html" style="
+                display: block;
+                width: 100%;
+                padding: 15px;
+                background: #333;
+                border: 1px solid #555;
+                border-radius: 8px;
+                color: #f0f0f0;
+                text-decoration: none;
+                font-size: 1.1rem;
+                text-align: center;
+            ">🎵 TikTok Username Ideas</a>
+            
+            <a href="which-font-is-best-for-which-category.html" style="
+                display: block;
+                width: 100%;
+                padding: 15px;
+                background: #333;
+                border: 1px solid #555;
+                border-radius: 8px;
+                color: #f0f0f0;
+                text-decoration: none;
+                font-size: 1.1rem;
+                text-align: center;
+            ">🔤 Font Guide</a>
         </div>
     `;
     result.appendChild(linksDiv);
