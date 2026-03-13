@@ -1441,6 +1441,37 @@ if (index === 133) {
     `;
     result.appendChild(imgDiv);
 }
+
+    // 👇 AUTO AD - 150th style ke baad (index 149)
+if (index === 149) {
+    const adDiv = document.createElement('div');
+    adDiv.className = 'style-card';
+    adDiv.style.padding = '20px';
+    adDiv.style.background = '#f8f9fa';
+    adDiv.style.border = '2px dashed #4f46e5';
+    adDiv.style.borderRadius = '12px';
+    adDiv.style.margin = '20px 0';
+    adDiv.style.textAlign = 'center';
+    adDiv.innerHTML = `
+        <div style="color: #666; font-size: 0.85rem; margin-bottom: 10px;">Advertisement</div>
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-7940449674571030"
+             data-ad-slot="XXXXXXXXXX"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+    `;
+    result.appendChild(adDiv);
+    
+    // AdSense script execute
+    setTimeout(() => {
+        try {
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        } catch(e) {
+            console.log("AdSense error:", e);
+        }
+    }, 100);
+}
     
     // one ad after 12th style
     if (index === 11 && shuffled.length > 12) {
