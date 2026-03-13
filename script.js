@@ -1197,43 +1197,58 @@ if (index === 34) {
     result.appendChild(linksDiv);
 }
 
-        // 👇 LINKS IN EXAMPLES - 20th example ke baad (index 19)
+        // 👇 LINKS IN EXAMPLES - 6th example ke baad (index 5)
 if (index === 5) {
     const linksDiv = document.createElement('div');
     linksDiv.className = 'style-card';
-    linksDiv.style.padding = '20px';
-    linksDiv.style.background = '#f5f5f5';
-    linksDiv.style.border = '1px solid #e0e0e0';
-    linksDiv.style.borderRadius = '12px';
-    linksDiv.style.boxShadow = '0 2px 8px rgba(0,0,0,0.05)';
-    linksDiv.style.margin = '15px 0';
+    linksDiv.style.padding = '15px 0';
+    linksDiv.style.background = 'transparent';
+    linksDiv.style.border = 'none';
+    linksDiv.style.boxShadow = 'none';
+    linksDiv.style.margin = '10px 0 20px 0';
     linksDiv.innerHTML = `
         <div style="display: flex; flex-direction: column; gap: 12px;">
-            <a href="tiktok-username-ideas.html" style="
-                display: block;
-                width: 100%;
-                padding: 14px;
-                background: white;
-                border: 1px solid #ddd;
-                border-radius: 8px;
-                color: #333;
-                text-decoration: none;
-                font-size: 1rem;
-                text-align: left;
-            ">🎵 TikTok Username Ideas</a>
+            <a href="tiktok-username-ideas.html" 
+               style="
+                    display: block;
+                    width: 100%;
+                    padding: 16px 20px;
+                    background: #ffffff;
+                    border: 2px solid #e0e0e0;
+                    border-radius: 12px;
+                    color: #333333;
+                    text-decoration: none;
+                    font-size: 1.1rem;
+                    text-align: left;
+                    font-weight: 500;
+                    transition: all 0.25s ease;
+                    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+               "
+               onmouseover="this.style.background='linear-gradient(135deg, #FDB931 0%, #FED54E 100%)'; this.style.borderColor='#FDB931'; this.style.color='#1a1a1a'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 10px 20px rgba(253,185,49,0.25)';"
+               onmouseout="this.style.background='#ffffff'; this.style.borderColor='#e0e0e0'; this.style.color='#333333'; this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 5px rgba(0,0,0,0.05)';">
+                🎵 TikTok Username Ideas
+            </a>
             
-            <a href="which-font-is-best-for-which-category.html" style="
-                display: block;
-                width: 100%;
-                padding: 14px;
-                background: white;
-                border: 1px solid #ddd;
-                border-radius: 8px;
-                color: #333;
-                text-decoration: none;
-                font-size: 1rem;
-                text-align: left;
-            ">🔤 Font Guide</a>
+            <a href="which-font-is-best-for-which-category.html" 
+               style="
+                    display: block;
+                    width: 100%;
+                    padding: 16px 20px;
+                    background: #ffffff;
+                    border: 2px solid #e0e0e0;
+                    border-radius: 12px;
+                    color: #333333;
+                    text-decoration: none;
+                    font-size: 1.1rem;
+                    text-align: left;
+                    font-weight: 500;
+                    transition: all 0.25s ease;
+                    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+               "
+               onmouseover="this.style.background='linear-gradient(135deg, #FDB931 0%, #FED54E 100%)'; this.style.borderColor='#FDB931'; this.style.color='#1a1a1a'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 10px 20px rgba(253,185,49,0.25)';"
+               onmouseout="this.style.background='#ffffff'; this.style.borderColor='#e0e0e0'; this.style.color='#333333'; this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 5px rgba(0,0,0,0.05)';">
+                🔤 Font Guide
+            </a>
         </div>
     `;
     result.appendChild(linksDiv);
