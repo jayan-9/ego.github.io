@@ -257,6 +257,26 @@ const categoryExamples = {
     { text: "N͎a͎m͎e͎" },
     { text: "N♥a♥m♥e♥" },
     { text: "N꘡a꘡m꘡e꘡" },
+    // ... existing font examples ...
+    { text: "🅝⃟ 🅐⃟🅜⃟🅔⃟" },
+    { text: "𝗡⃤𝗮𝗺𝗲" },
+    { text: "◥Ｎａｍｅ◤" },
+    { text: "𝐍̶𝐚̶𝐦̶𝐜̶" },
+    { text: "𝙉⃞𝙖⃞𝙢⃞𝙚⃞" },
+    { text: "𝗡⃤𝗮⃤𝗺⃤𝗲⃤" },
+    { text: "ᑎ̷ᗩ̷ᗰ̷ᗴ̷" },
+    { text: "Ⓝ🕱Ⓐ🕱Ⓜ🕱Ⓔ🕱" },
+    { text: "𝓝͢a͢m͢e͢" },
+    { text: "𝘕̷𝘢̷𝘮̷𝘦̷" },
+    { text: "ᏁᏗᎷᏋ" },
+    { text: "𐌍𐌀𐌌𐌄" },
+    { text: "ñåmê" },
+    { text: "Ńáḿé" },
+    { text: "ꪀꪖꪑꫀ" },
+    { text: "ηαмє" },
+    { text: "ή𝐚мｅ" },
+    { text: "Пꪖме" },
+    { text: "Ⓝ⃝ⓐ⃝ⓜ⃝ⓔ⃝" },   
     { text: "N𓆩a𓆩m𓆩e𓆩" }
     ]
 };
