@@ -3,13 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🎨 Font Changer - Letter Converter</title>
+    <title>🎨 Font Changer - Text Converter | stylename.in</title>
+    <meta name="description" content="30+ amazing font styles for your name. Convert text to box font, triangle font, circle font and more. Free online text changer tool.">
+    <meta name="keywords" content="font changer, text converter, box font, triangle font, name style, Instagram font">
+    <meta name="author" content="stylename.in">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="🎨 Font Changer - 30+ Amazing Styles">
+    <meta property="og:description" content="Convert your name into cool fonts with box, triangle, circle and more!">
+    <meta property="og:url" content="https://stylename.in/text-changer.html">
+    <meta property="og:type" content="website">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://stylename.in/text-changer.html">
+    
     <style>
+        /* 📌 Previous styles from above code + extra styles */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', sans-serif;
+            font-family: 'Segoe UI', 'Arial', sans-serif;
         }
         
         body {
@@ -23,14 +37,36 @@
             margin: 0 auto;
         }
         
-        h1 {
+        /* Header */
+        .header {
             text-align: center;
             color: white;
             margin-bottom: 30px;
-            font-size: 2.5em;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
         
+        .header h1 {
+            font-size: 2.8em;
+            margin-bottom: 10px;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.3);
+        }
+        
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        /* Domain badge */
+        .domain-badge {
+            background: rgba(255,255,255,0.2);
+            display: inline-block;
+            padding: 8px 20px;
+            border-radius: 50px;
+            margin-top: 15px;
+            font-weight: bold;
+            border: 2px solid white;
+        }
+        
+        /* Main Box */
         .main-box {
             background: white;
             border-radius: 20px;
@@ -38,6 +74,7 @@
             box-shadow: 0 20px 60px rgba(0,0,0,0.3);
         }
         
+        /* Input Section */
         .input-section {
             margin-bottom: 30px;
         }
@@ -71,9 +108,10 @@
             font-style: italic;
         }
         
+        /* Font Selector Grid */
         .font-selector {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
             gap: 15px;
             margin: 30px 0;
         }
@@ -81,30 +119,51 @@
         .font-card {
             background: #f8f9fa;
             border: 2px solid #dee2e6;
-            border-radius: 10px;
-            padding: 15px;
+            border-radius: 12px;
+            padding: 15px 10px;
             text-align: center;
             cursor: pointer;
-            transition: 0.3s;
+            transition: all 0.3s;
         }
         
         .font-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+            border-color: #667eea;
         }
         
         .font-card.selected {
             border-color: #667eea;
-            background: #e3f2fd;
+            background: linear-gradient(145deg, #e3f2fd, #ffffff);
+            box-shadow: 0 5px 15px rgba(102,126,234,0.3);
         }
         
+        .font-preview {
+            font-size: 28px;
+            margin-bottom: 8px;
+            min-height: 50px;
+        }
+        
+        .font-name {
+            font-weight: bold;
+            color: #333;
+        }
+        
+        .font-desc {
+            font-size: 11px;
+            color: #666;
+            margin-top: 5px;
+        }
+        
+        /* Preview Box */
         .preview-box {
-            background: linear-gradient(45deg, #f3f3f3, #ffffff);
+            background: linear-gradient(135deg, #f5f7fa 0%, #ffffff 100%);
             border-radius: 15px;
             padding: 30px;
-            margin: 20px 0;
+            margin: 25px 0;
             text-align: center;
-            border: 2px dashed #667eea;
+            border: 3px dashed #667eea;
+            box-shadow: inset 0 2px 10px rgba(0,0,0,0.05);
         }
         
         .preview-text {
@@ -115,64 +174,74 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            color: #333;
         }
         
+        /* Example Box */
         .example-box {
             background: #f8f9fa;
-            border-radius: 10px;
-            padding: 20px;
-            margin: 20px 0;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 25px 0;
         }
         
         .example-title {
             font-weight: bold;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             color: #333;
+            font-size: 1.2em;
         }
         
         .example-row {
             display: flex;
             align-items: center;
-            margin-bottom: 10px;
-            padding: 10px;
+            margin-bottom: 15px;
+            padding: 12px 15px;
             background: white;
-            border-radius: 8px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
         
         .example-original {
             width: 100px;
             font-weight: bold;
+            color: #667eea;
         }
         
         .example-converted {
             flex: 1;
-            font-size: 1.2em;
+            font-size: 1.3em;
         }
         
+        /* Copy Button */
         .copy-btn {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             border: none;
-            padding: 15px 40px;
-            font-size: 1.2em;
-            border-radius: 50px;
+            padding: 18px 40px;
+            font-size: 1.3em;
+            border-radius: 60px;
             cursor: pointer;
             transition: 0.3s;
             width: 100%;
             font-weight: bold;
+            letter-spacing: 1px;
+            box-shadow: 0 10px 20px rgba(102,126,234,0.3);
         }
         
         .copy-btn:hover {
-            transform: scale(1.05);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transform: scale(1.02);
+            box-shadow: 0 15px 30px rgba(102,126,234,0.5);
         }
         
+        /* Message */
         .message {
             text-align: center;
             margin-top: 20px;
-            padding: 10px;
-            border-radius: 5px;
+            padding: 15px;
+            border-radius: 10px;
             display: none;
+            font-weight: bold;
         }
         
         .message.show {
@@ -182,55 +251,95 @@
         .success {
             background: #d4edda;
             color: #155724;
-            border: 1px solid #c3e6cb;
+            border: 2px solid #c3e6cb;
         }
         
         .error {
             background: #f8d7da;
             color: #721c24;
-            border: 1px solid #f5c6cb;
+            border: 2px solid #f5c6cb;
         }
         
+        /* Footer */
+        .footer {
+            text-align: center;
+            color: white;
+            margin-top: 40px;
+            padding: 20px;
+        }
+        
+        .footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            opacity: 0.9;
+        }
+        
+        .footer a:hover {
+            opacity: 1;
+            text-decoration: underline;
+        }
+        
+        /* Responsive */
         @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2em;
+            }
             .preview-text {
-                font-size: 2.5em;
+                font-size: 2.3em;
+            }
+            .font-selector {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .font-selector {
+                grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>🎨 Font Changer - Letter Converter</h1>
+        <!-- Header with domain name -->
+        <div class="header">
+            <h1>🎨 stylename.in</h1>
+            <p>30+ Amazing Font Styles - Box, Triangle, Circle & More</p>
+            <div class="domain-badge">
+                🔗 text-changer.html
+            </div>
+        </div>
         
+        <!-- Main Tool Box -->
         <div class="main-box">
             <!-- Input Section -->
             <div class="input-section">
-                <label for="name">🔤 अपना नाम लिखें (सिर्फ 2 शब्द):</label>
+                <label for="name">✍️ अपना नाम लिखें (सिर्फ 2 शब्द):</label>
                 <input type="text" 
                        id="name" 
                        class="name-input" 
-                       placeholder="जैसे: Raj Kumar या Your Name"
-                       maxlength="50">
+                       placeholder="जैसे: Raj Kumar"
+                       maxlength="50"
+                       autofocus>
                 <div class="info-text">
-                    ⚡ Maximum 2 words hi likhein (पहला नाम + अंतिम नाम)
+                    ⚡ Maximum 2 words (पहला नाम + अंतिम नाम)
                 </div>
             </div>
             
-            <!-- Font Selector -->
-            <div class="font-selector" id="fontSelector">
-                <!-- JavaScript se dynamically fill hoga -->
-            </div>
+            <!-- Font Selector Grid -->
+            <div class="font-selector" id="fontSelector"></div>
             
-            <!-- Preview Box -->
+            <!-- Live Preview -->
             <div class="preview-box">
                 <div class="preview-text" id="preview">
-                    आपका नाम यहाँ दिखेगा
+                    👆 ऊपर नाम लिखें
                 </div>
             </div>
             
-            <!-- Example Box (सिखाने के लिए) -->
-            <div class="example-box" id="exampleBox">
-                <div class="example-title">📝 ऐसे बनेगा आपका नाम:</div>
+            <!-- Example Section -->
+            <div class="example-box">
+                <div class="example-title">📝 उदाहरण - ऐसे बनेगा आपका नाम:</div>
                 <div class="example-row">
                     <span class="example-original">"Raj" →</span>
                     <span class="example-converted" id="example1">R⃞a⃞j⃞</span>
@@ -243,104 +352,107 @@
             
             <!-- Copy Button -->
             <button class="copy-btn" id="copyBtn">
-                📋 कॉपी करें
+                📋 कॉपी करें (Copy)
             </button>
             
             <!-- Message -->
             <div id="message" class="message"></div>
         </div>
+        
+        <!-- Footer -->
+        <div class="footer">
+            <p>© 2024 stylename.in | All fonts are Unicode - Works everywhere</p>
+            <p>
+                <a href="/">Home</a> | 
+                <a href="/text-changer.html">Text Changer</a> | 
+                <a href="/about.html">About</a> | 
+                <a href="/contact.html">Contact</a>
+            </p>
+        </div>
     </div>
 
     <script>
-        // 📚 पहले सारे FONTS की लिस्ट बनाते हैं
+        // 📚 All 30+ Font Styles
         const fonts = [
-            {
-                name: "🔲 Box Font",
-                desc: "चारों तरफ Box",
-                mark: "⃞",
-                preview: "A⃞ B⃞ C⃞"
-            },
-            {
-                name: "🔺 Triangle Font",
-                desc: "ऊपर Triangle",
-                mark: "⃤",
-                preview: "A⃤ B⃤ C⃤"
-            },
-            {
-                name: "⭕ Circle Font",
-                desc: "Circle में लपेटा",
-                mark: "⃝",
-                preview: "A⃝ B⃝ C⃝"
-            },
-            {
-                name: "💎 Diamond Font",
-                desc: "Diamond shape",
-                mark: "⃟",
-                preview: "A⃟ B⃟ C⃟"
-            },
-            {
-                name: "🚫 Cross Font",
-                desc: "Cross mark",
-                mark: "⃠",
-                preview: "A⃠ B⃠ C⃠"
-            },
-            {
-                name: "📱 Keycap Font",
-                desc: "Mobile jaisa",
-                mark: "⃣",
-                preview: "A⃣ B⃣ C⃣"
-            },
-            {
-                name: "⬆️ Arrow Font",
-                desc: "Arrow ऊपर",
-                mark: "⃗",
-                preview: "A⃗ B⃗ C⃗"
-            },
-            {
-                name: "⬇️ Arrow Down",
-                desc: "Arrow नीचे",
-                mark: "⃯",
-                preview: "A⃯ B⃯ C⃯"
-            },
-            {
-                name: "🌟 Dot Font",
-                desc: "तीन dots",
-                mark: "⃛",
-                preview: "A⃛ B⃛ C⃛"
-            },
-            {
-                name: "⚡ Strike Font",
-                desc: "बीच से कटा",
-                mark: "⃫",
-                preview: "A⃫ B⃫ C⃫"
-            }
+            // Box Style
+            { name: "🔲 Box Font", desc: "Four sides box", mark: "⃞", preview: "A⃞", cat: "enclosing" },
+            // Triangle Style  
+            { name: "🔺 Triangle", desc: "Triangle on top", mark: "⃤", preview: "A⃤", cat: "enclosing" },
+            // Circle Style
+            { name: "⭕ Circle", desc: "Full circle", mark: "⃝", preview: "A⃝", cat: "enclosing" },
+            // Diamond Style
+            { name: "💎 Diamond", desc: "Diamond shape", mark: "⃟", preview: "A⃟", cat: "enclosing" },
+            // Cross Style
+            { name: "🚫 Cross", desc: "Circle with cross", mark: "⃠", preview: "A⃠", cat: "enclosing" },
+            // Keycap Style
+            { name: "📱 Keycap", desc: "Mobile button", mark: "⃣", preview: "A⃣", cat: "enclosing" },
+            // Screen Style
+            { name: "🖥️ Screen", desc: "Monitor style", mark: "⃢", preview: "A⃢", cat: "enclosing" },
+            
+            // Arrow Styles
+            { name: "⬆️ Arrow Up", desc: "Right arrow", mark: "⃗", preview: "A⃗", cat: "arrow" },
+            { name: "⬇️ Arrow Down", desc: "Down arrow", mark: "⃯", preview: "A⃯", cat: "arrow" },
+            { name: "⬅️ Arrow Left", desc: "Left arrow", mark: "⃖", preview: "A⃖", cat: "arrow" },
+            { name: "↔️ Arrow Both", desc: "Left-right arrow", mark: "⃡", preview: "A⃡", cat: "arrow" },
+            
+            // Dot Styles
+            { name: "🔴 Three Dots", desc: "Three dots above", mark: "⃛", preview: "A⃛", cat: "dots" },
+            { name: "⚫ Four Dots", desc: "Four dots above", mark: "⃜", preview: "A⃜", cat: "dots" },
+            { name: "⚪ Dot Below", desc: "Triple underdot", mark: "⃨", preview: "A⃨", cat: "dots" },
+            
+            // Line Styles
+            { name: "⚡ Double Solidus", desc: "Double slash", mark: "⃫", preview: "A⃫", cat: "line" },
+            { name: "〰️ Reverse Solidus", desc: "Back slash", mark: "⃥", preview: "A⃥", cat: "line" },
+            { name: "📏 Double Line", desc: "Double vertical", mark: "⃦", preview: "A⃦", cat: "line" },
+            
+            // Harpoon Styles
+            { name: "🏹 Left Harpoon", desc: "Left above", mark: "⃐", preview: "A⃐", cat: "harpoon" },
+            { name: "🎯 Right Harpoon", desc: "Right above", mark: "⃑", preview: "A⃑", cat: "harpoon" },
+            
+            // Ring Styles  
+            { name: "💍 Ring Overlay", desc: "Ring on top", mark: "⃘", preview: "A⃘", cat: "ring" },
+            { name: "⏰ Clockwise", desc: "Clockwise ring", mark: "⃙", preview: "A⃙", cat: "ring" },
+            { name: "⏱️ Anticlockwise", desc: "Reverse ring", mark: "⃚", preview: "A⃚", cat: "ring" },
+            
+            // Tack Styles
+            { name: "📍 Left Tack", desc: "Left tack below", mark: "⃘", preview: "A⃘", cat: "tack" },
+            { name: "📌 Right Tack", desc: "Right tack below", mark: "⃙", preview: "A⃙", cat: "tack" },
+            
+            // Vertical Line Styles
+            { name: "📏 Long Vertical", desc: "Line through", mark: "⃒", preview: "A⃒", cat: "vertical" },
+            { name: "📐 Short Vertical", desc: "Short line", mark: "⃓", preview: "A⃓", cat: "vertical" },
+            
+            // Special Styles
+            { name: "💫 Annuity", desc: "Special symbol", mark: "⃧", preview: "A⃧", cat: "special" },
+            { name: "🌉 Wide Bridge", desc: "Bridge above", mark: "⃩", preview: "A⃩", cat: "special" },
+            { name: "⭐ Asterisk", desc: "Star above", mark: "⃰", preview: "A⃰", cat: "special" },
+            
+            // Extra marks from Unicode
+            { name: "🔄 Left Arrow Overlay", desc: "Arrow overlay", mark: "⃪", preview: "A⃪", cat: "special" },
+            { name: "🎵 Music Note", desc: "Note like", mark: "⃬", preview: "A⃬", cat: "special" }
         ];
 
-        // 🎯 Current selected font
         let currentFont = fonts[0];
         let currentName = "";
 
-        // 📝 Font Selector banate hain
+        // Font selector banate hain
         const fontSelector = document.getElementById('fontSelector');
         
         fonts.forEach((font, index) => {
             const card = document.createElement('div');
             card.className = `font-card ${index === 0 ? 'selected' : ''}`;
             card.innerHTML = `
-                <div style="font-size: 24px; margin-bottom: 10px;">${font.preview}</div>
-                <div style="font-weight: bold;">${font.name}</div>
-                <div style="font-size: 12px; color: #666;">${font.desc}</div>
+                <div class="font-preview">${font.preview}</div>
+                <div class="font-name">${font.name}</div>
+                <div class="font-desc">${font.desc}</div>
             `;
             
             card.onclick = () => {
-                // Sab cards se selected class hatao
                 document.querySelectorAll('.font-card').forEach(c => 
                     c.classList.remove('selected')
                 );
                 card.classList.add('selected');
                 currentFont = font;
-                
-                // Naye font ke saath preview update karo
                 if (currentName) {
                     updatePreview();
                     updateExamples();
@@ -350,34 +462,23 @@
             fontSelector.appendChild(card);
         });
 
-        // 🎨 Name Convert karne ka FUNCTION
+        // Convert function
         function convertName(name, mark) {
             if (!name) return "";
             
-            // Name ko words mein tod do
             let words = name.trim().split(/\s+/);
-            
-            // Sirf 2 words lo
             if (words.length > 2) {
                 words = words.slice(0, 2);
                 showMessage("⚠️ Sirf 2 words liye gaye!", "error");
             }
             
-            // Har word ke har letter par mark lagao
-            let convertedWords = words.map(word => {
+            return words.map(word => {
                 return word.split('').map(letter => {
-                    // Special characters ko hatane ke liye
-                    if (letter.match(/[a-zA-Z]/)) {
-                        return letter + mark;
-                    }
-                    return letter;
+                    return letter + mark;
                 }).join('');
-            });
-            
-            return convertedWords.join(' ');
+            }).join(' ');
         }
 
-        // 🔄 Preview update karo
         function updatePreview() {
             const input = document.getElementById('name');
             const preview = document.getElementById('preview');
@@ -385,34 +486,27 @@
             currentName = input.value;
             
             if (!currentName) {
-                preview.innerHTML = 'आपका नाम यहाँ दिखेगा';
+                preview.innerHTML = '👆 ऊपर नाम लिखें';
                 return;
             }
             
-            const converted = convertName(currentName, currentFont.mark);
-            preview.innerHTML = converted || 'कुछ गड़बड़ है';
+            preview.innerHTML = convertName(currentName, currentFont.mark) || 'Error';
         }
 
-        // 📋 Examples update karo
         function updateExamples() {
-            const example1 = document.getElementById('example1');
-            const example2 = document.getElementById('example2');
-            
-            example1.innerHTML = convertName("Raj", currentFont.mark);
-            example2.innerHTML = convertName("Kumar", currentFont.mark);
+            document.getElementById('example1').innerHTML = convertName("Raj", currentFont.mark);
+            document.getElementById('example2').innerHTML = convertName("Kumar", currentFont.mark);
         }
 
-        // 👂 Input suno
-        document.getElementById('name').addEventListener('input', function(e) {
-            updatePreview();
-        });
+        // Input listener
+        document.getElementById('name').addEventListener('input', updatePreview);
 
-        // 📋 Copy button
+        // Copy button
         document.getElementById('copyBtn').addEventListener('click', function() {
             const preview = document.getElementById('preview');
             const text = preview.innerText;
             
-            if (text && text !== 'आपका नाम यहाँ दिखेगा') {
+            if (text && text !== '👆 ऊपर नाम लिखें') {
                 navigator.clipboard.writeText(text).then(() => {
                     showMessage('✅ कॉपी हो गया! अब paste karein', 'success');
                 }).catch(() => {
@@ -423,56 +517,19 @@
             }
         });
 
-        // 💬 Message dikhao
         function showMessage(msg, type) {
             const messageDiv = document.getElementById('message');
             messageDiv.textContent = msg;
             messageDiv.className = `message show ${type}`;
-            
-            setTimeout(() => {
-                messageDiv.classList.remove('show');
-            }, 3000);
+            setTimeout(() => messageDiv.classList.remove('show'), 3000);
         }
 
-        // 🎯 Examples update karo start mein
+        // Initial updates
         updateExamples();
-        
-        // 🎨 Extra - Har letter ke liye function
-        function convertWithStyle(text, mark, style) {
-            // Style ke according convert karo
-            // Jaise bold, italic, etc.
-            const styles = {
-                bold: '𝗔',
-                italic: '𝘈',
-                boldItalic: '𝘼',
-                script: '𝒜',
-                // Aur bhi styles add kar sakte ho
-            };
-            
-            return text.split('').map(char => {
-                if (char.match(/[a-zA-Z]/)) {
-                    // Yahan pe style convert kar sakte ho
-                    return char + mark;
-                }
-                return char;
-            }).join('');
-        }
 
-        // 👀 Extra Feature - Preview mein word count dikhao
-        function checkWordCount(text) {
-            const words = text.trim().split(/\s+/);
-            if (words.length > 2) {
-                showMessage("⚠️ Sirf 2 words allowed hain!", "error");
-                return false;
-            }
-            return true;
-        }
-
-        // 🚀 Keyboard shortcut (Enter dabane par copy)
+        // Enter key copy
         document.getElementById('name').addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') {
-                document.getElementById('copyBtn').click();
-            }
+            if (e.key === 'Enter') document.getElementById('copyBtn').click();
         });
     </script>
 </body>
