@@ -42,6 +42,9 @@ Allow: /love-nicknames-2026-collection.html
 # Allow Stylish Text Generator article
 Allow: /stylish-text-generator.html
 
+# Allow Text Changer article
+Allow: /text-changer.html
+
 # Sitemap location
 Sitemap: https://stylename.in/sitemap.xml
 
