@@ -1180,7 +1180,7 @@ function generateStyles() {
 if (!name) {
     const examples = categoryExamples[currentFilter] || categoryExamples.love;
     const shuffled = [...examples].sort(() => Math.random() - 0.5);
-    const selected = shuffled.slice(0, 55);
+    const selected = shuffled.slice(0, 69);
     
     selected.forEach((example, index) => {
         const div = document.createElement('div');
