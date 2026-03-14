@@ -1,298 +1,855 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🎨 Font Changer - Text Converter | stylename.in</title>
-    <meta name="description" content="30+ amazing font styles for your name. Convert text to box font, triangle font, circle font and more. Free online text changer tool.">
-    <meta name="keywords" content="font changer, text converter, box font, triangle font, name style, Instagram font">
+    <title>🎨 Font Changer - 30+ Stylish Text Converter | stylename.in</title>
+    <meta name="description" content="Transform your name into 30+ amazing font styles including box font, triangle font, circle font, arrow styles and more. Free online text changer tool with instant preview and copy.">
+    <meta name="keywords" content="font changer, text converter, stylish text, fancy fonts, name style generator, Instagram fonts, Unicode text converter">
     <meta name="author" content="stylename.in">
     
     <!-- Open Graph / Social Media -->
-    <meta property="og:title" content="🎨 Font Changer - 30+ Amazing Styles">
-    <meta property="og:description" content="Convert your name into cool fonts with box, triangle, circle and more!">
+    <meta property="og:title" content="✨ Font Changer - 30+ Amazing Styles">
+    <meta property="og:description" content="Convert your name into cool fonts with box, triangle, circle and more! Instant preview and one-click copy.">
     <meta property="og:url" content="https://stylename.in/text-changer.html">
     <meta property="og:type" content="website">
+    <meta property="og:image" content="https://stylename.in/favicon.png">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://stylename.in/text-changer.html">
     
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
     <style>
-        /* 📌 Previous styles from above code + extra styles */
+        /* ===== RESET & BASE STYLES ===== */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', 'Arial', sans-serif;
         }
-        
+
+        :root {
+            --primary: #4f46e5;
+            --primary-dark: #4338ca;
+            --secondary: #10b981;
+            --dark: #1f2937;
+            --light: #f9fafb;
+            --gray: #6b7280;
+            --gray-light: #e5e7eb;
+            --gray-dark: #374151;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+            --radius: 12px;
+            --transition: all 0.3s ease;
+        }
+
         body {
+            font-family: 'Inter', sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
-            padding: 20px;
+            color: var(--dark);
+            line-height: 1.6;
         }
-        
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
+            padding: 0 20px;
         }
-        
-        /* Header */
-        .header {
+
+        /* ===== NAVBAR ===== */
+        .navbar {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: var(--shadow);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .menu-toggle {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--dark);
+            cursor: pointer;
+            padding: 0.5rem;
+            border-radius: var(--radius);
+            transition: var(--transition);
+        }
+
+        .menu-toggle:hover {
+            background: var(--gray-light);
+        }
+
+        .logo h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin: 0;
+        }
+
+        .logo-dot {
+            color: var(--primary);
+            -webkit-text-fill-color: var(--primary);
+        }
+
+        .tagline {
+            font-size: 0.8rem;
+            color: var(--gray);
+            margin: 0;
             text-align: center;
+        }
+
+        .theme-toggle {
+            background: none;
+            border: none;
+            font-size: 1.25rem;
+            color: var(--dark);
+            cursor: pointer;
+            padding: 0.5rem;
+            border-radius: var(--radius);
+            transition: var(--transition);
+        }
+
+        .theme-toggle:hover {
+            background: var(--gray-light);
+        }
+
+        /* ===== SIDEBAR ===== */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: -300px;
+            width: 300px;
+            height: 100vh;
+            background: white;
+            box-shadow: var(--shadow-lg);
+            z-index: 1100;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sidebar.open {
+            left: 0;
+        }
+
+        .sidebar-header {
+            padding: 1.5rem;
+            border-bottom: 1px solid var(--gray-light);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .close-sidebar {
+            background: none;
+            border: none;
+            font-size: 1.25rem;
+            color: var(--gray);
+            cursor: pointer;
+        }
+
+        .sidebar-content {
+            flex: 1;
+            padding: 1rem 0;
+            overflow-y: auto;
+        }
+
+        .sidebar-item {
+            display: flex;
+            align-items: center;
+            padding: 1rem 1.5rem;
+            cursor: pointer;
+            transition: var(--transition);
+            border-left: 4px solid transparent;
+        }
+
+        .sidebar-item:hover {
+            background: var(--gray-light);
+            border-left: 4px solid var(--primary);
+        }
+
+        .sidebar-item i {
+            margin-right: 1rem;
+            width: 20px;
+            text-align: center;
+        }
+
+        .sidebar-item span {
+            flex: 1;
+        }
+
+        .theme-status {
+            font-size: 0.8rem;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            background: var(--gray-light);
+            color: var(--dark);
+        }
+
+        .badge {
+            background: var(--secondary);
             color: white;
-            margin-bottom: 30px;
+            font-size: 0.7rem;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            margin-left: 8px;
         }
-        
-        .header h1 {
-            font-size: 2.8em;
-            margin-bottom: 10px;
-            text-shadow: 3px 3px 6px rgba(0,0,0,0.3);
+
+        .sidebar-divider {
+            height: 1px;
+            background: var(--gray-light);
+            margin: 1rem 0;
         }
-        
-        .header p {
-            font-size: 1.2em;
-            opacity: 0.9;
+
+        /* ===== HERO SECTION ===== */
+        .hero-section {
+            text-align: center;
+            padding: 40px 20px;
+            color: white;
         }
-        
-        /* Domain badge */
+
+        .hero-section h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .hero-section p {
+            font-size: 1.2rem;
+            opacity: 0.95;
+            max-width: 800px;
+            margin: 0 auto 20px;
+        }
+
         .domain-badge {
             background: rgba(255,255,255,0.2);
             display: inline-block;
-            padding: 8px 20px;
+            padding: 8px 25px;
             border-radius: 50px;
-            margin-top: 15px;
-            font-weight: bold;
+            font-weight: 600;
             border: 2px solid white;
+            backdrop-filter: blur(5px);
         }
-        
-        /* Main Box */
-        .main-box {
+
+        /* ===== MAIN TOOL CARD ===== */
+        .tool-card {
             background: white;
             border-radius: 20px;
             padding: 30px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            margin-bottom: 40px;
         }
-        
+
         /* Input Section */
         .input-section {
             margin-bottom: 30px;
         }
-        
-        label {
-            display: block;
+
+        .input-label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
             margin-bottom: 10px;
-            font-weight: bold;
-            color: #333;
-            font-size: 1.2em;
+            font-weight: 600;
+            color: var(--dark);
+            font-size: 1.1rem;
         }
-        
-        .name-input {
-            width: 100%;
-            padding: 15px;
-            font-size: 1.2em;
-            border: 2px solid #ddd;
-            border-radius: 10px;
-            transition: 0.3s;
+
+        .input-label i {
+            color: var(--primary);
         }
-        
-        .name-input:focus {
-            border-color: #667eea;
-            outline: none;
-            box-shadow: 0 0 0 3px rgba(102,126,234,0.1);
-        }
-        
-        .info-text {
-            margin-top: 10px;
-            color: #666;
-            font-style: italic;
-        }
-        
-        /* Font Selector Grid */
-        .font-selector {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+
+        .input-wrapper {
+            display: flex;
             gap: 15px;
-            margin: 30px 0;
+            align-items: center;
         }
-        
-        .font-card {
-            background: #f8f9fa;
-            border: 2px solid #dee2e6;
-            border-radius: 12px;
-            padding: 15px 10px;
-            text-align: center;
+
+        .name-input {
+            flex: 1;
+            padding: 16px 20px;
+            font-size: 1.2rem;
+            border: 2px solid var(--gray-light);
+            border-radius: var(--radius);
+            transition: var(--transition);
+            font-family: 'Inter', sans-serif;
+        }
+
+        .name-input:focus {
+            border-color: var(--primary);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(79,70,229,0.1);
+        }
+
+        .clear-btn {
+            background: var(--gray-light);
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: var(--radius);
             cursor: pointer;
-            transition: all 0.3s;
-        }
-        
-        .font-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
-            border-color: #667eea;
-        }
-        
-        .font-card.selected {
-            border-color: #667eea;
-            background: linear-gradient(145deg, #e3f2fd, #ffffff);
-            box-shadow: 0 5px 15px rgba(102,126,234,0.3);
-        }
-        
-        .font-preview {
-            font-size: 28px;
-            margin-bottom: 8px;
-            min-height: 50px;
-        }
-        
-        .font-name {
-            font-weight: bold;
-            color: #333;
-        }
-        
-        .font-desc {
-            font-size: 11px;
-            color: #666;
-            margin-top: 5px;
-        }
-        
-        /* Preview Box */
-        .preview-box {
-            background: linear-gradient(135deg, #f5f7fa 0%, #ffffff 100%);
-            border-radius: 15px;
-            padding: 30px;
-            margin: 25px 0;
-            text-align: center;
-            border: 3px dashed #667eea;
-            box-shadow: inset 0 2px 10px rgba(0,0,0,0.05);
-        }
-        
-        .preview-text {
-            font-size: 3.5em;
-            word-break: break-all;
-            line-height: 1.4;
-            min-height: 150px;
+            transition: var(--transition);
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #333;
+            color: var(--dark);
         }
-        
-        /* Example Box */
-        .example-box {
-            background: #f8f9fa;
-            border-radius: 15px;
-            padding: 25px;
-            margin: 25px 0;
+
+        .clear-btn:hover {
+            background: var(--gray);
+            color: white;
         }
-        
-        .example-title {
-            font-weight: bold;
-            margin-bottom: 20px;
-            color: #333;
-            font-size: 1.2em;
-        }
-        
-        .example-row {
+
+        .input-hint {
+            margin-top: 8px;
+            color: var(--gray);
+            font-size: 0.9rem;
             display: flex;
             align-items: center;
+            gap: 5px;
+        }
+
+        /* Live Preview */
+        .preview-section {
+            background: linear-gradient(135deg, #f5f7fa 0%, #ffffff 100%);
+            border-radius: var(--radius);
+            padding: 30px;
+            margin: 25px 0;
+            border: 3px dashed var(--primary);
+        }
+
+        .preview-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
             margin-bottom: 15px;
-            padding: 12px 15px;
+        }
+
+        .preview-header h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        .preview-box {
             background: white;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            border-radius: var(--radius);
+            padding: 30px;
+            min-height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            word-break: break-word;
+            text-align: center;
+            border: 1px solid var(--gray-light);
+            box-shadow: inset 0 2px 10px rgba(0,0,0,0.05);
         }
-        
-        .example-original {
-            width: 100px;
-            font-weight: bold;
-            color: #667eea;
+
+        /* Font Selector Grid */
+        .font-selector-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 30px 0 20px;
         }
-        
-        .example-converted {
-            flex: 1;
-            font-size: 1.3em;
+
+        .font-selector-title h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--dark);
         }
-        
+
+        .font-count {
+            background: var(--primary);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        .font-selector {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .font-card {
+            background: var(--light);
+            border: 2px solid var(--gray-light);
+            border-radius: var(--radius);
+            padding: 20px 10px;
+            text-align: center;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .font-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary);
+        }
+
+        .font-card.selected {
+            border-color: var(--primary);
+            background: linear-gradient(145deg, #eef2ff, #ffffff);
+            box-shadow: 0 5px 15px rgba(79,70,229,0.2);
+        }
+
+        .font-preview {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            min-height: 50px;
+            color: var(--dark);
+        }
+
+        .font-name {
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 5px;
+        }
+
+        .font-category {
+            font-size: 0.75rem;
+            color: var(--gray);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
         /* Copy Button */
+        .copy-section {
+            margin: 30px 0;
+        }
+
         .copy-btn {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            width: 100%;
+            padding: 18px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
             color: white;
             border: none;
-            padding: 18px 40px;
-            font-size: 1.3em;
-            border-radius: 60px;
+            border-radius: 50px;
+            font-size: 1.3rem;
+            font-weight: 600;
             cursor: pointer;
-            transition: 0.3s;
-            width: 100%;
-            font-weight: bold;
-            letter-spacing: 1px;
-            box-shadow: 0 10px 20px rgba(102,126,234,0.3);
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            box-shadow: 0 10px 20px rgba(79,70,229,0.3);
         }
-        
+
         .copy-btn:hover {
-            transform: scale(1.02);
-            box-shadow: 0 15px 30px rgba(102,126,234,0.5);
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(79,70,229,0.4);
         }
-        
+
+        .copy-btn i {
+            font-size: 1.5rem;
+        }
+
         /* Message */
         .message {
             text-align: center;
-            margin-top: 20px;
-            padding: 15px;
-            border-radius: 10px;
+            margin-top: 15px;
+            padding: 12px;
+            border-radius: var(--radius);
             display: none;
-            font-weight: bold;
+            font-weight: 500;
         }
-        
+
         .message.show {
             display: block;
         }
-        
-        .success {
+
+        .message.success {
             background: #d4edda;
             color: #155724;
             border: 2px solid #c3e6cb;
         }
-        
-        .error {
+
+        .message.error {
             background: #f8d7da;
             color: #721c24;
             border: 2px solid #f5c6cb;
         }
-        
-        /* Footer */
-        .footer {
-            text-align: center;
-            color: white;
-            margin-top: 40px;
+
+        /* ===== DETAILED EXAMPLES SECTION ===== */
+        .examples-section {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            margin: 40px 0;
+        }
+
+        .examples-section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+
+        .examples-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .example-card {
+            background: var(--light);
+            border-radius: var(--radius);
             padding: 20px;
+            border-left: 4px solid var(--primary);
         }
-        
-        .footer a {
+
+        .example-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: var(--dark);
+        }
+
+        .example-demo {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            font-size: 1.3rem;
+            text-align: center;
+            border: 1px solid var(--gray-light);
+        }
+
+        .example-desc {
+            color: var(--gray);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .example-tag {
+            display: inline-block;
+            background: var(--primary);
             color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-top: 10px;
+        }
+
+        /* ===== CATEGORY GUIDES ===== */
+        .category-guide {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            margin: 40px 0;
+        }
+
+        .category-guide h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+
+        .guide-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .guide-item {
+            background: var(--light);
+            padding: 20px;
+            border-radius: var(--radius);
+        }
+
+        .guide-item h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+
+        .guide-item p {
+            color: var(--gray);
+            margin-bottom: 10px;
+        }
+
+        .guide-example {
+            font-size: 1.2rem;
+            background: white;
+            padding: 8px;
+            border-radius: 4px;
+            text-align: center;
+        }
+
+        /* ===== RELATED ARTICLES ===== */
+        .related-articles {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            margin: 40px 0;
+        }
+
+        .related-articles h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .article-card {
+            background: var(--light);
+            border-radius: var(--radius);
+            padding: 20px;
             text-decoration: none;
-            margin: 0 10px;
-            opacity: 0.9;
+            color: inherit;
+            transition: var(--transition);
+            border: 1px solid var(--gray-light);
         }
-        
-        .footer a:hover {
-            opacity: 1;
-            text-decoration: underline;
+
+        .article-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+            box-shadow: var(--shadow-lg);
         }
-        
+
+        .article-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: var(--dark);
+        }
+
+        .article-card p {
+            color: var(--gray);
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+
+        .article-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .article-category {
+            background: var(--primary);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+        }
+
+        .article-icon {
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
+
+        /* ===== AD PLACEHOLDER ===== */
+        .ad-container {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        .ad-label {
+            color: var(--gray);
+            font-size: 0.8rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .ad-space {
+            background: linear-gradient(135deg, #f5f5f5, #e0e0e0);
+            height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: var(--radius);
+            color: var(--gray);
+            font-size: 1rem;
+        }
+
+        /* ===== FAQ SECTION ===== */
+        .faq-section {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            margin: 40px 0;
+        }
+
+        .faq-section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--gray-light);
+            padding-bottom: 20px;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            color: var(--dark);
+        }
+
+        .faq-answer {
+            color: var(--gray);
+            line-height: 1.6;
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: var(--dark);
+            color: white;
+            padding: 60px 0 30px;
+            margin-top: 50px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3 {
+            color: white;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .footer-section p {
+            color: #9ca3af;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section li {
+            margin-bottom: 12px;
+        }
+
+        .footer-section a {
+            color: #9ca3af;
+            text-decoration: none;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .footer-section a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #374151;
+            color: #9ca3af;
+        }
+
+        /* Scroll to Top */
+        .scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            box-shadow: var(--shadow-lg);
+            z-index: 100;
+        }
+
+        .scroll-top.show {
+            display: flex;
+        }
+
+        .scroll-top:hover {
+            background: var(--primary-dark);
+            transform: translateY(-3px);
+        }
+
+        /* Toast */
+        .toast {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--dark);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            box-shadow: var(--shadow-lg);
+            z-index: 1000;
+            display: none;
+        }
+
         /* Responsive */
         @media (max-width: 768px) {
-            .header h1 {
-                font-size: 2em;
+            .hero-section h1 {
+                font-size: 2rem;
             }
-            .preview-text {
-                font-size: 2.3em;
+            
+            .input-wrapper {
+                flex-direction: column;
             }
+            
+            .clear-btn {
+                width: 100%;
+            }
+            
+            .preview-box {
+                font-size: 1.8rem;
+            }
+            
             .font-selector {
                 grid-template-columns: repeat(2, 1fr);
             }
         }
-        
+
         @media (max-width: 480px) {
             .font-selector {
                 grid-template-columns: 1fr;
@@ -301,150 +858,407 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <!-- Header with domain name -->
-        <div class="header">
-            <h1>🎨 stylename.in</h1>
-            <p>30+ Amazing Font Styles - Box, Triangle, Circle & More</p>
-            <div class="domain-badge">
-                🔗 text-changer.html
-            </div>
-        </div>
-        
-        <!-- Main Tool Box -->
-        <div class="main-box">
-            <!-- Input Section -->
-            <div class="input-section">
-                <label for="name">✍️ अपना नाम लिखें (सिर्फ 2 शब्द):</label>
-                <input type="text" 
-                       id="name" 
-                       class="name-input" 
-                       placeholder="जैसे: Raj Kumar"
-                       maxlength="50"
-                       autofocus>
-                <div class="info-text">
-                    ⚡ Maximum 2 words (पहला नाम + अंतिम नाम)
-                </div>
-            </div>
-            
-            <!-- Font Selector Grid -->
-            <div class="font-selector" id="fontSelector"></div>
-            
-            <!-- Live Preview -->
-            <div class="preview-box">
-                <div class="preview-text" id="preview">
-                    👆 ऊपर नाम लिखें
-                </div>
-            </div>
-            
-            <!-- Example Section -->
-            <div class="example-box">
-                <div class="example-title">📝 उदाहरण - ऐसे बनेगा आपका नाम:</div>
-                <div class="example-row">
-                    <span class="example-original">"Raj" →</span>
-                    <span class="example-converted" id="example1">R⃞a⃞j⃞</span>
-                </div>
-                <div class="example-row">
-                    <span class="example-original">"Kumar" →</span>
-                    <span class="example-converted" id="example2">K⃞u⃞m⃞a⃞r⃞</span>
-                </div>
-            </div>
-            
-            <!-- Copy Button -->
-            <button class="copy-btn" id="copyBtn">
-                📋 कॉपी करें (Copy)
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
             </button>
-            
-            <!-- Message -->
-            <div id="message" class="message"></div>
+            <div class="logo">
+                <h1>stylename<span class="logo-dot">.</span>in</h1>
+                <p class="tagline">Style Your Identity</p>
+            </div>
+            <div class="theme-toggle" id="themeToggle">
+                <i class="fas fa-moon"></i>
+            </div>
         </div>
-        
-        <!-- Footer -->
-        <div class="footer">
-            <p>© 2024 stylename.in | All fonts are Unicode - Works everywhere</p>
-            <p>
-                <a href="/">Home</a> | 
-                <a href="/text-changer.html">Text Changer</a> | 
-                <a href="/about.html">About</a> | 
-                <a href="/contact.html">Contact</a>
-            </p>
+    </nav>
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h3>Menu</h3>
+            <button class="close-sidebar" id="closeSidebar">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="sidebar-content">
+            <div class="sidebar-item" onclick="toggleTheme()">
+                <i class="fas fa-palette"></i>
+                <span>Theme</span>
+                <span class="theme-status" id="themeStatus">Light</span>
+            </div>
+            <div class="sidebar-item" onclick="openSymbolModal()">
+                <i class="fas fa-symbols"></i>
+                <span>Symbols Library</span>
+            </div>
+            <div class="sidebar-divider"></div>
+            <div class="sidebar-item" onclick="window.location.href='index.html'">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </div>
+            <div class="sidebar-item" onclick="window.location.href='about.html'">
+                <i class="fas fa-info-circle"></i>
+                <span>About Us</span>
+            </div>
+            <div class="sidebar-item" onclick="window.location.href='contact.html'">
+                <i class="fas fa-envelope"></i>
+                <span>Contact</span>
+            </div>
+            <div class="sidebar-item" onclick="window.location.href='privacy-policy.html'">
+                <i class="fas fa-shield-alt"></i>
+                <span>Privacy Policy</span>
+            </div>
+            <div class="sidebar-item" onclick="window.location.href='terms.html'">
+                <i class="fas fa-file-contract"></i>
+                <span>Terms & Conditions</span>
+            </div>
         </div>
     </div>
 
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Hero Section -->
+        <div class="hero-section">
+            <h1>✨ Font Changer & Text Converter</h1>
+            <p>Transform your name into 30+ amazing font styles with one click. Perfect for Instagram, gaming profiles, and social media.</p>
+            <div class="domain-badge">
+                <i class="fas fa-link"></i> stylename.in/text-changer
+            </div>
+        </div>
+
+        <!-- Main Tool Card -->
+        <div class="tool-card">
+            <!-- Input Section -->
+            <div class="input-section">
+                <div class="input-label">
+                    <i class="fas fa-pen"></i>
+                    <span>Enter Your Name</span>
+                </div>
+                <div class="input-wrapper">
+                    <input type="text" 
+                           id="name" 
+                           class="name-input" 
+                           placeholder="e.g., John"
+                           maxlength="30"
+                           autofocus>
+                    <button class="clear-btn" id="clearBtn" title="Clear input">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="input-hint">
+                    <i class="fas fa-info-circle"></i>
+                    <span>Type your name above and see it transform instantly in 30+ styles</span>
+                </div>
+            </div>
+
+            <!-- Live Preview Section -->
+            <div class="preview-section">
+                <div class="preview-header">
+                    <i class="fas fa-eye" style="color: var(--primary);"></i>
+                    <h3>Live Preview</h3>
+                </div>
+                <div class="preview-box" id="preview">
+                    👆 Enter your name above
+                </div>
+            </div>
+
+            <!-- Font Selector Title -->
+            <div class="font-selector-title">
+                <i class="fas fa-font" style="color: var(--primary); font-size: 1.5rem;"></i>
+                <h2>Choose Your Font Style</h2>
+                <span class="font-count" id="fontCount">30+ styles</span>
+            </div>
+
+            <!-- Font Selector Grid -->
+            <div class="font-selector" id="fontSelector"></div>
+
+            <!-- Copy Button -->
+            <div class="copy-section">
+                <button class="copy-btn" id="copyBtn">
+                    <i class="fas fa-copy"></i>
+                    <span>Copy Converted Text</span>
+                </button>
+                <div id="message" class="message"></div>
+            </div>
+        </div>
+
+        <!-- Detailed Examples Section -->
+        <div class="examples-section">
+            <h2><i class="fas fa-star" style="color: var(--primary);"></i> Font Style Examples</h2>
+            <div class="examples-grid">
+                <div class="example-card">
+                    <h3>🔲 Box Font Style</h3>
+                    <div class="example-demo" id="exampleBox">J⃞o⃞h⃞n⃞</div>
+                    <p class="example-desc">Perfect for creating standout usernames. Each letter is enclosed in a box, giving your name a unique, structured look. Great for gaming profiles and Instagram bios.</p>
+                    <span class="example-tag">#BoxStyle</span>
+                </div>
+                <div class="example-card">
+                    <h3>🔺 Triangle Font Style</h3>
+                    <div class="example-demo" id="exampleTriangle">J⃤o⃤h⃤n⃤</div>
+                    <p class="example-desc">Add a triangular accent above each letter for a sharp, edgy appearance. Ideal for attitude names and gaming tags.</p>
+                    <span class="example-tag">#TriangleStyle</span>
+                </div>
+                <div class="example-card">
+                    <h3>⭕ Circle Font Style</h3>
+                    <div class="example-demo" id="exampleCircle">J⃝o⃝h⃝n⃝</div>
+                    <p class="example-desc">Enclose your name in circles for a soft, aesthetic look. Popular among romantic and cute profile names.</p>
+                    <span class="example-tag">#CircleStyle</span>
+                </div>
+                <div class="example-card">
+                    <h3>💎 Diamond Font Style</h3>
+                    <div class="example-demo" id="exampleDiamond">J⃟o⃟h⃟n⃟</div>
+                    <p class="example-desc">Add a diamond shape overlay for a royal, premium feel. Perfect for VIP usernames and exclusive profiles.</p>
+                    <span class="example-tag">#DiamondStyle</span>
+                </div>
+                <div class="example-card">
+                    <h3>⬆️ Arrow Font Style</h3>
+                    <div class="example-demo" id="exampleArrow">J⃗o⃗h⃗n⃗</div>
+                    <p class="example-desc">Arrows pointing right give your name a forward-moving, dynamic energy. Great for motivational or progressive profiles.</p>
+                    <span class="example-tag">#ArrowStyle</span>
+                </div>
+                <div class="example-card">
+                    <h3>🔴 Dotted Font Style</h3>
+                    <div class="example-demo" id="exampleDots">J⃛o⃛h⃛n⃛</div>
+                    <p class="example-desc">Three dots above each letter create a playful, whimsical effect. Perfect for cute and fun usernames.</p>
+                    <span class="example-tag">#DottedStyle</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Category Guide Section -->
+        <div class="category-guide">
+            <h2><i class="fas fa-compass" style="color: var(--primary);"></i> Font Category Guide</h2>
+            <div class="guide-grid">
+                <div class="guide-item">
+                    <h3>📦 Enclosing Marks</h3>
+                    <p>Box (⃞), Triangle (⃤), Circle (⃝), Diamond (⃟) – These marks surround your letters for a framed look.</p>
+                    <div class="guide-example">A⃞ → A⃤ → A⃝</div>
+                </div>
+                <div class="guide-item">
+                    <h3>➡️ Arrow Marks</h3>
+                    <p>Right arrow (⃗), Left arrow (⃖), Double arrow (⃡) – Add directional energy to your text.</p>
+                    <div class="guide-example">A⃗ → A⃖ → A⃡</div>
+                </div>
+                <div class="guide-item">
+                    <h3>🔴 Dot Marks</h3>
+                    <p>Three dots (⃛), Four dots (⃜), Underdot (⃨) – Create playful, dotted variations.</p>
+                    <div class="guide-example">A⃛ → A⃜ → A⃨</div>
+                </div>
+                <div class="guide-item">
+                    <h3>⚡ Line Marks</h3>
+                    <p>Double solidus (⃫), Reverse solidus (⃥), Double line (⃦) – Add clean, modern line effects.</p>
+                    <div class="guide-example">A⃫ → A⃥ → A⃦</div>
+                </div>
+                <div class="guide-item">
+                    <h3>💍 Ring Marks</h3>
+                    <p>Ring overlay (⃘), Clockwise (⃙), Anticlockwise (⃚) – Circular accents for elegant text.</p>
+                    <div class="guide-example">A⃘ → A⃙ → A⃚</div>
+                </div>
+                <div class="guide-item">
+                    <h3>🎯 Special Marks</h3>
+                    <p>Annuity (⃧), Wide bridge (⃩), Asterisk (⃰) – Unique symbols for truly distinctive names.</p>
+                    <div class="guide-example">A⃧ → A⃩ → A⃰</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Related Articles Section -->
+        <div class="related-articles">
+            <h2><i class="fas fa-newspaper" style="color: var(--primary);"></i> Popular Articles</h2>
+            <div class="articles-grid">
+                <a href="pubg-stylish-names-with-symbols.html" class="article-card">
+                    <h3>🎯 PUBG Stylish Names</h3>
+                    <p>100+ pro player names with cool symbols. Make your PUBG profile legendary.</p>
+                    <div class="article-meta">
+                        <span class="article-category">Gaming</span>
+                        <span class="article-icon">🎮</span>
+                    </div>
+                </a>
+                <a href="attitude-names-for-boys.html" class="article-card">
+                    <h3>⚡ Attitude Names for Boys</h3>
+                    <p>Powerful attitude names for gaming and social media.</p>
+                    <div class="article-meta">
+                        <span class="article-category">Attitude</span>
+                        <span class="article-icon">⚡</span>
+                    </div>
+                </a>
+                <a href="instagram-stylish-names-2026.html" class="article-card">
+                    <h3>📸 Instagram Names</h3>
+                    <p>Make your Instagram profile attractive with stylish fonts and symbols.</p>
+                    <div class="article-meta">
+                        <span class="article-category">Social</span>
+                        <span class="article-icon">📱</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- Ad Placeholder -->
+        <div class="ad-container">
+            <div class="ad-label">Advertisement</div>
+            <div class="ad-space">
+                <!-- Google AdSense will be placed here -->
+                <span>Responsive Ad Space</span>
+            </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="faq-section">
+            <h2><i class="fas fa-question-circle" style="color: var(--primary);"></i> Frequently Asked Questions</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">❓ How does this font changer work?</div>
+                <div class="faq-answer">Our tool uses Unicode combining characters. Each font style adds a special mark (like ⃞, ⃤, ⃝) after each letter. This creates the unique font effect while keeping the text compatible across all platforms and devices.</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">❓ Will these fonts work on Instagram, WhatsApp, and games?</div>
+                <div class="faq-answer">Yes! All our font styles use standard Unicode characters, which are supported by most modern platforms including Instagram, WhatsApp, Facebook, TikTok, PUBG, Free Fire, and BGMI. The text will appear exactly as shown.</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">❓ Can I use multiple font styles together?</div>
+                <div class="faq-answer">Absolutely! You can combine different styles, for example, using box font for your first name and triangle font for your last name. Simply type both words and select different styles – the converter will apply each style separately.</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">❓ Is this tool free to use?</div>
+                <div class="faq-answer">100% free! No sign-up, no hidden charges, no watermarks. Just type your name and copy. We believe everyone should have access to stylish names.</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">❓ Why do some platforms not show the fonts correctly?</div>
+                <div class="faq-answer">While most modern platforms support these Unicode characters, some older apps or specific fonts might not render them properly. If you face issues, try our other font styles as they're all tested on major platforms.</div>
+            </div>
+        </div>
+
+        <!-- Second Ad Placeholder -->
+        <div class="ad-container">
+            <div class="ad-label">Advertisement</div>
+            <div class="ad-space">
+                <!-- Google AdSense will be placed here -->
+                <span>Responsive Ad Space</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>stylename.in</h3>
+                    <p>Create unique and stylish names for gaming and social media. 100% free online tool with 30+ amazing font styles.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+                        <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                        <li><a href="privacy-policy.html"><i class="fas fa-shield-alt"></i> Privacy Policy</a></li>
+                        <li><a href="terms.html"><i class="fas fa-file-contract"></i> Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Popular Tools</h3>
+                    <ul>
+                        <li><a href="pubg-stylish-names-with-symbols.html"><i class="fas fa-crosshairs"></i> PUBG Names</a></li>
+                        <li><a href="free-fire-stylish-nicknames.html"><i class="fas fa-fire"></i> Free Fire Names</a></li>
+                        <li><a href="attitude-names-for-boys.html"><i class="fas fa-bolt"></i> Attitude Names</a></li>
+                        <li><a href="instagram-stylish-names-2026.html"><i class="fab fa-instagram"></i> Instagram Names</a></li>
+                        <li><a href="love-nicknames-2026-collection.html"><i class="fas fa-heart"></i> Love Names</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 stylename.in. All rights reserved. | Made with ❤️ for creators worldwide</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast"></div>
+
     <script>
-        // 📚 All 30+ Font Styles
+        // ===== FONTS DATA =====
         const fonts = [
             // Box Style
-            { name: "🔲 Box Font", desc: "Four sides box", mark: "⃞", preview: "A⃞", cat: "enclosing" },
+            { name: "Box Font", mark: "⃞", preview: "A⃞", category: "Enclosing", description: "Each letter in a box - clean and structured" },
             // Triangle Style  
-            { name: "🔺 Triangle", desc: "Triangle on top", mark: "⃤", preview: "A⃤", cat: "enclosing" },
+            { name: "Triangle Font", mark: "⃤", preview: "A⃤", category: "Enclosing", description: "Triangular accent for edgy names" },
             // Circle Style
-            { name: "⭕ Circle", desc: "Full circle", mark: "⃝", preview: "A⃝", cat: "enclosing" },
+            { name: "Circle Font", mark: "⃝", preview: "A⃝", category: "Enclosing", description: "Soft circular enclosure - aesthetic look" },
             // Diamond Style
-            { name: "💎 Diamond", desc: "Diamond shape", mark: "⃟", preview: "A⃟", cat: "enclosing" },
+            { name: "Diamond Font", mark: "⃟", preview: "A⃟", category: "Enclosing", description: "Royal diamond shape overlay" },
             // Cross Style
-            { name: "🚫 Cross", desc: "Circle with cross", mark: "⃠", preview: "A⃠", cat: "enclosing" },
+            { name: "Cross Font", mark: "⃠", preview: "A⃠", category: "Enclosing", description: "Crossed circle - unique symbol" },
             // Keycap Style
-            { name: "📱 Keycap", desc: "Mobile button", mark: "⃣", preview: "A⃣", cat: "enclosing" },
+            { name: "Keycap Font", mark: "⃣", preview: "A⃣", category: "Enclosing", description: "Mobile button style" },
             // Screen Style
-            { name: "🖥️ Screen", desc: "Monitor style", mark: "⃢", preview: "A⃢", cat: "enclosing" },
+            { name: "Screen Font", mark: "⃢", preview: "A⃢", category: "Enclosing", description: "Monitor display effect" },
             
             // Arrow Styles
-            { name: "⬆️ Arrow Up", desc: "Right arrow", mark: "⃗", preview: "A⃗", cat: "arrow" },
-            { name: "⬇️ Arrow Down", desc: "Down arrow", mark: "⃯", preview: "A⃯", cat: "arrow" },
-            { name: "⬅️ Arrow Left", desc: "Left arrow", mark: "⃖", preview: "A⃖", cat: "arrow" },
-            { name: "↔️ Arrow Both", desc: "Left-right arrow", mark: "⃡", preview: "A⃡", cat: "arrow" },
+            { name: "Right Arrow", mark: "⃗", preview: "A⃗", category: "Arrows", description: "Dynamic right-pointing arrows" },
+            { name: "Left Arrow", mark: "⃖", preview: "A⃖", category: "Arrows", description: "Left-pointing directional arrows" },
+            { name: "Down Arrow", mark: "⃯", preview: "A⃯", category: "Arrows", description: "Downward arrows for unique look" },
+            { name: "Double Arrow", mark: "⃡", preview: "A⃡", category: "Arrows", description: "Left-right arrows for balance" },
             
             // Dot Styles
-            { name: "🔴 Three Dots", desc: "Three dots above", mark: "⃛", preview: "A⃛", cat: "dots" },
-            { name: "⚫ Four Dots", desc: "Four dots above", mark: "⃜", preview: "A⃜", cat: "dots" },
-            { name: "⚪ Dot Below", desc: "Triple underdot", mark: "⃨", preview: "A⃨", cat: "dots" },
+            { name: "Three Dots", mark: "⃛", preview: "A⃛", category: "Dots", description: "Playful triple dots above" },
+            { name: "Four Dots", mark: "⃜", preview: "A⃜", category: "Dots", description: "Elegant four-dot pattern" },
+            { name: "Underdot", mark: "⃨", preview: "A⃨", category: "Dots", description: "Subtle dots below letters" },
             
             // Line Styles
-            { name: "⚡ Double Solidus", desc: "Double slash", mark: "⃫", preview: "A⃫", cat: "line" },
-            { name: "〰️ Reverse Solidus", desc: "Back slash", mark: "⃥", preview: "A⃥", cat: "line" },
-            { name: "📏 Double Line", desc: "Double vertical", mark: "⃦", preview: "A⃦", cat: "line" },
+            { name: "Double Solidus", mark: "⃫", preview: "A⃫", category: "Lines", description: "Double slash modern effect" },
+            { name: "Reverse Solidus", mark: "⃥", preview: "A⃥", category: "Lines", description: "Backward slash style" },
+            { name: "Double Line", mark: "⃦", preview: "A⃦", category: "Lines", description: "Clean double vertical lines" },
             
             // Harpoon Styles
-            { name: "🏹 Left Harpoon", desc: "Left above", mark: "⃐", preview: "A⃐", cat: "harpoon" },
-            { name: "🎯 Right Harpoon", desc: "Right above", mark: "⃑", preview: "A⃑", cat: "harpoon" },
+            { name: "Left Harpoon", mark: "⃐", preview: "A⃐", category: "Harpoons", description: "Harpoon pointing left" },
+            { name: "Right Harpoon", mark: "⃑", preview: "A⃑", category: "Harpoons", description: "Harpoon pointing right" },
             
             // Ring Styles  
-            { name: "💍 Ring Overlay", desc: "Ring on top", mark: "⃘", preview: "A⃘", cat: "ring" },
-            { name: "⏰ Clockwise", desc: "Clockwise ring", mark: "⃙", preview: "A⃙", cat: "ring" },
-            { name: "⏱️ Anticlockwise", desc: "Reverse ring", mark: "⃚", preview: "A⃚", cat: "ring" },
+            { name: "Ring Overlay", mark: "⃘", preview: "A⃘", category: "Rings", description: "Elegant ring above letters" },
+            { name: "Clockwise Ring", mark: "⃙", preview: "A⃙", category: "Rings", description: "Clockwise circular accent" },
+            { name: "Anticlockwise Ring", mark: "⃚", preview: "A⃚", category: "Rings", description: "Reverse ring for variety" },
             
             // Tack Styles
-            { name: "📍 Left Tack", desc: "Left tack below", mark: "⃘", preview: "A⃘", cat: "tack" },
-            { name: "📌 Right Tack", desc: "Right tack below", mark: "⃙", preview: "A⃙", cat: "tack" },
+            { name: "Left Tack", mark: "⃘", preview: "A⃘", category: "Tacks", description: "Left-pointing tack mark" },
+            { name: "Right Tack", mark: "⃙", preview: "A⃙", category: "Tacks", description: "Right-pointing tack mark" },
             
             // Vertical Line Styles
-            { name: "📏 Long Vertical", desc: "Line through", mark: "⃒", preview: "A⃒", cat: "vertical" },
-            { name: "📐 Short Vertical", desc: "Short line", mark: "⃓", preview: "A⃓", cat: "vertical" },
+            { name: "Long Vertical", mark: "⃒", preview: "A⃒", category: "Vertical", description: "Long line through letters" },
+            { name: "Short Vertical", mark: "⃓", preview: "A⃓", category: "Vertical", description: "Short vertical accent" },
             
             // Special Styles
-            { name: "💫 Annuity", desc: "Special symbol", mark: "⃧", preview: "A⃧", cat: "special" },
-            { name: "🌉 Wide Bridge", desc: "Bridge above", mark: "⃩", preview: "A⃩", cat: "special" },
-            { name: "⭐ Asterisk", desc: "Star above", mark: "⃰", preview: "A⃰", cat: "special" },
+            { name: "Annuity", mark: "⃧", preview: "A⃧", category: "Special", description: "Unique annuity symbol" },
+            { name: "Wide Bridge", mark: "⃩", preview: "A⃩", category: "Special", description: "Bridge above letters" },
+            { name: "Asterisk", mark: "⃰", preview: "A⃰", category: "Special", description: "Star-like asterisk overlay" },
             
-            // Extra marks from Unicode
-            { name: "🔄 Left Arrow Overlay", desc: "Arrow overlay", mark: "⃪", preview: "A⃪", cat: "special" },
-            { name: "🎵 Music Note", desc: "Note like", mark: "⃬", preview: "A⃬", cat: "special" }
+            // Extra marks
+            { name: "Left Arrow Overlay", mark: "⃪", preview: "A⃪", category: "Special", description: "Arrow overlay effect" },
+            { name: "Music Note", mark: "⃬", preview: "A⃬", category: "Special", description: "Musical note accent" }
         ];
 
         let currentFont = fonts[0];
         let currentName = "";
 
-        // Font selector banate hain
+        // Initialize font selector
         const fontSelector = document.getElementById('fontSelector');
-        
         fonts.forEach((font, index) => {
             const card = document.createElement('div');
             card.className = `font-card ${index === 0 ? 'selected' : ''}`;
             card.innerHTML = `
                 <div class="font-preview">${font.preview}</div>
                 <div class="font-name">${font.name}</div>
-                <div class="font-desc">${font.desc}</div>
+                <div class="font-category">${font.category}</div>
             `;
             
             card.onclick = () => {
@@ -462,31 +1276,27 @@
             fontSelector.appendChild(card);
         });
 
-        // Convert function
+        // Convert function - single word only
         function convertName(name, mark) {
             if (!name) return "";
             
-            let words = name.trim().split(/\s+/);
-            if (words.length > 2) {
-                words = words.slice(0, 2);
-                showMessage("⚠️ Sirf 2 words liye gaye!", "error");
-            }
+            // Take only first word (remove any extra words)
+            const words = name.trim().split(/\s+/);
+            const singleWord = words[0] || "";
             
-            return words.map(word => {
-                return word.split('').map(letter => {
-                    return letter + mark;
-                }).join('');
-            }).join(' ');
+            return singleWord.split('').map(letter => {
+                return letter + mark;
+            }).join('');
         }
 
         function updatePreview() {
             const input = document.getElementById('name');
             const preview = document.getElementById('preview');
             
-            currentName = input.value;
+            currentName = input.value.trim();
             
             if (!currentName) {
-                preview.innerHTML = '👆 ऊपर नाम लिखें';
+                preview.innerHTML = '👆 Enter your name above';
                 return;
             }
             
@@ -494,26 +1304,53 @@
         }
 
         function updateExamples() {
-            document.getElementById('example1').innerHTML = convertName("Raj", currentFont.mark);
-            document.getElementById('example2').innerHTML = convertName("Kumar", currentFont.mark);
+            const name = document.getElementById('name')?.value.trim() || "John";
+            const firstName = name.split(/\s+/)[0] || "John";
+            
+            document.getElementById('exampleBox').innerHTML = convertName(firstName, "⃞");
+            document.getElementById('exampleTriangle').innerHTML = convertName(firstName, "⃤");
+            document.getElementById('exampleCircle').innerHTML = convertName(firstName, "⃝");
+            document.getElementById('exampleDiamond').innerHTML = convertName(firstName, "⃟");
+            document.getElementById('exampleArrow').innerHTML = convertName(firstName, "⃗");
+            document.getElementById('exampleDots').innerHTML = convertName(firstName, "⃛");
         }
 
         // Input listener
-        document.getElementById('name').addEventListener('input', updatePreview);
+        document.getElementById('name').addEventListener('input', function(e) {
+            const value = e.target.value;
+            // Allow only single word (remove spaces if they try to add multiple)
+            if (value.includes(' ')) {
+                const words = value.split(/\s+/);
+                if (words.length > 1) {
+                    e.target.value = words[0]; // Keep only first word
+                    showToast('Only one word allowed', 'info');
+                }
+            }
+            updatePreview();
+        });
+
+        // Clear button
+        document.getElementById('clearBtn').addEventListener('click', function() {
+            document.getElementById('name').value = '';
+            document.getElementById('preview').innerHTML = '👆 Enter your name above';
+            currentName = '';
+            showToast('Input cleared', 'info');
+        });
 
         // Copy button
         document.getElementById('copyBtn').addEventListener('click', function() {
             const preview = document.getElementById('preview');
             const text = preview.innerText;
             
-            if (text && text !== '👆 ऊपर नाम लिखें') {
+            if (text && !text.includes('👆') && text !== 'Error') {
                 navigator.clipboard.writeText(text).then(() => {
-                    showMessage('✅ कॉपी हो गया! अब paste karein', 'success');
+                    showMessage('✅ Copied to clipboard!', 'success');
+                    showToast('✅ Copied successfully!');
                 }).catch(() => {
-                    showMessage('❌ कॉपी नहीं हुआ', 'error');
+                    showMessage('❌ Failed to copy', 'error');
                 });
             } else {
-                showMessage('❌ पहले नाम लिखें', 'error');
+                showMessage('❌ Please enter your name first', 'error');
             }
         });
 
@@ -524,12 +1361,89 @@
             setTimeout(() => messageDiv.classList.remove('show'), 3000);
         }
 
-        // Initial updates
-        updateExamples();
+        function showToast(msg, type = 'info') {
+            const toast = document.getElementById('toast');
+            toast.textContent = msg;
+            toast.style.display = 'block';
+            if (window.toastTimeout) clearTimeout(window.toastTimeout);
+            window.toastTimeout = setTimeout(() => {
+                toast.style.display = 'none';
+            }, 2000);
+        }
 
-        // Enter key copy
+        // Sidebar functionality
+        document.getElementById('menuToggle').addEventListener('click', function() {
+            document.getElementById('sidebar').classList.add('open');
+        });
+
+        document.getElementById('closeSidebar').addEventListener('click', function() {
+            document.getElementById('sidebar').classList.remove('open');
+        });
+
+        // Theme toggle
+        let isDarkTheme = false;
+        window.toggleTheme = function() {
+            isDarkTheme = !isDarkTheme;
+            const body = document.body;
+            const themeToggle = document.getElementById('themeToggle');
+            const themeStatus = document.getElementById('themeStatus');
+            
+            if (isDarkTheme) {
+                body.classList.add('dark-theme');
+                themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+                themeStatus.textContent = 'Dark';
+                localStorage.setItem('theme', 'dark');
+            } else {
+                body.classList.remove('dark-theme');
+                themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+                themeStatus.textContent = 'Light';
+                localStorage.setItem('theme', 'light');
+            }
+        };
+        
+        document.getElementById('themeToggle').addEventListener('click', toggleTheme);
+
+        // Load saved theme
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            isDarkTheme = true;
+            document.body.classList.add('dark-theme');
+            document.getElementById('themeToggle').innerHTML = '<i class="fas fa-sun"></i>';
+            document.getElementById('themeStatus').textContent = 'Dark';
+        }
+
+        // Symbol modal function (placeholder)
+        window.openSymbolModal = function() {
+            alert('Symbol picker coming soon! Visit our home page for full symbol library.');
+        };
+
+        // Scroll to top
+        function initScrollTop() {
+            const scrollBtn = document.getElementById('scrollTop');
+            window.addEventListener('scroll', function() {
+                if (window.pageYOffset > 300) {
+                    scrollBtn.classList.add('show');
+                } else {
+                    scrollBtn.classList.remove('show');
+                }
+            });
+            scrollBtn.addEventListener('click', function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            updateExamples();
+            initScrollTop();
+            document.getElementById('fontCount').textContent = fonts.length + ' styles';
+        });
+
+        // Enter key to copy
         document.getElementById('name').addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') document.getElementById('copyBtn').click();
+            if (e.key === 'Enter') {
+                document.getElementById('copyBtn').click();
+            }
         });
     </script>
 </body>
