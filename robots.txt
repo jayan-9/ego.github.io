@@ -45,6 +45,9 @@ Allow: /stylish-text-generator.html
 # Allow Text Changer article
 Allow: /text-changer.html
 
+# Allow Free Fire 2026 article
+Allow: /stylish-names-free-fire-2026.html
+
 # Sitemap location
 Sitemap: https://stylename.in/sitemap.xml
 
