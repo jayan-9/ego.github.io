@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎨 Font Changer - Letter Converter</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            text-align: center;
+            color: white;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .main-box {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        
+        .input-section {
+            margin-bottom: 30px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #333;
+            font-size: 1.2em;
+        }
+        
+        .name-input {
+            width: 100%;
+            padding: 15px;
+            font-size: 1.2em;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+        
+        .name-input:focus {
+            border-color: #667eea;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(102,126,234,0.1);
+        }
+        
+        .info-text {
+            margin-top: 10px;
+            color: #666;
+            font-style: italic;
+        }
+        
+        .font-selector {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin: 30px 0;
+        }
+        
+        .font-card {
+            background: #f8f9fa;
+            border: 2px solid #dee2e6;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        
+        .font-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .font-card.selected {
+            border-color: #667eea;
+            background: #e3f2fd;
+        }
+        
+        .preview-box {
+            background: linear-gradient(45deg, #f3f3f3, #ffffff);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 20px 0;
+            text-align: center;
+            border: 2px dashed #667eea;
+        }
+        
+        .preview-text {
+            font-size: 3.5em;
+            word-break: break-all;
+            line-height: 1.4;
+            min-height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .example-box {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .example-title {
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        
+        .example-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            padding: 10px;
+            background: white;
+            border-radius: 8px;
+        }
+        
+        .example-original {
+            width: 100px;
+            font-weight: bold;
+        }
+        
+        .example-converted {
+            flex: 1;
+            font-size: 1.2em;
+        }
+        
+        .copy-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 1.2em;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: 0.3s;
+            width: 100%;
+            font-weight: bold;
+        }
+        
+        .copy-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .message {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 5px;
+            display: none;
+        }
+        
+        .message.show {
+            display: block;
+        }
+        
+        .success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        
+        .error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        
+        @media (max-width: 768px) {
+            .preview-text {
+                font-size: 2.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎨 Font Changer - Letter Converter</h1>
+        
+        <div class="main-box">
+            <!-- Input Section -->
+            <div class="input-section">
+                <label for="name">🔤 अपना नाम लिखें (सिर्फ 2 शब्द):</label>
+                <input type="text" 
+                       id="name" 
+                       class="name-input" 
+                       placeholder="जैसे: Raj Kumar या Your Name"
+                       maxlength="50">
+                <div class="info-text">
+                    ⚡ Maximum 2 words hi likhein (पहला नाम + अंतिम नाम)
+                </div>
+            </div>
+            
+            <!-- Font Selector -->
+            <div class="font-selector" id="fontSelector">
+                <!-- JavaScript se dynamically fill hoga -->
+            </div>
+            
+            <!-- Preview Box -->
+            <div class="preview-box">
+                <div class="preview-text" id="preview">
+                    आपका नाम यहाँ दिखेगा
+                </div>
+            </div>
+            
+            <!-- Example Box (सिखाने के लिए) -->
+            <div class="example-box" id="exampleBox">
+                <div class="example-title">📝 ऐसे बनेगा आपका नाम:</div>
+                <div class="example-row">
+                    <span class="example-original">"Raj" →</span>
+                    <span class="example-converted" id="example1">R⃞a⃞j⃞</span>
+                </div>
+                <div class="example-row">
+                    <span class="example-original">"Kumar" →</span>
+                    <span class="example-converted" id="example2">K⃞u⃞m⃞a⃞r⃞</span>
+                </div>
+            </div>
+            
+            <!-- Copy Button -->
+            <button class="copy-btn" id="copyBtn">
+                📋 कॉपी करें
+            </button>
+            
+            <!-- Message -->
+            <div id="message" class="message"></div>
+        </div>
+    </div>
+
+    <script>
+        // 📚 पहले सारे FONTS की लिस्ट बनाते हैं
+        const fonts = [
+            {
+                name: "🔲 Box Font",
+                desc: "चारों तरफ Box",
+                mark: "⃞",
+                preview: "A⃞ B⃞ C⃞"
+            },
+            {
+                name: "🔺 Triangle Font",
+                desc: "ऊपर Triangle",
+                mark: "⃤",
+                preview: "A⃤ B⃤ C⃤"
+            },
+            {
+                name: "⭕ Circle Font",
+                desc: "Circle में लपेटा",
+                mark: "⃝",
+                preview: "A⃝ B⃝ C⃝"
+            },
+            {
+                name: "💎 Diamond Font",
+                desc: "Diamond shape",
+                mark: "⃟",
+                preview: "A⃟ B⃟ C⃟"
+            },
+            {
+                name: "🚫 Cross Font",
+                desc: "Cross mark",
+                mark: "⃠",
+                preview: "A⃠ B⃠ C⃠"
+            },
+            {
+                name: "📱 Keycap Font",
+                desc: "Mobile jaisa",
+                mark: "⃣",
+                preview: "A⃣ B⃣ C⃣"
+            },
+            {
+                name: "⬆️ Arrow Font",
+                desc: "Arrow ऊपर",
+                mark: "⃗",
+                preview: "A⃗ B⃗ C⃗"
+            },
+            {
+                name: "⬇️ Arrow Down",
+                desc: "Arrow नीचे",
+                mark: "⃯",
+                preview: "A⃯ B⃯ C⃯"
+            },
+            {
+                name: "🌟 Dot Font",
+                desc: "तीन dots",
+                mark: "⃛",
+                preview: "A⃛ B⃛ C⃛"
+            },
+            {
+                name: "⚡ Strike Font",
+                desc: "बीच से कटा",
+                mark: "⃫",
+                preview: "A⃫ B⃫ C⃫"
+            }
+        ];
+
+        // 🎯 Current selected font
+        let currentFont = fonts[0];
+        let currentName = "";
+
+        // 📝 Font Selector banate hain
+        const fontSelector = document.getElementById('fontSelector');
+        
+        fonts.forEach((font, index) => {
+            const card = document.createElement('div');
+            card.className = `font-card ${index === 0 ? 'selected' : ''}`;
+            card.innerHTML = `
+                <div style="font-size: 24px; margin-bottom: 10px;">${font.preview}</div>
+                <div style="font-weight: bold;">${font.name}</div>
+                <div style="font-size: 12px; color: #666;">${font.desc}</div>
+            `;
+            
+            card.onclick = () => {
+                // Sab cards se selected class hatao
+                document.querySelectorAll('.font-card').forEach(c => 
+                    c.classList.remove('selected')
+                );
+                card.classList.add('selected');
+                currentFont = font;
+                
+                // Naye font ke saath preview update karo
+                if (currentName) {
+                    updatePreview();
+                    updateExamples();
+                }
+            };
+            
+            fontSelector.appendChild(card);
+        });
+
+        // 🎨 Name Convert karne ka FUNCTION
+        function convertName(name, mark) {
+            if (!name) return "";
+            
+            // Name ko words mein tod do
+            let words = name.trim().split(/\s+/);
+            
+            // Sirf 2 words lo
+            if (words.length > 2) {
+                words = words.slice(0, 2);
+                showMessage("⚠️ Sirf 2 words liye gaye!", "error");
+            }
+            
+            // Har word ke har letter par mark lagao
+            let convertedWords = words.map(word => {
+                return word.split('').map(letter => {
+                    // Special characters ko hatane ke liye
+                    if (letter.match(/[a-zA-Z]/)) {
+                        return letter + mark;
+                    }
+                    return letter;
+                }).join('');
+            });
+            
+            return convertedWords.join(' ');
+        }
+
+        // 🔄 Preview update karo
+        function updatePreview() {
+            const input = document.getElementById('name');
+            const preview = document.getElementById('preview');
+            
+            currentName = input.value;
+            
+            if (!currentName) {
+                preview.innerHTML = 'आपका नाम यहाँ दिखेगा';
+                return;
+            }
+            
+            const converted = convertName(currentName, currentFont.mark);
+            preview.innerHTML = converted || 'कुछ गड़बड़ है';
+        }
+
+        // 📋 Examples update karo
+        function updateExamples() {
+            const example1 = document.getElementById('example1');
+            const example2 = document.getElementById('example2');
+            
+            example1.innerHTML = convertName("Raj", currentFont.mark);
+            example2.innerHTML = convertName("Kumar", currentFont.mark);
+        }
+
+        // 👂 Input suno
+        document.getElementById('name').addEventListener('input', function(e) {
+            updatePreview();
+        });
+
+        // 📋 Copy button
+        document.getElementById('copyBtn').addEventListener('click', function() {
+            const preview = document.getElementById('preview');
+            const text = preview.innerText;
+            
+            if (text && text !== 'आपका नाम यहाँ दिखेगा') {
+                navigator.clipboard.writeText(text).then(() => {
+                    showMessage('✅ कॉपी हो गया! अब paste karein', 'success');
+                }).catch(() => {
+                    showMessage('❌ कॉपी नहीं हुआ', 'error');
+                });
+            } else {
+                showMessage('❌ पहले नाम लिखें', 'error');
+            }
+        });
+
+        // 💬 Message dikhao
+        function showMessage(msg, type) {
+            const messageDiv = document.getElementById('message');
+            messageDiv.textContent = msg;
+            messageDiv.className = `message show ${type}`;
+            
+            setTimeout(() => {
+                messageDiv.classList.remove('show');
+            }, 3000);
+        }
+
+        // 🎯 Examples update karo start mein
+        updateExamples();
+        
+        // 🎨 Extra - Har letter ke liye function
+        function convertWithStyle(text, mark, style) {
+            // Style ke according convert karo
+            // Jaise bold, italic, etc.
+            const styles = {
+                bold: '𝗔',
+                italic: '𝘈',
+                boldItalic: '𝘼',
+                script: '𝒜',
+                // Aur bhi styles add kar sakte ho
+            };
+            
+            return text.split('').map(char => {
+                if (char.match(/[a-zA-Z]/)) {
+                    // Yahan pe style convert kar sakte ho
+                    return char + mark;
+                }
+                return char;
+            }).join('');
+        }
+
+        // 👀 Extra Feature - Preview mein word count dikhao
+        function checkWordCount(text) {
+            const words = text.trim().split(/\s+/);
+            if (words.length > 2) {
+                showMessage("⚠️ Sirf 2 words allowed hain!", "error");
+                return false;
+            }
+            return true;
+        }
+
+        // 🚀 Keyboard shortcut (Enter dabane par copy)
+        document.getElementById('name').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                document.getElementById('copyBtn').click();
+            }
+        });
+    </script>
+</body>
+</html>
