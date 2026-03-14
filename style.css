@@ -1271,3 +1271,84 @@ p { margin-bottom: 1rem; color: var(--gray); }
         font-size: 0.95rem;
     }
 }
+
+/* ===== SINGLE LINK - LAMBA, GREEN HOVER ===== */
+.single-link-container {
+    display: flex;
+    justify-content: center;
+    margin: 25px 0 35px 0;
+    width: 100%;
+}
+
+.single-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 500px;
+    padding: 18px 25px;
+    background: #ffffff;
+    border: 2px solid #e0e0e0;
+    border-radius: 60px;
+    color: #333333;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    gap: 15px;
+}
+
+.single-link:hover {
+    background: #10b981;  /* Green */
+    border-color: #10b981;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 15px 25px rgba(16, 185, 129, 0.3);
+}
+
+.link-icon {
+    font-size: 1.8rem;
+    line-height: 1;
+}
+
+.link-text {
+    flex: 1;
+    text-align: left;
+    font-weight: 500;
+}
+
+.link-arrow {
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.single-link:hover .link-arrow {
+    transform: translateX(8px);
+}
+
+/* Dark theme support */
+.dark-theme .single-link {
+    background: #2d2d2d;
+    border-color: #444;
+    color: #f0f0f0;
+}
+
+.dark-theme .single-link:hover {
+    background: #10b981;
+    border-color: #10b981;
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .single-link {
+        padding: 15px 20px;
+        font-size: 1.1rem;
+        max-width: 100%;
+    }
+    
+    .link-icon {
+        font-size: 1.5rem;
+    }
+}
