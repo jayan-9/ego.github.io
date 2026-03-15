@@ -1326,7 +1326,7 @@ if (index === 5) {
             imgDiv.style.padding = '0';
             imgDiv.style.overflow = 'hidden';
             imgDiv.innerHTML = `
-                <img src="https://jayan-9.github.io/ego.github.io/photo.gif" 
+                <img src="https://jayan-9.github.io/ego.github.io/jack.png" 
                      alt="Stylish Design"
                      style="width: 100%; height: auto; display: block; border-radius: 8px;">
             `;
