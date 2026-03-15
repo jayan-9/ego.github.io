@@ -1336,6 +1336,23 @@ if (index === 5) {
     return;
 }
 
+    // Image in examples - 67nd ke baad (index 31)
+        if (index === 56) {
+            const imgDiv = document.createElement('div');
+            imgDiv.className = 'style-card';
+            imgDiv.style.padding = '0';
+            imgDiv.style.overflow = 'hidden';
+            imgDiv.innerHTML = `
+                <img src="https://jayan-9.github.io/ego.github.io/jack.png" 
+                     alt="Stylish Design"
+                     style="width: 100%; height: auto; display: block; border-radius: 8px;">
+            `;
+            result.appendChild(imgDiv);
+        }
+    });
+    return;
+}
+
     // Name exists: generate actual styles
 const styles = stylesByCategory[currentFilter] || [];
 if (styles.length === 0) {
