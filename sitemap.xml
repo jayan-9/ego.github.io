@@ -170,13 +170,5 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
 </url>
-
-  <!-- Online Games Nickname -->
-<url>
-    <loc>https://stylename.in/online-games-nickname-ideas.html</loc>
-    <lastmod>2026-03-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-</url>
   
 </urlset>
