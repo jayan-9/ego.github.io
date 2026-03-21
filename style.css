@@ -1352,3 +1352,125 @@ p { margin-bottom: 1rem; color: var(--gray); }
         font-size: 1.5rem;
     }
 }
+
+/* PREMIUM SECTION - With Gradient Fade */
+.premium-section {
+    margin: 20px 0;
+    padding: 5px 0;
+    position: relative;
+}
+
+/* Optional: Gradient fade on edges (same as font chips) */
+.premium-section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 100%;
+    background: linear-gradient(to right, transparent, var(--light));
+    pointer-events: none;
+    z-index: 1;
+}
+
+.premium-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 100%;
+    background: linear-gradient(to left, transparent, var(--light));
+    pointer-events: none;
+    z-index: 1;
+}
+
+.premium-label {
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    color: #FFD700;
+    text-align: center;
+    margin-bottom: 8px;
+    font-weight: 500;
+    opacity: 0.8;
+}
+
+.premium-scroll {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 8px;
+    padding: 8px 0 12px 0;
+    scrollbar-width: thin;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+    z-index: 2;
+}
+
+/* Custom Scrollbar */
+.premium-scroll::-webkit-scrollbar {
+    height: 3px;
+}
+
+.premium-scroll::-webkit-scrollbar-track {
+    background: #2a2a2a;
+    border-radius: 10px;
+}
+
+.premium-scroll::-webkit-scrollbar-thumb {
+    background: #FFD700;
+    border-radius: 10px;
+}
+
+.premium-symbol {
+    background: #252525;
+    border: 1px solid #FFD70055;
+    border-radius: 30px;
+    padding: 6px 12px;
+    font-size: 0.9rem;
+    color: #FFD700;
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.premium-symbol:hover {
+    background: #FFD700;
+    color: #000;
+    transform: translateY(-2px);
+}
+
+.premium-note {
+    font-size: 0.6rem;
+    color: #666;
+    text-align: center;
+    margin-top: 6px;
+    letter-spacing: 0.3px;
+}
+
+/* Dark theme support for gradient fade */
+.dark-theme .premium-section::before {
+    background: linear-gradient(to left, transparent, #1a1a1a);
+}
+
+.dark-theme .premium-section::after {
+    background: linear-gradient(to right, transparent, #1a1a1a);
+}
+
+/* Remove gradient fade on mobile */
+@media (max-width: 768px) {
+    .premium-section::before,
+    .premium-section::after {
+        display: none;
+    }
+    
+    .premium-symbol {
+        font-size: 0.8rem;
+        padding: 5px 10px;
+    }
+    
+    .premium-note {
+        font-size: 0.55rem;
+    }
+}
