@@ -1474,3 +1474,114 @@ p { margin-bottom: 1rem; color: var(--gray); }
         font-size: 0.8rem;
     }
 }
+
+/* ===== PREMIUM SYMBOLS COLLECTION ===== */
+.premium-symbols-wrapper {
+    margin: 40px 0;
+    padding: 25px 15px;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    border: 1px solid #f0f0f0;
+}
+
+.premium-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.premium-title {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #b8860b;
+    margin: 0;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 0 20px;
+    border-bottom: 3px solid #FFD700;
+    padding-bottom: 8px;
+}
+
+.premium-scroll {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 15px;
+    padding: 10px 5px 20px 5px;
+    scrollbar-width: thin;
+    -webkit-overflow-scrolling: touch;
+}
+
+.premium-scroll::-webkit-scrollbar {
+    height: 5px;
+}
+
+.premium-scroll::-webkit-scrollbar-track {
+    background: #f0f0f0;
+    border-radius: 10px;
+}
+
+.premium-scroll::-webkit-scrollbar-thumb {
+    background: #FFD700;
+    border-radius: 10px;
+}
+
+.premium-symbol {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 18px 22px;
+    min-width: 100px;
+    text-align: center;
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: all 0.25s;
+    flex-shrink: 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    border: 1px solid #e8e8e8;
+    color: #1a1a1a;
+}
+
+.premium-symbol:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 25px rgba(218,165,32,0.15);
+    border-color: #FFD700;
+    background: #fffef7;
+}
+
+/* Dark theme support */
+.dark-theme .premium-symbols-wrapper {
+    background: #1e1e1e;
+    border-color: #333;
+}
+
+.dark-theme .premium-title {
+    color: #FFD700;
+    border-bottom-color: #FFD700;
+}
+
+.dark-theme .premium-symbol {
+    background: #2a2a2a;
+    color: #f0f0f0;
+    border-color: #404040;
+}
+
+.dark-theme .premium-symbol:hover {
+    background: #353535;
+    border-color: #FFD700;
+}
+
+.dark-theme .premium-scroll::-webkit-scrollbar-track {
+    background: #2a2a2a;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .premium-title {
+        font-size: 1.4rem;
+    }
+    .premium-symbol {
+        min-width: 80px;
+        padding: 14px 18px;
+        font-size: 1.5rem;
+    }
+}
