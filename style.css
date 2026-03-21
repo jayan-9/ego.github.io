@@ -1355,72 +1355,65 @@ p { margin-bottom: 1rem; color: var(--gray); }
 
 /* ===== STYLISH BIO COLLECTION ===== */
 .bio-collection-wrapper {
-    margin: 50px 0;
-    padding: 25px 15px;
-    background: linear-gradient(145deg, #1a1a1a, #0f0f0f);
-    border-radius: 24px;
-    border: 2px solid #FFD700;
-    box-shadow: 0 10px 30px rgba(255,215,0,0.2);
+    margin: 40px 0;
+    padding: 20px 10px;
+    background: transparent;
+    border-radius: 0;
     position: relative;
 }
 
 .bio-header {
     text-align: center;
-    margin-bottom: 25px;
-}
-
-.bio-badge {
-    display: inline-block;
-    background: linear-gradient(135deg, #FFD700, #FFA500);
-    color: #000;
-    padding: 5px 15px;
-    border-radius: 50px;
-    font-size: 0.8rem;
-    font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .bio-title {
-    font-size: 1.8rem;
-    color: #FFD700;
-    margin-bottom: 5px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+    letter-spacing: 1px;
 }
 
-.bio-subtitle {
-    color: #aaa;
-    font-size: 0.85rem;
+/* Dark theme title */
+.dark-theme .bio-title {
+    color: #f0f0f0;
 }
 
 .bio-scroll {
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
-    gap: 15px;
-    padding: 15px 5px 20px 5px;
+    gap: 12px;
+    padding: 10px 5px 15px 5px;
     scrollbar-width: thin;
     -webkit-overflow-scrolling: touch;
 }
 
 .bio-scroll::-webkit-scrollbar {
-    height: 5px;
+    height: 4px;
 }
 
 .bio-scroll::-webkit-scrollbar-track {
-    background: #333;
+    background: #e0e0e0;
     border-radius: 10px;
 }
 
 .bio-scroll::-webkit-scrollbar-thumb {
-    background: #FFD700;
+    background: #888;
     border-radius: 10px;
 }
 
+.dark-theme .bio-scroll::-webkit-scrollbar-track {
+    background: #2d2d2d;
+}
+
 .bio-card {
-    background: #252525;
-    border-radius: 20px;
-    padding: 18px 22px;
-    min-width: 280px;
-    max-width: 320px;
+    background: white;
+    border-radius: 12px;
+    padding: 14px 18px;
+    min-width: 260px;
+    max-width: 300px;
     font-size: 0.85rem;
     cursor: pointer;
     transition: all 0.2s;
@@ -1428,42 +1421,45 @@ p { margin-bottom: 1rem; color: var(--gray); }
     white-space: normal;
     word-break: break-word;
     line-height: 1.5;
+    color: #1a1a1a;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    border: 1px solid #e5e5e5;
 }
 
-/* Mood Colors */
+/* Mood Border Colors */
 .bio-card.gamer { border-left: 4px solid #ff4757; }
-.bio-card.attitude { border-left: 4px solid #FFD700; }
+.bio-card.attitude { border-left: 4px solid #f59e0b; }
 .bio-card.love { border-left: 4px solid #ff6b9d; }
 .bio-card.dark { border-left: 4px solid #8b5cf6; }
 .bio-card.student { border-left: 4px solid #10b981; }
-.bio-card.positive { border-left: 4px solid #f59e0b; }
+.bio-card.positive { border-left: 4px solid #3b82f6; }
 
 .bio-card:hover {
-    background: #FFD700;
-    color: #000;
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(255,215,0,0.3);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    border-color: #ddd;
 }
 
-/* Dark theme support */
+/* Dark theme cards */
 .dark-theme .bio-card {
     background: #2d2d2d;
     color: #f0f0f0;
+    border: 1px solid #404040;
 }
 
 .dark-theme .bio-card:hover {
-    background: #FFD700;
-    color: #000;
+    background: #3a3a3a;
+    border-color: #555;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
     .bio-title {
-        font-size: 1.4rem;
+        font-size: 1.3rem;
     }
     .bio-card {
-        min-width: 250px;
-        padding: 15px 18px;
+        min-width: 240px;
+        padding: 12px 16px;
         font-size: 0.8rem;
     }
 }
