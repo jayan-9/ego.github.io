@@ -45,6 +45,9 @@ Allow: /stylish-text-generator.html
 # Allow Text Changer article
 Allow: /text-changer.html
 
+# Allow Golden Attach page
+Allow: /golden-attach.html
+
 # Sitemap location
 Sitemap: https://stylename.in/sitemap.xml
 
