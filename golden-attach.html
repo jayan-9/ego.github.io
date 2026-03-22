@@ -890,26 +890,69 @@ const allSymbolNames = {
         `).join('');
         document.getElementById('seeAllBtnContainer').innerHTML = `<button onclick="renderSuggestions()" style="background:transparent; border:1px solid gold; color:gold; padding:8px 20px; border-radius:40px;">← Show Random</button>`;
     }
-    function saveSuggestion() {
-        let name = document.getElementById('suggesterName').value.trim();
-        let country = document.getElementById('suggesterCountry').value;
-        let text = document.getElementById('suggestionText').value.trim();
-        if(!name || !country || !text) { showAlert("Please fill all fields"); return; }
-        communitySuggestions.push({ text, addedBy: name, country });
-        localStorage.setItem('goldenSuggestions', JSON.stringify(communitySuggestions));
-        closeSuggestionModal();
-        renderSuggestions();
-        showAlert(`✅ Thank you ${name}! Suggestion added.`);
+    // Save suggestion function - FIXED
+function saveSuggestion() {
+    let name = document.getElementById('suggesterName').value.trim();
+    let country = document.getElementById('suggesterCountry').value;
+    let text = document.getElementById('suggestionText').value.trim();
+    
+    if (!name || !country || country === 'Select country' || !text) {
+        showAlert("⚠️ Please fill all fields");
+        return;
     }
-    function openAddSuggestionModal() { document.getElementById('suggestionModal').style.display = 'flex'; }
-    function closeSuggestionModal() { document.getElementById('suggestionModal').style.display = 'none'; }
-
-    // Scroll-to-top button visibility
-    window.addEventListener('scroll', () => {
-        const btn = document.querySelector('.scroll-top-btn');
-        if (window.scrollY > 300) btn.style.display = 'flex';
-        else btn.style.display = 'none';
+    
+    // Add to array
+    communitySuggestions.push({ 
+        text: text, 
+        addedBy: name, 
+        country: country,
+        date: new Date().toLocaleDateString()
     });
+    
+    // Save to localStorage
+    localStorage.setItem('goldenSuggestions', JSON.stringify(communitySuggestions));
+    
+    // Clear form
+    document.getElementById('suggesterName').value = '';
+    document.getElementById('suggestionText').value = '';
+    document.getElementById('suggesterCountry').value = 'Select country';
+    
+    // Close modal
+    closeSuggestionModal();
+    
+    // Refresh suggestions display
+    renderSuggestions();
+    
+    showAlert(`✅ Thank you ${name}! Your suggestion added.`);
+}
+    function openAddSuggestionModal() {
+    document.getElementById('suggestionModal').style.display = 'flex';
+}
+
+function closeSuggestionModal() {
+    document.getElementById('suggestionModal').style.display = 'none';
+}
+
+    // Scroll to top button visibility - FIXED
+window.addEventListener('scroll', function() {
+    const scrollBtn = document.querySelector('.scroll-top-btn');
+    if (window.scrollY > 200) {
+        scrollBtn.style.display = 'flex';
+    } else {
+        scrollBtn.style.display = 'none';
+    }
+});
+
+// Initial check
+document.addEventListener('DOMContentLoaded', function() {
+    const scrollBtn = document.querySelector('.scroll-top-btn');
+    scrollBtn.style.display = 'none';
+    
+    // Also fix scroll button click
+    scrollBtn.onclick = function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+});
 
     window.onload = () => {
         buildRepeatBtns();
