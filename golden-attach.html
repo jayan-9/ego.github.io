@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>✨ GOLDEN ATTACH – Premium Symbol Studio ✨</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Poppins', system-ui, sans-serif;
+        }
+
+        body {
+            background: radial-gradient(circle at 20% 30%, #0a0a0a, #030303);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .ticker-wrap {
+            background: rgba(0,0,0,0.6);
+            backdrop-filter: blur(10px);
+            border-radius: 60px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(255,215,0,0.4);
+            overflow: hidden;
+            white-space: nowrap;
+            padding: 10px 0;
+        }
+        .ticker {
+            display: inline-block;
+            animation: scrollTicker 25s linear infinite;
+            font-weight: 600;
+            color: #FFD966;
+        }
+        .ticker span {
+            margin: 0 30px;
+            font-size: 1rem;
+        }
+        @keyframes scrollTicker {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .special-badge {
+            background: linear-gradient(145deg, #FFD700, #FFB347);
+            color: #1e1e1e;
+            text-align: center;
+            padding: 12px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 50px;
+            max-width: 320px;
+            margin: 0 auto 20px auto;
+            box-shadow: 0 0 20px rgba(255,215,0,0.8);
+            animation: goldPulse 2s infinite;
+        }
+        @keyframes goldPulse {
+            0% { box-shadow: 0 0 0 0 rgba(255,215,0,0.4); }
+            70% { box-shadow: 0 0 0 12px rgba(255,215,0,0); }
+            100% { box-shadow: 0 0 0 0 rgba(255,215,0,0); }
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: rgba(20,20,24,0.92);
+            backdrop-filter: blur(12px);
+            border-radius: 40px;
+            padding: 30px;
+            box-shadow: 0 30px 50px rgba(0,0,0,0.6), 0 0 0 2px #FFD70088 inset;
+            border: 1px solid rgba(255,215,0,0.5);
+        }
+
+        h1 {
+            text-align: center;
+            background: linear-gradient(135deg, #FFE484, #FFB347);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 10px;
+            font-size: 2.8em;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #f0e6c5;
+            margin-bottom: 25px;
+        }
+
+        .repeat-buttons {
+            display: flex;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            gap: 8px;
+            margin: 15px 0;
+            padding-bottom: 8px;
+        }
+        .repeat-buttons::-webkit-scrollbar { height: 4px; }
+        .repeat-btn {
+            padding: 10px 18px;
+            border: 2px solid #FFD70077;
+            border-radius: 50px;
+            background: #1e1e1e;
+            color: #FFD700;
+            cursor: pointer;
+            flex-shrink: 0;
+        }
+        .repeat-btn.active {
+            background: linear-gradient(135deg, #FFD700, #FFA500);
+            color: #000;
+            box-shadow: 0 0 12px gold;
+        }
+
+        .input-section {
+            background: #1e1e24cc;
+            padding: 25px;
+            border-radius: 28px;
+            margin-bottom: 30px;
+            border: 1px solid #FFD700;
+        }
+        .input-group {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        .input-group input, .input-group select {
+            flex: 1;
+            padding: 14px 18px;
+            background: #0f0f12;
+            border: 2px solid #FFD70088;
+            border-radius: 40px;
+            color: white;
+            font-size: 1rem;
+        }
+        
+        .preview-box {
+    background: #0a0a0c;
+    padding: 20px;
+    border-radius: 32px;
+    border: 2px solid #FFD700;
+    margin: 20px 0;
+    text-align: center;
+    font-size: 38px;
+    min-height: 110px;
+    max-height: 300px;
+    color: #FFE7A3;
+    overflow-y: auto;
+    overflow-x: hidden;
+    word-wrap: break-word;
+    word-break: break-all;
+    white-space: normal;
+    line-height: 1.4;
+}
+
+/* Optional: Nice scrollbar */
+.preview-box::-webkit-scrollbar {
+    width: 5px;
+}
+.preview-box::-webkit-scrollbar-track {
+    background: #333;
+    border-radius: 10px;
+}
+.preview-box::-webkit-scrollbar-thumb {
+    background: #FFD700;
+    border-radius: 10px;
+}
+        
+        .copy-btn {
+            background: linear-gradient(135deg, #FFD700, #FFA500);
+            border: none;
+            padding: 14px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            cursor: pointer;
+            width: 100%;
+        }
+        .stats-box {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 35px 0;
+            flex-wrap: wrap;
+        }
+        .stat-item {
+            background: #1f1f28;
+            padding: 20px;
+            border-radius: 28px;
+            text-align: center;
+            border: 1px solid gold;
+        }
+
+        .symbol-category {
+            margin-bottom: 45px;
+        }
+        .symbol-category h2 {
+            color: #FFD700;
+            font-size: 1.8rem;
+            margin: 20px 0 15px;
+            border-left: 6px solid #FFD700;
+            padding-left: 18px;
+        }
+        .symbol-grid {
+            display: flex;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            gap: 14px;
+            padding: 12px 6px 20px;
+        }
+        .symbol-grid::-webkit-scrollbar { height: 5px; }
+        .symbol-card {
+            background: #252525dd;
+            border-radius: 24px;
+            padding: 12px 10px;
+            text-align: center;
+            border: 1px solid #FFD70077;
+            min-width: 135px;
+            flex-shrink: 0;
+        }
+        .symbol-card:hover {
+            transform: translateY(-5px);
+            border-color: #FFD700;
+            box-shadow: 0 12px 20px rgba(255,215,0,0.3);
+        }
+        .attach-badge {
+            background: linear-gradient(135deg, #FFD700, #FFA500);
+            color: #000;
+            font-size: 9px;
+            padding: 3px 8px;
+            border-radius: 30px;
+            display: inline-block;
+        }
+        .symbol {
+            font-size: 32px;
+            margin: 6px 0;
+            color: #fff;
+        }
+        .symbol-name {
+            font-size: 10px;
+            background: #333;
+            padding: 3px 8px;
+            border-radius: 30px;
+            display: inline-block;
+            color: #FFD700;
+        }
+        .example-preview {
+            font-size: 12px;
+            background: #1a1a1a;
+            margin: 6px 0;
+            padding: 4px;
+            border-radius: 20px;
+            color: #FFD966;
+        }
+        .copy-symbol-btn {
+            background: #333;
+            border: 1px solid #FFD700;
+            color: #FFD700;
+            padding: 5px 8px;
+            border-radius: 40px;
+            cursor: pointer;
+            font-size: 10px;
+            margin-top: 5px;
+            width: 90%;
+        }
+        .copy-symbol-btn:hover {
+            background: #FFD700;
+            color: #000;
+        }
+
+        .vip-collection-wrapper {
+            margin: 40px 0;
+            background: linear-gradient(145deg, #0f0f12, #070708);
+            border-radius: 32px;
+            border: 2px solid #FFD700;
+            padding: 20px;
+        }
+        .vip-scroll {
+            display: flex;
+            overflow-x: auto;
+            gap: 12px;
+            padding: 12px 4px;
+        }
+        .vip-item {
+            background: #252525;
+            padding: 8px 18px;
+            border-radius: 40px;
+            white-space: nowrap;
+            cursor: pointer;
+            border: 1px solid gold;
+            color: #FFD700;
+            flex-shrink: 0;
+        }
+        .vip-item:hover {
+            background: #FFD700;
+            color: black;
+        }
+
+        .tips-section {
+            background: #101015dd;
+            border-radius: 28px;
+            padding: 20px;
+            margin: 30px 0;
+            border: 1px solid #FFD70088;
+        }
+        .tips-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 15px;
+        }
+        .tip-card {
+            background: #1e1e24;
+            padding: 10px 15px;
+            border-radius: 40px;
+            color: #FFD700;
+            border: 1px solid #FFD70066;
+            cursor: pointer;
+        }
+        .tip-card:hover {
+            background: #FFD700;
+            color: black;
+        }
+
+        /* Community suggestions - vertical layout */
+        .suggestions-vertical {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 15px;
+            max-height: 500px;
+            overflow-y: auto;
+            padding-right: 8px;
+        }
+        .suggestion-item {
+            background: #252525dd;
+            border-radius: 28px;
+            padding: 12px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid #FFD70088;
+        }
+        .suggestion-text {
+            color: #FFD700;
+            font-weight: 500;
+        }
+        .suggestion-meta {
+            font-size: 10px;
+            color: #aaa;
+        }
+
+        .alert-custom {
+            position: fixed;
+            top: 25px;
+            right: 25px;
+            background: linear-gradient(135deg, #FFD700, #FFA500);
+            color: #1e1e1e;
+            padding: 14px 28px;
+            border-radius: 60px;
+            font-weight: bold;
+            z-index: 9999;
+            animation: slideIn 0.3s ease;
+        }
+        @keyframes slideIn {
+            from { transform: translateX(100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        /* Improved scroll-to-top button */
+        .scroll-top-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 55px;
+            height: 55px;
+            background: linear-gradient(145deg, #FFD700, #FFA500);
+            color: #1e1e1e;
+            border: none;
+            border-radius: 50%;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3), 0 0 0 2px rgba(255,215,0,0.6);
+            transition: all 0.3s ease;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0.9;
+        }
+        .scroll-top-btn:hover {
+            transform: translateY(-5px);
+            background: linear-gradient(145deg, #FFE55C, #FFB347);
+            box-shadow: 0 8px 20px rgba(255,215,0,0.5);
+            opacity: 1;
+        }
+
+        .footer {
+            margin-top: 50px;
+            text-align: center;
+            border-top: 1px solid #FFD70055;
+            padding: 30px 10px;
+            color: #ccc;
+        }
+        @media (max-width: 760px) {
+            .container { padding: 18px; }
+            .symbol-card { min-width: 115px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="ticker-wrap">
+    <div class="ticker">
+        <span>✨ YOU ARE THE FULL CONTROLLER ✨</span>
+        <span>⚡ PREMIUM SYMBOL MASTER ⚡</span>
+        <span>💎 UNLIMITED CREATIVITY 💎</span>
+        <span>👑 GOLDEN ATTACH ENGINE 👑</span>
+        <span>✨ YOU ARE THE FULL CONTROLLER ✨</span>
+    </div>
+</div>
+
+<div class="special-badge">✨ PREMIUM GOLDEN EDITION ✨</div>
+
+<div class="container">
+    <h1>✨ GOLDEN ATTACH STUDIO ✨</h1>
+    <p class="subtitle">Unlimited combining symbols • 1‑click attach • VIP scrolls</p>
+
+    <div class="input-section">
+        <div class="input-group">
+            <input type="text" id="inputText" placeholder="Your text" value="GOLD">
+            <select id="symbolSelect"></select>
+        </div>
+        <div class="repeat-buttons" id="repeatButtons"></div>
+        <div class="preview-box" id="preview">G̶O̶L̶D̶</div>
+        <button class="copy-btn" onclick="copyResult()">📋 COPY GOLDEN RESULT</button>
+        <button class="copy-btn" style="margin-top:10px; background:#2a2a2a; color:#FFD700;" onclick="randomCombo()">✨ RANDOM VIP COMBO ✨</button>
+    </div>
+
+    <div class="stats-box">
+        <div class="stat-item"><span class="stat-number">350+</span><div>Attach Symbols</div></div>
+        <div class="stat-item"><span class="stat-number">∞</span><div>Combinations</div></div>
+        <div class="stat-item"><span class="stat-number">VIP</span><div>Scroll Ready</div></div>
+    </div>
+
+    <!-- Categories will be dynamically injected here -->
+    <div id="symbolCategoriesContainer"></div>
+
+    <div class="tips-section">
+        <h3 style="color:#FFD700;">✨ QUICK TIPS – COPY & USE ✨</h3>
+        <div class="tips-grid" id="tipsGrid"></div>
+    </div>
+
+    <div class="vip-collection-wrapper">
+        <div style="text-align:center"><span style="background:gold;color:black;padding:5px 15px;border-radius:50px;">⭐ VIP EXCLUSIVE ⭐</span><h3 style="color:gold;margin-top:10px;">Click any – instant copy</h3></div>
+        <div class="vip-scroll" id="vipScroll"></div>
+    </div>
+
+    <h2 style="color:#FFD700;">💎 PREMIUM COMMUNITY VAULT</h2>
+    <div style="display:flex; justify-content:space-between; margin-bottom:15px;">
+        <p style="color:#ddd;">🔥 Real suggestions from global creators</p>
+        <button onclick="openAddSuggestionModal()" style="background:linear-gradient(135deg,#FFD700,#FFA500); border:none; padding:8px 24px; border-radius:40px; font-weight:bold; cursor:pointer;">+ ADD YOUR IDEA</button>
+    </div>
+    <div id="suggestionsContainer" class="suggestions-vertical"></div>
+    <div id="seeAllBtnContainer" style="margin-top:15px; text-align:center;"></div>
+
+    <div style="background:#101015; border:2px dashed gold; border-radius:28px; padding:20px; margin:30px 0;">
+        <h3 style="color:gold">📝 PREMIUM VAULT NOTES</h3>
+        <textarea placeholder="Save your masterpiece combinations here..." style="width:100%; background:#1e1e24; color:white; border-radius:20px; padding:12px;"></textarea>
+    </div>
+
+    <div class="footer">
+        <p>© 2026 GOLDEN ATTACH STUDIO | <a href="#" style="color:gold">Privacy Vault</a> | <a href="#" style="color:gold">Terms of Gold</a></p>
+    </div>
+</div>
+
+<div id="suggestionModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.85); align-items:center; justify-content:center; z-index:2000;">
+    <div style="background:#1a1a1f; max-width:400px; width:90%; padding:25px; border-radius:32px; border:2px solid gold;">
+        <h3 style="color:gold">✨ Add Your Creation</h3>
+        <label style="color:white">Your Name *</label>
+        <input type="text" id="suggesterName" style="width:100%; margin:8px 0; padding:10px; background:#2a2a2a; color:white; border-radius:20px;">
+        <label style="color:white">Country *</label>
+        <select id="suggesterCountry" style="width:100%; padding:10px; background:#2a2a2a; color:white; border-radius:20px;">
+            <option>Select country</option><option>🇺🇸 USA</option><option>🇬🇧 UK</option><option>🇮🇳 India</option><option>🇨🇦 Canada</option><option>🇦🇺 Australia</option>
+        </select>
+        <label style="color:white">Stylish Suggestion *</label>
+        <input type="text" id="suggestionText" style="width:100%; margin:8px 0; padding:10px; background:#2a2a2a; color:white; border-radius:20px;">
+        <div style="display:flex; gap:12px; margin-top:18px;">
+            <button onclick="saveSuggestion()" style="background:gold; border:none; padding:10px; flex:1; border-radius:40px;">💾 SAVE</button>
+            <button onclick="closeSuggestionModal()" style="background:#333; color:white; border:none; padding:10px; flex:1; border-radius:40px;">Cancel</button>
+        </div>
+    </div>
+</div>
+
+<button class="scroll-top-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})">⇑</button>
+
+<script>
+    // ========== SYMBOL DATABASE WITH CATEGORIES ==========
+    const categoriesData = [
+        { name: "🌸 FLOWER & NATURE", symbols: [
+            "᪲","᪳","᪴","ꕤ","𑁍","ꨄ","༄","𓆭","ꤪꤨꤪ"
+        ]},
+        { name: "⭐ STARS & DOTS", symbols: [
+            "͙","𖤐","˚","༙","⃯"
+        ]},
+        { name: "❤️ HEART & DECO", symbols: [
+            "͢","ꨄ","̤̮","ꤪꤨꤪ"
+        ]},
+        { name: "➖ LINE & STRIKE", symbols: [
+            "̶","̲","̅","̈","̇","̣","̧","̆","̊","̂","̄","̐","̌","̋","̝","̞","̬","̭","̯","̺","̻","̼","̠","̤"
+        ]},
+        { name: "⧼ PARENTHESIS & ARROWS", symbols: [
+            "᪻","᪼","᪽","᪾","⃨","⃩","⃪","⃫"
+        ]},
+        { name: "〰️ DOUBLE LINE/WAVY", symbols: [
+            "᪰","᪱","᪲","᪳","᪴","᪵","᪶","᪷"
+        ]},
+        { name: "🔗 TIE & DIATONIC", symbols: [
+            "͝","͡","͜","͞","͟","᷼","᷽","᷾","̏","̑","͂"
+        ]},
+        { name: "📿 CYRILLIC & MEDIEVAL", symbols: [
+            "҃","҄","҅","҆","҇","ᷣ","ᷤ","ᷥ","᷊","᷋","᷌","᷍","᷎","᷏","᷐","᷑","᷒","ᷓ","ᷔ","ᷕ","ᷖ","ᷗ","ᷘ","ᷙ","ᷚ","ᷛ","ᷜ","ᷝ","ᷞ","ᷟ","ᷠ","ᷡ","ᷢ","ᷣ","ᷤ","ᷥ","ᷦ","ᷧ","ᷨ","ᷩ","ᷪ","ᷫ","ᷬ","ᷭ","ᷮ","ᷯ","ᷰ","ᷱ"
+        ]},
+        { name: "✨ EXTRA GLYPHS", symbols: [
+            "︠","︡","︢","︣","︤","︥","︦","﻿","⃝","̥","͘","⃜","⃞","⃟","⃠","⃡","⃢","̹","̜","︈","︉","︊","︋","︌","︍","︎","️","ᷲ","ᷳ","ᷴ","᷵"
+        ]}
+    ];
+
+    let masterSymbols = new Map();
+const allSymbolNames = {
+    // Flower & Nature
+    "᪲": "Flower 1 (A᪲)",
+    "᪳": "Flower 2 (A᪳)",
+    "᪴": "Flower 3 (A᪴)",
+    "ꕤ": "Small Flower (Aꕤ)",
+    "𑁍": "Lotus (A𑁍)",
+    "ꨄ": "Tiny Heart (Aꨄ)",
+    "༄": "Wind (A༄)",
+    "𓆭": "Lotus (A𓆭)",
+    "ꤪꤨꤪ": "Rejang Decor (Aꤪꤨꤪ)",
+    
+    // Stars & Dots
+    "͙": "Tiny Star (A͙)",
+    "𖤐": "Star (A𖤐)",
+    "˚": "Ring (A˚)",
+    "༙": "Circle Dot (A༙)",
+    "⃯": "Triple Dot (A⃯)",
+    
+    // Heart & Deco
+    "͢": "Heart Trail (A͢)",
+    "̤̮": "Double Breve (A̤̮)",
+    
+    // Line & Strike (with proper examples)
+    "̶": "Cut Line (A̶)",
+    "̲": "Underline (A̲)",
+    "̅": "Overline (A̅)",
+    "̈": "Double Dot (Ä)",
+    "̇": "Dot Above (Ȧ)",
+    "̣": "Dot Below (Ạ)",
+    "̧": "Cedilla (A̧)",
+    "̆": "Breve (Ă)",
+    "̊": "Ring Above (Å)",
+    "̂": "Circumflex (Â)",
+    "̄": "Macron (Ā)",
+    "̐": "Curve (A̐)",
+    "̌": "Caron (Ǎ)",
+    "̋": "Double Acute (A̋)",
+    "̝": "Up Tack (A̝)",
+    "̞": "Down Tack (A̞)",
+    "̬": "Caron Below (A̬)",
+    "̭": "Circumflex Below (A̭)",
+    "̯": "Inverted Breve Below (A̯)",
+    "̺": "Inverted Bridge (A̺)",
+    "̻": "Square Below (A̻)",
+    "̼": "Seagull Below (A̼)",
+    "̠": "Minus Below (A̠)",
+    "̤": "Diaeresis Below (A̤)",
+    
+    // Parenthesis & Arrows
+    "᪻": "Double Parenthesis Above (A᪻)",
+    "᪼": "Double Parenthesis Below (A᪼)",
+    "᪽": "Parenthesis Above (A᪽)",
+    "᪾": "Parenthesis Below (A᪾)",
+    "⃨": "Triple Underdot (A⃨)",
+    "⃩": "Wide Bridge Above (A⃩)",
+    "⃪": "Left Arrow Above (A⃪)",
+    "⃫": "Right Arrow Above (A⃫)",
+    
+    // Double Line & Wavy
+    "᪰": "Double Circumflex Above (A᪰)",
+    "᪱": "Double Circumflex Below (A᪱)",
+    "᪲": "Double Ring Above (A᪲)",
+    "᪳": "Double Ring Below (A᪳)",
+    "᪴": "Double Overline (A᪴)",
+    "᪵": "Double Underline (A᪵)",
+    "᪶": "Double Wavy Above (A᪶)",
+    "᪷": "Double Wavy Below (A᪷)",
+    
+    // Tie & Diatonic
+    "͝": "Double Breve (A͝)",
+    "͡": "Double Inverted Breve (A͡)",
+    "͜": "Double Breve Below (A͜)",
+    "͞": "Double Macron (A͞)",
+    "͟": "Double Macron Below (A͟)",
+    "᷼": "Double Tilde Left (A᷼)",
+    "᷽": "Double Tilde Right (A᷽)",
+    "᷾": "Double Tilde Below (A᷾)",
+    "̏": "Double Grave (Ȁ)",
+    "̑": "Inverted Breve (Ȃ)",
+    "͂": "Perispomeni (A͂)",
+    
+    // Cyrillic & Medieval
+    "҃": "Titlo (A҃)",
+    "҄": "Kamora (A҄)",
+    "҅": "Psili (A҅)",
+    "҆": "Dasia (A҆)",
+    "҇": "Perispomeni (A҇)",
+    "ᷣ": "Vertical Above (Aᷣ)",
+    "ᷤ": "Double Vertical Above (Aᷤ)",
+    "ᷥ": "Vertical Below (Aᷥ)",
+    "᷊": "Ring Above Medieval (A᷊)",
+    "᷋": "Ring Below Medieval (A᷋)",
+    "᷌": "Asterisk Above (A᷌)",
+    "᷍": "Asterisk Below (A᷍)",
+    "᷎": "Arrow Above (A᷎)",
+    "᷏": "Arrow Below (A᷏)",
+    "᷐": "Flower Above (A᷐)",
+    "᷑": "Flower Below (A᷑)",
+    "᷒": "Dot Above Medieval (A᷒)",
+    "ᷓ": "Dot Below Medieval (Aᷓ)",
+    "ᷔ": "Heart Above (Aᷔ)",
+    "ᷕ": "Heart Below (Aᷕ)",
+    "ᷖ": "Star Above (Aᷖ)",
+    "ᷗ": "Star Below (Aᷗ)",
+    "ᷘ": "Crescent Above (Aᷘ)",
+    "ᷙ": "Crescent Below (Aᷙ)",
+    "ᷚ": "Right Arrow (Aᷚ)",
+    "ᷛ": "Left Arrow (Aᷛ)",
+    "ᷜ": "Up Arrow (Aᷜ)",
+    "ᷝ": "Down Arrow (Aᷝ)",
+    "ᷞ": "Left Right Arrow (Aᷞ)",
+    "ᷟ": "Up Down Arrow (Aᷟ)",
+    "ᷠ": "Circle Above (Aᷠ)",
+    "ᷡ": "Circle Below (Aᷡ)",
+    "ᷢ": "Square Above (Aᷢ)",
+    "ᷤ": "Diamond Above (Aᷤ)",
+    "ᷥ": "Diamond Below (Aᷥ)",
+    "ᷦ": "Triangle Above (Aᷦ)",
+    "ᷧ": "Triangle Below (Aᷧ)",
+    "ᷨ": "Cross Above (Aᷨ)",
+    "ᷩ": "Cross Below (Aᷩ)",
+    "ᷪ": "Wave Above (Aᷪ)",
+    "ᷫ": "Wave Below (Aᷫ)",
+    "ᷬ": "Double Wave Above (Aᷬ)",
+    "ᷭ": "Double Wave Below (Aᷭ)",
+    "ᷮ": "Zigzag Above (Aᷮ)",
+    "ᷯ": "Zigzag Below (Aᷯ)",
+    "ᷰ": "Curve Above (Aᷰ)",
+    "ᷱ": "Curve Below (Aᷱ)",
+    
+    // Extra Glyphs
+    "︠": "Ligature Left (A︠)",
+    "︡": "Ligature Right (A︡)",
+    "︢": "Double Tilde Left (A︢)",
+    "︣": "Double Tilde Right (A︣)",
+    "︤": "Macron Left (A︤)",
+    "︥": "Macron Right (A︥)",
+    "︦": "Conjoined Macron (A︦)",
+    "﻿": "Zero Width Space (A﻿)",
+    "⃝": "Circle Enclose (A⃝)",
+    "̥": "Ring Below (Ḁ)",
+    "͘": "Dot Right Half (A͘)",
+    "⃜": "Four Dots Above (A⃜)",
+    "⃞": "Enclosing Square (A⃞)",
+    "⃟": "Enclosing Diamond (A⃟)",
+    "⃠": "Circle Backslash (A⃠)",
+    "⃡": "Left Right Arrow Above (A⃡)",
+    "⃢": "Enclosing Screen (A⃢)",
+    "̹": "Right Half Ring (A̹)",
+    "̜": "Left Half Ring (A̜)",
+    "︈": "Vertical Form 1 (A︈)",
+    "︉": "Vertical Form 2 (A︉)",
+    "︊": "Vertical Form 3 (A︊)",
+    "︋": "Vertical Form 4 (A︋)",
+    "︌": "Vertical Form 5 (A︌)",
+    "︍": "Vertical Form 6 (A︍)",
+    "︎": "Text Style (A︎)",
+    "️": "Emoji Style (A️)",
+    "ᷲ": "Double Tilde Left (Aᷲ)",
+    "ᷳ": "Double Tilde Right (Aᷳ)",
+    "ᷴ": "Double Macron Left (Aᷴ)",
+    "᷵": "Double Macron Right (A᷵)"
+};
+    // Register all symbols
+    for (let cat of categoriesData) {
+        for (let sym of cat.symbols) {
+            if (!masterSymbols.has(sym)) {
+                masterSymbols.set(sym, { name: allSymbolNames[sym] || sym, category: cat.name });
+            }
+        }
+    }
+
+    // Populate dropdown
+    const selectEl = document.getElementById('symbolSelect');
+    function rebuildSelect() {
+        selectEl.innerHTML = '';
+        Array.from(masterSymbols.keys()).sort().forEach(sym => {
+            let opt = document.createElement('option');
+            opt.value = sym;
+            opt.textContent = `${sym} — ${masterSymbols.get(sym).name}`;
+            selectEl.appendChild(opt);
+        });
+    }
+    rebuildSelect();
+
+    // Render categories with horizontal scroll
+    function renderCategories() {
+        const container = document.getElementById('symbolCategoriesContainer');
+        container.innerHTML = '';
+        for (let cat of categoriesData) {
+            const catDiv = document.createElement('div');
+            catDiv.className = 'symbol-category';
+            catDiv.innerHTML = `<h2>${cat.name}</h2><div class="symbol-grid" id="grid-${cat.name.replace(/\s/g,'')}"></div>`;
+            container.appendChild(catDiv);
+            const gridDiv = catDiv.querySelector('.symbol-grid');
+            for (let sym of cat.symbols) {
+                const name = masterSymbols.get(sym)?.name || sym;
+                const card = document.createElement('div');
+                card.className = 'symbol-card';
+                card.innerHTML = `
+                    <span class="attach-badge">✅ ATTACH</span>
+                    <div class="symbol">${sym}</div>
+                    <div class="symbol-name">${name}</div>
+                    <div class="example-preview">Example: A${sym}</div>
+                    <button class="copy-symbol-btn" onclick="copySymbol('${sym.replace(/'/g, "\\'")}')">📋 Copy</button>
+                    <button class="copy-symbol-btn" style="background:#FFD700; color:#000;" onclick="attachSymbolSingle('${sym.replace(/'/g, "\\'")}')">🔗 Attach Now</button>
+                `;
+                gridDiv.appendChild(card);
+            }
+        }
+    }
+
+    let currentRepeat = 1;
+    function setRepeat(times) {
+        currentRepeat = times;
+        document.querySelectorAll('.repeat-btn').forEach(btn => btn.classList.remove('active'));
+        event.target.classList.add('active');
+        updatePreview();
+    }
+
+    function updatePreview() {
+        let text = document.getElementById('inputText').value || 'A';
+        let symbol = document.getElementById('symbolSelect').value;
+        let result = '';
+        for(let ch of text) {
+            result += ch + symbol.repeat(currentRepeat);
+        }
+        document.getElementById('preview').innerText = result;
+    }
+
+    function attachSymbolSingle(symbol) {
+        currentRepeat = 1;
+        document.querySelectorAll('.repeat-btn').forEach(btn => btn.classList.remove('active'));
+        const btn1 = Array.from(document.querySelectorAll('.repeat-btn')).find(b => b.innerText === '1x');
+        if(btn1) btn1.classList.add('active');
+        document.getElementById('symbolSelect').value = symbol;
+        updatePreview();
+        showAlert(`✨ Attached ${symbol} (single layer)`);
+    }
+
+    function copyResult() { copyToClipboard(document.getElementById('preview').innerText); }
+    function copySymbol(sym) { copyToClipboard(sym); }
+    function copyText(txt) { copyToClipboard(txt); }
+
+    function copyToClipboard(text) {
+        navigator.clipboard.writeText(text).then(() => {
+            showAlert(`🎉 Congratulations! Copied successfully! ✨`);
+        });
+    }
+
+    function showAlert(msg) {
+        let div = document.createElement('div');
+        div.className = 'alert-custom';
+        div.innerText = msg;
+        document.body.appendChild(div);
+        setTimeout(() => div.remove(), 2000);
+    }
+
+    function randomCombo() {
+        const allSym = Array.from(masterSymbols.keys());
+        const randSym = allSym[Math.floor(Math.random() * allSym.length)];
+        document.getElementById('symbolSelect').value = randSym;
+        currentRepeat = Math.floor(Math.random() * 5) + 1;
+        const btns = document.querySelectorAll('.repeat-btn');
+        btns.forEach(btn => btn.classList.remove('active'));
+        let target = Array.from(btns).find(b => parseInt(b.innerText) === currentRepeat);
+        if(target) target.classList.add('active');
+        updatePreview();
+        showAlert(`✨ VIP Random: ${randSym}`);
+    }
+
+    function buildRepeatBtns() {
+        const container = document.getElementById('repeatButtons');
+        container.innerHTML = '';
+        for(let i=1;i<=10;i++) {
+            let btn = document.createElement('button');
+            btn.className = 'repeat-btn' + (i===1 ? ' active' : '');
+            btn.innerText = i+'x';
+            btn.onclick = (function(val){ return function(){ setRepeat(val); }; })(i);
+            container.appendChild(btn);
+        }
+    }
+
+    // Tips
+    const tipsData = ["💗 → 💗᪲", "🍁 → 🍁᪳", "😊 → 😊᪴", "A → A͙͙͙", "A → A˚", "👿 → 👿͢͢͢", "K → K̶"];
+    function renderTips() {
+        const tipsGrid = document.getElementById('tipsGrid');
+        tipsGrid.innerHTML = tipsData.map(tip => `<div class="tip-card" onclick="copyText('${tip.split('→')[1].trim()}')">${tip}</div>`).join('');
+    }
+
+    // VIP
+    function renderVIP() {
+        const vipContainer = document.getElementById('vipScroll');
+        vipContainer.innerHTML = '';
+        const vipPre = ["ᴅ ɪ ᴍ ⌔ ɴ ᴅ", "𝐶 🂱 𝑅 𝐷", "💗᪲", "K̶", "👿͢͢͢", "🔥̲̲̲", "✨⃟", "🌟͙͙"];
+        vipPre.forEach(item => {
+            let vipDiv = document.createElement('div');
+            vipDiv.className = 'vip-item';
+            vipDiv.innerText = item;
+            vipDiv.onclick = () => copyText(item);
+            vipContainer.appendChild(vipDiv);
+        });
+    }
+
+    // Community Suggestions - vertical layout
+    let communitySuggestions = [];
+    function loadSuggestions() {
+        const saved = localStorage.getItem('goldenSuggestions');
+        if(saved) communitySuggestions = JSON.parse(saved);
+        else communitySuggestions = [
+            { text: "J͢a͢c͢k͢", addedBy: "System", country: "Global" },
+            { text: "Lꨄoꨄvꨄeꨄ", addedBy: "System", country: "Global" },
+            { text: "S᪲a᪲m᪲", addedBy: "System", country: "Global" },
+            { text: "R̶o̶c̶k̶", addedBy: "System", country: "USA" }
+        ];
+        renderSuggestions();
+    }
+    function renderSuggestions() {
+        const container = document.getElementById('suggestionsContainer');
+        let shuffled = [...communitySuggestions].sort(()=>0.5-Math.random());
+        let show = shuffled.slice(0, 8);
+        container.innerHTML = show.map(s => `
+            <div class="suggestion-item">
+                <div><div class="suggestion-text">${s.text}</div><div class="suggestion-meta">✨ ${s.addedBy} (${s.country})</div></div>
+                <button onclick="copyText('${s.text.replace(/'/g, "\\'")}')" style="background:#333; border:1px solid gold; color:gold; border-radius:30px; padding:5px 12px;">Copy</button>
+            </div>
+        `).join('');
+        const seeAll = document.getElementById('seeAllBtnContainer');
+        if(communitySuggestions.length > 8) seeAll.innerHTML = `<button onclick="showAllSuggestions()" style="background:transparent; border:1px solid gold; color:gold; padding:8px 20px; border-radius:40px;">📜 See All (${communitySuggestions.length})</button>`;
+        else seeAll.innerHTML = '';
+    }
+    function showAllSuggestions() {
+        const container = document.getElementById('suggestionsContainer');
+        container.innerHTML = communitySuggestions.map(s => `
+            <div class="suggestion-item">
+                <div><div class="suggestion-text">${s.text}</div><div class="suggestion-meta">✨ ${s.addedBy} (${s.country})</div></div>
+                <button onclick="copyText('${s.text.replace(/'/g, "\\'")}')" style="background:#333; border:1px solid gold; color:gold; border-radius:30px; padding:5px 12px;">Copy</button>
+            </div>
+        `).join('');
+        document.getElementById('seeAllBtnContainer').innerHTML = `<button onclick="renderSuggestions()" style="background:transparent; border:1px solid gold; color:gold; padding:8px 20px; border-radius:40px;">← Show Random</button>`;
+    }
+    function saveSuggestion() {
+        let name = document.getElementById('suggesterName').value.trim();
+        let country = document.getElementById('suggesterCountry').value;
+        let text = document.getElementById('suggestionText').value.trim();
+        if(!name || !country || !text) { showAlert("Please fill all fields"); return; }
+        communitySuggestions.push({ text, addedBy: name, country });
+        localStorage.setItem('goldenSuggestions', JSON.stringify(communitySuggestions));
+        closeSuggestionModal();
+        renderSuggestions();
+        showAlert(`✅ Thank you ${name}! Suggestion added.`);
+    }
+    function openAddSuggestionModal() { document.getElementById('suggestionModal').style.display = 'flex'; }
+    function closeSuggestionModal() { document.getElementById('suggestionModal').style.display = 'none'; }
+
+    // Scroll-to-top button visibility
+    window.addEventListener('scroll', () => {
+        const btn = document.querySelector('.scroll-top-btn');
+        if (window.scrollY > 300) btn.style.display = 'flex';
+        else btn.style.display = 'none';
+    });
+
+    window.onload = () => {
+        buildRepeatBtns();
+        renderCategories();
+        renderTips();
+        renderVIP();
+        loadSuggestions();
+        updatePreview();
+        document.getElementById('inputText').addEventListener('input', updatePreview);
+        document.getElementById('symbolSelect').addEventListener('change', updatePreview);
+        document.querySelector('.scroll-top-btn').style.display = 'none';
+    };
+
+    window.copySymbol = copySymbol;
+    window.copyResult = copyResult;
+    window.copyText = copyText;
+    window.attachSymbolSingle = attachSymbolSingle;
+    window.randomCombo = randomCombo;
+    window.saveSuggestion = saveSuggestion;
+    window.openAddSuggestionModal = openAddSuggestionModal;
+    window.closeSuggestionModal = closeSuggestionModal;
+    window.showAllSuggestions = showAllSuggestions;
+</script>
+</body>
+</html>
