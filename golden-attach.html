@@ -950,6 +950,18 @@ function saveSuggestion() {
 function closeSuggestionModal() {
     document.getElementById('suggestionModal').style.display = 'none';
 }
+         function checkAccess() {
+    const code = document.getElementById('accessCode').value;
+    // Apne actual access codes yahan add karo
+    const validCodes = ["GOLD2026", "VIP199", "ATTACH123"];
+    
+    if (validCodes.includes(code)) {
+        document.getElementById('premiumContent').style.display = 'block';
+        showToast("✅ Access Granted! Enjoy Golden Studio.");
+    } else {
+        showToast("❌ Invalid Code. Please check your email.");
+    }
+         }
 
     // Scroll to top button visibility - FIXED
 window.addEventListener('scroll', function() {
