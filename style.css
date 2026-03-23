@@ -1589,7 +1589,7 @@ p { margin-bottom: 1rem; color: var(--gray); }
 .golden-brand {
     position: fixed;
     bottom: 8px;
-    right: 12px;
+    right: 15px;
     font-size: 9px;
     font-weight: 400;
     color: #000000;
