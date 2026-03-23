@@ -504,6 +504,27 @@
     background: linear-gradient(145deg, #FFE55C, #FFB347);
     box-shadow: 0 8px 20px rgba(255,215,0,0.5);
 }
+        
+        /* Golden Brand Text - Bottom Right */
+.golden-brand {
+    position: fixed;
+    bottom: 15px;
+    right: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #FFD700;
+    text-shadow: 0 0 2px rgba(0,0,0,0.5);
+    opacity: 0.7;
+    transition: opacity 0.3s;
+    z-index: 999;
+    letter-spacing: 0.5px;
+    font-family: 'Segoe UI', 'Poppins', sans-serif;
+    pointer-events: none; /* clicks pass through */
+}
+
+.golden-brand:hover {
+    opacity: 1;
+}
 
         .footer {
             margin-top: 50px;
@@ -623,6 +644,8 @@
         </div>
     </div>
 </div>
+
+    <div class="golden-brand">Golden Attach</div>
 
 <button class="scroll-top-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 
