@@ -1585,3 +1585,24 @@ p { margin-bottom: 1rem; color: var(--gray); }
         font-size: 1rem;
     }
 }
+
+/* Golden Brand Text - Bottom Right */
+.golden-brand {
+    position: fixed;
+    bottom: 15px;
+    right: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #FFD700;
+    text-shadow: 0 0 2px rgba(0,0,0,0.5);
+    opacity: 0.7;
+    transition: opacity 0.3s;
+    z-index: 999;
+    letter-spacing: 0.5px;
+    font-family: 'Segoe UI', 'Poppins', sans-serif;
+    pointer-events: none;
+}
+
+.golden-brand:hover {
+    opacity: 1;
+}
