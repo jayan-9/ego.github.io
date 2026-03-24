@@ -1590,13 +1590,13 @@ p { margin-bottom: 1rem; color: var(--gray); }
     position: fixed;
     bottom: 8px;
     right: 10px;
-    font-size: 9px;
+    font-size: 8px;
     font-weight: 400;
     color: #000000;
-    opacity: 0.5;
+    opacity: 0.3;
     transition: opacity 0.3s;
     z-index: 999;
-    letter-spacing: 0.3px;
+    letter-spacing: 0.2px;
     font-family: 'Segoe UI', 'Poppins', sans-serif;
     pointer-events: none;
 }
