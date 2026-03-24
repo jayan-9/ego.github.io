@@ -1604,10 +1604,9 @@ p { margin-bottom: 1rem; color: var(--gray); }
 .golden-brand:hover {
     opacity: 0.8;
 }
-
 /* ===== CATEGORY WISE STYLE CARD COLORS ===== */
 
-/* Love Category - Pink */
+/* Love Category - Pink Border Only (Text Normal) */
 .style-card.love {
     border-left: 5px solid #ff69b4;
     background: linear-gradient(135deg, rgba(255,105,180,0.05), rgba(255,105,180,0.02));
@@ -1616,11 +1615,12 @@ p { margin-bottom: 1rem; color: var(--gray); }
     border-color: #ff69b4;
     box-shadow: 0 5px 15px rgba(255,105,180,0.2);
 }
+/* Text color normal rakho - pink nahi */
 .style-card.love .style-text {
-    color: #ff69b4;
+    color: inherit;  /* 👈 normal black/white */
 }
 
-/* Gamer Category - Blue */
+/* Gamer Category - Blue Border Only */
 .style-card.gamer {
     border-left: 5px solid #3b82f6;
     background: linear-gradient(135deg, rgba(59,130,246,0.05), rgba(59,130,246,0.02));
@@ -1630,10 +1630,10 @@ p { margin-bottom: 1rem; color: var(--gray); }
     box-shadow: 0 5px 15px rgba(59,130,246,0.2);
 }
 .style-card.gamer .style-text {
-    color: #3b82f6;
+    color: inherit;
 }
 
-/* Fancy Category - Gold */
+/* Fancy Category - Gold Border Only */
 .style-card.fancy {
     border-left: 5px solid #FFD700;
     background: linear-gradient(135deg, rgba(255,215,0,0.05), rgba(255,215,0,0.02));
@@ -1643,10 +1643,10 @@ p { margin-bottom: 1rem; color: var(--gray); }
     box-shadow: 0 5px 15px rgba(255,215,0,0.2);
 }
 .style-card.fancy .style-text {
-    color: #FFD700;
+    color: inherit;
 }
 
-/* Font Category - Gray/White */
+/* Font Category - Gray Border Only */
 .style-card.font {
     border-left: 5px solid #a0a0a0;
     background: linear-gradient(135deg, rgba(160,160,160,0.05), rgba(160,160,160,0.02));
@@ -1656,10 +1656,10 @@ p { margin-bottom: 1rem; color: var(--gray); }
     box-shadow: 0 5px 15px rgba(160,160,160,0.2);
 }
 .style-card.font .style-text {
-    color: #e0e0e0;
+    color: inherit;
 }
 
-/* Dark Theme Support */
+/* Dark Theme Support - Background only, text white automatically */
 .dark-theme .style-card.love {
     background: linear-gradient(135deg, rgba(255,105,180,0.1), rgba(255,105,180,0.03));
 }
@@ -1671,4 +1671,9 @@ p { margin-bottom: 1rem; color: var(--gray); }
 }
 .dark-theme .style-card.font {
     background: linear-gradient(135deg, rgba(160,160,160,0.1), rgba(160,160,160,0.03));
+}
+
+/* Dark theme mein text white automatically aayega */
+.dark-theme .style-card .style-text {
+    color: #f0f0f0 !important;
 }
