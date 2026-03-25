@@ -58,13 +58,55 @@
         document.getElementById('priceDisplay').innerText = selected.usd;
         document.getElementById('priceInr').innerHTML = `≈ ₹${selected.amount}`;
         
-        // Razorpay Key (Replace with your actual key)
-        const RAZORPAY_KEY = "rzp_live_SVWSf422lH2nLv"; // 🔴 YAHAN APNI KEY DALO
+        // ========== ADMIN EMAILS ==========
+        const adminEmails = [
+            'jayantmachhi2@gmail.com',
+            'stylenamein@gmail.com'
+        ];
+        
+        function isAdmin(email) {
+            return adminEmails.includes(email);
+        }
+        
+        // Razorpay Key
+        const RAZORPAY_KEY = "rzp_live_SVWSf422lH2nLv";
         
         document.getElementById('payButton').onclick = function() {
-            let email = document.getElementById('userEmail').value;
+            let email = document.getElementById('userEmail').value.trim();
             if(!email) { alert("Please enter your email"); return; }
             
+            // ========== ADMIN DIRECT ACCESS (No Payment) ==========
+            if(isAdmin(email)) {
+                // Grant lifetime access
+                localStorage.setItem('goldenAccess', 'true');
+                localStorage.setItem('goldenPlan', 'Lifetime');
+                localStorage.setItem('goldenExpiry', 'lifetime');
+                localStorage.setItem('goldenUserEmail', email);
+                
+                // Save to users list
+                let users = JSON.parse(localStorage.getItem('goldenUsers') || '[]');
+                users.push({
+                    email: email,
+                    name: "Admin",
+                    plan: "Lifetime (Admin)",
+                    date: new Date().toISOString(),
+                    expiry: 'lifetime'
+                });
+                localStorage.setItem('goldenUsers', JSON.stringify(users));
+                
+                // Show success & redirect
+                document.getElementById('paymentContainer').style.display = 'none';
+                let successDiv = document.getElementById('successMsg');
+                successDiv.style.display = 'block';
+                successDiv.innerHTML = '<span style="font-size:2rem;">👑</span><h3 style="color:white;">Admin Access Granted!</h3><p style="color:#ccc;">Welcome to Golden Studio ✨</p>';
+                
+                setTimeout(() => {
+                    window.location.href = 'golden-attach.html';
+                }, 1500);
+                return;
+            }
+            
+            // ========== NORMAL PAYMENT FLOW ==========
             let name = document.getElementById('userName').value || "User";
             
             let options = {
