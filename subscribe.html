@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscribe – Golden Attach Studio</title>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <style>
+        body { background: #0a0a0c; font-family: 'Segoe UI', sans-serif; margin: 0; padding: 20px; }
+        .container { max-width: 500px; margin: 50px auto; background: #1a1a1f; border-radius: 30px; padding: 30px; border: 1px solid #FFD700; text-align: center; }
+        .price { font-size: 2.5rem; color: #FFD700; font-weight: bold; }
+        .plan-badge { background: #FFD700; color: #000; padding: 5px 15px; border-radius: 50px; display: inline-block; margin-bottom: 15px; }
+        .success { background: #0f5c2e; padding: 20px; border-radius: 15px; display: none; }
+        .loading { display: none; }
+    </style>
+</head>
+<body>
+    <div class="container" id="paymentContainer">
+        <div class="plan-badge" id="planBadge">Monthly Plan</div>
+        <h2 style="color: #FFD700;">✨ Golden Attach Studio</h2>
+        <div class="price" id="priceDisplay">$2</div>
+        <p id="priceInr">≈ ₹199</p>
+        <p style="color: #ccc;">Subscribe to unlock premium features</p>
+        
+        <div style="margin: 25px 0;">
+            <input type="email" id="userEmail" placeholder="Your Email *" style="width: 90%; padding: 12px; background: #0f0f12; border: 1px solid #FFD700; border-radius: 10px; color: white; margin: 5px 0;" required>
+            <input type="text" id="userName" placeholder="Your Name" style="width: 90%; padding: 12px; background: #0f0f12; border: 1px solid #FFD700; border-radius: 10px; color: white; margin: 5px 0;">
+        </div>
+        
+        <button id="payButton" style="background: #FFD700; color: #000; padding: 14px 30px; border: none; border-radius: 50px; font-weight: bold; font-size: 1.1rem; cursor: pointer; width: 100%;">
+            💳 Pay Now
+        </button>
+        
+        <div id="successMsg" class="success">
+            <span style="font-size: 2rem;">✅</span>
+            <h3 style="color: white;">Payment Successful!</h3>
+            <p style="color: #ccc;">Redirecting to Golden Studio...</p>
+        </div>
+        
+        <div id="loadingMsg" class="loading" style="color: #FFD700;">Processing payment... ⏳</div>
+        
+        <p style="color: #666; font-size: 0.7rem; margin-top: 20px;">Secure payment via Razorpay • Money-back guarantee</p>
+    </div>
+    
+    <script>
+        // Get plan from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        let plan = urlParams.get('plan') || 'monthly';
+        
+        let planDetails = {
+            monthly: { name: 'Monthly Plan', amount: 199, currency: 'INR', usd: '$2' },
+            lifetime: { name: 'Lifetime Plan', amount: 16500, currency: 'INR', usd: '$200' }
+        };
+        
+        let selected = planDetails[plan];
+        
+        document.getElementById('planBadge').innerText = selected.name;
+        document.getElementById('priceDisplay').innerText = selected.usd;
+        document.getElementById('priceInr').innerHTML = `≈ ₹${selected.amount}`;
+        
+        // Razorpay Key (Replace with your actual key)
+        const RAZORPAY_KEY = "rzp_test_YourActualKeyHere"; // 🔴 YAHAN APNI KEY DALO
+        
+        document.getElementById('payButton').onclick = function() {
+            let email = document.getElementById('userEmail').value;
+            if(!email) { alert("Please enter your email"); return; }
+            
+            let name = document.getElementById('userName').value || "User";
+            
+            let options = {
+                key: RAZORPAY_KEY,
+                amount: selected.amount * 100,
+                currency: selected.currency,
+                name: "Golden Attach Studio",
+                description: selected.name,
+                image: "favicon.png",
+                prefill: {
+                    email: email,
+                    name: name
+                },
+                theme: {
+                    color: "#FFD700"
+                },
+                handler: function(response) {
+                    // Payment Success
+                    let userData = {
+                        email: email,
+                        name: name,
+                        plan: selected.name,
+                        paymentId: response.razorpay_payment_id,
+                        date: new Date().toISOString(),
+                        expiry: plan === 'monthly' ? getExpiryDate(30) : 'lifetime'
+                    };
+                    
+                    // Save to localStorage
+                    let users = JSON.parse(localStorage.getItem('goldenUsers') || '[]');
+                    users.push(userData);
+                    localStorage.setItem('goldenUsers', JSON.stringify(users));
+                    localStorage.setItem('goldenAccess', 'true');
+                    localStorage.setItem('goldenUserEmail', email);
+                    localStorage.setItem('goldenPlan', selected.name);
+                    
+                    if(plan === 'monthly') {
+                        localStorage.setItem('goldenExpiry', userData.expiry);
+                    } else {
+                        localStorage.setItem('goldenExpiry', 'lifetime');
+                    }
+                    
+                    // Show success & redirect
+                    document.getElementById('paymentContainer').style.display = 'none';
+                    document.getElementById('successMsg').style.display = 'block';
+                    
+                    setTimeout(() => {
+                        window.location.href = 'golden-attach.html';
+                    }, 2000);
+                },
+                modal: {
+                    ondismiss: function() {
+                        alert("Payment cancelled");
+                    }
+                }
+            };
+            
+            let razorpay = new Razorpay(options);
+            razorpay.open();
+        };
+        
+        function getExpiryDate(days) {
+            let date = new Date();
+            date.setDate(date.getDate() + days);
+            return date.toISOString();
+        }
+    </script>
+</body>
+</html>
