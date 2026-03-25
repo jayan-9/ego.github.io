@@ -1677,3 +1677,33 @@ p { margin-bottom: 1rem; color: var(--gray); }
 .dark-theme .style-card .style-text {
     color: #f0f0f0 !important;
 }
+
+/* Sidebar Premium Item */
+.premium-sidebar {
+    background: linear-gradient(135deg, rgba(255,215,0,0.1), rgba(255,165,0,0.05));
+    border-left: 3px solid #FFD700 !important;
+    margin: 8px 0;
+}
+
+.premium-sidebar:hover {
+    background: linear-gradient(135deg, rgba(255,215,0,0.2), rgba(255,165,0,0.1));
+}
+
+.premium-badge {
+    background: #FFD700;
+    color: #000;
+    font-size: 0.6rem;
+    padding: 2px 6px;
+    border-radius: 20px;
+    font-weight: bold;
+    margin-left: 8px;
+}
+
+/* Dark theme sidebar premium */
+.dark-theme .premium-sidebar {
+    background: linear-gradient(135deg, rgba(255,215,0,0.15), rgba(255,165,0,0.08));
+}
+
+.dark-theme .premium-sidebar:hover {
+    background: linear-gradient(135deg, rgba(255,215,0,0.25), rgba(255,165,0,0.15));
+}
