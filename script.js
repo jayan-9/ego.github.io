@@ -1569,25 +1569,55 @@ function selectCategory(type) {
     
     // Check if Gold category selected
     if (type === 'gold') {
-        // Hide all main sections (except footer and golden-brand)
-        const elementsToHide = [
-            document.querySelector('.sticky-toolbar'),
-            document.querySelector('.categories-section'),
-            document.querySelector('.results-section'),
-            document.getElementById('suggestionsTray'),
-            document.querySelector('.quick-tips-container'),
-            document.querySelector('.pro-tips-container'),
-            document.querySelector('.latest-articles'),
-            document.querySelector('.guide-section'),
-            document.querySelector('.features-section'),
-            document.querySelector('.ad-container'),
-            document.querySelector('.more-section'),
-            document.querySelector('div[style*="text-align: center; margin: 40px 0 20px 0;"]'),
-            document.querySelector('.fnqs-heading')?.closest('div')
+        // Hide ALL sections except footer, golden brand, and gold content
+        const sectionsToHide = [
+            '.sticky-toolbar',
+            '.categories-section',
+            '.results-section',
+            '.top3-section',
+            '.welcome-text-container',
+            '.quick-tips-container',
+            '.guide-section',
+            '.features-section',
+            '.ad-container',
+            '.more-section',
+            '.gaming-links-container',
+            '.social-links-container',
+            '.vip-links-container',
+            '.guide-links-container',
+            '.bio-collection-wrapper',
+            '.luxury-wrapper',
+            '.category-box',
+            '.single-link-container',
+            '.tips-links-container',
+            '.suggestion-link-container',
+            '.style-guide-section',
+            '.faq-container',
+            '.golden-attach-premium',
+            'div[style*="text-align: center; margin: 40px 0 20px 0;"]',
+            'div[style*="text-align: center; margin: 30px 0 20px 0;"]'
         ];
         
-        elementsToHide.forEach(el => {
-            if (el) el.style.display = 'none';
+        sectionsToHide.forEach(selector => {
+            const elements = document.querySelectorAll(selector);
+            elements.forEach(el => {
+                if (el) el.style.display = 'none';
+            });
+        });
+        
+        // Hide FNQs and Explore More headings
+        const fnqsHeadings = document.querySelectorAll('.fnqs-heading');
+        fnqsHeadings.forEach(heading => {
+            const parent = heading.closest('div');
+            if (parent) parent.style.display = 'none';
+        });
+        
+        // Hide any remaining divs with class or style
+        const extraDivs = document.querySelectorAll('.container > div, .results-section > div, .more-section, .category-box');
+        extraDivs.forEach(div => {
+            if (div.id !== 'goldContent' && !div.classList?.contains('footer')) {
+                div.style.display = 'none';
+            }
         });
         
         // Show gold content
@@ -1597,36 +1627,63 @@ function selectCategory(type) {
             goldContent.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
         
-        // Ensure footer is visible
+        // Ensure footer and golden brand are visible
         const footer = document.querySelector('.footer');
         if (footer) footer.style.display = 'block';
         
-        // Ensure golden brand is visible
         const goldenBrand = document.querySelector('.golden-brand');
         if (goldenBrand) goldenBrand.style.display = 'block';
         
         return;
     }
     
-    // For normal categories - Show everything back
-    const elementsToShow = [
-        document.querySelector('.sticky-toolbar'),
-        document.querySelector('.categories-section'),
-        document.querySelector('.results-section'),
-        document.getElementById('suggestionsTray'),
-        document.querySelector('.quick-tips-container'),
-        document.querySelector('.pro-tips-container'),
-        document.querySelector('.latest-articles'),
-        document.querySelector('.guide-section'),
-        document.querySelector('.features-section'),
-        document.querySelector('.ad-container'),
-        document.querySelector('.more-section'),
-        document.querySelector('div[style*="text-align: center; margin: 40px 0 20px 0;"]'),
-        document.querySelector('.fnqs-heading')?.closest('div')
+    // For normal categories (love, gamer, fancy, font)
+    // Show all sections back
+    const sectionsToShow = [
+        '.sticky-toolbar',
+        '.categories-section',
+        '.results-section',
+        '.top3-section',
+        '.welcome-text-container',
+        '.quick-tips-container',
+        '.guide-section',
+        '.features-section',
+        '.ad-container',
+        '.more-section',
+        '.gaming-links-container',
+        '.social-links-container',
+        '.vip-links-container',
+        '.guide-links-container',
+        '.bio-collection-wrapper',
+        '.luxury-wrapper',
+        '.category-box',
+        '.single-link-container',
+        '.tips-links-container',
+        '.suggestion-link-container',
+        '.style-guide-section',
+        '.faq-container'
     ];
     
-    elementsToShow.forEach(el => {
-        if (el) el.style.display = '';
+    sectionsToShow.forEach(selector => {
+        const elements = document.querySelectorAll(selector);
+        elements.forEach(el => {
+            if (el) el.style.display = '';
+        });
+    });
+    
+    // Show FNQs headings back
+    const fnqsHeadings = document.querySelectorAll('.fnqs-heading');
+    fnqsHeadings.forEach(heading => {
+        const parent = heading.closest('div');
+        if (parent) parent.style.display = '';
+    });
+    
+    // Show container divs back
+    const containerDivs = document.querySelectorAll('.container > div');
+    containerDivs.forEach(div => {
+        if (div.id !== 'goldContent' && !div.classList?.contains('footer')) {
+            div.style.display = '';
+        }
     });
     
     // Hide gold content
@@ -1641,8 +1698,7 @@ function selectCategory(type) {
     if (typeof loadTop3Styles === 'function') {
         loadTop3Styles();
     }
-}
-// ===== LOAD MINI SUGGESTIONS WITH IMAGE AFTER 20 =====
+}// ===== LOAD MINI SUGGESTIONS WITH IMAGE AFTER 20 =====
 function loadMiniSuggestions() {
     const miniGrid = document.getElementById('miniSuggestions');
     const categoryName = document.getElementById('currentCategoryName');
