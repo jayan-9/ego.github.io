@@ -1608,6 +1608,16 @@ function selectCategory(type) {
             const parent = heading.closest('div');
             if (parent && parent !== document.querySelector('.navbar')) parent.style.display = 'none';
         });
+
+        // Hide FNQs heading by text (ye tumhare wale FNQs ke liye kaafi hai)
+const allH2 = document.querySelectorAll('h2');
+allH2.forEach(h2 => {
+    if (h2.innerText === 'FNQs' || h2.innerText.includes('FNQs')) {
+        h2.style.display = 'none';
+        const parentDiv = h2.closest('div');
+        if (parentDiv) parentDiv.style.display = 'none';
+    }
+});
         
         // Show gold content
         const goldContent = document.getElementById('goldContent');
