@@ -1708,82 +1708,115 @@ p { margin-bottom: 1rem; color: var(--gray); }
     background: linear-gradient(135deg, rgba(255,215,0,0.25), rgba(255,165,0,0.15));
 }
 
-/* GOLD Card Button */
+/* ===== GOLD CARD BUTTON ===== */
 .gold-card-btn {
-    background: linear-gradient(135deg, #1a1a1f, #0f0f12) !important;
+    background: linear-gradient(135deg, #2a2a2f, #1a1a1f) !important;
     border: 2px solid #FFD700 !important;
     transition: all 0.3s ease;
+    cursor: pointer;
 }
-
+.gold-card-btn i, .gold-card-btn span {
+    color: #FFD700 !important;
+}
 .gold-card-btn:hover {
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(255,215,0,0.3);
 }
 
-/* GOLD Guide Section (Hidden initially) */
+/* ===== GOLD GUIDE SECTION ===== */
 .gold-guide {
     display: none;
-    background: linear-gradient(145deg, #0c0c0e, #121216);
+    background: #1a1a1f;
     border: 2px solid #FFD700;
     border-radius: 28px;
     padding: 30px;
     margin: 30px 0;
     box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    color: #e0e0e0;
 }
 
-/* Inner Guide Styles */
-.gold-guide h2, .gold-guide h3 {
+/* Headings */
+.gold-guide h2 {
     color: #FFD700;
+    font-size: 1.8rem;
+    margin: 10px 0;
 }
+.gold-guide h3 {
+    color: #FFD700;
+    font-size: 1.3rem;
+    margin: 0 0 10px 0;
+}
+.gold-guide h4 {
+    color: #FFD700;
+    margin: 8px 0;
+}
+
+/* Section Title with Gold Border */
 .gold-guide .section-title {
     border-left: 4px solid #FFD700;
     padding-left: 15px;
-    margin: 25px 0 20px;
+    margin: 30px 0 20px 0;
+    color: #FFD700;
+    font-size: 1.3rem;
+    font-weight: bold;
 }
-.gold-guide .grid-2col {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-    margin-bottom: 30px;
-}
-.gold-guide .card {
-    background: rgba(255,215,0,0.05);
-    border-radius: 20px;
-    padding: 20px;
-}
+
+/* Example Rows */
 .gold-guide .example-row {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    margin: 20px 0;
+    gap: 12px;
+    margin: 15px 0;
 }
 .gold-guide .example-item {
-    background: #0f0f12;
+    background: #2a2a2f;
     padding: 8px 16px;
     border-radius: 40px;
     color: #FFD700;
     font-size: 0.9rem;
+    border: 1px solid rgba(255,215,0,0.3);
 }
-.gold-guide .symbol-variations {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    margin: 15px 0;
-}
+
+/* Symbol Groups / Cards */
 .gold-guide .symbol-group {
-    background: #0f0f12;
-    padding: 12px;
-    border-radius: 16px;
-    text-align: center;
-    min-width: 100px;
+    background: #2a2a2f;
+    padding: 15px;
+    border-radius: 20px;
+    color: #f0f0f0;
+    border: 1px solid rgba(255,215,0,0.2);
 }
+.gold-guide .card {
+    background: #2a2a2f;
+    padding: 20px;
+    border-radius: 20px;
+    color: #ccc;
+    border: 1px solid rgba(255,215,0,0.2);
+    transition: transform 0.2s;
+}
+.gold-guide .card:hover {
+    transform: translateY(-3px);
+    border-color: #FFD700;
+}
+
+/* FAQ Items */
+.gold-guide .faq-item {
+    background: #2a2a2f;
+    padding: 15px;
+    border-radius: 20px;
+    color: #ccc;
+    border: 1px solid rgba(255,215,0,0.2);
+}
+.gold-guide .faq-item strong {
+    color: #FFD700;
+}
+
+/* Price Box */
 .gold-guide .price-box {
     background: rgba(255,215,0,0.1);
     border-radius: 24px;
-    padding: 20px;
+    padding: 25px;
     text-align: center;
-    margin: 20px 0;
+    margin: 30px 0;
 }
 .gold-guide .old-price {
     text-decoration: line-through;
@@ -1794,7 +1827,7 @@ p { margin-bottom: 1rem; color: var(--gray); }
     color: #FFD700;
     font-size: 2.5rem;
     font-weight: bold;
-    margin: 0 10px;
+    margin: 0 12px;
 }
 .gold-guide .btn-gold {
     background: #FFD700;
@@ -1804,7 +1837,11 @@ p { margin-bottom: 1rem; color: var(--gray); }
     text-decoration: none;
     font-weight: bold;
     display: inline-block;
-    margin: 10px;
+    margin: 5px;
+    transition: transform 0.2s;
+}
+.gold-guide .btn-gold:hover {
+    transform: scale(1.02);
 }
 .gold-guide .btn-outline {
     border: 2px solid #FFD700;
@@ -1814,20 +1851,59 @@ p { margin-bottom: 1rem; color: var(--gray); }
     text-decoration: none;
     font-weight: bold;
     display: inline-block;
-    margin: 10px;
+    margin: 5px;
+    background: transparent;
+    transition: all 0.2s;
 }
-.gold-guide .faq-item {
-    background: #0f0f12;
-    padding: 12px 18px;
-    border-radius: 16px;
-    margin-bottom: 12px;
+.gold-guide .btn-outline:hover {
+    background: rgba(255,215,0,0.1);
 }
-.gold-guide .faq-question {
-    color: #FFD700;
-    font-weight: bold;
+
+/* Grid Layouts */
+.gold-guide .grid-2col {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin: 15px 0;
 }
-.gold-guide .faq-answer {
-    color: #ccc;
-    font-size: 0.9rem;
-    margin-top: 5px;
+.gold-guide .grid-3col {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    margin: 15px 0;
+}
+
+/* Small text */
+.gold-guide .small-text {
+    color: #aaa;
+    font-size: 0.8rem;
+}
+
+/* Footer */
+.gold-guide .guide-footer {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,215,0,0.2);
+    color: #FFD700aa;
+    font-size: 0.8rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .gold-guide {
+        padding: 20px;
+    }
+    .gold-guide .example-item {
+        font-size: 0.8rem;
+        padding: 5px 12px;
+    }
+    .gold-guide .new-price {
+        font-size: 1.8rem;
+    }
+    .gold-guide .btn-gold, 
+    .gold-guide .btn-outline {
+        padding: 8px 20px;
+        font-size: 0.9rem;
+    }
 }
