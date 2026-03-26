@@ -1569,10 +1569,8 @@ function selectCategory(type) {
     
     // Check if Gold category selected
     if (type === 'gold') {
-        // Hide ALL sections except footer, golden brand, and gold content
+        // Hide only extra sections - NOT navbar, toolbar, categories
         const sectionsToHide = [
-            '.sticky-toolbar',
-            '.categories-section',
             '.results-section',
             '.top3-section',
             '.welcome-text-container',
@@ -1593,7 +1591,6 @@ function selectCategory(type) {
             '.suggestion-link-container',
             '.style-guide-section',
             '.faq-container',
-            '.golden-attach-premium',
             'div[style*="text-align: center; margin: 40px 0 20px 0;"]',
             'div[style*="text-align: center; margin: 30px 0 20px 0;"]'
         ];
@@ -1605,19 +1602,11 @@ function selectCategory(type) {
             });
         });
         
-        // Hide FNQs and Explore More headings
+        // Hide FNQs and Explore More headings only
         const fnqsHeadings = document.querySelectorAll('.fnqs-heading');
         fnqsHeadings.forEach(heading => {
             const parent = heading.closest('div');
-            if (parent) parent.style.display = 'none';
-        });
-        
-        // Hide any remaining divs with class or style
-        const extraDivs = document.querySelectorAll('.container > div, .results-section > div, .more-section, .category-box');
-        extraDivs.forEach(div => {
-            if (div.id !== 'goldContent' && !div.classList?.contains('footer')) {
-                div.style.display = 'none';
-            }
+            if (parent && parent !== document.querySelector('.navbar')) parent.style.display = 'none';
         });
         
         // Show gold content
@@ -1627,10 +1616,11 @@ function selectCategory(type) {
             goldContent.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
         
-        // Ensure footer and golden brand are visible
+        // Ensure footer is visible
         const footer = document.querySelector('.footer');
         if (footer) footer.style.display = 'block';
         
+        // Ensure golden brand is visible
         const goldenBrand = document.querySelector('.golden-brand');
         if (goldenBrand) goldenBrand.style.display = 'block';
         
@@ -1640,8 +1630,6 @@ function selectCategory(type) {
     // For normal categories (love, gamer, fancy, font)
     // Show all sections back
     const sectionsToShow = [
-        '.sticky-toolbar',
-        '.categories-section',
         '.results-section',
         '.top3-section',
         '.welcome-text-container',
@@ -1678,14 +1666,6 @@ function selectCategory(type) {
         if (parent) parent.style.display = '';
     });
     
-    // Show container divs back
-    const containerDivs = document.querySelectorAll('.container > div');
-    containerDivs.forEach(div => {
-        if (div.id !== 'goldContent' && !div.classList?.contains('footer')) {
-            div.style.display = '';
-        }
-    });
-    
     // Hide gold content
     const goldContent = document.getElementById('goldContent');
     if (goldContent) goldContent.style.display = 'none';
@@ -1698,7 +1678,9 @@ function selectCategory(type) {
     if (typeof loadTop3Styles === 'function') {
         loadTop3Styles();
     }
-}// ===== LOAD MINI SUGGESTIONS WITH IMAGE AFTER 20 =====
+}
+
+// ===== LOAD MINI SUGGESTIONS WITH IMAGE AFTER 20 =====
 function loadMiniSuggestions() {
     const miniGrid = document.getElementById('miniSuggestions');
     const categoryName = document.getElementById('currentCategoryName');
