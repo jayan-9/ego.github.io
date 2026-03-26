@@ -1569,16 +1569,25 @@ function selectCategory(type) {
     
     // Check if Gold category selected
     if (type === 'gold') {
-        // Hide EVERYTHING except footer and golden brand
-        const allSections = document.querySelectorAll('body > *');
+        // Hide all main sections (except footer and golden-brand)
+        const elementsToHide = [
+            document.querySelector('.sticky-toolbar'),
+            document.querySelector('.categories-section'),
+            document.querySelector('.results-section'),
+            document.getElementById('suggestionsTray'),
+            document.querySelector('.quick-tips-container'),
+            document.querySelector('.pro-tips-container'),
+            document.querySelector('.latest-articles'),
+            document.querySelector('.guide-section'),
+            document.querySelector('.features-section'),
+            document.querySelector('.ad-container'),
+            document.querySelector('.more-section'),
+            document.querySelector('div[style*="text-align: center; margin: 40px 0 20px 0;"]'),
+            document.querySelector('.fnqs-heading')?.closest('div')
+        ];
         
-        allSections.forEach(section => {
-            // Skip footer and golden-brand elements
-            if (!section.classList?.contains('footer') && 
-                !section.classList?.contains('golden-brand') &&
-                !section.id === 'goldContent') {
-                section.style.display = 'none';
-            }
+        elementsToHide.forEach(el => {
+            if (el) el.style.display = 'none';
         });
         
         // Show gold content
@@ -1599,11 +1608,25 @@ function selectCategory(type) {
         return;
     }
     
-    // For normal categories (love, gamer, fancy, font)
-    // Show everything back
-    const allSections = document.querySelectorAll('body > *');
-    allSections.forEach(section => {
-        section.style.display = '';
+    // For normal categories - Show everything back
+    const elementsToShow = [
+        document.querySelector('.sticky-toolbar'),
+        document.querySelector('.categories-section'),
+        document.querySelector('.results-section'),
+        document.getElementById('suggestionsTray'),
+        document.querySelector('.quick-tips-container'),
+        document.querySelector('.pro-tips-container'),
+        document.querySelector('.latest-articles'),
+        document.querySelector('.guide-section'),
+        document.querySelector('.features-section'),
+        document.querySelector('.ad-container'),
+        document.querySelector('.more-section'),
+        document.querySelector('div[style*="text-align: center; margin: 40px 0 20px 0;"]'),
+        document.querySelector('.fnqs-heading')?.closest('div')
+    ];
+    
+    elementsToShow.forEach(el => {
+        if (el) el.style.display = '';
     });
     
     // Hide gold content
@@ -1619,8 +1642,6 @@ function selectCategory(type) {
         loadTop3Styles();
     }
 }
-
-
 // ===== LOAD MINI SUGGESTIONS WITH IMAGE AFTER 20 =====
 function loadMiniSuggestions() {
     const miniGrid = document.getElementById('miniSuggestions');
