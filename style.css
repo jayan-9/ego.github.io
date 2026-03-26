@@ -1714,6 +1714,7 @@ p { margin-bottom: 1rem; color: var(--gray); }
     border: 2px solid #FFD700 !important;
     transition: all 0.3s ease;
 }
+
 .gold-card-btn:hover {
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(255,215,0,0.3);
