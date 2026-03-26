@@ -1134,16 +1134,6 @@ function loadTop3Styles() {
 }
 
 // ===== OLDEN ATTACH FUNCTION ✨ =====
-function toggleGoldenGuide() {
-    const guide = document.getElementById('goldenGuide');
-    if (guide.style.display === 'none' || guide.style.display === '') {
-        guide.style.display = 'block';
-        guide.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    } else {
-        guide.style.display = 'none';
-    }
-}
-
 // ===== GET RANDOM STYLES FROM CURRENT CATEGORY =====
 function getRandomStyles(count) {
     let allItems = [];
