@@ -1569,13 +1569,43 @@ function selectCategory(type) {
     
     // Check if Gold category selected
     if (type === 'gold') {
-        // Hide normal results and suggestions
+        // Hide all normal content
         const resultDiv = document.getElementById('result');
         const suggestionsTray = document.getElementById('suggestionsTray');
         const goldContent = document.getElementById('goldContent');
+        const topStylesDiv = document.getElementById('topStyles');
         
+        // Hide all extra sections
+        const quickTips = document.querySelector('.quick-tips-container');
+        const proTips = document.querySelector('.pro-tips-container');
+        const latestArticles = document.querySelector('.latest-articles');
+        const guideSection = document.querySelector('.guide-section');
+        const featuresSection = document.querySelector('.features-section');
+        const adContainer = document.querySelector('.ad-container');
+        
+        // Hide More Section and Share Section
+        const moreSection = document.querySelector('.more-section');
+        const shareSection = document.querySelector('div[style*="text-align: center; margin: 40px 0 20px 0;"]');
+        const fnqsHeading = document.querySelector('.fnqs-heading');
+        const fnqsHeadingParent = fnqsHeading ? fnqsHeading.closest('div') : null;
+        
+        // Hide results and suggestions
         if (resultDiv) resultDiv.style.display = 'none';
         if (suggestionsTray) suggestionsTray.style.display = 'none';
+        if (topStylesDiv) topStylesDiv.style.display = 'none';
+        
+        // Hide extra sections
+        if (quickTips) quickTips.style.display = 'none';
+        if (proTips) proTips.style.display = 'none';
+        if (latestArticles) latestArticles.style.display = 'none';
+        if (guideSection) guideSection.style.display = 'none';
+        if (featuresSection) featuresSection.style.display = 'none';
+        if (adContainer) adContainer.style.display = 'none';
+        
+        // Hide More Section and Share Section
+        if (moreSection) moreSection.style.display = 'none';
+        if (shareSection) shareSection.style.display = 'none';
+        if (fnqsHeadingParent) fnqsHeadingParent.style.display = 'none';
         
         // Show gold content
         if (goldContent) {
@@ -1583,22 +1613,39 @@ function selectCategory(type) {
             goldContent.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
         
-        // Hide top 3 styles (if exists)
-        const topStylesDiv = document.getElementById('topStyles');
-        if (topStylesDiv) topStylesDiv.style.display = 'none';
-        
         return; // Exit early, don't generate normal styles
     }
     
     // For normal categories (love, gamer, fancy, font)
-    // Show normal elements
+    // Show all normal elements
     const resultDiv = document.getElementById('result');
     const suggestionsTray = document.getElementById('suggestionsTray');
     const goldContent = document.getElementById('goldContent');
+    const quickTips = document.querySelector('.quick-tips-container');
+    const proTips = document.querySelector('.pro-tips-container');
+    const latestArticles = document.querySelector('.latest-articles');
+    const guideSection = document.querySelector('.guide-section');
+    const featuresSection = document.querySelector('.features-section');
+    const adContainer = document.querySelector('.ad-container');
+    const moreSection = document.querySelector('.more-section');
+    const shareSection = document.querySelector('div[style*="text-align: center; margin: 40px 0 20px 0;"]');
+    const fnqsHeading = document.querySelector('.fnqs-heading');
+    const fnqsHeadingParent = fnqsHeading ? fnqsHeading.closest('div') : null;
     
     if (resultDiv) resultDiv.style.display = 'grid';
     if (suggestionsTray) suggestionsTray.style.display = 'block';
     if (goldContent) goldContent.style.display = 'none';
+    
+    // Show extra sections back
+    if (quickTips) quickTips.style.display = 'block';
+    if (proTips) proTips.style.display = 'block';
+    if (latestArticles) latestArticles.style.display = 'block';
+    if (guideSection) guideSection.style.display = 'block';
+    if (featuresSection) featuresSection.style.display = 'block';
+    if (adContainer) adContainer.style.display = 'block';
+    if (moreSection) moreSection.style.display = 'block';
+    if (shareSection) shareSection.style.display = 'block';
+    if (fnqsHeadingParent) fnqsHeadingParent.style.display = 'flex';
     
     // Generate styles
     generateStyles();
