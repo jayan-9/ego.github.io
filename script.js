@@ -1134,6 +1134,23 @@ function loadTop3Styles() {
 }
 
 // ===== OLDEN ATTACH FUNCTION ✨ =====
+function showGoldContent() {
+    // Hide normal results grid
+    document.getElementById('result').style.display = 'none';
+    document.getElementById('result').innerHTML = ''; // Clear any existing content
+    
+    // Hide suggestions tray
+    const suggestionsTray = document.getElementById('suggestionsTray');
+    if (suggestionsTray) suggestionsTray.style.display = 'none';
+    
+    // Show gold content
+    const goldContent = document.getElementById('goldContent');
+    goldContent.style.display = 'block';
+    
+    // Scroll to top of gold content
+    goldContent.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
 // ===== GET RANDOM STYLES FROM CURRENT CATEGORY =====
 function getRandomStyles(count) {
     let allItems = [];
@@ -1540,17 +1557,57 @@ if (index === 149) {
  });
 }
 
-// ===== SELECT CATEGORY =====
+// ===== SELECT CATEGORY galden update 🦋=====
 function selectCategory(type) {
     currentFilter = type;
+    
+    // Update active button
     document.querySelectorAll('.category-btn').forEach(btn => btn.classList.remove('active'));
     document.querySelectorAll('.category-btn').forEach(btn => {
         if (btn.textContent.toLowerCase().includes(type)) btn.classList.add('active');
     });
+    
+    // Check if Gold category selected
+    if (type === 'gold') {
+        // Hide normal results and suggestions
+        const resultDiv = document.getElementById('result');
+        const suggestionsTray = document.getElementById('suggestionsTray');
+        const goldContent = document.getElementById('goldContent');
+        
+        if (resultDiv) resultDiv.style.display = 'none';
+        if (suggestionsTray) suggestionsTray.style.display = 'none';
+        
+        // Show gold content
+        if (goldContent) {
+            goldContent.style.display = 'block';
+            goldContent.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+        
+        // Hide top 3 styles (if exists)
+        const topStylesDiv = document.getElementById('topStyles');
+        if (topStylesDiv) topStylesDiv.style.display = 'none';
+        
+        return; // Exit early, don't generate normal styles
+    }
+    
+    // For normal categories (love, gamer, fancy, font)
+    // Show normal elements
+    const resultDiv = document.getElementById('result');
+    const suggestionsTray = document.getElementById('suggestionsTray');
+    const goldContent = document.getElementById('goldContent');
+    
+    if (resultDiv) resultDiv.style.display = 'grid';
+    if (suggestionsTray) suggestionsTray.style.display = 'block';
+    if (goldContent) goldContent.style.display = 'none';
+    
+    // Generate styles
     generateStyles();
     loadMiniSuggestions();
-// 👇 TOP 3 STYLES UPDATE KARO
-loadTop3Styles();
+    
+    // Load top 3 styles if function exists
+    if (typeof loadTop3Styles === 'function') {
+        loadTop3Styles();
+    }
 }
 
 // ===== LOAD MINI SUGGESTIONS WITH IMAGE AFTER 20 =====
