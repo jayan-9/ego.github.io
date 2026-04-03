@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Stylish Symbols Library – 1000+ Unicode Symbols for Names & Bios</title>
+    <meta name="description" content="Massive collection of stylish symbols, emojis, and special characters for gaming names, Instagram bios, and creative text. Search, click to copy, and use anywhere.">
+    <meta name="keywords" content="symbols, unicode symbols, special characters, copy paste symbols, gaming symbols, aesthetic symbols, bio symbols">
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Inter', system-ui, -apple-system, sans-serif;
+            background: #f8f9fc;
+            color: #1e293b;
+            line-height: 1.5;
+            padding: 20px;
+        }
+
+        /* Dark theme support (optional) */
+        .dark-theme {
+            background: #0f172a;
+            color: #e2e8f0;
+        }
+
+        .dark-theme .symbol-card {
+            background: #1e293b;
+            border-color: #334155;
+        }
+
+        .dark-theme .category-section {
+            background: #0f172a;
+            border-color: #334155;
+        }
+
+        .dark-theme .search-bar {
+            background: #1e293b;
+            border-color: #334155;
+            color: #f1f5f9;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        /* Sticky search bar */
+        .sticky-search {
+            position: sticky;
+            top: 20px;
+            z-index: 100;
+            background: #f8f9fc;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            border-radius: 60px;
+            backdrop-filter: blur(8px);
+        }
+
+        .dark-theme .sticky-search {
+            background: #0f172a;
+        }
+
+        .search-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: white;
+            border-radius: 60px;
+            padding: 5px 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            border: 1px solid #e2e8f0;
+        }
+
+        .dark-theme .search-wrapper {
+            background: #1e293b;
+            border-color: #334155;
+        }
+
+        .search-wrapper i {
+            color: #64748b;
+            font-size: 1.2rem;
+        }
+
+        .search-bar {
+            flex: 1;
+            border: none;
+            padding: 14px 0;
+            font-size: 1rem;
+            background: transparent;
+            outline: none;
+            color: #1e293b;
+        }
+
+        .dark-theme .search-bar {
+            color: #f1f5f9;
+        }
+
+        .clear-search {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #64748b;
+            font-size: 1.2rem;
+            padding: 5px;
+        }
+
+        /* Category sections */
+        .category-section {
+            background: white;
+            border-radius: 24px;
+            padding: 20px;
+            margin-bottom: 30px;
+            border: 1px solid #e2e8f0;
+            transition: all 0.2s;
+        }
+
+        .category-title {
+            font-size: 1.6rem;
+            font-weight: 600;
+            margin-bottom: 18px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #4f46e5;
+            display: inline-block;
+            color: #0f172a;
+        }
+
+        .dark-theme .category-title {
+            color: #f1f5f9;
+            border-bottom-color: #818cf8;
+        }
+
+        .symbols-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+            gap: 12px;
+        }
+
+        .symbol-card {
+            background: #f1f5f9;
+            border-radius: 16px;
+            padding: 12px 6px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: 1px solid transparent;
+            font-size: 1.8rem;
+            font-family: monospace;
+        }
+
+        .symbol-card:hover {
+            background: #4f46e5;
+            color: white;
+            transform: scale(1.02);
+            border-color: #4f46e5;
+        }
+
+        .dark-theme .symbol-card {
+            background: #1e293b;
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 40px;
+            font-size: 1.2rem;
+            color: #64748b;
+        }
+
+        /* Header */
+        .page-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+            background: linear-gradient(135deg, #4f46e5, #06b6d4);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 8px;
+        }
+
+        .page-header p {
+            color: #475569;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .dark-theme .page-header p {
+            color: #94a3b8;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            border-top: 1px solid #e2e8f0;
+            color: #64748b;
+        }
+
+        .dark-theme .footer {
+            border-top-color: #334155;
+        }
+
+        /* Toast notification */
+        .toast {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #1e293b;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 40px;
+            font-size: 0.9rem;
+            z-index: 1000;
+            opacity: 0;
+            transition: opacity 0.3s;
+            pointer-events: none;
+        }
+
+        .toast.show {
+            opacity: 1;
+        }
+
+        @media (max-width: 700px) {
+            .symbols-grid {
+                grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+            }
+            .symbol-card {
+                font-size: 1.5rem;
+                padding: 8px 4px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="page-header">
+        <h1>✨ Ultimate Symbol Library ✨</h1>
+        <p>1000+ unique symbols – click any to copy instantly. Perfect for gaming names, Instagram bios, and creative text.</p>
+    </div>
+
+    <!-- Sticky search bar -->
+    <div class="sticky-search">
+        <div class="search-wrapper">
+            <i class="fas fa-search"></i>
+            <input type="text" id="searchInput" class="search-bar" placeholder="Search symbols... (e.g., heart, star, skull, arrow)" autocomplete="off">
+            <button class="clear-search" id="clearSearchBtn" aria-label="Clear search"><i class="fas fa-times-circle"></i></button>
+        </div>
+    </div>
+
+    <!-- Categories will be injected here -->
+    <div id="categoriesContainer"></div>
+</div>
+
+<div class="footer">
+    <p>© 2026 stylename.in — Free symbol library | Click any symbol to copy</p>
+</div>
+<div id="toastMsg" class="toast">✨ Copied to clipboard!</div>
+
+<script>
+    // ===================== SYMBOLS DATABASE =====================
+    // Organized by category (names based on visual appearance)
+    const symbolsData = {
+        "Frames & Brackets": ["꧁", "༺", "꧂", "༻", "『", "』", "【", "】", "〔", "〕", "⟨", "⟩", "〈", "〉", "《", "》", "〈", "〉", "「", "」", "『", "』", "〖", "〗", "〘", "〙", "〚", "〛", "⧼", "⧽", "〔", "〕"],
+        "Stars & Sparkles": ["★", "☆", "✧", "✦", "✩", "✪", "✫", "✬", "✭", "✮", "✯", "✰", "✱", "✲", "✳", "✴", "✵", "✶", "✷", "✸", "✹", "✺", "✻", "✼", "✽", "✾", "✿", "❀", "❁", "❂", "❃", "❄", "❅", "❆", "❇", "❈", "❉", "❊", "❋", "⋆", "˚", "·", "⋆｡", "°", "✧", "✦", "✨", "⭐", "🌟", "💫", "⚝", "⍟", "⊛", "◍", "◎", "◉", "◌", "◍", "✳", "✴"],
+        "Hearts & Love": ["♡", "♥", "❤️", "💖", "💕", "💗", "💓", "💞", "💝", "❥", "❣", "❦", "❧", "ღ", "ꨄ", "ꫂ❁", "𖹭", "🩷", "🖤", "💔", "❤️‍🔥", "💘", "💌", "🌹", "🌸", "🌺", "🌷", "🥀", "💐"],
+        "Arrows & Pointers": ["➤", "➥", "➦", "➧", "➨", "➩", "➪", "➫", "➬", "➭", "➮", "➯", "➱", "➲", "➳", "➴", "➵", "➸", "➹", "➺", "⬅", "⬆", "⬇", "➡", "↗", "↘", "↙", "↖", "↕", "↔", "↩", "↪", "⇄", "⇆", "⇝", "⇜", "⟲", "⟳", "→", "←", "↑", "↓", "☛", "☚", "☞", "☟", "⇢", "⇠", "⇡", "⇣", "⤴", "⤵"],
+        "Gaming & Attitude": ["⚔️", "🛡️", "🎮", "🕹️", "🎯", "🔫", "💣", "🏹", "⚙️", "🪦", "☠️", "💀", "👾", "🤖", "👑", "♛", "♚", "⛨", "⚰️", "⚱️", "🗡️", "🔪", "🏆", "🥇", "🥈", "🥉", "🎖️", "🎲", "🧩", "🃏", "🂱", "🀥", "🀦", "🀧", "🀨", "⛥", "𖣿", "𖣠", "𖤍", "⸙", "⨳", "⛧", "⛤", "☬", "☫", "☯", "⚡", "🔥", "🌀", "❄️", "💢", "💥"],
+        "Decorative & Ornaments": ["༄", "༅", "༆", "༇", "༈", "༉", "༊", "༌", "༎", "༏", "༐", "༑", "༒", "༓", "༔", "࿄", "࿅", "࿈", "࿊", "࿐", "࿆", "꧁", "꧂", "༺", "༻", "༝", "༚", "༘", "◞", "◟", "◜", "◝", "⌇", "⌲", "⎈", "⎚", "⧉", "⨯", "⩩", "⪢", "⫸", "⫷", "⟆", "⟅", "⟡", "⟢", "⟣", "⟤", "⟥", "⫸", "⫷", "⸙", "⸝", "⸜", "𖧷", "𖧴", "𖦹", "𖤐", "𖣂", "𑁍", "ꕤ", "ꨄ", "꫟", "ꫂ", "ꪶ", "ꫝ", "ᯤ", "ᯓ", "᯼", "᯽", "᯾", "⍣", "⍤", "⍥", "⍦", "⍧", "⍨", "⍩", "⎊", "⎋", "⎌", "⎍", "⎎", "⎏", "⎐"],
+        "Nature & Animals": ["𓆣", "𓆤", "𓆥", "𓆦", "𓆧", "𓆨", "𓆩", "𓆪", "𓆫", "𓆬", "𓆭", "𓆮", "𓆯", "𓆰", "𓆱", "𓆲", "𓆳", "𓆴", "𓆵", "𓆶", "𓆷", "𓆸", "𓆹", "𓆺", "𓆻", "𓆼", "𓆽", "𓆾", "𓆿", "𓇀", "𓇁", "𓇂", "𓇃", "𓇄", "𓇅", "𓇆", "𓇇", "𓇈", "𓇉", "𓇊", "𓇋", "𓇌", "𓇍", "𓇎", "𓇏", "𓇐", "𓇑", "𓇒", "𓇓", "𓇔", "𓇕", "𓇖", "𓇗", "𓇘", "𓇙", "𓇚", "𓇛", "𓇜", "𓇝", "𓇞", "𓇟", "𓇠", "𓇡", "𓇢", "𓇣", "𓇤", "𓇥", "𓇦", "𓇧", "𓇨", "𓇩", "𓇪", "𓇫", "𓇬", "𓇭", "𓇮", "𓇯", "𓇰", "𓇱", "𓇲", "𓇳", "𓇴", "𓇵", "𓇶", "𓇷", "𓇸", "𓇹", "𓇺", "𓇻", "𓇼", "𓇽", "𓇾", "𓇿", "𓈀", "𓈁", "𓈂", "𓈃", "𓈄", "𓈅", "𓈆", "𓈇", "𓈈", "𓈉", "𓈊", "𓈋", "𓈌", "𓈍", "𓈎", "𓈏", "𓈐", "𓈑", "𓈒", "𓈓", "𓈔", "𓈕", "𓈖", "𓈗", "𓈘", "𓈙", "𓈚", "𓈛", "𓈜", "𓈝", "𓈞", "𓈟", "𓈠", "𓈡", "𓈢", "𓈣", "𓈤", "𓈥", "𓈦", "𓈧", "𓈨", "𓈩", "𓈪", "𓈫", "𓈬", "𓈭", "𓈮", "𓈯", "𓈰", "𓈱", "𓈲", "𓈳", "𓈴", "𓈵", "𓈶", "𓈷", "𓈸", "𓈹", "𓈺", "𓈻", "𓈼", "𓈽", "𓈾", "𓈿", "𓉀", "𓉁", "𓉂", "𓉃", "𓉄", "𓉅", "𓉆", "𓉇", "𓉈", "𓉉", "𓉊", "𓉋", "𓉌", "𓉍", "𓉎", "𓉏", "𓉐", "𓉑", "𓉒", "𓉓", "𓉔", "𓉕", "𓉖", "𓉗", "𓉘", "𓉙", "𓉚", "𓉛", "𓉜", "𓉝", "𓉞", "𓉟", "𓉠", "𓉡", "🐼", "🐧", "🦋", "🐞", "🐝", "🦄", "🐉", "🐲", "🦊", "🐺", "🐻", "🐨", "🐱", "🐭", "🐹", "🐰", "🦁", "🐮", "🐷", "🐸", "🐒", "🐔", "🐧", "🐦", "🐤", "🐣", "🐥", "🐺", "🐗", "🐴", "🦷", "🦴", "🐚", "🐌", "🦋", "🐛", "🐜", "🐝", "🐞", "🦟", "🦗", "🕷️", "🕸️", "🦂", "🐢", "🐍", "🦎", "🐙", "🦑", "🦐", "🦞", "🐠", "🐟", "🐡", "🐬", "🐳", "🐋", "🦈", "🐊", "🐅", "🐆", "🦓", "🦍", "🦧", "🦣", "🐘", "🦛", "🦏", "🐪", "🐫", "🦒", "🦘", "🦙", "🐏", "🐑", "🐐", "🦌", "🐕", "🐩", "🐈", "🐓", "🦃", "🦚", "🦜", "🦢", "🕊️", "🐇", "🦝", "🦨", "🦡", "🦫", "🦔", "🐿️"],
+        "Numbers & Digits (Stylized)": ["𝟘", "𝟙", "𝟚", "𝟛", "𝟜", "𝟝", "𝟞", "𝟟", "𝟠", "𝟡", "𝟢", "𝟣", "𝟤", "𝟥", "𝟦", "𝟧", "𝟨", "𝟩", "𝟪", "𝟫", "𝟬", "𝟭", "𝟮", "𝟯", "𝟰", "𝟱", "𝟲", "𝟳", "𝟴", "𝟵", "𝟶", "𝟷", "𝟸", "𝟹", "𝟺", "𝟻", "𝟼", "𝟽", "𝟾", "𝟿", "⓿", "❶", "❷", "❸", "❹", "❺", "❻", "❼", "❽", "❾", "➀", "➁", "➂", "➃", "➄", "➅", "➆", "➇", "➈", "ⓞ", "⓪", "①", "②", "③", "④", "⑤", "⑥", "⑦", "⑧", "⑨", "⑩", "⑪", "⑫", "⑬", "⑭", "⑮", "⑯", "⑰", "⑱", "⑲", "⑳", "⑴", "⑵", "⑶", "⑷", "⑸", "⑹", "⑺", "⑻", "⑼", "⑽", "⑾", "⑿", "⒀", "⒁", "⒂", "⒃", "⒄", "⒅", "⒆", "⒇", "¹", "²", "³", "⁴", "⁵", "⁶", "⁷", "⁸", "⁹", "⁰", "₁", "₂", "₃", "₄", "₅", "₆", "₇", "₈", "₉", "₀"],
+        "Special Glyphs & Medieval": ["҃", "҄", "҅", "҆", "҇", "ᷣ", "ᷤ", "ᷥ", "ᷦ", "ᷧ", "ᷨ", "ᷩ", "ᷪ", "ᷫ", "ᷬ", "ᷭ", "ᷮ", "ᷯ", "ᷰ", "ᷱ", "ᷲ", "ᷳ", "ᷴ", "᷵", "︠", "︡", "︢", "︣", "︤", "︥", "︦", "﻿", "⃝", "⃞", "⃟", "⃠", "⃡", "⃢", "̥", "̹", "̜", "̤", "̮", "̨", "̧", "̇", "̈", "̊", "̂", "̄", "̐", "̑", "̒", "̓", "̔", "̕", "̖", "̗", "̘", "̙", "̚", "̛", "̜", "̝", "̞", "̟", "̠", "̡", "̢", "̣", "̤", "̥", "̦", "̧", "̨", "̩", "̪", "̫", "̬", "̭", "̮", "̯", "̰", "̱", "̲", "̳", "̴", "̵", "̶", "̷", "̸", "̹", "̺", "̻", "̼", "̽", "̾", "̿", "̀", "́", "͂", "̓", "̈́", "ͅ", "͆", "͇", "͈", "͉", "͊", "͋", "͌", "͍", "͎", "͏", "͐", "͑", "͒", "͓", "͔", "͕", "͖", "͗", "͘", "͙", "͚", "͛", "͜", "͝", "͞", "͟", "͠", "͡", "͢", "ͣ", "ͤ", "ͥ", "ͦ", "ͧ", "ͨ", "ͩ", "ͪ", "ͫ", "ͬ", "ͭ", "ͮ", "ͯ", "҃", "҄", "҅", "҆", "҇", "ᷤ", "ᷥ", "ᷦ", "ᷧ", "ᷨ", "ᷩ", "ᷪ", "ᷫ", "ᷬ", "ᷭ", "ᷮ", "ᷯ", "ᷰ", "ᷱ", "ᷲ", "ᷳ", "ᷴ", "᷵"]
+    };
+
+    // Additional scattered symbols from user's list (not in above categories)
+    const extraSymbols = [
+        "〆", "ꤪꤨꤪ", "⚽︎", "✞", "𖦹", "⧼⧽", "·˚×͜× ˚·", "⁹⁹⁹", "░", "𓆩♫𓆪", "⧉", "༒", "ⓥ", "☕︎ˎˊ˗", "✌︎︎", "☂", "❖", "⫸", "⫷", "⸭", "⸮", "⨦", "⨧", "⨨", "⨩", "⨪", "⨫", "⨬", "⨭", "⨮", "⨯", "⨰", "⨱", "⨲", "⨳", "⨴", "⨵", "⨶", "⨷", "⨸", "⨹", "⨺", "⨻", "⨼", "⨽", "⨾", "⨿", "⩀", "⩁", "⩂", "⩃", "⩄", "⩅", "⩆", "⩇", "⩈", "⩉", "⩊", "⩋", "⩌", "⩍", "⩎", "⩏", "⩐", "⩑", "⩒", "⩓", "⩔", "⩕", "⩖", "⩗", "⩘", "⩙", "⩚", "⩛", "⩜", "⩝", "⩞", "⩟", "⩠", "⩡", "⩢", "⩣", "⩤", "⩥", "⩦", "⩧", "⩨", "⩩", "⩪", "⩫", "⩬", "⩭", "⩮", "⩯", "⩰", "⩱", "⩲", "⩳", "⩴", "⩵", "⩶", "⩷", "⩸", "⩹", "⩺", "⩻", "⩼", "⩽", "⩾", "⩿", "⪀", "⪁", "⪂", "⪃", "⪄", "⪅", "⪆", "⪇", "⪈", "⪉", "⪊", "⪋", "⪌", "⪍", "⪎", "⪏", "⪐", "⪑", "⪒", "⪓", "⪔", "⪕", "⪖", "⪗", "⪘", "⪙", "⪚", "⪛", "⪜", "⪝", "⪞", "⪟", "⪠", "⪡", "⪢", "⪣", "⪤", "⪥", "⪦", "⪧", "⪨", "⪩", "⪪", "⪫", "⪬", "⪭", "⪮", "⪯", "⪰", "⪱", "⪲", "⪳", "⪴", "⪵", "⪶", "⪷", "⪸", "⪹", "⪺", "⪻", "⪼", "⪽", "⪾", "⪿", "⫀", "⫁", "⫂", "⫃", "⫄", "⫅", "⫆", "⫇", "⫈", "⫉", "⫊", "⫋", "⫌", "⫍", "⫎", "⫏", "⫐", "⫑", "⫒", "⫓", "⫔", "⫕", "⫖", "⫗", "⫘", "⫙", "⫚", "⫛", "⫝̸", "⫝", "⫞", "⫟", "⫠", "⫡", "⫢", "⫣", "⫤", "⫥", "⫦", "⫧", "⫨", "⫩", "⫪", "⫫", "⫬", "⫭", "⫮", "⫯", "⫰", "⫱", "⫲", "⫳", "⫴", "⫵", "⫶", "⫷", "⫸"
+    ];
+    // Add extra symbols to Decorative category
+    symbolsData["Decorative & Ornaments"].push(...extraSymbols);
+
+    // Add missing symbols from user's raw list (quickly include unique ones)
+    const moreSymbols = [
+        "᪲", "᪳", "᪴", "᪵", "᪶", "᪷", "᪸", "᪹", "᪺", "᪻", "᪼", "᪽", "᪾", "ᪿ", "ᫀ", "᫁", "᫂", "᫃", "᫄", "᫅", "᫆", "᫇", "᫈", "᫉", "᫊", "᫋", "ᫌ", "ᫍ", "ᫎ", "᫏", "᫐", "᫑", "᫒", "᫓", "᫔", "᫕", "᫖", "᫗", "᫘", "᫙", "⨀", "⨁", "⨂", "⨃", "⨄", "⨅", "⨆", "⨇", "⨈", "⨉", "⨊", "⨋", "⨌", "⨍", "⨎", "⨏", "⨐", "⨑", "⨒", "⨓", "⨔", "⨕", "⨖", "⨗", "⨘", "⨙", "⨚", "⨛", "⨜", "⨝", "⨞", "⨟", "⨠", "⨡", "⨢", "⨣", "⨤", "⨥", "⨦", "⨧", "⨨", "⨩", "⨪", "⨫", "⨬", "⨭", "⨮", "⨯", "⨰", "⨱", "⨲", "⨳", "⨴", "⨵", "⨶", "⨷", "⨸", "⨹", "⨺", "⨻", "⨼", "⨽", "⨾", "⨿", "⩀", "⩁", "⩂", "⩃", "⩄", "⩅", "⩆", "⩇", "⩈", "⩉", "⩊", "⩋", "⩌", "⩍", "⩎", "⩏", "⩐", "⩑", "⩒", "⩓", "⩔", "⩕", "⩖", "⩗", "⩘", "⩙", "⩚", "⩛", "⩜", "⩝", "⩞", "⩟", "⩠", "⩡", "⩢", "⩣", "⩤", "⩥", "⩦", "⩧", "⩨", "⩩", "⩪", "⩫", "⩬", "⩭", "⩮", "⩯", "⩰", "⩱", "⩲", "⩳", "⩴", "⩵", "⩶", "⩷", "⩸", "⩹", "⩺", "⩻", "⩼", "⩽", "⩾", "⩿", "⪀", "⪁", "⪂", "⪃", "⪄", "⪅", "⪆", "⪇", "⪈", "⪉", "⪊", "⪋", "⪌", "⪍", "⪎", "⪏", "⪐", "⪑", "⪒", "⪓", "⪔", "⪕", "⪖", "⪗", "⪘", "⪙", "⪚", "⪛", "⪜", "⪝", "⪞", "⪟", "⪠", "⪡", "⪢", "⪣", "⪤", "⪥", "⪦", "⪧", "⪨", "⪩", "⪪", "⪫", "⪬", "⪭", "⪮", "⪯", "⪰", "⪱", "⪲", "⪳", "⪴", "⪵", "⪶", "⪷", "⪸", "⪹", "⪺", "⪻", "⪼", "⪽", "⪾", "⪿", "⫀", "⫁", "⫂", "⫃", "⫄", "⫅", "⫆", "⫇", "⫈", "⫉", "⫊", "⫋", "⫌", "⫍", "⫎", "⫏", "⫐", "⫑", "⫒", "⫓", "⫔", "⫕", "⫖", "⫗", "⫘", "⫙", "⫚", "⫛", "⫝̸", "⫝", "⫞", "⫟", "⫠", "⫡", "⫢", "⫣", "⫤", "⫥", "⫦", "⫧", "⫨", "⫩", "⫪", "⫫", "⫬", "⫭", "⫮", "⫯", "⫰", "⫱", "⫲", "⫳", "⫴", "⫵", "⫶", "⫷", "⫸"
+    ];
+    symbolsData["Decorative & Ornaments"].push(...moreSymbols);
+
+    // Render categories and symbols
+    const container = document.getElementById('categoriesContainer');
+    let allSymbols = [];
+
+    function renderCategories(filterText = '') {
+        container.innerHTML = '';
+        let hasVisible = false;
+        for (const [category, symbols] of Object.entries(symbolsData)) {
+            const filtered = symbols.filter(sym => sym.toLowerCase().includes(filterText.toLowerCase()));
+            if (filtered.length === 0) continue;
+            hasVisible = true;
+            const sectionDiv = document.createElement('div');
+            sectionDiv.className = 'category-section';
+            sectionDiv.innerHTML = `<h2 class="category-title">${category}</h2><div class="symbols-grid" id="grid-${category.replace(/\s/g, '')}"></div>`;
+            container.appendChild(sectionDiv);
+            const grid = sectionDiv.querySelector('.symbols-grid');
+            filtered.forEach(sym => {
+                const card = document.createElement('div');
+                card.className = 'symbol-card';
+                card.textContent = sym;
+                card.setAttribute('data-symbol', sym);
+                card.addEventListener('click', () => copyToClipboard(sym));
+                grid.appendChild(card);
+                allSymbols.push(sym);
+            });
+        }
+        if (!hasVisible) {
+            container.innerHTML = '<div class="no-results">😔 No symbols found. Try a different search term.</div>';
+        }
+    }
+
+    function copyToClipboard(text) {
+        navigator.clipboard.writeText(text).then(() => {
+            const toast = document.getElementById('toastMsg');
+            toast.classList.add('show');
+            setTimeout(() => toast.classList.remove('show'), 1500);
+        }).catch(() => alert('Failed to copy'));
+    }
+
+    // Search functionality
+    const searchInput = document.getElementById('searchInput');
+    const clearBtn = document.getElementById('clearSearchBtn');
+    searchInput.addEventListener('input', (e) => {
+        renderCategories(e.target.value);
+    });
+    clearBtn.addEventListener('click', () => {
+        searchInput.value = '';
+        renderCategories('');
+    });
+
+    // Initial render
+    renderCategories('');
+
+    // Optional: theme toggle (adds dark mode if you want, but not mandatory)
+    // For extra usability, add a simple dark mode button
+    const toggleThemeBtn = document.createElement('button');
+    toggleThemeBtn.innerHTML = '<i class="fas fa-moon"></i>';
+    toggleThemeBtn.style.cssText = 'position:fixed; bottom:20px; right:20px; background:#4f46e5; color:white; border:none; width:50px; height:50px; border-radius:50%; cursor:pointer; z-index:1000; box-shadow:0 2px 8px rgba(0,0,0,0.2);';
+    toggleThemeBtn.onclick = () => {
+        document.body.classList.toggle('dark-theme');
+        localStorage.setItem('theme', document.body.classList.contains('dark-theme') ? 'dark' : 'light');
+    };
+    document.body.appendChild(toggleThemeBtn);
+    if (localStorage.getItem('theme') === 'dark') document.body.classList.add('dark-theme');
+</script>
+</body>
+</html>
