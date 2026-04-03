@@ -1935,3 +1935,144 @@ p { margin-bottom: 1rem; color: var(--gray); }
     line-height: 1.6;
     word-break: break-word;
 }
+
+/* ===== QUICK TIPS SECTION - ENHANCED ===== */
+.quick-tips-container {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 20px;
+    background: var(--light);
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.dark-theme .quick-tips-container {
+    background: #1e1e24;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.tip-block {
+    margin-bottom: 25px;
+    padding: 15px;
+    border-radius: 16px;
+    background: var(--gray-light);
+    transition: var(--transition);
+    text-align: center;
+}
+
+.dark-theme .tip-block {
+    background: #2a2a30;
+}
+
+.tip-block:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.tip-emoji {
+    font-size: 1.6rem;
+    display: inline-block;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.tip-label {
+    font-weight: 700;
+    color: var(--primary);
+    font-size: 1.1rem;
+    margin-right: 8px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.dark-theme .tip-label {
+    color: #FFD966;
+}
+
+.tip-text {
+    color: var(--gray-dark);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.dark-theme .tip-text {
+    color: #c0c0c0;
+}
+
+.symbol-click {
+    display: inline-block;
+    background: var(--light);
+    padding: 4px 10px;
+    margin: 0 3px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: all 0.2s ease;
+    border: 1px solid var(--gray);
+}
+
+.dark-theme .symbol-click {
+    background: #3a3a40;
+    border-color: #555;
+    color: #FFD966;
+}
+
+.symbol-click:hover {
+    background: var(--primary);
+    color: white;
+    transform: scale(1.05);
+}
+
+.mini-symbol-trigger {
+    background: var(--light);
+    border: 1px solid var(--gray);
+    border-radius: 30px;
+    padding: 4px 12px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.dark-theme .mini-symbol-trigger {
+    background: #3a3a40;
+    border-color: #555;
+    color: #FFD966;
+}
+
+.mini-symbol-trigger:hover {
+    background: var(--primary);
+    color: white;
+    transform: scale(1.02);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .quick-tips-container {
+        padding: 15px;
+        margin: 20px 15px;
+    }
+    
+    .tip-block {
+        padding: 12px;
+    }
+    
+    .tip-emoji {
+        font-size: 1.3rem;
+    }
+    
+    .tip-label {
+        font-size: 1rem;
+    }
+    
+    .tip-text {
+        font-size: 0.85rem;
+    }
+    
+    .symbol-click {
+        padding: 3px 8px;
+        font-size: 0.9rem;
+    }
+}
