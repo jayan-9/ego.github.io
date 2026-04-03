@@ -48,6 +48,9 @@ Allow: /text-changer.html
 # Allow Golden Attach page
 Allow: /golden-attach.html
 
+# Allow Symbol Library page
+Allow: /symbols-library.html
+
 # Sitemap location
 Sitemap: https://stylename.in/sitemap.xml
 
