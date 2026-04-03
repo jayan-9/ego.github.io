@@ -177,5 +177,13 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
 </url>
+
+  <!-- Symbol Library Page -->
+<url>
+    <loc>https://stylename.in/symbols-library.html</loc>
+    <lastmod>2026-04-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+</url>
   
 </urlset>
