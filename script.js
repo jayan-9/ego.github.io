@@ -82,7 +82,20 @@ const categoryExamples = {
     { text: "❀ ɴαᴍᥱ▶●───🧿" },
     { text: "❀ 𝘕ꪖꪑꫀ ᡣ𐭩࿐" },
     { text: "𝄟 Ναмᥱ ★꧂" },
-    { text: "🧿 ɴαᴍᥱ ✾⊹˚⋆" }
+    { text: "🧿 ɴαᴍᥱ ✾⊹˚⋆" },
+        // New Love Examples
+        { text: "•✿• 𝙉𝙖𝙢𝙚 •✿•" },
+        { text: "✿• 𝙉𝙖𝙢𝙚 •༉࿐" },
+        { text: "𝐴𝑙𝑜𝑛𝑒💞𝑁𝑎𝑚𝑒" },
+        { text: "ᥫ᭡ ۵۵۵۵ 𝘕𝘈𝘔𝘌 °｡⋆😭" },
+        { text: "𖧷࿐ 🄽🄰🄼🄴⊹ ࣪𖧷" },
+        { text: "𝐵𝑟𝑜𝑘𝑒💔𝑁𝑎𝑚𝑒" },
+        { text: "𖣿 𝙉𝙖𝙢𝙚⊹ ࣪ ˖༉" },
+        { text: "✿ ℕ𝕒𝕞𝕖 ⋆˚࿐" },
+        { text: "🦋⃟𝒩𝒜ℳℰ✿˖⁺‧₊˚࿐" },
+        { text: "໒꒰ྀིᵔ ᵕ ᵔ꒱ྀི১ 𝕹𝕬𝕸𝕰 𓆩🩵𓆪" },
+        { text: "༊*·˚𝓝𝓪𝓶𝓮 𖦹᭄𓆪" },
+        { text: "༄🫀⃟Nᴀᴍᴇ °⋆༈༉" }
     ],
     gamer: [
         { text: "ＯＰܔ𝘕𝘈𝘔𝘌Ⓥ࿐" },
@@ -155,7 +168,18 @@ const categoryExamples = {
     { text: "៚Пꪖме 𝄟" },
     { text: "៚ 𝗡⃤𝗮𝗺𝗲 𝟺𝟺𝟺◥" },
     { text: "𝄟Ｎａｍｅ◤" },
-    { text: "⚠┆𝙉⃞𝙖⃞𝙢⃞𝙚⃞𝄟" }
+    { text: "⚠┆𝙉⃞𝙖⃞𝙢⃞𝙚⃞𝄟" },
+         { text: "𝑍𝑥_𝑁𝑎𝑚𝑒 ࿐" },
+        { text: "77__𝑵𝑨𝑴𝑬 ♡༉" },
+        { text: ".....Nᴀᴍᴇ" },
+        { text: "ིྀ N̥ͦḁͦm̥ͦe̥ͦ ིྀ⊹ ࣪ ˖" },
+        { text: "༄༉Νᴀᴍᴇ ....❀" },
+        { text: "֟✿Νᴀᴍᴇ༉" },
+        { text: "𝟷𝟸𝟹_𝑁𝑎𝑚𝑒 ࿐𝑍𝑥" },
+        { text: "_♚__𝑵𝑨𝑴𝑬 ✿༉" },
+        { text: "༄Nᴀᴍᴇ °⋆༈༉" },
+        { text: "༄✿Νᴀᴍᴇ❀༉" },
+        { text: "Ƭ֟፝ɴ✿Νᴀᴍᴇ༉모" }
         ],
     fancy: [
         { text: "ᶜ̸ʳ̸ᴬ̸ᶻ̸ʸ̸·˚✗✗𝑁𝑎𝑚𝑒✗✗˚·❄️" },
@@ -239,7 +263,18 @@ const categoryExamples = {
     { text: "?? Ναмᥱ o_O" },
     { text: "╰⁔╯𝘕ꪖꪑꫀ⁙⁂★꧂" },
     { text: "𝄟乂 ɴαᴍᥱ ♥️웃유" },
-    { text: "🐼•✦ ⁅N⁆⁅a⁆⁅m⁆⁅e⁆ •🍡⃟✦" }
+    { text: "🐼•✦ ⁅N⁆⁅a⁆⁅m⁆⁅e⁆ •🍡⃟✦" },
+          { text: "༆ ᑎᗩᗰᗴ ✩°｡⋆༉" },
+        { text: "➤ 🅽🅰🅼🅴 ✦✦" },
+        { text: "༊*𝑵𝑨𝑴𝑬 ✶ 𓆩✶𓆪" },
+        { text: "Ⓝⓐⓜⓔ" },
+        { text: "☯⃟⃟ Nᴀᴍᴇ ˚⊹★" },
+        { text: "𝄟 ˚⊹ ࣪Ναмᥱ ●꧂" },
+        { text: "➤ 🅽🅰🅼🅴" },
+        { text: "༊*·˚𝑵𝑨𝑴𝑬 ✶ 𓆩♡𓆪" },
+        { text: "⸙ Ⓝⓐⓜⓔ" },
+        { text: "꧁☯⃟⃟ Nᴀᴍᴇ ˚⊹★༻" },
+        { text: "𝄟 ˚⊹ ࣪Ναмᥱ ●───★꧂" }
     ],
     font: [
         { text: "N̷̷a̷m̷e̷" },
@@ -322,7 +357,19 @@ const categoryExamples = {
     { text: "ή𝐚мｅ" },
     { text: "Пꪖме" },
     { text: "Ⓝ⃝ⓐ⃝ⓜ⃝ⓔ⃝" },   
-    { text: "N𓆩a𓆩m𓆩e𓆩" }
+    { text: "N𓆩a𓆩m𓆩e𓆩" },
+         { text: "N̴a̴m̴e̴" },
+        { text: "⦏N̂⦎⦏â⦎⦏m̂⦎⦏ê⦎" },
+        { text: "ภค๓є" },
+        { text: "Nɐɯǝ" },
+        { text: "【N】【a】【m】【e】" },
+        { text: "ꈤꋬꂵ꒻" },
+        { text: "ռαɱє" },
+        { text: "N̥ͦḁͦm̥ͦe̥ͦ" },
+        { text: "ᴺ͎ᵃ͎ᵐ͎ᵉ͎" },
+        { text: "ͷΛᗰƐ" },
+        { text: "₦₳₥₳" },
+        { text: "ⁿᵃᵐᵉ" }
     ]
 };
 
@@ -1195,7 +1242,7 @@ function generateStyles() {
 if (!name) {
     const examples = categoryExamples[currentFilter] || categoryExamples.love;
     const shuffled = [...examples].sort(() => Math.random() - 0.5);
-    const selected = shuffled.slice(0, 69);
+    const selected = shuffled.slice(0, 81);
     
     selected.forEach((example, index) => {
         const div = document.createElement('div');
