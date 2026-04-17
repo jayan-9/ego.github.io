@@ -18,8 +18,8 @@
     <div class="container" id="paymentContainer">
         <div class="plan-badge" id="planBadge">Monthly Plan</div>
         <h2 style="color: #FFD700;">✨ Golden Attach Studio</h2>
-        <div class="price" id="priceDisplay">$2</div>
-        <p id="priceInr">≈ ₹199</p>
+        <div class="price" id="priceDisplay">$1</div>
+        <p id="priceInr">≈ ₹95</p>
         <p style="color: #ccc;">Subscribe to unlock premium features</p>
         
         <div style="margin: 25px 0;">
@@ -48,8 +48,8 @@
         let plan = urlParams.get('plan') || 'monthly';
         
         let planDetails = {
-            monthly: { name: 'Monthly Plan', amount: 199, currency: 'INR', usd: '$2' },
-            lifetime: { name: 'Lifetime Plan', amount: 16500, currency: 'INR', usd: '$200' }
+            monthly: { name: 'Monthly Plan', amount: 95, currency: 'INR', usd: '$1' },
+            lifetime: { name: 'Lifetime Plan', amount: 950, currency: 'INR', usd: '$10' }
         };
         
         let selected = planDetails[plan];
@@ -110,7 +110,7 @@
             let name = document.getElementById('userName').value || "User";
             
             let options = {
-                key: RAZORPAY_KEY,
+                key: "rzp_live_SVWSf422lH2nLv",  // 👈 YAHAN DALO
                 amount: selected.amount * 100,
                 currency: selected.currency,
                 name: "Golden Attach Studio",
