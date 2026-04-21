@@ -1247,7 +1247,7 @@ if (!name) {
     selected.forEach((example, index) => {
         const div = document.createElement('div');
         div.className = `style-card ${currentFilter}`;
-        div.setAttribute('onclick', `copyText('${example.text.replace(/'/g,"\\'").replace(/"/g,'&quot;')}')`);
+        div.setAttribute('onclick', `copyText('${example.text.replace(/'/g,"\\'").replace(/"/g,'&quot;')}', this)`);
         div.setAttribute('title', 'Click to copy');
         
         let html = `<div class="style-text">${example.text}</div>`;
@@ -1414,7 +1414,7 @@ shuffled.forEach((style, index) => {
     // Style card - without copy button
     const div = document.createElement('div');
     div.className = `style-card ${currentFilter}`;
-    div.setAttribute('onclick', `copyText('${escaped}')`);
+    div.setAttribute('onclick', `copyText('${escaped}', this)`);
     div.setAttribute('title', 'Click to copy');
     div.innerHTML = `<div class="style-text">${styled}</div>`;
     result.appendChild(div);
