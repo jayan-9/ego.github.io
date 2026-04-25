@@ -1180,24 +1180,6 @@ function loadTop3Styles() {
     top3Grid.innerHTML = html;
 }
 
-// ===== OLDEN ATTACH FUNCTION ✨ =====
-function showGoldContent() {
-    // Hide normal results grid
-    document.getElementById('result').style.display = 'none';
-    document.getElementById('result').innerHTML = ''; // Clear any existing content
-    
-    // Hide suggestions tray
-    const suggestionsTray = document.getElementById('suggestionsTray');
-    if (suggestionsTray) suggestionsTray.style.display = 'none';
-    
-    // Show gold content
-    const goldContent = document.getElementById('goldContent');
-    goldContent.style.display = 'block';
-    
-    // Scroll to top of gold content
-    goldContent.scrollIntoView({ behavior: 'smooth', block: 'start' });
-}
-
 // ===== GET RANDOM STYLES FROM CURRENT CATEGORY =====
 function getRandomStyles(count) {
     let allItems = [];
