@@ -51,6 +51,9 @@ Allow: /golden-attach.html
 # Allow Symbol Library page
 Allow: /symbols-library.html
 
+# Allow Stylish Words page
+Allow: /stylish-words.html
+
 # Sitemap location
 Sitemap: https://stylename.in/sitemap.xml
 
