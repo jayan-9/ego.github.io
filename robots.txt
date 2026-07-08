@@ -54,6 +54,8 @@ Allow: /symbols-library.html
 # Allow Stylish Words page
 Allow: /stylish-words.html
 
+Allow: /what-is-stylename.html
+
 # Sitemap location
 Sitemap: https://stylename.in/sitemap.xml
 
