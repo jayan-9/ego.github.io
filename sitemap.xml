@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  
-  <!-- ===== MAIN PAGES ===== -->
+
+  <!-- ===== MAIN PAGES (ज्यादा जरूरी नहीं बदलते) ===== -->
   <url>
     <loc>https://stylename.in/</loc>
-    <lastmod>2026-02-24</lastmod>
-    <changefreq>daily</changefreq>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   
   <url>
     <loc>https://stylename.in/about.html</loc>
     <lastmod>2026-02-24</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
     <loc>https://stylename.in/contact.html</loc>
     <lastmod>2026-02-24</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
   
@@ -37,175 +37,170 @@
     <priority>0.5</priority>
   </url>
 
-  
+  <!-- ===== आर्टिकल्स और गाइड्स (Evergreen Content - सालों तक काम आएंगे) ===== -->
   <url>
     <loc>https://stylename.in/which-font-is-best-for-which-category.html</loc>
     <lastmod>2026-02-24</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>https://stylename.in/social-media-bio-ideas-for-whatsapp-instagram.html</loc>
     <lastmod>2026-02-24</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>https://stylename.in/girls-and-boys-name-style-guide.html</loc>
     <lastmod>2026-02-24</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>https://stylename.in/frequently-asked-questions-about-stylename.html</loc>
     <lastmod>2026-02-24</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>https://stylename.in/website-suggestions-original-guide.html</loc>
     <lastmod>2026-02-24</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>https://stylename.in/stylish-name-tips-guide.html</loc>
     <lastmod>2026-02-24</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
 
-  <!-- ===== GAMING NAMES ARTICLES ===== -->
+  <!-- ===== गेमिंग आर्टिकल्स ===== -->
   <url>
     <loc>https://stylename.in/pubg-stylish-names-with-symbols.html</loc>
     <lastmod>2026-02-24</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
     <loc>https://stylename.in/attitude-names-for-boys.html</loc>
     <lastmod>2026-02-24</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- ===== SOCIAL MEDIA & STYLISH NAMES ===== -->
+  <!-- ===== सोशल मीडिया और फैंसी नेम ===== -->
   <url>
     <loc>https://stylename.in/instagram-stylish-names-2026.html</loc>
     <lastmod>2026-02-24</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
     <loc>https://stylename.in/royal-and-vip-names.html</loc>
     <lastmod>2026-02-24</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>https://stylename.in/hindi-name-collection.html</loc>
     <lastmod>2026-02-24</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>https://stylename.in/our-purpose.html</loc>
     <lastmod>2026-02-24</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://stylename.in/anime-stylish-names-collection.html</loc>
     <lastmod>2026-03-01</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>yearly</changefreq>
     <priority>0.7</priority>
-</url>
+  </url>
 
-  <!-- Korean Stylish Names 2026 -->
-<url>
+  <url>
     <loc>https://stylename.in/korean-stylish-names-2026.html</loc>
     <lastmod>2026-03-03</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>yearly</changefreq>
     <priority>0.8</priority>
-</url>
+  </url>
 
-  <!-- TikTok Username Ideas -->
-<url>
+  <url>
     <loc>https://stylename.in/tiktok-username-ideas.html</loc>
     <lastmod>2026-03-03</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>yearly</changefreq>
     <priority>0.8</priority>
-</url>
+  </url>
 
-  <!-- Love Nicknames 2026 Collection -->
-<url>
+  <url>
     <loc>https://stylename.in/love-nicknames-2026-collection.html</loc>
     <lastmod>2026-03-03</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>yearly</changefreq>
     <priority>0.8</priority>
-</url>
+  </url>
 
-  <!-- Stylish Text Generator -->
-<url>
+  <!-- ===== टूल्स और यूटिलिटी पेज (बिल्कुल नहीं बदलते) ===== -->
+  <url>
     <loc>https://stylename.in/stylish-text-generator.html</loc>
     <lastmod>2026-03-08</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>yearly</changefreq>
     <priority>0.8</priority>
-</url>
+  </url>
 
-  <!-- Text Changer Tool -->
-<url>
+  <url>
     <loc>https://stylename.in/text-changer.html</loc>
     <lastmod>2026-03-14</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>yearly</changefreq>
     <priority>0.8</priority>
-</url>
+  </url>
 
   <url>
     <loc>https://stylename.in/golden-attach.html</loc>
     <lastmod>2026-03-22</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>yearly</changefreq>
     <priority>0.8</priority>
-</url>
+  </url>
 
-  <!-- Symbol Library Page -->
-<url>
+  <url>
     <loc>https://stylename.in/symbols-library.html</loc>
     <lastmod>2026-04-03</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>yearly</changefreq>
     <priority>0.8</priority>
-</url>
+  </url>
 
-  <!-- Stylish Words - Letter Variations Library -->
-<url>
+  <!-- ===== आपके नए (Latest) आर्टिकल्स ===== -->
+  <url>
     <loc>https://stylename.in/stylish-words.html</loc>
     <lastmod>2026-04-17</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>yearly</changefreq>
     <priority>0.8</priority>
-</url>
+  </url>
 
   <url>
     <loc>https://stylename.in/what-is-stylename.html</loc>
     <lastmod>2026-07-08</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>yearly</changefreq>
     <priority>0.8</priority>
-</url>
+  </url>
 
-<url>
+  <url>
     <loc>https://stylename.in/how-to-choose-gaming-name.html</loc>
     <lastmod>2026-07-08</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>yearly</changefreq>
     <priority>0.8</priority>
-</url>
-  
+  </url>
+
 </urlset>
