@@ -55,6 +55,7 @@ Allow: /symbols-library.html
 Allow: /stylish-words.html
 
 Allow: /what-is-stylename.html
+Allow: /how-to-choose-gaming-name.html
 
 # Sitemap location
 Sitemap: https://stylename.in/sitemap.xml
