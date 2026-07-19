@@ -58,6 +58,29 @@
             color: #ffcc00;
         }
 
+        /* ===== Translate Widget Container ===== */
+        .translate-container {
+            display: flex;
+            justify-content: flex-end;
+            margin: 10px 0 20px 0;
+        }
+        #google_translate_element {
+            background: #f0f0f0;
+            padding: 6px 12px;
+            border-radius: 30px;
+            border: 1px solid #ddd;
+            font-size: 0.9rem;
+        }
+        .goog-te-gadget-simple {
+            background: transparent !important;
+            border: none !important;
+            font-size: 0.9rem !important;
+            padding: 4px 8px !important;
+        }
+        .goog-te-gadget-simple span {
+            color: #1a1a2e !important;
+        }
+
         /* ===== Main Article ===== */
         main {
             max-width: 900px;
@@ -284,6 +307,9 @@
                 font-size: 1.2rem;
                 letter-spacing: 4px;
             }
+            .translate-container {
+                justify-content: center;
+            }
             footer {
                 flex-direction: column;
                 gap: 15px;
@@ -338,6 +364,13 @@
         </nav>
     </header>
 
+    <!-- ===== TRANSLATE WIDGET ===== -->
+    <div style="max-width: 900px; margin: 0 auto; padding: 0 20px;">
+        <div class="translate-container">
+            <div id="google_translate_element"></div>
+        </div>
+    </div>
+
     <!-- ===== MAIN CONTENT ===== -->
     <main>
         <article>
@@ -372,16 +405,16 @@
             <p>Attitude Name बनाने के लिए कुछ Powerful Words का Use करना बहुत जरूरी है। ये रहे कुछ Best Words जो नाम को Attitude Vibe देते हैं:</p>
 
             <div class="tag-container">
-                <span class="tag"> King</span>
-                <span class="tag">Lord</span>
+                <span class="tag">👑 King</span>
+                <span class="tag"> Lord</span>
                 <span class="tag"> Legend</span>
                 <span class="tag"> Savage</span>
                 <span class="tag"> Shadow</span>
-                <span class="tag">💀 Dark</span>
-                <span class="tag"> Storm</span>
+                <span class="tag"> Dark💀</span>
+                <span class="tag">⚡ Storm</span>
                 <span class="tag"> Blaze</span>
-                <span class="tag">👹 Demon</span>
-                <span class="tag">🗡️ Killer</span>
+                <span class="tag"> Demon</span>
+                <span class="tag"> Killer🗿</span>
             </div>
 
             <!-- ===== SECTION 3 ===== -->
@@ -627,6 +660,18 @@
             });
         }
     </script>
+
+    <!-- ===== GOOGLE TRANSLATE WIDGET ===== -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'hi',
+                includedLanguages: 'en,hi,ur,ar,fr,es,de,ja,ko,pt,ru,zh-CN,ta,te,ml,kn',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 </body>
 </html>
