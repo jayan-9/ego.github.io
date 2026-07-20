@@ -1485,11 +1485,11 @@ function generateStyles() {
     if (!result) return;
     result.innerHTML = "";
 
-    // If name is empty, show examples
+    // EXAMPLE ❗❗❗❗If name is empty, show examples
 if (!name) {
     const examples = categoryExamples[currentFilter] || categoryExamples.love;
     const shuffled = [...examples].sort(() => Math.random() - 0.5);
-    const selected = shuffled.slice(0, 114);
+    const selected = shuffled.slice(0, 119);
     
     selected.forEach((example, index) => {
         const div = document.createElement('div');
