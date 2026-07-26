@@ -212,7 +212,14 @@
 
   <url>
     <loc>https://stylename.in/stylish-name-for-snapchat.html</loc>
-    <lastmod>2026-07-22</lastmod>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+</url>
+
+  <url>
+    <loc>https://stylename.in/top-10-cute-names.html</loc>
+    <lastmod>2026-07-26</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
 </url>
