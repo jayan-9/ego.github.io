@@ -30,6 +30,7 @@ Allow: /hindi-name-collection.html
 Allow: /stylish-name-tips-guide.html
 Allow: /anime-stylish-names-collection.html
 Allow: /stylish-name-for-snapchat.html
+Allow: /top-10-cute-names.html
 
 # Allow Korean Stylish Names article
 Allow: /korean-stylish-names-2026.html
