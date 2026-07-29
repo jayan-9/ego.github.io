@@ -2078,7 +2078,7 @@ p { margin-bottom: 1rem; color: var(--gray); }
 }
 
 /* ============================================
-   BLOG SECTION – CLEAN LIST
+   BLOG SECTION – CARD BOX STYLE (सिर्फ CSS)
    ============================================ */
 
 .blog-section {
@@ -2111,33 +2111,34 @@ p { margin-bottom: 1rem; color: var(--gray); }
 }
 
 .blog-item {
-    margin-bottom: 12px;
+    margin-bottom: 14px;
 }
 
-/* ----- Blog Link ----- */
+/* ===== BLOG LINK – CARD BOX STYLE ===== */
 .blog-link {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 12px;
-    padding: 14px 24px;
-    border-radius: 12px;
+    gap: 14px;
+    padding: 16px 24px;
+    border-radius: 14px;
     text-decoration: none;
     color: #1a1a2e;
     transition: all 0.3s ease;
-    border: 1px solid rgba(0, 0, 0, 0.06);
-    background: #f8fafc;
+    background: #ffffff;
+    border: 1px solid #e8e8e8;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
     flex-wrap: wrap;
 }
 
 .blog-link:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.10);
     border-color: rgba(0, 0, 0, 0.12);
 }
 
 .link-icon {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     flex-shrink: 0;
 }
 
@@ -2152,7 +2153,7 @@ p { margin-bottom: 1rem; color: var(--gray); }
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    padding: 2px 14px;
+    padding: 3px 14px;
     border-radius: 30px;
     background: rgba(0, 0, 0, 0.06);
     color: #475569;
@@ -2209,7 +2210,20 @@ p { margin-bottom: 1rem; color: var(--gray); }
     color: #7c4dff;
 }
 
-/* ===== DARK THEME ===== */
+/* ===== CARD BOX HOVER – थोड़ा और बेहतर ===== */
+.blog-link:hover .link-icon {
+    transform: scale(1.1) rotate(-3deg);
+}
+
+.blog-link:hover .link-tag {
+    transform: scale(1.02);
+}
+
+
+/* ============================================
+   DARK THEME SUPPORT
+   ============================================ */
+
 .dark-theme .blog-title {
     color: #f0f0f0;
 }
@@ -2217,9 +2231,11 @@ p { margin-bottom: 1rem; color: var(--gray); }
     color: #94a3b8;
 }
 
+/* Dark Theme – Card Box */
 .dark-theme .blog-link {
     background: #1e293b;
     border-color: rgba(255, 255, 255, 0.06);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 .dark-theme .blog-link .link-title {
     color: #f0f0f0;
@@ -2227,8 +2243,10 @@ p { margin-bottom: 1rem; color: var(--gray); }
 .dark-theme .blog-link:hover {
     background: #2d3a4f;
     border-color: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.40);
 }
 
+/* Dark Theme – Tags */
 .dark-theme .blog-blue .link-tag {
     background: #1a2a3a;
     color: #60a5fa;
@@ -2278,18 +2296,23 @@ p { margin-bottom: 1rem; color: var(--gray); }
     color: #7c4dff;
 }
 
-/* ===== RESPONSIVE ===== */
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
 @media (max-width: 600px) {
     .blog-link {
-        padding: 12px 18px;
-        gap: 8px;
+        padding: 14px 18px;
+        gap: 10px;
         flex-wrap: wrap;
+        border-radius: 12px;
     }
     .link-title {
         font-size: 0.85rem;
     }
     .link-icon {
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
     .link-tag {
         font-size: 0.55rem;
@@ -2300,5 +2323,17 @@ p { margin-bottom: 1rem; color: var(--gray); }
     }
     .blog-subtitle {
         font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .blog-link {
+        padding: 12px 14px;
+        gap: 6px;
+        flex-direction: column;
+        text-align: center;
+    }
+    .link-title {
+        font-size: 0.8rem;
     }
 }
