@@ -1892,8 +1892,8 @@ function loadMiniSuggestions() {
     const shuffled = [...categorySuggestions].sort(() => Math.random() - 0.5);
     
     // Sab suggestions dikhao (50)
-    currentMiniSuggestions = shuffled;
-    suggestionCount.textContent = categorySuggestions.length;
+const displaySuggestions = shuffled.slice(0, 40);
+currentMiniSuggestions = displaySuggestions;
     
     let html = '';
     
