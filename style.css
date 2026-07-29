@@ -2076,3 +2076,484 @@ p { margin-bottom: 1rem; color: var(--gray); }
         font-size: 0.9rem;
     }
 }
+
+/* ============================================
+   BLOG SECTION – STYLISH CARDS
+   ============================================ */
+
+/* ----- Blog Section Container ----- */
+.blog-section {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.blog-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 8px;
+    transition: color 0.3s ease;
+}
+
+.blog-subtitle {
+    font-size: 1.05rem;
+    color: #64748b;
+    margin-bottom: 30px;
+    transition: color 0.3s ease;
+}
+
+/* ----- Blog Grid ----- */
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+/* ----- Blog Card ----- */
+.blog-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 18px;
+    border-radius: 16px;
+    text-decoration: none;
+    color: #1a1a2e;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    min-height: 120px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.blog-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    border-radius: 16px;
+}
+
+.blog-card:hover::after {
+    opacity: 1;
+}
+
+.blog-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.10);
+    border-color: rgba(0, 0, 0, 0.10);
+}
+
+.card-icon {
+    font-size: 2rem;
+    margin-bottom: 8px;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.blog-card:hover .card-icon {
+    transform: scale(1.1) rotate(-5deg);
+}
+
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #1a1a2e;
+    line-height: 1.4;
+    transition: color 0.3s ease;
+}
+
+.card-tag {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 3px 12px;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.6);
+    color: #1a1a2e;
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+/* ----- CARD COLOURS (Theme Based) ----- */
+
+/* Guide / Informative - Blue */
+.blog-blue {
+    background: linear-gradient(145deg, #e8f4fd, #d4e8f5);
+}
+.blog-blue:hover {
+    background: linear-gradient(145deg, #d4e8f5, #bfdcec);
+}
+
+/* Gaming - Dark/Red (Dark Text for Light BG) */
+.blog-dark {
+    background: linear-gradient(145deg, #1e293b, #2d3a4f);
+    color: #fff;
+}
+.blog-dark .card-title {
+    color: #fff;
+}
+.blog-dark .card-tag {
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+}
+.blog-dark:hover {
+    background: linear-gradient(145deg, #2d3a4f, #3d4a5f);
+}
+
+/* Free Fire - Orange/Red */
+.blog-fire {
+    background: linear-gradient(145deg, #fff3e0, #ffcc80);
+}
+.blog-fire:hover {
+    background: linear-gradient(145deg, #ffcc80, #ffb74d);
+}
+
+/* TikTok - Black/White (Dark Text for Light BG) */
+.blog-tiktok {
+    background: linear-gradient(145deg, #1a1a2e, #2d2d44);
+    color: #fff;
+}
+.blog-tiktok .card-title {
+    color: #fff;
+}
+.blog-tiktok .card-tag {
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+}
+.blog-tiktok:hover {
+    background: linear-gradient(145deg, #2d2d44, #3d3d54);
+}
+
+/* Instagram - Pink/Purple Gradient */
+.blog-instagram {
+    background: linear-gradient(145deg, #fce4ec, #f8bbd0);
+}
+.blog-instagram:hover {
+    background: linear-gradient(145deg, #f8bbd0, #f48fb1);
+}
+
+/* Attitude - Dark Purple/Black (Dark Text for Light BG) */
+.blog-attitude {
+    background: linear-gradient(145deg, #1a0a2e, #2d1a4e);
+    color: #fff;
+}
+.blog-attitude .card-title {
+    color: #fff;
+}
+.blog-attitude .card-tag {
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+}
+.blog-attitude:hover {
+    background: linear-gradient(145deg, #2d1a4e, #3d2a5e);
+}
+
+/* Bio - Green/Teal */
+.blog-bio {
+    background: linear-gradient(145deg, #e0f7fa, #b2ebf2);
+}
+.blog-bio:hover {
+    background: linear-gradient(145deg, #b2ebf2, #80deea);
+}
+
+/* Anime - Purple/Blue */
+.blog-anime {
+    background: linear-gradient(145deg, #ede7f6, #d1c4e9);
+}
+.blog-anime:hover {
+    background: linear-gradient(145deg, #d1c4e9, #b39ddb);
+}
+
+/* Royal - Gold/Dark */
+.blog-royal {
+    background: linear-gradient(145deg, #fef9e6, #f5e6b8);
+    border-color: #d4af37;
+}
+.blog-royal:hover {
+    background: linear-gradient(145deg, #f5e6b8, #e8d5a0);
+    border-color: #b8960f;
+}
+
+/* Snapchat - Yellow */
+.blog-snapchat {
+    background: linear-gradient(145deg, #fffde7, #fff9c4);
+    border-color: #fffc00;
+}
+.blog-snapchat:hover {
+    background: linear-gradient(145deg, #fff9c4, #fff59d);
+}
+
+/* Cute - Pink/Soft */
+.blog-cute {
+    background: linear-gradient(145deg, #fce4ec, #f8e8e8);
+}
+.blog-cute:hover {
+    background: linear-gradient(145deg, #f8e8e8, #f0d0d0);
+}
+
+/* Words - Rainbow Gradient */
+.blog-words {
+    background: linear-gradient(145deg, #f3e5f5, #e8eaf6);
+    border-color: #7c4dff;
+}
+.blog-words:hover {
+    background: linear-gradient(145deg, #e8eaf6, #dde0f0);
+}
+
+
+/* ============================================
+   DARK THEME SUPPORT
+   ============================================ */
+
+/* Dark Theme Container */
+.dark-theme .blog-title {
+    color: #f0f0f0;
+}
+
+.dark-theme .blog-subtitle {
+    color: #94a3b8;
+}
+
+/* Dark Theme Cards – Dark Backgrounds with Accent Colors */
+.dark-theme .blog-blue {
+    background: linear-gradient(145deg, #1a2a3a, #0d1f2d);
+    border-color: #0ea5e9;
+}
+.dark-theme .blog-blue .card-title {
+    color: #f0f0f0;
+}
+.dark-theme .blog-blue .card-tag {
+    background: rgba(14, 165, 233, 0.2);
+    color: #0ea5e9;
+}
+.dark-theme .blog-blue:hover {
+    background: linear-gradient(145deg, #1f3a4a, #122a3a);
+}
+
+.dark-theme .blog-dark {
+    background: linear-gradient(145deg, #0f172a, #1e293b);
+    border-color: #475569;
+}
+.dark-theme .blog-dark:hover {
+    background: linear-gradient(145deg, #1a2a3a, #2a3a4a);
+}
+
+.dark-theme .blog-fire {
+    background: linear-gradient(145deg, #2a1a0a, #3d2510);
+    border-color: #f97316;
+}
+.dark-theme .blog-fire .card-title {
+    color: #f0f0f0;
+}
+.dark-theme .blog-fire .card-tag {
+    background: rgba(249, 115, 22, 0.2);
+    color: #f97316;
+}
+.dark-theme .blog-fire:hover {
+    background: linear-gradient(145deg, #3d2510, #4d3015);
+}
+
+.dark-theme .blog-tiktok {
+    background: linear-gradient(145deg, #1a1a2e, #0d0d1a);
+    border-color: #64748b;
+}
+.dark-theme .blog-tiktok:hover {
+    background: linear-gradient(145deg, #2a2a3e, #1a1a2e);
+}
+
+.dark-theme .blog-instagram {
+    background: linear-gradient(145deg, #2a0a1a, #3d1025);
+    border-color: #ec4899;
+}
+.dark-theme .blog-instagram .card-title {
+    color: #f0f0f0;
+}
+.dark-theme .blog-instagram .card-tag {
+    background: rgba(236, 72, 153, 0.2);
+    color: #ec4899;
+}
+.dark-theme .blog-instagram:hover {
+    background: linear-gradient(145deg, #3d1025, #4d1530);
+}
+
+.dark-theme .blog-attitude {
+    background: linear-gradient(145deg, #1a0a2e, #0d0a1a);
+    border-color: #8b5cf6;
+}
+.dark-theme .blog-attitude:hover {
+    background: linear-gradient(145deg, #2a1a3e, #1a0a2e);
+}
+
+.dark-theme .blog-bio {
+    background: linear-gradient(145deg, #0a1a1a, #0d2520);
+    border-color: #14b8a6;
+}
+.dark-theme .blog-bio .card-title {
+    color: #f0f0f0;
+}
+.dark-theme .blog-bio .card-tag {
+    background: rgba(20, 184, 166, 0.2);
+    color: #14b8a6;
+}
+.dark-theme .blog-bio:hover {
+    background: linear-gradient(145deg, #0d2a25, #153530);
+}
+
+.dark-theme .blog-anime {
+    background: linear-gradient(145deg, #1a0a2a, #2d1035);
+    border-color: #a855f7;
+}
+.dark-theme .blog-anime .card-title {
+    color: #f0f0f0;
+}
+.dark-theme .blog-anime .card-tag {
+    background: rgba(168, 85, 247, 0.2);
+    color: #a855f7;
+}
+.dark-theme .blog-anime:hover {
+    background: linear-gradient(145deg, #2d1035, #3d1545);
+}
+
+.dark-theme .blog-royal {
+    background: linear-gradient(145deg, #1a1505, #2a200a);
+    border-color: #d4af37;
+}
+.dark-theme .blog-royal .card-title {
+    color: #f0f0f0;
+}
+.dark-theme .blog-royal .card-tag {
+    background: rgba(212, 175, 55, 0.2);
+    color: #d4af37;
+}
+.dark-theme .blog-royal:hover {
+    background: linear-gradient(145deg, #2a200a, #3a2a10);
+}
+
+.dark-theme .blog-snapchat {
+    background: linear-gradient(145deg, #2a2505, #3d350a);
+    border-color: #eab308;
+}
+.dark-theme .blog-snapchat .card-title {
+    color: #f0f0f0;
+}
+.dark-theme .blog-snapchat .card-tag {
+    background: rgba(234, 179, 8, 0.2);
+    color: #eab308;
+}
+.dark-theme .blog-snapchat:hover {
+    background: linear-gradient(145deg, #3d350a, #4d4510);
+}
+
+.dark-theme .blog-cute {
+    background: linear-gradient(145deg, #2a0a15, #3d1020);
+    border-color: #f472b6;
+}
+.dark-theme .blog-cute .card-title {
+    color: #f0f0f0;
+}
+.dark-theme .blog-cute .card-tag {
+    background: rgba(244, 114, 182, 0.2);
+    color: #f472b6;
+}
+.dark-theme .blog-cute:hover {
+    background: linear-gradient(145deg, #3d1020, #4d1525);
+}
+
+.dark-theme .blog-words {
+    background: linear-gradient(145deg, #150a20, #251030);
+    border-color: #7c4dff;
+}
+.dark-theme .blog-words .card-title {
+    color: #f0f0f0;
+}
+.dark-theme .blog-words .card-tag {
+    background: rgba(124, 77, 255, 0.2);
+    color: #7c4dff;
+}
+.dark-theme .blog-words:hover {
+    background: linear-gradient(145deg, #251030, #351540);
+}
+
+/* Dark Theme Card Hover General */
+.dark-theme .blog-card {
+    border-color: rgba(255, 255, 255, 0.08);
+}
+.dark-theme .blog-card:hover {
+    border-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.40);
+}
+
+.dark-theme .blog-card .card-tag {
+    backdrop-filter: blur(4px);
+}
+
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 768px) {
+    .blog-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 15px;
+    }
+    .blog-title {
+        font-size: 1.8rem;
+    }
+    .blog-card {
+        padding: 18px 14px;
+        min-height: 100px;
+    }
+    .card-icon {
+        font-size: 1.6rem;
+    }
+    .card-title {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .blog-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+    .blog-title {
+        font-size: 1.4rem;
+    }
+    .blog-subtitle {
+        font-size: 0.9rem;
+    }
+    .blog-card {
+        padding: 14px 10px;
+        min-height: 80px;
+        border-radius: 12px;
+    }
+    .card-icon {
+        font-size: 1.4rem;
+        margin-bottom: 4px;
+    }
+    .card-title {
+        font-size: 0.75rem;
+    }
+    .card-tag {
+        font-size: 0.6rem;
+        padding: 2px 10px;
+        margin-top: 4px;
+    }
+}
