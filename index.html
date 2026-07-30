@@ -1448,90 +1448,100 @@ content.style.display = content.style.display==="block"?"none":"block";
 
     <div style="height: 70px;"></div>
 
-    <!-- ===== BLOG SECTION – CLEAN LIST ===== -->
+    <!-- ===== BLOG SECTION – WITH SEE MORE (Expand on Same Page) ===== -->
 <section class="blog-section">
     <h2 class="blog-title">📚 Latest Articles</h2>
     <p class="blog-subtitle">Explore our collection of stylish names for every occasion</p>
 
-    <ul class="blog-list">
-        <li class="blog-item">
+    <ul class="blog-list" id="blogList">
+        <!-- ===== VISIBLE ARTICLES (पहले 6-8 दिखेंगे) ===== -->
+        <li class="blog-item visible">
+            <a href="trending-stylish-names.html" class="blog-link blog-trending">
+                <span class="link-icon">🔥</span>
+                <span class="link-title">Top 10 Trending Stylish Names 2026</span>
+                <span class="link-tag">Trending</span>
+            </a>
+        </li>
+        <li class="blog-item visible">
             <a href="what-is-stylename.html" class="blog-link blog-blue">
                 <span class="link-icon">✨</span>
                 <span class="link-title">What is Stylish Name Generator?</span>
                 <span class="link-tag">Guide</span>
             </a>
         </li>
-        <li class="blog-item">
+        <li class="blog-item visible">
             <a href="how-to-choose-gaming-name.html" class="blog-link blog-dark">
                 <span class="link-icon">🎮</span>
                 <span class="link-title">How to Choose Stylish Name for Gaming?</span>
                 <span class="link-tag">Gaming</span>
             </a>
         </li>
-        <li class="blog-item">
+        <li class="blog-item visible">
             <a href="free-fire-stylish-names-2026.html" class="blog-link blog-fire">
                 <span class="link-icon">🔥</span>
                 <span class="link-title">Top 10 Stylish Names for Free Fire</span>
                 <span class="link-tag">Free Fire</span>
             </a>
         </li>
-        <li class="blog-item">
+        <li class="blog-item visible">
             <a href="tiktok-username-ideas.html" class="blog-link blog-tiktok">
                 <span class="link-icon">😎</span>
                 <span class="link-title">100+ Unique TikTok Username Ideas</span>
                 <span class="link-tag">TikTok</span>
             </a>
         </li>
-        <li class="blog-item">
+        <li class="blog-item visible">
             <a href="instagram-stylish-names-2026.html" class="blog-link blog-instagram">
                 <span class="link-icon">📸</span>
                 <span class="link-title">Stylish Names for Instagram</span>
                 <span class="link-tag">Instagram</span>
             </a>
         </li>
-        <li class="blog-item">
+
+        <!-- ===== HIDDEN ARTICLES (ये पहले नहीं दिखेंगे) ===== -->
+        <li class="blog-item hidden">
             <a href="attitude-names-for-boys.html" class="blog-link blog-attitude">
                 <span class="link-icon">👿</span>
                 <span class="link-title">50+ Attitude Names for Boys</span>
                 <span class="link-tag">Attitude</span>
             </a>
         </li>
-        <li class="blog-item">
+        <li class="blog-item hidden">
             <a href="social-media-bio-ideas-for-whatsapp-instagram.html" class="blog-link blog-bio">
                 <span class="link-icon">💬</span>
                 <span class="link-title">Stylish Bio for Instagram & Gaming</span>
                 <span class="link-tag">Bio</span>
             </a>
         </li>
-        <li class="blog-item">
+        <li class="blog-item hidden">
             <a href="anime-stylish-names-collection.html" class="blog-link blog-anime">
                 <span class="link-icon">🌀</span>
                 <span class="link-title">100+ Anime Stylish Names</span>
                 <span class="link-tag">Anime</span>
             </a>
         </li>
-        <li class="blog-item">
+        <li class="blog-item hidden">
             <a href="royal-and-vip-names.html" class="blog-link blog-royal">
                 <span class="link-icon">🫅🏻</span>
                 <span class="link-title">Royal and VIP Names 2026</span>
                 <span class="link-tag">Royal</span>
             </a>
         </li>
-        <li class="blog-item">
+        <li class="blog-item hidden">
             <a href="stylish-name-for-snapchat.html" class="blog-link blog-snapchat">
                 <span class="link-icon">💛</span>
                 <span class="link-title">Snapchat Stylish Names</span>
                 <span class="link-tag">Snapchat</span>
             </a>
         </li>
-        <li class="blog-item">
+        <li class="blog-item hidden">
             <a href="top-10-cute-names.html" class="blog-link blog-cute">
                 <span class="link-icon">🥰</span>
                 <span class="link-title">Top 10 Cute Stylish Names</span>
                 <span class="link-tag">Cute</span>
             </a>
         </li>
-        <li class="blog-item">
+        <li class="blog-item hidden">
             <a href="stylish-words.html" class="blog-link blog-words">
                 <span class="link-icon">🔤</span>
                 <span class="link-title">All Stylish Words – A → ᴀ, 𝙰</span>
@@ -1539,6 +1549,11 @@ content.style.display = content.style.display==="block"?"none":"block";
             </a>
         </li>
     </ul>
+
+    <!-- ===== SEE MORE BUTTON ===== -->
+    <div class="see-more-container">
+        <button id="seeMoreBtn" class="see-more-btn">📖 See More Articles/Page ↓</button>
+    </div>
 </section>
 
     <!-- ===== SEO FRIENDLY SUMMARY SECTION ===== -->
