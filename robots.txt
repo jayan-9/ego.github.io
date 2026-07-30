@@ -50,6 +50,8 @@ Allow: /text-changer.html
 # Allow Golden Attach page
 Allow: /golden-attach.html
 
+Allow: /trending-stylish-names.html
+
 # Allow Symbol Library page
 Allow: /symbols-library.html
 
