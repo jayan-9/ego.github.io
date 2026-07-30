@@ -476,9 +476,88 @@
     }
 </style>
 
+<!-- ===== STICKY AD – BOTTOM TOOLBAR (NO CLOSE BUTTON) ===== -->
+<style>
+    /* ===== STICKY AD TOOLBAR ===== */
+    .sticky-ad-toolbar {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: rgba(20, 20, 20, 0.95);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        padding: 6px 10px;
+        z-index: 9999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-top: 2px solid rgba(255, 255, 255, 0.08);
+        box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
+        transition: all 0.3s ease;
+        min-height: 60px;
+    }
+
+    .sticky-ad-toolbar .ad-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    .sticky-ad-toolbar .ad-container iframe {
+        max-width: 100%;
+        height: auto !important;
+    }
+
+    /* ===== AD LABEL ===== */
+    .sticky-ad-label {
+        position: absolute;
+        top: -18px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(0, 0, 0, 0.6);
+        color: #888;
+        font-size: 0.45rem;
+        letter-spacing: 1px;
+        padding: 1px 10px;
+        border-radius: 4px 4px 0 0;
+        text-transform: uppercase;
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        border-bottom: none;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 480px) {
+        .sticky-ad-toolbar {
+            padding: 4px 6px;
+            min-height: 52px;
+        }
+        .sticky-ad-toolbar .ad-container iframe {
+            max-width: 320px;
+            height: 50px !important;
+        }
+    }
+
+    @media (min-width: 481px) {
+        .sticky-ad-toolbar .ad-container iframe {
+            max-width: 728px;
+            height: 90px !important;
+        }
+    }
+
+    /* Dark Theme Support */
+    .dark-theme .sticky-ad-toolbar {
+        background: rgba(10, 10, 10, 0.95);
+        border-top: 2px solid rgba(255, 255, 255, 0.05);
+    }
+</style>
+
 <!-- ===== STICKY AD TOOLBAR ===== -->
 <div class="sticky-ad-toolbar" id="stickyAdToolbar">
-    <button class="sticky-ad-close" onclick="closeStickyAd()" title="Close Ad">✕</button>
     <span class="sticky-ad-label">ADVERTISEMENT</span>
     <div class="ad-container">
         <script>
@@ -493,21 +572,6 @@
         <script src="https://www.highperformanceformat.com/d763499f473d885aec34e972524f3dd6/invoke.js"></script>
     </div>
 </div>
-
-<!-- ===== JAVASCRIPT: CLOSE AD ===== -->
-<script>
-    function closeStickyAd() {
-        const ad = document.getElementById('stickyAdToolbar');
-        if (ad) {
-            ad.style.transition = 'all 0.4s ease';
-            ad.style.transform = 'translateY(100%)';
-            ad.style.opacity = '0';
-            setTimeout(() => {
-                ad.style.display = 'none';
-            }, 400);
-        }
-    }
-</script>
     
     <main>
         <article>
