@@ -1814,7 +1814,6 @@ if (index === 133) {
              style="width: 100%; height: auto; display: block; border-radius: 8px;">
     `;
     result.appendChild(imgDiv);
-}
     
     // AdSense script execute
     setTimeout(() => {
