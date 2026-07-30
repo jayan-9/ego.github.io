@@ -2321,3 +2321,50 @@ p { margin-bottom: 1rem; color: var(--gray); }
         padding: 1px 10px;
     }
 }
+
+/* ===== SEE MORE BUTTON ===== */
+.see-more-container {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.see-more-btn {
+    display: inline-block;
+    padding: 12px 32px;
+    background: linear-gradient(135deg, #1a0a2e, #3d1a6e);
+    color: #d4af37;
+    border: 2px solid #d4af37;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+    font-family: inherit;
+}
+
+.see-more-btn:hover {
+    background: #d4af37;
+    color: #1a0a2e;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.25);
+}
+
+/* ===== DARK THEME SUPPORT ===== */
+.dark-theme .see-more-btn {
+    background: linear-gradient(135deg, #0f0a1a, #2a1a4e);
+    color: #d4af37;
+    border-color: #d4af37;
+}
+.dark-theme .see-more-btn:hover {
+    background: #d4af37;
+    color: #0f0a1a;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+    .see-more-btn {
+        padding: 10px 24px;
+        font-size: 0.85rem;
+    }
+}
