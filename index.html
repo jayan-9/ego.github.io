@@ -1752,6 +1752,33 @@ function copyCurrentUrl() {
     <div class="toast" id="toast"></div>
 
     <script src="script.js"></script>
+
+    <script>
+    // ===== SEE MORE / SEE LESS TOGGLE =====
+    document.addEventListener('DOMContentLoaded', function() {
+        const seeMoreBtn = document.getElementById('seeMoreBtn');
+        const hiddenItems = document.querySelectorAll('.blog-item.hidden');
+        let isExpanded = false;
+
+        if (seeMoreBtn) {
+            seeMoreBtn.addEventListener('click', function() {
+                isExpanded = !isExpanded;
+
+                hiddenItems.forEach(item => {
+                    if (isExpanded) {
+                        item.classList.remove('hidden');
+                        item.classList.add('visible');
+                    } else {
+                        item.classList.add('hidden');
+                        item.classList.remove('visible');
+                    }
+                });
+
+                seeMoreBtn.textContent = isExpanded ? '📖 See Less Articles ↑' : '📖 See More Articles ↓';
+            });
+        }
+    });
+    </script>
     
 <!-- Adsterra notification -->
     <script src="https://pl30572306.effectivecpmnetwork.com/91/6e/0d/916e0d1b72a1107d1d259966e1744d54.js"></script>
