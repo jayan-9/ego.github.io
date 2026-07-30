@@ -1836,6 +1836,7 @@ if (index === 149) {
         <script src="https://www.highperformanceformat.com/3d64b29b20a5341333a9e7333c2a2f78/invoke.js"><\/script>
     `;
     result.appendChild(adDiv);
+}
     
     // AdSense script execute
     setTimeout(() => {
