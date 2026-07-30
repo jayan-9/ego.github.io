@@ -2337,3 +2337,43 @@ p { margin-bottom: 1rem; color: var(--gray); }
         font-size: 0.8rem;
     }
 }
+
+/* ===== ADVERTISEMENT LABEL CHHOTA SA===== */
+.ad-label {
+    text-align: center;
+    margin: 20px 0 10px 0;
+    padding: 4px 0;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+}
+
+.ad-label span {
+    font-size: 0.6rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #1a1a2e;
+    background: rgba(0, 0, 0, 0.04);
+    padding: 2px 16px;
+    border-radius: 30px;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    display: inline-block;
+}
+
+/* ===== DARK THEME SUPPORT ===== */
+.dark-theme .ad-label span {
+    color: #e0e0e0;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+    .ad-label span {
+        font-size: 0.5rem;
+        letter-spacing: 1.5px;
+        padding: 2px 12px;
+    }
+}
