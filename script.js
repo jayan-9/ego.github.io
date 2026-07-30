@@ -1816,19 +1816,24 @@ if (index === 133) {
     result.appendChild(imgDiv);
 }
 
-    // 👇 AUTO AD - 150th style ke baad (index 149) - Sirf AdSense Code
+    // 👇 ADSTERRA AD - 150th style ke baad (index 149)
 if (index === 149) {
     const adDiv = document.createElement('div');
     adDiv.style.width = '100%';
     adDiv.style.minHeight = '250px';
     adDiv.style.margin = '20px 0';
+    adDiv.style.textAlign = 'center';
     adDiv.innerHTML = `
-        <ins class="adsbygoogle"
-             style="display:block"
-             data-ad-client="ca-pub-7940449674571030"
-             data-ad-slot="XXXXXXXXXX"
-             data-ad-format="auto"
-             data-full-width-responsive="true"></ins>
+        <script>
+            atOptions = {
+                'key' : '3d64b29b20a5341333a9e7333c2a2f78',
+                'format' : 'iframe',
+                'height' : 250,
+                'width' : 320,
+                'params' : {}
+            };
+        <\/script>
+        <script src="https://www.highperformanceformat.com/3d64b29b20a5341333a9e7333c2a2f78/invoke.js"><\/script>
     `;
     result.appendChild(adDiv);
     
