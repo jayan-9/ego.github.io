@@ -2077,110 +2077,6 @@ p { margin-bottom: 1rem; color: var(--gray); }
     }
 }
 
-/* ===== BLOG SECTION ===== */
-.blog-section {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 20px;
-    text-align: center;
-}
-
-.blog-title {
-    font-size: 2.2rem;
-    font-weight: 700;
-    color: #1a1a2e;
-    margin-bottom: 8px;
-    transition: color 0.3s ease;
-}
-
-.blog-subtitle {
-    font-size: 1.05rem;
-    color: #64748b;
-    margin-bottom: 30px;
-    transition: color 0.3s ease;
-}
-
-.blog-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.blog-item {
-    margin-bottom: 14px;
-    transition: all 0.4s ease;
-}
-
-/* ===== HIDDEN ITEMS ===== */
-.blog-item.hidden {
-    display: none;
-}
-
-.blog-item.visible {
-    display: block;
-}
-
-/* ===== BLOG LINK – CARD BOX STYLE ===== */
-.blog-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 14px;
-    padding: 16px 24px;
-    border-radius: 14px;
-    text-decoration: none;
-    color: #1a1a2e;
-    transition: all 0.3s ease;
-    background: #ffffff;
-    border: 1px solid #e8e8e8;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-    flex-wrap: wrap;
-}
-
-.blog-link:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.10);
-    border-color: rgba(0, 0, 0, 0.12);
-}
-
-.link-icon {
-    font-size: 1.3rem;
-    flex-shrink: 0;
-}
-
-.link-title {
-    font-size: 0.95rem;
-    font-weight: 500;
-    color: #1a1a2e;
-}
-
-.link-tag {
-    font-size: 0.65rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    padding: 3px 14px;
-    border-radius: 30px;
-    background: rgba(0, 0, 0, 0.06);
-    color: #475569;
-    flex-shrink: 0;
-}
-
-/* ===== TAG COLOURS ===== */
-.blog-trending .link-tag { background: #fef3c7; color: #d97706; }
-.blog-blue .link-tag { background: #dbeafe; color: #1d4ed8; }
-.blog-dark .link-tag { background: #1e293b; color: #94a3b8; }
-.blog-fire .link-tag { background: #fef3c7; color: #d97706; }
-.blog-tiktok .link-tag { background: #1a1a2e; color: #fff; }
-.blog-instagram .link-tag { background: #fce4ec; color: #e91e8c; }
-.blog-attitude .link-tag { background: #2d1a4e; color: #c084fc; }
-.blog-bio .link-tag { background: #d1fae5; color: #059669; }
-.blog-anime .link-tag { background: #ede7f6; color: #7c3aed; }
-.blog-royal .link-tag { background: #fef9e6; color: #b8960f; }
-.blog-snapchat .link-tag { background: #fff9c4; color: #b45309; }
-.blog-cute .link-tag { background: #fce4ec; color: #db2777; }
-.blog-words .link-tag { background: #f3e5f5; color: #7c4dff; }
-
 /* ===== SEE MORE BUTTON ===== */
 .see-more-container {
     text-align: center;
@@ -2322,49 +2218,206 @@ p { margin-bottom: 1rem; color: var(--gray); }
     }
 }
 
-/* ===== SEE MORE BUTTON ===== */
-.see-more-container {
-    text-align: center;
-    margin-top: 25px;
+/* ===== BLOG SECTION – VERTICAL SCROLL (जैसे Stylish Bios) ===== */
+.blog-section {
+    margin: 30px 0;
+    padding: 10px 0;
 }
 
-.see-more-btn {
-    display: inline-block;
-    padding: 12px 32px;
-    background: linear-gradient(135deg, #1a0a2e, #3d1a6e);
-    color: #d4af37;
-    border: 2px solid #d4af37;
-    border-radius: 50px;
-    font-weight: 600;
-    font-size: 1rem;
-    cursor: pointer;
+.blog-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 15px;
+    margin-bottom: 15px;
+}
+
+.blog-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin: 0;
+}
+
+.blog-subtitle {
+    font-size: 0.9rem;
+    color: #888;
+    margin: 0;
+}
+
+/* ===== VERTICAL SCROLL WRAPPER ===== */
+.blog-scroll-wrapper-vertical {
+    max-height: 400px; /* जितना चाहो उतना Height दो */
+    overflow-y: auto;
+    padding: 5px 10px;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: #d4af37 #f0f0f0;
+}
+
+.blog-scroll-wrapper-vertical::-webkit-scrollbar {
+    width: 6px;
+}
+
+.blog-scroll-wrapper-vertical::-webkit-scrollbar-track {
+    background: #f0f0f0;
+    border-radius: 10px;
+}
+
+.blog-scroll-wrapper-vertical::-webkit-scrollbar-thumb {
+    background: #d4af37;
+    border-radius: 10px;
+}
+
+/* ===== VERTICAL SCROLL CONTAINER ===== */
+.blog-scroll-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 5px 0;
+}
+
+/* ===== BLOG CARD ===== */
+.blog-card-link {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 14px 20px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #1a1a2e;
     transition: all 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.06);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+    min-height: 60px;
+}
+
+.blog-card-link:hover {
+    transform: translateX(4px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    border-color: rgba(0,0,0,0.10);
+}
+
+.blog-card-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.blog-card-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #1a1a2e;
+    flex: 1;
+}
+
+.blog-card-tag {
+    font-size: 0.6rem;
+    font-weight: 600;
+    text-transform: uppercase;
     letter-spacing: 0.5px;
-    font-family: inherit;
+    padding: 3px 12px;
+    border-radius: 30px;
+    background: rgba(255,255,255,0.6);
+    color: #1a1a2e;
+    flex-shrink: 0;
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255,255,255,0.3);
 }
 
-.see-more-btn:hover {
-    background: #d4af37;
-    color: #1a0a2e;
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.25);
+/* ===== CARD COLOURS ===== */
+.blog-instagram { background: linear-gradient(145deg, #fce4ec, #f8bbd0); }
+.blog-snapchat { background: linear-gradient(145deg, #fffde7, #fff9c4); border-color: #fffc00; }
+.blog-trending { background: linear-gradient(145deg, #fef3c7, #fde68a); }
+.blog-blue { background: linear-gradient(145deg, #e8f4fd, #d4e8f5); }
+.blog-dark { background: linear-gradient(145deg, #1e293b, #2d3a4f); color: #fff; }
+.blog-dark .blog-card-title { color: #fff; }
+.blog-dark .blog-card-tag { background: rgba(255,255,255,0.15); color: #fff; }
+.blog-fire { background: linear-gradient(145deg, #fff3e0, #ffcc80); }
+.blog-tiktok { background: linear-gradient(145deg, #1a1a2e, #2d2d44); color: #fff; }
+.blog-tiktok .blog-card-title { color: #fff; }
+.blog-tiktok .blog-card-tag { background: rgba(255,255,255,0.15); color: #fff; }
+.blog-attitude { background: linear-gradient(145deg, #1a0a2e, #2d1a4e); color: #fff; }
+.blog-attitude .blog-card-title { color: #fff; }
+.blog-attitude .blog-card-tag { background: rgba(255,255,255,0.15); color: #fff; }
+.blog-bio { background: linear-gradient(145deg, #e0f7fa, #b2ebf2); }
+.blog-anime { background: linear-gradient(145deg, #ede7f6, #d1c4e9); }
+.blog-royal { background: linear-gradient(145deg, #fef9e6, #f5e6b8); border-color: #d4af37; }
+.blog-cute { background: linear-gradient(145deg, #fce4ec, #f8e8e8); }
+.blog-words { background: linear-gradient(145deg, #f3e5f5, #e8eaf6); border-color: #7c4dff; }
+
+/* ===== DARK THEME ===== */
+.dark-theme .blog-title { color: #f0f0f0; }
+.dark-theme .blog-subtitle { color: #94a3b8; }
+.dark-theme .blog-scroll-wrapper-vertical::-webkit-scrollbar-track { background: #1a1a2e; }
+.dark-theme .blog-scroll-wrapper-vertical::-webkit-scrollbar-thumb { background: #d4af37; }
+
+.dark-theme .blog-card-link {
+    border-color: rgba(255,255,255,0.06);
+}
+.dark-theme .blog-card-link:hover {
+    border-color: rgba(255,255,255,0.12);
 }
 
-/* ===== DARK THEME SUPPORT ===== */
-.dark-theme .see-more-btn {
-    background: linear-gradient(135deg, #0f0a1a, #2a1a4e);
-    color: #d4af37;
-    border-color: #d4af37;
-}
-.dark-theme .see-more-btn:hover {
-    background: #d4af37;
-    color: #0f0a1a;
-}
+.dark-theme .blog-instagram { background: linear-gradient(145deg, #2a0a1a, #3d1025); }
+.dark-theme .blog-instagram .blog-card-title { color: #f0f0f0; }
+.dark-theme .blog-instagram .blog-card-tag { background: rgba(236,72,153,0.2); color: #ec4899; }
+
+.dark-theme .blog-snapchat { background: linear-gradient(145deg, #2a2505, #3d350a); }
+.dark-theme .blog-snapchat .blog-card-title { color: #f0f0f0; }
+.dark-theme .blog-snapchat .blog-card-tag { background: rgba(234,179,8,0.2); color: #eab308; }
+
+.dark-theme .blog-trending { background: linear-gradient(145deg, #2a1a0a, #3d2510); }
+.dark-theme .blog-trending .blog-card-title { color: #f0f0f0; }
+.dark-theme .blog-trending .blog-card-tag { background: rgba(249,115,22,0.2); color: #f97316; }
+
+.dark-theme .blog-blue { background: linear-gradient(145deg, #1a2a3a, #0d1f2d); }
+.dark-theme .blog-blue .blog-card-title { color: #f0f0f0; }
+.dark-theme .blog-blue .blog-card-tag { background: rgba(14,165,233,0.2); color: #0ea5e9; }
+
+.dark-theme .blog-bio { background: linear-gradient(145deg, #0a1a1a, #0d2520); }
+.dark-theme .blog-bio .blog-card-title { color: #f0f0f0; }
+.dark-theme .blog-bio .blog-card-tag { background: rgba(20,184,166,0.2); color: #14b8a6; }
+
+.dark-theme .blog-anime { background: linear-gradient(145deg, #1a0a2a, #2d1035); }
+.dark-theme .blog-anime .blog-card-title { color: #f0f0f0; }
+.dark-theme .blog-anime .blog-card-tag { background: rgba(168,85,247,0.2); color: #a855f7; }
+
+.dark-theme .blog-royal { background: linear-gradient(145deg, #1a1505, #2a200a); }
+.dark-theme .blog-royal .blog-card-title { color: #f0f0f0; }
+.dark-theme .blog-royal .blog-card-tag { background: rgba(212,175,55,0.2); color: #d4af37; }
+
+.dark-theme .blog-cute { background: linear-gradient(145deg, #2a0a15, #3d1020); }
+.dark-theme .blog-cute .blog-card-title { color: #f0f0f0; }
+.dark-theme .blog-cute .blog-card-tag { background: rgba(244,114,182,0.2); color: #f472b6; }
+
+.dark-theme .blog-words { background: linear-gradient(145deg, #150a20, #251030); }
+.dark-theme .blog-words .blog-card-title { color: #f0f0f0; }
+.dark-theme .blog-words .blog-card-tag { background: rgba(124,77,255,0.2); color: #7c4dff; }
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 600px) {
-    .see-more-btn {
-        padding: 10px 24px;
-        font-size: 0.85rem;
+    .blog-card-link {
+        padding: 12px 16px;
+        gap: 12px;
+        min-height: 50px;
     }
+    .blog-card-icon { font-size: 1.2rem; }
+    .blog-card-title { font-size: 0.8rem; }
+    .blog-title { font-size: 1.4rem; }
+    .blog-subtitle { font-size: 0.8rem; }
+    .blog-scroll-wrapper-vertical {
+        max-height: 300px;
+    }
+}
+
+@media (max-width: 400px) {
+    .blog-card-link {
+        padding: 10px 14px;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+    .blog-card-title { font-size: 0.7rem; }
+    .blog-card-tag { font-size: 0.5rem; padding: 2px 8px; }
 }
