@@ -1,242 +1,781 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5781318703267732"
-     crossorigin="anonymous"></script>
-    <meta name="google-site-verification" content="cKGfHx3401UeyzijckfH4-0-Km0WQ33kICn3MIs3J04" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hindi Name Collection – Stylish Hindi Names</title>
+    <title>Hindi Name Collection – ❥ ᴰ͎ ᴵ͎ ᴸ͎ ᴿ͎ ᵁ͎ ᴮ͎ ᴬ͎ ❥ ,ꀤ ꌗ ꀍ ꀎ | Stylename.in</title>
     <meta name="description" content="50+ stylish Hindi names with symbols. Love names, attitude names, gaming names. Copy and paste for free.">
     <link rel="icon" href="favicon.png" type="image/png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* ===== HINDI THEME: Orange + White + Green (Tricolor Vibe) ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #fffdf7;
+            color: #1a1a2e;
+            line-height: 1.8;
+            padding: 20px;
+            transition: background 0.3s, color 0.3s;
+        }
+        a {
+            text-decoration: none;
+            color: #ff6b00;
+        }
+        a:hover {
+            color: #138808;
+        }
+
+        /* Dark Theme */
+        body.dark-theme {
+            background: #0d0d0d;
+            color: #e8e0f0;
+        }
+        body.dark-theme a {
+            color: #ff8c00;
+        }
+        body.dark-theme a:hover {
+            color: #4caf50;
+        }
+
+        header {
+            background: #1a1a2e;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            border-radius: 0 0 16px 16px;
+            margin-bottom: 30px;
+            border-bottom: 3px solid #ff6b00;
+        }
+        header h1 a {
+            color: #ff6b00;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+        header nav a {
+            color: #fff;
+            margin: 0 12px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+        header nav a:hover {
+            color: #ff6b00;
+        }
+
+        .translate-container {
+            display: flex;
+            justify-content: flex-end;
+            margin: 10px 0 20px 0;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0 20px;
+        }
+        #google_translate_element {
+            background: #f0f0f0;
+            padding: 6px 12px;
+            border-radius: 30px;
+            border: 1px solid #ddd;
+            font-size: 0.9rem;
+        }
+        .goog-te-gadget-simple {
+            background: transparent !important;
+            border: none !important;
+            font-size: 0.9rem !important;
+            padding: 4px 8px !important;
+        }
+        .goog-te-gadget-simple span {
+            color: #1a1a2e !important;
+        }
+        body.dark-theme .goog-te-gadget-simple span {
+            color: #fff !important;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            text-align: center;
+            margin-bottom: 30px;
+            background: linear-gradient(135deg, #ff9933, #ffffff, #138808);
+            padding: 40px 20px;
+            border-radius: 20px;
+            border: 2px solid #ff6b00;
+            box-shadow: 0 4px 20px rgba(255, 107, 0, 0.08);
+        }
+        body.dark-theme .hero {
+            background: linear-gradient(135deg, #1a0a00, #0d0d0d, #0a1a0a);
+            border-color: #ff6b00;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #1a1a2e;
+        }
+        body.dark-theme .hero h1 {
+            color: #f0e0f0;
+        }
+        .hero p {
+            font-size: 1.1rem;
+            color: #1a1a2e;
+            max-width: 700px;
+            margin: 10px auto 0;
+        }
+        body.dark-theme .hero p {
+            color: #d4b0d4;
+        }
+        .hero .hero-icon {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        /* ===== CATEGORY ===== */
+        .category {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(6px);
+            border-radius: 20px;
+            margin-bottom: 30px;
+            padding: 25px 30px;
+            box-shadow: 0 4px 15px rgba(255, 107, 0, 0.06);
+            border: 1px solid rgba(255, 107, 0, 0.12);
+        }
+        body.dark-theme .category {
+            background: rgba(20, 15, 10, 0.8);
+            border-color: rgba(255, 107, 0, 0.15);
+        }
+        .category h2 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            border-left: 5px solid #ff6b00;
+            padding-left: 15px;
+            color: #1a1a2e;
+        }
+        body.dark-theme .category h2 {
+            color: #f0e0f0;
+        }
+        .category .desc {
+            color: #475569;
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+            padding-left: 20px;
+        }
+        body.dark-theme .category .desc {
+            color: #b8a0c8;
+        }
+
+        /* ===== NAME CARD ===== */
+        .name-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(255, 107, 0, 0.10);
+            border-radius: 14px;
+            padding: 16px 20px;
+            margin-bottom: 14px;
+            transition: all 0.3s ease;
+        }
+        body.dark-theme .name-card {
+            background: rgba(20, 15, 10, 0.6);
+            border-color: rgba(255, 107, 0, 0.12);
+        }
+        .name-card:hover {
+            border-color: #ff6b00;
+            box-shadow: 0 4px 20px rgba(255, 107, 0, 0.08);
+            transform: translateY(-2px);
+        }
+        .name-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .name-text {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #1a1a2e;
+            word-break: break-word;
+        }
+        body.dark-theme .name-text {
+            color: #f0e0f0;
+        }
+        .copy-btn {
+            background: #ff6b00;
+            color: #fff;
+            border: none;
+            padding: 5px 16px;
+            border-radius: 30px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+            white-space: nowrap;
+        }
+        .copy-btn:hover {
+            background: #138808;
+            transform: scale(1.02);
+        }
+
+        .name-summary {
+            font-size: 0.9rem;
+            color: #475569;
+            margin-top: 10px;
+            padding: 10px 14px;
+            background: rgba(255, 107, 0, 0.04);
+            border-radius: 10px;
+            border-left: 3px solid #ff6b00;
+        }
+        body.dark-theme .name-summary {
+            color: #b8a0c8;
+            background: rgba(255, 107, 0, 0.04);
+        }
+        .name-summary strong {
+            color: #1a1a2e;
+        }
+        body.dark-theme .name-summary strong {
+            color: #ff8c00;
+        }
+
+        /* ===== MORE NAMES GRID ===== */
+        .more-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 10px;
+            margin: 15px 0;
+        }
+        .more-item {
+            background: rgba(255, 255, 255, 0.6);
+            padding: 10px 14px;
+            border-radius: 10px;
+            text-align: center;
+            border: 1px solid rgba(255, 107, 0, 0.08);
+            font-size: 0.9rem;
+            color: #1a1a2e;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        body.dark-theme .more-item {
+            background: rgba(20, 15, 10, 0.5);
+            border-color: rgba(255, 107, 0, 0.1);
+            color: #e0d0e0;
+        }
+        .more-item:hover {
+            border-color: #ff6b00;
+            transform: translateY(-2px);
+            background: rgba(255, 107, 0, 0.06);
+        }
+
+        /* ===== COUNTRY TAG ===== */
+        .country-tag {
+            display: inline-block;
+            font-size: 0.6rem;
+            font-weight: 600;
+            padding: 2px 10px;
+            border-radius: 30px;
+            background: rgba(255, 107, 0, 0.1);
+            color: #ff6b00;
+            margin-left: 6px;
+        }
+        body.dark-theme .country-tag {
+            background: rgba(255, 107, 0, 0.15);
+            color: #ff8c00;
+        }
+
+        /* ===== FAQ BOX ===== */
+        .faq-box {
+            background: rgba(255, 255, 255, 0.6);
+            border-radius: 14px;
+            padding: 20px 25px;
+            margin: 20px 0;
+            border: 1px solid rgba(255, 107, 0, 0.1);
+        }
+        body.dark-theme .faq-box {
+            background: rgba(20, 15, 10, 0.5);
+        }
+        .faq-item {
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255, 107, 0, 0.06);
+        }
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+        .faq-q {
+            font-weight: 600;
+            color: #1a1a2e;
+        }
+        body.dark-theme .faq-q {
+            color: #f0e0f0;
+        }
+        .faq-a {
+            color: #475569;
+            padding-left: 20px;
+        }
+        body.dark-theme .faq-a {
+            color: #b8a0c8;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            border-top: 2px solid #ff6b00;
+            color: #475569;
+        }
+        body.dark-theme footer {
+            color: #94a3b8;
+            border-color: #ff6b00;
+        }
+        footer .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 15px;
+        }
+        footer .footer-links a {
+            color: #475569;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        body.dark-theme .footer-links a {
+            color: #94a3b8;
+        }
+        footer .footer-links a:hover {
+            color: #ff6b00;
+        }
+
+        /* ===== TOAST ===== */
+        .toast {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #1a1a2e;
+            color: #ff6b00;
+            padding: 8px 20px;
+            border-radius: 40px;
+            font-size: 0.9rem;
+            z-index: 1000;
+            opacity: 0;
+            transition: opacity 0.3s;
+            pointer-events: none;
+            border: 1px solid #ff6b00;
+        }
+        .toast.show {
+            opacity: 1;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            header {
+                padding: 15px 20px;
+                flex-direction: column;
+                gap: 10px;
+            }
+            header nav a {
+                margin: 0 8px;
+                font-size: 0.9rem;
+            }
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            .category {
+                padding: 18px;
+            }
+            .name-text {
+                font-size: 1rem;
+            }
+            .translate-container {
+                justify-content: center;
+            }
+            .more-grid {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            }
+        }
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.4rem;
+            }
+            .name-text {
+                font-size: 0.9rem;
+            }
+            .name-header {
+                flex-direction: column;
+                align-items: stretch;
+                text-align: center;
+            }
+            .copy-btn {
+                align-self: center;
+            }
+            .category h2 {
+                font-size: 1.3rem;
+            }
+            .more-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="container">
-            <button class="menu-toggle" id="menuToggle">
-                <i class="fas fa-bars"></i>
-            </button>
-            <div class="logo">
-                <h1>stylename<span class="logo-dot">.</span>in</h1>
-                <p class="tagline">Style Your Identity</p>
-            </div>
-            <div class="theme-toggle" id="themeToggle">
-                <i class="fas fa-moon"></i>
-            </div>
-        </div>
-    </nav>
 
-    <main style="max-width: 800px; margin: 30px auto; padding: 15px;">
-        <h1 style="text-align:center;">Hindi Name Collection</h1>
-        <p style="text-align:center; color:#666;">Published: February 2026</p>
+    <header>
+        <h1><a href="index.html">StyleName</a></h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
 
-        <div style="background:#f0f0f0; padding:12px; border-radius:8px; margin:15px 0; text-align:center;">
-            <p style="margin:0;">🇮🇳 हिंदी नामों का कलेक्शन – प्यार, अटिट्यूड, गेमिंग नाम 🇮🇳</p>
-        </div>
-
-        <h2>❤️ प्यार वाले नाम</h2>
-        <div style="margin:15px 0;">
-            <div style="background:#f5f5f5; padding:10px; margin:5px 0; display:flex; justify-content:space-between">
-                <span>♡ 𝓟𝔂𝓪𝓻𝓲 𝓓𝓲𝓵 ♡</span>
-                <button onclick="copyText('♡ 𝓟𝔂𝓪𝓻𝓲 𝓓𝓲𝓵 ♡')" style="background:#ff69b4; color:white; border:none; padding:3px 12px; border-radius:5px">Copy</button>
-            </div>
-            <div style="background:#f5f5f5; padding:10px; margin:5px 0; display:flex; justify-content:space-between">
-                <span>꧁༒☬ मोहब्बत ☬༒꧂</span>
-                <button onclick="copyText('꧁༒☬ मोहब्बत ☬༒꧂')" style="background:#ff69b4; color:white; border:none; padding:3px 12px; border-radius:5px">Copy</button>
-            </div>
-            <div style="background:#f5f5f5; padding:10px; margin:5px 0; display:flex; justify-content:space-between">
-                <span>♥ 𝒥𝒶𝒶𝓃 ♥</span>
-                <button onclick="copyText('♥ 𝒥𝒶𝒶𝓃 ♥')" style="background:#ff69b4; color:white; border:none; padding:3px 12px; border-radius:5px">Copy</button>
-            </div>
-            <div style="background:#f5f5f5; padding:10px; margin:5px 0; display:flex; justify-content:space-between">
-                <span>❥ दिलरुबा ❥</span>
-                <button onclick="copyText('❥ दिलरुबा ❥')" style="background:#ff69b4; color:white; border:none; padding:3px 12px; border-radius:5px">Copy</button>
-            </div>
-            <div style="background:#f5f5f5; padding:10px; margin:5px 0; display:flex; justify-content:space-between">
-                <span>꧁༺ सच्चा प्यार ༻꧂</span>
-                <button onclick="copyText('꧁༺ सच्चा प्यार ༻꧂')" style="background:#ff69b4; color:white; border:none; padding:3px 12px; border-radius:5px">Copy</button>
-            </div>
-        </div>
-
-        <h2>👑 अटिट्यूड नाम</h2>
-        <div style="margin:15px 0;">
-            <div style="background:#f5f5f5; padding:10px; margin:5px 0; display:flex; justify-content:space-between">
-                <span>꧁༒ रॉयल नवाब ༒꧂</span>
-                <button onclick="copyText('꧁༒ रॉयल नवाब ༒꧂')" style="background:#ff8c00; color:white; border:none; padding:3px 12px; border-radius:5px">Copy</button>
-            </div>
-            <div style="background:#f5f5f5; padding:10px; margin:5px 0; display:flex; justify-content:space-between">
-                <span>🔥 अकेला शेर 🔥</span>
-                <button onclick="copyText('🔥 अकेला शेर 🔥')" style="background:#ff8c00; color:white; border:none; padding:3px 12px; border-radius:5px">Copy</button>
-            </div>
-            <div style="background:#f5f5f5; padding:10px; margin:5px 0; display:flex; justify-content:space-between">
-                <span>⚡ दबंग छोरा ⚡</span>
-                <button onclick="copyText('⚡ दबंग छोरा ⚡')" style="background:#ff8c00; color:white; border:none; padding:3px 12px; border-radius:5px">Copy</button>
-            </div>
-            <div style="background:#f5f5f5; padding:10px; margin:5px 0; display:flex; justify-content:space-between">
-                <span>༒ खतरनाक खिलाड़ी ༒</span>
-                <button onclick="copyText('༒ खतरनाक खिलाड़ी ༒')" style="background:#ff8c00; color:white; border:none; padding:3px 12px; border-radius:5px">Copy</button>
-            </div>
-            <div style="background:#f5f5f5; padding:10px; margin:5px 0; display:flex; justify-content:space-between">
-                <span>👑 शाही अंदाज़ 👑</span>
-                <button onclick="copyText('👑 शाही अंदाज़ 👑')" style="background:#ff8c00; color:white; border:none; padding:3px 12px; border-radius:5px">Copy</button>
-            </div>
-        </div>
-
-        <h2>🎮 गेमिंग नाम</h2>
-        <div style="margin:15px 0;">
-            <div style="background:#f5f5f5; padding:10px; margin:5px 0; display:flex; justify-content:space-between">
-                <span>꧁༒ गेमर राजा ༒꧂</span>
-                <button onclick="copyText('꧁༒ गेमर राजा ༒꧂')" style="background:#4169e1; color:white; border:none; padding:3px 12px; border-radius:5px">Copy</button>
-            </div>
-            <div style="background:#f5f5f5; padding:10px; margin:5px 0; display:flex; justify-content:space-between">
-                <span>🎯 हेडशॉट किंग 🎯</span>
-                <button onclick="copyText('🎯 हेडशॉट किंग 🎯')" style="background:#4169e1; color:white; border:none; padding:3px 12px; border-radius:5px">Copy</button>
-            </div>
-            <div style="background:#f5f5f5; padding:10px; margin:5px 0; display:flex; justify-content:space-between">
-                <span>🔥 प्रो खिलाड़ी 🔥</span>
-                <button onclick="copyText('🔥 प्रो खिलाड़ी 🔥')" style="background:#4169e1; color:white; border:none; padding:3px 12px; border-radius:5px">Copy</button>
-            </div>
-            <div style="background:#f5f5f5; padding:10px; margin:5px 0; display:flex; justify-content:space-between">
-                <span>⚡ देसी गेमर ⚡</span>
-                <button onclick="copyText('⚡ देसी गेमर ⚡')" style="background:#4169e1; color:white; border:none; padding:3px 12px; border-radius:5px">Copy</button>
-            </div>
-            <div style="background:#f5f5f5; padding:10px; margin:5px 0; display:flex; justify-content:space-between">
-                <span>👑 गेमिंग नवाब 👑</span>
-                <button onclick="copyText('👑 गेमिंग नवाब 👑')" style="background:#4169e1; color:white; border:none; padding:3px 12px; border-radius:5px">Copy</button>
-            </div>
-        </div>
-
-        <h2>🔢 नंबर वाले नाम</h2>
-        <div style="margin:15px 0;">
-            <div style="background:#f5f5f5; padding:10px; margin:5px 0; display:flex; justify-content:space-between">
-                <span>प्यार१४३</span>
-                <button onclick="copyText('प्यार१४३')" style="background:#4f46e5; color:white; border:none; padding:3px 12px; border-radius:5px">Copy</button>
-            </div>
-            <div style="background:#f5f5f5; padding:10px; margin:5px 0; display:flex; justify-content:space-between">
-                <span>मोहब्बत७८६</span>
-                <button onclick="copyText('मोहब्बत७८६')" style="background:#4f46e5; color:white; border:none; padding:3px 12px; border-radius:5px">Copy</button>
-            </div>
-            <div style="background:#f5f5f5; padding:10px; margin:5px 0; display:flex; justify-content:space-between">
-                <span>दिल१०१</span>
-                <button onclick="copyText('दिल१०१')" style="background:#4f46e5; color:white; border:none; padding:3px 12px; border-radius:5px">Copy</button>
-            </div>
-            <div style="background:#f5f5f5; padding:10px; margin:5px 0; display:flex; justify-content:space-between">
-                <span>जान०७</span>
-                <button onclick="copyText('जान०७')" style="background:#4f46e5; color:white; border:none; padding:3px 12px; border-radius:5px">Copy</button>
-            </div>
-            <div style="background:#f5f5f5; padding:10px; margin:5px 0; display:flex; justify-content:space-between">
-                <span>प्रेम९९९</span>
-                <button onclick="copyText('प्रेम९९९')" style="background:#4f46e5; color:white; border:none; padding:3px 12px; border-radius:5px">Copy</button>
-            </div>
-            <div style="background:#f5f5f5; padding:10px; margin:5px 0; display:flex; justify-content:space-between">
-                <span>राजकुमार०७</span>
-                <button onclick="copyText('राजकुमार०७')" style="background:#4f46e5; color:white; border:none; padding:3px 12px; border-radius:5px">Copy</button>
-            </div>
-            <div style="background:#f5f5f5; padding:10px; margin:5px 0; display:flex; justify-content:space-between">
-                <span>रॉयलबॉय२०२६</span>
-                <button onclick="copyText('रॉयलबॉय२०२६')" style="background:#4f46e5; color:white; border:none; padding:3px 12px; border-radius:5px">Copy</button>
-            </div>
-        </div>
-
-        <h2>How to Create Your Own</h2>
-        <ol style="margin:10px 0;">
-            <li><a href="index.html">stylename.in</a> par jao</li>
-            <li>Apna hindi word type karo</li>
-            <li>Love/Gamer/Fancy category select karo</li>
-            <li>Generate click karo → copy!</li>
-        </ol>
-
-        <div style="background:#4f46e5; padding:10px; border-radius:8px; text-align:center; margin:20px 0;">
-            <a href="index.html" style="color:white; font-weight:bold;">stylename.in</a> – FREE Hindi Names
-        </div>
-
-        <!-- Share This Page -->
-<div style="text-align: center; margin: 40px 0 20px 0;">
-    <p style="font-size: 1rem; color: var(--gray); margin-bottom: 10px;">📢 Share this page with your friends</p>
-    <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
-        <a href="https://wa.me/?text=Check%20out%20this%20awesome%20name%20style%20generator%20-%20stylename.in" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; padding: 8px 20px; background: #25D366; color: white; text-decoration: none; border-radius: 50px; font-size: 0.9rem;">
-            <i class="fab fa-whatsapp"></i> WhatsApp
-        </a>
-        <a href="https://www.facebook.com/sharer/sharer.php?u=https://stylename.in" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; padding: 8px 20px; background: #1877F2; color: white; text-decoration: none; border-radius: 50px; font-size: 0.9rem;">
-            <i class="fab fa-facebook-f"></i> Facebook
-        </a>
-        <a href="https://twitter.com/intent/tweet?text=Create%20stylish%20names%20for%20games%20and%20social%20media%20at%20stylename.in&url=https://stylename.in" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; padding: 8px 20px; background: #1DA1F2; color: white; text-decoration: none; border-radius: 50px; font-size: 0.9rem;">
-            <i class="fab fa-twitter"></i> Twitter
-        </a>
-        <a href="#" onclick="copyCurrentUrl()" style="display: inline-flex; align-items: center; gap: 8px; padding: 8px 20px; background: var(--primary); color: white; text-decoration: none; border-radius: 50px; font-size: 0.9rem; cursor: pointer;">
-            <i class="fas fa-link"></i> Copy Link
-        </a>
+    <div class="translate-container">
+        <div id="google_translate_element"></div>
     </div>
-</div>
 
-<script>
-function copyCurrentUrl() {
-    navigator.clipboard.writeText(window.location.href).then(() => {
-        alert('Link copied to clipboard!');
-    }).catch(() => {
-        alert('Failed to copy link');
-    });
-}
-</script>
-
-            <!-- AdSense Placeholder - Result Section ke Upar -->
-<div style="width: 100%; margin: 20px 0; text-align: center;">
-    <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-         data-ad-slot="XXXXXXXXXX"
-         data-ad-format="auto"
-         data-full-width-responsive="true"></ins>
-    <script>
-         (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-</div>
-
-          <!-- FNQs Heading - Perfect Center with Dark Theme Support -->
-<div style="display: flex; justify-content: center; align-items: center; width: 100%; margin: 30px 0;">
-    <h2 style="font-size: 1.4rem; font-weight: 550; color: #222; text-align: center;" class="fnqs-heading">EXPLORE MORE PAGES 😇</h2>
-</div>
-
-<style>
-    /* Dark theme ke liye color change */
-    .dark-theme .fnqs-heading {
-        color: #f0f0f0 !important;
-    }
-</style>
-
-    <!-- 👇 GAMING SECTION -->
-<div class="gaming-links-container">
-    <a href="pubg-stylish-names-with-symbols.html" class="gaming-link">
-        <span class="link-icon">🎯</span>
-        PUBG Names
-    </a>
-    <a href="attitude-names-for-boys.html" class="gaming-link">
-        <span class="link-icon">⚡</span>
-        Attitude Names
-    </a>
-    <a href="anime-stylish-names-collection.html" class="gaming-link">
-        <span class="link-icon">🌀</span>
-        Anime Names
-    </a>
-</div>
-    
-    <div style="height: 190px;"></div>
-        
-        <div style="text-align:center;">
-            <a href="index.html" style="display:inline-block; padding:8px 20px; background:#4f46e5; color:white; text-decoration:none; border-radius:50px;">← Back</a>
+    <div class="container">
+        <div class="hero">
+            <span class="hero-icon">✨</span>
+            <h1>Hindi Name Collection</h1>
+            <p>✨ Stylish Hindi Names – Copy, Paste, and Style Your Identity! ✨</p>
         </div>
-    </main>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-bottom">
-                <p>© 2026 stylename.in</p>
+        <!-- ===== INTRODUCTION ===== -->
+        <div class="category">
+            <h2>📌 Introduction</h2>
+            <p class="desc">Yaha par ham dekhenge <strong>Hindi Stylish Names</strong>. Jo khas tor par India, Pakistan, Nepal aur Bangladeshi logo ke liye stylish names hain. 👍🏻 Jisme bohot se simple names ko stylename me generate kiya gaya hai. 😘</p>
+            <p class="desc">Yaha par esa nahi hai ki sirf Hindi stylish name ko diya hai. Other country ke logo ko dhyan me rakhte huye aur bhi names diye hain. Par khas tor par Hindi name ke upar jada focus kiya hai.</p>
+            <p class="desc">Pehle kuchh Hindi stylish names dekhte hai. Bad me other country ke bhi dekhenge! To shuru karte hai! 🚀</p>
+
+            <div style="background: rgba(255, 107, 0, 0.06); padding: 12px 18px; border-radius: 10px; margin: 10px 0; border-left: 3px solid #ff6b00;">
+                <p style="margin: 0; font-size: 0.95rem; color: #1a1a2e;">
+                    <strong>💡 Why Choice Hindi Name:</strong><br>
+                    • Hindi names cool dikhte hain.<br>
+                    • Khas kar Hindi names jada stylish lagte hain.<br>
+                    • Ye desi feel deta hai.
+                </p>
+                <body class="dark-theme" style="color: #e0d0e0;">
             </div>
         </div>
+
+        <!-- ===== HINDI NAMES ===== -->
+        <div class="category">
+            <h2>🔥 Hindi Stylish Names</h2>
+            <p class="desc">Niche kuchh Hindi name diye hain jo stylish aur cool hain. Esa nahi ki ye normal names hain. Jise dekhne ke baad aap ko pata chal jayega!</p>
+
+            <!-- Name 1 -->
+            <div class="name-card">
+                <div class="name-header">
+                    <span class="name-text">꧁༒☬ मोहब्बत ☬༒꧂</span>
+                    <button class="copy-btn" onclick="copyText('꧁༒☬ मोहब्बत ☬༒꧂')">📋 Copy</button>
+                </div>
+                <div class="name-summary">
+                    <strong>💕 मोहब्बत</strong> – Yaha par koi stylish font use nahi kiya hai. Balki simple Hindi word ko sidha lagaya hai. Aur iske starting aur ending me bohot hi fancy symbols lagaye hain (꧁༒☬ ..... ☬༒꧂) jo is simple name ko stylish name bana deta hai. ✨
+                </div>
+            </div>
+
+            <!-- Name 2 -->
+            <div class="name-card">
+                <div class="name-header">
+                    <span class="name-text">⚡ＤＥＳＩ ＧＡＭＥＲ</span>
+                    <button class="copy-btn" onclick="copyText('⚡ＤＥＳＩ ＧＡＭＥＲ')">📋 Copy</button>
+                </div>
+                <div class="name-summary">
+                    <strong>🎮 DESI GAMER</strong> – Ye Hindi stylish name Gamers ke liye badhiya hai. Jo full desi feel deta hai. Sabse pehle ⚡ High Voltage Symbol lagaya hai. Aur font style "Fullwidth Latin" hai – jo kafi cool lagta hai.
+                </div>
+            </div>
+
+            <!-- Name 3 -->
+            <div class="name-card">
+                <div class="name-header">
+                    <span class="name-text">०७ Ꮢ ค ʝ Ҡ Ա Ꮇ ค Ꮢ ༒</span>
+                    <button class="copy-btn" onclick="copyText('०७ Ꮢ ค ʝ Ҡ Ա Ꮇ ค Ꮢ ༒')">📋 Copy</button>
+                </div>
+                <div class="name-summary">
+                    <strong>👑 07 RAJKUMAR</strong> – Ye teesra name bhi Gamer ID ke liye badhiya lagta hai. Jo royal aur rich vibe me hai. ०७ → Devanagari Digits, Ꮢ Ꮇ Ꮢ → Cherokee Letters, ค → Thai Letter, ʝ → Latin Letter J with Stroke, Ҡ → Cyrillic Letter Ka, Ա → Armenian Capital Letter Ayb – in sab mix letter se banaya hai. Last me ༒ (Tibetan Decorative Symbol) use kiya hai. 🔥
+                </div>
+            </div>
+
+            <!-- Name 4 -->
+            <div class="name-card">
+                <div class="name-header">
+                    <span class="name-text">ͥ ͣ ͫ• 𝑺 𝑯 𝑬 𝑵 𝑺 𝑯 𝑨 ☂ ¹⁸⁺</span>
+                    <button class="copy-btn" onclick="copyText('ͥ ͣ ͫ• 𝑺 𝑯 𝑬 𝑵 𝑺 𝑯 𝑨 ☂ ¹⁸⁺')">📋 Copy</button>
+                </div>
+                <div class="name-summary">
+                    <strong>☂ SHENSHA 18+</strong> – Ye "Shensha" name Hindi name hai. Par bohot hi kamal lagta hai. Aur ise anokha style diya hai. 👑 Font "Mathematical Bold Italic" hai. ☂ (Umbrella Symbol) aur ¹⁸⁺ (Superscript Numbers + Plus Sign) bhi lagaye hain. 👍🏻
+                </div>
+            </div>
+
+            <!-- Name 5 -->
+            <div class="name-card">
+                <div class="name-header">
+                    <span class="name-text">Β Λ Ɗ Μ Λ Ѕ H</span>
+                    <button class="copy-btn" onclick="copyText('Β Λ Ɗ Μ Λ Ѕ H')">📋 Copy</button>
+                </div>
+                <div class="name-summary">
+                    <strong>🔥 BADMASH</strong> – Ye aaya hamara pachva Hindi stylish name, jise simple aur attitude me banaya hai. Β normal hai, Λ → Greek Capital Letter, Ɗ → Latin Capital Letter D. Normal word + fancy font use karke ye stylish name banaya hai.
+                </div>
+            </div>
+
+            <!-- Name 6 -->
+            <div class="name-card">
+                <div class="name-header">
+                    <span class="name-text">❥ ❥ ᴰ͎ ᴵ͎ ᴸ͎ ᴿ͎ ᵁ͎ ᴮ͎ ᴬ͎ ❥</span>
+                    <button class="copy-btn" onclick="copyText('❥ ❥ ᴰ͎ ᴵ͎ ᴸ͎ ᴿ͎ ᵁ͎ ᴮ͎ ᴬ͎ ❥')">📋 Copy</button>
+                </div>
+                <div class="name-summary">
+                    <strong>💕 DILRUBA</strong> – Ye name ladkiyo ke liye design kiya hai. Koi ladka lagaye to bhi badhiya hi lagega fun ke liye. 😅 Par khas tor par ladkiya use karo! Isme ek hi symbol (❥) use kiya hai. Aur niche ↑ wale font use kare hain jo ise pyara look deta hai. 🤗
+                </div>
+            </div>
+
+            <!-- Name 7 -->
+            <div class="name-card">
+                <div class="name-header">
+                    <span class="name-text">♥︎♡♥︎ ₊˚ɢ ᴏ ᴏ ᴅ ɪ ʏ ᴀ ˚₊</span>
+                    <button class="copy-btn" onclick="copyText('♥︎♡♥︎ ₊˚ɢ ᴏ ᴏ ᴅ ɪ ʏ ᴀ ˚₊')">📋 Copy</button>
+                </div>
+                <div class="name-summary">
+                    <strong>🌸 GOODIYA</strong> – Ye wala Hindi name bohot hi jada cute hai. Isko khas tor par teen age ki ladkiyo ke liye banaya hai. Jise Instagram profile me ya aur kisi social media me lagane ke liye badhiya hai. 😽 Starting me hi itne pyare ♥︎♡♥︎ (three hearts) use kiye hain!
+                </div>
+            </div>
+
+            <!-- Name 8 -->
+            <div class="name-card">
+                <div class="name-header">
+                    <span class="name-text">꧁༒ ✗ 𝚁 𝙾 𝚈 𝙴 𝙻 ✗✨࿐</span>
+                    <button class="copy-btn" onclick="copyText('꧁༒ ✗ 𝚁 𝙾 𝚈 𝙴 𝙻 ✗✨࿐')">📋 Copy</button>
+                </div>
+                <div class="name-summary">
+                    <strong>👑 ROYEL</strong> – "Royal" name jo Hindi jesa nahi lagta par aaj ke time pe ise Hindi name mana jata hai. Jise stylename ke tor pe dikhaya hai. Ye gamer name hai aur special gamer logo ke liye banaya hai.
+                </div>
+            </div>
+
+            <!-- Name 9 -->
+            <div class="name-card">
+                <div class="name-header">
+                    <span class="name-text">Ҝ ♓ ❗ ㄥ 🅰️ 刀 ❗</span>
+                    <button class="copy-btn" onclick="copyText('Ҝ ♓ ❗ ㄥ 🅰️ 刀 ❗')">📋 Copy</button>
+                </div>
+                <div class="name-summary">
+                    <strong>🎯 KHILADI</strong> – Ye bohot interesting Hindi name hai. Jisme "KHILADI" word ko bohot hi crazy tarike se banaya hai. Har ek letter different hai – K=Ҝ, H=♓, I=❗, L=ㄥ, A=🅰️, D=刀 use kiya hai.
+                </div>
+            </div>
+
+            <!-- Name 10 -->
+            <div class="name-card">
+                <div class="name-header">
+                    <span class="name-text">𝓟𝔂𝓪𝓻𝓲</span>
+                    <button class="copy-btn" onclick="copyText('𝓟𝔂𝓪𝓻𝓲')">📋 Copy</button>
+                </div>
+                <div class="name-summary">
+                    <strong>💖 PYARI</strong> – Ye ab tak ka last wala Hindi name hai. Jise aesthetic banaya hai. 𝓟𝓪𝓻𝓲 → Mathematical Bold Script hai. 𝔂 → Mathematical Fraktur (Blackletter). Isme do fonts mixed hain – Bold Script + Fraktur. 🤗
+                </div>
+            </div>
+
+            <p style="margin-top: 20px; color: #475569;">
+                <strong>More... Hindi Stylish Names, Jo logo ke names par banaye hain.</strong> Aap ka bhi is me se koi name hai to sidha copy karo! Agar aap ka name isme nahi hai to pareshani wali baat nahi hai. In sab name ko dekh ke apna name bhi same bana sakte ho! Agar samaj nahi aa raha ki kaha se banaye to hamare home page <a href="index.html" style="color: #ff6b00; font-weight: 600;">stylename.in</a> par jao! 😇
+            </p>
+
+            <!-- ===== MORE NAMES ===== -->
+            <div class="more-grid">
+                <div class="more-item" onclick="copyText('𝚂 𝙰 н 𝙸 ℓ')">𝚂 𝙰 н 𝙸 ℓ</div>
+                <div class="more-item" onclick="copyText('♡✨𝚂 𝙰 н 𝙸 ℓ✨🦋࿐')">♡✨𝚂 𝙰 н 𝙸 ℓ✨🦋࿐</div>
+                <div class="more-item" onclick="copyText('S░ A░ N░ I░ Y░ A░')">S░ A░ N░ I░ Y░ A░</div>
+                <div class="more-item" onclick="copyText('꧁❀♥︎•𝕊░ 𝔸░ ℕ░ 𝕀░ 𝕐░ 𝔸░•♥︎꧂')">꧁❀♥︎•𝕊░ 𝔸░ ℕ░ 𝕀░ 𝕐░ 𝔸░•♥︎꧂</div>
+                <div class="more-item" onclick="copyText('ꀤ ꌗ ꀍ ꀎ')">ꀤ ꌗ ꀍ ꀎ</div>
+                <div class="more-item" onclick="copyText('┊✿┊ꀤ ꌗ ꀍ ꀎ 𐌰 ᭄ ♡')">┊✿┊ꀤ ꌗ ꀍ ꀎ 𐌰 ᭄ ♡</div>
+                <div class="more-item" onclick="copyText('ᴍ ꪽ ꜱ ᴋ ꫝ 𝛈')">ᴍ ꪽ ꜱ ᴋ ꫝ 𝛈</div>
+                <div class="more-item" onclick="copyText('Μ Ο Н Μ Μ Α Ɗ')">Μ Ο Н Μ Μ Α Ɗ</div>
+                <div class="more-item" onclick="copyText('ᴋ̶ ʜ̶ ᴜ̶ ꜱ̶ ʜ̶ ɪ̶')">ᴋ̶ ʜ̶ ᴜ̶ ꜱ̶ ʜ̶ ɪ̶</div>
+                <div class="more-item" onclick="copyText('Ⓟ Ⓘ Ⓨ Ⓤ Ⓢ Ⓗ')">Ⓟ Ⓘ Ⓨ Ⓤ Ⓢ Ⓗ</div>
+                <div class="more-item" onclick="copyText('R♥ A♥ M♥')">R♥ A♥ M♥</div>
+            </div>
+        </div>
+
+        <!-- ===== OTHER COUNTRIES ===== -->
+        <div class="category">
+            <h2>🌍 Other Countries – Stylish Names</h2>
+            <p class="desc">Yaha par hamne sirf Hindi stylish name ko dekha hai. Par niche others country ke logo ki demand me dhyan me rakhte hue un logo ke liye bhi stylish names diye hain. 👇🏻</p>
+
+            <div class="name-card">
+                <div class="name-header">
+                    <span class="name-text">𓆩☠ʟɪᴀᴍ☠𓆪 <span class="country-tag">🇺🇸 USA</span></span>
+                    <button class="copy-btn" onclick="copyText('𓆩☠ʟɪᴀᴍ☠𓆪')">📋 Copy</button>
+                </div>
+                <div class="name-summary">🇺🇸 USA ka naam – Liam! Dark aur cool vibe ke sath.</div>
+            </div>
+
+            <div class="name-card">
+                <div class="name-header">
+                    <span class="name-text">⸙ Ⓞⓛⓘⓥⓘⓐ <span class="country-tag">🇺🇸 USA</span></span>
+                    <button class="copy-btn" onclick="copyText('⸙ Ⓞⓛⓘⓥⓘⓐ')">📋 Copy</button>
+                </div>
+                <div class="name-summary">🇺🇸 USA – Olivia! Circled letters se aesthetic look.</div>
+            </div>
+
+            <div class="name-card">
+                <div class="name-header">
+                    <span class="name-text">><Νοαħ>< <span class="country-tag">🇨🇦 Canada</span></span>
+                    <button class="copy-btn" onclick="copyText('><Νοαħ><')">📋 Copy</button>
+                </div>
+                <div class="name-summary">🇨🇦 Canada – Noah! Simple aur stylish.</div>
+            </div>
+
+            <div class="name-card">
+                <div class="name-header">
+                    <span class="name-text">𝖉𝖊𝖛𝖎𝖑 >>คʏคคɴ┊💀࿐ <span class="country-tag">🇧🇩 Bangladesh</span></span>
+                    <button class="copy-btn" onclick="copyText('𝖉𝖊𝖛𝖎𝖑 >>คʏคคɴ┊💀࿐')">📋 Copy</button>
+                </div>
+                <div class="name-summary">🇧🇩 Bangladesh – Devil Ayaan! Dark aur attitude vibe.</div>
+            </div>
+
+            <div class="name-card">
+                <div class="name-header">
+                    <span class="name-text">𓆩˃ᴗ˂𓆪.ᗩᗩᎥᖇᗩ⋆.𓆩˃ᴗ˂𓆪 <span class="country-tag">🇧🇩 Bangladesh</span></span>
+                    <button class="copy-btn" onclick="copyText('𓆩˃ᴗ˂𓆪.ᗩᗩᎥᖇᗩ⋆.𓆩˃ᴗ˂𓆪')">📋 Copy</button>
+                </div>
+                <div class="name-summary">🇧🇩 Bangladesh – Aaira! Cute aur aesthetic.</div>
+            </div>
+
+            <div class="name-card">
+                <div class="name-header">
+                    <span class="name-text">𝗡𝗮𝘁𝗵𝗮𝗻𝗶𝗲𝗹 <span class="country-tag">🇵🇭 Philippines</span></span>
+                    <button class="copy-btn" onclick="copyText('𝗡𝗮𝘁𝗵𝗮𝗻𝗶𝗲𝗹')">📋 Copy</button>
+                </div>
+                <div class="name-summary">🇵🇭 Philippines – Nathaniel! Bold aur stylish.</div>
+            </div>
+
+            <div class="name-card">
+                <div class="name-header">
+                    <span class="name-text">╭☆┈┈☆╮S̴o̴p̴h̴i̴a̴╰☆┈┈☆╯ <span class="country-tag">🇵🇭 Philippines</span></span>
+                    <button class="copy-btn" onclick="copyText('╭☆┈┈☆╮S̴o̴p̴h̴i̴a̴╰☆┈┈☆╯')">📋 Copy</button>
+                </div>
+                <div class="name-summary">🇵🇭 Philippines – Sophia! Strike-through font ke sath aesthetic.</div>
+            </div>
+
+            <div class="name-card">
+                <div class="name-header">
+                    <span class="name-text">✿₊˚𝑆𝑎𝑟𝑎𝘩 ✿˚₊࿐ <span class="country-tag">🇸🇦 Saudi Arabia</span></span>
+                    <button class="copy-btn" onclick="copyText('✿₊˚𝑆𝑎𝑟𝑎𝘩 ✿˚₊࿐')">📋 Copy</button>
+                </div>
+                <div class="name-summary">🇸🇦 Saudi Arabia – Sarah! Bada hi pyara stylish name.</div>
+            </div>
+
+            <p style="margin-top: 15px; color: #475569;">
+                Upar hamne kai country ke logo ke liye stylish name banaye hain. Agar aap ko bhi apna name banana hai, aap chahe kisi country se ho! Fark nahi padta – <a href="index.html" style="color: #ff6b00; font-weight: 600;">stylename.in</a> se aap log apna stylish name generate kar sakte ho! ✨
+            </p>
+        </div>
+
+        <!-- ===== FAQ ===== -->
+        <div class="category">
+            <h2>❓ FAQ</h2>
+            <div class="faq-box">
+                <div class="faq-item">
+                    <div class="faq-q">1. In names ko kisi bhi country ke log use kar sakte hain?</div>
+                    <div class="faq-a">✅ Yess! Kisi bhi des ke log copy kar sakte hain.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">2. Sign up ki jarurat hai?</div>
+                    <div class="faq-a">❌ No! Koi bhi account se Sign up ki jarurat nahi hai. ✨</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">3. Ye sare name kahi aur jagah se laye hain?</div>
+                    <div class="faq-a">❌ Nahi! Ye sab name hamne personally banaye hain. 🤗</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">4. Copy kese kare?</div>
+                    <div class="faq-a">✅ Bass single click karo! Ye sabhi names copy ho jate hain.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== CALL TO ACTION ===== -->
+        <div style="background: linear-gradient(135deg, #ff9933, #ffffff, #138808); padding: 20px; border-radius: 14px; text-align: center; margin: 20px 0; border: 2px solid #ff6b00;">
+            <p style="font-size: 1.2rem; font-weight: 600; color: #1a1a2e; margin: 0;">
+                🇮🇳 <a href="index.html" style="color: #1a1a2e; font-weight: 700;">stylename.in</a> – Create Your Stylish Name Now! 🇮🇳
+            </p>
+            <p style="margin: 5px 0 0 0; color: #1a1a2e;">FREE – Copy, Paste, and Style Your Identity!</p>
+        </div>
+
+        <!-- ===== MORE PAGES ===== -->
+        <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 15px; margin: 30px 0;">
+            <a href="index.html" style="background: #ff6b00; color: #fff; padding: 10px 25px; border-radius: 30px; text-decoration: none; font-weight: 500;">🏠 Home</a>
+            <a href="tiktok-username-ideas.html" style="background: #1a1a2e; color: #fff; padding: 10px 25px; border-radius: 30px; text-decoration: none; font-weight: 500;">🎵 TikTok Names</a>
+            <a href="attitude-names-for-boys.html" style="background: #1a1a2e; color: #fff; padding: 10px 25px; border-radius: 30px; text-decoration: none; font-weight: 500;">⚡ Attitude Names</a>
+        </div>
+
+        <!-- ===== SHARE ===== -->
+        <div style="text-align: center; margin: 30px 0;">
+            <p style="font-size: 1rem; color: #666; margin-bottom: 10px;">📢 Share this page with your friends</p>
+            <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+                <a href="https://wa.me/?text=Check%20out%20this%20Hindi%20name%20collection%20-%20stylename.in" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; padding: 8px 20px; background: #25D366; color: white; text-decoration: none; border-radius: 50px; font-size: 0.9rem;">WhatsApp</a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://stylename.in" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; padding: 8px 20px; background: #1877F2; color: white; text-decoration: none; border-radius: 50px; font-size: 0.9rem;">Facebook</a>
+                <a href="https://twitter.com/intent/tweet?text=Stylish%20Hindi%20names%20at%20stylename.in&url=https://stylename.in" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; padding: 8px 20px; background: #1DA1F2; color: white; text-decoration: none; border-radius: 50px; font-size: 0.9rem;">Twitter</a>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="footer-links">
+            <a href="index.html">🏠 Home</a>
+            <a href="about.html">📖 About Us</a>
+            <a href="contact.html">📧 Contact</a>
+            <a href="privacy-policy.html">🔒 Privacy Policy</a>
+            <a href="terms.html">⚖️ Terms & Conditions</a>
+        </div>
+        <p>© 2026 stylename.in — All rights reserved</p>
     </footer>
 
-    <script src="script.js"></script>
+    <div id="toastMsg" class="toast">✅ Copied!</div>
+
+    <script>
+        function copyText(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                const toast = document.getElementById('toastMsg');
+                toast.textContent = '✅ "' + text + '" Copied!';
+                toast.classList.add('show');
+                setTimeout(() => toast.classList.remove('show'), 2000);
+            }).catch(() => {
+                const textarea = document.createElement('textarea');
+                textarea.value = text;
+                document.body.appendChild(textarea);
+                textarea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textarea);
+                const toast = document.getElementById('toastMsg');
+                toast.textContent = '✅ Copied!';
+                toast.classList.add('show');
+                setTimeout(() => toast.classList.remove('show'), 2000);
+            });
+        }
+    </script>
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'hi',
+                includedLanguages: 'en,hi,ur,ar,fr,es,de,ja,ko,pt,ru,zh-CN,ta,te,ml,kn',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
 </body>
 </html>
