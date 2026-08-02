@@ -1477,7 +1477,6 @@ function refreshTop3Styles() {
     showToast('✨ New styles generated!');
 }
 
-// kya bat hai
 // ===== GENERATE STYLES (with examples when input empty) =====
 function generateStyles() {
     const name = document.getElementById('nameInput')?.value.trim();
@@ -1485,301 +1484,160 @@ function generateStyles() {
     if (!result) return;
     result.innerHTML = "";
 
-    // EXAMPLE ❗❗❗❗If name is empty, show examples
-if (!name) {
-    const examples = categoryExamples[currentFilter] || categoryExamples.love;
-    const shuffled = [...examples].sort(() => Math.random() - 0.5);
-    const selected = shuffled.slice(0, 119);
-    
-    selected.forEach((example, index) => {
+    // ===== EXAMPLE SECTION (जब Name Empty हो) =====
+    if (!name) {
+        const examples = categoryExamples[currentFilter] || categoryExamples.love;
+        const shuffled = [...examples].sort(() => Math.random() - 0.5);
+        const selected = shuffled.slice(0, 119);
+        
+        selected.forEach((example, index) => {
+            const div = document.createElement('div');
+            div.className = `style-card ${currentFilter}`;
+            div.setAttribute('onclick', `copyText('${example.text.replace(/'/g,"\\'").replace(/"/g,'&quot;')}', this)`);
+            div.setAttribute('title', 'Click to copy');
+            
+            let html = `<div class="style-text">${example.text}</div>`;
+            
+            if (example.symbols && example.symbols.length) {
+                html += `<div style="display:flex; flex-wrap:wrap; gap:0.3rem; margin-top:0.5rem;">`;
+                example.symbols.slice(0,4).forEach(sym => {
+                    html += `<span style="background:var(--gray-light); padding:0.2rem 0.5rem; border-radius:12px; font-size:0.8rem; cursor:pointer;" onclick="copyText('${sym.replace(/'/g,"\\'")}', event)">${sym} <i class="fas fa-copy"></i></span>`;
+                });
+                html += `</div>`;
+            }
+            
+            div.innerHTML = html;
+            result.appendChild(div);
+            
+            // ✅ LINKS - 35th EXAMPLE KE BAAD
+            if (index === 34) {
+                const linksDiv = document.createElement('div');
+                linksDiv.className = 'style-card';
+                linksDiv.style.padding = '15px 20px';
+                linksDiv.style.background = 'var(--light)';
+                linksDiv.style.border = '1px solid var(--gray-light)';
+                linksDiv.style.borderRadius = '50px';
+                linksDiv.style.boxShadow = '0 2px 5px rgba(0,0,0,0.05)';
+                linksDiv.style.cursor = 'default';
+                linksDiv.style.margin = '10px 0';
+                linksDiv.innerHTML = `
+                    <div style="display: flex; flex-direction: column; gap: 10px;">
+                        <a href="royal-and-vip-names.html" style="display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; padding: 12px 20px; background: var(--light); border: 1px solid var(--gray-light); border-radius: 50px; color: var(--dark); text-decoration: none; font-size: 1rem; font-weight: 500; transition: all 0.3s ease; box-shadow: 0 2px 5px rgba(0,0,0,0.05);" onmouseover="this.style.background='var(--primary)'; this.style.color='white'; this.style.borderColor='var(--primary)'" onmouseout="this.style.background='var(--light)'; this.style.color='var(--dark)'; this.style.borderColor='var(--gray-light)'">
+                            <span style="font-size:1.2rem;">👑</span> Royal & VIP
+                        </a>
+                        <a href="social-media-bio-ideas-for-whatsapp-instagram.html" style="display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; padding: 12px 20px; background: var(--light); border: 1px solid var(--gray-light); border-radius: 50px; color: var(--dark); text-decoration: none; font-size: 1rem; font-weight: 500; transition: all 0.3s ease; box-shadow: 0 2px 5px rgba(0,0,0,0.05);" onmouseover="this.style.background='var(--primary)'; this.style.color='white'; this.style.borderColor='var(--primary)'" onmouseout="this.style.background='var(--light)'; this.style.color='var(--dark)'; this.style.borderColor='var(--gray-light)'">
+                            <span style="font-size:1.2rem;">💬</span> Bio Ideas
+                        </a>
+                    </div>
+                `;
+                result.appendChild(linksDiv);
+            }
+        });
+        return;
+    }
+
+    // ===== MAIN GENERATE SECTION (जब Name हो) =====
+    const styles = stylesByCategory[currentFilter] || [];
+    if (styles.length === 0) {
+        result.innerHTML = `<div class="empty-state"><i class="fas fa-exclamation-circle"></i><p>No styles for this category yet.</p></div>`;
+        return;
+    }
+
+    const shuffled = [...styles].sort(() => Math.random() - 0.5);
+
+    shuffled.forEach((style, index) => {
+        const styled = style.prefix + convert(name, style.map) + style.suffix;
+        const escaped = styled.replace(/'/g,"\\'").replace(/"/g,'&quot;');
+        
         const div = document.createElement('div');
         div.className = `style-card ${currentFilter}`;
-        div.setAttribute('onclick', `copyText('${example.text.replace(/'/g,"\\'").replace(/"/g,'&quot;')}', this)`);
+        div.setAttribute('onclick', `copyText('${escaped}', this)`);
         div.setAttribute('title', 'Click to copy');
-        
-        let html = `<div class="style-text">${example.text}</div>`;
-        
-        // Symbols (optional)
-        if (example.symbols && example.symbols.length) {
-            html += `<div style="display:flex; flex-wrap:wrap; gap:0.3rem; margin-top:0.5rem;">`;
-            example.symbols.slice(0,4).forEach(sym => {
-                html += `<span style="background:var(--gray-light); padding:0.2rem 0.5rem; border-radius:12px; font-size:0.8rem; cursor:pointer;" onclick="copyText('${sym.replace(/'/g,"\\'")}', event)">${sym} <i class="fas fa-copy"></i></span>`;
-            });
-            html += `</div>`;
-        }
-        
-        div.innerHTML = html;
+        div.innerHTML = `<div class="style-text">${styled}</div>`;
         result.appendChild(div);
         
-        // 👇 LINKS - 35th EXAMPLE KE BAAD (index 34) - SIMPLE VERSION
-if (index === 34) {
-    const linksDiv = document.createElement('div');
-    linksDiv.className = 'style-card';
-    linksDiv.style.padding = '15px 20px';
-    linksDiv.style.background = 'var(--light)';
-    linksDiv.style.border = '1px solid var(--gray-light)';
-    linksDiv.style.borderRadius = '50px';
-    linksDiv.style.boxShadow = '0 2px 5px rgba(0,0,0,0.05)';
-    linksDiv.style.cursor = 'default';
-    linksDiv.style.margin = '10px 0';
-    linksDiv.innerHTML = `
-        <div style="display: flex; flex-direction: column; gap: 10px;">
-            <a href="royal-and-vip-names.html" style="
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                gap: 10px;
-                width: 100%;
-                padding: 12px 20px;
-                background: var(--light);
-                border: 1px solid var(--gray-light);
-                border-radius: 50px;
-                color: var(--dark);
-                text-decoration: none;
-                font-size: 1rem;
-                font-weight: 500;
-                transition: all 0.3s ease;
-                box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-            " onmouseover="this.style.background='var(--primary)'; this.style.color='white'; this.style.borderColor='var(--primary)'" 
-               onmouseout="this.style.background='var(--light)'; this.style.color='var(--dark)'; this.style.borderColor='var(--gray-light)'">
-                <span style="font-size:1.2rem;">👑</span>
-                Royal & VIP
-            </a>
-            <a href="social-media-bio-ideas-for-whatsapp-instagram.html" style="
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                gap: 10px;
-                width: 100%;
-                padding: 12px 20px;
-                background: var(--light);
-                border: 1px solid var(--gray-light);
-                border-radius: 50px;
-                color: var(--dark);
-                text-decoration: none;
-                font-size: 1rem;
-                font-weight: 500;
-                transition: all 0.3s ease;
-                box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-            " onmouseover="this.style.background='var(--primary)'; this.style.color='white'; this.style.borderColor='var(--primary)'" 
-               onmouseout="this.style.background='var(--light)'; this.style.color='var(--dark)'; this.style.borderColor='var(--gray-light)'">
-                <span style="font-size:1.2rem;">💬</span>
-                Bio Ideas
-            </a>
-        </div>
-    `;
-    result.appendChild(linksDiv);
-}
-
-        // 👇 LINKS IN EXAMPLES - 6th example ke baad (index 5)
-if (index === 109) {
-    const linksDiv = document.createElement('div');
-    linksDiv.className = 'style-card';
-    linksDiv.style.padding = '15px 0';
-    linksDiv.style.background = 'transparent';
-    linksDiv.style.border = 'none';
-    linksDiv.style.boxShadow = 'none';
-    linksDiv.style.margin = '10px 0 20px 0';
-    linksDiv.innerHTML = `
-        <div style="display: flex; flex-direction: column; gap: 12px;">
-            <a href="tiktok-username-ideas.html" 
-               style="
-                    display: block;
-                    width: 100%;
-                    padding: 16px 20px;
-                    background: #ffffff;
-                    border: 2px solid #e0e0e0;
-                    border-radius: 12px;
-                    color: #333333;
-                    text-decoration: none;
-                    font-size: 1.1rem;
-                    text-align: left;
-                    font-weight: 500;
-                    transition: all 0.25s ease;
-                    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-               "
-               onmouseover="this.style.background='linear-gradient(135deg, #FDB931 0%, #FED54E 100%)'; this.style.borderColor='#FDB931'; this.style.color='#1a1a1a'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 10px 20px rgba(253,185,49,0.25)';"
-               onmouseout="this.style.background='#ffffff'; this.style.borderColor='#e0e0e0'; this.style.color='#333333'; this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 5px rgba(0,0,0,0.05)';">
-                🎵 TikTok Username Ideas
-            </a>
+        // ✅ ADSTERRA NATIVE BANNER - 150th STYLE KE BAAD (index 149)
+        if (index === 149) {
+            const adDiv = document.createElement('div');
+            adDiv.className = 'style-card';
+            adDiv.style.padding = '10px 0';
+            adDiv.style.background = 'transparent';
+            adDiv.style.border = 'none';
+            adDiv.style.boxShadow = 'none';
+            adDiv.style.margin = '10px 0 20px 0';
+            adDiv.style.textAlign = 'center';
+            adDiv.style.display = 'flex';
+            adDiv.style.justifyContent = 'center';
+            adDiv.style.alignItems = 'center';
+            adDiv.style.width = '100%';
             
-            <a href="which-font-is-best-for-which-category.html" 
-               style="
-                    display: block;
-                    width: 100%;
-                    padding: 16px 20px;
-                    background: #ffffff;
-                    border: 2px solid #e0e0e0;
-                    border-radius: 12px;
-                    color: #333333;
-                    text-decoration: none;
-                    font-size: 1.1rem;
-                    text-align: left;
-                    font-weight: 500;
-                    transition: all 0.25s ease;
-                    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-               "
-               onmouseover="this.style.background='linear-gradient(135deg, #FDB931 0%, #FED54E 100%)'; this.style.borderColor='#FDB931'; this.style.color='#1a1a1a'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 10px 20px rgba(253,185,49,0.25)';"
-               onmouseout="this.style.background='#ffffff'; this.style.borderColor='#e0e0e0'; this.style.color='#333333'; this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 5px rgba(0,0,0,0.05)';">
-                🔤 Font Guide
-            </a>
-        </div>
-    `;
-    result.appendChild(linksDiv);
-}
-
-    // 💯 Name exists: generate actual styles
-const styles = stylesByCategory[currentFilter] || [];
-if (styles.length === 0) {
-    result.innerHTML = `<div class="empty-state"><i class="fas fa-exclamation-circle"></i><p>No styles for this category yet.</p></div>`;
-    return;
-}
-
-const shuffled = [...styles].sort(() => Math.random() - 0.5);
-
-shuffled.forEach((style, index) => {
-    const styled = style.prefix + convert(name, style.map) + style.suffix;
-    const escaped = styled.replace(/'/g,"\\'").replace(/"/g,'&quot;');
-    
-    // Style card - without copy button
-    const div = document.createElement('div');
-    div.className = `style-card ${currentFilter}`;
-    div.setAttribute('onclick', `copyText('${escaped}', this)`);
-    div.setAttribute('title', 'Click to copy');
-    div.innerHTML = `<div class="style-text">${styled}</div>`;
-    result.appendChild(div);
-    
-// 159th style ke baad
-if (index === 159) {
-    const linksDiv = document.createElement('div');
-    linksDiv.className = 'style-card';
-    linksDiv.style.padding = '20px';
-    linksDiv.style.background = '#f5f5f5';
-    linksDiv.style.border = '1px solid #ddd';
-    linksDiv.style.borderRadius = '10px';
-    linksDiv.style.boxShadow = '0 2px 5px rgba(0,0,0,0.05)';
-    linksDiv.style.cursor = 'default';
-    linksDiv.innerHTML = `
-        <div style="display: flex; flex-direction: column; gap: 12px;">
-            <a href="pubg-stylish-names-with-symbols.html" style="color: #333; text-decoration: none; border-bottom: 1px solid #ccc; padding: 8px 0; display: block; font-size: 1.1rem; transition: all 0.2s;" onmouseover="this.style.color='#4f46e5'; this.style.borderBottomColor='#4f46e5';" onmouseout="this.style.color='#333'; this.style.borderBottomColor='#ccc';">🎯 PUBG Names</a>
-            <a href="attitude-names-for-boys.html" style="color: #333; text-decoration: none; border-bottom: 1px solid #ccc; padding: 8px 0; display: block; font-size: 1.1rem; transition: all 0.2s;" onmouseover="this.style.color='#4f46e5'; this.style.borderBottomColor='#4f46e5';" onmouseout="this.style.color='#333'; this.style.borderBottomColor='#ccc';">⚡ Attitude Names</a>
-        </div>
-    `;
-    result.appendChild(linksDiv);
-}
-
-    // 🔥 ADSTERRA NATIVE BANNER - 150th STYLE KE BAAD (index 149)
-if (index === 141) {
-    const adDiv = document.createElement('div');
-    adDiv.className = 'style-card';
-    adDiv.style.padding = '10px 0';
-    adDiv.style.background = 'transparent';
-    adDiv.style.border = 'none';
-    adDiv.style.boxShadow = 'none';
-    adDiv.style.margin = '10px 0 20px 0';
-    adDiv.style.textAlign = 'center';
-    adDiv.style.display = 'flex';
-    adDiv.style.justifyContent = 'center';
-    adDiv.style.alignItems = 'center';
-    adDiv.style.width = '100%';
-    
-    adDiv.innerHTML = `
-        <!-- Adsterra Native Banner - Mobile Optimized -->
-        <div style="
-            display: inline-block;
-            max-width: 100%;
-            width: 320px;
-            min-height: 50px;
-            overflow: hidden;
-            margin: 0 auto;
-            border-radius: 12px;
-            background: #f5f5f5;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-        ">
-            <div id="container-c58a16cc615eb2fb21bafc680f8cfce0"></div>
-            <script src="https://www.highperformanceformat.com/c58a16cc615eb2fb21bafc680f8cfce0/invoke.js" defer><\/script>
-        </div>
-    `;
-    
-    result.appendChild(adDiv);
-}
-
-    // 179th style ke baad
-if (index === 179) {
-    const linksDiv = document.createElement('div');
-    linksDiv.className = 'style-card';
-    linksDiv.style.padding = '20px';
-    linksDiv.style.background = '#f5f5f5';
-    linksDiv.style.border = '1px solid #ddd';
-    linksDiv.style.borderRadius = '10px';
-    linksDiv.style.boxShadow = '0 2px 5px rgba(0,0,0,0.05)';
-    linksDiv.style.cursor = 'default';
-    linksDiv.innerHTML = `
-        <div style="display: flex; flex-direction: column; gap: 12px;">
-            <a href="royal-and-vip-names.html" style="color: #333; text-decoration: none; border-bottom: 1px solid #ccc; padding: 8px 0; display: block; font-size: 1.1rem; transition: all 0.2s;" onmouseover="this.style.color='#4f46e5'; this.style.borderBottomColor='#4f46e5';" onmouseout="this.style.color='#333'; this.style.borderBottomColor='#ccc';">👑 Royal & VIP</a>
-            <a href="social-media-bio-ideas-for-whatsapp-instagram.html" style="color: #333; text-decoration: none; border-bottom: 1px solid #ccc; padding: 8px 0; display: block; font-size: 1.1rem; transition: all 0.2s;" onmouseover="this.style.color='#4f46e5'; this.style.borderBottomColor='#4f46e5';" onmouseout="this.style.color='#333'; this.style.borderBottomColor='#ccc';">💬 Bio Ideas</a>
-            <a href="stylish-name-tips-guide.html" style="color: #333; text-decoration: none; border-bottom: 1px solid #ccc; padding: 8px 0; display: block; font-size: 1.1rem; transition: all 0.2s;" onmouseover="this.style.color='#4f46e5'; this.style.borderBottomColor='#4f46e5';" onmouseout="this.style.color='#333'; this.style.borderBottomColor='#ccc';">✨ Name Tips</a>
-        </div>
-    `;
-    result.appendChild(linksDiv);
-}
-
-// 61st style ke baad
-if (index === 61) {
-    const linksDiv = document.createElement('div');
-    linksDiv.className = 'style-card';
-    linksDiv.style.padding = '20px';
-    linksDiv.style.background = '#f5f5f5';
-    linksDiv.style.border = '1px solid #ddd';
-    linksDiv.style.borderRadius = '10px';
-    linksDiv.style.boxShadow = '0 2px 5px rgba(0,0,0,0.05)';
-    linksDiv.style.cursor = 'default';
-    linksDiv.innerHTML = `
-        <div style="display: flex; flex-direction: column; gap: 12px;">
-            <a href="anime-stylish-names-collection.html" style="color: #333; text-decoration: none; border-bottom: 1px solid #ccc; padding: 8px 0; display: block; font-size: 1.1rem; transition: all 0.2s;" onmouseover="this.style.color='#4f46e5'; this.style.borderBottomColor='#4f46e5';" onmouseout="this.style.color='#333'; this.style.borderBottomColor='#ccc';">🌀 Anime Names</a>
-            <a href="pubg-stylish-names-with-symbols.html" style="color: #333; text-decoration: none; border-bottom: 1px solid #ccc; padding: 8px 0; display: block; font-size: 1.1rem; transition: all 0.2s;" onmouseover="this.style.color='#4f46e5'; this.style.borderBottomColor='#4f46e5';" onmouseout="this.style.color='#333'; this.style.borderBottomColor='#ccc';">🎯 PUBG Names</a>
-            <a href="attitude-names-for-boys.html" style="color: #333; text-decoration: none; border-bottom: 1px solid #ccc; padding: 8px 0; display: block; font-size: 1.1rem; transition: all 0.2s;" onmouseover="this.style.color='#4f46e5'; this.style.borderBottomColor='#4f46e5';" onmouseout="this.style.color='#333'; this.style.borderBottomColor='#ccc';">⚡ Attitude Names</a>
-        </div>
-    `;
-    result.appendChild(linksDiv);
-}
-
-// 326th style ke baad
-if (index === 326) {
-    const linksDiv = document.createElement('div');
-    linksDiv.className = 'style-card';
-    linksDiv.style.padding = '20px';
-    linksDiv.style.background = '#f5f5f5';
-    linksDiv.style.border = '1px solid #ddd';
-    linksDiv.style.borderRadius = '10px';
-    linksDiv.style.boxShadow = '0 2px 5px rgba(0,0,0,0.05)';
-    linksDiv.style.cursor = 'default';
-    linksDiv.innerHTML = `
-        <div style="display: flex; flex-direction: column; gap: 12px;">
-            <a href="royal-and-vip-names.html" style="color: #333; text-decoration: none; border-bottom: 1px solid #ccc; padding: 8px 0; display: block; font-size: 1.1rem; transition: all 0.2s;" onmouseover="this.style.color='#4f46e5'; this.style.borderBottomColor='#4f46e5';" onmouseout="this.style.color='#333'; this.style.borderBottomColor='#ccc';">👑 Royal & VIP</a>
-            <a href="social-media-bio-ideas-for-whatsapp-instagram.html" style="color: #333; text-decoration: none; border-bottom: 1px solid #ccc; padding: 8px 0; display: block; font-size: 1.1rem; transition: all 0.2s;" onmouseover="this.style.color='#4f46e5'; this.style.borderBottomColor='#4f46e5';" onmouseout="this.style.color='#333'; this.style.borderBottomColor='#ccc';">💬 Bio Ideas</a>
-            <a href="stylish-name-tips-guide.html" style="color: #333; text-decoration: none; border-bottom: 1px solid #ccc; padding: 8px 0; display: block; font-size: 1.1rem; transition: all 0.2s;" onmouseover="this.style.color='#4f46e5'; this.style.borderBottomColor='#4f46e5';" onmouseout="this.style.color='#333'; this.style.borderBottomColor='#ccc';">✨ Name Tips</a>
-        </div>
-    `;
-    result.appendChild(linksDiv);
-    
-    // AdSense script execute
-    setTimeout(() => {
-        try {
-            (adsbygoogle = window.adsbygoogle || []).push({});
-        } catch(e) {
-            console.log("AdSense error:", e);
+            adDiv.innerHTML = `
+                <div style="display: inline-block; max-width: 100%; width: 320px; min-height: 50px; overflow: hidden; margin: 0 auto; border-radius: 12px; background: #f5f5f5; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+                    <div id="container-c58a16cc615eb2fb21bafc680f8cfce0"></div>
+                    <script src="https://www.highperformanceformat.com/c58a16cc615eb2fb21bafc680f8cfce0/invoke.js" defer><\/script>
+                </div>
+            `;
+            result.appendChild(adDiv);
         }
-    }, 100);
-}
-    
-    // one ad after 12th style
-    if (index === 11 && shuffled.length > 12) {
-        const ad = document.createElement('div');
-        ad.className = 'ad-single';
-        result.appendChild(ad);
-    }
- });
+        
+        // ✅ 61st style ke baad - LINKS
+        if (index === 61) {
+            const linksDiv = document.createElement('div');
+            linksDiv.className = 'style-card';
+            linksDiv.style.padding = '20px';
+            linksDiv.style.background = '#f5f5f5';
+            linksDiv.style.border = '1px solid #ddd';
+            linksDiv.style.borderRadius = '10px';
+            linksDiv.style.boxShadow = '0 2px 5px rgba(0,0,0,0.05)';
+            linksDiv.style.cursor = 'default';
+            linksDiv.innerHTML = `
+                <div style="display: flex; flex-direction: column; gap: 12px;">
+                    <a href="anime-stylish-names-collection.html" style="color: #333; text-decoration: none; border-bottom: 1px solid #ccc; padding: 8px 0; display: block; font-size: 1.1rem; transition: all 0.2s;" onmouseover="this.style.color='#4f46e5'; this.style.borderBottomColor='#4f46e5';" onmouseout="this.style.color='#333'; this.style.borderBottomColor='#ccc';">🌀 Anime Names</a>
+                    <a href="pubg-stylish-names-with-symbols.html" style="color: #333; text-decoration: none; border-bottom: 1px solid #ccc; padding: 8px 0; display: block; font-size: 1.1rem; transition: all 0.2s;" onmouseover="this.style.color='#4f46e5'; this.style.borderBottomColor='#4f46e5';" onmouseout="this.style.color='#333'; this.style.borderBottomColor='#ccc';">🎯 PUBG Names</a>
+                    <a href="attitude-names-for-boys.html" style="color: #333; text-decoration: none; border-bottom: 1px solid #ccc; padding: 8px 0; display: block; font-size: 1.1rem; transition: all 0.2s;" onmouseover="this.style.color='#4f46e5'; this.style.borderBottomColor='#4f46e5';" onmouseout="this.style.color='#333'; this.style.borderBottomColor='#ccc';">⚡ Attitude Names</a>
+                </div>
+            `;
+            result.appendChild(linksDiv);
+        }
+        
+        // ✅ 159th style ke baad - LINKS
+        if (index === 159) {
+            const linksDiv = document.createElement('div');
+            linksDiv.className = 'style-card';
+            linksDiv.style.padding = '20px';
+            linksDiv.style.background = '#f5f5f5';
+            linksDiv.style.border = '1px solid #ddd';
+            linksDiv.style.borderRadius = '10px';
+            linksDiv.style.boxShadow = '0 2px 5px rgba(0,0,0,0.05)';
+            linksDiv.style.cursor = 'default';
+            linksDiv.innerHTML = `
+                <div style="display: flex; flex-direction: column; gap: 12px;">
+                    <a href="pubg-stylish-names-with-symbols.html" style="color: #333; text-decoration: none; border-bottom: 1px solid #ccc; padding: 8px 0; display: block; font-size: 1.1rem; transition: all 0.2s;" onmouseover="this.style.color='#4f46e5'; this.style.borderBottomColor='#4f46e5';" onmouseout="this.style.color='#333'; this.style.borderBottomColor='#ccc';">🎯 PUBG Names</a>
+                    <a href="attitude-names-for-boys.html" style="color: #333; text-decoration: none; border-bottom: 1px solid #ccc; padding: 8px 0; display: block; font-size: 1.1rem; transition: all 0.2s;" onmouseover="this.style.color='#4f46e5'; this.style.borderBottomColor='#4f46e5';" onmouseout="this.style.color='#333'; this.style.borderBottomColor='#ccc';">⚡ Attitude Names</a>
+                </div>
+            `;
+            result.appendChild(linksDiv);
+        }
+        
+        // ✅ 179th style ke baad - LINKS
+        if (index === 179) {
+            const linksDiv = document.createElement('div');
+            linksDiv.className = 'style-card';
+            linksDiv.style.padding = '20px';
+            linksDiv.style.background = '#f5f5f5';
+            linksDiv.style.border = '1px solid #ddd';
+            linksDiv.style.borderRadius = '10px';
+            linksDiv.style.boxShadow = '0 2px 5px rgba(0,0,0,0.05)';
+            linksDiv.style.cursor = 'default';
+            linksDiv.innerHTML = `
+                <div style="display: flex; flex-direction: column; gap: 12px;">
+                    <a href="royal-and-vip-names.html" style="color: #333; text-decoration: none; border-bottom: 1px solid #ccc; padding: 8px 0; display: block; font-size: 1.1rem; transition: all 0.2s;" onmouseover="this.style.color='#4f46e5'; this.style.borderBottomColor='#4f46e5';" onmouseout="this.style.color='#333'; this.style.borderBottomColor='#ccc';">👑 Royal & VIP</a>
+                    <a href="social-media-bio-ideas-for-whatsapp-instagram.html" style="color: #333; text-decoration: none; border-bottom: 1px solid #ccc; padding: 8px 0; display: block; font-size: 1.1rem; transition: all 0.2s;" onmouseover="this.style.color='#4f46e5'; this.style.borderBottomColor='#4f46e5';" onmouseout="this.style.color='#333'; this.style.borderBottomColor='#ccc';">💬 Bio Ideas</a>
+                </div>
+            `;
+            result.appendChild(linksDiv);
+        }
+    });
 }
 
 // ===== SELECT CATEGORY =====
