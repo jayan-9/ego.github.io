@@ -1627,6 +1627,26 @@ if (index === 5) {
     `;
     result.appendChild(linksDiv);
 }
+
+        // 50th example ke baad (index 49)
+if (index === 49) {
+    const adDiv = document.createElement('div');
+    adDiv.className = 'style-card';
+    adDiv.style.padding = '0';
+    adDiv.style.background = 'transparent';
+    adDiv.style.border = 'none';
+    adDiv.style.boxShadow = 'none';
+    adDiv.style.margin = '10px 0 20px 0';
+    adDiv.style.textAlign = 'center';
+    
+    adDiv.innerHTML = `
+        <!-- Adsterra Native Banner -->
+        <div id="container-c58a16cc615eb2fb21bafc680f8cfce0"></div>
+        <script src="https://www.highperformanceformat.com/c58a16cc615eb2fb21bafc680f8cfce0/invoke.js" defer><\/script>
+    `;
+    
+    result.appendChild(adDiv);
+}
         
         // Image in examples - 32nd ke baad (index 31)
         if (index === 31) {
