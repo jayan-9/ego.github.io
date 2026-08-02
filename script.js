@@ -1571,53 +1571,8 @@ if (index === 34) {
     result.appendChild(linksDiv);
 }
 
-        // 🔥 300x250 AD - MOBILE OPTIMIZED - 5th STYLE KE BAAD (index 4)
-if (index === 4) {
-    const adDiv = document.createElement('div');
-    adDiv.className = 'style-card';
-    adDiv.style.padding = '8px 0';
-    adDiv.style.background = 'transparent';
-    adDiv.style.border = 'none';
-    adDiv.style.boxShadow = 'none';
-    adDiv.style.margin = '8px 0 16px 0';
-    adDiv.style.textAlign = 'center';
-    adDiv.style.display = 'flex';
-    adDiv.style.justifyContent = 'center';
-    adDiv.style.alignItems = 'center';
-    adDiv.style.width = '100%';
-    
-    adDiv.innerHTML = `
-        <!-- Mobile Optimized 300x250 Ad -->
-        <div style="
-            display: inline-block;
-            max-width: 100%;
-            width: 300px;
-            height: 250px;
-            overflow: hidden;
-            margin: 0 auto;
-            border-radius: 12px;
-            background: #f5f5f5;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-        ">
-            <script>
-                atOptions = {
-                    'key' : '3d64b29b20a5341333a9e7333c2a2f78',
-                    'format' : 'iframe',
-                    'height' : 250,
-                    'width' : 300,
-                    'params' : {}
-                };
-            <\/script>
-            <script src="https://www.highperformanceformat.com/3d64b29b20a5341333a9e7333c2a2f78/invoke.js"><\/script>
-        </div>
-    `;
-    
-    result.appendChild(adDiv);
-}
-        
-
         // 👇 LINKS IN EXAMPLES - 6th example ke baad (index 5)
-if (index === 5) {
+if (index === 109) {
     const linksDiv = document.createElement('div');
     linksDiv.className = 'style-card';
     linksDiv.style.padding = '15px 0';
@@ -1673,24 +1628,6 @@ if (index === 5) {
     result.appendChild(linksDiv);
 }
 
-        
-                // Image in examples - 32nd ke baad (index 31)
-        if (index === 31) {
-            const imgDiv = document.createElement('div');
-            imgDiv.className = 'style-card';
-            imgDiv.style.padding = '0';
-            imgDiv.style.overflow = 'hidden';
-            imgDiv.innerHTML = `
-                <img src="https://jayan-9.github.io/ego.github.io/jack.png" 
-                     alt="Stylish Design"
-                     style="width: 100%; height: auto; display: block; border-radius: 8px;">
-            `;
-            result.appendChild(imgDiv);
-        }
-    });
-    return;
-}
-
     // 💯 Name exists: generate actual styles
 const styles = stylesByCategory[currentFilter] || [];
 if (styles.length === 0) {
@@ -1731,7 +1668,7 @@ if (index === 159) {
     result.appendChild(linksDiv);
 }
 
-    // 👇 ADSTERRA NATIVE BANNER - 150th STYLE KE BAAD (index 149)
+    // 🔥 ADSTERRA NATIVE BANNER - 150th STYLE KE BAAD (index 149)
 if (index === 141) {
     const adDiv = document.createElement('div');
     adDiv.className = 'style-card';
@@ -1807,44 +1744,6 @@ if (index === 61) {
     result.appendChild(linksDiv);
 }
 
-// 98th style ke baad (45th wala)
-if (index === 98) {
-    const linksDiv = document.createElement('div');
-    linksDiv.className = 'style-card';
-    linksDiv.style.padding = '20px';
-    linksDiv.style.background = '#f5f5f5';
-    linksDiv.style.border = '1px solid #ddd';
-    linksDiv.style.borderRadius = '10px';
-    linksDiv.style.boxShadow = '0 2px 5px rgba(0,0,0,0.05)';
-    linksDiv.style.cursor = 'default';
-    linksDiv.innerHTML = `
-        <div style="display: flex; flex-direction: column; gap: 12px;">
-            <a href="love-nicknames-2026-collection.html" style="color: #333; text-decoration: none; border-bottom: 1px solid #ccc; padding: 8px 0; display: block; font-size: 1.1rem; transition: all 0.2s;" onmouseover="this.style.color='#4f46e5'; this.style.borderBottomColor='#4f46e5';" onmouseout="this.style.color='#333'; this.style.borderBottomColor='#ccc';">❤️ Love Nicknames 2026</a>
-            <a href="tiktok-username-ideas.html" style="color: #333; text-decoration: none; border-bottom: 1px solid #ccc; padding: 8px 0; display: block; font-size: 1.1rem; transition: all 0.2s;" onmouseover="this.style.color='#4f46e5'; this.style.borderBottomColor='#4f46e5';" onmouseout="this.style.color='#333'; this.style.borderBottomColor='#ccc';">🎵 TikTok Username Ideas</a>
-        </div>
-    `;
-    result.appendChild(linksDiv);
-}
-
-// 299th style ke baad
-if (index === 299) {
-    const linksDiv = document.createElement('div');
-    linksDiv.className = 'style-card';
-    linksDiv.style.padding = '20px';
-    linksDiv.style.background = '#f5f5f5';
-    linksDiv.style.border = '1px solid #ddd';
-    linksDiv.style.borderRadius = '10px';
-    linksDiv.style.boxShadow = '0 2px 5px rgba(0,0,0,0.05)';
-    linksDiv.style.cursor = 'default';
-    linksDiv.innerHTML = `
-        <div style="display: flex; flex-direction: column; gap: 12px;">
-            <a href="pubg-stylish-names-with-symbols.html" style="color: #333; text-decoration: none; border-bottom: 1px solid #ccc; padding: 8px 0; display: block; font-size: 1.1rem; transition: all 0.2s;" onmouseover="this.style.color='#4f46e5'; this.style.borderBottomColor='#4f46e5';" onmouseout="this.style.color='#333'; this.style.borderBottomColor='#ccc';">🎯 PUBG Names</a>
-            <a href="attitude-names-for-boys.html" style="color: #333; text-decoration: none; border-bottom: 1px solid #ccc; padding: 8px 0; display: block; font-size: 1.1rem; transition: all 0.2s;" onmouseover="this.style.color='#4f46e5'; this.style.borderBottomColor='#4f46e5';" onmouseout="this.style.color='#333'; this.style.borderBottomColor='#ccc';">⚡ Attitude Names</a>
-        </div>
-    `;
-    result.appendChild(linksDiv);
-}
-
 // 326th style ke baad
 if (index === 326) {
     const linksDiv = document.createElement('div');
@@ -1863,39 +1762,6 @@ if (index === 326) {
         </div>
     `;
     result.appendChild(linksDiv);
-}
-
-// 348th style ke baad
-if (index === 348) {
-    const linksDiv = document.createElement('div');
-    linksDiv.className = 'style-card';
-    linksDiv.style.padding = '20px';
-    linksDiv.style.background = '#f5f5f5';
-    linksDiv.style.border = '1px solid #ddd';
-    linksDiv.style.borderRadius = '10px';
-    linksDiv.style.boxShadow = '0 2px 5px rgba(0,0,0,0.05)';
-    linksDiv.style.cursor = 'default';
-    linksDiv.innerHTML = `
-        <div style="display: flex; flex-direction: column; gap: 12px;">
-            <a href="love-nicknames-2026-collection.html" style="color: #333; text-decoration: none; border-bottom: 1px solid #ccc; padding: 8px 0; display: block; font-size: 1.1rem; transition: all 0.2s;" onmouseover="this.style.color='#4f46e5'; this.style.borderBottomColor='#4f46e5';" onmouseout="this.style.color='#333'; this.style.borderBottomColor='#ccc';">❤️ Love Nicknames 2026</a>
-            <a href="tiktok-username-ideas.html" style="color: #333; text-decoration: none; border-bottom: 1px solid #ccc; padding: 8px 0; display: block; font-size: 1.1rem; transition: all 0.2s;" onmouseover="this.style.color='#4f46e5'; this.style.borderBottomColor='#4f46e5';" onmouseout="this.style.color='#333'; this.style.borderBottomColor='#ccc';">🎵 TikTok Username Ideas</a>
-        </div>
-    `;
-    result.appendChild(linksDiv);
-}
-
-// 👇 IMAGE IN GENERATED STYLES - 133rd style ke baad (index 133)
-if (index === 133) {
-    const imgDiv = document.createElement('div');
-    imgDiv.className = 'style-card';
-    imgDiv.style.padding = '0';
-    imgDiv.style.overflow = 'hidden';
-    imgDiv.innerHTML = `
-        <img src="https://jayan-9.github.io/ego.github.io/photo.gif" 
-             alt="Stylish Design"
-             style="width: 100%; height: auto; display: block; border-radius: 8px;">
-    `;
-    result.appendChild(imgDiv);
     
     // AdSense script execute
     setTimeout(() => {
