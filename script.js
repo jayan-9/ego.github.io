@@ -1685,21 +1685,45 @@ if (index === 159) {
     result.appendChild(linksDiv);
 }
 
-    // 60th style ke baad Ad (index 59)
-if (index === 10) {
+    // 🔥 300x250 AD - MOBILE OPTIMIZED - 5th STYLE KE BAAD (index 4)
+if (index === 4) {
     const adDiv = document.createElement('div');
     adDiv.className = 'style-card';
-    adDiv.style.padding = '0';
+    adDiv.style.padding = '8px 0';
     adDiv.style.background = 'transparent';
     adDiv.style.border = 'none';
     adDiv.style.boxShadow = 'none';
-    adDiv.style.margin = '10px 0 20px 0';
+    adDiv.style.margin = '8px 0 16px 0';
     adDiv.style.textAlign = 'center';
+    adDiv.style.display = 'flex';
+    adDiv.style.justifyContent = 'center';
+    adDiv.style.alignItems = 'center';
+    adDiv.style.width = '100%';
     
     adDiv.innerHTML = `
-        <!-- Adsterra Native Banner -->
-        <div id="container-c58a16cc615eb2fb21bafc680f8cfce0"></div>
-        <script src="https://www.highperformanceformat.com/c58a16cc615eb2fb21bafc680f8cfce0/invoke.js" defer><\/script>
+        <!-- Mobile Optimized 300x250 Ad -->
+        <div style="
+            display: inline-block;
+            max-width: 100%;
+            width: 320px;
+            height: 250px;
+            overflow: hidden;
+            margin: 0 auto;
+            border-radius: 12px;
+            background: #f5f5f5;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        ">
+            <script>
+                atOptions = {
+                    'key' : '3d64b29b20a5341333a9e7333c2a2f78',
+                    'format' : 'iframe',
+                    'height' : 250,
+                    'width' : 320,
+                    'params' : {}
+                };
+            <\/script>
+            <script src="https://www.highperformanceformat.com/3d64b29b20a5341333a9e7333c2a2f78/invoke.js"><\/script>
+        </div>
     `;
     
     result.appendChild(adDiv);
