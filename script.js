@@ -1705,6 +1705,26 @@ if (index === 159) {
     result.appendChild(linksDiv);
 }
 
+    // 60th style ke baad Ad (index 59)
+if (index === 10) {
+    const adDiv = document.createElement('div');
+    adDiv.className = 'style-card';
+    adDiv.style.padding = '0';
+    adDiv.style.background = 'transparent';
+    adDiv.style.border = 'none';
+    adDiv.style.boxShadow = 'none';
+    adDiv.style.margin = '10px 0 20px 0';
+    adDiv.style.textAlign = 'center';
+    
+    adDiv.innerHTML = `
+        <!-- Adsterra Native Banner -->
+        <div id="container-c58a16cc615eb2fb21bafc680f8cfce0"></div>
+        <script src="https://www.highperformanceformat.com/c58a16cc615eb2fb21bafc680f8cfce0/invoke.js" defer><\/script>
+    `;
+    
+    result.appendChild(adDiv);
+}
+
 // 179th style ke baad
 if (index === 179) {
     const linksDiv = document.createElement('div');
