@@ -1731,6 +1731,42 @@ if (index === 159) {
     result.appendChild(linksDiv);
 }
 
+    // 👇 ADSTERRA NATIVE BANNER - 150th STYLE KE BAAD (index 149)
+if (index === 141) {
+    const adDiv = document.createElement('div');
+    adDiv.className = 'style-card';
+    adDiv.style.padding = '10px 0';
+    adDiv.style.background = 'transparent';
+    adDiv.style.border = 'none';
+    adDiv.style.boxShadow = 'none';
+    adDiv.style.margin = '10px 0 20px 0';
+    adDiv.style.textAlign = 'center';
+    adDiv.style.display = 'flex';
+    adDiv.style.justifyContent = 'center';
+    adDiv.style.alignItems = 'center';
+    adDiv.style.width = '100%';
+    
+    adDiv.innerHTML = `
+        <!-- Adsterra Native Banner - Mobile Optimized -->
+        <div style="
+            display: inline-block;
+            max-width: 100%;
+            width: 320px;
+            min-height: 50px;
+            overflow: hidden;
+            margin: 0 auto;
+            border-radius: 12px;
+            background: #f5f5f5;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        ">
+            <div id="container-c58a16cc615eb2fb21bafc680f8cfce0"></div>
+            <script src="https://www.highperformanceformat.com/c58a16cc615eb2fb21bafc680f8cfce0/invoke.js" defer><\/script>
+        </div>
+    `;
+    
+    result.appendChild(adDiv);
+}
+
     // 179th style ke baad
 if (index === 179) {
     const linksDiv = document.createElement('div');
