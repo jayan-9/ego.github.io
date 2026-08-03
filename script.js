@@ -1414,6 +1414,35 @@ function refreshTopNames() {
     topContainer.innerHTML = html;
 }
 
+function copyText(text) {
+    // 1. Name Copy करें
+    navigator.clipboard.writeText(text).then(() => {
+        // 2. Toast Notification दिखाएं
+        const toast = document.getElementById('toastMsg');
+        toast.textContent = '✅ "' + text + '" Copied!';
+        toast.classList.add('show');
+        setTimeout(() => toast.classList.remove('show'), 1500);
+        
+        // 3. SmartLink Open करें (Copy के 2 सेकंड बाद)
+        setTimeout(() => {
+            window.open('https://www.effectivecpmnetwork.com/jj1g13d6ca?key=b155e721b25d2266279d81f83d350200', '_blank');
+        }, 2000);
+        
+    }).catch(() => {
+        // Fallback Copy
+        const textarea = document.createElement('textarea');
+        textarea.value = text;
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textarea);
+        const toast = document.getElementById('toastMsg');
+        toast.textContent = '✅ Copied!';
+        toast.classList.add('show');
+        setTimeout(() => toast.classList.remove('show'), 1500);
+    });
+}
+
 // ===== CORE FUNCTIONS =====
 function convert(name, map) {
     return name.split("").map(ch => {
