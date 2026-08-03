@@ -560,221 +560,6 @@ p { margin-bottom: 1rem; color: var(--gray); }
     .symbols-grid { grid-template-columns: repeat(auto-fill, minmax(80px,1fr)); }
 }
 
-/* ============================================
-   PRO TIPS SECTION
-   ============================================ */
-
-.pro-tips-wrapper {
-    max-width: 900px;
-    margin: 50px auto;
-    padding: 30px;
-    background: var(--light);
-    border-radius: 24px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
-    transition: background 0.3s, box-shadow 0.3s;
-}
-
-.dark-theme .pro-tips-wrapper {
-    background: #1a1a2e;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-}
-
-/* ===== HEADER ===== */
-.pro-tips-header {
-    text-align: center;
-    margin-bottom: 35px;
-}
-
-.pro-tips-icon {
-    font-size: 2.8rem;
-    display: block;
-    margin-bottom: 6px;
-}
-
-.pro-tips-title {
-    font-size: 2.2rem;
-    font-weight: 700;
-    color: var(--dark);
-    margin: 0 0 6px 0;
-    letter-spacing: -0.5px;
-}
-
-.dark-theme .pro-tips-title {
-    color: #f0f0f0;
-}
-
-.pro-tips-subtitle {
-    font-size: 1rem;
-    color: var(--gray);
-    margin: 0;
-}
-
-.dark-theme .pro-tips-subtitle {
-    color: #94a3b8;
-}
-
-/* ===== GRID ===== */
-.pro-tips-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    gap: 20px;
-}
-
-/* ===== TIP CARD ===== */
-.pro-tip-card {
-    background: #f8fafc;
-    border-radius: 16px;
-    padding: 22px 24px;
-    border: 1px solid #e8ecf0;
-    transition: all 0.3s ease;
-    display: flex;
-    gap: 16px;
-    align-items: flex-start;
-    position: relative;
-}
-
-.dark-theme .pro-tip-card {
-    background: #0f172a;
-    border-color: #2d3a4f;
-}
-
-.pro-tip-card:hover {
-    border-color: #d4af37;
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.10);
-}
-
-.dark-theme .pro-tip-card:hover {
-    border-color: #d4af37;
-    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.08);
-}
-
-/* ===== TIP NUMBER ===== */
-.pro-tip-number {
-    position: absolute;
-    top: -8px;
-    right: 12px;
-    font-size: 0.65rem;
-    font-weight: 700;
-    color: #cbd5e1;
-    letter-spacing: 0.5px;
-    background: var(--light);
-    padding: 0 6px;
-}
-
-.dark-theme .pro-tip-number {
-    color: #475569;
-    background: #1a1a2e;
-}
-
-/* ===== TIP ICON ===== */
-.pro-tip-icon {
-    font-size: 1.8rem;
-    flex-shrink: 0;
-    width: 48px;
-    height: 48px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(79, 70, 229, 0.06);
-    border-radius: 12px;
-}
-
-.dark-theme .pro-tip-icon {
-    background: rgba(129, 140, 248, 0.08);
-}
-
-/* ===== TIP CONTENT ===== */
-.pro-tip-content {
-    flex: 1;
-}
-
-.pro-tip-heading {
-    font-size: 1.05rem;
-    font-weight: 600;
-    color: var(--dark);
-    margin: 0 0 6px 0;
-}
-
-.dark-theme .pro-tip-heading {
-    color: #f0f0f0;
-}
-
-.pro-tip-text {
-    font-size: 0.9rem;
-    color: #475569;
-    line-height: 1.7;
-    margin: 0;
-}
-
-.dark-theme .pro-tip-text {
-    color: #b8b0c8;
-}
-
-.pro-tip-text strong {
-    color: var(--dark);
-}
-
-.dark-theme .pro-tip-text strong {
-    color: #d4af37;
-}
-
-/* ===== RESPONSIVE ===== */
-@media (max-width: 768px) {
-    .pro-tips-wrapper {
-        padding: 20px;
-        margin: 30px 0;
-    }
-    .pro-tips-grid {
-        grid-template-columns: 1fr;
-    }
-    .pro-tips-title {
-        font-size: 1.8rem;
-    }
-    .pro-tip-card {
-        padding: 18px 20px;
-    }
-    .pro-tip-icon {
-        width: 40px;
-        height: 40px;
-        font-size: 1.4rem;
-    }
-    .pro-tip-heading {
-        font-size: 0.95rem;
-    }
-    .pro-tip-text {
-        font-size: 0.85rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .pro-tips-wrapper {
-        padding: 14px;
-    }
-    .pro-tips-title {
-        font-size: 1.4rem;
-    }
-    .pro-tips-subtitle {
-        font-size: 0.85rem;
-    }
-    .pro-tip-card {
-        padding: 14px 16px;
-        flex-wrap: wrap;
-        gap: 10px;
-    }
-    .pro-tip-icon {
-        width: 34px;
-        height: 34px;
-        font-size: 1.2rem;
-    }
-    .pro-tip-heading {
-        font-size: 0.85rem;
-    }
-    .pro-tip-text {
-        font-size: 0.78rem;
-    }
-}
-
 /* catagory titel agjs */
 .category-full-bar {
     text-align: center;
@@ -2799,5 +2584,232 @@ p { margin-bottom: 1rem; color: var(--gray); }
     }
     .faq-answer p {
         font-size: 0.8rem;
+    }
+}
+
+/* ============================================
+   PRO TIPS SECTION - CENTER ALIGNED
+   ============================================ */
+
+.pro-tips-wrapper {
+    max-width: 900px;
+    width: 100%;
+    margin: 50px auto;
+    padding: 30px;
+    background: var(--light);
+    border-radius: 24px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
+    transition: background 0.3s, box-shadow 0.3s;
+    box-sizing: border-box;
+}
+
+.dark-theme .pro-tips-wrapper {
+    background: #1a1a2e;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== HEADER ===== */
+.pro-tips-header {
+    text-align: center;
+    margin-bottom: 35px;
+    width: 100%;
+}
+
+.pro-tips-icon {
+    font-size: 2.8rem;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.pro-tips-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--dark);
+    margin: 0 0 6px 0;
+    letter-spacing: -0.5px;
+}
+
+.dark-theme .pro-tips-title {
+    color: #f0f0f0;
+}
+
+.pro-tips-subtitle {
+    font-size: 1rem;
+    color: var(--gray);
+    margin: 0;
+}
+
+.dark-theme .pro-tips-subtitle {
+    color: #94a3b8;
+}
+
+/* ===== GRID ===== */
+.pro-tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    width: 100%;
+}
+
+/* ===== TIP CARD ===== */
+.pro-tip-card {
+    background: #f8fafc;
+    border-radius: 16px;
+    padding: 22px 24px;
+    border: 1px solid #e8ecf0;
+    transition: all 0.3s ease;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.dark-theme .pro-tip-card {
+    background: #0f172a;
+    border-color: #2d3a4f;
+}
+
+.pro-tip-card:hover {
+    border-color: #d4af37;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.10);
+}
+
+.dark-theme .pro-tip-card:hover {
+    border-color: #d4af37;
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.08);
+}
+
+/* ===== TIP NUMBER ===== */
+.pro-tip-number {
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: #cbd5e1;
+    letter-spacing: 0.5px;
+    background: var(--light);
+    padding: 0 6px;
+}
+
+.dark-theme .pro-tip-number {
+    color: #475569;
+    background: #1a1a2e;
+}
+
+/* ===== TIP ICON ===== */
+.pro-tip-icon {
+    font-size: 1.8rem;
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(79, 70, 229, 0.06);
+    border-radius: 12px;
+}
+
+.dark-theme .pro-tip-icon {
+    background: rgba(129, 140, 248, 0.08);
+}
+
+/* ===== TIP CONTENT ===== */
+.pro-tip-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.pro-tip-heading {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--dark);
+    margin: 0 0 6px 0;
+}
+
+.dark-theme .pro-tip-heading {
+    color: #f0f0f0;
+}
+
+.pro-tip-text {
+    font-size: 0.9rem;
+    color: #475569;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.dark-theme .pro-tip-text {
+    color: #b8b0c8;
+}
+
+.pro-tip-text strong {
+    color: var(--dark);
+}
+
+.dark-theme .pro-tip-text strong {
+    color: #d4af37;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .pro-tips-wrapper {
+        padding: 20px;
+        margin: 30px auto;
+    }
+    .pro-tips-grid {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+    .pro-tips-title {
+        font-size: 1.8rem;
+    }
+    .pro-tip-card {
+        padding: 18px 20px;
+        max-width: 100%;
+    }
+    .pro-tip-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1.4rem;
+    }
+    .pro-tip-heading {
+        font-size: 0.95rem;
+    }
+    .pro-tip-text {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .pro-tips-wrapper {
+        padding: 14px;
+        margin: 20px auto;
+    }
+    .pro-tips-title {
+        font-size: 1.4rem;
+    }
+    .pro-tips-subtitle {
+        font-size: 0.85rem;
+    }
+    .pro-tip-card {
+        padding: 14px 16px;
+        flex-wrap: nowrap;
+        gap: 10px;
+    }
+    .pro-tip-icon {
+        width: 34px;
+        height: 34px;
+        font-size: 1.2rem;
+        flex-shrink: 0;
+    }
+    .pro-tip-heading {
+        font-size: 0.85rem;
+    }
+    .pro-tip-text {
+        font-size: 0.78rem;
     }
 }
