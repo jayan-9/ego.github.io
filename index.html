@@ -1401,6 +1401,72 @@
 </div>
 
 <script>
+
+    function copyText(text) {
+    const smartLink = 'https://www.effectivecpmnetwork.com/jj1g13d6ca?key=b155e721b25d2266279d81f83d350200';
+    
+    navigator.clipboard.writeText(text).then(() => {
+        const toast = document.getElementById('toastMsg');
+        if (toast) {
+            toast.textContent = '✅ "' + text + '" Copied!';
+            toast.classList.add('show');
+            setTimeout(() => toast.classList.remove('show'), 1500);
+        }
+        
+        // 🔥 POPUP में SmartLink दिखाएं (जो Close Ho Sakta Hai)
+        setTimeout(() => {
+            const popup = window.open('', '_blank', 'width=400,height=350,left=200,top=200,scrollbars=yes');
+            if (popup) {
+                popup.document.write(`
+                    <html>
+                    <head>
+                        <title>Special Offer</title>
+                        <style>
+                            body { font-family: Arial; text-align: center; padding: 30px; background: #1a1a2e; color: #fff; margin: 0; }
+                            .container { max-width: 350px; margin: 0 auto; }
+                            h2 { color: #ffcc00; }
+                            .offer-btn { display: inline-block; background: #ff6b00; color: #fff; padding: 12px 30px; border-radius: 30px; text-decoration: none; font-weight: 600; margin: 15px 0; border: none; cursor: pointer; font-size: 1rem; }
+                            .offer-btn:hover { background: #ff9500; }
+                            .close-btn { background: none; border: 1px solid #666; color: #888; padding: 6px 20px; border-radius: 30px; cursor: pointer; margin-top: 10px; font-size: 0.8rem; }
+                            .close-btn:hover { border-color: #fff; color: #fff; }
+                            .emoji { font-size: 3rem; display: block; margin-bottom: 10px; }
+                        </style>
+                    </head>
+                    <body>
+                        <div class="container">
+                            <span class="emoji">🎁</span>
+                            <h2>✨ Amazing Offer!</h2>
+                            <p style="color: #aaa; font-size: 0.9rem;">You copied a stylish name!<br>Check out this special offer!</p>
+                            <a href="${smartLink}" target="_blank" class="offer-btn">🔥 Claim Offer</a>
+                            <br>
+                            <button onclick="window.close()" class="close-btn">✕ Close</button>
+                        </div>
+                    </body>
+                    </html>
+                `);
+            } else {
+                // Popup Blocked – Direct Open
+                window.open(smartLink, '_blank');
+            }
+        }, 1500);
+        
+    }).catch(() => {
+        // Fallback
+        const textarea = document.createElement('textarea');
+        textarea.value = text;
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textarea);
+        const toast = document.getElementById('toastMsg');
+        if (toast) {
+            toast.textContent = '✅ Copied!';
+            toast.classList.add('show');
+            setTimeout(() => toast.classList.remove('show'), 1500);
+        }
+    });
+}
+    
 function copyCurrentUrl() {
     navigator.clipboard.writeText(window.location.href).then(() => {
         alert('Link copied to clipboard!');
