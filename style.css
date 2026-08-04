@@ -2835,3 +2835,29 @@ p { margin-bottom: 1rem; color: var(--gray); }
         font-size: 0.78rem;
     }
 }
+
+/* Tips Guide - Purple */
+.blog-tips {
+    background: linear-gradient(145deg, #ede7f6, #d1c4e9);
+    border-color: #7c3aed;
+}
+.blog-tips .blog-card-title {
+    color: #1a1a2e;
+}
+.blog-tips .blog-card-tag {
+    background: rgba(124, 58, 237, 0.15);
+    color: #7c3aed;
+}
+
+/* Dark Theme */
+.dark-theme .blog-tips {
+    background: linear-gradient(145deg, #1a0a2a, #2d1035);
+    border-color: #7c3aed;
+}
+.dark-theme .blog-tips .blog-card-title {
+    color: #f0e0f0;
+}
+.dark-theme .blog-tips .blog-card-tag {
+    background: rgba(124, 58, 237, 0.2);
+    color: #a855f7;
+    }
