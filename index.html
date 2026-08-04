@@ -97,16 +97,19 @@
     <span>Terms & Conditions</span>
 </div>
         </div>
-        <div class="note-editor" id="noteEditor">
-            <textarea placeholder="Type your notes here... (Max 100 words)" maxlength="500" id="noteText"></textarea>
-            <div class="note-actions">
-                <button onclick="saveNote()" class="save-note">
-                    <i class="fas fa-save"></i> Save
-                </button>
-                <button onclick="clearNote()" class="clear-note">
-                    <i class="fas fa-trash"></i> Clear
-                </button>
-            </div>
+<div class="note-editor" id="noteEditor">
+    <!-- ===== BUTTONS UPAR (Textarea से पहले) ===== -->
+    <div class="note-actions-top">
+        <button onclick="saveNote()" class="save-note">
+            <i class="fas fa-save"></i> Save
+        </button>
+        <button onclick="clearNote()" class="clear-note">
+            <i class="fas fa-trash"></i> Clear
+        </button>
+    </div>  
+    <!-- ===== TEXTAREA (Buttons के नीचे) ===== -->
+    <textarea placeholder="Type your notes here... (Max 100 words)" maxlength="500" id="noteText"></textarea>
+</div>
         </div>
     </div>
 
@@ -213,7 +216,7 @@
         </div>
 
         <!-- 👇 50px KHALI SPACE -->
-<div style="height: 20px;"></div>
+<div style="height: 280px;"></div>
 
  <img src="https://jayan-9.github.io/ego.github.io/photos.gif" 
      alt="Stylish Design"
