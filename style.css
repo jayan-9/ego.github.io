@@ -2861,3 +2861,29 @@ p { margin-bottom: 1rem; color: var(--gray); }
     background: rgba(124, 58, 237, 0.2);
     color: #a855f7;
     }
+
+/* FAQ - Blue/Teal */
+.blog-faq {
+    background: linear-gradient(145deg, #e0f7fa, #b2ebf2);
+    border-color: #14b8a6;
+}
+.blog-faq .blog-card-title {
+    color: #1a1a2e;
+}
+.blog-faq .blog-card-tag {
+    background: rgba(20, 184, 166, 0.15);
+    color: #0d9488;
+}
+
+/* Dark Theme */
+.dark-theme .blog-faq {
+    background: linear-gradient(145deg, #0a1a1a, #0d2520);
+    border-color: #14b8a6;
+}
+.dark-theme .blog-faq .blog-card-title {
+    color: #f0e0f0;
+}
+.dark-theme .blog-faq .blog-card-tag {
+    background: rgba(20, 184, 166, 0.2);
+    color: #2dd4bf;
+}
