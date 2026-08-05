@@ -2887,3 +2887,18 @@ p { margin-bottom: 1rem; color: var(--gray); }
     background: rgba(20, 184, 166, 0.2);
     color: #2dd4bf;
 }
+
+/* Romantic - Pink */
+.blog-romantic {
+    background: linear-gradient(145deg, #fce4ec, #f8bbd0);
+    border-color: #e91e8c;
+}
+.blog-romantic .blog-card-title { color: #1a0a2e; }
+.blog-romantic .blog-card-tag { background: rgba(233,30,140,0.15); color: #e91e8c; }
+
+.dark-theme .blog-romantic {
+    background: linear-gradient(145deg, #1a0a15, #2d1025);
+    border-color: #e91e8c;
+}
+.dark-theme .blog-romantic .blog-card-title { color: #f0e0e8; }
+.dark-theme .blog-romantic .blog-card-tag { background: rgba(233,30,140,0.2); color: #ec4899; }
