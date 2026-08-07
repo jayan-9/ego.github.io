@@ -1477,14 +1477,14 @@ function refreshTop3Styles() {
     showToast('✨ New styles generated!');
 }
 
-// ===== GENERATE STYLES (with examples when input empty) =====
+// =====❤️‍🔥 GENERATE STYLES (with examples when input empty) =====
 function generateStyles() {
     const name = document.getElementById('nameInput')?.value.trim();
     const result = document.getElementById('result');
     if (!result) return;
     result.innerHTML = "";
 
-    // ===== EXAMPLE SECTION (जब Name Empty हो) =====
+    // =====‼️ EXAMPLE ‼️SECTION (जब Name Empty हो) =====
     if (!name) {
         const examples = categoryExamples[currentFilter] || categoryExamples.love;
         const shuffled = [...examples].sort(() => Math.random() - 0.5);
@@ -1536,7 +1536,7 @@ function generateStyles() {
         return;
     }
 
-    // ===== MAIN GENERATE SECTION (जब Name हो) =====
+    // ===== ‼️MAIN GENERATE‼️ SECTION (जब Name हो) =====
     const styles = stylesByCategory[currentFilter] || [];
     if (styles.length === 0) {
         result.innerHTML = `<div class="empty-state"><i class="fas fa-exclamation-circle"></i><p>No styles for this category yet.</p></div>`;
@@ -1555,31 +1555,7 @@ function generateStyles() {
         div.setAttribute('title', 'Click to copy');
         div.innerHTML = `<div class="style-text">${styled}</div>`;
         result.appendChild(div);
-        
-        // ✅ ADSTERRA NATIVE BANNER - 150th STYLE KE BAAD (index 149)
-        if (index === 149) {
-            const adDiv = document.createElement('div');
-            adDiv.className = 'style-card';
-            adDiv.style.padding = '10px 0';
-            adDiv.style.background = 'transparent';
-            adDiv.style.border = 'none';
-            adDiv.style.boxShadow = 'none';
-            adDiv.style.margin = '10px 0 20px 0';
-            adDiv.style.textAlign = 'center';
-            adDiv.style.display = 'flex';
-            adDiv.style.justifyContent = 'center';
-            adDiv.style.alignItems = 'center';
-            adDiv.style.width = '100%';
-            
-            adDiv.innerHTML = `
-                <div style="display: inline-block; max-width: 100%; width: 320px; min-height: 50px; overflow: hidden; margin: 0 auto; border-radius: 12px; background: #f5f5f5; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
-                    <div id="container-c58a16cc615eb2fb21bafc680f8cfce0"></div>
-                    <script src="https://www.highperformanceformat.com/c58a16cc615eb2fb21bafc680f8cfce0/invoke.js" defer><\/script>
-                </div>
-            `;
-            result.appendChild(adDiv);
-        }
-        
+         
         // ✅ 61st style ke baad - LINKS
         if (index === 61) {
             const linksDiv = document.createElement('div');
