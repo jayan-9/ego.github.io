@@ -2902,3 +2902,28 @@ p { margin-bottom: 1rem; color: var(--gray); }
 }
 .dark-theme .blog-romantic .blog-card-title { color: #f0e0e8; }
 .dark-theme .blog-romantic .blog-card-tag { background: rgba(233,30,140,0.2); color: #ec4899; }
+
+/* Girls & Boys Guide - Purple/Pink */
+.blog-guide {
+    background: linear-gradient(145deg, #ede7f6, #f8bbd0);
+    border-color: #7c3aed;
+}
+.blog-guide .blog-card-title {
+    color: #1a1a2e;
+}
+.blog-guide .blog-card-tag {
+    background: rgba(124, 58, 237, 0.15);
+    color: #7c3aed;
+}
+
+.dark-theme .blog-guide {
+    background: linear-gradient(145deg, #1a0a2a, #2d1025);
+    border-color: #7c3aed;
+}
+.dark-theme .blog-guide .blog-card-title {
+    color: #f0e0f0;
+}
+.dark-theme .blog-guide .blog-card-tag {
+    background: rgba(124, 58, 237, 0.2);
+    color: #a855f7;
+}
