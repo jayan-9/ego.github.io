@@ -2927,3 +2927,28 @@ p { margin-bottom: 1rem; color: var(--gray); }
     background: rgba(124, 58, 237, 0.2);
     color: #a855f7;
 }
+
+/* Crazy - Neon Orange */
+.blog-crazy {
+    background: linear-gradient(145deg, #1a0a00, #2d1500);
+    border-color: #ff6b00;
+}
+.blog-crazy .blog-card-title {
+    color: #ff6b00;
+}
+.blog-crazy .blog-card-tag {
+    background: rgba(255, 107, 0, 0.15);
+    color: #ff6b00;
+}
+
+.dark-theme .blog-crazy {
+    background: linear-gradient(145deg, #0d0d0d, #1a0a00);
+    border-color: #ff6b00;
+}
+.dark-theme .blog-crazy .blog-card-title {
+    color: #ff9500;
+}
+.dark-theme .blog-crazy .blog-card-tag {
+    background: rgba(255, 107, 0, 0.2);
+    color: #ff9500;
+}
