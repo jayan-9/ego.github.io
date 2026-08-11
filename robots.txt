@@ -61,6 +61,7 @@ Allow: /stylish-words.html
 Allow: /what-is-stylename.html
 Allow: /how-to-choose-gaming-name.html
 Allow: /free-fire-stylish-names-2026.html
+Allow: /crazyname.html
 
 # Sitemap location
 Sitemap: https://stylename.in/sitemap.xml
