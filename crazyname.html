@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crazy Names – ϻ么ᴅ 🐒 ϻ☯ɴᴋᴇㄚ  , ꩜ Ͻя🅰️ƶㄚ ƓαM⃤乇я𓏧𖹭࿐ more... </title>
-    <meta name="description" content="50+ crazy stylish names for gaming, social media, and fun. Learn how to create crazy names with mix words, symbols, and emojis. Copy and use instantly!">
+    <title>Crazy Names – ϻ么ᴅ 🐒 ϻ☯ɴᴋᴇㄚ  , ꩜ Ͻя🅰️ƶㄚ ƓαM⃤乇я𓏧𖹭࿐ more...</title>
+    <meta name="description" content="50+ crazy stylish names for gaming, social media, animals, and school. Learn how to create crazy names with mix words, symbols, and emojis.">
     
-    <!-- Google AdSense Codes -->
+    <!-- Google AdSense & Verification Codes -->
     <meta name="google-adsense-account" content="ca-pub-5781318703267732">
     <meta name="google-site-verification" content="cKGfHx3401UeyzijckfH4-0-Km0WQ33kICn3MIs3J04" />
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5781318703267732" crossorigin="anonymous"></script>
@@ -16,21 +16,44 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
-        /* ===== CRAZY THEME: Neon + Dark ===== */
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        /* ============================================
+           THEME: LIGHTNING BLUE + WHITE
+           ============================================ */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #0d0d0d;
-            color: #e8e8e8;
+            background: #f0f9ff;
+            color: #1a1a2e;
             line-height: 1.8;
             padding: 20px;
             transition: background 0.3s, color 0.3s;
         }
-        a { text-decoration: none; color: #ff6b00; }
-        a:hover { color: #ff9500; }
+        a {
+            text-decoration: none;
+            color: #0ea5e9;
+        }
+        a:hover {
+            color: #0284c7;
+        }
+
+        /* Dark Theme */
+        body.dark-theme {
+            background: #0a1628;
+            color: #e8f0f8;
+        }
+        body.dark-theme a {
+            color: #38bdf8;
+        }
+        body.dark-theme a:hover {
+            color: #7dd3fc;
+        }
 
         header {
-            background: #1a1a2e;
+            background: #0c1a2e;
             padding: 20px 40px;
             display: flex;
             justify-content: space-between;
@@ -38,11 +61,22 @@
             flex-wrap: wrap;
             border-radius: 0 0 16px 16px;
             margin-bottom: 30px;
-            border-bottom: 3px solid #ff6b00;
+            border-bottom: 3px solid #0ea5e9;
         }
-        header h1 a { color: #ff6b00; font-size: 2rem; font-weight: 700; }
-        header nav a { color: #fff; margin: 0 12px; font-weight: 500; transition: 0.3s; }
-        header nav a:hover { color: #ff6b00; }
+        header h1 a {
+            color: #0ea5e9;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+        header nav a {
+            color: #fff;
+            margin: 0 12px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+        header nav a:hover {
+            color: #0ea5e9;
+        }
 
         .translate-container {
             display: flex;
@@ -54,10 +88,10 @@
             padding: 0 20px;
         }
         #google_translate_element {
-            background: #1a1a1a;
+            background: #f0f0f0;
             padding: 6px 12px;
             border-radius: 30px;
-            border: 1px solid #333;
+            border: 1px solid #ddd;
             font-size: 0.9rem;
         }
         .goog-te-gadget-simple {
@@ -66,59 +100,95 @@
             font-size: 0.9rem !important;
             padding: 4px 8px !important;
         }
-        .goog-te-gadget-simple span { color: #fff !important; }
+        .goog-te-gadget-simple span {
+            color: #1a1a2e !important;
+        }
+        body.dark-theme .goog-te-gadget-simple span {
+            color: #fff !important;
+        }
 
-        .container { max-width: 900px; margin: 0 auto; }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
 
         /* ===== HERO ===== */
-        .crazy-hero {
+        .hero {
             text-align: center;
             margin-bottom: 30px;
-            background: linear-gradient(135deg, #1a0a00, #2d1500, #1a0a00);
+            background: linear-gradient(135deg, #0ea5e9, #7dd3fc);
             padding: 40px 20px;
             border-radius: 20px;
-            border: 2px solid #ff6b00;
-            box-shadow: 0 4px 30px rgba(255, 107, 0, 0.08);
+            color: white;
+            border: 2px solid #0ea5e9;
         }
-        .crazy-hero h1 { font-size: 2.5rem; font-weight: 800; color: #ff6b00; }
-        .crazy-hero p { font-size: 1.1rem; color: #b0b0b0; max-width: 700px; margin: 10px auto 0; }
-        .crazy-hero .hero-icon { font-size: 3rem; display: block; margin-bottom: 10px; }
+        body.dark-theme .hero {
+            background: linear-gradient(135deg, #0a1628, #0d2a4a);
+            border-color: #0ea5e9;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
 
         /* ===== CATEGORY ===== */
         .category {
-            background: #141414;
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(6px);
             border-radius: 20px;
             margin-bottom: 30px;
             padding: 25px 30px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-            border: 1px solid #2a2a2a;
+            box-shadow: 0 4px 15px rgba(14, 165, 233, 0.06);
+            border: 1px solid rgba(14, 165, 233, 0.12);
+        }
+        body.dark-theme .category {
+            background: rgba(10, 22, 40, 0.8);
+            border-color: rgba(14, 165, 233, 0.15);
         }
         .category h2 {
             font-size: 1.8rem;
             margin-bottom: 10px;
-            border-left: 5px solid #ff6b00;
+            border-left: 5px solid #0ea5e9;
             padding-left: 15px;
-            color: #ff6b00;
+            color: #1a1a2e;
+        }
+        body.dark-theme .category h2 {
+            color: #f0f0f0;
         }
         .category .desc {
-            color: #b0b0b0;
+            color: #475569;
             margin-bottom: 20px;
             font-size: 0.95rem;
             padding-left: 20px;
         }
+        body.dark-theme .category .desc {
+            color: #94a3b8;
+        }
 
         /* ===== NAME CARD ===== */
         .name-card {
-            background: #1a1a1a;
-            border: 1px solid #2a2a2a;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(14, 165, 233, 0.10);
             border-radius: 14px;
             padding: 16px 20px;
             margin-bottom: 14px;
             transition: all 0.3s ease;
         }
+        body.dark-theme .name-card {
+            background: rgba(10, 22, 40, 0.6);
+            border-color: rgba(14, 165, 233, 0.12);
+        }
         .name-card:hover {
-            border-color: #ff6b00;
-            box-shadow: 0 4px 20px rgba(255, 107, 0, 0.06);
+            border-color: #0ea5e9;
+            box-shadow: 0 4px 20px rgba(14, 165, 233, 0.08);
             transform: translateY(-2px);
         }
         .name-header {
@@ -131,11 +201,14 @@
         .name-text {
             font-size: 1.2rem;
             font-weight: 600;
-            color: #fff;
+            color: #1a1a2e;
             word-break: break-word;
         }
+        body.dark-theme .name-text {
+            color: #f0f0f0;
+        }
         .copy-btn {
-            background: #ff6b00;
+            background: #0ea5e9;
             color: #fff;
             border: none;
             padding: 5px 16px;
@@ -146,18 +219,30 @@
             transition: 0.3s;
             white-space: nowrap;
         }
-        .copy-btn:hover { background: #ff9500; transform: scale(1.02); }
+        .copy-btn:hover {
+            background: #0284c7;
+            transform: scale(1.02);
+        }
 
         .name-summary {
             font-size: 0.9rem;
-            color: #b0b0b0;
+            color: #475569;
             margin-top: 10px;
             padding: 10px 14px;
-            background: #0d0d0d;
+            background: rgba(14, 165, 233, 0.04);
             border-radius: 10px;
-            border-left: 3px solid #ff6b00;
+            border-left: 3px solid #0ea5e9;
         }
-        .name-summary strong { color: #ff6b00; }
+        body.dark-theme .name-summary {
+            color: #94a3b8;
+            background: rgba(14, 165, 233, 0.04);
+        }
+        .name-summary strong {
+            color: #1a1a2e;
+        }
+        body.dark-theme .name-summary strong {
+            color: #38bdf8;
+        }
 
         /* ===== SYMBOL GRID ===== */
         .symbol-grid {
@@ -167,70 +252,129 @@
             margin: 15px 0;
         }
         .symbol-item {
-            background: #1a1a1a;
+            background: rgba(255, 255, 255, 0.6);
             padding: 10px 8px;
             border-radius: 10px;
             text-align: center;
-            border: 1px solid #2a2a2a;
+            border: 1px solid rgba(14, 165, 233, 0.08);
             font-size: 1.3rem;
             transition: 0.3s;
             cursor: pointer;
-            color: #fff;
+        }
+        body.dark-theme .symbol-item {
+            background: rgba(10, 22, 40, 0.5);
+            border-color: rgba(14, 165, 233, 0.1);
+            color: #f0f0f0;
         }
         .symbol-item:hover {
-            border-color: #ff6b00;
+            border-color: #0ea5e9;
             transform: translateY(-2px);
-            background: #2a1a0a;
+            background: rgba(14, 165, 233, 0.06);
         }
 
         /* ===== TIPS BOX ===== */
         .tips-box {
-            background: linear-gradient(135deg, #1a0a00, #2d1500);
+            background: linear-gradient(135deg, #e0f2fe, #bae6fd);
             padding: 20px 25px;
             border-radius: 14px;
             margin: 20px 0;
-            border: 1px solid #ff6b00;
+            border: 1px solid #0ea5e9;
         }
-        .tips-box h3 { color: #ff6b00; margin-bottom: 10px; }
-        .tips-box ul { list-style: none; padding: 0; }
+        body.dark-theme .tips-box {
+            background: linear-gradient(135deg, #0a1a2a, #0d2a3a);
+            border-color: #0ea5e9;
+        }
+        .tips-box h3 {
+            color: #1a1a2e;
+            margin-bottom: 10px;
+        }
+        body.dark-theme .tips-box h3 {
+            color: #38bdf8;
+        }
+        .tips-box ul {
+            list-style: none;
+            padding: 0;
+        }
         .tips-box ul li {
             padding: 5px 0;
             padding-left: 25px;
             position: relative;
         }
         .tips-box ul li::before {
-            content: '✦';
-            color: #ff6b00;
+            content: '⚡';
+            color: #0ea5e9;
             position: absolute;
             left: 0;
         }
 
         /* ===== FAQ BOX ===== */
         .faq-box {
-            background: #1a1a1a;
+            background: rgba(255, 255, 255, 0.6);
             border-radius: 14px;
             padding: 20px 25px;
             margin: 20px 0;
-            border: 1px solid #2a2a2a;
+            border: 1px solid rgba(14, 165, 233, 0.1);
+        }
+        body.dark-theme .faq-box {
+            background: rgba(10, 22, 40, 0.5);
         }
         .faq-item {
             padding: 12px 0;
-            border-bottom: 1px solid #2a2a2a;
+            border-bottom: 1px solid rgba(14, 165, 233, 0.06);
         }
-        .faq-item:last-child { border-bottom: none; }
-        .faq-q { font-weight: 600; color: #ff6b00; }
-        .faq-a { color: #b0b0b0; padding-left: 20px; }
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+        .faq-q {
+            font-weight: 600;
+            color: #1a1a2e;
+        }
+        body.dark-theme .faq-q {
+            color: #f0f0f0;
+        }
+        .faq-a {
+            color: #475569;
+            padding-left: 20px;
+        }
+        body.dark-theme .faq-a {
+            color: #94a3b8;
+        }
 
-        /* ===== IMAGE ===== */
-        .crazy-image {
-            text-align: center;
-            margin: 20px 0 30px 0;
+        /* ===== MARQUEE ===== */
+        .marquee-container {
+            background: linear-gradient(135deg, #0ea5e9, #7dd3fc);
+            padding: 12px 0;
+            border-radius: 12px;
+            overflow: hidden;
+            margin: 20px 0;
+            border: 2px solid #0ea5e9;
         }
-        .crazy-image img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 16px;
-            border: 2px solid #ff6b00;
+        body.dark-theme .marquee-container {
+            background: linear-gradient(135deg, #0a1628, #0d2a4a);
+        }
+        .marquee-container .marquee-content {
+            display: flex;
+            gap: 40px;
+            animation: scrollRightToLeft 25s linear infinite;
+            white-space: nowrap;
+        }
+        .marquee-container .marquee-content span {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #fff;
+            padding: 0 10px;
+        }
+        body.dark-theme .marquee-container .marquee-content span {
+            color: #f0f0f0;
+        }
+
+        @keyframes scrollRightToLeft {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
         }
 
         /* ===== FOOTER ===== */
@@ -238,8 +382,12 @@
             text-align: center;
             margin-top: 40px;
             padding: 20px;
-            border-top: 2px solid #ff6b00;
-            color: #888;
+            border-top: 2px solid #0ea5e9;
+            color: #475569;
+        }
+        body.dark-theme footer {
+            color: #94a3b8;
+            border-color: #0ea5e9;
         }
         footer .footer-links {
             display: flex;
@@ -248,16 +396,26 @@
             gap: 20px;
             margin-bottom: 15px;
         }
-        footer .footer-links a { color: #888; text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
-        footer .footer-links a:hover { color: #ff6b00; }
+        footer .footer-links a {
+            color: #475569;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        body.dark-theme .footer-links a {
+            color: #94a3b8;
+        }
+        footer .footer-links a:hover {
+            color: #0ea5e9;
+        }
 
         .toast {
             position: fixed;
             bottom: 30px;
             left: 50%;
             transform: translateX(-50%);
-            background: #1a1a1a;
-            color: #ff6b00;
+            background: #0a1628;
+            color: #0ea5e9;
             padding: 8px 20px;
             border-radius: 40px;
             font-size: 0.9rem;
@@ -265,26 +423,63 @@
             opacity: 0;
             transition: opacity 0.3s;
             pointer-events: none;
-            border: 1px solid #ff6b00;
+            border: 1px solid #0ea5e9;
         }
-        .toast.show { opacity: 1; }
+        .toast.show {
+            opacity: 1;
+        }
 
+        /* ===== RESPONSIVE ===== */
         @media (max-width: 768px) {
-            body { padding: 10px; }
-            header { padding: 15px 20px; flex-direction: column; gap: 10px; }
-            header nav a { margin: 0 8px; font-size: 0.9rem; }
-            .crazy-hero h1 { font-size: 1.8rem; }
-            .category { padding: 18px; }
-            .name-text { font-size: 1rem; }
-            .translate-container { justify-content: center; }
-            .symbol-grid { grid-template-columns: repeat(auto-fill, minmax(50px, 1fr)); }
+            body {
+                padding: 10px;
+            }
+            header {
+                padding: 15px 20px;
+                flex-direction: column;
+                gap: 10px;
+            }
+            header nav a {
+                margin: 0 8px;
+                font-size: 0.9rem;
+            }
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            .category {
+                padding: 18px;
+            }
+            .name-text {
+                font-size: 1rem;
+            }
+            .translate-container {
+                justify-content: center;
+            }
+            .symbol-grid {
+                grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+            }
         }
         @media (max-width: 480px) {
-            .crazy-hero h1 { font-size: 1.4rem; }
-            .name-text { font-size: 0.9rem; }
-            .name-header { flex-direction: column; align-items: stretch; text-align: center; }
-            .copy-btn { align-self: center; }
-            .category h2 { font-size: 1.3rem; }
+            .hero h1 {
+                font-size: 1.4rem;
+            }
+            .name-text {
+                font-size: 0.9rem;
+            }
+            .name-header {
+                flex-direction: column;
+                align-items: stretch;
+                text-align: center;
+            }
+            .copy-btn {
+                align-self: center;
+            }
+            .category h2 {
+                font-size: 1.3rem;
+            }
+            .symbol-grid {
+                grid-template-columns: repeat(auto-fill, minmax(45px, 1fr));
+            }
         }
     </style>
 </head>
@@ -304,64 +499,89 @@
     </div>
 
     <div class="container">
-        <div class="crazy-hero">
-            <span class="hero-icon">🤪</span>
-            <h1>Crazy Stylish Names 2026</h1>
-            <p>✨ 50+ Crazy Names for Gaming, Social Media & Fun – Copy & Use Instantly! ✨</p>
-        </div>
-
-        <!-- ===== CRAZY IMAGE ===== -->
-        <div class="crazy-image">
-            <img src="crazy.png" alt="Crazy Stylish Names Collection">
+        <div class="hero">
+            <span style="font-size:3rem;">🤪</span>
+            <h1>Crazy Name Generator</h1>
+            <p>✨ 50+ Crazy Stylish Names – Copy, Paste & Make Your Profile Crazy! ✨</p>
         </div>
 
         <!-- ===== INTRODUCTION ===== -->
         <div class="category">
-            <h2>📌 Introduction</h2>
-            <p class="desc">In this article, we will see how to create <strong>crazy stylish names</strong>. You will get a complete guide on which words, symbols, and emojis to use for crazy names. 🤪</p>
-            <p class="desc">You can use these crazy names anywhere – gaming profiles, social media platforms, or just for fun! These names look amazing and make you stand out from the crowd. ❤️‍🔥</p>
+            <h2>📌 Introduction – परिचय</h2>
+            <p class="desc">Isme ham dekhenge ki <strong>crazy stylish name</strong> kese banate hai. Ya fir konse crazy name apne liye best rahenge, isme aapko sari guide milengi, crazy name tips milengi ki konse word use karo, konse symbols aur emojis use karoge... 🤪</p>
+            <p class="desc">Aur yaha pe crazy names bhi diye gaye hain. Jise sidha kahi bhi use karo, ya fir in sab ko dekho fir aap ko bhi idea ayenga ki crazy name kese dikhte hain, ya kese generate karte hain. ❤️‍🔥</p>
+            <p class="desc">Crazy name ko aap kaha kaha use kar sakte ho – jese kisi gaming profile ya fir kisi bhi platform me fun ke liye ese names rakh sakte ho! Jo bohot hi badhiya lagte hain.</p>
         </div>
 
-        <!-- ===== TIPS ===== -->
+        <!-- ===== CRAZY NAME TIPS ===== -->
         <div class="category">
-            <h2>💡 Crazy Name Tips</h2>
-            <p class="desc">Follow these pro tips to create the perfect crazy name:</p>
+            <h2>💡 Crazy Name Tips – Pro Tips</h2>
+            <p class="desc">Crazy names banane ke liye kuchh bate dhyan me rakhni hoti hain, nahi to ham perfect aur crazy name nahi bana sakte. Ham koi aur hi vibe ke sath kisi bhi name ko bana denge! To niche bohot si pro tips di gayi hain.</p>
 
+            <!-- Tip 1 -->
             <div class="tips-box">
-                <h3>1️⃣ Use Mix Words ✨</h3>
-                <p style="color: #b0b0b0;">Use different font styles in one name. Don't stick to one style – mix them up!</p>
-                <p style="color: #b0b0b0; margin-top: 10px;"><strong>Example:</strong> DONKEY → 🤪 ༆ 𝙳０ռᵏᴇʸ 🫏</p>
-                <p style="color: #b0b0b0;">See how mixing words makes it crazy!</p>
+                <h3>1️⃣ Use Mix Word ✨</h3>
+                <p>Crazy name banane ke liye hamesh ek hi type ya font ke word mat use karo, alag alag font style ke word ek hi name me use karo! 🙌🏼</p>
+                <p><strong>Example:</strong> DONKEY (Simple Name) → 𝚫𝚹𝚴𝚱𝚬𝚼 (One font style) → 🤪 ༆ 𝙳０ռᵏᴇʸ 🫏 (Crazy name with mix words)</p>
+                <p>Jesa ki upar dekha – pehle simple (DONKEY) likha tha. Uske niche single font style se (𝚫𝚹𝚴𝚱𝚬𝚼) jo crazy name nahi lagta. Bad me jab → 🤪 ༆ 𝙳０ռᵏᴇʸ 🫏 ye mix word ke sath banaya to ye bohot hi crazy name ban gaya. ✨</p>
+                <p><strong>More Examples:</strong></p>
+                <ul>
+                    <li><strong>JOKAR</strong> → ᭄ᒍ⓿Ꮶᵃř₊˚·☯</li>
+                    <li><strong>LAPPU</strong> → ▀𝘓คρρυツ ▄</li>
+                    <li><strong>LABUTO</strong> → ‼ 📨 ʟᗩʙᴜ፝ᴛ𝕆 😋</li>
+                    <li><strong>GAMER</strong> → ☠︎ɢᴀ𝓜ⓔʀ亗😈</li>
+                    <li><strong>CRAZY</strong> → ༒𝕮ʀᴀᴢ𝓨༒☣メ</li>
+                </ul>
             </div>
 
+            <!-- Tip 2 -->
             <div class="tips-box">
                 <h3>2️⃣ Use Crazy Symbols & Emojis ❤️‍🔥</h3>
-                <p style="color: #b0b0b0;">Crazy symbols make your name look wild. Use emojis like 😈 👿 🤪 🤡 and symbols like ☠︎ ⛧ 𖤐 乂 〆</p>
-                <p style="color: #b0b0b0; margin-top: 10px;"><strong>Example:</strong> ☠︎ 𝙹ᴏᴋᴀʀ 🤡</p>
+                <p>Pehli tip me hamne mix word ka use karna hai. Vese hi crazy symbols ka bhi use karna utna hi jaruri hai. Agar aap crazy symbols nahi lagaoge to aapka name kabhi bhi crazy sound nahi karega.</p>
+                <p><strong>Crazy Emojis:</strong> 😈 👿 🤪 🤡 😵‍💫 🥴 🤯 😜 😝 😛 😏 🫨 🫠 👹 👺</p>
+                <p><strong>Dark Vibe Emojis:</strong> 💀 ☠️ ☠︎ 🩸 🖤 🥀 🕷️ 🕸️ 👁️ 🧿 ⚰️ 🪦 🗡️</p>
+                <p><strong>Crazy Symbols:</strong> ☠︎ ☠ ☣︎ ☢︎ ⚠︎ ⛧ ༒ ༺ ༻ 𖤐 𖤓 𖣂 乂 〆 メ 么 彡 ツ シ 々 亗 ࿐ ᭄ ꧁ ꧂ 𓆩 𓆪 ༗ ⸸ ⸮ ⊹ ࣪</p>
+                <p><strong>Best Crazy-Looking Symbols:</strong> ☠︎ ⛧ 𖤐 乂 〆 メ 亗 ᭄ ࿐ ༒</p>
+                <p><strong>Example:</strong> ☠︎ 𝙹ᴏᴋᴀʀ 🤡, 〆 ᒍ⓿𝓚ᵃř 乂, ⛧ 𝕯ᴀʀᴋ メ, 亗 Ꮶɪʟʟᴇʀ ༗</p>
             </div>
 
+            <!-- Tip 3 -->
             <div class="tips-box">
-                <h3>3️⃣ Keep It Medium Length 📝</h3>
-                <p style="color: #b0b0b0;">Don't make it too short (2-3 letters) or too long (15+ letters). Medium length names look best.</p>
+                <h3>3️⃣ Medium Name 📝</h3>
+                <p>Crazy name banane ke liye hamesh medium name ka prayog karo – yani ki name na to jada lamba ho na to jada short. Short name jese sirf do word ka (EX, KO, LK) bohot hi short ho jayenge. Aur long name (MAXIMUMGAMER, CRAZYQUEENITE) bhi crazy name ke liye badhiya nahi rahenge.</p>
+                <p><strong>Agar fir bhi long name use karne ho to:</strong></p>
+                <ul>
+                    <li>Short font style ka use karo (ᴀ ʙ ᴄ, α в ¢, ᵃ ᵇ ᶜ) jo name ko lamba hote huye bhi short dikhayenge</li>
+                    <li>Name ke bich me space rakho – MAXIMUMGAMER → Maxim Gamer – ye long name hote huye bhi perfect crazy name ban sakta hai</li>
+                </ul>
             </div>
 
+            <!-- Tip 4 -->
             <div class="tips-box">
-                <h3>4️⃣ Use These Crazy Fonts</h3>
-                <p style="color: #b0b0b0;">Use fonts like: ᴀ ʙ ᴄ, α в ¢, ꪖ ᥇ ᥴ, ᵃ ᵇ ᶜ, 𝙰 𝙱 𝙲, 𐌰 В 𐌲, ᗩ β ᑕ</p>
+                <h3>4️⃣ Use These Font Styles</h3>
+                <p>Crazy name banane ke liye ye crazy font styles ka use karo. Kisi bhi font style ko utha ke use mat karo!</p>
+                <p><strong>Small Fonts:</strong> ᴀ ʙ ᴄ, α в ¢, ꪖ ᥇ ᥴ, ᵃ ᵇ ᶜ, 𝙰 𝙱 𝙲</p>
+                <p><strong>More Fonts:</strong> 𐌰 В 𐌲, 𝗔• ʙ 𝘊⃤, 🅰️ B⃤ ¢, ᗩ β ᑕ</p>
+                <p>Sabse pehle apna name design karo, usme ye mix font styles use karo, usme crazy symbols lagao aur medium rakhna – fir aapke liye crazy name ban jayega!</p>
             </div>
+        </div>
+
+        <!-- ===== IMAGE ===== -->
+        <div style="text-align:center; margin:20px 0;">
+            <img src="crazy.png" alt="Crazy Name Generator" style="max-width:100%; height:auto; border-radius:16px; border:2px solid #0ea5e9; box-shadow:0 4px 20px rgba(14,165,233,0.15);">
         </div>
 
         <!-- ===== GAMING CRAZY NAMES ===== -->
         <div class="category">
-            <h2>🎮 Gaming Crazy Names</h2>
-            <p class="desc">Perfect for Free Fire, BGMI, PUBG, Call of Duty, and any other game!</p>
+            <h2>🎮 Gaming Crazy Names – Gamers Ke Liye 🤪</h2>
+            <p class="desc">Sabse pehle ham dekhte hain Gamers ke liye crazy names jo Free Fire, BGMI, Call of Duty ya kisi bhi specific game ke liye chahte hain. Unhe sidha copy karke kisi bhi game ID me user name ke tor par use karein.</p>
 
             <div class="name-card">
                 <div class="name-header">
                     <span class="name-text">꩜ Ͻя🅰️ƶㄚ ƓαM⃤乇я𓏧𖹭࿐</span>
                     <button class="copy-btn" onclick="copyText('꩜ Ͻя🅰️ƶㄚ ƓαM⃤乇я𓏧𖹭࿐')">📋 Copy</button>
                 </div>
-                <div class="name-summary"><strong>🎮 Crazy Gamer</strong> – Crazy word is written as Ͻя🅰️ƶㄚ and Gamer as ƓαM⃤乇я. Perfect for gaming profiles!</div>
+                <div class="name-summary"><strong>🎯 Crazy Gamer</strong> – Yaha pe sabse pehla gaming crazy name diya gaya hai. 'Crazy' word ko Ͻя🅰️ƶㄚ vibe me banaya hai. Ye gamer name hai to isme 'ƓαM⃤乇я' word ko bhi bohot hi badhiya aur (꩜ 𓏧𖹭࿐) ye symbols use kiye hain.</div>
             </div>
 
             <div class="name-card">
@@ -369,7 +589,7 @@
                     <span class="name-text">▶▶ Ν๏๏ʙ ❔❔</span>
                     <button class="copy-btn" onclick="copyText('▶▶ Ν๏๏ʙ ❔❔')">📋 Copy</button>
                 </div>
-                <div class="name-summary"><strong>🎮 Noob</strong> – ๏๏ instead of "oo" makes it look crazy. Fun name for gamers!</div>
+                <div class="name-summary"><strong>🎯 Noob</strong> – Ye hamara dusra crazy name hai. ๏๏ ko 'o' ke jagah use kiya hai. Aur baki normal emojis+symbols se ye aur bhi crazy vibe deta hai.</div>
             </div>
 
             <div class="name-card">
@@ -377,7 +597,7 @@
                     <span class="name-text">😝 Ρh𝗬ϽhᎧ き</span>
                     <button class="copy-btn" onclick="copyText('😝 Ρh𝗬ϽhᎧ き')">📋 Copy</button>
                 </div>
-                <div class="name-summary"><strong>🎮 Psych</strong> – Mixed fonts and 😝 emoji make this name super crazy!</div>
+                <div class="name-summary"><strong>🎯 Psych</strong> – Joki bolne me hi crazy lagta hai. Jise mix fonts ka use karke aur bhi badhiya banaya gaya hai. 😝 ko suru me lagaya hai aur last me き – ye bohot hi badhiya crazy name hai.</div>
             </div>
 
             <div class="name-card">
@@ -385,7 +605,7 @@
                     <span class="name-text">Ɠαηנα ɠαмεя</span>
                     <button class="copy-btn" onclick="copyText('Ɠαηנα ɠαмεя')">📋 Copy</button>
                 </div>
-                <div class="name-summary"><strong>🎮 Ganjna Gamer</strong> – Crazy vibe with mixed fonts. Perfect for gaming IDs!</div>
+                <div class="name-summary"><strong>🎯 Ganja Gamer</strong> – Ise bhi bohot hi crazy vibe ke sath gaming name banaya hai. Jise koi bhi gamer apni gaming ID me laga sakta hai. Ye name dekhne me hi crazy feel deta hai.</div>
             </div>
 
             <div class="name-card">
@@ -393,7 +613,7 @@
                     <span class="name-text">▶●─🄽𝗢𝗧 𝗣𝗟𝗔𝗬 🐍き〆</span>
                     <button class="copy-btn" onclick="copyText('▶●─🄽𝗢𝗧 𝗣𝗟𝗔𝗬 🐍き〆')">📋 Copy</button>
                 </div>
-                <div class="name-summary"><strong>🎮 NOT PLAY</strong> – Fun combo with snake emoji and crazy symbols!</div>
+                <div class="name-summary"><strong>🎯 Not Play</strong> – Hamara ye 6th gaming name hai. "Not Play" ye crazy combo hai. Bohot hi fun aur badhiya se banaya gaya hai.</div>
             </div>
 
             <div class="name-card">
@@ -401,21 +621,23 @@
                     <span class="name-text">『𝙿𝚕𝚊𝚢𝚎𝚛』𓆩👹𓆪</span>
                     <button class="copy-btn" onclick="copyText('『𝙿𝚕𝚊𝚢𝚎𝚛』𓆩👹𓆪')">📋 Copy</button>
                 </div>
-                <div class="name-summary"><strong>🎮 Player</strong> – Simple word made crazy with borders and demon emoji!</div>
+                <div class="name-summary"><strong>🎯 Player</strong> – Gamer ka sabse last crazy name. 𝙿𝚕𝚊𝚢𝚎𝚛 word normal hai par isse crazy andaz me create kiya gaya hai. Koi bhi gamer use kar sakta hai.</div>
             </div>
+
+            <p class="desc">Koi bhi game me in sabhi crazy names ko use karo, par is bat ka khyal rakhna ki kisi kisi game me sabhi symbols ya font styles support nahi karte. Use apne se pehle jarur check karna. 🙌🏼</p>
         </div>
 
         <!-- ===== SOCIAL MEDIA CRAZY NAMES ===== -->
         <div class="category">
-            <h2>📱 Social Media Crazy Names</h2>
-            <p class="desc">Perfect for Instagram, Snapchat, Facebook, WhatsApp, and TikTok!</p>
+            <h2>📱 Social Media Crazy Names 💋</h2>
+            <p class="desc">Jesa ki aap dekh sakte hain, Gamers ke liye hamne bohot se crazy names de diye. Ab un logon ki bari hai jo Instagram, Facebook, WhatsApp, Snapchat ya TikTok ke liye crazy name chahte hain.</p>
 
             <div class="name-card">
                 <div class="name-header">
-                    <span class="name-text">‼️ 爪ᴀɢɪᴄɪᴀɴ ͡⁠ᵔ⁠ ⁠﹏⁠ ͡⁠ᵔ⁠ ⁠࿐</span>
+                    <span class="name-text">‼️ 爪ᴀɢɪᴄɪᴀɴ  ͡⁠ᵔ⁠ ⁠﹏⁠ ͡⁠ᵔ⁠ ⁠࿐</span>
                     <button class="copy-btn" onclick="copyText('‼️ 爪ᴀɢɪᴄɪᴀɴ  ͡⁠ᵔ⁠ ⁠﹏⁠ ͡⁠ᵔ⁠ ⁠࿐')">📋 Copy</button>
                 </div>
-                <div class="name-summary"><strong>📱 Magician</strong> – Perfect for magic content creators!</div>
+                <div class="name-summary"><strong>📱 Magician</strong> – Social media profile me rakhne ke liye ye name bohot hi crazy rahega. Instagram ya TikTok par use karoge to badhiya lagega.</div>
             </div>
 
             <div class="name-card">
@@ -423,7 +645,7 @@
                     <span class="name-text">💋Ʋɴᴛ☯☯ ツ ✨</span>
                     <button class="copy-btn" onclick="copyText('💋Ʋɴᴛ☯☯ ツ ✨')">📋 Copy</button>
                 </div>
-                <div class="name-summary"><strong>📱 Untoo</strong> – ☯ used as "o" – super crazy!</div>
+                <div class="name-summary"><strong>📱 Untoo</strong> – WhatsApp ya Snapchat me laga sakte ho! 💋 ☯☯ ツ ✨ symbols lagaye hain jisme ☯ ko 'o' ke roop me dikhaya gaya hai.</div>
             </div>
 
             <div class="name-card">
@@ -431,7 +653,7 @@
                     <span class="name-text">亗 𝙺ɪɴᴛᴏ メ ☯</span>
                     <button class="copy-btn" onclick="copyText('亗 𝙺ɪɴᴛᴏ メ ☯')">📋 Copy</button>
                 </div>
-                <div class="name-summary"><strong>📱 Kinto</strong> – Sounds crazy, looks even crazier!</div>
+                <div class="name-summary"><strong>📱 Kinto</strong> – "Kinto" ko bare perfect banaya hai. 𝙺ɪɴᴛᴏ badhiya font style use kiya hai. Thora kam crazy lagta hai par bohot hi crazy sound karta hai.</div>
             </div>
 
             <div class="name-card">
@@ -439,7 +661,7 @@
                     <span class="name-text">༒卄ᴀᴊᴋⳕⳕ 𓍯😜</span>
                     <button class="copy-btn" onclick="copyText('༒卄ᴀᴊᴋⳕⳕ 𓍯😜')">📋 Copy</button>
                 </div>
-                <div class="name-summary"><strong>📱 Hajkii</strong> – Crazy font and funny emoji!</div>
+                <div class="name-summary"><strong>📱 Hajkii</strong> – 4th crazy name, social media ke liye banaya gaya hai. 卄ᴀᴊᴋⳕⳕ ko bohot hi crazy tarike se banaya hai. 𓍯😜 funny emojis lagaye hain jisse ye name jada crazy dikhta hai.</div>
             </div>
 
             <div class="name-card">
@@ -447,7 +669,7 @@
                     <span class="name-text">☣︎ 𝙽ᴀʀ✔ᴜɪ</span>
                     <button class="copy-btn" onclick="copyText('☣︎ 𝙽ᴀʀ✔ᴜɪ')">📋 Copy</button>
                 </div>
-                <div class="name-summary"><strong>📱 Narui</strong> – ✔ used as "v" – clever and crazy!</div>
+                <div class="name-summary"><strong>📱 Narui</strong> – ☣︎ symbol suru me lagaya hai. 𝙽ᴀʀ✔ᴜɪ me V = ✔ ko lagaya hai. ✨</div>
             </div>
 
             <div class="name-card">
@@ -455,21 +677,23 @@
                     <span class="name-text">𓂃😈ɴқᴜ ᭄ ࿐</span>
                     <button class="copy-btn" onclick="copyText('𓂃😈ɴқᴜ ᭄ ࿐')">📋 Copy</button>
                 </div>
-                <div class="name-summary"><strong>📱 NKU</strong> – Short but crazy with devil emoji!</div>
+                <div class="name-summary"><strong>📱 Nku</strong> – Ab tak ka last name. Sort hone ke bad bhi bohot crazy lagta hai. Thora attitude feel bhi deta hai – 𓂃😈 design ki vajah se.</div>
             </div>
+
+            <p class="desc">Koi bhi content creator ho ya normal user, koi bhi in crazy names ko apni profile me laga sakta hai. Instagram, Snapchat, Facebook, WhatsApp ya TikTok – kahi bhi in crazy names ko laga sakte ho!</p>
         </div>
 
         <!-- ===== ANIMAL CRAZY NAMES ===== -->
         <div class="category">
-            <h2>🐾 Animal Crazy Names</h2>
-            <p class="desc">Fun names for animal lovers and pet content creators!</p>
+            <h2>🐾 Animal Crazy Names 🫏</h2>
+            <p class="desc">Agar kisi ko fun ke liye ya jo log animal content banate hain, un logo ke liye crazy animal names bhi diye hain. Jinme animal ke faces ka bhi use kiya gaya hai.</p>
 
             <div class="name-card">
                 <div class="name-header">
                     <span class="name-text">ϻ么ᴅ 🐒 ϻ☯ɴᴋᴇㄚ</span>
                     <button class="copy-btn" onclick="copyText('ϻ么ᴅ 🐒 ϻ☯ɴᴋᴇㄚ')">📋 Copy</button>
                 </div>
-                <div class="name-summary"><strong>🐒 Mad Monkey</strong> – A=么, O=☯ – super crazy!</div>
+                <div class="name-summary"><strong>🐒 Mad Monkey</strong> – Mad ko ϻ么ᴅ banaya hai, bich me 🐒 lagaya hai. Last vala ϻ☯ɴᴋᴇㄚ ko professionally crazy banaya hai – o=☯ aur baki mix font hai.</div>
             </div>
 
             <div class="name-card">
@@ -477,7 +701,7 @@
                     <span class="name-text">₊˚⊹ᑕʀᴀᴢʏ 🐱Cᴀ੮ ꪶꫂ</span>
                     <button class="copy-btn" onclick="copyText('₊˚⊹ᑕʀᴀᴢʏ 🐱Cᴀ੮ ꪶꫂ')">📋 Copy</button>
                 </div>
-                <div class="name-summary"><strong>🐱 Crazy Cat</strong> – Perfect for cat lovers!</div>
+                <div class="name-summary"><strong>🐱 Crazy Cat</strong> – Simple me hi crazy vibe karta hai. ₊˚⊹🐱 ꪶꫂ use kiya gaya hai. Cᴀ੮ ko mix me banaya gaya hai.</div>
             </div>
 
             <div class="name-card">
@@ -485,7 +709,7 @@
                     <span class="name-text">᭄ Ɗᴏⳋᴜᴜ ??</span>
                     <button class="copy-btn" onclick="copyText('᭄ Ɗᴏⳋᴜᴜ ??')">📋 Copy</button>
                 </div>
-                <div class="name-summary"><strong>🐶 Doggu</strong> – Dog name made crazy with mixed fonts!</div>
+                <div class="name-summary"><strong>🐕 Doggu</strong> – Dog ko crazy dikhane ke liye "Doggu" likha hai. Ɗᴏⳋᴜᴜ me alag alag font ka ek hi name me use kiya hai. ?? ultra crazy use kiya hai.</div>
             </div>
 
             <div class="name-card">
@@ -493,7 +717,7 @@
                     <span class="name-text">☣︎ 刀ツⲛᴋᴇʏ ‼</span>
                     <button class="copy-btn" onclick="copyText('☣︎ 刀ツⲛᴋᴇʏ ‼')">📋 Copy</button>
                 </div>
-                <div class="name-summary"><strong>🫏 Donkey</strong> – ツ used as "o" – looks crazy!</div>
+                <div class="name-summary"><strong>🫏 Donkey</strong> – ☣︎ ツ ‼ crazy symbols use karke is name ko banaya gaya hai. ツ ko 'o' ki tarah dikhaya gaya hai.</div>
             </div>
 
             <div class="name-card">
@@ -501,7 +725,7 @@
                     <span class="name-text">🐍ɴᴀᴋⲉ𓂃꫟</span>
                     <button class="copy-btn" onclick="copyText('🐍ɴᴀᴋⲉ𓂃꫟')">📋 Copy</button>
                 </div>
-                <div class="name-summary"><strong>🐍 Snake</strong> – Snake emoji replaces "S" – brilliant!</div>
+                <div class="name-summary"><strong>🐍 Snake</strong> – Suru hi me S ki jagah 🐍 chipkaya hai. ɴᴀᴋⲉ me small words use kiye hain. 𓂃꫟ snake type design lagaye hain.</div>
             </div>
 
             <div class="name-card">
@@ -509,21 +733,23 @@
                     <span class="name-text">刀ᴀʀᴋ 乂 刀ʀᴀᴄ✿࿐</span>
                     <button class="copy-btn" onclick="copyText('刀ᴀʀᴋ 乂 刀ʀᴀᴄ✿࿐')">📋 Copy</button>
                 </div>
-                <div class="name-summary"><strong>🐉 Dark Draco</strong> – Dark and crazy animal name!</div>
+                <div class="name-summary"><strong>🐉 Dark Draco</strong> – Last ka crazy animal name. "Dark Draco" ko 刀ᴀʀᴋ 乂 刀ʀᴀᴄ✿࿐ banaya gaya hai.</div>
             </div>
+
+            <p class="desc">Ye animal names sirf fun ke liye hain. Inhe seriously na le. Fun ke liye use karo! 😘</p>
         </div>
 
         <!-- ===== SCHOOL CRAZY NAMES ===== -->
         <div class="category">
-            <h2>🎒 School Crazy Names</h2>
-            <p class="desc">Fun names for students and school vibes!</p>
+            <h2>🎒 School Crazy Names – Students Ke Liye</h2>
+            <p class="desc">Agar students yaha par hain ya fir school vibe ke sath crazy name chahiye, to bhi aap pareshan mat ho. Hamne school ke liye bhi crazy names diye hain.</p>
 
             <div class="name-card">
                 <div class="name-header">
                     <span class="name-text">ᴥ 🅿️ʜʏᴄʜ💋 ѕ꒸ʀ 『』</span>
                     <button class="copy-btn" onclick="copyText('ᴥ 🅿️ʜʏᴄʜ💋 ѕ꒸ʀ 『』')">📋 Copy</button>
                 </div>
-                <div class="name-summary"><strong>🧑‍🏫 Psycho Sir</strong> – P=🅿️, O=💋 – super creative!</div>
+                <div class="name-summary"><strong>🎒 Psycho Sir</strong> – P=🅿️, O=💋 aur baki ʜʏᴄʜ ko small font me dikhaya hai. ᴥ, ѕ꒸ʀ, 『』 use kiye hain.</div>
             </div>
 
             <div class="name-card">
@@ -531,7 +757,7 @@
                     <span class="name-text">么ϻᴀᴅ🎒ϻ𝑬ϻ</span>
                     <button class="copy-btn" onclick="copyText('么ϻᴀᴅ🎒ϻ𝑬ϻ')">📋 Copy</button>
                 </div>
-                <div class="name-summary"><strong>🎒 Mad Mem</strong> – School bag emoji makes it perfect for students!</div>
+                <div class="name-summary"><strong>🎒 Mad Mem</strong> – School vibe ke liye 🎒 use kiya gaya hai. Bada hi crazy lagega.</div>
             </div>
 
             <div class="name-card">
@@ -539,7 +765,7 @@
                     <span class="name-text">亗 丂ᴛᴜᴅ𝙴ɴ丅 ˚｡⋆✿</span>
                     <button class="copy-btn" onclick="copyText('亗 丂ᴛᴜᴅ𝙴ɴ丅 ˚｡⋆✿')">📋 Copy</button>
                 </div>
-                <div class="name-summary"><strong>📚 Student</strong> – Crazy font makes this student name look wild!</div>
+                <div class="name-summary"><strong>🎒 Student</strong> – Crazy font, word aur symbols lagaye gaye hain. Agar aap student ho to ise use kar sakte ho!</div>
             </div>
 
             <div class="name-card">
@@ -547,7 +773,7 @@
                     <span class="name-text">Ոᴏ 乂 ѕ੮ᴜ𝖽ʏ₊˚⊹ 📚</span>
                     <button class="copy-btn" onclick="copyText('Ոᴏ 乂 ѕ੮ᴜ𝖽ʏ₊˚⊹ 📚')">📋 Copy</button>
                 </div>
-                <div class="name-summary"><strong>📖 No Study</strong> – For students who love fun more than study!</div>
+                <div class="name-summary"><strong>🎒 No Study</strong> – Jada tar bachhe ese hi hote hain – No study wale, only fun karne wale. Ye crazy name sabhi students ko pasand ayega.</div>
             </div>
 
             <div class="name-card">
@@ -555,7 +781,7 @@
                     <span class="name-text">⚡ ҒᴜɴƬɪᴍἔ ・꧂</span>
                     <button class="copy-btn" onclick="copyText('⚡ ҒᴜɴƬɪᴍἔ ・꧂')">📋 Copy</button>
                 </div>
-                <div class="name-summary"><strong>⚡ Funtime</strong> – Fun time made crazy!</div>
+                <div class="name-summary"><strong>🎒 Funtime</strong> – ⚡ aur ・꧂ use kiye hain. "Funtime" ko ҒᴜɴƬɪᴍἔ – professional aur crazy look diya gaya hai.</div>
             </div>
 
             <div class="name-card">
@@ -563,7 +789,7 @@
                     <span class="name-text">ᑕʀᴀᴢʏ✨ᑕʟᴀѕѕ 모</span>
                     <button class="copy-btn" onclick="copyText('ᑕʀᴀᴢʏ✨ᑕʟᴀѕѕ 모')">📋 Copy</button>
                 </div>
-                <div class="name-summary"><strong>✨ Crazy Class</strong> – For the craziest class ever!</div>
+                <div class="name-summary"><strong>🎒 Crazy Class</strong> – Agar aap ki bhi class bohot hi crazy hai, to ye name aapke liye hai. Apne classmates ko bhi share kar sakte ho!</div>
             </div>
 
             <div class="name-card">
@@ -571,16 +797,18 @@
                     <span class="name-text">༈ ṩ匚н𐍈𐍈ʆ 🥀匚яยₛн ་ ༌</span>
                     <button class="copy-btn" onclick="copyText('༈ ṩ匚н𐍈𐍈ʆ 🥀匚яยₛн ་ ༌')">📋 Copy</button>
                 </div>
-                <div class="name-summary"><strong>🥀 School Crush</strong> – Funny and crazy for school crushes!</div>
+                <div class="name-summary"><strong>🎒 School Crush</strong> – Last name. "School Crush" likha hua hai. Boys use karenge to bohot hi funny aur crazy lagega. ✨😆</div>
             </div>
+
+            <p class="desc">In names ko aaj kal ke students ki vibe aur unki pasand ke hisab se banaye gaye hain. In school vibe crazy names ko sirf fun ke liye use karna! Kisi ka dil dukhane aur unhe pareshan karne ke liye ese words ka use kabhi na karo! 🙌🏼</p>
         </div>
 
-        <!-- ===== CRAZY SYMBOLS ===== -->
+        <!-- ===== SYMBOLS & EMOJIS ===== -->
         <div class="category">
-            <h2>💫 Crazy Symbols & Emojis</h2>
-            <p class="desc">Click any symbol or emoji to copy instantly!</p>
+            <h2>✨ Crazy Symbols & Emojis – One Click Copy</h2>
+            <p class="desc">Bohot se crazy face, symbols aur emojis – yaha pe sabhi available hain. Jinhe one click me copy kar sakte ho.</p>
 
-            <h3 style="color:#ff6b00; margin-top: 10px;">Crazy Faces</h3>
+            <h3 style="color:#0ea5e9; margin-top:15px;">🎭 Crazy Faces</h3>
             <div class="symbol-grid">
                 <div class="symbol-item" onclick="copyText('(⁠θ⁠‿⁠θ⁠)')">(⁠θ⁠‿⁠θ⁠)</div>
                 <div class="symbol-item" onclick="copyText('ʘ⁠‿⁠ʘ')">ʘ⁠‿⁠ʘ</div>
@@ -596,7 +824,7 @@
                 <div class="symbol-item" onclick="copyText('(⁠●⁠_⁠_⁠●⁠)')">(⁠●⁠_⁠_⁠●⁠)</div>
             </div>
 
-            <h3 style="color:#ff6b00; margin-top: 20px;">Crazy Symbols</h3>
+            <h3 style="color:#0ea5e9; margin-top:15px;">⚡ Crazy Symbols</h3>
             <div class="symbol-grid">
                 <div class="symbol-item" onclick="copyText('☠︎')">☠︎</div>
                 <div class="symbol-item" onclick="copyText('☣︎')">☣︎</div>
@@ -614,10 +842,18 @@
                 <div class="symbol-item" onclick="copyText('⸸')">⸸</div>
                 <div class="symbol-item" onclick="copyText('⸮')">⸮</div>
                 <div class="symbol-item" onclick="copyText('⊹')">⊹</div>
+                <div class="symbol-item" onclick="copyText('࣪')">࣪</div>
+                <div class="symbol-item" onclick="copyText('乂')">乂</div>
+                <div class="symbol-item" onclick="copyText('メ')">メ</div>
+                <div class="symbol-item" onclick="copyText('么')">么</div>
+                <div class="symbol-item" onclick="copyText('彡')">彡</div>
+                <div class="symbol-item" onclick="copyText('亗')">亗</div>
+                <div class="symbol-item" onclick="copyText('࿐')">࿐</div>
+                <div class="symbol-item" onclick="copyText('༒')">༒</div>
             </div>
 
-            <h3 style="color:#ff6b00; margin-top: 20px;">Crazy Emojis</h3>
-            <div class="symbol-grid">
+            <h3 style="color:#0ea5e9; margin-top:15px;">😈 Crazy Emojis</h3>
+            <div class="symbol-grid" style="font-size:2rem;">
                 <div class="symbol-item" onclick="copyText('😈')">😈</div>
                 <div class="symbol-item" onclick="copyText('👿')">👿</div>
                 <div class="symbol-item" onclick="copyText('🤪')">🤪</div>
@@ -635,6 +871,8 @@
                 <div class="symbol-item" onclick="copyText('👺')">👺</div>
                 <div class="symbol-item" onclick="copyText('🧿')">🧿</div>
             </div>
+
+            <p class="desc">Crazy name banane ke liye in crazy faces ya symbols ka use karo. Inko as a word bhi use kar sakte ho. Jaise: 𝕷🥴 Ꮮᴀᴋᴛ𝓾 〆 ☣︎, 👺 ᗰᴀɴⓖᴜ 乂メ, 𝙹🤡ᴋᴀʀ, ᭄ 𝙱💋ʏ – dekho kitna crazy lagta hai! 😆</p>
         </div>
 
         <!-- ===== FAQ ===== -->
@@ -642,128 +880,84 @@
             <h2>❓ Frequently Asked Questions</h2>
             <div class="faq-box">
                 <div class="faq-item">
-                    <div class="faq-q">1. Is it difficult to create a crazy name?</div>
-                    <div class="faq-a">❌ Not at all! Creating a crazy name is very simple with the right tips and tools.</div>
+                    <div class="faq-q">1. Crazy name banana mushkil hai?</div>
+                    <div class="faq-a">Bilkul nahi ❌ Crazy name banana bohot hi simple hai!</div>
                 </div>
                 <div class="faq-item">
-                    <div class="faq-q">2. Are all these names free to copy?</div>
-                    <div class="faq-a">✅ Yes! All these names are one-click copy. Just click and use!</div>
+                    <div class="faq-q">2. Ye sabhi names free me copy ho jayenge?</div>
+                    <div class="faq-a">Yes ✅ Ye sabhi names one click me copy ho jate hain.</div>
                 </div>
                 <div class="faq-item">
-                    <div class="faq-q">3. Do these names work on all games and platforms?</div>
-                    <div class="faq-a">✅ Mostly yes! But check once on your platform because some symbols may not be supported.</div>
+                    <div class="faq-q">3. Sabhi crazy names sabhi games aur platforms me use hote hain?</div>
+                    <div class="faq-a">Probably ho jate hain. Par ek bar check karke dekhe! 🙌🏼</div>
                 </div>
                 <div class="faq-item">
-                    <div class="faq-q">4. What is stylename.in?</div>
-                    <div class="faq-a">✅ It's our main page where you can generate 1000+ stylish names for free!</div>
+                    <div class="faq-q">4. stylename.in kya hai?</div>
+                    <div class="faq-a">Ye hamara main page hai! ✅ <a href="index.html" style="color:#0ea5e9; font-weight:600;">stylename.in</a></div>
                 </div>
             </div>
+        </div>
+
+        <!-- ===== MARQUEE / EXTRA CRAZY NAMES ===== -->
+        <div class="category">
+            <h2>🔥 Extra Crazy Names – Right to Left Animation</h2>
+            <p class="desc">Ye extra crazy names right se left animate hote rahenge – normal speed me!</p>
+
+            <div class="marquee-container">
+                <div class="marquee-content">
+                    <span>༒ 𝙻ꪖκᴛᴜ 〆 乂 😈 𖤐</span>
+                    <span>乂 𝘽ꪖᴅ ʙᴏʏ</span>
+                    <span>ᴘꪜ• ᴄʜᴏ</span>
+                    <span>⛧ 𝘒ꪮᴄ•𝓸𝓼 亗 ࿐</span>
+                    <span>𝕻ʀ🅾️ ᴊ⛧ᴋᴇʀ</span>
+                    <span>🥀࿐ 𝙼ꪮʀɢᴜ 💀 亗</span>
+                    <span>❌ 𝙺ꪱʟ•ʟᴇʀ 😝</span>
+                    <span>••• 𝙷ꪖκᴋᴜ ꪜ</span>
+                    <span>亗𝕏 𝓓🅰️ʀᴋ ᴋɪɴɢ</span>
+                    <span>☣️ 𝙺ɪʟʟ ᴏʏ</span>
+                    <span>🅇 𝙲ʀ🅰️ᴢʏ Ꮶɪᴅ ࿐</span>
+                    <span>𝙓 - ᴘʀᴇss 〆</span>
+                </div>
+            </div>
+
+            <p class="desc">Ye bhi dekhlo – koi bhi pasand aaye to copy kar sakte ho! 🙌🏼😝</p>
         </div>
 
         <!-- ===== IMPORTANT NOTE ===== -->
-        <div class="category" style="border-color: #ff4444;">
-            <h2 style="color:#ff4444;">‼️ Important Note</h2>
-            <p class="desc">All the tips and crazy names given here are for fun and creative purposes only. Do not use them to bully or make fun of anyone. ❌</p>
-            <p class="desc">You can use any symbol or font you like – these are just suggestions. Create your own crazy name the way you want!</p>
+        <div class="category" style="border: 2px solid #f59e0b;">
+            <h2 style="color:#f59e0b;">‼️ Important Note</h2>
+            <p class="desc">Isme jitne bhi tips ya crazy names jo diye hain, use kisi illegal cheez me istemal na kare, na to kisi ka mazak banane ke liye in names ka upyog kare. ❌</p>
+            <p class="desc">Aur isme jitni bhi tips di gayi hain, isse aap crazy name to bana sakte hain. Par aapko achha lage to hi ise follow karo. Apni marzi se bhi koi bhi name bana sakte ho. Aur isme diye gaye sare symbols aur fonts ko fun ke liye hi istemal karo!</p>
         </div>
 
-        <!-- ===== EXTRA CRAZY NAMES ===== -->
+        <!-- ===== STYLENAME GUIDE ===== -->
         <div class="category">
-            <h2>🔥 Extra Crazy Names</h2>
-            <p class="desc">Here are some more crazy names you can copy and use:</p>
+            <h2>💡 stylename.in Guide ❤️‍🔥</h2>
+            <p class="desc">Ye jo name hain, ya fir isme jitne symbols + emojis aur tips di gayi hain, aur ese kese banana hai samaj nahi aa raha to <strong style="color:#0ea5e9;">stylename.in</strong> par jao aur vaha se generate karo! 😝</p>
+            <ul style="color:#475569; padding-left:20px; margin:10px 0;">
+                <li style="margin-bottom:8px;">- Jaha par <strong>4 main categories</strong> hain. Jisme se <strong>Fancy Category</strong> crazy name ke liye best hai.</li>
+                <li style="margin-bottom:8px;">- Symbols bhi sare available hain – bas symbols icon me jao!</li>
+                <li style="margin-bottom:8px;">- <strong>Font Category</strong> me ese mix words mil jayenge.</li>
+                <li style="margin-bottom:8px;">- <a href="index.html" style="color:#0ea5e9; font-weight:600;">stylename.in</a> – FREE, easy, and fun!</li>
+            </ul>
+        </div>
 
-            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 10px; margin: 15px 0;">
-                <div class="name-card" style="margin-bottom: 0;">
-                    <div class="name-header">
-                        <span class="name-text" style="font-size:1rem;">༒ 𝙻ꪖκᴛᴜ 〆 乂 😈 𖤐</span>
-                        <button class="copy-btn" onclick="copyText('༒ 𝙻ꪖκᴛᴜ 〆 乂 😈 𖤐')">📋 Copy</button>
-                    </div>
-                </div>
-                <div class="name-card" style="margin-bottom: 0;">
-                    <div class="name-header">
-                        <span class="name-text" style="font-size:1rem;">乂 𝘽ꪖᴅ ʙᴏʏ</span>
-                        <button class="copy-btn" onclick="copyText('乂 𝘽ꪖᴅ ʙᴏʏ')">📋 Copy</button>
-                    </div>
-                </div>
-                <div class="name-card" style="margin-bottom: 0;">
-                    <div class="name-header">
-                        <span class="name-text" style="font-size:1rem;">ᴘꪜ• ᴄʜᴏ</span>
-                        <button class="copy-btn" onclick="copyText('ᴘꪜ• ᴄʜᴏ')">📋 Copy</button>
-                    </div>
-                </div>
-                <div class="name-card" style="margin-bottom: 0;">
-                    <div class="name-header">
-                        <span class="name-text" style="font-size:1rem;">⛧ 𝘒ꪮᴄ•𝓸𝓼 亗 ࿐</span>
-                        <button class="copy-btn" onclick="copyText('⛧ 𝘒ꪮᴄ•𝓸𝓼 亗 ࿐')">📋 Copy</button>
-                    </div>
-                </div>
-                <div class="name-card" style="margin-bottom: 0;">
-                    <div class="name-header">
-                        <span class="name-text" style="font-size:1rem;">𝕻ʀ🅾️ ᴊ⛧ᴋᴇʀ</span>
-                        <button class="copy-btn" onclick="copyText('𝕻ʀ🅾️ ᴊ⛧ᴋᴇʀ')">📋 Copy</button>
-                    </div>
-                </div>
-                <div class="name-card" style="margin-bottom: 0;">
-                    <div class="name-header">
-                        <span class="name-text" style="font-size:1rem;">🥀࿐ 𝙼ꪮʀɢᴜ 💀 亗</span>
-                        <button class="copy-btn" onclick="copyText('🥀࿐ 𝙼ꪮʀɢᴜ 💀 亗')">📋 Copy</button>
-                    </div>
-                </div>
-                <div class="name-card" style="margin-bottom: 0;">
-                    <div class="name-header">
-                        <span class="name-text" style="font-size:1rem;">❌ 𝙺ꪱʟ•ʟᴇʀ 😝</span>
-                        <button class="copy-btn" onclick="copyText('❌ 𝙺ꪱʟ•ʟᴇʀ 😝')">📋 Copy</button>
-                    </div>
-                </div>
-                <div class="name-card" style="margin-bottom: 0;">
-                    <div class="name-header">
-                        <span class="name-text" style="font-size:1rem;">••• 𝙷ꪖκᴋᴜ ꪜ</span>
-                        <button class="copy-btn" onclick="copyText('••• 𝙷ꪖκᴋᴜ ꪜ')">📋 Copy</button>
-                    </div>
-                </div>
-                <div class="name-card" style="margin-bottom: 0;">
-                    <div class="name-header">
-                        <span class="name-text" style="font-size:1rem;">亗𝕏 𝓓🅰️ʀᴋ ᴋɪɴɢ</span>
-                        <button class="copy-btn" onclick="copyText('亗𝕏 𝓓🅰️ʀᴋ ᴋɪɴɢ')">📋 Copy</button>
-                    </div>
-                </div>
-                <div class="name-card" style="margin-bottom: 0;">
-                    <div class="name-header">
-                        <span class="name-text" style="font-size:1rem;">☣️ 𝙺ɪʟʟ ᴏʏ</span>
-                        <button class="copy-btn" onclick="copyText('☣️ 𝙺ɪʟʟ ᴏʏ')">📋 Copy</button>
-                    </div>
-                </div>
-                <div class="name-card" style="margin-bottom: 0;">
-                    <div class="name-header">
-                        <span class="name-text" style="font-size:1rem;">🅇 𝙲ʀ🅰️ᴢʏ Ꮶɪᴅ ࿐</span>
-                        <button class="copy-btn" onclick="copyText('🅇 𝙲ʀ🅰️ᴢʏ Ꮶɪᴅ ࿐')">📋 Copy</button>
-                    </div>
-                </div>
-                <div class="name-card" style="margin-bottom: 0;">
-                    <div class="name-header">
-                        <span class="name-text" style="font-size:1rem;">𝙓 - ᴘʀᴇss 〆</span>
-                        <button class="copy-btn" onclick="copyText('𝙓 - ᴘʀᴇss 〆')">📋 Copy</button>
-                    </div>
-                </div>
-            </div>
+        <!-- ===== EXTRA PAGES ===== -->
+        <div style="display:flex; justify-content:center; flex-wrap:wrap; gap:15px; margin:30px 0;">
+            <a href="index.html" style="background:#0ea5e9; color:#fff; padding:10px 25px; border-radius:30px; text-decoration:none; font-weight:500;">🏠 Home</a>
+            <a href="romantic-and-love-stylish-names.html" style="background:#0c1a2e; color:#fff; padding:10px 25px; border-radius:30px; text-decoration:none; font-weight:500;">💕 Romantic</a>
+            <a href="stylish-name-for-snapchat.html" style="background:#0c1a2e; color:#fff; padding:10px 25px; border-radius:30px; text-decoration:none; font-weight:500;">💛 Snapchat</a>
         </div>
 
         <!-- ===== CALL TO ACTION ===== -->
-        <div style="background: linear-gradient(135deg, #1a0a00, #ff6b00); padding: 25px; border-radius: 14px; text-align: center; margin: 20px 0; color: white;">
-            <p style="font-size:1.3rem; font-weight:700; margin:0 0 10px 0;">🤪 Create Your Own Crazy Name Now!</p>
-            <p style="margin:0;"><a href="index.html" style="color:#fff; font-weight:bold; font-size:1.2rem; background:rgba(255,255,255,0.15); padding:8px 20px; border-radius:30px;">stylename.in</a> – FREE & Easy!</p>
-        </div>
-
-        <!-- ===== MORE PAGES ===== -->
-        <div style="display:flex; justify-content:center; flex-wrap:wrap; gap:15px; margin:30px 0;">
-            <a href="index.html" style="background:#ff6b00; color:#fff; padding:10px 25px; border-radius:30px; text-decoration:none; font-weight:500;">🏠 Home</a>
-            <a href="romantic-and-love-stylish-names.html" style="background:#1a1a2e; color:#fff; padding:10px 25px; border-radius:30px; text-decoration:none; font-weight:500;">💕 Romantic</a>
-            <a href="stylish-name-for-snapchat.html" style="background:#1a1a2e; color:#fff; padding:10px 25px; border-radius:30px; text-decoration:none; font-weight:500;">💛 Snapchat</a>
+        <div style="background: linear-gradient(135deg, #0ea5e9, #7dd3fc); padding: 25px; border-radius: 14px; text-align: center; margin: 20px 0; color: white;">
+            <p style="font-size:1.3rem; font-weight:700; margin:0 0 10px 0;">🤪 Start Creating Your Crazy Name Now! 🤪</p>
+            <p style="margin:0;"><a href="index.html" style="color:gold; font-weight:bold; font-size:1.2rem;">stylename.in</a> – FREE, easy, and fun!</p>
         </div>
 
         <!-- ===== SHARE ===== -->
         <div style="text-align:center; margin:30px 0;">
-            <p style="font-size:1rem; color:#888; margin-bottom:10px;">📢 Share this page with your friends</p>
+            <p style="font-size:1rem; color:#666; margin-bottom:10px;">📢 Share this page with your friends</p>
             <div style="display:flex; justify-content:center; gap:15px; flex-wrap:wrap;">
                 <a href="https://wa.me/?text=Check%20out%20these%20crazy%20names%20-%20stylename.in" target="_blank" style="display:inline-flex; align-items:center; gap:8px; padding:8px 20px; background:#25D366; color:white; border-radius:50px; font-size:0.9rem; text-decoration:none;">WhatsApp</a>
                 <a href="https://www.facebook.com/sharer/sharer.php?u=https://stylename.in" target="_blank" style="display:inline-flex; align-items:center; gap:8px; padding:8px 20px; background:#1877F2; color:white; border-radius:50px; font-size:0.9rem; text-decoration:none;">Facebook</a>
