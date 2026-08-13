@@ -1467,7 +1467,7 @@ p { margin-bottom: 1rem; color: var(--gray); }
     }
 }
 
-/* ===== LUXURY PICKS SYMBOLS ===== */
+/* ===== LUXURY PICKS - RIGHT TO LEFT ANIMATE ===== */
 .luxury-wrapper {
     margin: 40px 0;
     padding: 25px 15px;
@@ -1475,6 +1475,7 @@ p { margin-bottom: 1rem; color: var(--gray); }
     border-radius: 20px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.05);
     border: 1px solid #f0f0f0;
+    overflow: hidden;
 }
 
 .luxury-header {
@@ -1494,30 +1495,37 @@ p { margin-bottom: 1rem; color: var(--gray); }
     padding-bottom: 8px;
 }
 
+/* ===== ANIMATION CONTAINER ===== */
 .luxury-scroll {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    padding: 10px 0;
+}
+
+.luxury-track {
     display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    gap: 15px;
-    padding: 10px 5px 20px 5px;
-    scrollbar-width: thin;
-    -webkit-overflow-scrolling: touch;
+    gap: 20px;
+    animation: scrollRightToLeft 30s linear infinite;
+    width: max-content;
 }
 
-.luxury-scroll::-webkit-scrollbar {
-    height: 5px;
+/* Pause on Hover */
+.luxury-track:hover {
+    animation-play-state: paused;
 }
 
-.luxury-scroll::-webkit-scrollbar-track {
-    background: #f0f0f0;
-    border-radius: 10px;
+/* ===== ANIMATION KEYFRAMES ===== */
+@keyframes scrollRightToLeft {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
 }
 
-.luxury-scroll::-webkit-scrollbar-thumb {
-    background: #FFD700;
-    border-radius: 10px;
-}
-
+/* ===== ITEMS ===== */
 .luxury-item {
     background: #ffffff;
     border-radius: 40px;
@@ -1534,14 +1542,14 @@ p { margin-bottom: 1rem; color: var(--gray); }
 }
 
 .luxury-item:hover {
-    transform: translateY(-3px);
+    transform: translateY(-3px) scale(1.02);
     background: #FFD700;
     color: #000;
-    box-shadow: 0 8px 20px rgba(218,165,32,0.2);
+    box-shadow: 0 8px 20px rgba(218,165,32,0.3);
     border-color: #FFD700;
 }
 
-/* Dark theme support */
+/* ===== DARK THEME ===== */
 .dark-theme .luxury-wrapper {
     background: #1e1e1e;
     border-color: #333;
@@ -1563,11 +1571,7 @@ p { margin-bottom: 1rem; color: var(--gray); }
     color: #000;
 }
 
-.dark-theme .luxury-scroll::-webkit-scrollbar-track {
-    background: #2a2a2a;
-}
-
-/* Responsive */
+/* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
     .luxury-title {
         font-size: 1.4rem;
