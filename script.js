@@ -144,7 +144,23 @@ const categoryExamples = {
 { text: "𝘕ꪖꪑꫀ •メ•" },
 { text: "メメ•𝑁𝑎𝑚𝑒…♔" },
 { text: "↘ 𝙉𝙖𝙢𝙚↗" },
-{ text: "𝚾- N̷̷a̷m̷e̷ 모" }
+{ text: "𝚾- N̷̷a̷m̷e̷ 모" },
+    { text: "❥ ❥N͎a͎m͎e͎ ་ ༌ ❥" },
+        { text: "⊹⊹ ⲛⲇϻꫀ ꨄ" },
+        { text: "ʚ♡ɞ ⲛคʍⲉ˚｡⋆🎀" },
+        { text: "ꜱᴍɪʟєʏ𝄟ՈAѪ૯" },
+        { text: "𝙻𝚘𝚟𝚎 ୨୧ ⲛⲇϻⲉ ୨♡୧" },
+        { text: "𓆩💎𓆪 ή𝔞爪Ｅ˚｡⋆𝄟" },
+        { text: "📚 ꪀα𐌼ᥱ・༈༈༈" },
+        { text: "✤ ɴᵃᴍᵉ ⊹࿐" },
+        { text: "⊹˚₊⸙ N͢𝕒𝕞𝕖 ₊˚⊹☘" },
+        { text: "💋 𝙽ᦵ𝚖ᥱ ✢✢✢" },
+        { text: "𐌺ἷѕѕ💋Ναʍᥱ" },
+        { text: "𐌱ʀợ𐌺ᥱꪀ💔Ναʍᥱ" },
+        { text: "ค𐌹ợꪀᥱ🖤Ναʍᥱ" },
+        { text: "尺丂 🎀 几卂爪乇" },
+        { text: "𝗡⃤𝗮⃤𝗺⃤𝗲⃤❣" },
+        { text: "ΝΛΜΞ" }    
     ],
     gamer: [
         { text: "ＯＰܔ𝘕𝘈𝘔𝘌Ⓥ࿐" },
@@ -271,7 +287,25 @@ const categoryExamples = {
 { text: "𝙊𝙊 𝘕𝘈𝘔𝘌 𝙊𝙊" },
 { text: "༄⭒Νᴀᴍᴇ༄₀₇" },
 { text: "𝟗𝟓 𒆜 ɴᴀ̶ᴍᴇ̶" },
-{ text: ".....ηαмє....." }
+{ text: ".....ηαмє....." },
+         { text: "ϻ么ᴅ ❣ 𝗡⃤𝗮⃤𝗺⃤𝗲⃤・꧂" },
+        { text: "☘ N͎a͎m͎e͎ 모" },
+        { text: "꧁⊹ ⲛⲇϻꫀ ₀₇ ⊹꧂" },
+        { text: "ʚ♡ɞ ⲛคʍⲉ 亗 N͢ᴏ" },
+        { text: "ꜱᴍɪʟєʏ𝄟ՈAѪ૯" },
+        { text: "𝙻𝚘𝚟𝚎 ୨୧ ⲛⲇϻⲉ 𓂃모" },
+        { text: "▶▶ ή𝔞爪Ｅ˚｡⋆𝄟 ??" },
+        { text: "𐌺ἷℓℓ༒Ναʍᥱ 乂╰⁔╯" },
+        { text: "༺ ήɐɯǝ ༗༗ ༻" },
+        { text: "✨⊹ƝƛMЄ ⊹🦁" },
+        { text: "༗ 几卂爪乇 ༻⸮⸮" },
+        { text: "💋𝓷คⓜ𝐄 👊🏼" },
+        { text: "▄︻┻═┳一 ₙₐₘₑ ⚡" },
+        { text: "⓿❾࿐ƝƛMЄ »» 👿" },
+        { text: "»» Иค๓є ࿐⓿❾" },
+        { text: "⸮⸮⸻ ᾗᾄмἔ ⸸⸸༒" },
+        { text: "ƦƬ ࿐ Ναʍᥱ ☂꧂" },
+        { text: "𐌱ʀợ ☂ Ναʍᥱ ༒꧂" }
         ],
     fancy: [
         { text: "ᶜ̸ʳ̸ᴬ̸ᶻ̸ʸ̸·˚✗✗𝑁𝑎𝑚𝑒✗✗˚·❄️" },
@@ -409,7 +443,26 @@ const categoryExamples = {
 { text: "ϞϞ ✖️𐌽𐌰𐌼 ፝ᴇ 🗿" },
 { text: "亗 Nᴀᴍᴇ😳 ⭒࿐" },
 { text: "👉🏻Ναмᥱ °˖✦" },
-{ text: "꧁𖤐⋆ 𝕹𝖆𝖒𝖊 ⋆𖤐꧂" }
+{ text: "꧁𖤐⋆ 𝕹𝖆𝖒𝖊 ⋆𖤐꧂" },
+         { text: "❀ N͢𝕒𝕞𝕖 ⋆｡˚🐼" },
+        { text: "ƦƦ 🔥 Ναʍᥱ ☂࿐" },
+        { text: "ợợ ❌ Ναʍᥱ ❌༒" },
+        { text: "ℓӨℓ乂 Ναʍᥱ 乂‼️╰⁔╯" },
+        { text: "🖤⸻ ᾗᾄмἔ » 😜༒" },
+        { text: "»» Иค๓є 🦁✨" },
+        { text: "🪈✨ƝƛMЄ ༗༗꧂" },
+        { text: "▄ ₙₐₘₑ ▄" },
+        { text: "爪下 👊🏼 𝓷คⓜ𝐄 ✧亗" },
+        { text: "༗ 几卂爪乇 亗" },
+        { text: "❔❔✨⊹ƝƛMЄ ⊹✨" },
+        { text: "⸮ ༗ ? ήɐɯǝ ⸮ ༗ ?༻" },
+        { text: "▶▶ ▶ ή𝔞爪Ｅ𓍯" },
+        { text: "꧁୨୧ ⲛⲇϻⲉ ୨୧꧂" },
+        { text: "777 - ՈAѪ૯" },
+        { text: "N͢ᴏ 1 亗 ⲛคʍⲉ ʚ♡ɞ 😎" },
+        { text: "💔💔 ⲛⲇϻꫀ ₀₇" },
+        { text: "🤜🏼 N͎a͎m͎e͎ ❣❣👅" },
+        { text: "ϻ❣ϻ么 𝗡⃤𝗮⃤𝗺⃤😻" }
     ],
     font: [
         { text: "N̷̷a̷m̷e̷" },
@@ -548,7 +601,34 @@ const categoryExamples = {
 { text: "`ɴ`卂`ᴍ`乇" },
 { text: "N 🅰️Ⓜ️ⓔ" },
 { text: "ɴⓐⓂ️e" },
-{ text: "N̆ăm̆ĕ" }
+{ text: "N̆ăm̆ĕ" },
+        { text: "ɴa•ꪑꫀ" },
+        { text: "Ń🅰️M⃤乇" },
+        { text: "η𝗔⃤м𝗘⃤" },
+        { text: "N͢𝕒𝕞𝕖" },
+        { text: "𝙽ᦵ𝚖ᥱ" },
+        { text: "ɴᵃᴍᵉ" },
+        { text: "Ⓝ𝒂𝕞🅴" },
+        { text: "🄽𝗔𝑴𝑬" },
+        { text: "ПᗩᗰΣ" },
+        { text: "ᑎ𐌰𐌼ᵉ" },
+        { text: "𐍀α๓𐌴" },
+        { text: "ή𝔞爪Ｅ" },
+        { text: "ⲛⲇϻⲉ" },
+        { text: "ՈAѪ૯" },
+        { text: "ⲛคʍⲉ" },
+        { text: "ⲛⲇϻꫀ" },
+        { text: "几卂爪乇" },
+        { text: "ƝƛMЄ" },
+        { text: "ήɐɯǝ" },
+        { text: "𝙽🅰️𝙼𝙴" },
+        { text: "ꪀα𐌼ᥱ" },
+        { text: "ᾗᾄмἔ" },
+        { text: "Иค๓є" },
+        { text: "ₙₐₘₑ" },
+        { text: "𝓷คⓜ𝐄" },
+        { text: "ΝΛΜΞ" },
+        { text: "𝘕𝘢𝘮𝘦" }
     ]
 };
 
@@ -1965,7 +2045,7 @@ function generateStyles() {
     if (!name) {
         const examples = categoryExamples[currentFilter] || categoryExamples.love;
         const shuffled = [...examples].sort(() => Math.random() - 0.5);
-        const selected = shuffled.slice(0, 119);
+        const selected = shuffled.slice(0, 134);
         
         selected.forEach((example, index) => {
             const div = document.createElement('div');
