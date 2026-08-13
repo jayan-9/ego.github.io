@@ -1467,7 +1467,7 @@ p { margin-bottom: 1rem; color: var(--gray); }
     }
 }
 
-/* ===== LUXURY PICKS - RIGHT TO LEFT ANIMATE ===== */
+/* ===== LUXURY PICKS - RIGHT TO LEFT ANIMATE (FIXED) ===== */
 .luxury-wrapper {
     margin: 40px 0;
     padding: 25px 15px;
@@ -1475,7 +1475,7 @@ p { margin-bottom: 1rem; color: var(--gray); }
     border-radius: 20px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.05);
     border: 1px solid #f0f0f0;
-    overflow: hidden;
+    overflow: hidden;  /* ✅ IMPORTANT: Animation ke liye */
 }
 
 .luxury-header {
@@ -1495,33 +1495,34 @@ p { margin-bottom: 1rem; color: var(--gray); }
     padding-bottom: 8px;
 }
 
-/* ===== ANIMATION CONTAINER ===== */
+/* ===== SCROLL CONTAINER (HIDDEN) ===== */
 .luxury-scroll {
-    overflow: hidden;
+    overflow: hidden;      /* ✅ Overflow Hide - Animation ke liye */
     width: 100%;
     position: relative;
     padding: 10px 0;
 }
 
+/* ===== TRACK (ANIMATED) ===== */
 .luxury-track {
     display: flex;
     gap: 20px;
+    width: max-content;    /* ✅ Items ke hisaab se Width Adjust */
     animation: scrollRightToLeft 30s linear infinite;
-    width: max-content;
 }
 
-/* Pause on Hover */
+/* ===== PAUSE ON HOVER ===== */
 .luxury-track:hover {
     animation-play-state: paused;
 }
 
-/* ===== ANIMATION KEYFRAMES ===== */
+/* ===== KEYFRAMES ANIMATION ===== */
 @keyframes scrollRightToLeft {
     0% {
         transform: translateX(0);
     }
     100% {
-        transform: translateX(-50%);
+        transform: translateX(-50%);  /* ✅ 50% shift for smooth loop */
     }
 }
 
