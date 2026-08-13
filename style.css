@@ -1467,7 +1467,7 @@ p { margin-bottom: 1rem; color: var(--gray); }
     }
 }
 
-/* ===== LUXURY PICKS - RIGHT TO LEFT ANIMATE (FIXED) ===== */
+/* ✨👑===== LUXURY PICKS - RIGHT TO LEFT ANIMATE (FIXED) ===== */
 .luxury-wrapper {
     margin: 40px 0;
     padding: 25px 15px;
@@ -1508,7 +1508,7 @@ p { margin-bottom: 1rem; color: var(--gray); }
     display: flex;
     gap: 20px;
     width: max-content;    /* ✅ Items ke hisaab se Width Adjust */
-    animation: scrollRightToLeft 30s linear infinite;
+    animation: scrollRightToLeft 45s linear infinite;
 }
 
 /* ===== PAUSE ON HOVER ===== */
