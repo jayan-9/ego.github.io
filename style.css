@@ -1508,7 +1508,7 @@ p { margin-bottom: 1rem; color: var(--gray); }
     display: flex;
     gap: 20px;
     width: max-content;    /* ✅ Items ke hisaab se Width Adjust */
-    animation: scrollRightToLeft 45s linear infinite;
+    animation: scrollRightToLeft 65s linear infinite;
 }
 
 /* ===== PAUSE ON HOVER ===== */
