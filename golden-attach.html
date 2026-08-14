@@ -4,9 +4,10 @@
     <meta name="google-site-verification" content="cKGfHx3401UeyzijckfH4-0-Km0WQ33kICn3MIs3J04" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>✨ GOLDEN ATTACH – Premium Studio ✨</title>
+    <title>✨ GOLDEN ATTACH – Premium Symbol Studio ✨</title>
     <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
     <style>
+        /* ===== RESET & BASE ===== */
         * {
             margin: 0;
             padding: 0;
@@ -502,6 +503,7 @@
             opacity: 1;
         }
 
+        /* ===== PREMIUM STYLE GENERATOR (horizontal scroll) ===== */
         .premium-style-section {
             background: #101015dd;
             border-radius: 28px;
@@ -519,22 +521,33 @@
             font-size: 1.2rem;
             margin-bottom: 20px;
         }
+        #styleResults {
+            display: flex;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            gap: 15px;
+            padding-bottom: 10px;
+        }
+        #styleResults::-webkit-scrollbar { height: 5px; }
+        #styleResults::-webkit-scrollbar-track { background: #333; border-radius: 10px; }
+        #styleResults::-webkit-scrollbar-thumb { background: #FFD700; border-radius: 10px; }
+
         .style-card {
             background: #1a1a1f;
             border: 1px solid gold;
             border-radius: 24px;
             padding: 15px;
-            margin: 10px 0;
+            min-width: 280px;
+            flex-shrink: 0;
             display: flex;
+            flex-direction: column;
             justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 10px;
         }
         .style-preview {
             font-size: 1.5rem;
             color: #FFE7A3;
             word-break: break-all;
+            margin-bottom: 10px;
         }
         .style-copy-btn {
             background: linear-gradient(135deg, #FFD700, #FFA500);
@@ -544,6 +557,7 @@
             font-weight: bold;
             cursor: pointer;
             white-space: nowrap;
+            align-self: flex-start;
         }
 
         .footer {
@@ -556,6 +570,7 @@
         @media (max-width: 760px) {
             .container { padding: 18px; }
             .symbol-card { min-width: 115px; }
+            .style-card { min-width: 220px; }
         }
     </style>
 </head>
@@ -579,6 +594,7 @@
     <h1>✨ GOLDEN ATTACH STUDIO ✨</h1>
     <p class="subtitle">Unlimited combining symbols • 1‑click attach • VIP scrolls</p>
 
+    <!-- Main Attach Section -->
     <div class="input-section">
         <div class="input-group">
             <input type="text" id="inputText" placeholder="Your text" value="GOLD">
@@ -594,7 +610,7 @@
         <button class="copy-btn" style="margin-top:10px; background:#2a2a2a; color:#FFD700;" onclick="randomCombo()">✨ RANDOM VIP COMBO ✨</button>
     </div>
 
-    <!-- New Premium Style Generator Section -->
+    <!-- Premium Style Generator Section -->
     <div class="premium-style-section">
         <h3 style="color:#FFD700;">💎 PREMIUM STYLE GENERATOR</h3>
         <p style="color:#ddd;">Enter your name and get 5 exclusive styles instantly!</p>
@@ -677,20 +693,19 @@
 <button class="scroll-top-btn" id="scrollTopBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 
 <script>
-// ========== FIXES & IMPROVEMENTS ==========
-// Global error handling to avoid page break
+// ========== GLOBAL ERROR HANDLING ==========
 window.onerror = function(msg, url, line) {
     console.error('Error:', msg, 'Line:', line);
     // alert("An error occurred. Please check console.");
 };
 
-// HTML escaping utility to prevent XSS
+// HTML escaping to prevent XSS
 function escapeHTML(str) {
     if (typeof str !== 'string') return '';
     return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#039;');
 }
 
-// Clipboard copy with fallback for HTTP
+// Clipboard copy with fallback
 function copyToClipboard(text) {
     if (navigator.clipboard && window.isSecureContext) {
         navigator.clipboard.writeText(text).then(() => {
@@ -740,8 +755,7 @@ const categoriesData = [
     { name: "✨ EXTRA GLYPHS", symbols: ["︠","︡","︢","︣","︤","︥","︦","﻿","⃝","̥","͘","⃜","⃞","⃟","⃠","⃡","⃢","̹","̜","︈","︉","︊","︋","︌","︍","︎","️","ᷲ","ᷳ","ᷴ","᷵"] }
 ];
 
-// Instead of undefined allSymbolNames, we create a fallback mapping.
-// For demo, we just use the symbol itself as name if not found.
+// Symbol names mapping
 const allSymbolNames = {
     "᪲": "Flower 1", "᪳": "Flower 2", "᪴": "Flower 3", "ꕤ": "Flower 4",
     "𑁍": "Flower 5", "ꨄ": "Heart", "༄": "Wave", "𓆭": "Tree", "ꤪꤨꤪ": "Leaf",
@@ -797,6 +811,7 @@ let updateTimeout;
 
 // ========== DOM READY ==========
 document.addEventListener('DOMContentLoaded', function() {
+    rebuildSelect();  // CRITICAL: populate dropdown
     buildRepeatBtns();
     renderCategories();
     renderTips();
@@ -1433,13 +1448,11 @@ window.shareResult = shareResult;
 window.saveNotes = saveNotes;
 window.toggleTheme = toggleTheme;
 
-// ========== INITIALIZATION ==========
+// ========== INITIALIZATION (fallback if DOM already loaded) ==========
 if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', function() {
-        // Already handled in DOMContentLoaded listener above
-    });
+    // Already handled in DOMContentLoaded listener above
 } else {
-    // If script loaded after DOM, call initialization directly
+    rebuildSelect();  // CRITICAL
     buildRepeatBtns();
     renderCategories();
     renderTips();
