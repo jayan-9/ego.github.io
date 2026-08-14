@@ -1272,6 +1272,7 @@
 </script>
 
 <style>
+    /* ===== POPUP SLIDE ANIMATION ===== */
     @keyframes popupSlide {
         from {
             opacity: 0;
@@ -1283,7 +1284,14 @@
         }
     }
 
-    /* Scrollbar Styling */
+    /* ===== FULL GUIDE BUTTON GLOW PULSE (NEW) ===== */
+    @keyframes glowPulse {
+        0% { box-shadow: 0 0 10px rgba(255, 215, 0, 0.3); }
+        50% { box-shadow: 0 0 25px rgba(255, 215, 0, 0.8), 0 0 50px rgba(255, 215, 0, 0.2); }
+        100% { box-shadow: 0 0 10px rgba(255, 215, 0, 0.3); }
+    }
+
+    /* ===== SCROLLBAR STYLING ===== */
     #goldenGuidePopup div::-webkit-scrollbar {
         width: 4px;
     }
