@@ -962,8 +962,28 @@
     }
     </style>
 
-<!-- ===== GOLDEN ATTACH PREMIUM ===== -->
-<div style="background: linear-gradient(145deg, #fef9e6, #fff5e0); border: 1px solid #FFD700; border-radius: 24px; padding: 16px 20px; margin: 30px 0;">
+<!-- ===== GOLDEN ATTACH PREMIUM (Main Page Box) ===== -->
+<div style="background: linear-gradient(145deg, #fef9e6, #fff5e0); border: 1px solid #FFD700; border-radius: 24px; padding: 16px 20px; margin: 30px 0; position: relative;">
+    
+    <!-- ===== FULL GUIDE BUTTON (Top Right) ===== -->
+    <button onclick="openGoldenGuide()" style="
+        position: absolute;
+        top: 10px;
+        right: 14px;
+        background: none;
+        border: 1px solid #B8860B;
+        color: #B8860B;
+        padding: 3px 12px;
+        border-radius: 30px;
+        font-size: 0.6rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s;
+        letter-spacing: 0.3px;
+    " onmouseover="this.style.background='#FFD700'; this.style.color='#000'; this.style.borderColor='#FFD700';" 
+       onmouseout="this.style.background='none'; this.style.color='#B8860B'; this.style.borderColor='#B8860B';">
+        📖 Full Guide
+    </button>
     
     <!-- Header -->
     <div style="text-align: center; margin-bottom: 12px;">
@@ -985,9 +1005,11 @@
         <div style="display: flex; align-items: baseline; gap: 6px;">
             <span style="text-decoration: line-through; color: #999; font-size: 0.9rem;">$99</span>
             <span style="color: #B8860B; font-size: 1.6rem; font-weight: bold;">$0.99</span>
-            <span style="color: #666;">/lifetime</span>
+            <span style="color: #666; font-size: 0.7rem;">/lifetime</span>
         </div>
-        <a href="subscribe.html?plan=monthly" style="background: #FFD700; color: #000; padding: 8px 24px; border-radius: 40px; text-decoration: none; font-weight: bold; font-size: 0.85rem;">✨ Subscribe ✨</a>
+        <a href="subscribe.html?plan=lifetime" style="background: #FFD700; color: #000; padding: 8px 24px; border-radius: 40px; text-decoration: none; font-weight: bold; font-size: 0.85rem; transition: all 0.3s;" onmouseover="this.style.transform='scale(1.02)'; this.style.boxShadow='0 4px 15px rgba(255,215,0,0.3)';" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none';">
+                ✨ Subscribe ✨
+            </a>
     </div>
 
     <!-- Lifetime -->
@@ -995,6 +1017,284 @@
         <a href="subscribe.html?plan=lifetime" style="color: #B8860B; text-decoration: none; font-size: 0.7rem;">🔥 Lifetime Access – $0.99 Only</a>
     </div>
 </div>
+
+
+<!-- ========================================== -->
+<!-- ===== GOLDEN GUIDE POPUP ===== -->
+<!-- ========================================== -->
+
+<!-- Popup Overlay -->
+<div id="goldenGuidePopup" style="
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(6px);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+">
+
+    <!-- Popup Content -->
+    <div style="
+        background: #1a1a1f;
+        max-width: 820px;
+        max-height: 90vh;
+        width: 100%;
+        border-radius: 24px;
+        padding: 35px 40px;
+        border: 1px solid #FFD700;
+        overflow-y: auto;
+        position: relative;
+        box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+        animation: popupSlide 0.3s ease;
+    ">
+
+        <!-- Close Button -->
+        <button onclick="closeGoldenGuide()" style="
+            position: sticky;
+            top: 0;
+            float: right;
+            background: none;
+            border: none;
+            color: #888;
+            font-size: 1.8rem;
+            cursor: pointer;
+            transition: color 0.3s;
+            z-index: 10;
+        " onmouseover="this.style.color='#FFD700'" onmouseout="this.style.color='#888'">
+            ✕
+        </button>
+
+        <div style="clear: both;"></div>
+
+        <!-- ===== POPUP CONTENT ===== -->
+        <div style="color: #f0f0f0;">
+
+            <!-- Header -->
+            <div style="text-align: center; margin-bottom: 25px;">
+                <span style="background: #FFD700; color: #000; padding: 4px 20px; border-radius: 30px; font-size: 0.7rem; font-weight: bold;">⚡ GOLDEN ATTACH ⚡</span>
+                <h1 style="color: #FFD700; font-size: 2rem; margin: 10px 0 5px 0;">Unlock Full Controller</h1>
+                <p style="color: #aaa; font-size: 1rem;">Turn ordinary text into golden masterpieces</p>
+            </div>
+
+            <!-- ===== 1. INTRODUCTION ===== -->
+            <h2 style="color: #FFD700; border-bottom: 2px solid #FFD700; padding-bottom: 8px; margin-top: 25px;">✨ What is Golden Attach?</h2>
+            <p style="color: #ccc; line-height: 1.8;">Do you want your name, status, or bio to look unique, stylish, and eye-catching? With <strong style="color: #FFD700;">Golden Attach Premium</strong>, you become the full controller of your text. You can attach beautiful symbols, strike-through lines, hearts, stars, and VIP decorations to every single letter – in just one click. No design skills needed, no complicated software. It's fast, simple, and works on any device.</p>
+
+            <!-- ===== 2. WHAT CAN YOU DO ===== -->
+            <h2 style="color: #FFD700; border-bottom: 2px solid #FFD700; padding-bottom: 8px; margin-top: 30px;">✨ What Can You Do with Golden Attach?</h2>
+            <p style="color: #ccc; line-height: 1.8;">Golden Attach lets you combine your text with hundreds of decorative Unicode symbols to create styles that are impossible to type normally. Whether you want a simple underline, a double-strike effect, a crown, a flower, or a complete VIP look – you can do it all.</p>
+
+            <h3 style="color: #FFD700; margin-top: 15px;">📝 Real Examples:</h3>
+            <div style="background: #0f0f12; border-radius: 12px; padding: 15px 20px; margin: 10px 0;">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; color: #ccc; font-size: 0.95rem;">
+                    <span><strong style="color: #888;">Original</strong> → <strong style="color: #FFD700;">After Attach</strong></span>
+                    <span><strong style="color: #888;">A</strong> → <strong style="color: #FFD700;">A̶</strong> (strike)</span>
+                    <span><strong style="color: #888;">A</strong> → <strong style="color: #FFD700;">A͙͙͙</strong> (three dot overlay)</span>
+                    <span><strong style="color: #888;">A</strong> → <strong style="color: #FFD700;">A̶̲̅</strong> (underline + overline + strike)</span>
+                    <span><strong style="color: #888;">💗</strong> → <strong style="color: #FFD700;">💗᪲</strong></span>
+                    <span><strong style="color: #888;">✨</strong> → <strong style="color: #FFD700;">✨⃟</strong></span>
+                    <span><strong style="color: #888;">☯</strong> → <strong style="color: #FFD700;">☯⃞⃞⃞</strong></span>
+                    <span><strong style="color: #888;">🗿</strong> → <strong style="color: #FFD700;">🗿⃢</strong></span>
+                    <span><strong style="color: #888;">🦋</strong> → <strong style="color: #FFD700;">🦋᪱</strong></span>
+                    <span><strong style="color: #888;">07</strong> → <strong style="color: #FFD700;">0ᷳ7ᷳ</strong></span>
+                </div>
+            </div>
+
+            <h3 style="color: #FFD700; margin-top: 15px;">🔁 Multiple Repeats (1× to 10×):</h3>
+            <div style="background: #0f0f12; border-radius: 12px; padding: 15px 20px; margin: 10px 0;">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; color: #ccc; font-size: 0.95rem;">
+                    <span><strong style="color: #888;">🐼</strong> → <strong style="color: #FFD700;">🐼̊</strong> (1×)</span>
+                    <span><strong style="color: #888;">🐼</strong> → <strong style="color: #FFD700;">🐼̊̊̊</strong> (3×)</span>
+                    <span><strong style="color: #888;">🐼</strong> → <strong style="color: #FFD700;">🐼̊̊̊̊̊̊̊</strong> (7×)</span>
+                    <span><strong style="color: #888;">H</strong> → <strong style="color: #FFD700;">H̊̊̊</strong></span>
+                    <span><strong style="color: #888;">H</strong> → <strong style="color: #FFD700;">H̑̑̑</strong></span>
+                    <span><strong style="color: #888;">H</strong> → <strong style="color: #FFD700;">Ḥ̣̣</strong></span>
+                    <span><strong style="color: #888;">H</strong> → <strong style="color: #FFD700;">H̭̭̭</strong></span>
+                    <span><strong style="color: #888;">🦄</strong> → <strong style="color: #FFD700;">🦄̻̻̻̻̻</strong></span>
+                    <span><strong style="color: #888;">🦄</strong> → <strong style="color: #FFD700;">🦄᪵</strong></span>
+                </div>
+            </div>
+
+            <h3 style="color: #FFD700; margin-top: 15px;">📝 Creative Word Attach:</h3>
+            <div style="background: #0f0f12; border-radius: 12px; padding: 15px 20px; margin: 10px 0;">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; color: #ccc; font-size: 0.95rem;">
+                    <span><strong style="color: #888;">NAME</strong> → <strong style="color: #FFD700;">N̶A̶M̶E̶</strong></span>
+                    <span><strong style="color: #888;">LOVE</strong> → <strong style="color: #FFD700;">L͢o͢v͢e͢</strong></span>
+                    <span><strong style="color: #888;">KING</strong> → <strong style="color: #FFD700;">K̶I̶N̶G̶</strong></span>
+                    <span><strong style="color: #888;">KING</strong> → <strong style="color: #FFD700;">K︠i︠n︠g︠</strong></span>
+                    <span><strong style="color: #888;">KING</strong> → <strong style="color: #FFD700;">K⃨i⃨n⃨g⃨</strong></span>
+                    <span><strong style="color: #888;">GOLD</strong> → <strong style="color: #FFD700;">Gꤪꤨꤪoꤪꤨꤪlꤪꤨꤪdꤪꤨꤪ</strong></span>
+                </div>
+            </div>
+
+            <!-- ===== 3. HOW IT WORKS ===== -->
+            <h2 style="color: #FFD700; border-bottom: 2px solid #FFD700; padding-bottom: 8px; margin-top: 30px;">🚀 How Does It Work? (3 Simple Steps)</h2>
+            <div style="background: #0f0f12; border-radius: 12px; padding: 15px 20px; margin: 10px 0;">
+                <p style="color: #ccc; margin: 5px 0;"><strong style="color: #FFD700;">1. Type Your Text</strong> – Enter any word, name, or phrase in the input box.</p>
+                <p style="color: #ccc; margin: 5px 0;"><strong style="color: #FFD700;">2. Choose Your Attach Symbol</strong> – Pick any symbol from the 350+ symbol library. Adjust repetition (1× to 10×).</p>
+                <p style="color: #ccc; margin: 5px 0;"><strong style="color: #FFD700;">3. Copy, Export, or Share</strong> – Click COPY to copy to clipboard, or EXPORT as PNG image.</p>
+            </div>
+
+            <!-- ===== 4. PREMIUM FEATURES ===== -->
+            <h2 style="color: #FFD700; border-bottom: 2px solid #FFD700; padding-bottom: 8px; margin-top: 30px;">💎 Premium Features – Full Controller Access</h2>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 15px 0;">
+                <div style="background: #0f0f12; border-radius: 12px; padding: 14px 18px; border-left: 3px solid #FFD700;">
+                    <p style="color: #FFD700; font-weight: 600; margin: 0;">✅ 1-Click Attach Engine</p>
+                    <p style="color: #888; font-size: 0.85rem; margin: 4px 0 0 0;">Choose any symbol, click "Attach Now" – instantly applied.</p>
+                </div>
+                <div style="background: #0f0f12; border-radius: 12px; padding: 14px 18px; border-left: 3px solid #FFD700;">
+                    <p style="color: #FFD700; font-weight: 600; margin: 0;">📚 Massive Symbol Library</p>
+                    <p style="color: #888; font-size: 0.85rem; margin: 4px 0 0 0;">350+ symbols – Flowers, Stars, Hearts, Lines, Arrows & more.</p>
+                </div>
+                <div style="background: #0f0f12; border-radius: 12px; padding: 14px 18px; border-left: 3px solid #FFD700;">
+                    <p style="color: #FFD700; font-weight: 600; margin: 0;">👁️ Live Preview Box</p>
+                    <p style="color: #888; font-size: 0.85rem; margin: 4px 0 0 0;">See your creation instantly. Tap to copy. Export as PNG.</p>
+                </div>
+                <div style="background: #0f0f12; border-radius: 12px; padding: 14px 18px; border-left: 3px solid #FFD700;">
+                    <p style="color: #FFD700; font-weight: 600; margin: 0;">🎯 VIP Scroll Collection</p>
+                    <p style="color: #888; font-size: 0.85rem; margin: 4px 0 0 0;">40+ ready-made styles – one click copy!</p>
+                </div>
+                <div style="background: #0f0f12; border-radius: 12px; padding: 14px 18px; border-left: 3px solid #FFD700;">
+                    <p style="color: #FFD700; font-weight: 600; margin: 0;">✨ Premium Style Generator</p>
+                    <p style="color: #888; font-size: 0.85rem; margin: 4px 0 0 0;">5 exclusive fonts – Fancy, Dark, Crystal, Golden, Diamond.</p>
+                </div>
+                <div style="background: #0f0f12; border-radius: 12px; padding: 14px 18px; border-left: 3px solid #FFD700;">
+                    <p style="color: #FFD700; font-weight: 600; margin: 0;">📖 History & Favorites</p>
+                    <p style="color: #888; font-size: 0.85rem; margin: 4px 0 0 0;">Last 15 creations saved. Star your favorite symbols.</p>
+                </div>
+                <div style="background: #0f0f12; border-radius: 12px; padding: 14px 18px; border-left: 3px solid #FFD700;">
+                    <p style="color: #FFD700; font-weight: 600; margin: 0;">🌍 Community Vault</p>
+                    <p style="color: #888; font-size: 0.85rem; margin: 4px 0 0 0;">Share your creations. See suggestions from other users.</p>
+                </div>
+                <div style="background: #0f0f12; border-radius: 12px; padding: 14px 18px; border-left: 3px solid #FFD700;">
+                    <p style="color: #FFD700; font-weight: 600; margin: 0;">📝 Personal Notes Vault</p>
+                    <p style="color: #888; font-size: 0.85rem; margin: 4px 0 0 0;">Save your own masterpieces in your browser.</p>
+                </div>
+                <div style="background: #0f0f12; border-radius: 12px; padding: 14px 18px; border-left: 3px solid #FFD700;">
+                    <p style="color: #FFD700; font-weight: 600; margin: 0;">🎨 3 Beautiful Themes</p>
+                    <p style="color: #888; font-size: 0.85rem; margin: 4px 0 0 0;">Dark, Light, and Gold – your preference is remembered.</p>
+                </div>
+                <div style="background: #0f0f12; border-radius: 12px; padding: 14px 18px; border-left: 3px solid #FFD700;">
+                    <p style="color: #FFD700; font-weight: 600; margin: 0;">📤 Export as Image</p>
+                    <p style="color: #888; font-size: 0.85rem; margin: 4px 0 0 0;">Save your styled text as PNG with transparent background.</p>
+                </div>
+            </div>
+
+            <!-- ===== 5. WHY YOU NEED IT ===== -->
+            <h2 style="color: #FFD700; border-bottom: 2px solid #FFD700; padding-bottom: 8px; margin-top: 30px;">🎁 Why You Need Golden Attach Premium?</h2>
+            <ul style="color: #ccc; line-height: 2; padding-left: 20px;">
+                <li><strong style="color: #FFD700;">Stand Out on Social Media</strong> – Your bio, posts, and messages will look completely different.</li>
+                <li><strong style="color: #FFD700;">Gaming Identity</strong> – Create unique names for Free Fire, PUBG, Fortnite, or any game.</li>
+                <li><strong style="color: #FFD700;">Personal Branding</strong> – Stylish text for YouTube, Instagram, or business name.</li>
+                <li><strong style="color: #FFD700;">Unlimited Creativity</strong> – 350+ symbols × 10 repeat levels = millions of combinations.</li>
+                <li><strong style="color: #FFD700;">Time Saver</strong> – Everything in one place, one click away.</li>
+                <li><strong style="color: #FFD700;">Works Everywhere</strong> – All symbols are Unicode, compatible with every app and device.</li>
+            </ul>
+
+            <!-- ===== 6. OFFER ===== -->
+            <h2 style="color: #FFD700; border-bottom: 2px solid #FFD700; padding-bottom: 8px; margin-top: 30px;">💰 Special Lifetime Offer – Only $0.99</h2>
+            <div style="background: linear-gradient(145deg, #1a1a2e, #0f0f12); border-radius: 16px; padding: 20px; text-align: center; border: 1px solid #FFD700; margin: 15px 0;">
+                <p style="color: #999; text-decoration: line-through; font-size: 1.2rem;">Regular Price: $99</p>
+                <p style="color: #FFD700; font-size: 2.5rem; font-weight: 800; margin: 5px 0;">$0.99</p>
+                <p style="color: #aaa;">one-time payment – lifetime access</p>
+                <p style="color: #666; font-size: 0.9rem;">🔒 No monthly fees • No hidden costs • No renewals</p>
+                <a href="subscribe.html?plan=lifetime" style="display: inline-block; background: #FFD700; color: #000; padding: 12px 40px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 1.1rem; margin-top: 12px; transition: all 0.3s;" onmouseover="this.style.transform='scale(1.02)'; this.style.boxShadow='0 4px 20px rgba(255,215,0,0.3)';" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none';">
+                    ✨ Subscribe Now ✨
+                </a>
+            </div>
+
+            <!-- ===== 7. FAQ ===== -->
+            <h2 style="color: #FFD700; border-bottom: 2px solid #FFD700; padding-bottom: 8px; margin-top: 30px;">❓ Frequently Asked Questions</h2>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 15px 0;">
+                <div style="background: #0f0f12; border-radius: 12px; padding: 14px 18px;">
+                    <p style="color: #FFD700; font-weight: 600; margin: 0;">Q: Do I need to install any app?</p>
+                    <p style="color: #888; font-size: 0.85rem; margin: 4px 0 0 0;">No. Golden Attach works directly in your web browser on any device.</p>
+                </div>
+                <div style="background: #0f0f12; border-radius: 12px; padding: 14px 18px;">
+                    <p style="color: #FFD700; font-weight: 600; margin: 0;">Q: Will the symbols work in my game/app?</p>
+                    <p style="color: #888; font-size: 0.85rem; margin: 4px 0 0 0;">Yes. All symbols are standard Unicode, supported by all modern apps.</p>
+                </div>
+                <div style="background: #0f0f12; border-radius: 12px; padding: 14px 18px;">
+                    <p style="color: #FFD700; font-weight: 600; margin: 0;">Q: Is there a limit on creations?</p>
+                    <p style="color: #888; font-size: 0.85rem; margin: 4px 0 0 0;">No limit at all. Create as many as you want, as often as you want.</p>
+                </div>
+                <div style="background: #0f0f12; border-radius: 12px; padding: 14px 18px;">
+                    <p style="color: #FFD700; font-weight: 600; margin: 0;">Q: Do I have to pay monthly?</p>
+                    <p style="color: #888; font-size: 0.85rem; margin: 4px 0 0 0;">No. Lifetime plan is a one-time payment of $0.99. Pay once, own forever.</p>
+                </div>
+            </div>
+
+            <!-- ===== 8. CTA ===== -->
+            <div style="text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid #2a2a2a;">
+                <p style="color: #FFD700; font-size: 1.2rem; font-weight: 600;">🔥 Lifetime Access – Only $0.99 🔥</p>
+                <a href="subscribe.html?plan=lifetime" style="display: inline-block; background: #FFD700; color: #000; padding: 12px 50px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 1rem; margin-top: 10px; transition: all 0.3s;" onmouseover="this.style.transform='scale(1.02)'; this.style.boxShadow='0 4px 20px rgba(255,215,0,0.3)';" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none';">
+                    ✨ Subscribe Now ✨
+                </a>
+                <p style="color: #555; font-size: 0.7rem; margin-top: 10px;">Secure payment • 100% money-back guarantee</p>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<!-- ===== JAVASCRIPT ===== -->
+<script>
+    function openGoldenGuide() {
+        document.getElementById('goldenGuidePopup').style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeGoldenGuide() {
+        document.getElementById('goldenGuidePopup').style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
+
+    // Close popup when clicking outside content
+    document.getElementById('goldenGuidePopup').addEventListener('click', function(e) {
+        if (e.target === this) {
+            closeGoldenGuide();
+        }
+    });
+
+    // Close popup on Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            closeGoldenGuide();
+        }
+    });
+</script>
+
+<style>
+    @keyframes popupSlide {
+        from {
+            opacity: 0;
+            transform: translateY(-30px) scale(0.95);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+    }
+
+    /* Scrollbar Styling */
+    #goldenGuidePopup div::-webkit-scrollbar {
+        width: 4px;
+    }
+    #goldenGuidePopup div::-webkit-scrollbar-track {
+        background: transparent;
+    }
+    #goldenGuidePopup div::-webkit-scrollbar-thumb {
+        background: #FFD700;
+        border-radius: 10px;
+    }
+</style>
     
         <div style="height: 40px;"></div>
 
