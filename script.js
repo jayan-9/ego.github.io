@@ -1456,9 +1456,17 @@ function generateStyles() {
     if (!name) {
         const exampleContainer = document.getElementById('exampleContainer');
         if (exampleContainer) {
-            // 👇 सिर्फ उस Category के Examples Filter करें
+            // 👇 सारे Examples लें
             const allExamples = exampleContainer.querySelectorAll('.style-card');
+            
+            // 👇 सिर्फ उस Category के Examples Filter करें
             const filtered = Array.from(allExamples).filter(el => el.classList.contains(currentFilter));
+            
+            // 👇 अगर कोई Examples नहीं मिले – Error Message दिखाएं
+            if (filtered.length === 0) {
+                result.innerHTML = `<p style="color:#888;text-align:center;padding:20px;">No examples found for "${currentFilter}" category.</p>`;
+                return;
+            }
             
             // 👇 Randomize (Shuffle) करें
             const shuffled = filtered.sort(() => Math.random() - 0.5);
@@ -1468,7 +1476,7 @@ function generateStyles() {
             shuffled.forEach(el => {
                 html += el.outerHTML;
             });
-            result.innerHTML = html || '<p style="color:#888;text-align:center;padding:20px;">No examples for this category.</p>';
+            result.innerHTML = html;
         }
         return;
     }
@@ -1495,7 +1503,7 @@ function generateStyles() {
         div.innerHTML = `<div class="style-text">${styled}</div>`;
         result.appendChild(div);
 
-        // ===== LINKS – बीच में Insert करें =====
+        // LINKS (61, 159, 179) – पहले जैसा ही रखें
         if (index === 61) {
             const linksDiv = document.createElement('div');
             linksDiv.className = 'style-card';
@@ -1503,13 +1511,12 @@ function generateStyles() {
             linksDiv.style.background = '#f5f5f5';
             linksDiv.style.border = '1px solid #ddd';
             linksDiv.style.borderRadius = '10px';
-            linksDiv.style.boxShadow = '0 2px 5px rgba(0,0,0,0.05)';
             linksDiv.style.cursor = 'default';
             linksDiv.innerHTML = `
                 <div style="display: flex; flex-direction: column; gap: 12px;">
-                    <a href="anime-stylish-names-collection.html" style="color: #333; text-decoration: none; border-bottom: 1px solid #ccc; padding: 8px 0; display: block; font-size: 1.1rem; transition: all 0.2s;" onmouseover="this.style.color='#4f46e5'; this.style.borderBottomColor='#4f46e5';" onmouseout="this.style.color='#333'; this.style.borderBottomColor='#ccc';">🌀 Anime Names</a>
-                    <a href="pubg-stylish-names-with-symbols.html" style="color: #333; text-decoration: none; border-bottom: 1px solid #ccc; padding: 8px 0; display: block; font-size: 1.1rem; transition: all 0.2s;" onmouseover="this.style.color='#4f46e5'; this.style.borderBottomColor='#4f46e5';" onmouseout="this.style.color='#333'; this.style.borderBottomColor='#ccc';">🎯 PUBG Names</a>
-                    <a href="attitude-names-for-boys.html" style="color: #333; text-decoration: none; border-bottom: 1px solid #ccc; padding: 8px 0; display: block; font-size: 1.1rem; transition: all 0.2s;" onmouseover="this.style.color='#4f46e5'; this.style.borderBottomColor='#4f46e5';" onmouseout="this.style.color='#333'; this.style.borderBottomColor='#ccc';">⚡ Attitude Names</a>
+                    <a href="anime-stylish-names-collection.html" style="color: #333; text-decoration: none; border-bottom: 1px solid #ccc; padding: 8px 0; display: block; font-size: 1.1rem;">🌀 Anime Names</a>
+                    <a href="pubg-stylish-names-with-symbols.html" style="color: #333; text-decoration: none; border-bottom: 1px solid #ccc; padding: 8px 0; display: block; font-size: 1.1rem;">🎯 PUBG Names</a>
+                    <a href="attitude-names-for-boys.html" style="color: #333; text-decoration: none; border-bottom: 1px solid #ccc; padding: 8px 0; display: block; font-size: 1.1rem;">⚡ Attitude Names</a>
                 </div>
             `;
             result.appendChild(linksDiv);
@@ -1521,12 +1528,11 @@ function generateStyles() {
             linksDiv.style.background = '#f5f5f5';
             linksDiv.style.border = '1px solid #ddd';
             linksDiv.style.borderRadius = '10px';
-            linksDiv.style.boxShadow = '0 2px 5px rgba(0,0,0,0.05)';
             linksDiv.style.cursor = 'default';
             linksDiv.innerHTML = `
                 <div style="display: flex; flex-direction: column; gap: 12px;">
-                    <a href="pubg-stylish-names-with-symbols.html" style="color: #333; text-decoration: none; border-bottom: 1px solid #ccc; padding: 8px 0; display: block; font-size: 1.1rem; transition: all 0.2s;" onmouseover="this.style.color='#4f46e5'; this.style.borderBottomColor='#4f46e5';" onmouseout="this.style.color='#333'; this.style.borderBottomColor='#ccc';">🎯 PUBG Names</a>
-                    <a href="attitude-names-for-boys.html" style="color: #333; text-decoration: none; border-bottom: 1px solid #ccc; padding: 8px 0; display: block; font-size: 1.1rem; transition: all 0.2s;" onmouseover="this.style.color='#4f46e5'; this.style.borderBottomColor='#4f46e5';" onmouseout="this.style.color='#333'; this.style.borderBottomColor='#ccc';">⚡ Attitude Names</a>
+                    <a href="pubg-stylish-names-with-symbols.html" style="color: #333; text-decoration: none; border-bottom: 1px solid #ccc; padding: 8px 0; display: block; font-size: 1.1rem;">🎯 PUBG Names</a>
+                    <a href="attitude-names-for-boys.html" style="color: #333; text-decoration: none; border-bottom: 1px solid #ccc; padding: 8px 0; display: block; font-size: 1.1rem;">⚡ Attitude Names</a>
                 </div>
             `;
             result.appendChild(linksDiv);
@@ -1538,12 +1544,11 @@ function generateStyles() {
             linksDiv.style.background = '#f5f5f5';
             linksDiv.style.border = '1px solid #ddd';
             linksDiv.style.borderRadius = '10px';
-            linksDiv.style.boxShadow = '0 2px 5px rgba(0,0,0,0.05)';
             linksDiv.style.cursor = 'default';
             linksDiv.innerHTML = `
                 <div style="display: flex; flex-direction: column; gap: 12px;">
-                    <a href="royal-and-vip-names.html" style="color: #333; text-decoration: none; border-bottom: 1px solid #ccc; padding: 8px 0; display: block; font-size: 1.1rem; transition: all 0.2s;" onmouseover="this.style.color='#4f46e5'; this.style.borderBottomColor='#4f46e5';" onmouseout="this.style.color='#333'; this.style.borderBottomColor='#ccc';">👑 Royal & VIP</a>
-                    <a href="social-media-bio-ideas-for-whatsapp-instagram.html" style="color: #333; text-decoration: none; border-bottom: 1px solid #ccc; padding: 8px 0; display: block; font-size: 1.1rem; transition: all 0.2s;" onmouseover="this.style.color='#4f46e5'; this.style.borderBottomColor='#4f46e5';" onmouseout="this.style.color='#333'; this.style.borderBottomColor='#ccc';">💬 Bio Ideas</a>
+                    <a href="royal-and-vip-names.html" style="color: #333; text-decoration: none; border-bottom: 1px solid #ccc; padding: 8px 0; display: block; font-size: 1.1rem;">👑 Royal & VIP</a>
+                    <a href="social-media-bio-ideas-for-whatsapp-instagram.html" style="color: #333; text-decoration: none; border-bottom: 1px solid #ccc; padding: 8px 0; display: block; font-size: 1.1rem;">💬 Bio Ideas</a>
                 </div>
             `;
             result.appendChild(linksDiv);
@@ -1551,43 +1556,19 @@ function generateStyles() {
     });
 }
 
-// =====🔥 SELECT CATEGORY 🔥=====
+// ===== SELECT CATEGORY =====
 function selectCategory(type) {
+    // 👇 सबसे पहले currentFilter Update करें
     currentFilter = type;
 
-    // Update active button
+    // 👇 Active Button Update करें
     document.querySelectorAll('.category-btn').forEach(btn => btn.classList.remove('active'));
     document.querySelectorAll('.category-btn').forEach(btn => {
         if (btn.textContent.toLowerCase().includes(type)) btn.classList.add('active');
     });
 
-    const name = document.getElementById('nameInput')?.value.trim();
-    const result = document.getElementById('result');
-    const exampleContainer = document.getElementById('exampleContainer');
-
-    // ===== अगर Input EMPTY है – Examples दिखाएं =====
-    if (!name && exampleContainer && result) {
-        // सारे Examples को Array में Collect करें
-        const allExamples = exampleContainer.querySelectorAll('.style-card');
-        const examplesArray = Array.from(allExamples);
-
-        // सिर्फ उस Category के Examples Filter करें
-        const filtered = examplesArray.filter(el => el.classList.contains(type));
-
-        // Randomize (Shuffle) करें
-        const shuffled = filtered.sort(() => Math.random() - 0.5);
-
-        // Result में डालें
-        let html = '';
-        shuffled.forEach(el => {
-            html += el.outerHTML;
-        });
-        result.innerHTML = html || '<p style="color:#888;text-align:center;padding:20px;">No examples for this category.</p>';
-    } else {
-        // अगर Input भरा है – Styles Generate करें
-        generateStyles();
-    }
-
+    // 👇 Generate Styles Call करें (currentFilter अब Update हो चुका है)
+    generateStyles();
     loadMiniSuggestions();
     if (typeof loadTop3Styles === 'function') {
         loadTop3Styles();
