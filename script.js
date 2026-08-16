@@ -2075,86 +2075,45 @@ function refreshTop3Styles() {
     showToast('✨ New styles generated!');
 }
 
-// =====❤️‍🔥 GENERATE STYLES (with examples when input empty) =====
+// ===== GENERATE STYLES =====
 function generateStyles() {
     const name = document.getElementById('nameInput')?.value.trim();
     const result = document.getElementById('result');
     if (!result) return;
-    result.innerHTML = "";
 
-    // =====‼️ EXAMPLE ‼️SECTION (जब Name Empty हो) =====
+    // ===== STEP 1: अगर Input EMPTY है – Examples दिखाएं =====
     if (!name) {
-        const examples = categoryExamples[currentFilter] || categoryExamples.love;
-        const shuffled = [...examples].sort(() => Math.random() - 0.5);
-        const selected = shuffled.slice(0, 134);
-        
-        selected.forEach((example, index) => {
-            const div = document.createElement('div');
-            div.className = `style-card ${currentFilter}`;
-            div.setAttribute('onclick', `copyText('${example.text.replace(/'/g,"\\'").replace(/"/g,'&quot;')}', this)`);
-            div.setAttribute('title', 'Click to copy');
-            
-            let html = `<div class="style-text">${example.text}</div>`;
-            
-            if (example.symbols && example.symbols.length) {
-                html += `<div style="display:flex; flex-wrap:wrap; gap:0.3rem; margin-top:0.5rem;">`;
-                example.symbols.slice(0,4).forEach(sym => {
-                    html += `<span style="background:var(--gray-light); padding:0.2rem 0.5rem; border-radius:12px; font-size:0.8rem; cursor:pointer;" onclick="copyText('${sym.replace(/'/g,"\\'")}', event)">${sym} <i class="fas fa-copy"></i></span>`;
-                });
-                html += `</div>`;
-            }
-            
-            div.innerHTML = html;
-            result.appendChild(div);
-            
-            // ✅ LINKS - 35th EXAMPLE KE BAAD
-            if (index === 34) {
-                const linksDiv = document.createElement('div');
-                linksDiv.className = 'style-card';
-                linksDiv.style.padding = '15px 20px';
-                linksDiv.style.background = 'var(--light)';
-                linksDiv.style.border = '1px solid var(--gray-light)';
-                linksDiv.style.borderRadius = '50px';
-                linksDiv.style.boxShadow = '0 2px 5px rgba(0,0,0,0.05)';
-                linksDiv.style.cursor = 'default';
-                linksDiv.style.margin = '10px 0';
-                linksDiv.innerHTML = `
-                    <div style="display: flex; flex-direction: column; gap: 10px;">
-                        <a href="royal-and-vip-names.html" style="display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; padding: 12px 20px; background: var(--light); border: 1px solid var(--gray-light); border-radius: 50px; color: var(--dark); text-decoration: none; font-size: 1rem; font-weight: 500; transition: all 0.3s ease; box-shadow: 0 2px 5px rgba(0,0,0,0.05);" onmouseover="this.style.background='var(--primary)'; this.style.color='white'; this.style.borderColor='var(--primary)'" onmouseout="this.style.background='var(--light)'; this.style.color='var(--dark)'; this.style.borderColor='var(--gray-light)'">
-                            <span style="font-size:1.2rem;">👑</span> Royal & VIP
-                        </a>
-                        <a href="social-media-bio-ideas-for-whatsapp-instagram.html" style="display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; padding: 12px 20px; background: var(--light); border: 1px solid var(--gray-light); border-radius: 50px; color: var(--dark); text-decoration: none; font-size: 1rem; font-weight: 500; transition: all 0.3s ease; box-shadow: 0 2px 5px rgba(0,0,0,0.05);" onmouseover="this.style.background='var(--primary)'; this.style.color='white'; this.style.borderColor='var(--primary)'" onmouseout="this.style.background='var(--light)'; this.style.color='var(--dark)'; this.style.borderColor='var(--gray-light)'">
-                            <span style="font-size:1.2rem;">💬</span> Bio Ideas
-                        </a>
-                    </div>
-                `;
-                result.appendChild(linksDiv);
-            }
-        });
+        const exampleContainer = document.getElementById('exampleContainer');
+        if (exampleContainer) {
+            // Examples को Result में डालें
+            result.innerHTML = exampleContainer.innerHTML;
+        }
         return;
     }
 
-    // ===== ‼️MAIN GENERATE‼️ SECTION (जब Name हो) =====
+    // ===== STEP 2: अगर Input भरा है – Actual Styles Generate करें =====
     const styles = stylesByCategory[currentFilter] || [];
     if (styles.length === 0) {
         result.innerHTML = `<div class="empty-state"><i class="fas fa-exclamation-circle"></i><p>No styles for this category yet.</p></div>`;
         return;
     }
 
+    // Randomize Styles
     const shuffled = [...styles].sort(() => Math.random() - 0.5);
+    result.innerHTML = '';
 
     shuffled.forEach((style, index) => {
         const styled = style.prefix + convert(name, style.map) + style.suffix;
-        const escaped = styled.replace(/'/g,"\\'").replace(/"/g,'&quot;');
-        
+        const escaped = styled.replace(/'/g, "\\'").replace(/"/g, '&quot;');
+
         const div = document.createElement('div');
         div.className = `style-card ${currentFilter}`;
         div.setAttribute('onclick', `copyText('${escaped}', this)`);
         div.setAttribute('title', 'Click to copy');
         div.innerHTML = `<div class="style-text">${styled}</div>`;
         result.appendChild(div);
-         
-        // ✅ 61st style ke baad - LINKS
+
+        // ===== LINKS – बीच में Insert करें =====
         if (index === 61) {
             const linksDiv = document.createElement('div');
             linksDiv.className = 'style-card';
@@ -2173,8 +2132,6 @@ function generateStyles() {
             `;
             result.appendChild(linksDiv);
         }
-        
-        // ✅ 159th style ke baad - LINKS
         if (index === 159) {
             const linksDiv = document.createElement('div');
             linksDiv.className = 'style-card';
@@ -2192,8 +2149,6 @@ function generateStyles() {
             `;
             result.appendChild(linksDiv);
         }
-        
-        // ✅ 179th style ke baad - LINKS
         if (index === 179) {
             const linksDiv = document.createElement('div');
             linksDiv.className = 'style-card';
@@ -2217,18 +2172,35 @@ function generateStyles() {
 // ===== SELECT CATEGORY =====
 function selectCategory(type) {
     currentFilter = type;
-    
+
     // Update active button
     document.querySelectorAll('.category-btn').forEach(btn => btn.classList.remove('active'));
     document.querySelectorAll('.category-btn').forEach(btn => {
         if (btn.textContent.toLowerCase().includes(type)) btn.classList.add('active');
     });
-    
-    // Generate styles
-    generateStyles();
+
+    // ===== Input Check करें =====
+    const name = document.getElementById('nameInput')?.value.trim();
+    const result = document.getElementById('result');
+    const exampleContainer = document.getElementById('exampleContainer');
+
+    // ===== अगर Input EMPTY है – Examples दिखाएं (HTML से Filter करके) =====
+    if (!name && exampleContainer && result) {
+        const allExamples = exampleContainer.querySelectorAll('.style-card');
+        let filteredHTML = '';
+        allExamples.forEach(el => {
+            if (el.classList.contains(type)) {
+                filteredHTML += el.outerHTML;
+            }
+        });
+        result.innerHTML = filteredHTML || '<p style="color:#888;text-align:center;padding:20px;">No examples for this category.</p>';
+    } else {
+        // ===== अगर Input भरा है – Styles Generate करें =====
+        generateStyles();
+    }
+
+    // ===== ये दोनों हमेशा चलेंगे =====
     loadMiniSuggestions();
-    
-    // Load top 3 styles if function exists
     if (typeof loadTop3Styles === 'function') {
         loadTop3Styles();
     }
