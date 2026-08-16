@@ -1446,7 +1446,7 @@ function refreshTop3Styles() {
     showToast('✨ New styles generated!');
 }
 
-// ===== GENERATE STYLES =====
+// =====💢💢 GENERATE STYLES =====
 function generateStyles() {
     const name = document.getElementById('nameInput')?.value.trim();
     const result = document.getElementById('result');
@@ -1540,7 +1540,7 @@ function generateStyles() {
     });
 }
 
-// ===== SELECT CATEGORY =====
+// =====🔥 SELECT CATEGORY 🔥=====
 function selectCategory(type) {
     currentFilter = type;
 
@@ -1550,27 +1550,33 @@ function selectCategory(type) {
         if (btn.textContent.toLowerCase().includes(type)) btn.classList.add('active');
     });
 
-    // ===== Input Check करें =====
     const name = document.getElementById('nameInput')?.value.trim();
     const result = document.getElementById('result');
     const exampleContainer = document.getElementById('exampleContainer');
 
-    // ===== अगर Input EMPTY है – Examples दिखाएं (HTML से Filter करके) =====
+    // ===== अगर Input EMPTY है – Examples दिखाएं =====
     if (!name && exampleContainer && result) {
+        // सारे Examples को Array में Collect करें
         const allExamples = exampleContainer.querySelectorAll('.style-card');
-        let filteredHTML = '';
-        allExamples.forEach(el => {
-            if (el.classList.contains(type)) {
-                filteredHTML += el.outerHTML;
-            }
+        const examplesArray = Array.from(allExamples);
+
+        // सिर्फ उस Category के Examples Filter करें
+        const filtered = examplesArray.filter(el => el.classList.contains(type));
+
+        // Randomize (Shuffle) करें
+        const shuffled = filtered.sort(() => Math.random() - 0.5);
+
+        // Result में डालें
+        let html = '';
+        shuffled.forEach(el => {
+            html += el.outerHTML;
         });
-        result.innerHTML = filteredHTML || '<p style="color:#888;text-align:center;padding:20px;">No examples for this category.</p>';
+        result.innerHTML = html || '<p style="color:#888;text-align:center;padding:20px;">No examples for this category.</p>';
     } else {
-        // ===== अगर Input भरा है – Styles Generate करें =====
+        // अगर Input भरा है – Styles Generate करें
         generateStyles();
     }
 
-    // ===== ये दोनों हमेशा चलेंगे =====
     loadMiniSuggestions();
     if (typeof loadTop3Styles === 'function') {
         loadTop3Styles();
