@@ -1418,23 +1418,48 @@ function loadTop3Styles() {
 function getRandomStyles(count) {
     let allItems = [];
     
-    // 1. Try to get from suggestions first
+    // 1️⃣ पहले Suggestions से Try करें
     const categorySuggestions = suggestionsData[currentFilter] || [];
     if (categorySuggestions.length > 0) {
         const shuffled = [...categorySuggestions].sort(() => Math.random() - 0.5);
-        allItems = allItems.concat(shuffled.slice(0, 3));
+        allItems = allItems.concat(shuffled.slice(0, count));
     }
     
-    // 2. If not enough, get from category examples
+    // 2️⃣ अगर Suggestions कम हैं – HTML Example Container से लें
     if (allItems.length < count) {
-        const examples = categoryExamples[currentFilter] || categoryExamples.love;
-        const shuffled = [...examples].sort(() => Math.random() - 0.5);
+        const exampleContainer = document.getElementById('exampleContainer');
+        if (exampleContainer) {
+            // सिर्फ उस Category के Examples लें
+            const allExamples = exampleContainer.querySelectorAll('.style-card');
+            const filtered = Array.from(allExamples).filter(el => el.classList.contains(currentFilter));
+            
+            // Randomize करें
+            const shuffled = filtered.sort(() => Math.random() - 0.5);
+            
+            // Text Extract करें
+            shuffled.forEach(el => {
+                const textEl = el.querySelector('.style-text');
+                if (textEl && allItems.length < count) {
+                    allItems.push(textEl.textContent);
+                }
+            });
+        }
+    }
+    
+    // 3️⃣ अगर फिर भी कम हैं – Default Examples Use करें (Fallback)
+    if (allItems.length < count) {
+        const fallbackExamples = [
+            "✨ 𝓝𝓪𝓶𝓮 ✨",
+            "🔥 𝙽𝚊𝚖𝚎 🔥",
+            "👑 𝕹𝖆𝖒𝖊 👑"
+        ];
+        const shuffled = [...fallbackExamples].sort(() => Math.random() - 0.5);
         shuffled.slice(0, count - allItems.length).forEach(ex => {
-            allItems.push(ex.text);
+            allItems.push(ex);
         });
     }
     
-    // 3. Shuffle and return requested count
+    // 4️⃣ Shuffle करें और Return करें
     const shuffled = [...allItems].sort(() => Math.random() - 0.5);
     return shuffled.slice(0, count);
 }
