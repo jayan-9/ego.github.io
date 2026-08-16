@@ -1471,7 +1471,7 @@ function refreshTop3Styles() {
     showToast('✨ New styles generated!');
 }
 
-// =====💢💢 GENERATE STYLES =====
+// ===== GENERATE STYLES =====
 function generateStyles() {
     const name = document.getElementById('nameInput')?.value.trim();
     const result = document.getElementById('result');
@@ -1481,8 +1481,19 @@ function generateStyles() {
     if (!name) {
         const exampleContainer = document.getElementById('exampleContainer');
         if (exampleContainer) {
-            // Examples को Result में डालें
-            result.innerHTML = exampleContainer.innerHTML;
+            // 👇 सिर्फ उस Category के Examples Filter करें
+            const allExamples = exampleContainer.querySelectorAll('.style-card');
+            const filtered = Array.from(allExamples).filter(el => el.classList.contains(currentFilter));
+            
+            // 👇 Randomize (Shuffle) करें
+            const shuffled = filtered.sort(() => Math.random() - 0.5);
+            
+            // 👇 Result में डालें
+            let html = '';
+            shuffled.forEach(el => {
+                html += el.outerHTML;
+            });
+            result.innerHTML = html || '<p style="color:#888;text-align:center;padding:20px;">No examples for this category.</p>';
         }
         return;
     }
