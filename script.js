@@ -1446,40 +1446,44 @@ function refreshTop3Styles() {
     showToast('✨ New styles generated!');
 }
 
-// ===== GENERATE STYLES =====
+// ===== 💓💓GENERATE STYLES💓💓 =====
 function generateStyles() {
     const name = document.getElementById('nameInput')?.value.trim();
     const result = document.getElementById('result');
     if (!result) return;
 
     // ===== STEP 1: अगर Input EMPTY है – Examples दिखाएं =====
-    if (!name) {
-        const exampleContainer = document.getElementById('exampleContainer');
-        if (exampleContainer) {
-            // 👇 सारे Examples लें
-            const allExamples = exampleContainer.querySelectorAll('.style-card');
-            
-            // 👇 सिर्फ उस Category के Examples Filter करें
-            const filtered = Array.from(allExamples).filter(el => el.classList.contains(currentFilter));
-            
-            // 👇 अगर कोई Examples नहीं मिले – Error Message दिखाएं
-            if (filtered.length === 0) {
-                result.innerHTML = `<p style="color:#888;text-align:center;padding:20px;">No examples found for "${currentFilter}" category.</p>`;
-                return;
-            }
-            
-            // 👇 Randomize (Shuffle) करें
-            const shuffled = filtered.sort(() => Math.random() - 0.5);
-            
-            // 👇 Result में डालें
-            let html = '';
-            shuffled.forEach(el => {
-                html += el.outerHTML;
-            });
-            result.innerHTML = html;
+if (!name) {
+    const exampleContainer = document.getElementById('exampleContainer');
+    if (exampleContainer) {
+        // 👇 सारे Examples लें - SIRF DIRECT CHILDREN
+        const allExamples = exampleContainer.querySelectorAll(':scope > .style-card');
+        
+        // 👇 सिर्फ उस Category के Examples Filter करें - EXACT MATCH
+        const filtered = Array.from(allExamples).filter(el => {
+            // Check if class matches exactly
+            return el.classList.contains(currentFilter) && 
+                   !el.classList.contains('love') === (currentFilter !== 'love');
+        });
+        
+        // 👇 अगर कोई Examples नहीं मिले – Error Message दिखाएं
+        if (filtered.length === 0) {
+            result.innerHTML = `<p style="color:#888;text-align:center;padding:20px;">No examples found for "${currentFilter}" category.</p>`;
+            return;
         }
-        return;
+        
+        // 👇 Randomize (Shuffle) करें
+        const shuffled = filtered.sort(() => Math.random() - 0.5);
+        
+        // 👇 Result में डालें
+        let html = '';
+        shuffled.forEach(el => {
+            html += el.outerHTML;
+        });
+        result.innerHTML = html;
     }
+    return;
+}
 
     // ===== STEP 2: अगर Input भरा है – Actual Styles Generate करें =====
     const styles = stylesByCategory[currentFilter] || [];
