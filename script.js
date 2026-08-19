@@ -1446,7 +1446,7 @@ function refreshTop3Styles() {
     showToast('✨ New styles generated!');
 }
 
-// ===== GENERATE STYLES (MULTIPLE SECTIONS) =====
+// ===== GENERATE STYLES (NO DUPLICATE - UNIQUE IN EVERY SECTION) =====
 function generateStyles() {
     const name = document.getElementById('nameInput')?.value.trim();
     const result = document.getElementById('result');
@@ -1466,32 +1466,45 @@ function generateStyles() {
             
             if (filtered.length === 0) {
                 result.innerHTML = `<p style="color:#888;text-align:center;padding:20px;">No examples found for "${currentFilter}" category.</p>`;
+                if (resultMid) resultMid.innerHTML = '';
+                if (resultBottom) resultBottom.innerHTML = '';
                 return;
             }
             
-            // Main Section - Sabhi examples
-            const shuffled = filtered.sort(() => Math.random() - 0.5);
+            // ===== UNIQUE: Ek baar shuffle karo, phir alag-alag portions do =====
+            const shuffled = [...filtered].sort(() => Math.random() - 0.5);
+            
+            // Main Section: 70% examples
+            const mainCount = Math.floor(shuffled.length * 0.7);
+            const mainExamples = shuffled.slice(0, mainCount);
+            
+            // Mid Section: 20% examples (jo main mein nahi)
+            const midCount = Math.floor(shuffled.length * 0.2);
+            const midExamples = shuffled.slice(mainCount, mainCount + midCount);
+            
+            // Bottom Section: 10% examples (jo main/mid mein nahi)
+            const bottomExamples = shuffled.slice(mainCount + midCount);
+            
+            // Main Section
             let html = '';
-            shuffled.forEach(el => {
+            mainExamples.forEach(el => {
                 html += el.outerHTML;
             });
             result.innerHTML = html;
             
-            // Mid Section - Random 30 examples
+            // Mid Section - UNIQUE (20% examples)
             if (resultMid) {
-                const midShuffled = [...filtered].sort(() => Math.random() - 0.5);
                 let midHtml = '';
-                midShuffled.slice(0, 30).forEach(el => {
+                midExamples.forEach(el => {
                     midHtml += el.outerHTML;
                 });
                 resultMid.innerHTML = midHtml;
             }
             
-            // Bottom Section - Random 20 examples
+            // Bottom Section - UNIQUE (10% examples)
             if (resultBottom) {
-                const bottomShuffled = [...filtered].sort(() => Math.random() - 0.5);
                 let bottomHtml = '';
-                bottomShuffled.slice(0, 20).forEach(el => {
+                bottomExamples.forEach(el => {
                     bottomHtml += el.outerHTML;
                 });
                 resultBottom.innerHTML = bottomHtml;
@@ -1504,14 +1517,32 @@ function generateStyles() {
     const styles = stylesByCategory[currentFilter] || [];
     if (styles.length === 0) {
         result.innerHTML = `<div class="empty-state"><i class="fas fa-exclamation-circle"></i><p>No styles for this category yet.</p></div>`;
+        if (resultMid) resultMid.innerHTML = '';
+        if (resultBottom) resultBottom.innerHTML = '';
         return;
     }
 
-    // ===== MAIN SECTION: Sabhi styles (random order) =====
+    // ===== UNIQUE: Ek baar shuffle karo, phir alag-alag portions do =====
     const shuffled = [...styles].sort(() => Math.random() - 0.5);
+    
+    // Sections ki limit set karo
+    const midLimit = Math.min(30, Math.floor(shuffled.length * 0.2));
+    const bottomLimit = Math.min(20, Math.floor(shuffled.length * 0.1));
+    const mainLimit = shuffled.length - midLimit - bottomLimit;
+    
+    // Main Section styles (pehle wale)
+    const mainStyles = shuffled.slice(0, mainLimit);
+    
+    // Mid Section styles (jo main mein nahi)
+    const midStyles = shuffled.slice(mainLimit, mainLimit + midLimit);
+    
+    // Bottom Section styles (jo main/mid mein nahi)
+    const bottomStyles = shuffled.slice(mainLimit + midLimit);
+
+    // ===== MAIN SECTION: Sabhi main styles =====
     result.innerHTML = '';
     
-    shuffled.forEach((style, index) => {
+    mainStyles.forEach((style, index) => {
         const styled = style.prefix + convert(name, style.map) + style.suffix;
         const escaped = styled.replace(/'/g, "\\'").replace(/"/g, '&quot;');
         
@@ -1522,7 +1553,7 @@ function generateStyles() {
         div.innerHTML = `<div class="style-text">${styled}</div>`;
         result.appendChild(div);
         
-        // Links at specific positions
+        // Links at specific positions (yeh sirf main section mein)
         if (index === 61) {
             const linksDiv = document.createElement('div');
             linksDiv.className = 'style-card';
@@ -1574,12 +1605,11 @@ function generateStyles() {
         }
     });
 
-    // ===== MID SECTION: 30 Random Styles =====
+    // ===== MID SECTION: 30 Random Styles (UNIQUE - Main mein nahi) =====
     if (resultMid) {
-        const midShuffled = [...styles].sort(() => Math.random() - 0.5);
         resultMid.innerHTML = '';
         
-        midShuffled.slice(0, 30).forEach((style) => {
+        midStyles.forEach((style) => {
             const styled = style.prefix + convert(name, style.map) + style.suffix;
             const escaped = styled.replace(/'/g, "\\'").replace(/"/g, '&quot;');
             
@@ -1592,12 +1622,11 @@ function generateStyles() {
         });
     }
 
-    // ===== BOTTOM SECTION: 20 Random Styles =====
+    // ===== BOTTOM SECTION: 20 Random Styles (UNIQUE - Main/Mid mein nahi) =====
     if (resultBottom) {
-        const bottomShuffled = [...styles].sort(() => Math.random() - 0.5);
         resultBottom.innerHTML = '';
         
-        bottomShuffled.slice(0, 20).forEach((style) => {
+        bottomStyles.forEach((style) => {
             const styled = style.prefix + convert(name, style.map) + style.suffix;
             const escaped = styled.replace(/'/g, "\\'").replace(/"/g, '&quot;');
             
