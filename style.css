@@ -3028,3 +3028,46 @@ p { margin-bottom: 1rem; color: var(--gray); }
     box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
+/* ===== DARK THEME SUPPORT ===== */
+body.dark-theme .mid-styles-section,
+body.dark-theme .bottom-styles-section {
+    background: #1a1a2e !important;
+}
+
+body.dark-theme .mid-styles-section .section-header h2,
+body.dark-theme .bottom-styles-section .section-header h2,
+body.dark-theme .mid-styles-section .section-header p,
+body.dark-theme .bottom-styles-section .section-header p {
+    color: #ffffff !important;
+}
+
+body.dark-theme .mid-styles-section .results-grid,
+body.dark-theme .bottom-styles-section .results-grid {
+    background: #16213e !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3) !important;
+}
+
+body.dark-theme .mid-styles-section .style-card,
+body.dark-theme .bottom-styles-section .style-card {
+    background: #1a1a2e !important;
+    border-color: #2a2a4a !important;
+    color: #ffffff !important;
+}
+
+body.dark-theme .mid-styles-section .style-text,
+body.dark-theme .bottom-styles-section .style-text {
+    color: #e0e0e0 !important;
+}
+
+/* Hover effect dark theme */
+body.dark-theme .mid-styles-section .style-card:hover,
+body.dark-theme .bottom-styles-section .style-card:hover {
+    background: #2a2a4a !important;
+    border-color: #4a4a6a !important;
+}
+
+/* Section header icon color */
+body.dark-theme .mid-styles-section .section-header i,
+body.dark-theme .bottom-styles-section .section-header i {
+    color: #ffd700 !important;
+}
