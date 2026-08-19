@@ -1446,44 +1446,59 @@ function refreshTop3Styles() {
     showToast('✨ New styles generated!');
 }
 
-// ===== 💓💓GENERATE STYLES💓💓 =====
+// ===== GENERATE STYLES (MULTIPLE SECTIONS) =====
 function generateStyles() {
     const name = document.getElementById('nameInput')?.value.trim();
     const result = document.getElementById('result');
+    const resultMid = document.getElementById('resultMid');
+    const resultBottom = document.getElementById('resultBottom');
+    
     if (!result) return;
 
     // ===== STEP 1: अगर Input EMPTY है – Examples दिखाएं =====
-if (!name) {
-    const exampleContainer = document.getElementById('exampleContainer');
-    if (exampleContainer) {
-        // 👇 सारे Examples लें - SIRF DIRECT CHILDREN
-        const allExamples = exampleContainer.querySelectorAll(':scope > .style-card');
-        
-        // 👇 सिर्फ उस Category के Examples Filter करें - EXACT MATCH
-        const filtered = Array.from(allExamples).filter(el => {
-            // Check if class matches exactly
-            return el.classList.contains(currentFilter) && 
-                   !el.classList.contains('love') === (currentFilter !== 'love');
-        });
-        
-        // 👇 अगर कोई Examples नहीं मिले – Error Message दिखाएं
-        if (filtered.length === 0) {
-            result.innerHTML = `<p style="color:#888;text-align:center;padding:20px;">No examples found for "${currentFilter}" category.</p>`;
-            return;
+    if (!name) {
+        const exampleContainer = document.getElementById('exampleContainer');
+        if (exampleContainer) {
+            const allExamples = exampleContainer.querySelectorAll('.style-card');
+            const filtered = Array.from(allExamples).filter(el => 
+                el.classList.contains(currentFilter)
+            );
+            
+            if (filtered.length === 0) {
+                result.innerHTML = `<p style="color:#888;text-align:center;padding:20px;">No examples found for "${currentFilter}" category.</p>`;
+                return;
+            }
+            
+            // Main Section - Sabhi examples
+            const shuffled = filtered.sort(() => Math.random() - 0.5);
+            let html = '';
+            shuffled.forEach(el => {
+                html += el.outerHTML;
+            });
+            result.innerHTML = html;
+            
+            // Mid Section - Random 30 examples
+            if (resultMid) {
+                const midShuffled = [...filtered].sort(() => Math.random() - 0.5);
+                let midHtml = '';
+                midShuffled.slice(0, 30).forEach(el => {
+                    midHtml += el.outerHTML;
+                });
+                resultMid.innerHTML = midHtml;
+            }
+            
+            // Bottom Section - Random 20 examples
+            if (resultBottom) {
+                const bottomShuffled = [...filtered].sort(() => Math.random() - 0.5);
+                let bottomHtml = '';
+                bottomShuffled.slice(0, 20).forEach(el => {
+                    bottomHtml += el.outerHTML;
+                });
+                resultBottom.innerHTML = bottomHtml;
+            }
         }
-        
-        // 👇 Randomize (Shuffle) करें
-        const shuffled = filtered.sort(() => Math.random() - 0.5);
-        
-        // 👇 Result में डालें
-        let html = '';
-        shuffled.forEach(el => {
-            html += el.outerHTML;
-        });
-        result.innerHTML = html;
+        return;
     }
-    return;
-}
 
     // ===== STEP 2: अगर Input भरा है – Actual Styles Generate करें =====
     const styles = stylesByCategory[currentFilter] || [];
@@ -1492,22 +1507,22 @@ if (!name) {
         return;
     }
 
-    // Randomize Styles
+    // ===== MAIN SECTION: Sabhi styles (random order) =====
     const shuffled = [...styles].sort(() => Math.random() - 0.5);
     result.innerHTML = '';
-
+    
     shuffled.forEach((style, index) => {
         const styled = style.prefix + convert(name, style.map) + style.suffix;
         const escaped = styled.replace(/'/g, "\\'").replace(/"/g, '&quot;');
-
+        
         const div = document.createElement('div');
         div.className = `style-card ${currentFilter}`;
         div.setAttribute('onclick', `copyText('${escaped}', this)`);
         div.setAttribute('title', 'Click to copy');
         div.innerHTML = `<div class="style-text">${styled}</div>`;
         result.appendChild(div);
-
-        // LINKS (61, 159, 179) – पहले जैसा ही रखें
+        
+        // Links at specific positions
         if (index === 61) {
             const linksDiv = document.createElement('div');
             linksDiv.className = 'style-card';
@@ -1558,6 +1573,42 @@ if (!name) {
             result.appendChild(linksDiv);
         }
     });
+
+    // ===== MID SECTION: 30 Random Styles =====
+    if (resultMid) {
+        const midShuffled = [...styles].sort(() => Math.random() - 0.5);
+        resultMid.innerHTML = '';
+        
+        midShuffled.slice(0, 30).forEach((style) => {
+            const styled = style.prefix + convert(name, style.map) + style.suffix;
+            const escaped = styled.replace(/'/g, "\\'").replace(/"/g, '&quot;');
+            
+            const div = document.createElement('div');
+            div.className = `style-card ${currentFilter}`;
+            div.setAttribute('onclick', `copyText('${escaped}', this)`);
+            div.setAttribute('title', 'Click to copy');
+            div.innerHTML = `<div class="style-text">${styled}</div>`;
+            resultMid.appendChild(div);
+        });
+    }
+
+    // ===== BOTTOM SECTION: 20 Random Styles =====
+    if (resultBottom) {
+        const bottomShuffled = [...styles].sort(() => Math.random() - 0.5);
+        resultBottom.innerHTML = '';
+        
+        bottomShuffled.slice(0, 20).forEach((style) => {
+            const styled = style.prefix + convert(name, style.map) + style.suffix;
+            const escaped = styled.replace(/'/g, "\\'").replace(/"/g, '&quot;');
+            
+            const div = document.createElement('div');
+            div.className = `style-card ${currentFilter}`;
+            div.setAttribute('onclick', `copyText('${escaped}', this)`);
+            div.setAttribute('title', 'Click to copy');
+            div.innerHTML = `<div class="style-text">${styled}</div>`;
+            resultBottom.appendChild(div);
+        });
+    }
 }
 
 // ===== SELECT CATEGORY =====
