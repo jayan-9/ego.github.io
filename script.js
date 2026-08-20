@@ -1446,7 +1446,7 @@ function refreshTop3Styles() {
     showToast('✨ New styles generated!');
 }
 
-// ===== GENERATE STYLES (DYNAMIC - NO HARD-CODED LIMITS) =====
+// 💔💔===== GENERATE STYLES (DYNAMIC - NO HARD-CODED LIMITS) =====
 function generateStyles() {
     const name = document.getElementById('nameInput')?.value.trim();
     const result = document.getElementById('result');
@@ -1527,7 +1527,7 @@ function generateStyles() {
     
     // Mid aur Bottom ke liye limits (dynamic)
     const midStyleLimit = Math.min(30, Math.floor(totalStyles * 0.15));     // 70 ya 25%
-    const bottomStyleLimit = Math.min(70, Math.floor(totalStyles * 0.25));  // 70 ya 25%
+    const bottomStyleLimit = Math.min(100, Math.floor(totalStyles * 0.25));  // 70 ya 25%
     const mainStyleLimit = totalStyles - midStyleLimit - bottomStyleLimit;   // Baaki sab main mein
     
     // Alag-alag portions (dynamic - koi duplicate nahi)
