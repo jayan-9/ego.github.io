@@ -3071,3 +3071,149 @@ body.dark-theme .mid-styles-section .section-header i,
 body.dark-theme .bottom-styles-section .section-header i {
     color: #ffd700 !important;
 }
+
+/* ===== TRENDING INFO SECTION ===== */
+.trending-info-section {
+    padding: 3rem 0;
+    background: transparent;
+}
+
+.trending-info-content {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 1.8;
+}
+
+/* ===== TITLE ===== */
+.trending-info-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.5px;
+}
+
+/* ===== SUBTITLE ===== */
+.trending-info-subtitle {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 1.5rem 0 0.8rem;
+}
+
+/* ===== TEXT ===== */
+.trending-info-text {
+    font-size: 1rem;
+    color: #333333;
+    margin-bottom: 1rem;
+    line-height: 1.8;
+}
+
+.trending-info-text strong {
+    color: #000000;
+    font-weight: 700;
+}
+
+/* ===== EXAMPLES LIST ===== */
+.trending-info-examples {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.trending-info-examples li {
+    font-size: 1rem;
+    color: #333333;
+    margin-bottom: 0.6rem;
+    line-height: 1.8;
+}
+
+.trending-info-examples strong {
+    color: #000000;
+    font-weight: 700;
+}
+
+/* ===== USES LIST ===== */
+.trending-info-uses {
+    list-style: none;
+    padding: 0;
+    margin: 0.8rem 0 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.trending-info-uses li {
+    font-size: 0.95rem;
+    color: #333333;
+}
+
+/* ===== FOOTER TEXT ===== */
+.trending-info-footer {
+    font-size: 1rem;
+    color: #333333;
+    margin-top: 1.5rem;
+    font-weight: 500;
+}
+
+/* ===== DARK THEME SUPPORT ===== */
+body.dark-theme .trending-info-section {
+    background: transparent;
+}
+
+body.dark-theme .trending-info-title {
+    color: #ffffff !important;
+}
+
+body.dark-theme .trending-info-subtitle {
+    color: #ffffff !important;
+}
+
+body.dark-theme .trending-info-text {
+    color: #cccccc !important;
+}
+
+body.dark-theme .trending-info-text strong {
+    color: #ffffff !important;
+}
+
+body.dark-theme .trending-info-examples li {
+    color: #cccccc !important;
+}
+
+body.dark-theme .trending-info-examples strong {
+    color: #ffffff !important;
+}
+
+body.dark-theme .trending-info-uses li {
+    color: #cccccc !important;
+}
+
+body.dark-theme .trending-info-footer {
+    color: #e0e0e0 !important;
+}
+
+@media (max-width: 768px) {
+    .trending-info-title {
+        font-size: 1.4rem;
+    }
+    
+    .trending-info-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .trending-info-text,
+    .trending-info-examples li,
+    .trending-info-uses li,
+    .trending-info-footer {
+        font-size: 0.9rem;
+    }
+    
+    .trending-info-uses {
+        flex-direction: column;
+        gap: 0.3rem;
+    }
+}
