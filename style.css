@@ -136,7 +136,7 @@ p { margin-bottom: 1rem; color: var(--gray); }
 .save-note:hover { background: var(--primary-dark); }
 .clear-note:hover { background: var(--gray); }
 
-//* ===== STICKY TOOLBAR (BOTTOM) ===== */
+/* ===== STICKY TOOLBAR (BOTTOM) ===== */
 .sticky-toolbar {
     position: sticky;
     bottom: 0;
