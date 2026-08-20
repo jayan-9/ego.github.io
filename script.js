@@ -1446,7 +1446,7 @@ function refreshTop3Styles() {
     showToast('✨ New styles generated!');
 }
 
-// ===== GENERATE STYLES (NO DUPLICATE - UNIQUE IN EVERY SECTION) =====
+// ===== GENERATE STYLES (DYNAMIC - NO HARD-CODED LIMITS) =====
 function generateStyles() {
     const name = document.getElementById('nameInput')?.value.trim();
     const result = document.getElementById('result');
@@ -1471,19 +1471,18 @@ function generateStyles() {
                 return;
             }
             
-            // ===== UNIQUE: Ek baar shuffle karo, phir alag-alag portions do =====
+            // ===== EXAMPLES: DYNAMIC LIMITS =====
             const shuffled = [...filtered].sort(() => Math.random() - 0.5);
             
-            // Main Section: 70% examples
-            const mainCount = Math.floor(shuffled.length * 0.7);
-            const mainExamples = shuffled.slice(0, mainCount);
+            // Har section ke liye percentage ya fixed number
+            const mainExampleLimit = Math.min(30, shuffled.length);  // 30 ya jitne hain
+            const midExampleLimit = Math.min(20, Math.max(0, shuffled.length - mainExampleLimit));  // 20 ya baaki
+            const bottomExampleLimit = Math.min(20, Math.max(0, shuffled.length - mainExampleLimit - midExampleLimit));  // 20 ya baaki
             
-            // Mid Section: 20% examples (jo main mein nahi)
-            const midCount = Math.floor(shuffled.length * 0.2);
-            const midExamples = shuffled.slice(mainCount, mainCount + midCount);
-            
-            // Bottom Section: 10% examples (jo main/mid mein nahi)
-            const bottomExamples = shuffled.slice(mainCount + midCount);
+            // Alag-alag portions (dynamic)
+            const mainExamples = shuffled.slice(0, mainExampleLimit);
+            const midExamples = shuffled.slice(mainExampleLimit, mainExampleLimit + midExampleLimit);
+            const bottomExamples = shuffled.slice(mainExampleLimit + midExampleLimit, mainExampleLimit + midExampleLimit + bottomExampleLimit);
             
             // Main Section
             let html = '';
@@ -1492,7 +1491,7 @@ function generateStyles() {
             });
             result.innerHTML = html;
             
-            // Mid Section - UNIQUE (20% examples)
+            // Mid Section
             if (resultMid) {
                 let midHtml = '';
                 midExamples.forEach(el => {
@@ -1501,7 +1500,7 @@ function generateStyles() {
                 resultMid.innerHTML = midHtml;
             }
             
-            // Bottom Section - UNIQUE (10% examples)
+            // Bottom Section
             if (resultBottom) {
                 let bottomHtml = '';
                 bottomExamples.forEach(el => {
@@ -1522,24 +1521,21 @@ function generateStyles() {
         return;
     }
 
-    // ===== UNIQUE: Ek baar shuffle karo, phir alag-alag portions do =====
+    // ===== GENERATED STYLES: DYNAMIC LIMITS (300+ ke liye ready) =====
     const shuffled = [...styles].sort(() => Math.random() - 0.5);
+    const totalStyles = shuffled.length;
     
-    // Sections ki limit set karo
-    const midLimit = Math.min(30, Math.floor(shuffled.length * 0.2));
-    const bottomLimit = Math.min(20, Math.floor(shuffled.length * 0.1));
-    const mainLimit = shuffled.length - midLimit - bottomLimit;
+    // Mid aur Bottom ke liye limits (dynamic)
+    const midStyleLimit = Math.min(30, Math.floor(totalStyles * 0.15));     // 70 ya 25%
+    const bottomStyleLimit = Math.min(70, Math.floor(totalStyles * 0.25));  // 70 ya 25%
+    const mainStyleLimit = totalStyles - midStyleLimit - bottomStyleLimit;   // Baaki sab main mein
     
-    // Main Section styles (pehle wale)
-    const mainStyles = shuffled.slice(0, mainLimit);
-    
-    // Mid Section styles (jo main mein nahi)
-    const midStyles = shuffled.slice(mainLimit, mainLimit + midLimit);
-    
-    // Bottom Section styles (jo main/mid mein nahi)
-    const bottomStyles = shuffled.slice(mainLimit + midLimit);
+    // Alag-alag portions (dynamic - koi duplicate nahi)
+    const mainStyles = shuffled.slice(0, mainStyleLimit);
+    const midStyles = shuffled.slice(mainStyleLimit, mainStyleLimit + midStyleLimit);
+    const bottomStyles = shuffled.slice(mainStyleLimit + midStyleLimit);
 
-    // ===== MAIN SECTION: Sabhi main styles =====
+    // ===== MAIN SECTION =====
     result.innerHTML = '';
     
     mainStyles.forEach((style, index) => {
@@ -1553,7 +1549,7 @@ function generateStyles() {
         div.innerHTML = `<div class="style-text">${styled}</div>`;
         result.appendChild(div);
         
-        // Links at specific positions (yeh sirf main section mein)
+        // Links (sirf main section mein)
         if (index === 61) {
             const linksDiv = document.createElement('div');
             linksDiv.className = 'style-card';
@@ -1605,7 +1601,7 @@ function generateStyles() {
         }
     });
 
-    // ===== MID SECTION: 30 Random Styles (UNIQUE - Main mein nahi) =====
+    // ===== MID SECTION: 70 Random Styles (UNIQUE) =====
     if (resultMid) {
         resultMid.innerHTML = '';
         
@@ -1622,7 +1618,7 @@ function generateStyles() {
         });
     }
 
-    // ===== BOTTOM SECTION: 20 Random Styles (UNIQUE - Main/Mid mein nahi) =====
+    // ===== BOTTOM SECTION: 70 Random Styles (UNIQUE) =====
     if (resultBottom) {
         resultBottom.innerHTML = '';
         
