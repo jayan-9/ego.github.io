@@ -134,23 +134,6 @@
      alt="Stylish Design"
      style="width: 100%; max-width: 600px; height: auto; display: block; margin: 20px auto; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
     
-    <!-- Sticky Toolbar -->
-    <div class="sticky-toolbar">
-        <div class="container">
-            <div class="toolbar-content">
-                <div class="input-group">
-                    <input type="text" id="nameInput" placeholder="Enter your name or nickname..." autocomplete="off">
-                    <button class="symbol-btn" onclick="openSymbolModal()" title="Insert Symbols">
-                        ☺
-                    </button>
-                </div>
-                <button class="generate-btn" onclick="generateStyles()">
-                    <i class="fas fa-wand-magic-sparkles"></i> Generate
-                </button>
-            </div>
-        </div>
-    </div>
-
     <div style="height: 10px;"></div>
 
     <!-- ===== ADVERTISEMENT LABEL ===== -->
@@ -3563,12 +3546,27 @@ function copyCurrentUrl() {
         </div>
     </footer>
 
+     <!-- Sticky Toolbar -->
+    <div class="sticky-toolbar">
+        <div class="container">
+            <div class="toolbar-content">
+                <div class="input-group">
+                    <input type="text" id="nameInput" placeholder="Enter your name or nickname..." autocomplete="off">
+                    <button class="symbol-btn" onclick="openSymbolModal()" title="Insert Symbols">
+                        ☺
+                    </button>
+                </div>
+                <button class="generate-btn" onclick="generateStyles()">
+                    <i class="fas fa-wand-magic-sparkles"></i> Generate
+                </button>
+            </div>
+        </div>
+    </div>
+
     <!-- Scroll to Top Button -->
     <button class="scroll-top" id="scrollTop">
         <i class="fas fa-chevron-up"></i>
     </button>
-
-   <div class="golden-brand">𖣿stylename.in</div>
 
     <!-- Toast Notification -->
     <div class="toast" id="toast"></div>
