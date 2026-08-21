@@ -3266,3 +3266,84 @@ body.dark-theme .trending-info-footer {
         gap: 0.3rem;
     }
 }
+
+/* ===== TRENDING SUGGESTIONS INFO ===== */
+.trending-suggestions-content {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 1.8;
+}
+
+.trending-suggestions-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 1.5rem;
+}
+
+.trending-suggestions-subtitle {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 1.5rem 0 0.5rem;
+}
+
+.trending-suggestions-text {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 0.8rem;
+}
+
+.trending-suggestions-examples {
+    list-style: none;
+    padding: 0;
+    margin: 0.5rem 0;
+}
+
+.trending-suggestions-examples li {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 0.4rem;
+}
+
+.trending-suggestions-footer {
+    margin-top: 1.5rem;
+    font-weight: 500;
+}
+
+/* ===== SEE MORE BUTTON ===== */
+.trending-see-more {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    background: #4f46e5;
+    color: white;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin: 1rem 0;
+    list-style: none; /* Arrow hide karo */
+}
+
+.trending-see-more:hover {
+    background: #3730a3;
+}
+
+.trending-details[open] .trending-see-more {
+    background: #3730a3;
+}
+
+/* Dark Theme */
+body.dark-theme .trending-suggestions-title,
+body.dark-theme .trending-suggestions-subtitle {
+    color: #ffffff !important;
+}
+
+body.dark-theme .trending-suggestions-text {
+    color: #cccccc !important;
+}
+
+body.dark-theme .trending-suggestions-examples li {
+    color: #aaaaaa !important;
+}
