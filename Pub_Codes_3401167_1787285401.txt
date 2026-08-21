@@ -1,0 +1,6 @@
+"zone name","placement name","placement id","code (smart link)"
+stylename.in,Popunder_1,30471808,"<script src=""https://pl30572307.effectivecpmnetwork.com/be/c4/b0/bec4b0a87fd53c1ec1cbc9ec29a35f36.js""></script>
+"
+stylename.in,Smartlink_1,30568098,https://www.effectivecpmnetwork.com/jj1g13d6ca?key=b155e721b25d2266279d81f83d350200
+stylename.in,SocialBar_1,30471807,"<script src=""https://pl30572306.effectivecpmnetwork.com/91/6e/0d/916e0d1b72a1107d1d259966e1744d54.js""></script>
+"
