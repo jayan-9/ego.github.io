@@ -1383,6 +1383,20 @@ function refreshTopNames() {
     topContainer.innerHTML = html;
 }
 
+// ===== DISCOVER MORE =====
+function toggleDiscover(header) {
+    const item = header.parentElement;
+    const allItems = document.querySelectorAll('.discover-item');
+    
+    allItems.forEach(other => {
+        if (other !== item && other.classList.contains('active')) {
+            other.classList.remove('active');
+        }
+    });
+    
+    item.classList.toggle('active');
+}
+
 // ===== CORE FUNCTIONS =====
 function convert(name, map) {
     return name.split("").map(ch => {
