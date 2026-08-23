@@ -184,7 +184,7 @@ p { margin-bottom: 1rem; color: var(--gray); }
     font-family: inherit;
     display: flex;
     flex-direction: column;
-    gap: 0.3rem;                          /* gap kam kiya */
+    gap: 0.9rem;                          /* gap kam kiya */
 }
 
 .style-card:hover {
