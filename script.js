@@ -1726,19 +1726,25 @@ currentMiniSuggestions = displaySuggestions;
             </div>
         `;
         
-        // 20 suggestions ke baad IMAGE ADD KARO
-        if (index === 19) {
+        // 20 suggestions ke baad IMAGE ADD KARO SMART LINK
+if (index === 19) {
     html += `
         <div style="grid-column: 1 / -1; margin: 20px 0; text-align: center;">
-            <img src="https://jayan-9.github.io/ego.github.io/stylish.jpg" 
-                 alt="Stylish Design"
-                 style="
-                    max-width: 100%;
-                    height: auto;
-                    border-radius: 16px;
-                    box-shadow: var(--shadow-lg);
-                    border: 1px solid var(--gray-light);
-                 ">
+            <a href="https://www.profitableratecpmnetwork.com/jj1g13d6ca?key=b155e721b25d2266279d81f83d350200"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                <img src="https://jayan-9.github.io/ego.github.io/stylish.jpg" 
+                     alt="Stylish Design"
+                     style="
+                        max-width: 100%;
+                        height: auto;
+                        border-radius: 16px;
+                        box-shadow: var(--shadow-lg);
+                        border: 1px solid var(--gray-light);
+                        cursor: pointer;
+                     ">
+            </a>
         </div>
     `;
 }
