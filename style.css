@@ -184,7 +184,7 @@ p { margin-bottom: 1rem; color: var(--gray); }
     font-family: inherit;
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;                          /* gap kam kiya */
+    gap: 0.3rem;                          /* gap kam kiya */
 }
 
 .style-card:hover {
@@ -193,7 +193,7 @@ p { margin-bottom: 1rem; color: var(--gray); }
 }
 
 .style-text {
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 400;
     color: #333;
     text-align: center;      /* ← CENTER */
@@ -202,7 +202,7 @@ p { margin-bottom: 1rem; color: var(--gray); }
     white-space: normal;                   /* text wrap hoga */
     overflow: visible;
     text-overflow: clip;
-    min-height: 40px;
+    min-height: 36px;
 }
 
 /* ===== DARK THEME FIX FOR STYLES ===== */
