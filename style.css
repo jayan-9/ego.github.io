@@ -155,115 +155,99 @@ p { margin-bottom: 1rem; color: var(--gray); }
 .category-btn i { font-size: 0.9rem; }
 
 /* ===== RESULTS SECTION ===== */
-.results-section { 
-    padding: 2rem 0; 
+.results-section {
+padding: 2rem 0;
 }
 
-.section-header { 
-    display: flex; 
-    justify-content: center;
-    align-items: center; 
-    margin-bottom: 2rem; 
+.section-header {
+display: flex;
+justify-content: center;
+align-items: center;
+margin-bottom: 2rem;
 }
 
 .results-grid {
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 0.7rem;
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+gap: 1rem;
 }
 
 .style-card {
-    background: white;                    /* light theme */
-    border: 1px solid #e0e0e0;
-    border-radius: 0;                     /* sharp corners */
-    padding: 8px 13px;
-    margin: 0;
-    transition: all 0.2s ease;
-    cursor: pointer;
-    width: 100%;
-    font-family: inherit;
-    display: flex;
-    flex-direction: column;
-    gap: 0.2rem;                          /* gap kam kiya */
+background: white;                  
+border: 1px solid #e0e0e0;
+border-radius: 0;                    
+padding: 12px 20px;
+margin: 0;
+transition: all 0.2s ease;
+cursor: pointer;
+width: 100%;
+font-family: inherit;
+display: flex;
+flex-direction: column;
+gap: 0.2rem;                         
 }
 
 .style-card:hover {
-    background: #f8f8f8;
-    border-color: #ccc;
+background: #f8f8f8;
+border-color: #ccc;
 }
 
 .style-text {
-    font-size: 1rem;
-    font-weight: 400;
-    color: #333;
-    text-align: center;      /* ← CENTER */
-    width: 100%;
-    word-break: break-word;                /* nowrap hatao */
-    white-space: normal;                   /* text wrap hoga */
-    overflow: visible;
-    text-overflow: clip;
-    min-height: 27px;
+font-size: 1rem;
+font-weight: 400;
+color: #333;
+text-align: center;      
+width: 100%;
+word-break: break-word;               
+white-space: normal;                   
+overflow: visible;
+text-overflow: clip;
+min-height: 37px;
 }
 
-/* ===== DARK THEME FIX FOR STYLES ===== */
 .dark-theme .style-card {
-    background: #2a2a2a;        /* dark background */
-    border-color: #444;          /* dark border */
-    color: #f0f0f0;              /* light text */
+background: #2a2a2a;       
+border-color: #444;          
+color: #f0f0f0;              
 }
 
 .dark-theme .style-card:hover {
-    background: #333333;          /* slightly lighter on hover */
-    border-color: var(--primary); /* primary color border on hover */
+background: #333333;          
+border-color: var(--primary); 
 }
 
 .dark-theme .style-text {
-    color: #f0f0f0;               /* light text color */
+color: #f0f0f0;               /* light text color */
 }
 
 /* Example styles (agar alag class use ho rahi hai) */
 .dark-theme .example-card,
 .dark-theme .name-card,
 .dark-theme .suggestion-card {
-    background: #2a2a2a;
-    border-color: #444;
-    color: #f0f0f0;
+background: #2a2a2a;
+border-color: #444;
+color: #f0f0f0;
 }
 
 /* Agar koi background light class use ho rahi hai */
 .dark-theme .bg-light,
 .dark-theme .bg-gray,
 .dark-theme .bg-white {
-    background: #2a2a2a !important;
+background: #2a2a2a !important;
 }
 
 /* Copy button dark theme */
 .dark-theme .copy-btn,
 .dark-theme .copy-btn-small {
-    background: #3a3a3a;
-    color: #f0f0f0;
-    border-color: #555;
+background: #3a3a3a;
+color: #f0f0f0;
+border-color: #555;
 }
 
 .dark-theme .copy-btn:hover,
 .dark-theme .copy-btn-small:hover {
-    background: var(--primary);
-    color: white;
-}
-
-@media (max-width: 600px) {
-    .results-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 6px;
-    }
-
-    .style-card {
-        padding: 6px 8px;
-    }
-
-    .style-text {
-        font-size: 0.85rem;
-        min-height: 24px;
-    }
+background: var(--primary);
+color: white;
 }
 
 /* ===== SUGGESTIONS TRAY ===== */
