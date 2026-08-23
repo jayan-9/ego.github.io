@@ -167,16 +167,15 @@ p { margin-bottom: 1rem; color: var(--gray); }
 }
 
 .results-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 0.7rem;
 }
 
 .style-card {
     background: white;                    /* light theme */
     border: 1px solid #e0e0e0;
     border-radius: 0;                     /* sharp corners */
-    padding: 12px 20px;
+    padding: 8px 13px;
     margin: 0;
     transition: all 0.2s ease;
     cursor: pointer;
@@ -202,7 +201,7 @@ p { margin-bottom: 1rem; color: var(--gray); }
     white-space: normal;                   /* text wrap hoga */
     overflow: visible;
     text-overflow: clip;
-    min-height: 37px;
+    min-height: 27px;
 }
 
 /* ===== DARK THEME FIX FOR STYLES ===== */
@@ -249,6 +248,22 @@ p { margin-bottom: 1rem; color: var(--gray); }
 .dark-theme .copy-btn-small:hover {
     background: var(--primary);
     color: white;
+}
+
+@media (max-width: 600px) {
+    .results-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 6px;
+    }
+
+    .style-card {
+        padding: 6px 8px;
+    }
+
+    .style-text {
+        font-size: 0.85rem;
+        min-height: 24px;
+    }
 }
 
 /* ===== SUGGESTIONS TRAY ===== */
