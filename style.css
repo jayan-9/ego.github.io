@@ -137,118 +137,90 @@ p { margin-bottom: 1rem; color: var(--gray); }
 .clear-note:hover { background: var(--gray); }
 
 
-/* ===== CATEGORIES ===== */
-.categories-section { padding: 1.5rem 0; background: var(--light); }
+/* ============================================
+   CATEGORIES
+   ============================================ */
+.categories-section {
+    padding: 1rem 0;
+}
 .categories-scroll {
-    display: flex; gap: 0.75rem; overflow-x: auto; padding-bottom: 0.5rem; scrollbar-width: thin;
+    display: flex;
+    gap: 0.75rem;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+    scrollbar-width: thin;
 }
 .categories-scroll::-webkit-scrollbar { height: 4px; }
-.categories-scroll::-webkit-scrollbar-track { background: var(--gray-light); border-radius: 2px; }
-.categories-scroll::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 2px; }
+.categories-scroll::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 10px; }
 .category-btn {
-    padding: 0.75rem 1.5rem; border: 2px solid var(--gray-light); background: var(--light);
-    border-radius: 50px; font-size: 0.9rem; font-weight: 500; cursor: pointer;
-    transition: var(--transition); white-space: nowrap; display: flex; align-items: center; gap: 0.5rem;
+    padding: 0.5rem 1.5rem;
+    border: 2px solid var(--gray-light);
+    background: var(--light);
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
 }
-.category-btn:hover { border-color: var(--primary); transform: translateY(-2px); }
-.category-btn.active { background: var(--primary); color: white; border-color: var(--primary); }
-.category-btn i { font-size: 0.9rem; }
+.category-btn:hover { border-color: var(--primary); }
+.category-btn.active {
+    background: var(--primary);
+    color: #fff;
+    border-color: var(--primary);
+}
 
-/* ===== RESULTS SECTION ===== */
+/* ============================================
+   RESULTS GRID & STYLE CARDS
+   ============================================ */
 .results-section {
-padding: 2rem 0;
+    padding: 2rem 0;
 }
-
 .section-header {
-display: flex;
-justify-content: center;
-align-items: center;
-margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
 }
-
 .results-grid {
-display: grid;
-grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
-gap: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 0.75rem;
 }
-
 .style-card {
-background: white;                  
-border: 1px solid #e0e0e0;
-border-radius: 0;                    
-padding: 12px 20px;
-margin: 0;
-transition: all 0.2s ease;
-cursor: pointer;
-width: 100%;
-font-family: inherit;
-display: flex;
-flex-direction: column;
-gap: 0.2rem;                         
+    background: var(--light);
+    border: 1px solid var(--gray-light);
+    border-radius: var(--radius);
+    padding: 0.8rem 1rem;
+    cursor: pointer;
+    transition: var(--transition);
+    text-align: center;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-
 .style-card:hover {
-background: #f8f8f8;
-border-color: #ccc;
+    border-color: var(--primary);
+    background: rgba(37, 99, 235, 0.04);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
 }
-
 .style-text {
-font-size: 1rem;
-font-weight: 400;
-color: #333;
-text-align: center;      
-width: 100%;
-word-break: break-word;               
-white-space: normal;                   
-overflow: visible;
-text-overflow: clip;
-min-height: 37px;
+    font-size: 1rem;
+    word-break: break-word;
+    color: var(--dark);
 }
+/* category borders (light) */
+.style-card.love { border-left: 4px solid #ec4899; }
+.style-card.gamer { border-left: 4px solid #3b82f6; }
+.style-card.fancy { border-left: 4px solid #fbbf24; }
+.style-card.font { border-left: 4px solid #94a3b8; }
 
-.dark-theme .style-card {
-background: #2a2a2a;       
-border-color: #444;          
-color: #f0f0f0;              
-}
-
-.dark-theme .style-card:hover {
-background: #333333;          
-border-color: var(--primary); 
-}
-
-.dark-theme .style-text {
-color: #f0f0f0;               /* light text color */
-}
-
-/* Example styles (agar alag class use ho rahi hai) */
-.dark-theme .example-card,
-.dark-theme .name-card,
-.dark-theme .suggestion-card {
-background: #2a2a2a;
-border-color: #444;
-color: #f0f0f0;
-}
-
-/* Agar koi background light class use ho rahi hai */
-.dark-theme .bg-light,
-.dark-theme .bg-gray,
-.dark-theme .bg-white {
-background: #2a2a2a !important;
-}
-
-/* Copy button dark theme */
-.dark-theme .copy-btn,
-.dark-theme .copy-btn-small {
-background: #3a3a3a;
-color: #f0f0f0;
-border-color: #555;
-}
-
-.dark-theme .copy-btn:hover,
-.dark-theme .copy-btn-small:hover {
-background: var(--primary);
-color: white;
-}
 
 /* ===== SUGGESTIONS TRAY ===== */
 .suggestions-tray {
