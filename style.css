@@ -413,48 +413,34 @@ p { margin-bottom: 1rem; color: var(--gray); }
 .footer-section a:hover { color: white; }
 .footer-bottom { text-align: center; padding-top: 2rem; border-top: 1px solid #374151; color: #9ca3af; font-size: 0.9rem; }
 
-/* ===== SCROLL TO TOP ===== */
+/* ============================================
+   SCROLL TO TOP
+   ============================================ */
 .scroll-top {
-    position: fixed; 
-    bottom: 100px;                    /* ← 2rem → 100px (toolbar se upar) */
-    right: 20px;                      /* ← 2rem → 20px */
-    width: 45px;                      /* ← 50px → 45px (thoda chota) */
-    height: 45px;                     /* ← 50px → 45px */
-    background: var(--primary); 
-    color: white; 
-    border: none; 
+    position: fixed;
+    bottom: 85px;
+    right: 20px;
+    width: 44px;
+    height: 44px;
+    background: var(--primary);
+    color: #fff;
+    border: none;
     border-radius: 50%;
-    cursor: pointer; 
-    display: none; 
-    align-items: center; 
+    cursor: pointer;
+    display: none;
+    align-items: center;
     justify-content: center;
-    font-size: 1.1rem;                /* ← 1.25rem → 1.1rem */
-    transition: var(--transition); 
-    z-index: 998;                     /* ← 100 → 998 (toolbar 999 se kam) */
+    font-size: 1.1rem;
     box-shadow: var(--shadow-lg);
+    transition: var(--transition);
+    z-index: 998;
 }
 .scroll-top.show { display: flex; }
-.scroll-top:hover { 
-    background: var(--primary-dark); 
-    transform: translateY(-5px); 
+.scroll-top:hover {
+    background: var(--primary-dark);
+    transform: translateY(-4px);
 }
 
-/* ===== DARK THEME ===== */
-body.dark-theme .scroll-top {
-    background: #4a4a8a;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
-}
-
-/* ===== MOBILE RESPONSIVE ===== */
-@media (max-width: 768px) {
-    .scroll-top {
-        bottom: 150px;                /* Mobile mein toolbar zyada height ka */
-        right: 15px;
-        width: 40px;
-        height: 40px;
-        font-size: 1rem;
-    }
-}
 /* ===== TOAST ===== */
 .toast {
     position: fixed; bottom: 1.5rem; left: 1.5rem;
