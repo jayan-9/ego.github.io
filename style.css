@@ -1473,79 +1473,6 @@ p { margin-bottom: 1rem; color: var(--gray); }
 .golden-brand:hover {
     opacity: 0.8;
 }
-/* ===== CATEGORY WISE STYLE CARD COLORS ===== */
-
-/* Love Category - Pink Border Only (Text Normal) */
-.style-card.love {
-    border-left: 5px solid #ff69b4;
-    background: linear-gradient(135deg, rgba(255,105,180,0.05), rgba(255,105,180,0.02));
-}
-.style-card.love:hover {
-    border-color: #ff69b4;
-    box-shadow: 0 5px 15px rgba(255,105,180,0.2);
-}
-/* Text color normal rakho - pink nahi */
-.style-card.love .style-text {
-    color: inherit;  /* 👈 normal black/white */
-}
-
-/* Gamer Category - Blue Border Only */
-.style-card.gamer {
-    border-left: 5px solid #3b82f6;
-    background: linear-gradient(135deg, rgba(59,130,246,0.05), rgba(59,130,246,0.02));
-}
-.style-card.gamer:hover {
-    border-color: #3b82f6;
-    box-shadow: 0 5px 15px rgba(59,130,246,0.2);
-}
-.style-card.gamer .style-text {
-    color: inherit;
-}
-
-/* Fancy Category - Gold Border Only */
-.style-card.fancy {
-    border-left: 5px solid #FFD700;
-    background: linear-gradient(135deg, rgba(255,215,0,0.05), rgba(255,215,0,0.02));
-}
-.style-card.fancy:hover {
-    border-color: #FFD700;
-    box-shadow: 0 5px 15px rgba(255,215,0,0.2);
-}
-.style-card.fancy .style-text {
-    color: inherit;
-}
-
-/* Font Category - Gray Border Only */
-.style-card.font {
-    border-left: 5px solid #a0a0a0;
-    background: linear-gradient(135deg, rgba(160,160,160,0.05), rgba(160,160,160,0.02));
-}
-.style-card.font:hover {
-    border-color: #a0a0a0;
-    box-shadow: 0 5px 15px rgba(160,160,160,0.2);
-}
-.style-card.font .style-text {
-    color: inherit;
-}
-
-/* Dark Theme Support - Background only, text white automatically */
-.dark-theme .style-card.love {
-    background: linear-gradient(135deg, rgba(255,105,180,0.1), rgba(255,105,180,0.03));
-}
-.dark-theme .style-card.gamer {
-    background: linear-gradient(135deg, rgba(59,130,246,0.1), rgba(59,130,246,0.03));
-}
-.dark-theme .style-card.fancy {
-    background: linear-gradient(135deg, rgba(255,215,0,0.1), rgba(255,215,0,0.03));
-}
-.dark-theme .style-card.font {
-    background: linear-gradient(135deg, rgba(160,160,160,0.1), rgba(160,160,160,0.03));
-}
-
-/* Dark theme mein text white automatically aayega */
-.dark-theme .style-card .style-text {
-    color: #f0f0f0 !important;
-}
 
 /* Sidebar Premium Item */
 .premium-sidebar {
@@ -2307,256 +2234,61 @@ p { margin-bottom: 1rem; color: var(--gray); }
 .dark-theme .blog-hindi .blog-card-tag { background: rgba(255,107,0,0.2); color: #ff8c00; }
 
 /* ============================================
-   FAQS SECTION - TOP NOTCH
+   FAQ SECTION
    ============================================ */
-
 .faq-wrapper {
     max-width: 800px;
-    margin: 40px auto;
-    padding: 20px;
-    background: var(--light);
-    border-radius: 20px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
-    transition: background 0.3s, box-shadow 0.3s;
+    margin: 2.5rem auto;
+    padding: 1.5rem;
 }
-
-.dark-theme .faq-wrapper {
-    background: #1a1a2e;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-}
-
-/* ===== FAQ HEADER ===== */
-.faq-header {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.faq-icon {
-    font-size: 2.8rem;
-    display: block;
-    margin-bottom: 6px;
-}
-
-.faq-title {
-    font-size: 2rem;
-    font-weight: 700;
-    color: var(--dark);
-    margin: 0 0 6px 0;
-    letter-spacing: -0.5px;
-}
-
-.dark-theme .faq-title {
-    color: #f0f0f0;
-}
-
-.faq-subtitle {
-    font-size: 1rem;
-    color: var(--gray);
-    margin: 0;
-}
-
-.dark-theme .faq-subtitle {
-    color: #94a3b8;
-}
-
-/* ===== FAQ CONTAINER ===== */
-.faq-container {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-/* ===== FAQ ITEM ===== */
+.faq-header { text-align: center; margin-bottom: 2rem; }
+.faq-icon { font-size: 2.5rem; display: block; }
+.faq-title { font-size: 2rem; margin: 0.2rem 0; }
+.faq-subtitle { color: var(--gray); }
+.faq-container { display: flex; flex-direction: column; gap: 0.8rem; }
 .faq-item {
-    background: #f8fafc;
-    border-radius: 14px;
-    border: 1px solid #e8ecf0;
+    background: var(--light);
+    border: 1px solid var(--gray-light);
+    border-radius: var(--radius);
     overflow: hidden;
-    transition: all 0.3s ease;
+    transition: var(--transition);
 }
-
-.dark-theme .faq-item {
-    background: #0f172a;
-    border-color: #2d3a4f;
-}
-
-.faq-item:hover {
-    border-color: #d4af37;
-}
-
-.dark-theme .faq-item:hover {
-    border-color: #d4af37;
-}
-
-/* ===== FAQ QUESTION BUTTON ===== */
+.faq-item.active { border-color: var(--primary); }
 .faq-question {
     width: 100%;
-    padding: 16px 20px;
+    padding: 0.8rem 1.2rem;
     background: transparent;
     border: none;
     cursor: pointer;
     display: flex;
     align-items: center;
-    gap: 14px;
+    gap: 0.8rem;
     font-size: 1rem;
     font-weight: 600;
     color: var(--dark);
     text-align: left;
-    transition: all 0.3s ease;
-    font-family: inherit;
+    transition: var(--transition);
 }
-
-.dark-theme .faq-question {
-    color: #f0f0f0;
-}
-
-.faq-question:hover {
-    background: rgba(79, 70, 229, 0.04);
-}
-
-.dark-theme .faq-question:hover {
-    background: rgba(129, 140, 248, 0.06);
-}
-
-.faq-q-icon {
-    font-size: 1.3rem;
-    flex-shrink: 0;
-    width: 30px;
-    text-align: center;
-}
-
-.faq-q-text {
-    flex: 1;
-}
-
+.faq-question:hover { background: var(--gray-light); }
+.faq-q-icon { font-size: 1.2rem; }
+.faq-q-text { flex: 1; }
 .faq-toggle {
-    font-size: 1.5rem;
-    font-weight: 300;
-    color: #94a3b8;
-    transition: all 0.3s ease;
-    flex-shrink: 0;
-    width: 24px;
-    text-align: center;
+    font-size: 1.3rem;
+    color: var(--gray);
+    transition: var(--transition);
 }
-
-.dark-theme .faq-toggle {
-    color: #64748b;
-}
-
-/* ===== FAQ ANSWER ===== */
+.faq-item.active .faq-toggle { transform: rotate(180deg); }
 .faq-answer {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.4s ease, padding 0.3s ease, opacity 0.3s ease;
-    opacity: 0;
-    padding: 0 20px;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    padding: 0 1.2rem;
 }
-
-.faq-answer p {
-    margin: 0;
-    padding: 0 0 18px 0;
-    font-size: 0.95rem;
-    line-height: 1.7;
-    color: #475569;
-}
-
-.dark-theme .faq-answer p {
-    color: #b8b0c8;
-}
-
-.faq-answer strong {
-    color: var(--dark);
-}
-
-.dark-theme .faq-answer strong {
-    color: #d4af37;
-}
-
-/* ===== ACTIVE STATE ===== */
-.faq-item.active {
-    border-color: #4f46e5;
-    background: #f0f0ff;
-}
-
-.dark-theme .faq-item.active {
-    border-color: #818cf8;
-    background: #111827;
-}
-
-.faq-item.active .faq-question {
-    color: #4f46e5;
-}
-
-.dark-theme .faq-item.active .faq-question {
-    color: #818cf8;
-}
-
-.faq-item.active .faq-toggle {
-    color: #4f46e5;
-    transform: rotate(180deg);
-}
-
-.dark-theme .faq-item.active .faq-toggle {
-    color: #818cf8;
-}
-
 .faq-item.active .faq-answer {
-    max-height: 300px;
-    opacity: 1;
-    padding: 0 20px 4px 20px;
+    max-height: 400px;
+    padding: 0 1.2rem 1rem;
 }
-
-/* ===== RESPONSIVE ===== */
-@media (max-width: 600px) {
-    .faq-wrapper {
-        padding: 16px;
-        margin: 20px auto;
-        border-radius: 14px;
-    }
-    .faq-title {
-        font-size: 1.5rem;
-    }
-    .faq-subtitle {
-        font-size: 0.9rem;
-    }
-    .faq-question {
-        padding: 14px 16px;
-        font-size: 0.9rem;
-        gap: 10px;
-    }
-    .faq-q-icon {
-        font-size: 1.1rem;
-        width: 24px;
-    }
-    .faq-answer p {
-        font-size: 0.85rem;
-    }
-    .faq-item.active .faq-answer {
-        padding: 0 16px 4px 16px;
-    }
-}
-
-@media (max-width: 400px) {
-    .faq-question {
-        padding: 12px 14px;
-        font-size: 0.82rem;
-        flex-wrap: wrap;
-        gap: 6px;
-    }
-    .faq-q-text {
-        flex: 1 1 100%;
-        order: 2;
-    }
-    .faq-q-icon {
-        order: 1;
-    }
-    .faq-toggle {
-        order: 3;
-    }
-    .faq-answer p {
-        font-size: 0.8rem;
-    }
-}
+.faq-answer p { margin: 0; color: var(--gray-dark); }
 
 /* ============================================
    PRO TIPS SECTION - SIMPLE LIST STYLE
