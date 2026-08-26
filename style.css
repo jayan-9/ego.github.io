@@ -469,23 +469,31 @@ p { margin-bottom: 1rem; color: var(--gray); }
 }
 .symbol-btn:hover { background: var(--gray); }
 .generate-btn {
-    padding: 0.5rem 1.2rem;
+    padding: 0.4rem 0.8rem;          /* ← Aur chota */
     background: var(--primary);
     color: #fff;
     border: none;
     border-radius: var(--radius);
     font-weight: 600;
-    font-size: 0.85rem;
+    font-size: 0.75rem;               /* ← Chota font */
     cursor: pointer;
     transition: var(--transition);
     white-space: nowrap;
     flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2rem;                      /* ← Icon aur text ke beech gap */
+    height: 38px;                     /* ← Fixed height */
 }
 .generate-btn:hover {
     background: var(--primary-dark);
     transform: translateY(-2px);
 }
-.generate-btn i { margin-right: 0.3rem; }
+.generate-btn i { 
+    font-size: 0.8rem;                /* ← Chota icon */
+    margin-right: 0;                  /* ← Remove margin (gap se handle hoga) */
+}
 
 /* ============================================
    SCROLL TO TOP
