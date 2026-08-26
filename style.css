@@ -414,7 +414,7 @@ p { margin-bottom: 1rem; color: var(--gray); }
 .footer-bottom { text-align: center; padding-top: 2rem; border-top: 1px solid #374151; color: #9ca3af; font-size: 0.9rem; }
 
 /* ============================================
-   STICKY TOOLBAR
+   STICKY TOOLBAR (FIXED BOTTOM)
    ============================================ */
 .sticky-toolbar {
     position: fixed;
@@ -427,18 +427,21 @@ p { margin-bottom: 1rem; color: var(--gray); }
     z-index: 999;
     border-top: 1px solid var(--gray-light);
 }
+
 .toolbar-content {
     display: flex;
     gap: 0.5rem;
     align-items: center;
     flex-wrap: nowrap;
 }
+
 .input-group {
     flex: 1;
     display: flex;
     gap: 0.3rem;
     min-width: 0;
 }
+
 .input-group input {
     flex: 1;
     padding: 0.5rem 0.7rem;
@@ -448,11 +451,14 @@ p { margin-bottom: 1rem; color: var(--gray); }
     background: var(--light);
     color: var(--dark);
     min-width: 0;
+    height: 38px;
 }
+
 .input-group input:focus {
     outline: none;
     border-color: var(--primary);
 }
+
 .symbol-btn {
     width: 38px;
     height: 38px;
@@ -467,15 +473,19 @@ p { margin-bottom: 1rem; color: var(--gray); }
     justify-content: center;
     transition: var(--transition);
 }
-.symbol-btn:hover { background: var(--gray); }
+
+.symbol-btn:hover { 
+    background: var(--gray); 
+}
+
 .generate-btn {
-    padding: 0.4rem 0.8rem;          /* ← Aur chota */
+    padding: 0.4rem 0.8rem;
     background: var(--primary);
     color: #fff;
     border: none;
     border-radius: var(--radius);
     font-weight: 600;
-    font-size: 0.75rem;               /* ← Chota font */
+    font-size: 0.75rem;
     cursor: pointer;
     transition: var(--transition);
     white-space: nowrap;
@@ -483,16 +493,119 @@ p { margin-bottom: 1rem; color: var(--gray); }
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.2rem;                      /* ← Icon aur text ke beech gap */
-    height: 38px;                     /* ← Fixed height */
+    gap: 0.2rem;
+    height: 38px;
 }
+
 .generate-btn:hover {
     background: var(--primary-dark);
     transform: translateY(-2px);
 }
+
 .generate-btn i { 
-    font-size: 0.8rem;                /* ← Chota icon */
-    margin-right: 0;                  /* ← Remove margin (gap se handle hoga) */
+    font-size: 0.8rem;
+}
+
+/* ============================================
+   DARK THEME
+   ============================================ */
+body.dark-theme .sticky-toolbar {
+    background: #1a1a2e;
+    border-top: 1px solid #2a2a4a;
+}
+
+body.dark-theme .input-group input {
+    background: #16213e;
+    color: #e0e0e0;
+    border-color: #2a2a4a;
+}
+
+body.dark-theme .symbol-btn {
+    background: #2a2a4a;
+    border-color: #2a2a4a;
+    color: #e0e0e0;
+}
+
+/* ============================================
+   BODY PADDING (Toolbar ke liye space)
+   ============================================ */
+body {
+    padding-bottom: 70px;
+}
+
+/* ============================================
+   MOBILE FIX - SABSE LAST MEIN (OVERRIDE)
+   ============================================ */
+@media (max-width: 768px) {
+    .sticky-toolbar {
+        padding: 0.4rem 0;
+    }
+    
+    .toolbar-content {
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        gap: 0.3rem;
+    }
+    
+    .input-group {
+        flex: 1;
+        min-width: 0;
+        width: auto !important;
+    }
+    
+    .input-group input {
+        flex: 1;
+        min-width: 0;
+        padding: 0.4rem 0.5rem;
+        font-size: 0.8rem;
+        height: 34px;
+    }
+    
+    .symbol-btn {
+        width: 34px !important;
+        height: 34px !important;
+        font-size: 0.85rem;
+        flex-shrink: 0;
+    }
+    
+    .generate-btn {
+        width: auto !important;
+        padding: 0.3rem 0.5rem !important;
+        font-size: 0.7rem !important;
+        height: 34px;
+        flex-shrink: 0;
+    }
+    
+    .generate-btn i {
+        font-size: 0.7rem;
+    }
+    
+    body {
+        padding-bottom: 60px;
+    }
+}
+
+/* ===== VERY SMALL MOBILE ===== */
+@media (max-width: 380px) {
+    .generate-btn {
+        padding: 0.25rem 0.4rem !important;
+        font-size: 0.65rem !important;
+    }
+    
+    .generate-btn i {
+        display: none;
+    }
+    
+    .input-group input {
+        font-size: 0.75rem;
+        padding: 0.3rem 0.4rem;
+    }
+    
+    .symbol-btn {
+        width: 30px !important;
+        height: 30px !important;
+        font-size: 0.75rem;
+    }
 }
 
 /* ============================================
