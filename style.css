@@ -2757,3 +2757,28 @@ body.dark-theme .discover-example-text {
     }
 }
 
+/* ============================================
+   KEYWORDS SECTION
+   ============================================ */
+.keywords-section {
+    padding: 2rem 0;
+    text-align: center;
+}
+.keywords-section ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.8rem 1.5rem;
+    list-style: none;
+    padding: 0;
+}
+.keywords-section li {
+    font-size: 0.9rem;
+    color: var(--gray);
+}
+.keywords-section a {
+    color: var(--primary);
+    text-decoration: none;
+}
+.keywords-section a:hover { text-decoration: underline; }
+
