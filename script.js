@@ -118,41 +118,25 @@ function generateStyles() {
         div.innerHTML = `<div class="style-text">${styled}</div>`;
         result.appendChild(div);
         
-      // Links (sirf main section mein)
-if (index === 61) {
-    const linksDiv = document.createElement('div');
-    linksDiv.className = 'style-card';
-    linksDiv.style.padding = '20px';
-    linksDiv.style.background = '#f5f5f5';
-    linksDiv.style.border = '1px solid #ddd';
-    linksDiv.style.borderRadius = '10px';
-    linksDiv.style.cursor = 'default';
+      // Links (sirf main section mein)  
+        if (index === 61) {  
+            const linksDiv = document.createElement('div');  
+            linksDiv.className = 'style-card';  
+            linksDiv.style.padding = '20px';  
+            linksDiv.style.background = '#f5f5f5';  
+            linksDiv.style.border = '1px solid #ddd';  
+            linksDiv.style.borderRadius = '10px';  
+            linksDiv.style.cursor = 'default';  
+            linksDiv.innerHTML = `  
+                <div style="display: flex; flex-direction: column; gap: 12px;">  
+                    <a href="anime-stylish-names-collection.html" style="color: #333; text-decoration: none; border-bottom: 1px solid #ccc; padding: 8px 0; display: block; font-size: 1.1rem;">🌀 Anime Names</a>  
+                    <a href="pubg-stylish-names-with-symbols.html" style="color: #333; text-decoration: none; border-bottom: 1px solid #ccc; padding: 8px 0; display: block; font-size: 1.1rem;">🎯 PUBG Names</a>  
+                    <a href="attitude-names-for-boys.html" style="color: #333; text-decoration: none; border-bottom: 1px solid #ccc; padding: 8px 0; display: block; font-size: 1.1rem;">⚡ Attitude Names</a>  
+                </div>  
+            `;  
+            result.appendChild(linksDiv);  
+        }
 
-    const smartLink = 'https://www.profitableratecpmnetwork.com/jj1g13d6ca?key=b155e721b25d2266279d81f83d350200';
-
-    linksDiv.innerHTML = `
-        <div style="display: flex; flex-direction: column; gap: 12px;">
-
-            <a href="${smartLink}" target="_blank"
-               style="color: #333; text-decoration: none; border-bottom: 1px solid #ccc; padding: 8px 0; display: block; font-size: 1.1rem;">
-               🌀 Anime Names
-            </a>
-
-            <a href="${smartLink}" target="_blank"
-               style="color: #333; text-decoration: none; border-bottom: 1px solid #ccc; padding: 8px 0; display: block; font-size: 1.1rem;">
-               🎯 PUBG Names
-            </a>
-
-            <a href="${smartLink}" target="_blank"
-               style="color: #333; text-decoration: none; border-bottom: 1px solid #ccc; padding: 8px 0; display: block; font-size: 1.1rem;">
-               ⚡ Stylish Bio
-            </a>
-
-        </div>
-    `;
-
-    result.appendChild(linksDiv);
-}
         if (index === 159) {
             const linksDiv = document.createElement('div');
             linksDiv.className = 'style-card';
@@ -261,15 +245,22 @@ function loadMiniSuggestions() {
                 </button>
             </div>
         `;
-        if (index === 19) {
-            html += `
-                <div style="grid-column: 1 / -1; margin: 20px 0; text-align: center;">
-                    <img src="https://jayan-9.github.io/ego.github.io/stylish.jpg" 
-                         alt="Stylish Design"
-                         style="max-width: 100%; height: auto; border-radius: 16px; box-shadow: var(--shadow-lg); border: 1px solid var(--gray-light);">
-                </div>
-            `;
-        }
+        // 20 suggestions ke baad IMAGE ADD KARO
+if (index === 19) {
+    html += `
+        <div style="grid-column: 1 / -1; margin: 20px 0; text-align: center;">
+            <img src="https://jayan-9.github.io/ego.github.io/stylish.jpg" 
+                 alt="Stylish Design"
+                 style="
+                    max-width: 100%;
+                    height: auto;
+                    border-radius: 16px;
+                    box-shadow: var(--shadow-lg);
+                    border: 1px solid var(--gray-light);
+                 ">
+        </div>
+    `;
+}
     });
     miniGrid.innerHTML = html;
 }
