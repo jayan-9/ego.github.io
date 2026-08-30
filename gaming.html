@@ -223,19 +223,28 @@
 
     <div style="height: 200px;"></div>
 
-         <!-- 👇 YEH LINE ADD KARO COSE YOUR CATAGORY -->
+               <!-- 👇 YEH LINE ADD KARO COSE YOUR CATAGORY -->
       <div style="text-align: center; margin: 15px 0; padding: 8px 0; background: var(--gray-light); width: 100%; border-top: 1px solid #333; border-bottom: 1px solid #333;">
     <p style="margin: 0; color: var(--dark); font-size: 1rem; font-weight: 500; letter-spacing: 0.5px;">
-           👇🏼 First Click The Gamer icon(button) 👇🏼
+          Choose Your Your Gaming Name Style
     </p>
 </div> 
     
-   <!-- Categories -->
+    <!-- Categories -->
     <div class="categories-section">
         <div class="container">
             <div class="categories-scroll">
+                <button class="category-btn active" onclick="selectCategory('love')">
+                    <i class="fas fa-heart"></i> Love Style
+                </button>
                 <button class="category-btn" onclick="selectCategory('gamer')">
-                    <i class="fas fa-gamepad"></i> Gamer
+                    <i class="fas fa-gamepad"></i>Full Gamer Mood
+                </button>
+                <button class="category-btn" onclick="selectCategory('fancy')">
+                    <i class="fas fa-crown"></i> Fancy Style
+                </button>
+                <button class="category-btn" onclick="selectCategory('font')">
+                    <i class="fas fa-font"></i> Simple Fonts
                 </button>
             </div>
         </div>
