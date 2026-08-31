@@ -2805,3 +2805,47 @@ body.dark-theme .discover-example-text {
         font-size: 14px;
     }
 }
+
+/* ===== ADVERTISEMENT LABEL ===== */
+. ad-label {
+    text-align : center;
+    margin : 12 px auto 8 px auto;
+    padding : 0 ;
+    opacity : 0.5 ;
+    transition : opacity 0.3 s ease;
+    display : flex;
+    justify-content : center;
+    align-items : center;
+    width : 100 % ;
+}
+
+. ad-label span {
+    font-size : 0.45 rem ;
+    font-weight : 300 ;
+    letter-spacing : 2 px ;
+    text-transform : uppercase;
+    color : # 1a1a2e ;
+    background : rgba ( 0 , 0 , 0 , 0.03 );
+    padding : 2 px 12 px ;
+    border-radius : 30 px ;
+    backdrop-filter : blur ( 2 px );
+    -webkit-backdrop-filter : blur ( 2 px );
+    border : 1 px solid rgba ( 0 , 0 , 0 , 0.04 );
+    display : inline-block;
+}
+
+/* ===== DARK THEME SUPPORT ===== */
+. dark-theme . ad-label span {
+    color : # c0c0c0 ;
+    background : rgba ( 255 , 255 , 255 , 0.03 );
+    border : 1 px solid rgba ( 255 , 255 , 255 , 0.04 );
+}
+
+/* ===== RESPONSIVE ===== */
+@media ( max-width : 600 px ) {
+    . ad-label span {
+        font-size : 0.4 rem ;
+        letter-spacing : 1.5 px ;
+        padding : 1 px 10 px ;
+    }
+}
