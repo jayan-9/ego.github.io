@@ -1858,27 +1858,27 @@ body {
     border: 1px solid rgba(255,255,255,0.3);
 }
 
-/* ===== CARD COLOURS ===== */
-.blog-instagram { background: linear-gradient(145deg, #fce4ec, #f8bbd0); }
-.blog-snapchat { background: linear-gradient(145deg, #fffde7, #fff9c4); border-color: #fffc00; }
-.blog-trending { background: linear-gradient(145deg, #fef3c7, #fde68a); }
-.blog-blue { background: linear-gradient(145deg, #e8f4fd, #d4e8f5); }
-.blog-dark { background: linear-gradient(145deg, #1e293b, #2d3a4f); color: #fff; }
+/* ===== CARD COLOURS - SIMPLE (No Gradients) ===== */
+.blog-instagram { background: #f5f5f5; border-left: 3px solid #e1306c; }
+.blog-snapchat { background: #f5f5f5; border-left: 3px solid #fffc00; }
+.blog-trending { background: #f5f5f5; border-left: 3px solid #f59e0b; }
+.blog-blue { background: #f5f5f5; border-left: 3px solid #3b82f6; }
+.blog-dark { background: #1a1a2e; color: #fff; border-left: 3px solid #555; }
 .blog-dark .blog-card-title { color: #fff; }
-.blog-dark .blog-card-tag { background: rgba(255,255,255,0.15); color: #fff; }
-.blog-fire { background: linear-gradient(145deg, #fff3e0, #ffcc80); }
-.blog-tiktok { background: linear-gradient(145deg, #1a1a2e, #2d2d44); color: #fff; }
+.blog-dark .blog-card-tag { background: rgba(255,255,255,0.1); color: #fff; }
+.blog-fire { background: #f5f5f5; border-left: 3px solid #ef4444; }
+.blog-tiktok { background: #1a1a2e; color: #fff; border-left: 3px solid #00f2ea; }
 .blog-tiktok .blog-card-title { color: #fff; }
-.blog-tiktok .blog-card-tag { background: rgba(255,255,255,0.15); color: #fff; }
-.blog-attitude { background: linear-gradient(145deg, #1a0a2e, #2d1a4e); color: #fff; }
+.blog-tiktok .blog-card-tag { background: rgba(255,255,255,0.1); color: #fff; }
+.blog-attitude { background: #1a0a2e; color: #fff; border-left: 3px solid #8b5cf6; }
 .blog-attitude .blog-card-title { color: #fff; }
-.blog-attitude .blog-card-tag { background: rgba(255,255,255,0.15); color: #fff; }
-.blog-bio { background: linear-gradient(145deg, #e0f7fa, #b2ebf2); }
-.blog-anime { background: linear-gradient(145deg, #ede7f6, #d1c4e9); }
-.blog-royal { background: linear-gradient(145deg, #fef9e6, #f5e6b8); border-color: #d4af37; }
-.blog-cute { background: linear-gradient(145deg, #fce4ec, #f8e8e8); }
-.blog-words { background: linear-gradient(145deg, #f3e5f5, #e8eaf6); border-color: #7c4dff; }
-
+.blog-attitude .blog-card-tag { background: rgba(255,255,255,0.1); color: #fff; }
+.blog-bio { background: #f5f5f5; border-left: 3px solid #06b6d4; }
+.blog-anime { background: #f5f5f5; border-left: 3px solid #a855f7; }
+.blog-royal { background: #f5f5f5; border-left: 3px solid #d4af37; }
+.blog-cute { background: #f5f5f5; border-left: 3px solid #ec4899; }
+.blog-words { background: #f5f5f5; border-left: 3px solid #7c4dff; }
+    
 /* ===== DARK THEME ===== */
 .dark-theme .blog-title { color: #f0f0f0; }
 .dark-theme .blog-subtitle { color: #94a3b8; }
