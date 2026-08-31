@@ -1954,138 +1954,91 @@ body {
     .blog-card-tag { font-size: 0.5rem; padding: 2px 8px; }
 }
 
+/* ===== BLOG CARDS - SIMPLE (No Gradients) ===== */
 .blog-hindi {
-    background: linear-gradient(145deg, #ff9933, #ffffff, #138808);
-    border-color: #ff6b00;
+    background: #f5f5f5;
+    border-left: 3px solid #ff6b00;
 }
 .blog-hindi .blog-card-title { color: #1a1a2e; }
-.blog-hindi .blog-card-tag { background: rgba(255,255,255,0.7); color: #1a1a2e; }
+.blog-hindi .blog-card-tag { background: rgba(0,0,0,0.05); color: #1a1a2e; }
 
-/* Dark Theme */
-.dark-theme .blog-hindi {
-    background: linear-gradient(145deg, #1a0a00, #0d0d0d, #0a1a0a);
-    border-color: #ff6b00;
-}
-.dark-theme .blog-hindi .blog-card-title { color: #f0e0f0; }
-.dark-theme .blog-hindi .blog-card-tag { background: rgba(255,107,0,0.2); color: #ff8c00; }
-
-/* Tips Guide - Purple */
 .blog-tips {
-    background: linear-gradient(145deg, #ede7f6, #d1c4e9);
-    border-color: #7c3aed;
+    background: #f5f5f5;
+    border-left: 3px solid #7c3aed;
 }
-.blog-tips .blog-card-title {
-    color: #1a1a2e;
-}
-.blog-tips .blog-card-tag {
-    background: rgba(124, 58, 237, 0.15);
-    color: #7c3aed;
-}
+.blog-tips .blog-card-title { color: #1a1a2e; }
+.blog-tips .blog-card-tag { background: rgba(0,0,0,0.05); color: #7c3aed; }
 
-/* Dark Theme */
-.dark-theme .blog-tips {
-    background: linear-gradient(145deg, #1a0a2a, #2d1035);
-    border-color: #7c3aed;
-}
-.dark-theme .blog-tips .blog-card-title {
-    color: #f0e0f0;
-}
-.dark-theme .blog-tips .blog-card-tag {
-    background: rgba(124, 58, 237, 0.2);
-    color: #a855f7;
-    }
-
-/* FAQ - Blue/Teal */
 .blog-faq {
-    background: linear-gradient(145deg, #e0f7fa, #b2ebf2);
-    border-color: #14b8a6;
+    background: #f5f5f5;
+    border-left: 3px solid #14b8a6;
 }
-.blog-faq .blog-card-title {
-    color: #1a1a2e;
-}
-.blog-faq .blog-card-tag {
-    background: rgba(20, 184, 166, 0.15);
-    color: #0d9488;
-}
+.blog-faq .blog-card-title { color: #1a1a2e; }
+.blog-faq .blog-card-tag { background: rgba(0,0,0,0.05); color: #0d9488; }
 
-/* Dark Theme */
-.dark-theme .blog-faq {
-    background: linear-gradient(145deg, #0a1a1a, #0d2520);
-    border-color: #14b8a6;
-}
-.dark-theme .blog-faq .blog-card-title {
-    color: #f0e0f0;
-}
-.dark-theme .blog-faq .blog-card-tag {
-    background: rgba(20, 184, 166, 0.2);
-    color: #2dd4bf;
-}
-
-/* Romantic - Pink */
 .blog-romantic {
-    background: linear-gradient(145deg, #fce4ec, #f8bbd0);
-    border-color: #e91e8c;
+    background: #f5f5f5;
+    border-left: 3px solid #e91e8c;
 }
 .blog-romantic .blog-card-title { color: #1a0a2e; }
-.blog-romantic .blog-card-tag { background: rgba(233,30,140,0.15); color: #e91e8c; }
+.blog-romantic .blog-card-tag { background: rgba(0,0,0,0.05); color: #e91e8c; }
+
+.blog-guide {
+    background: #f5f5f5;
+    border-left: 3px solid #7c3aed;
+}
+.blog-guide .blog-card-title { color: #1a1a2e; }
+.blog-guide .blog-card-tag { background: rgba(0,0,0,0.05); color: #7c3aed; }
+
+.blog-crazy {
+    background: #1a0a00;
+    border-left: 3px solid #ff6b00;
+}
+.blog-crazy .blog-card-title { color: #ff6b00; }
+.blog-crazy .blog-card-tag { background: rgba(255,107,0,0.1); color: #ff6b00; }
+
+/* ===== DARK THEME - SIMPLE CARDS ===== */
+.dark-theme .blog-hindi {
+    background: #1a1a1a !important;
+    border-left-color: #ff6b00 !important;
+}
+.dark-theme .blog-hindi .blog-card-title { color: #f0e0f0 !important; }
+.dark-theme .blog-hindi .blog-card-tag { background: rgba(255,107,0,0.1) !important; color: #ff8c00 !important; }
+
+.dark-theme .blog-tips {
+    background: #1a1a1a !important;
+    border-left-color: #7c3aed !important;
+}
+.dark-theme .blog-tips .blog-card-title { color: #f0e0f0 !important; }
+.dark-theme .blog-tips .blog-card-tag { background: rgba(124,58,237,0.1) !important; color: #a855f7 !important; }
+
+.dark-theme .blog-faq {
+    background: #1a1a1a !important;
+    border-left-color: #14b8a6 !important;
+}
+.dark-theme .blog-faq .blog-card-title { color: #f0e0f0 !important; }
+.dark-theme .blog-faq .blog-card-tag { background: rgba(20,184,166,0.1) !important; color: #2dd4bf !important; }
 
 .dark-theme .blog-romantic {
-    background: linear-gradient(145deg, #1a0a15, #2d1025);
-    border-color: #e91e8c;
+    background: #1a1a1a !important;
+    border-left-color: #e91e8c !important;
 }
-.dark-theme .blog-romantic .blog-card-title { color: #f0e0e8; }
-.dark-theme .blog-romantic .blog-card-tag { background: rgba(233,30,140,0.2); color: #ec4899; }
-
-/* Girls & Boys Guide - Purple/Pink */
-.blog-guide {
-    background: linear-gradient(145deg, #ede7f6, #f8bbd0);
-    border-color: #7c3aed;
-}
-.blog-guide .blog-card-title {
-    color: #1a1a2e;
-}
-.blog-guide .blog-card-tag {
-    background: rgba(124, 58, 237, 0.15);
-    color: #7c3aed;
-}
+.dark-theme .blog-romantic .blog-card-title { color: #f0e0e8 !important; }
+.dark-theme .blog-romantic .blog-card-tag { background: rgba(233,30,140,0.1) !important; color: #ec4899 !important; }
 
 .dark-theme .blog-guide {
-    background: linear-gradient(145deg, #1a0a2a, #2d1025);
-    border-color: #7c3aed;
+    background: #1a1a1a !important;
+    border-left-color: #7c3aed !important;
 }
-.dark-theme .blog-guide .blog-card-title {
-    color: #f0e0f0;
-}
-.dark-theme .blog-guide .blog-card-tag {
-    background: rgba(124, 58, 237, 0.2);
-    color: #a855f7;
-}
-
-/* Crazy - Neon Orange */
-.blog-crazy {
-    background: linear-gradient(145deg, #1a0a00, #2d1500);
-    border-color: #ff6b00;
-}
-.blog-crazy .blog-card-title {
-    color: #ff6b00;
-}
-.blog-crazy .blog-card-tag {
-    background: rgba(255, 107, 0, 0.15);
-    color: #ff6b00;
-}
+.dark-theme .blog-guide .blog-card-title { color: #f0e0f0 !important; }
+.dark-theme .blog-guide .blog-card-tag { background: rgba(124,58,237,0.1) !important; color: #a855f7 !important; }
 
 .dark-theme .blog-crazy {
-    background: linear-gradient(145deg, #0d0d0d, #1a0a00);
-    border-color: #ff6b00;
+    background: #0d0d0d !important;
+    border-left-color: #ff6b00 !important;
 }
-.dark-theme .blog-crazy .blog-card-title {
-    color: #ff9500;
-}
-.dark-theme .blog-crazy .blog-card-tag {
-    background: rgba(255, 107, 0, 0.2);
-    color: #ff9500;
-}
-
+.dark-theme .blog-crazy .blog-card-title { color: #ff9500 !important; }
+.dark-theme .blog-crazy .blog-card-tag { background: rgba(255,107,0,0.1) !important; color: #ff9500 !important; }
 /* ============================================
    FAQ SECTION
    ============================================ */
