@@ -245,23 +245,20 @@ function loadMiniSuggestions() {
                 </button>
             </div>
         `;
-        // 20 suggestions ke baad IMAGE ADD KARO
-if (index === 19) {
+      if (index === 19) {
     html += `
-        <div style="grid-column: 1 / -1; margin: 20px 0; text-align: center;">
-            <img src="https://jayan-9.github.io/ego.github.io/stylish.jpg" 
+        <div style="grid-column: 1 / -1; margin: 15px 0; text-align: center;">
+            <img src="https://jayan-9.github.io/ego.github.io/stylish.webp" 
                  alt="Stylish Design"
-                 style="
-                    max-width: 100%;
-                    height: auto;
-                    border-radius: 16px;
-                    box-shadow: var(--shadow-lg);
-                    border: 1px solid var(--gray-light);
-                 ">
+                 loading="lazy"
+                 width="800"
+                 height="400"
+                 style="max-width: 100%; height: auto; border-radius: 12px; border: 1px solid #e0e0e0;">
         </div>
     `;
 }
-    });
+    
+});
     miniGrid.innerHTML = html;
 }
 
