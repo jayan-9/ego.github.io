@@ -420,7 +420,7 @@ function loadNote() {
 function initScrollTop() {
     const btn = document.getElementById('scrollTop');
     if (!btn) return;
-    window.addEventListener('scroll', () => btn.classList.toggle('show', window.pageYOffset > 300));
+    window.addEventListener('scroll', () => btn.classList.toggle('show', window.pageYOffset > 300), { passive: true });
     btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 }
 
@@ -500,20 +500,25 @@ document.addEventListener('DOMContentLoaded', function() {
         if (document.getElementById('themeStatus')) document.getElementById('themeStatus').textContent = 'Dark';
     }
     loadNote();
-    document.getElementById('menuToggle')?.addEventListener('click', toggleSidebar);
+    document.getElementById('menuToggle')?.addEventListener('click', function(e) {
+    e.preventDefault();
+    toggleSidebar();
+});
     document.getElementById('closeSidebar')?.addEventListener('click', closeSidebar);
     document.getElementById('themeToggle')?.addEventListener('click', toggleTheme);
     document.getElementById('noteText')?.addEventListener('input', updateNoteCount);
     document.getElementById('nameInput')?.addEventListener('keypress', e => { if (e.key === 'Enter') generateStyles(); });
 
     let autoGenerateTimer;
-    document.getElementById('nameInput').addEventListener('input', function() {
-        clearTimeout(autoGenerateTimer);
-        autoGenerateTimer = setTimeout(() => {
+document.getElementById('nameInput').addEventListener('input', function() {
+    clearTimeout(autoGenerateTimer);
+    autoGenerateTimer = setTimeout(() => {
+        requestAnimationFrame(() => {
             generateStyles();
-        }, 500);
-    });
-
+        });
+    }, 600);
+});
+    
     document.querySelectorAll('.modal').forEach(m => {
         m.addEventListener('click', function(e) {
             if (e.target === this) {
