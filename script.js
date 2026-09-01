@@ -118,7 +118,7 @@ function generateStyles() {
         div.innerHTML = `<div class="style-text">${styled}</div>`;
         result.appendChild(div);
         
-    // Links (sirf main section mein) - LAZY LOAD VERSION
+   // ===== LINKS SECTION (SIRF EK - INDEX 61) =====
 if (index === 61) {  
     const linksDiv = document.createElement('div');  
     linksDiv.className = 'style-card';  
@@ -127,7 +127,8 @@ if (index === 61) {
     linksDiv.style.border = '1px solid #ddd';  
     linksDiv.style.borderRadius = '10px';  
     linksDiv.style.cursor = 'default';  
-    linksDiv.style.minHeight = '120px'; // placeholder height
+    linksDiv.style.minHeight = '180px'; // heading + links ke liye extra height
+    linksDiv.style.margin = '30px 0'; // upar-neeche gap
     linksDiv.innerHTML = `<div style="text-align:center;color:#999;padding:20px;">Loading links...</div>`;  
     result.appendChild(linksDiv);  
     
@@ -136,76 +137,36 @@ if (index === 61) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 linksDiv.innerHTML = `  
-                    <div style="display: flex; flex-direction: column; gap: 12px;">  
-                        <a href="intagram.html" style="color: #333; text-decoration: none; border-bottom: 1px solid #ccc; padding: 8px 0; display: block; font-size: 1.1rem;">🅾Iɴᴛᴀɢʀᴀᴍ Nᴀᴍᴇ Gᴇɴᴇʀᴀᴛᴏʀ</a>  
-                        <a href="love.html" style="color: #333; text-decoration: none; border-bottom: 1px solid #ccc; padding: 8px 0; display: block; font-size: 1.1rem;">❣ⓁⓄⓋⒺ ⓃⒶⓂⒺ ⒼⒺⓃⒺⓇⒶⓉⒺ</a>  
-                        <a href="attitude-names-for-boys.html" style="color: #333; text-decoration: none; border-bottom: 1px solid #ccc; padding: 8px 0; display: block; font-size: 1.1rem;">⚡ Attitude Names</a>  
+                    <div style="padding: 10px 0;">  
+                        <!-- UPAR 60px GAP (margin-top) -->
+                        <div style="margin-top: 60px;"></div>  
+                        
+                        <!-- HEADING -->
+                        <h3 style="text-align: center; font-size: 1.2rem; font-weight: 700; color: #4f46e5; margin: 0 0 20px 0; letter-spacing: 0.5px; text-transform: uppercase;">  
+                            🔍 Explore More Stylish Names  
+                        </h3>  
+                        
+                        <!-- LINKS -->
+                        <div style="display: flex; flex-direction: column; gap: 12px; max-width: 500px; margin: 0 auto;">  
+                            <a href="intagram.html" style="color: #333; text-decoration: none; border-bottom: 1px solid #ccc; padding: 10px 0; display: block; font-size: 1.05rem; transition: all 0.2s ease;" onmouseover="this.style.color='#4f46e5'" onmouseout="this.style.color='#333'">  
+                                🅾 Iɴᴛᴀɢʀᴀᴍ Sᴛʏʟᴇɴᴀᴍᴇ  
+                            </a>  
+                            <a href="love.html" style="color: #333; text-decoration: none; border-bottom: 1px solid #ccc; padding: 10px 0; display: block; font-size: 1.05rem; transition: all 0.2s ease;" onmouseover="this.style.color='#4f46e5'" onmouseout="this.style.color='#333'">  
+                                L𖹭ᴠᴇ Sᴛʏʟᴇɴᴀᴍᴇ  
+                            </a>  
+                            <a href="attitude.html" style="color: #333; text-decoration: none; border-bottom: 1px solid #ccc; padding: 10px 0; display: block; font-size: 1.05rem; transition: all 0.2s ease;" onmouseover="this.style.color='#4f46e5'" onmouseout="this.style.color='#333'">  
+                                😈 Aττɪτυɗε ѕτγℓεηαмε  
+                            </a>  
+                        </div>  
+                        
+                        <!-- NICHE 60px GAP (margin-bottom) -->
+                        <div style="margin-bottom: 60px;"></div>  
                     </div>  
                 `;  
                 observer.disconnect(); // ek baar load ho gaya toh observe karna band karo
             }
         });
     }, { rootMargin: '200px' }); // 200px pehle hi load karna shuru karo
-    
-    observer.observe(linksDiv);
-}
-        
-       // Index 159 - Lazy Load
-if (index === 159) {
-    const linksDiv = document.createElement('div');
-    linksDiv.className = 'style-card';
-    linksDiv.style.padding = '20px';
-    linksDiv.style.background = '#f5f5f5';
-    linksDiv.style.border = '1px solid #ddd';
-    linksDiv.style.borderRadius = '10px';
-    linksDiv.style.cursor = 'default';
-    linksDiv.style.minHeight = '100px';
-    linksDiv.innerHTML = `<div style="text-align:center;color:#999;padding:20px;">Loading links...</div>`;
-    result.appendChild(linksDiv);
-    
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                linksDiv.innerHTML = `
-                    <div style="display: flex; flex-direction: column; gap: 12px;">
-                        <a href="crazy.html" style="color: #333; text-decoration: none; border-bottom: 1px solid #ccc; padding: 8px 0; display: block; font-size: 1.1rem;">🤪ⲥгคⲹⲩ ⲛคʍⲉ⳽</a>
-                        <a href="attitude.html" style="color: #333; text-decoration: none; border-bottom: 1px solid #ccc; padding: 8px 0; display: block; font-size: 1.1rem;">👿Aᴛᴛɪᴛᴜᴅᴇ Nᴀᴍᴇ Gᴇɴᴇᴛᴏʀ</a>
-                    </div>
-                `;
-                observer.disconnect();
-            }
-        });
-    }, { rootMargin: '200px' });
-    
-    observer.observe(linksDiv);
-}
-
-// Index 179 - Lazy Load
-if (index === 179) {
-    const linksDiv = document.createElement('div');
-    linksDiv.className = 'style-card';
-    linksDiv.style.padding = '20px';
-    linksDiv.style.background = '#f5f5f5';
-    linksDiv.style.border = '1px solid #ddd';
-    linksDiv.style.borderRadius = '10px';
-    linksDiv.style.cursor = 'default';
-    linksDiv.style.minHeight = '100px';
-    linksDiv.innerHTML = `<div style="text-align:center;color:#999;padding:20px;">Loading links...</div>`;
-    result.appendChild(linksDiv);
-    
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                linksDiv.innerHTML = `
-                    <div style="display: flex; flex-direction: column; gap: 12px;">
-                        <a href="royal-and-vip-names.html" style="color: #333; text-decoration: none; border-bottom: 1px solid #ccc; padding: 8px 0; display: block; font-size: 1.1rem;">👑 Royal & VIP</a>
-                        <a href="social-media-bio-ideas-for-whatsapp-instagram.html" style="color: #333; text-decoration: none; border-bottom: 1px solid #ccc; padding: 8px 0; display: block; font-size: 1.1rem;">💬 Bio Ideas</a>
-                    </div>
-                `;
-                observer.disconnect();
-            }
-        });
-    }, { rootMargin: '200px' });
     
     observer.observe(linksDiv);
 }
