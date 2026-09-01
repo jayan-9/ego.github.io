@@ -2528,3 +2528,31 @@ body.dark-theme .discover-example-text {
     }
 }
 
+/* ===== WELCOME TEXT ===== */
+
+.welcome-container {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 20px;
+}
+
+.welcome-heading {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 6px;
+}
+
+.welcome-text {
+    font-size: 0.8rem;
+    color: #555;
+    margin: 0;
+}
+
+.dark-theme .welcome-heading {
+    color: #f0f0f0;
+}
+
+.dark-theme .welcome-text {
+    color: #aaa;
+}
