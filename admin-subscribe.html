@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head><title>Subscribers</title><style>body{background:#0a0a0c;color:white;font-family:monospace;padding:20px;}</style></head>
+<body>
+<h2 style="color:#FFD700;">📋 Golden Attach Subscribers</h2>
+<pre id="userList" style="background:#1a1a1f;padding:20px;border-radius:15px;"></pre>
+<script>
+    let users = JSON.parse(localStorage.getItem('goldenUsers') || '[]');
+    document.getElementById('userList').innerText = JSON.stringify(users, null, 2);
+</script>
+</body>
+</html>
