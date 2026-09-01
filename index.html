@@ -2193,40 +2193,7 @@ function copyCurrentUrl() {
 
     <!-- Toast Notification -->
     <div class="toast" id="toast"></div>
-
-  <!-- ===== DATA & SCRIPTS ===== -->
-<script src="script.js" defer></script>
-        <script src="data.js" defer></script>
-
-    <script>
-    // ===== FAQ TOGGLE =====
-    document.addEventListener('DOMContentLoaded', function() {
-        const faqItems = document.querySelectorAll('.faq-item');
-        
-        faqItems.forEach(item => {
-            const question = item.querySelector('.faq-question');
-            
-            question.addEventListener('click', function() {
-                // Close all other FAQs
-                faqItems.forEach(other => {
-                    if (other !== item && other.classList.contains('active')) {
-                        other.classList.remove('active');
-                        const toggle = other.querySelector('.faq-toggle');
-                        if (toggle) toggle.textContent = '+';
-                    }
-                });
-                
-                // Toggle current FAQ
-                item.classList.toggle('active');
-                const toggle = item.querySelector('.faq-toggle');
-                if (toggle) {
-                    toggle.textContent = item.classList.contains('active') ? '−' : '+';
-                }
-            });
-        });
-    });
-</script>
-
+ 
   <!-- ===== SEO DATA – GOOGLE BOT KE LIYE ===== -->
 <div id="seo-data" style="display:none;">
 
@@ -7802,5 +7769,46 @@ function copyCurrentUrl() {
     <span data-name="White Club">♧</span>
 </div>
 </div>  
+
+        
+<!-- FAQ Script -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+
+        if (question) {
+            question.addEventListener('click', function() {
+
+                faqItems.forEach(other => {
+                    if (other !== item && other.classList.contains('active')) {
+                        other.classList.remove('active');
+
+                        const toggle = other.querySelector('.faq-toggle');
+                        if (toggle) toggle.textContent = '+';
+                    }
+                });
+
+                item.classList.toggle('active');
+
+                const toggle = item.querySelector('.faq-toggle');
+
+                if (toggle) {
+                    toggle.textContent =
+                        item.classList.contains('active') ? '−' : '+';
+                }
+            });
+        }
+    });
+});
+</script>
+                                                                                      
+  <!-- ===== DATA & SCRIPTS ===== -->
+<script src="script.js" defer></script>
+<script src="data.js" defer></script>
+                                  
+       
    </body>
 </html>
