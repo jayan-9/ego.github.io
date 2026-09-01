@@ -118,57 +118,97 @@ function generateStyles() {
         div.innerHTML = `<div class="style-text">${styled}</div>`;
         result.appendChild(div);
         
-      // Links (sirf main section mein)  
-        if (index === 61) {  
-            const linksDiv = document.createElement('div');  
-            linksDiv.className = 'style-card';  
-            linksDiv.style.padding = '20px';  
-            linksDiv.style.background = '#f5f5f5';  
-            linksDiv.style.border = '1px solid #ddd';  
-            linksDiv.style.borderRadius = '10px';  
-            linksDiv.style.cursor = 'default';  
-            linksDiv.innerHTML = `  
-                <div style="display: flex; flex-direction: column; gap: 12px;">  
-                    <a href="anime-stylish-names-collection.html" style="color: #333; text-decoration: none; border-bottom: 1px solid #ccc; padding: 8px 0; display: block; font-size: 1.1rem;">🌀 Anime Names</a>  
-                    <a href="pubg-stylish-names-with-symbols.html" style="color: #333; text-decoration: none; border-bottom: 1px solid #ccc; padding: 8px 0; display: block; font-size: 1.1rem;">🎯 PUBG Names</a>  
-                    <a href="attitude-names-for-boys.html" style="color: #333; text-decoration: none; border-bottom: 1px solid #ccc; padding: 8px 0; display: block; font-size: 1.1rem;">⚡ Attitude Names</a>  
-                </div>  
-            `;  
-            result.appendChild(linksDiv);  
-        }
+    // Links (sirf main section mein) - LAZY LOAD VERSION
+if (index === 61) {  
+    const linksDiv = document.createElement('div');  
+    linksDiv.className = 'style-card';  
+    linksDiv.style.padding = '20px';  
+    linksDiv.style.background = '#f5f5f5';  
+    linksDiv.style.border = '1px solid #ddd';  
+    linksDiv.style.borderRadius = '10px';  
+    linksDiv.style.cursor = 'default';  
+    linksDiv.style.minHeight = '120px'; // placeholder height
+    linksDiv.innerHTML = `<div style="text-align:center;color:#999;padding:20px;">Loading links...</div>`;  
+    result.appendChild(linksDiv);  
+    
+    // 🔥 Lazy load with Intersection Observer
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                linksDiv.innerHTML = `  
+                    <div style="display: flex; flex-direction: column; gap: 12px;">  
+                        <a href="intagram.html" style="color: #333; text-decoration: none; border-bottom: 1px solid #ccc; padding: 8px 0; display: block; font-size: 1.1rem;">🅾Iɴᴛᴀɢʀᴀᴍ Nᴀᴍᴇ Gᴇɴᴇʀᴀᴛᴏʀ</a>  
+                        <a href="love.html" style="color: #333; text-decoration: none; border-bottom: 1px solid #ccc; padding: 8px 0; display: block; font-size: 1.1rem;">❣ⓁⓄⓋⒺ ⓃⒶⓂⒺ ⒼⒺⓃⒺⓇⒶⓉⒺ</a>  
+                        <a href="attitude-names-for-boys.html" style="color: #333; text-decoration: none; border-bottom: 1px solid #ccc; padding: 8px 0; display: block; font-size: 1.1rem;">⚡ Attitude Names</a>  
+                    </div>  
+                `;  
+                observer.disconnect(); // ek baar load ho gaya toh observe karna band karo
+            }
+        });
+    }, { rootMargin: '200px' }); // 200px pehle hi load karna shuru karo
+    
+    observer.observe(linksDiv);
+}
+        
+       // Index 159 - Lazy Load
+if (index === 159) {
+    const linksDiv = document.createElement('div');
+    linksDiv.className = 'style-card';
+    linksDiv.style.padding = '20px';
+    linksDiv.style.background = '#f5f5f5';
+    linksDiv.style.border = '1px solid #ddd';
+    linksDiv.style.borderRadius = '10px';
+    linksDiv.style.cursor = 'default';
+    linksDiv.style.minHeight = '100px';
+    linksDiv.innerHTML = `<div style="text-align:center;color:#999;padding:20px;">Loading links...</div>`;
+    result.appendChild(linksDiv);
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                linksDiv.innerHTML = `
+                    <div style="display: flex; flex-direction: column; gap: 12px;">
+                        <a href="crazy.html" style="color: #333; text-decoration: none; border-bottom: 1px solid #ccc; padding: 8px 0; display: block; font-size: 1.1rem;">🤪ⲥгคⲹⲩ ⲛคʍⲉ⳽</a>
+                        <a href="attitude.html" style="color: #333; text-decoration: none; border-bottom: 1px solid #ccc; padding: 8px 0; display: block; font-size: 1.1rem;">👿Aᴛᴛɪᴛᴜᴅᴇ Nᴀᴍᴇ Gᴇɴᴇᴛᴏʀ</a>
+                    </div>
+                `;
+                observer.disconnect();
+            }
+        });
+    }, { rootMargin: '200px' });
+    
+    observer.observe(linksDiv);
+}
 
-        if (index === 159) {
-            const linksDiv = document.createElement('div');
-            linksDiv.className = 'style-card';
-            linksDiv.style.padding = '20px';
-            linksDiv.style.background = '#f5f5f5';
-            linksDiv.style.border = '1px solid #ddd';
-            linksDiv.style.borderRadius = '10px';
-            linksDiv.style.cursor = 'default';
-            linksDiv.innerHTML = `
-                <div style="display: flex; flex-direction: column; gap: 12px;">
-                    <a href="pubg-stylish-names-with-symbols.html" style="color: #333; text-decoration: none; border-bottom: 1px solid #ccc; padding: 8px 0; display: block; font-size: 1.1rem;">🎯 PUBG Names</a>
-                    <a href="attitude-names-for-boys.html" style="color: #333; text-decoration: none; border-bottom: 1px solid #ccc; padding: 8px 0; display: block; font-size: 1.1rem;">⚡ Attitude Names</a>
-                </div>
-            `;
-            result.appendChild(linksDiv);
-        }
-        if (index === 179) {
-            const linksDiv = document.createElement('div');
-            linksDiv.className = 'style-card';
-            linksDiv.style.padding = '20px';
-            linksDiv.style.background = '#f5f5f5';
-            linksDiv.style.border = '1px solid #ddd';
-            linksDiv.style.borderRadius = '10px';
-            linksDiv.style.cursor = 'default';
-            linksDiv.innerHTML = `
-                <div style="display: flex; flex-direction: column; gap: 12px;">
-                    <a href="royal-and-vip-names.html" style="color: #333; text-decoration: none; border-bottom: 1px solid #ccc; padding: 8px 0; display: block; font-size: 1.1rem;">👑 Royal & VIP</a>
-                    <a href="social-media-bio-ideas-for-whatsapp-instagram.html" style="color: #333; text-decoration: none; border-bottom: 1px solid #ccc; padding: 8px 0; display: block; font-size: 1.1rem;">💬 Bio Ideas</a>
-                </div>
-            `;
-            result.appendChild(linksDiv);
-        }
+// Index 179 - Lazy Load
+if (index === 179) {
+    const linksDiv = document.createElement('div');
+    linksDiv.className = 'style-card';
+    linksDiv.style.padding = '20px';
+    linksDiv.style.background = '#f5f5f5';
+    linksDiv.style.border = '1px solid #ddd';
+    linksDiv.style.borderRadius = '10px';
+    linksDiv.style.cursor = 'default';
+    linksDiv.style.minHeight = '100px';
+    linksDiv.innerHTML = `<div style="text-align:center;color:#999;padding:20px;">Loading links...</div>`;
+    result.appendChild(linksDiv);
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                linksDiv.innerHTML = `
+                    <div style="display: flex; flex-direction: column; gap: 12px;">
+                        <a href="royal-and-vip-names.html" style="color: #333; text-decoration: none; border-bottom: 1px solid #ccc; padding: 8px 0; display: block; font-size: 1.1rem;">👑 Royal & VIP</a>
+                        <a href="social-media-bio-ideas-for-whatsapp-instagram.html" style="color: #333; text-decoration: none; border-bottom: 1px solid #ccc; padding: 8px 0; display: block; font-size: 1.1rem;">💬 Bio Ideas</a>
+                    </div>
+                `;
+                observer.disconnect();
+            }
+        });
+    }, { rootMargin: '200px' });
+    
+    observer.observe(linksDiv);
+}
     });
 
     // ===== MID SECTION: 70 Random Styles (UNIQUE) =====
