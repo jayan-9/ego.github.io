@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golden Attach – Lifetime Access</title>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <style>
+        body {
+            background: #0a0a0c;
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            max-width: 480px;
+            margin: 0 auto;
+            background: #1a1a1f;
+            border-radius: 30px;
+            padding: 35px 30px;
+            border: 2px solid #FFD700;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(255, 215, 0, 0.08);
+        }
+        .badge {
+            background: #FFD700;
+            color: #000;
+            padding: 6px 20px;
+            border-radius: 50px;
+            display: inline-block;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+        .icon {
+            font-size: 3rem;
+            margin-bottom: 5px;
+            display: block;
+        }
+        h1 {
+            color: #FFD700;
+            font-size: 1.8rem;
+            margin: 5px 0 8px 0;
+        }
+        .subtitle {
+            color: #aaa;
+            font-size: 0.95rem;
+            margin-bottom: 5px;
+        }
+        .price {
+            font-size: 3.5rem;
+            color: #FFD700;
+            font-weight: 800;
+            margin: 10px 0 5px 0;
+            letter-spacing: -1px;
+        }
+        .price small {
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: #888;
+        }
+        .price-inr {
+            color: #888;
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+        .features {
+            text-align: left;
+            margin: 25px 0;
+            padding: 0 10px;
+        }
+        .features li {
+            color: #ccc;
+            list-style: none;
+            padding: 8px 0;
+            border-bottom: 1px solid #222;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .features li:last-child {
+            border-bottom: none;
+        }
+        .features li span {
+            color: #FFD700;
+            font-size: 1.2rem;
+        }
+        .input-group {
+            margin: 20px 0 15px 0;
+        }
+        .input-group input {
+            width: 92%;
+            padding: 12px 16px;
+            background: #0f0f12;
+            border: 1px solid #333;
+            border-radius: 12px;
+            color: white;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+            margin: 5px 0;
+        }
+        .input-group input:focus {
+            outline: none;
+            border-color: #FFD700;
+        }
+        .pay-btn {
+            background: #FFD700;
+            color: #000;
+            padding: 16px 30px;
+            border: none;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.2rem;
+            cursor: pointer;
+            width: 100%;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        .pay-btn:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 30px rgba(255, 215, 0, 0.25);
+        }
+        .pay-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+        .secure {
+            color: #555;
+            font-size: 0.7rem;
+            margin-top: 18px;
+            letter-spacing: 0.3px;
+        }
+        .secure i {
+            color: #FFD700;
+        }
+        .success-box {
+            background: #0f5c2e;
+            padding: 30px;
+            border-radius: 16px;
+            display: none;
+        }
+        .success-box h2 {
+            color: white;
+            margin: 10px 0 5px 0;
+        }
+        .success-box p {
+            color: #bbb;
+        }
+        .loading-box {
+            color: #FFD700;
+            display: none;
+            padding: 20px;
+        }
+
+        /* Admin Badge */
+        .admin-note {
+            background: #1a1a2e;
+            border: 1px solid #444;
+            border-radius: 12px;
+            padding: 12px 16px;
+            margin-top: 15px;
+            font-size: 0.75rem;
+            color: #666;
+        }
+        .admin-note strong {
+            color: #FFD700;
+        }
+
+        @media (max-width: 480px) {
+            .container { padding: 25px 18px; }
+            .price { font-size: 2.8rem; }
+            h1 { font-size: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container" id="paymentContainer">
+
+    <span class="badge">✨ LIFETIME ACCESS</span>
+    <span class="icon">👑</span>
+    <h1>Golden Attach Studio</h1>
+    <p class="subtitle">Unlock premium customization features</p>
+
+    <div class="price">
+        $0.99 <small>USD</small>
+    </div>
+    <div class="price-inr">≈ ₹85 (One-time payment)</div>
+
+    <ul class="features">
+        <li><span>✅</span> Lifetime access – Pay once, use forever</li>
+        <li><span>✨</span> All premium symbol attachments</li>
+        <li><span>🚀</span> Future updates included</li>
+        <li><span>💎</span> No recurring payments</li>
+    </ul>
+
+    <div class="input-group">
+        <input type="email" id="userEmail" placeholder="Enter your email *" required>
+        <input type="text" id="userName" placeholder="Enter your name (optional)">
+    </div>
+
+    <button class="pay-btn" id="payButton">
+        💳 Pay $0.99 – Get Lifetime Access
+    </button>
+
+    <div class="success-box" id="successMsg">
+        <span style="font-size: 2.5rem;">🎉</span>
+        <h2>Access Granted!</h2>
+        <p>You now have lifetime access to Golden Attach Studio.</p>
+        <p style="margin-top: 10px; color: #FFD700;">Redirecting...</p>
+    </div>
+
+    <div class="loading-box" id="loadingMsg">⏳ Processing payment...</div>
+
+    <p class="secure"><i>🔒</i> Secure payment via Razorpay • 100% money-back guarantee</p>
+
+<script>
+    // ============================================
+    // CONFIGURATION
+    // ============================================
+    const AMOUNT = 85; // ₹85 INR = $0.99
+    const CURRENCY = "INR";
+    const RAZORPAY_KEY = "rzp_live_SVWSf422lH2nLv";
+
+    // ============================================
+    // ADMIN EMAILS (Free Access)
+    // ============================================
+    const adminEmails = [
+        'jayantmachhi2@gmail.com',
+        'stylenamein@gmail.com'
+    ];
+
+    function isAdmin(email) {
+        return adminEmails.includes(email);
+    }
+
+    // ============================================
+    // DOM REFS
+    // ============================================
+    const payBtn = document.getElementById('payButton');
+    const emailInput = document.getElementById('userEmail');
+    const nameInput = document.getElementById('userName');
+    const container = document.getElementById('paymentContainer');
+    const successDiv = document.getElementById('successMsg');
+    const loadingDiv = document.getElementById('loadingMsg');
+
+    // ============================================
+    // PAYMENT HANDLER
+    // ============================================
+    payBtn.onclick = function() {
+        const email = emailInput.value.trim();
+        if (!email) {
+            alert('Please enter your email address.');
+            return;
+        }
+
+        // ===== ADMIN CHECK =====
+        if (isAdmin(email)) {
+            grantAccess({
+                email: email,
+                name: nameInput.value.trim() || 'Admin',
+                plan: 'Lifetime (Admin)',
+                paymentId: 'admin_' + Date.now(),
+                date: new Date().toISOString(),
+                expiry: 'lifetime'
+            });
+            return;
+        }
+
+        // ===== NORMAL USER PAYMENT =====
+        const name = nameInput.value.trim() || 'User';
+
+        const options = {
+            key: RAZORPAY_KEY,
+            amount: AMOUNT * 100, // paise
+            currency: CURRENCY,
+            name: "Golden Attach Studio",
+            description: "Lifetime Access – One-time payment",
+            image: "favicon.png",
+            prefill: {
+                email: email,
+                name: name
+            },
+            theme: {
+                color: "#FFD700"
+            },
+            handler: function(response) {
+                // Payment Success
+                grantAccess({
+                    email: email,
+                    name: name,
+                    plan: 'Lifetime',
+                    paymentId: response.razorpay_payment_id,
+                    date: new Date().toISOString(),
+                    expiry: 'lifetime'
+                });
+            },
+            modal: {
+                ondismiss: function() {
+                    alert('Payment cancelled. You can try again anytime.');
+                }
+            }
+        };
+
+        const razorpay = new Razorpay(options);
+        razorpay.open();
+    };
+
+    // ============================================
+    // GRANT ACCESS FUNCTION
+    // ============================================
+    function grantAccess(userData) {
+        // Save to localStorage
+        let users = JSON.parse(localStorage.getItem('goldenUsers') || '[]');
+        users.push(userData);
+        localStorage.setItem('goldenUsers', JSON.stringify(users));
+
+        localStorage.setItem('goldenAccess', 'true');
+        localStorage.setItem('goldenUserEmail', userData.email);
+        localStorage.setItem('goldenPlan', userData.plan);
+        localStorage.setItem('goldenExpiry', 'lifetime');
+
+        // Show success
+        container.style.display = 'none';
+        successDiv.style.display = 'block';
+
+        // Redirect after 2 seconds
+        setTimeout(() => {
+            window.location.href = 'golden-attach.html';
+        }, 2000);
+    }
+</script>
+
+</body>
+</html>
