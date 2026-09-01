@@ -44,9 +44,9 @@ function generateStyles() {
             const shuffled = [...filtered].sort(() => Math.random() - 0.5);
             
             // Har section ke liye percentage ya fixed number
-            const mainExampleLimit = Math.min(30, shuffled.length);  // 30 ya jitne hain
-            const midExampleLimit = Math.min(20, Math.max(0, shuffled.length - mainExampleLimit));  // 20 ya baaki
-            const bottomExampleLimit = Math.min(20, Math.max(0, shuffled.length - mainExampleLimit - midExampleLimit));  // 20 ya baaki
+            const mainExampleLimit = Math.min(20, shuffled.length);  // 30 ya jitne hain
+            const midExampleLimit = Math.min(5, Math.max(0, shuffled.length - mainExampleLimit));  // 20 ya baaki
+            const bottomExampleLimit = Math.min(10, Math.max(0, shuffled.length - mainExampleLimit - midExampleLimit));  // 20 ya baaki
             
             // Alag-alag portions (dynamic)
             const mainExamples = shuffled.slice(0, mainExampleLimit);
