@@ -2621,257 +2621,167 @@ body.dark-theme .trending-info-footer {
     }
 }
 
-/* ===== TRENDING SUGGESTIONS INFO ===== */
-.trending-suggestions-content {
-    max-width: 700px;
-    margin: 0 auto;
-    text-align: center;
-    line-height: 1.8;
-}
 
-.trending-suggestions-title {
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: #1a1a1a;
-    margin-bottom: 1.5rem;
-}
+/* ===== DISCOVER MORE ===== */
 
-.trending-suggestions-subtitle {
-    font-size: 1.15rem;
-    font-weight: 700;
-    color: #1a1a1a;
-    margin: 1.5rem 0 0.5rem;
-}
-
-.trending-suggestions-text {
-    font-size: 1rem;
-    color: #333;
-    margin-bottom: 0.8rem;
-}
-
-.trending-suggestions-examples {
-    list-style: none;
-    padding: 0;
-    margin: 0.5rem 0;
-}
-
-.trending-suggestions-examples li {
-    font-size: 0.95rem;
-    color: #555;
-    margin-bottom: 0.4rem;
-}
-
-.trending-suggestions-footer {
-    margin-top: 1.5rem;
-    font-weight: 500;
-}
-
-/* ===== SEE MORE BUTTON ===== */
-.trending-see-more {
-    display: inline-block;
-    padding: 0.5rem 1.5rem;
-    background: #4f46e5;
-    color: white;
-    border-radius: 25px;
-    font-size: 0.9rem;
-    font-weight: 600;
-    cursor: pointer;
-    margin: 1rem 0;
-    list-style: none; /* Arrow hide karo */
-}
-
-.trending-see-more:hover {
-    background: #3730a3;
-}
-
-.trending-details[open] .trending-see-more {
-    background: #3730a3;
-}
-
-/* Dark Theme */
-body.dark-theme .trending-suggestions-title,
-body.dark-theme .trending-suggestions-subtitle {
-    color: #ffffff !important;
-}
-
-body.dark-theme .trending-suggestions-text {
-    color: #cccccc !important;
-}
-
-body.dark-theme .trending-suggestions-examples li {
-    color: #aaaaaa !important;
-}
-
-/* ===== DISCOVER MORE SECTION ===== */
 .discover-more-section {
-    padding: 3rem 0;
-    background: transparent;
+    padding: 2rem 0;
 }
 
 .discover-heading {
     text-align: center;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-weight: 700;
-    color: #1a1a1a;
-    margin-bottom: 2rem;
+    margin: 0 0 1.2rem;
 }
 
 .discover-accordion {
     max-width: 700px;
-    margin: 0 auto;
+    margin: auto;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: .6rem;
 }
 
-/* ===== ITEM ===== */
 .discover-item {
-    border: 2px solid #e0e0e0;
-    border-radius: 12px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
     overflow: hidden;
-    background: white;
-    transition: all 0.3s ease;
+    background: #fff;
 }
 
 .discover-item.active {
     border-color: #4f46e5;
-    box-shadow: 0 4px 20px rgba(79, 70, 229, 0.15);
 }
 
-/* ===== HEADER ===== */
 .discover-item-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 1.5rem;
+    padding: .8rem 1rem;
     cursor: pointer;
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 600;
     color: #1a1a1a;
     user-select: none;
-    transition: background 0.3s ease;
 }
 
 .discover-item-header:hover {
     background: #f5f5f5;
 }
 
-.discover-item-title {
+.discover-item-title,
+.discover-item-arrow {
     pointer-events: none;
 }
 
 .discover-item-arrow {
-    transition: transform 0.3s ease;
-    font-size: 1.2rem;
-    pointer-events: none;
+    font-size: 1.1rem;
 }
 
 .discover-item.active .discover-item-arrow {
     transform: rotate(180deg);
 }
 
-/* ===== CONTENT (Expand/Collapse) ===== */
 .discover-item-content {
     max-height: 0;
     overflow: hidden;
-    padding: 0 1.5rem;
-    transition: max-height 0.4s ease, padding 0.4s ease;
+    padding: 0 1rem;
     color: #333;
-    font-size: 0.95rem;
-    line-height: 1.7;
+    font-size: .9rem;
+    line-height: 1.6;
+    transition: max-height .25s ease;
 }
 
 .discover-item.active .discover-item-content {
     max-height: 1500px;
-    padding: 0 1.5rem 1.5rem;
+    padding-bottom: 1rem;
 }
 
-/* ===== EXAMPLE BOX ===== */
+/* Example */
 .discover-example-box {
     background: #f8f9fa;
-    padding: 12px;
-    border-radius: 10px;
-    margin: 10px 0;
+    padding: 10px;
+    border-radius: 7px;
+    margin: 8px 0;
 }
 
 .discover-example-label {
-    font-size: 13px;
+    font-size: 12px;
     color: #666;
     font-weight: 600;
-    margin-bottom: 6px;
+    margin-bottom: 4px;
 }
 
 .discover-example-text {
-    font-size: 16px;
-    margin: 4px 0;
+    font-size: 15px;
+    margin: 3px 0;
     color: #333;
 }
 
-/* ===== AD ===== */
+/* Ad */
 .discover-ad {
-    margin: 15px 0;
+    margin: 10px 0;
     min-height: 50px;
 }
 
 /* ===== DARK THEME ===== */
-body.dark-theme .discover-heading {
-    color: #ffffff !important;
+
+body.dark-theme .discover-heading,
+body.dark-theme .discover-item-header {
+    color: #fff;
 }
 
 body.dark-theme .discover-item {
-    background: #1a1a2e !important;
-    border-color: #2a2a4a !important;
+    background: #1a1a2e;
+    border-color: #2a2a4a;
 }
 
 body.dark-theme .discover-item.active {
-    border-color: #4a4a8a !important;
-    box-shadow: 0 4px 20px rgba(74, 74, 138, 0.3) !important;
-}
-
-body.dark-theme .discover-item-header {
-    color: #ffffff !important;
+    border-color: #4a4a8a;
 }
 
 body.dark-theme .discover-item-header:hover {
-    background: #2a2a4a !important;
+    background: #2a2a4a;
 }
 
 body.dark-theme .discover-item-content {
-    color: #cccccc !important;
+    color: #ccc;
 }
 
 body.dark-theme .discover-example-box {
-    background: #16213e !important;
+    background: #16213e;
 }
 
 body.dark-theme .discover-example-label {
-    color: #aaa !important;
+    color: #aaa;
 }
 
 body.dark-theme .discover-example-text {
-    color: #e0e0e0 !important;
+    color: #e0e0e0;
 }
 
-/* ===== RESPONSIVE ===== */
+/* ===== MOBILE ===== */
+
 @media (max-width: 768px) {
     .discover-heading {
         font-size: 1.4rem;
     }
-    
+
     .discover-item-header {
-        padding: 0.8rem 1rem;
-        font-size: 1rem;
+        padding: .7rem .9rem;
+        font-size: .95rem;
     }
-    
+
     .discover-item-content {
-        padding: 0 1rem;
-        font-size: 0.9rem;
+        padding: 0 .9rem;
+        font-size: .88rem;
     }
-    
+
     .discover-item.active .discover-item-content {
-        padding: 0 1rem 1rem;
+        padding-bottom: .9rem;
     }
-    
+
     .discover-example-text {
         font-size: 14px;
     }
