@@ -318,39 +318,34 @@
 
     <div style="height: 160px;"></div>
 
-         <!-- 👇 YEH LINE ADD KARO COSE YOUR CATAGORY -->
+      <!-- 👇 YEH LINE ADD KARO COSE YOUR CATAGORY -->
       <div style="text-align: center; margin: 15px 0; padding: 8px 0; background: var(--gray-light); width: 100%; border-top: 1px solid #333; border-bottom: 1px solid #333;">
     <p style="margin: 0; color: var(--dark); font-size: 1rem; font-weight: 500; letter-spacing: 0.5px;">
-           👇🏼 First Click The FF icon(button) 👇🏼
+          Choose Your Mood
     </p>
 </div> 
     
-   <!-- Categories -->
+    <!-- Categories -->
     <div class="categories-section">
         <div class="container">
             <div class="categories-scroll">
+                <button class="category-btn active" onclick="selectCategory('love')">
+                    <i class="fas fa-heart"></i> Love Style
+                </button>
                 <button class="category-btn" onclick="selectCategory('gamer')">
-                    <i class="fas fa-gamepad"></i> FF
+                    <i class="fas fa-gamepad"></i> Gamer Style
+                </button>
+                <button class="category-btn" onclick="selectCategory('fancy')">
+                    <i class="fas fa-crown"></i> Attitude Style
+                </button>
+                <button class="category-btn" onclick="selectCategory('font')">
+                    <i class="fas fa-font"></i> Fonts
                 </button>
             </div>
         </div>
     </div>
- 
-    <!-- ===== TOP 3 STYLES SECTION ===== -->
-<div class="top3-section">
-    <div class="container">
-        <h3 class="top3-title">🔥Ⓣⓞⓟ ➂ ⒻⒻ Ⓝⓐⓜⓔⓢ✨</h3>
-        
-        <div id="top3Styles" class="top3-grid">
-            <!-- 3 random styles will load here -->
-        </div>
-        
-        <button class="generate-another-btn" onclick="refreshTop3Styles()">
-            GENERATE ANOTHER
-        </button>
-    </div>
-</div>
-    
+  
+   
 <!-- Results Section -->
 <section class="results-section">
     <div class="container">
@@ -971,14 +966,30 @@
 </section>
 
          
-         <div style="height: 60px;"></div>
-      
+         <div style="height: 20px;"></div>
+
+       <!-- ===== TOP 3 STYLES SECTION ===== -->
+<div class="top3-section">
+    <div class="container">
+        <h3 class="top3-title">🔥Ⓣⓞⓟ ➂ ⒻⒻ Ⓝⓐⓜⓔⓢ✨</h3>
+        
+        <div id="top3Styles" class="top3-grid">
+            <!-- 3 random styles will load here -->
+        </div>
+        
+        <button class="generate-another-btn" onclick="refreshTop3Styles()">
+            GENERATE ANOTHER
+        </button>
+    </div>
+</div>
+    
+      <div style="height: 20px;"></div>
          
         <!-- Suggestions Tray -->
         <div id="suggestionsTray" class="suggestions-tray">
             <div class="suggestions-header">
-                <h3><i class="fas fa-fire"></i> Trending in <span id="currentCategoryName">Gamer</span></h3>
-                <span class="trending-badge" id="suggestionCount">free fire suggestions</span>
+                <h3><i class="fas fa-fire"></i> Trending in <span id="currentCategoryName">love</span></h3>
+                <span class="trending-badge" id="suggestionCount">Name suggestions</span>
             </div>
             <div id="miniSuggestions" class="suggestions-mini-grid">
                 <!-- Mini suggestions will load here -->
@@ -1364,15 +1375,14 @@
 
                <!-- 👇 50px KHALI SPACE -->
 <div style="height: 70px;"></div>
-
-<!-- ===== FREE FIRE PRO TIPS SECTION ===== -->
+<!-- ===== PUBG PRO TIPS SECTION ===== -->
 <div class="pro-tips-wrapper">
 
     <div class="pro-tips-header">
-        <span class="pro-tips-icon">🔥</span>
-        <h2 class="pro-tips-title">Pro Tips for Free Fire Stylish Names</h2>
+        <span class="pro-tips-icon">🎮</span>
+        <h2 class="pro-tips-title">Pro Tips for PUBG Stylish Names</h2>
         <p class="pro-tips-subtitle">
-            Create a unique Free Fire nickname with stylish fonts, symbols, gaming tags, and creative name combinations.
+            Create a unique PUBG nickname with stylish fonts, bold symbols, gaming tags, and creative name combinations.
         </p>
     </div>
 
@@ -1381,11 +1391,11 @@
         <!-- TIP 1 -->
         <div class="pro-tip-card">
             <div class="pro-tip-number">01</div>
-            <div class="pro-tip-icon">🎮</div>
+            <div class="pro-tip-icon">🤞🏻</div>
             <div class="pro-tip-content">
-                <h3 class="pro-tip-heading">Keep Your Free Fire Name Short and Memorable</h3>
+                <h3 class="pro-tip-heading">Keep Your PUBG Name Short & Memorable</h3>
                 <p class="pro-tip-text">
-                    A short and memorable Free Fire name is easier for other players to recognize. Avoid adding too many characters or symbols that make your nickname difficult to read. A clean gaming name usually looks more professional in matches, guilds, and player profiles.
+                    A short and memorable PUBG name is easier for teammates and opponents to recognize. Avoid adding too many characters or symbols that make your nickname difficult to read. A clean gaming name like <strong>ᴳᵒᵈ★Ⓢⓣⓐⓡ</strong> or <strong>MR CRAZY</strong> looks more professional in matches and leaderboards.
                 </p>
             </div>
         </div>
@@ -1395,9 +1405,9 @@
             <div class="pro-tip-number">02</div>
             <div class="pro-tip-icon">👑</div>
             <div class="pro-tip-content">
-                <h3 class="pro-tip-heading">Use Powerful Gaming Words</h3>
+                <h3 class="pro-tip-heading">Use Powerful Battleground Words</h3>
                 <p class="pro-tip-text">
-                    Words such as <strong>King, Legend, Hero, Pro, Killer, Shadow, Psycho, Gamer</strong>, and <strong>Crazy</strong> can give your Free Fire nickname a strong gaming identity. Choose words that match your personality and play style.
+                    Words such as <strong>Killer, Royal, Toxic, Queen, Legend, God, Star, Ghost</strong>, and <strong>Shadow</strong> give your PUBG nickname a strong gaming identity. Examples: <strong>QUEEN 👑</strong> or <strong>ₛₖᵤₗₗ ༒ Cᵣᵤₛₕₑᵣ</strong> create a powerful battleground presence.
                 </p>
             </div>
         </div>
@@ -1407,11 +1417,9 @@
             <div class="pro-tip-number">03</div>
             <div class="pro-tip-icon">✨</div>
             <div class="pro-tip-content">
-                <h3 class="pro-tip-heading">Use Stylish Symbols Carefully</h3>
+                <h3 class="pro-tip-heading">Use Bold Symbols Carefully</h3>
                 <p class="pro-tip-text">
-                    Decorative symbols can make a Free Fire stylish name stand out. Popular examples include
-                    <strong>꧁ ꧂ ༒ ᭄ ࿐ ☆ ★ ☬ ☫ ◤ ◥ 𖣂</strong>.
-                    Use only a few symbols so your name stays clean and easy to recognize.
+                    Decorative symbols can make a PUBG name stand out. Popular examples include <strong>꧁ ꧂ ༒ ☬ ☫ ◤ ◥ メ 𒆜 『 』 ツ</strong>. Use only a few symbols so your name stays clean and easy to recognize. Examples: <strong>꧁༒☬Name☬༒꧂</strong> or <strong>『ツ』</strong>.
                 </p>
             </div>
         </div>
@@ -1421,13 +1429,9 @@
             <div class="pro-tip-number">04</div>
             <div class="pro-tip-icon">🔥</div>
             <div class="pro-tip-content">
-                <h3 class="pro-tip-heading">Try Popular Free Fire Name Styles</h3>
+                <h3 class="pro-tip-heading">Try Popular PUBG Name Styles</h3>
                 <p class="pro-tip-text">
-                    Free Fire players often combine stylish fonts with symbols and gaming words. For example:
-                    <strong>꧁ᶜᴿᴬᶻᵞ ༒ қⳕⳑⳑⲉⲅ ☬꧂</strong>
-                    or
-                    <strong>꧁Ⓚⓘⓝⓖ꧂™</strong>.
-                    A balanced combination can make your nickname look unique without becoming difficult to read.
+                    PUBG players often combine stylish fonts with symbols and gaming words. Examples: <strong>꧁◥ Ƭoxic ◤꧂</strong>, <strong>乂⊥OXIƆO乂</strong>, or <strong>ᑕя𐌰ᶻᎩ 么</strong>. A balanced combination makes your nickname look unique without becoming difficult to read.
                 </p>
             </div>
         </div>
@@ -1437,13 +1441,9 @@
             <div class="pro-tip-number">05</div>
             <div class="pro-tip-icon">🏆</div>
             <div class="pro-tip-content">
-                <h3 class="pro-tip-heading">Add a Pro or Gamer Tag</h3>
+                <h3 class="pro-tip-heading">Add a Pro or Gaming Tag</h3>
                 <p class="pro-tip-text">
-                    Gaming tags such as <strong>FF, PRO, GAMER, OP, KING</strong>, and <strong>LEGEND</strong> can make a nickname feel more competitive. Examples like
-                    <strong>ᴘʀᴏ᭄ʜᴇʀᴏ࿐</strong>
-                    and
-                    <strong>ᶦᶰᵈ ★ Gᴀᴍᴇʀ☆࿐</strong>
-                    create a strong gaming-style appearance.
+                    Gaming tags like <strong>PRO, FF, GAMER, OP, KING, LEGEND</strong>, and <strong>YT</strong> make a nickname feel competitive. Examples: <strong>ᴿᴼᵞᴬᴸ 『ツ』ᏦᎥᏝᏝᏋᏒ</strong> or <strong>🤙🏻 ѕηɪρεя ™</strong> create a strong gaming-style appearance.
                 </p>
             </div>
         </div>
@@ -1453,9 +1453,9 @@
             <div class="pro-tip-number">06</div>
             <div class="pro-tip-icon">🔤</div>
             <div class="pro-tip-content">
-                <h3 class="pro-tip-heading">Choose a Stylish Font That Is Easy to Read</h3>
+                <h3 class="pro-tip-heading">Choose a Readable Stylish Font</h3>
                 <p class="pro-tip-text">
-                    Stylish Unicode fonts can make your Free Fire name more attractive. Small caps, bold letters, circled text, cursive styles, and decorative characters are popular choices. However, always choose a font style that remains readable.
+                    Stylish Unicode fonts make your PUBG name more attractive. Bold letters, circled text, cursive styles, and decorative characters are popular. However, always choose a font style that remains readable. Examples: <strong>ⒽꫝⒸⓀꫀⓇ『ᥫ᭡』</strong> or <strong>么 ʟᴜғғʏ☆꧂</strong>.
                 </p>
             </div>
         </div>
@@ -1465,12 +1465,9 @@
             <div class="pro-tip-number">07</div>
             <div class="pro-tip-icon">🎯</div>
             <div class="pro-tip-content">
-                <h3 class="pro-tip-heading">Match Your Name with Your Gaming Personality</h3>
+                <h3 class="pro-tip-heading">Match Your Name with Your Gaming Style</h3>
                 <p class="pro-tip-text">
-                    Your nickname can reflect your personality and gaming style. Use powerful names for an aggressive style, royal words for a confident identity, or creative words for a unique look. Examples include
-                    <strong>ₗₑGₑₙD 𖣂 Yₜ</strong>
-                    and
-                    <strong>☆ ₗᵤCₖₑY ◤࿐</strong>.
+                    Your PUBG name should reflect your personality and play style. Use aggressive names for aggressive players, royal names for confident players, or creative names for unique players. Examples: <strong>ᴳᵒᵈ★Ⓢⓣⓐⓡ</strong> for a confident style or <strong>乂⊥OXIƆO乂</strong> for a bold aggressive style.
                 </p>
             </div>
         </div>
@@ -1480,37 +1477,9 @@
             <div class="pro-tip-number">08</div>
             <div class="pro-tip-icon">🛡️</div>
             <div class="pro-tip-content">
-                <h3 class="pro-tip-heading">Check Symbol Compatibility Before Using a Name</h3>
+                <h3 class="pro-tip-heading">Check Symbol Compatibility Before Using</h3>
                 <p class="pro-tip-text">
-                    Some Unicode characters and decorative symbols may not display the same way everywhere. Before finalizing your Free Fire nickname, check whether the characters you selected are supported and displayed correctly.
-                </p>
-            </div>
-        </div>
-
-        <!-- TIP 9 -->
-        <div class="pro-tip-card">
-            <div class="pro-tip-number">09</div>
-            <div class="pro-tip-icon">⚡</div>
-            <div class="pro-tip-content">
-                <h3 class="pro-tip-heading">Use Free Fire Inspired Name Combinations</h3>
-                <p class="pro-tip-text">
-                    Combine gaming words, stylish fonts, and a few symbols to create your own unique nickname. Examples include
-                    <strong>◥ＦＲＥＥ ༒ ＦＩＲＥ◤</strong>
-                    and
-                    <strong>ᴘʜʏᴄʜᴏ :) ꜰꜰ</strong>.
-                    Try different combinations until you find a style that represents you.
-                </p>
-            </div>
-        </div>
-
-        <!-- TIP 10 -->
-        <div class="pro-tip-card">
-            <div class="pro-tip-number">10</div>
-            <div class="pro-tip-icon">💡</div>
-            <div class="pro-tip-content">
-                <h3 class="pro-tip-heading">Create a Unique Name Instead of Copying Everyone</h3>
-                <p class="pro-tip-text">
-                    Popular Free Fire names can inspire you, but creating your own combination makes your gaming identity more memorable. Mix your nickname with stylish fonts, symbols, numbers, or gaming words to build something unique.
+                    Some Unicode characters and decorative symbols may not display the same way everywhere. Before finalizing your PUBG nickname, check whether the characters you selected are supported and displayed correctly in the game and on all platforms.
                 </p>
             </div>
         </div>
@@ -1525,29 +1494,35 @@
 <section class="keywords-section">
     <div class="container">
 
-        <h2>Stylename Search Related Keywords</h2>
+        <h2>PUBG And BGMI Stylename Search Related Keywords</h2>
 
         <ul>
-            <li>Stylename</li>
-            <li>Love stylename</li>
+            <li>Stylename For PUBG</li>
+            <li>PUBG stylename</li>
             <li>Style Name</li>
-            <li>Kuwaitian stylename</li>
+            <li>Free style stylename</li>
             <li>Love style name</li>
-            <li>Stylish name</li>
+            <li>Stylish name for PUBG</li>
             <li>UK stylename</li>
+            <li>pubg player's name</li>
             <li>Gamer stylename</li>
             <li>US stylename</li>
             <li>Stylish font</li>
+            <li>BGMI stylish name for boys</li>
+            <li>PUBG boys name</li>
+            <li>PUBG stylish names boys</li>
             <li>Bahraini style name</li>
             <li>Style word</li>
-            <li>FF nickname</li>
+            <li>PUBG nickname</li>
+            <li>Tranding PUBG Names</li>
             <li>Omani stylish name</li>
-            <li>Gaming name</li>
+            <li>Gaming stylish name</li>
+            <li>stylish name for game</li>
             <li>Agly stylish name</li>
             <li>Cool stylename</li>
             <li>US stylish name</li>
             <li>Kids stylename</li>
-            <li>Free fire stylename</li>
+            <li>BGMI stylish name</li>
             <li>PUBG stylename</li>
             <li>Stylish nicknames</li>
         </ul>
