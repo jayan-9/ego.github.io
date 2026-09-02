@@ -221,46 +221,7 @@ function selectCategory(type) {
 }
 
 function loadMiniSuggestions() {
-    const miniGrid = document.getElementById('miniSuggestions');
-    const categoryName = document.getElementById('currentCategoryName');
-    const suggestionCount = document.getElementById('suggestionCount');
-    if (!miniGrid || !categoryName || !suggestionCount) return;
-    categoryName.textContent = currentFilter.charAt(0).toUpperCase() + currentFilter.slice(1);
-    const categorySuggestions = suggestionsData[currentFilter] || [];
-    if (categorySuggestions.length === 0) {
-        miniGrid.innerHTML = '<p style="color: var(--gray); text-align: center; padding: 1rem;">No suggestions yet</p>';
-        suggestionCount.textContent = '0';
-        return;
-    }
-    const shuffled = [...categorySuggestions].sort(() => Math.random() - 0.5);
-    const displaySuggestions = shuffled.slice(0, 15);
-    currentMiniSuggestions = displaySuggestions;
-    let html = '';
-    displaySuggestions.forEach((suggestion, index) => {
-        const escapedSuggestion = suggestion.replace(/'/g, "\\'").replace(/"/g, '&quot;');
-        html += `
-            <div class="suggestion-mini-card">
-                <span class="suggestion-mini-text" title="${suggestion}">${suggestion}</span>
-                <button class="suggestion-mini-copy" onclick="copyText('${escapedSuggestion}')" title="Copy">
-                    <i class="fas fa-copy"></i>
-                </button>
-            </div>
-        `;
-      if (index === 5) {
-    html += `
-        <div style="grid-column: 1 / -1; margin: 15px 0; text-align: center;">
-            <img src="https://jayan-9.github.io/ego.github.io/stylish.webp" 
-                 alt="Stylish Design"
-                 loading="lazy"
-                 width="800"
-                 height="400"
-                 style="max-width: 100%; height: auto; border-radius: 12px; border: 1px solid #e0e0e0;">
-        </div>
-    `;
-}
-    
-});
-    miniGrid.innerHTML = html;
+    currentMiniSuggestions = [];
 }
 
 function toggleFullSuggestions() {
