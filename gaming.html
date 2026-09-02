@@ -78,118 +78,246 @@
 
 </head>
        
-       <body>
+      
+         <body>
     
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="container">
-            <button class="menu-toggle" id="menuToggle">
-                <i class="fas fa-bars"></i>
-            </button>
-            <div class="logo">
-                <h1>stylename<span class="logo-dot">.</span>in</h1>
-                <p class="tagline">Style Your Identity</p>
-            </div>
-            <div class="theme-toggle" id="themeToggle">
-                <i class="fas fa-moon"></i>
-            </div>
-        </div>
-    </nav>
+  <!-- ================= NAVBAR ================= -->
+<nav class="navbar" aria-label="Main navigation">
+    <div class="container navbar-container">
 
-    <!-- Sidebar Menu -->
-    <div class="sidebar" id="sidebar">
-        <div class="sidebar-header">
-            <h3>Menu</h3>
-            <button class="close-sidebar" id="closeSidebar">
-                <i class="fas fa-times"></i>
-            </button>
-        </div>
-        <div class="sidebar-content">
-            <div class="sidebar-item" onclick="toggleTheme()">
-                <i class="fas fa-palette"></i>
-                <span>Theme</span>
-                <span class="theme-status" id="themeStatus">Light</span>
-            </div>
-            <div class="sidebar-item" onclick="openSymbolModal()">
-                <i class="fas fa-symbols"></i>
-                <span>Symbols Library</span>
-            </div>
-<div class="sidebar-item premium-sidebar" onclick="window.location.href='golden-attach.html'">
-    <i class="fas fa-crown" style="color: #FFD700;"></i>
-    <span style="color: #FFD700; font-weight: 500;">✨Golden Attach</span>
-    <span class="premium-badge">⭐ Pro($0.99) 12.1k+ Users Already</span>
-</div>
-            <div class="sidebar-item" onclick="showGuide()">
-                <i class="fas fa-book"></i>
-                <span>How to Use</span>
-            </div>
-            <div class="sidebar-item" id="noteSection">
-                <i class="fas fa-sticky-note"></i>
-                <span>Quick Notes</span>
-                <span class="note-badge" id="noteCount">0/100</span>
-            </div>
-            <div class="sidebar-item coming-soon">
-                <i class="fas fa-robot"></i>
-                <span>AI Name Generator</span>
-                <span class="badge">Soon</span>
-            </div>
-            <div class="sidebar-divider"></div>
-            <div class="sidebar-item" onclick="window.location.href='about.html'">
-                <i class="fas fa-info-circle"></i>
-                <span>About Us</span>
-            </div>
-            <div class="sidebar-item" onclick="window.location.href='contact.html'">
-                <i class="fas fa-envelope"></i>
-                <span>Contact</span>
-            </div>
-            <div class="sidebar-item" onclick="window.location.href='privacy-policy.html'">
-                <i class="fas fa-shield-alt"></i>
-                <span>Privacy Policy</span>
-            </div>
-            <!-- 👇 YAHAN PE TERMS & CONDITIONS ADD KARO -->
-<div class="sidebar-item" onclick="window.location.href='terms.html'">
-    <i class="fas fa-file-contract"></i>
-    <span>Terms & Conditions</span>
-</div>
-        </div>
-<div class="note-editor" id="noteEditor">
-    <!-- ===== BUTTONS UPAR (Textarea से पहले) ===== -->
-    <div class="note-actions-top">
-        <button onclick="saveNote()" class="save-note">
-            <i class="fas fa-save"></i> Save
+        <!-- Menu Button -->
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            type="button"
+            aria-label="Open menu"
+            aria-controls="sidebar"
+            aria-expanded="false">
+
+            <i class="fas fa-bars" aria-hidden="true"></i>
         </button>
-        <button onclick="clearNote()" class="clear-note">
-            <i class="fas fa-trash"></i> Clear
-        </button>
-    </div>  
-    <!-- ===== TEXTAREA (Buttons के नीचे) ===== -->
-    <textarea placeholder="Type your notes here... (Max 100 words)" maxlength="500" id="noteText"></textarea>
-</div>
+
+        <!-- Logo -->
+        <div class="logo">
+            <h1>stylename<span class="logo-dot">.</span>in</h1>
+            <p class="tagline">Style Your Identity</p>
         </div>
+
+        <!-- Theme Button -->
+        <button
+            class="theme-toggle"
+            id="themeToggle"
+            type="button"
+            aria-label="Toggle dark mode">
+
+            <i class="fas fa-moon" aria-hidden="true"></i>
+        </button>
+
+    </div>
+</nav>
+
+
+<!-- ================= SIDEBAR ================= -->
+<aside
+    class="sidebar"
+    id="sidebar"
+    aria-label="Sidebar menu"
+    aria-hidden="true">
+
+    <!-- Sidebar Header -->
+    <div class="sidebar-header">
+
+        <h2 class="sidebar-title">Menu</h2>
+
+        <button
+            class="close-sidebar"
+            id="closeSidebar"
+            type="button"
+            aria-label="Close menu">
+
+            <i class="fas fa-times" aria-hidden="true"></i>
+        </button>
+
     </div>
 
-<!-- Gaming Stylish Names Intro -->
-<div style="text-align: center; max-width: 650px; margin: 0 auto 20px auto;">
-    <p style="font-size: 0.95rem; font-weight: 600; color: #333; margin-bottom: 6px;" class="welcome-heading">
-        🎮 Create Your Gaming Stylish Name
+
+    <!-- Sidebar Content -->
+    <div class="sidebar-content">
+
+        <!-- Theme -->
+        <button
+            class="sidebar-item"
+            type="button"
+            onclick="toggleTheme()">
+
+            <i class="fas fa-palette" aria-hidden="true"></i>
+
+            <span>Theme</span>
+
+            <span class="theme-status" id="themeStatus">
+                Light
+            </span>
+
+        </button>
+
+
+        <!-- Symbols -->
+        <button
+            class="sidebar-item"
+            type="button"
+            onclick="openSymbolModal()">
+
+            <i class="fas fa-symbols" aria-hidden="true"></i>
+
+            <span>Symbols Library</span>
+
+        </button>
+
+
+        <!-- Guide -->
+        <button
+            class="sidebar-item"
+            type="button"
+            onclick="showGuide()">
+
+            <i class="fas fa-book" aria-hidden="true"></i>
+
+            <span>How to Use</span>
+
+        </button>
+
+
+        <!-- Quick Notes -->
+        <button
+            class="sidebar-item"
+            id="noteSection"
+            type="button">
+
+            <i class="fas fa-sticky-note" aria-hidden="true"></i>
+
+            <span>Quick Notes</span>
+
+            <span class="note-badge" id="noteCount">
+                0/100
+            </span>
+
+        </button>
+
+
+        <!-- Coming Soon -->
+        <div class="sidebar-item coming-soon">
+
+            <i class="fas fa-robot" aria-hidden="true"></i>
+
+            <span>AI Name Generator</span>
+
+            <span class="badge">
+                Soon
+            </span>
+
+        </div>
+
+
+        <div class="sidebar-divider"></div>
+
+
+        <!-- About -->
+        <a href="about.html" class="sidebar-item">
+
+            <i class="fas fa-info-circle" aria-hidden="true"></i>
+
+            <span>About Us</span>
+
+        </a>
+
+
+        <!-- Contact -->
+        <a href="contact.html" class="sidebar-item">
+
+            <i class="fas fa-envelope" aria-hidden="true"></i>
+
+            <span>Contact</span>
+
+        </a>
+
+
+        <!-- Privacy -->
+        <a href="privacy-policy.html" class="sidebar-item">
+
+            <i class="fas fa-shield-alt" aria-hidden="true"></i>
+
+            <span>Privacy Policy</span>
+
+        </a>
+
+
+        <!-- Terms -->
+        <a href="terms.html" class="sidebar-item">
+
+            <i class="fas fa-file-contract" aria-hidden="true"></i>
+
+            <span>Terms &amp; Conditions</span>
+
+        </a>
+
+    </div>
+
+
+    <!-- ================= NOTE EDITOR ================= -->
+    <div class="note-editor" id="noteEditor">
+
+        <div class="note-actions-top">
+
+            <button
+                onclick="saveNote()"
+                class="save-note"
+                type="button">
+
+                <i class="fas fa-save" aria-hidden="true"></i>
+                Save
+
+            </button>
+
+
+            <button
+                onclick="clearNote()"
+                class="clear-note"
+                type="button">
+
+                <i class="fas fa-trash" aria-hidden="true"></i>
+                Clear
+
+            </button>
+
+        </div>
+
+
+        <textarea
+            placeholder="Type your notes here... (Max 100 words)"
+            maxlength="500"
+            id="noteText"
+            aria-label="Quick notes">
+        </textarea>
+
+    </div>
+
+</aside>
+
+
+<!-- ================= WELCOME TEXT ================= -->
+<div class="welcome-container">
+
+    <p class="welcome-heading">
+        ✨ Generate stylish &amp; creative names instantly ✨
     </p>
 
-    <p style="font-size: 0.8rem; color: #555; margin: 0;" class="welcome-text">
-        🔥 Cool & unique gaming names • Easy one-click copy • Perfect for gamers & gaming profiles • free fire and PUBG nicknames 
+    <p class="welcome-text">
+        100% free • One-click copy • Perfect for gaming &amp; social media
     </p>
+
 </div>
-
-<style>
-    .dark-theme .welcome-heading {
-        color: #f0f0f0 !important;
-    }
-
-    .dark-theme .welcome-text {
-        color: #aaa !important;
-    }
-</style>  
-
-    <div style="height: 200px;"></div>
+               
+    <div style="height: 160px;"></div>
 
                <!-- 👇 YEH LINE ADD KARO COSE YOUR CATAGORY -->
       <div style="text-align: center; margin: 15px 0; padding: 8px 0; background: var(--gray-light); width: 100%; border-top: 1px solid #333; border-bottom: 1px solid #333;">
@@ -218,20 +346,6 @@
         </div>
     </div>
  
-    <!-- ===== TOP 3 STYLES SECTION ===== -->
-<div class="top3-section">
-    <div class="container">
-        <h3 class="top3-title">✨👿 τⲟⳏ 3 ⳋⲇϻⳕⲛⳋ ⳽τⲩⳑⲉ ✨</h3>
-        
-        <div id="top3Styles" class="top3-grid">
-            <!-- 3 random styles will load here -->
-        </div>
-        
-        <button class="generate-another-btn" onclick="refreshTop3Styles()">
-            GENERATE ANOTHER
-        </button>
-    </div>
-</div>
     
 <!-- Results Section -->
 <section class="results-section">
@@ -1075,9 +1189,25 @@
 </section>
 
          
-         <div style="height: 60px;"></div>
+         <div style="height: 30px;"></div>
+
+                <!-- ===== TOP 3 STYLES SECTION ===== -->
+<div class="top3-section">
+    <div class="container">
+        <h3 class="top3-title">✨👿 τⲟⳏ 3 ⳋⲇϻⳕⲛⳋ ⳽τⲩⳑⲉ ✨</h3>
+        
+        <div id="top3Styles" class="top3-grid">
+            <!-- 3 random styles will load here -->
+        </div>
+        
+        <button class="generate-another-btn" onclick="refreshTop3Styles()">
+            GENERATE ANOTHER
+        </button>
+    </div>
+</div>
       
-         
+      <div style="height: 20px;"></div>
+               
         <!-- Suggestions Tray -->
         <div id="suggestionsTray" class="suggestions-tray">
             <div class="suggestions-header">
