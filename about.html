@@ -2,150 +2,125 @@
 <html lang="en">
 <head>
 
+    <!-- ===== META TAGS ===== -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Google AdSense -->
     <meta name="google-adsense-account" content="ca-pub-5781318703267732">
 
-    <meta name="google-site-verification"
-          content="cKGfHx3401UeyzijckfH4-0-Km0WQ33kICn3MIs3J04">
+    <!-- Google Search Console -->
+    <meta name="google-site-verification" content="cKGfHx3401UeyzijckfH4-0-Km0WQ33kICn3MIs3J04">
 
-    <script async
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5781318703267732"
-        crossorigin="anonymous"></script>
-
-    <meta name="description"
-          content="Learn about stylename.in, a free stylish name generator for gaming, Instagram and social media.">
-
+    <!-- SEO Meta -->
+    <meta name="description" content="Learn about stylename.in – the free stylish name generator for gaming, Instagram, PUBG, Free Fire, and social media. 100+ styles, 1M+ names generated.">
+    <meta name="keywords" content="about stylename.in, stylish name generator, free name style, gaming name generator, Instagram name generator, PUBG name, Free Fire name">
     <meta name="robots" content="index, follow">
     <meta name="author" content="stylename.in">
-
     <link rel="canonical" href="https://stylename.in/about.html">
 
-    <title>About Us – styleNam</title>
+    <!-- Open Graph -->
+    <meta property="og:title" content="About stylename.in – Free Stylish Name Generator">
+    <meta property="og:description" content="Create unique stylish names for gaming, Instagram, and social media. 100% free tool with 100+ styles.">
+    <meta property="og:url" content="https://stylename.in/about.html">
+    <meta property="og:type" content="website">
 
+    <title>About Us – stylename.in | Free Stylish Name Generator</title>
+
+    <!-- Favicon -->
     <link rel="icon" href="favicon.png" type="image/png">
 
+    <!-- ===== PERFORMANCE OPTIMIZED CSS ===== -->
+    <link rel="preload" href="style.css" as="style">
     <link rel="stylesheet" href="style.css">
 
-    <link rel="preload"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-          as="style"
-          onload="this.onload=null;this.rel='stylesheet'">
-
+    <!-- Font Awesome - Non-blocking -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
-        <link rel="stylesheet"
-              href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     </noscript>
+
+    <!-- ===== PRECONNECT ===== -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 </head>
 
 <body>
 
-    <!-- Navbar -->
+    <!-- ===== NAVBAR ===== -->
     <nav class="navbar">
         <div class="container">
-
-            <button class="menu-toggle"
-                    id="menuToggle"
-                    aria-label="Open menu">
+            <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
                 <i class="fas fa-bars"></i>
             </button>
-
             <div class="logo">
                 <h1>StyleName<span class="logo-dot">.</span>in</h1>
                 <p class="tagline">Style Your Identity</p>
             </div>
-
-            <div class="theme-toggle"
-                 id="themeToggle"
-                 role="button"
-                 tabindex="0"
-                 aria-label="Toggle theme">
+            <div class="theme-toggle" id="themeToggle" role="button" tabindex="0" aria-label="Toggle theme">
                 <i class="fas fa-moon"></i>
             </div>
-
         </div>
     </nav>
 
-    <!-- Sidebar -->
+    <!-- ===== SIDEBAR ===== -->
     <div class="sidebar" id="sidebar">
-
         <div class="sidebar-header">
             <h3>Menu</h3>
-
-            <button class="close-sidebar"
-                    id="closeSidebar"
-                    aria-label="Close menu">
+            <button class="close-sidebar" id="closeSidebar" aria-label="Close menu">
                 <i class="fas fa-times"></i>
             </button>
         </div>
-
         <div class="sidebar-content">
-
             <div class="sidebar-item" onclick="toggleTheme()">
                 <i class="fas fa-palette"></i>
                 <span>Theme</span>
                 <span class="theme-status" id="themeStatus">Light</span>
             </div>
-
-            <div class="sidebar-item"
-                 onclick="window.location.href='index.html'">
+            <div class="sidebar-item" onclick="window.location.href='index.html'">
                 <i class="fas fa-home"></i>
                 <span>Home</span>
             </div>
-
             <div class="sidebar-item active">
                 <i class="fas fa-info-circle"></i>
                 <span>About Us</span>
             </div>
-
-            <div class="sidebar-item"
-                 onclick="window.location.href='contact.html'">
+            <div class="sidebar-item" onclick="window.location.href='contact.html'">
                 <i class="fas fa-envelope"></i>
                 <span>Contact</span>
             </div>
-
-            <div class="sidebar-item"
-                 onclick="window.location.href='privacy-policy.html'">
+            <div class="sidebar-item" onclick="window.location.href='privacy-policy.html'">
                 <i class="fas fa-shield-alt"></i>
                 <span>Privacy Policy</span>
             </div>
-
+            <div class="sidebar-item" onclick="window.location.href='terms.html'">
+                <i class="fas fa-file-contract"></i>
+                <span>Terms & Conditions</span>
+            </div>
         </div>
     </div>
 
-    <!-- Hero Section -->
+    <!-- ===== HERO SECTION ===== -->
     <section class="about-hero">
         <div class="container">
-
             <h1>About stylename.in</h1>
-
-            <p>
-                We're on a mission to help everyone create a unique digital identity
-                – one stylish name at a time.
-            </p>
-
+            <p>We're on a mission to help everyone create a unique digital identity – one stylish name at a time.</p>
         </div>
     </section>
-    
-    <h1>Nickname<span class="logo-dot">.</span>com</h1>
-                <p class="tagline">Style Your Identity</p>
-            </div>
-            <div class="theme-toggle" id="themeToggle">
-                <i class="fas fa-moon"></i>
-            </div>
-        </div>
-    </nav>
 
-
-    <!-- Main Content -->
+    <!-- ===== MAIN CONTENT ===== -->
     <main>
         <div class="container">
+
+            <!-- ===== SECTION 1: OUR STORY ===== -->
             <div class="about-card">
                 <h2><i class="fas fa-book-open"></i> Our Story</h2>
-                <p>Nickname was born from a simple idea: <strong>everyone deserves a cool, unique name for their online presence</strong>. Whether you're a hardcore gamer, a social media influencer, or just someone who wants a fresh start, your username is your first impression. We created this tool to make that impression unforgettable.</p>
+                <p><strong>stylename.in</strong> was born from a simple idea: <strong>everyone deserves a cool, unique name for their online presence</strong>. Whether you're a hardcore gamer, a social media influencer, or just someone who wants a fresh start, your username is your first impression. We created this tool to make that impression unforgettable.</p>
                 <p>What started as a side project quickly grew into one of the most popular free name style generators, serving thousands of users every day. We're proud to be a part of your online journey.</p>
+                <p>Today, <strong>stylename.in</strong> is trusted by gamers, content creators, and social media enthusiasts from over <strong>50 countries</strong>. Our tool has generated more than <strong>1 million unique names</strong> since launch, and we're just getting started.</p>
+
                 <div class="stats-grid">
                     <div class="stat-item">
                         <div class="stat-number">50K+</div>
@@ -166,55 +141,164 @@
                 </div>
             </div>
 
+            <!-- ===== SECTION 2: OUR MISSION ===== -->
             <div class="about-card">
                 <h2><i class="fas fa-bullseye"></i> Our Mission</h2>
                 <p>To empower every user with the ability to create a personalized, stylish, and memorable online identity – without any technical skills, without any cost, and without any hassle.</p>
                 <p>We believe that your name is your brand. Whether you're building a gaming channel, starting an Instagram page, or just having fun with friends, we want to help you stand out.</p>
+                <p>We are committed to:</p>
+                <ul style="list-style: none; padding-left: 0; margin-top: 1rem;">
+                    <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--gray-light);">
+                        <i class="fas fa-check-circle" style="color: var(--primary); margin-right: 0.75rem;"></i>
+                        <strong>100% Free Access</strong> – No hidden charges, no premium tiers.
+                    </li>
+                    <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--gray-light);">
+                        <i class="fas fa-check-circle" style="color: var(--primary); margin-right: 0.75rem;"></i>
+                        <strong>One-Click Copy</strong> – Instant copy to clipboard for easy use.
+                    </li>
+                    <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--gray-light);">
+                        <i class="fas fa-check-circle" style="color: var(--primary); margin-right: 0.75rem;"></i>
+                        <strong>100+ Unique Styles</strong> – Love, Gamer, Fancy, Font categories.
+                    </li>
+                    <li style="padding: 0.5rem 0;">
+                        <i class="fas fa-check-circle" style="color: var(--primary); margin-right: 0.75rem;"></i>
+                        <strong>Privacy First</strong> – We don't store your data or generated names.
+                    </li>
+                </ul>
             </div>
 
+            <!-- ===== SECTION 3: WHY CHOOSE US ===== -->
             <div class="about-card">
-                <h2><i class="fas fa-users"></i> Meet the Team</h2>
-                <p>We're a small, passionate group of developers, designers, and gamers who love what we do.</p>
-                <div class="team-grid">
-                    <div class="team-member">
-                        <div class="team-avatar"><i class="fas fa-code"></i></div>
-                        <div class="team-name">Alex Chen</div>
-                        <div class="team-role">Lead Developer</div>
-                        <div class="team-bio">Full‑stack wizard who turns ideas into reality.</div>
+                <h2><i class="fas fa-star"></i> Why Choose stylename.in?</h2>
+                <p>There are many name generators online, but <strong>stylename.in</strong> stands out for several reasons:</p>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1rem;">
+                    <div style="background: var(--gray-light); padding: 1rem; border-radius: var(--radius);">
+                        <i class="fas fa-bolt" style="color: var(--primary); font-size: 1.5rem;"></i>
+                        <h4 style="margin: 0.5rem 0 0.25rem 0;">Lightning Fast</h4>
+                        <p style="font-size: 0.9rem; margin: 0; color: var(--gray);">Instant name generation without any delays.</p>
                     </div>
-                    <div class="team-member">
-                        <div class="team-avatar"><i class="fas fa-paint-brush"></i></div>
-                        <div class="team-name">Sarah Johnson</div>
-                        <div class="team-role">UX/UI Designer</div>
-                        <div class="team-bio">Makes everything look beautiful and easy to use.</div>
+                    <div style="background: var(--gray-light); padding: 1rem; border-radius: var(--radius);">
+                        <i class="fas fa-mobile-alt" style="color: var(--primary); font-size: 1.5rem;"></i>
+                        <h4 style="margin: 0.5rem 0 0.25rem 0;">Mobile Friendly</h4>
+                        <p style="font-size: 0.9rem; margin: 0; color: var(--gray);">Works perfectly on all devices, anytime.</p>
                     </div>
-                    <div class="team-member">
-                        <div class="team-avatar"><i class="fas fa-gamepad"></i></div>
-                        <div class="team-name">Mike Rodriguez</div>
-                        <div class="team-role">Gaming Expert</div>
-                        <div class="team-bio">Knows exactly what makes a cool gamer tag.</div>
+                    <div style="background: var(--gray-light); padding: 1rem; border-radius: var(--radius);">
+                        <i class="fas fa-sync-alt" style="color: var(--primary); font-size: 1.5rem;"></i>
+                        <h4 style="margin: 0.5rem 0 0.25rem 0;">Regular Updates</h4>
+                        <p style="font-size: 0.9rem; margin: 0; color: var(--gray);">New styles added weekly to keep it fresh.</p>
                     </div>
-                    <div class="team-member">
-                        <div class="team-avatar"><i class="fas fa-magnifying-glass"></i></div>
-                        <div class="team-name">Priya Sharma</div>
-                        <div class="team-role">Content & SEO</div>
-                        <div class="team-bio">Helps users find us and learn how to use our tools.</div>
+                    <div style="background: var(--gray-light); padding: 1rem; border-radius: var(--radius);">
+                        <i class="fas fa-shield-alt" style="color: var(--primary); font-size: 1.5rem;"></i>
+                        <h4 style="margin: 0.5rem 0 0.25rem 0;">Safe & Secure</h4>
+                        <p style="font-size: 0.9rem; margin: 0; color: var(--gray);">No data collection, no tracking, just pure fun.</p>
                     </div>
                 </div>
             </div>
 
+            <!-- ===== SECTION 4: WHAT MAKES US DIFFERENT ===== -->
+            <div class="about-card">
+                <h2><i class="fas fa-gem"></i> What Makes Us Different?</h2>
+                <p>Unlike other name generators that offer limited options, <strong>stylename.in</strong> provides a comprehensive experience:</p>
+                <ul style="list-style: none; padding-left: 0;">
+                    <li style="padding: 0.6rem 0; border-bottom: 1px solid var(--gray-light); display: flex; align-items: flex-start; gap: 0.75rem;">
+                        <i class="fas fa-heart" style="color: #ec4899; margin-top: 0.2rem;"></i>
+                        <div><strong>Love Category</strong> – Romantic and cute names for couples and crushes.</div>
+                    </li>
+                    <li style="padding: 0.6rem 0; border-bottom: 1px solid var(--gray-light); display: flex; align-items: flex-start; gap: 0.75rem;">
+                        <i class="fas fa-gamepad" style="color: #3b82f6; margin-top: 0.2rem;"></i>
+                        <div><strong>Gamer Category</strong> – Badass names for PUBG, Free Fire, and other games.</div>
+                    </li>
+                    <li style="padding: 0.6rem 0; border-bottom: 1px solid var(--gray-light); display: flex; align-items: flex-start; gap: 0.75rem;">
+                        <i class="fas fa-crown" style="color: #fbbf24; margin-top: 0.2rem;"></i>
+                        <div><strong>Fancy Category</strong> – Royal and VIP styles for social media profiles.</div>
+                    </li>
+                    <li style="padding: 0.6rem 0; display: flex; align-items: flex-start; gap: 0.75rem;">
+                        <i class="fas fa-font" style="color: #94a3b8; margin-top: 0.2rem;"></i>
+                        <div><strong>Font Category</strong> – Various font styles for text customization.</div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- ===== SECTION 5: HOW IT WORKS ===== -->
+            <div class="about-card">
+                <h2><i class="fas fa-cogs"></i> How It Works</h2>
+                <p>Using <strong>stylename.in</strong> is as easy as 1-2-3:</p>
+                <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; margin-top: 1rem;">
+                    <div style="text-align: center; padding: 1.5rem; background: var(--gray-light); border-radius: var(--radius);">
+                        <div style="background: var(--primary); color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 0.75rem auto; font-weight: bold;">1</div>
+                        <h4 style="margin: 0;">Type Your Name</h4>
+                        <p style="font-size: 0.85rem; margin: 0.25rem 0 0 0; color: var(--gray);">Enter any name or word in the input field.</p>
+                    </div>
+                    <div style="text-align: center; padding: 1.5rem; background: var(--gray-light); border-radius: var(--radius);">
+                        <div style="background: var(--primary); color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 0.75rem auto; font-weight: bold;">2</div>
+                        <h4 style="margin: 0;">Pick a Category</h4>
+                        <p style="font-size: 0.85rem; margin: 0.25rem 0 0 0; color: var(--gray);">Choose from Love, Gamer, Fancy, or Font styles.</p>
+                    </div>
+                    <div style="text-align: center; padding: 1.5rem; background: var(--gray-light); border-radius: var(--radius);">
+                        <div style="background: var(--primary); color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 0.75rem auto; font-weight: bold;">3</div>
+                        <h4 style="margin: 0;">Copy & Paste</h4>
+                        <p style="font-size: 0.85rem; margin: 0.25rem 0 0 0; color: var(--gray);">Click any style to instantly copy it to your clipboard.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== SECTION 6: FAQ ===== -->
+            <div class="about-card">
+                <h2><i class="fas fa-question-circle"></i> Frequently Asked Questions</h2>
+
+                <div style="margin-top: 1rem;">
+                    <div style="padding: 0.75rem 0; border-bottom: 1px solid var(--gray-light);">
+                        <h4 style="margin: 0; font-size: 1rem;">Is stylename.in completely free?</h4>
+                        <p style="margin: 0.25rem 0 0 0; color: var(--gray);">Yes! <strong>100% free</strong> with no hidden charges or premium plans.</p>
+                    </div>
+                    <div style="padding: 0.75rem 0; border-bottom: 1px solid var(--gray-light);">
+                        <h4 style="margin: 0; font-size: 1rem;">Can I use these names for commercial purposes?</h4>
+                        <p style="margin: 0.25rem 0 0 0; color: var(--gray);">Absolutely! All generated names are free to use for personal or commercial projects.</p>
+                    </div>
+                    <div style="padding: 0.75rem 0; border-bottom: 1px solid var(--gray-light);">
+                        <h4 style="margin: 0; font-size: 1rem;">Do you save my generated names?</h4>
+                        <p style="margin: 0.25rem 0 0 0; color: var(--gray);">No. We don't store any user data or generated content. Your privacy is our priority.</p>
+                    </div>
+                    <div style="padding: 0.75rem 0;">
+                        <h4 style="margin: 0; font-size: 1rem;">How often are new styles added?</h4>
+                        <p style="margin: 0.25rem 0 0 0; color: var(--gray);">We add <strong>new styles weekly</strong> to keep the collection fresh and exciting.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== SECTION 7: TESTIMONIALS ===== -->
+            <div class="about-card">
+                <h2><i class="fas fa-comments"></i> What Our Users Say</h2>
+                <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; margin-top: 1rem;">
+                    <div style="background: var(--gray-light); padding: 1rem; border-radius: var(--radius);">
+                        <p style="font-style: italic; margin: 0;">"Best name generator I've ever used! My Instagram profile looks so much better now."</p>
+                        <p style="margin: 0.5rem 0 0 0; font-weight: 600;">— Rahul K.</p>
+                    </div>
+                    <div style="background: var(--gray-light); padding: 1rem; border-radius: var(--radius);">
+                        <p style="font-style: italic; margin: 0;">"I use this for my PUBG and Free Fire names. My friends are always asking how I get such cool names!"</p>
+                        <p style="margin: 0.5rem 0 0 0; font-weight: 600;">— Ananya S.</p>
+                    </div>
+                    <div style="background: var(--gray-light); padding: 1rem; border-radius: var(--radius);">
+                        <p style="font-style: italic; margin: 0;">"Simple, fast, and free. Exactly what I needed for my gaming channel."</p>
+                        <p style="margin: 0.5rem 0 0 0; font-weight: 600;">— Vikram M.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== SECTION 8: CONTACT ===== -->
             <div class="about-card" style="text-align: center;">
                 <h2><i class="fas fa-envelope"></i> Get in Touch</h2>
                 <p style="margin-bottom: 1.5rem;">Have a question, suggestion, or just want to say hi? We'd love to hear from you.</p>
-                <a href="contact.html" class="primary-btn" style="display: inline-block; padding: 0.8rem 2rem; text-decoration: none; background: var(--primary); color: white; border-radius: var(--radius);">
+                <a href="contact.html" class="primary-btn" style="display: inline-block; padding: 0.8rem 2.5rem; text-decoration: none; background: var(--primary); color: white; border-radius: var(--radius); font-weight: 600;">
                     <i class="fas fa-paper-plane"></i> Contact Us
                 </a>
-                <p style="margin-top: 1.5rem; color: var(--gray);">Or email us directly at <strong>stylename.in</strong></p>
+                <p style="margin-top: 1.5rem; color: var(--gray);">Or email us directly at <strong>support@stylename.in</strong></p>
             </div>
+
         </div>
     </main>
 
-    <!-- Footer -->
+    <!-- ===== FOOTER ===== -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
@@ -229,13 +313,16 @@
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="contact.html">Contact</a></li>
                         <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h3>Legal</h3>
+                    <h3>Popular Categories</h3>
                     <ul>
-                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="index.html">Love Names</a></li>
+                        <li><a href="index.html">Gamer Names</a></li>
+                        <li><a href="index.html">Fancy Names</a></li>
+                        <li><a href="index.html">Font Styles</a></li>
                     </ul>
                 </div>
             </div>
@@ -245,8 +332,11 @@
         </div>
     </footer>
 
+    <!-- ===== TOAST ===== -->
     <div class="toast" id="toast"></div>
 
+    <!-- ===== SCRIPTS ===== -->
     <script src="script.js"></script>
+
 </body>
 </html>
