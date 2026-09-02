@@ -1,21 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-         <!--. META TAG – Verification के लिए -->
-<meta name="google-adsense-account" content="ca-pub-5781318703267732">
-<!-- 2. META TAG – Search Console Verification के लिए -->
-<meta name="google-site-verification" content="cKGfHx3401UeyzijckfH4-0-Km0WQ33kICn3MIs3J04" />
-<!-- 3. ADSENSE SCRIPT – Ads दिखाने के लिए -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5781318703267732" crossorigin="anonymous"></script>
-   <meta charset="UTF-8">
+
+    <!-- ========================================== -->
+    <!-- 1. META TAGS (Essential - No change)       -->
+    <!-- ========================================== -->
+
+    <!-- Google AdSense Verification -->
+    <meta name="google-adsense-account" content="ca-pub-5781318703267732">
+
+    <!-- Google Search Console Verification -->
+    <meta name="google-site-verification" content="cKGfHx3401UeyzijckfH4-0-Km0WQ33kICn3MIs3J04">
+
+    <!-- AdSense Script (Kept as is) -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5781318703267732" crossorigin="anonymous"></script>
+
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
     <title>Terms & Conditions – stylename.in</title>
-    <meta name="description" content="Terms and Conditions for using stylename.in. Rules, guidelines, and legal information for our name style generator website.">    
+    <meta name="description" content="Terms and Conditions for using stylename.in. Rules, guidelines, and legal information for our name style generator website.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://stylename.in/terms.html">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Terms & Conditions – stylename.in">
+    <meta property="og:description" content="Read the terms and conditions for using stylename.in – the free stylish name generator.">
+    <meta property="og:url" content="https://stylename.in/terms.html">
+    <meta property="og:type" content="website">
+
+    <!-- Favicon -->
     <link rel="icon" href="favicon.png" type="image/png">
+
+    <!-- ========================================== -->
+    <!-- 2. PERFORMANCE OPTIMIZATION                -->
+    <!-- ========================================== -->
+
+    <!-- Preconnect for CDN -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- ========================================== -->
+    <!-- 3. CSS (Non-blocking loading)              -->
+    <!-- ========================================== -->
+
+    <!-- Main CSS - Preload + Load -->
+    <link rel="preload" href="style.css" as="style">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome - Non-blocking -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    </noscript>
+
+    <!-- Google Fonts - Non-blocking with font-display -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap">
+    </noscript>
+
+    <!-- ========================================== -->
+    <!-- 4. INLINE STYLES (Minimal, Theme-based)    -->
+    <!-- ========================================== -->
+
     <style>
+        /* ----- TERMS PAGE SPECIFIC STYLES (Theme-based) ----- */
         .terms-container {
             max-width: 900px;
             margin: 3rem auto;
@@ -24,65 +76,121 @@
             border-radius: var(--radius);
             box-shadow: var(--shadow);
         }
+
         .terms-container h1 {
             margin-bottom: 0.5rem;
             color: var(--primary);
         }
+
         .terms-container h2 {
             font-size: 1.5rem;
             margin-top: 2rem;
             margin-bottom: 1rem;
+            color: var(--dark);
         }
+
         .terms-container p {
             margin-bottom: 1rem;
             line-height: 1.8;
+            color: var(--gray);
         }
+
         .terms-container ul {
             margin-left: 1.5rem;
             margin-bottom: 1.5rem;
         }
+
         .terms-container li {
             margin-bottom: 0.6rem;
             line-height: 1.7;
+            color: var(--gray);
         }
+
         .terms-container a {
             color: var(--primary);
             text-decoration: none;
         }
+
         .terms-container a:hover {
             text-decoration: underline;
         }
+
+        /* Highlight Box - Theme based */
         .highlight-box {
-            background: #fff3cd;
-            border-left: 4px solid #f59e0b;
+            background: var(--gray-light);
+            border-left: 4px solid var(--primary);
             padding: 1rem;
             border-radius: 8px;
             margin: 1.5rem 0;
         }
+
+        .highlight-box p {
+            margin: 0;
+            color: var(--dark);
+        }
+
+        /* Legal Note - Theme based */
         .legal-note {
-            background: #f0f4ff;
+            background: var(--gray-light);
             padding: 1rem 1.5rem;
             border-radius: 10px;
-            border-left: 4px solid #4f46e5;
+            border-left: 4px solid var(--primary);
             margin: 1.5rem 0;
         }
+
         .legal-note strong {
-            color: #4f46e5;
+            color: var(--primary);
         }
+
+        /* Dark theme support */
         .dark-theme .legal-note {
-            background: #1a1a2e;
+            background: #1e293b;
             border-left-color: #818cf8;
         }
+
         .dark-theme .legal-note strong {
             color: #818cf8;
         }
+
         .dark-theme .highlight-box {
-            background: #1a1505;
-            border-color: #d4af37;
+            background: #1e293b;
+            border-left-color: #818cf8;
+        }
+
+        .dark-theme .highlight-box p {
+            color: #e2e8f0;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .terms-container {
+                margin: 1.5rem 1rem;
+                padding: 1.5rem;
+            }
+
+            .terms-container h1 {
+                font-size: 1.6rem;
+            }
+
+            .terms-container h2 {
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .terms-container {
+                margin: 1rem 0.75rem;
+                padding: 1rem;
+            }
+
+            .terms-container h1 {
+                font-size: 1.3rem;
+            }
         }
     </style>
+
 </head>
-<body>
+         <body>
 
     <nav class="navbar">
         <div class="container">
