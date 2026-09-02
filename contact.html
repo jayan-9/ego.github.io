@@ -1,182 +1,250 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!--. META TAG – Verification के लिए -->
-<meta name="google-adsense-account" content="ca-pub-5781318703267732">
-<!-- 2. META TAG – Search Console Verification के लिए -->
-<meta name="google-site-verification" content="cKGfHx3401UeyzijckfH4-0-Km0WQ33kICn3MIs3J04" />
-<!-- 3. ADSENSE SCRIPT – Ads दिखाने के लिए -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5781318703267732" crossorigin="anonymous"></script>
-  <meta charset="UTF-8">
+
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Get in touch with the stylename.in team. We're here to help!">
+
+    <meta name="google-adsense-account" content="ca-pub-5781318703267732">
+
+    <meta name="google-site-verification"
+          content="cKGfHx3401UeyzijckfH4-0-Km0WQ33kICn3MIs3J04">
+
+    <script async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5781318703267732"
+        crossorigin="anonymous"></script>
+
+    <meta name="description"
+          content="Get in touch with the stylename.in team. We're here to help!">
+
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="stylename.in">
+
+    <link rel="canonical" href="https://stylename.in/contact.html">
+
     <title>Contact Us – stylename.in</title>
+
     <link rel="icon" href="favicon.png" type="image/png">
+
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="preload"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+          as="style"
+          onload="this.onload=null;this.rel='stylesheet'">
+
+    <noscript>
+        <link rel="stylesheet"
+              href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    </noscript>
+
     <style>
         .contact-hero {
-            background: linear-gradient(135deg, #10b981 0%, #4f46e5 100%);
-            color: white;
-            padding: 4rem 0;
             text-align: center;
-            margin-bottom: 2rem;
-            border-radius: 0 0 20px 20px;
+            padding: 2rem 1rem;
         }
+
         .contact-hero h1 {
-            color: white;
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
+            margin: 0 0 .5rem;
+            font-size: 2rem;
         }
+
         .contact-hero p {
-            color: rgba(255,255,255,0.9);
-            font-size: 1.2rem;
             max-width: 700px;
-            margin: 0 auto;
+            margin: auto;
+            line-height: 1.6;
         }
+
         .contact-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            margin-bottom: 3rem;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
         }
-        .contact-info-card, .contact-form-card {
-            background: var(--light);
-            border-radius: var(--radius);
-            padding: 2rem;
-            box-shadow: var(--shadow);
-            border: 1px solid var(--gray-light);
+
+        .contact-info-card,
+        .contact-form-card {
+            padding: 1rem 0;
         }
-        .contact-info-card h2, .contact-form-card h2 {
-            color: var(--primary);
-            margin-bottom: 1.5rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
+
+        .contact-info-card h2,
+        .contact-form-card h2,
+        .faq-section h2 {
+            margin-bottom: 1rem;
         }
+
         .contact-detail {
             display: flex;
-            gap: 1rem;
-            margin-bottom: 1.5rem;
-            align-items: flex-start;
+            gap: .8rem;
+            margin-bottom: 1rem;
         }
+
         .contact-icon {
-            width: 45px;
-            height: 45px;
-            background: rgba(79, 70, 229, 0.1);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--primary);
-            font-size: 1.2rem;
+            flex-shrink: 0;
         }
+
         .contact-detail h3 {
-            font-size: 1.1rem;
-            margin-bottom: 0.25rem;
+            margin: 0 0 .2rem;
+            font-size: 1rem;
         }
-        .contact-detail p, .contact-detail a {
-            color: var(--gray);
+
+        .contact-detail p {
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        .contact-detail a {
             text-decoration: none;
         }
-        .contact-detail a:hover {
-            color: var(--primary);
-            text-decoration: underline;
-        }
+
         .form-group {
-            margin-bottom: 1.25rem;
+            margin-bottom: 1rem;
         }
+
         .form-group label {
             display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 500;
-            color: var(--dark);
+            margin-bottom: .4rem;
+            font-weight: 600;
         }
+
         .form-control {
             width: 100%;
-            padding: 0.8rem 1rem;
-            border: 2px solid var(--gray-light);
-            border-radius: var(--radius);
-            background: var(--light);
-            color: var(--dark);
-            font-family: 'Inter', sans-serif;
-            transition: var(--transition);
+            padding: .7rem;
+            box-sizing: border-box;
         }
-        .form-control:focus {
-            outline: none;
-            border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
-        }
+
         textarea.form-control {
             min-height: 120px;
             resize: vertical;
         }
+
         .submit-btn {
             width: 100%;
-            padding: 1rem;
-            background: var(--primary);
-            color: white;
-            border: none;
-            border-radius: var(--radius);
-            font-size: 1rem;
-            font-weight: 600;
+            padding: .8rem;
+            border: 0;
             cursor: pointer;
-            transition: var(--transition);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
+            font-weight: 600;
         }
-        .submit-btn:hover {
-            background: var(--primary-dark);
-            transform: translateY(-2px);
-        }
+
         .faq-section {
-            background: var(--light);
-            border-radius: var(--radius);
-            padding: 2rem;
-            margin-top: 2rem;
-            box-shadow: var(--shadow);
-            border: 1px solid var(--gray-light);
+            padding: 1rem 0;
         }
-        .faq-section h2 {
-            color: var(--primary);
-            margin-bottom: 1.5rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
+
         .faq-item {
-            border-bottom: 1px solid var(--gray-light);
-            padding: 1.25rem 0;
+            border-bottom: 1px solid #ddd;
+            padding: 1rem 0;
         }
-        .faq-item:last-child {
-            border-bottom: none;
-        }
+
         .faq-question {
             display: flex;
             justify-content: space-between;
             align-items: center;
             cursor: pointer;
             font-weight: 600;
-            color: var(--dark);
         }
+
         .faq-answer {
-            padding-top: 0.75rem;
-            color: var(--gray);
+            padding-top: .6rem;
             display: none;
         }
+
         .faq-item.active .faq-answer {
             display: block;
         }
+
         .faq-item.active .faq-question i {
             transform: rotate(180deg);
         }
+
         @media (max-width: 768px) {
             .contact-grid {
                 grid-template-columns: 1fr;
             }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+
+            <button class="menu-toggle"
+                    id="menuToggle"
+                    aria-label="Open menu">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <div class="logo">
+                <h1>stylename<span class="logo-dot">.</span>in</h1>
+                <p class="tagline">Style Your Identity</p>
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+
+        <div class="sidebar-header">
+            <h3>Menu</h3>
+
+            <button class="close-sidebar"
+                    id="closeSidebar"
+                    aria-label="Close menu">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <div class="sidebar-content">
+
+            <div class="sidebar-item"
+                 onclick="window.location.href='index.html'">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </div>
+
+            <div class="sidebar-item"
+                 onclick="window.location.href='about.html'">
+                <i class="fas fa-info-circle"></i>
+                <span>About Us</span>
+            </div>
+
+            <div class="sidebar-item active">
+                <i class="fas fa-envelope"></i>
+                <span>Contact</span>
+            </div>
+
+            <div class="sidebar-item"
+                 onclick="window.location.href='privacy-policy.html'">
+                <i class="fas fa-shield-alt"></i>
+                <span>Privacy Policy</span>
+            </div>
+
+            <div class="sidebar-item"
+                 onclick="window.location.href='terms.html'">
+                <i class="fas fa-file-contract"></i>
+                <span>Terms & Conditions</span>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Hero -->
+    <section class="contact-hero">
+        <div class="container">
+
+            <h1>Contact Us</h1>
+
+            <p>
+                Have a question, suggestion, or just want to say hello?
+                We'd love to hear from you.
+            </p>
+
+        </div>
+    </section>            }
         }
     </style>
 </head>
