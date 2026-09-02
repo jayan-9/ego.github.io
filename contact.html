@@ -2,137 +2,239 @@
 <html lang="en">
 <head>
 
+    <!-- ===== META TAGS ===== -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Google AdSense -->
     <meta name="google-adsense-account" content="ca-pub-5781318703267732">
 
-    <meta name="google-site-verification"
-          content="cKGfHx3401UeyzijckfH4-0-Km0WQ33kICn3MIs3J04">
+    <!-- Google Search Console -->
+    <meta name="google-site-verification" content="cKGfHx3401UeyzijckfH4-0-Km0WQ33kICn3MIs3J04">
 
-    <script async
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5781318703267732"
-        crossorigin="anonymous"></script>
+    <!-- AdSense Script -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5781318703267732" crossorigin="anonymous"></script>
 
-    <meta name="description"
-          content="Get in touch with the stylename.in team. We're here to help!">
-
+    <!-- SEO Meta -->
+    <meta name="description" content="Contact stylename.in – the free stylish name generator. Get support, suggest new styles, report bugs, or just say hello. We reply within 24 hours.">
+    <meta name="keywords" content="contact stylename.in, stylish name generator support, free name style help, gaming name generator contact">
     <meta name="robots" content="index, follow">
     <meta name="author" content="stylename.in">
-
     <link rel="canonical" href="https://stylename.in/contact.html">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Contact Us – stylename.in | Free Stylish Name Generator">
+    <meta property="og:description" content="Get in touch with the stylename.in team. We're here to help with any questions, suggestions, or support needs.">
+    <meta property="og:url" content="https://stylename.in/contact.html">
+    <meta property="og:type" content="website">
 
     <title>Contact Us – stylename.in</title>
 
+    <!-- Favicon -->
     <link rel="icon" href="favicon.png" type="image/png">
 
+    <!-- ===== PERFORMANCE OPTIMIZED CSS ===== -->
+    <link rel="preload" href="style.css" as="style">
     <link rel="stylesheet" href="style.css">
 
-    <link rel="preload"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-          as="style"
-          onload="this.onload=null;this.rel='stylesheet'">
-
+    <!-- Font Awesome - Non-blocking -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
-        <link rel="stylesheet"
-              href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     </noscript>
 
+    <!-- ===== PRECONNECT ===== -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- ===== INLINE STYLES (Minimal, Performance Friendly) ===== -->
     <style>
+        /* ----- Contact Page Specific Styles ----- */
         .contact-hero {
             text-align: center;
-            padding: 2rem 1rem;
+            padding: 2.5rem 1rem 1.5rem 1rem;
         }
 
         .contact-hero h1 {
-            margin: 0 0 .5rem;
+            margin: 0 0 0.5rem 0;
             font-size: 2rem;
         }
 
         .contact-hero p {
             max-width: 700px;
-            margin: auto;
-            line-height: 1.6;
+            margin: 0 auto;
+            line-height: 1.7;
+            color: var(--gray);
         }
 
         .contact-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 1.5rem;
-            margin-bottom: 2rem;
+            gap: 2rem;
+            margin: 1.5rem 0 2rem 0;
         }
 
         .contact-info-card,
         .contact-form-card {
-            padding: 1rem 0;
+            padding: 0;
         }
 
         .contact-info-card h2,
-        .contact-form-card h2,
-        .faq-section h2 {
-            margin-bottom: 1rem;
+        .contact-form-card h2 {
+            margin-bottom: 1.25rem;
+            font-size: 1.3rem;
         }
 
         .contact-detail {
             display: flex;
-            gap: .8rem;
-            margin-bottom: 1rem;
+            gap: 0.9rem;
+            margin-bottom: 1.25rem;
+            padding: 0.75rem 1rem;
+            background: var(--gray-light);
+            border-radius: var(--radius);
+            transition: var(--transition);
+        }
+
+        .contact-detail:hover {
+            transform: translateX(4px);
         }
 
         .contact-icon {
             flex-shrink: 0;
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--primary);
+            color: #fff;
+            border-radius: 50%;
+            font-size: 0.9rem;
         }
 
         .contact-detail h3 {
-            margin: 0 0 .2rem;
-            font-size: 1rem;
+            margin: 0 0 0.15rem 0;
+            font-size: 0.95rem;
         }
 
         .contact-detail p {
             margin: 0;
             line-height: 1.5;
+            font-size: 0.9rem;
+            color: var(--gray);
         }
 
         .contact-detail a {
             text-decoration: none;
+            color: var(--primary);
         }
 
+        .contact-detail a:hover {
+            text-decoration: underline;
+        }
+
+        /* ----- Form Styles ----- */
         .form-group {
-            margin-bottom: 1rem;
+            margin-bottom: 1.1rem;
         }
 
         .form-group label {
             display: block;
-            margin-bottom: .4rem;
+            margin-bottom: 0.35rem;
             font-weight: 600;
+            font-size: 0.9rem;
         }
 
         .form-control {
             width: 100%;
-            padding: .7rem;
+            padding: 0.7rem 0.85rem;
+            border: 2px solid var(--gray-light);
+            border-radius: var(--radius);
+            background: var(--light);
+            color: var(--dark);
+            font-size: 0.95rem;
+            transition: var(--transition);
             box-sizing: border-box;
         }
 
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+        }
+
         textarea.form-control {
-            min-height: 120px;
+            min-height: 130px;
             resize: vertical;
+        }
+
+        select.form-control {
+            appearance: auto;
+            cursor: pointer;
         }
 
         .submit-btn {
             width: 100%;
-            padding: .8rem;
-            border: 0;
-            cursor: pointer;
+            padding: 0.8rem;
+            border: none;
+            border-radius: var(--radius);
+            background: var(--primary);
+            color: #fff;
             font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: var(--transition);
         }
 
+        .submit-btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow);
+        }
+
+        .submit-btn:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .form-status {
+            margin-top: 1rem;
+            padding: 0.75rem 1rem;
+            border-radius: var(--radius);
+            display: none;
+        }
+
+        .form-status.success {
+            display: block;
+            background: #10b981;
+            color: #fff;
+        }
+
+        .form-status.error {
+            display: block;
+            background: #ef4444;
+            color: #fff;
+        }
+
+        /* ----- FAQ Section ----- */
         .faq-section {
-            padding: 1rem 0;
+            padding: 1.5rem 0 0.5rem 0;
+        }
+
+        .faq-section h2 {
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
         }
 
         .faq-item {
-            border-bottom: 1px solid #ddd;
+            border-bottom: 1px solid var(--gray-light);
             padding: 1rem 0;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
         }
 
         .faq-question {
@@ -141,135 +243,133 @@
             align-items: center;
             cursor: pointer;
             font-weight: 600;
+            padding: 0.25rem 0;
+            user-select: none;
+            font-size: 0.95rem;
         }
 
-        .faq-answer {
-            padding-top: .6rem;
-            display: none;
-        }
-
-        .faq-item.active .faq-answer {
-            display: block;
+        .faq-question i {
+            transition: transform 0.3s ease;
+            color: var(--gray);
         }
 
         .faq-item.active .faq-question i {
             transform: rotate(180deg);
         }
 
+        .faq-answer {
+            padding-top: 0.6rem;
+            display: none;
+            line-height: 1.6;
+            color: var(--gray);
+            font-size: 0.92rem;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        /* ----- Responsive ----- */
         @media (max-width: 768px) {
             .contact-grid {
                 grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .contact-hero {
+                padding: 1.5rem 0 0.5rem 0;
+            }
+
+            .contact-hero h1 {
+                font-size: 1.6rem;
+            }
+
+            .contact-detail {
+                padding: 0.6rem 0.8rem;
             }
         }
-    </style>
 
-</head>
+        @media (max-width: 480px) {
+            .contact-hero h1 {
+                font-size: 1.4rem;
+            }
 
-<body>
+            .form-control {
+                padding: 0.6rem 0.7rem;
+                font-size: 0.9rem;
+            }
 
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="container">
+            .submit-btn {
+                padding: 0.7rem;
+                font-size: 0.9rem;
+            }
 
-            <button class="menu-toggle"
-                    id="menuToggle"
-                    aria-label="Open menu">
-                <i class="fas fa-bars"></i>
-            </button>
+            .contact-detail {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.4rem;
+            }
 
-            <div class="logo">
-                <h1>stylename<span class="logo-dot">.</span>in</h1>
-                <p class="tagline">Style Your Identity</p>
-            </div>
+            .contact-icon {
+                width: 30px;
+                height: 30px;
+                font-size: 0.75rem;
+            }
+        }
 
-        </div>
-    </nav>
+        /* Dark theme overrides */
+        .dark-theme .contact-detail {
+            background: #1e293b;
+        }
 
-    <!-- Sidebar -->
-    <div class="sidebar" id="sidebar">
+        .dark-theme .contact-detail p {
+            color: #94a3b8;
+        }
 
-        <div class="sidebar-header">
-            <h3>Menu</h3>
+        .dark-theme .form-control {
+            background: #1e293b;
+            border-color: #334155;
+            color: #e2e8f0;
+        }
 
-            <button class="close-sidebar"
-                    id="closeSidebar"
-                    aria-label="Close menu">
-                <i class="fas fa-times"></i>
-            </button>
-        </div>
+        .dark-theme .form-control:focus {
+            border-color: var(--primary);
+        }
 
-        <div class="sidebar-content">
+        .dark-theme .faq-item {
+            border-color: #334155;
+        }
 
-            <div class="sidebar-item"
-                 onclick="window.location.href='index.html'">
-                <i class="fas fa-home"></i>
-                <span>Home</span>
-            </div>
-
-            <div class="sidebar-item"
-                 onclick="window.location.href='about.html'">
-                <i class="fas fa-info-circle"></i>
-                <span>About Us</span>
-            </div>
-
-            <div class="sidebar-item active">
-                <i class="fas fa-envelope"></i>
-                <span>Contact</span>
-            </div>
-
-            <div class="sidebar-item"
-                 onclick="window.location.href='privacy-policy.html'">
-                <i class="fas fa-shield-alt"></i>
-                <span>Privacy Policy</span>
-            </div>
-
-            <div class="sidebar-item"
-                 onclick="window.location.href='terms.html'">
-                <i class="fas fa-file-contract"></i>
-                <span>Terms & Conditions</span>
-            </div>
-
-        </div>
-    </div>
-
-    <!-- Hero -->
-    <section class="contact-hero">
-        <div class="container">
-
-            <h1>Contact Us</h1>
-
-            <p>
-                Have a question, suggestion, or just want to say hello?
-                We'd love to hear from you.
-            </p>
-
-        </div>
-    </section>            }
+        .dark-theme .faq-answer {
+            color: #94a3b8;
         }
     </style>
+
 </head>
+
 <body>
-    <!-- Navbar -->
+
+    <!-- ===== NAVBAR ===== -->
     <nav class="navbar">
         <div class="container">
-            <button class="menu-toggle" id="menuToggle">
+            <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
                 <i class="fas fa-bars"></i>
             </button>
             <div class="logo">
                 <h1>stylename<span class="logo-dot">.</span>in</h1>
                 <p class="tagline">Style Your Identity</p>
             </div>
-            <div class="theme-toggle" id="themeToggle">
+            <div class="theme-toggle" id="themeToggle" role="button" tabindex="0" aria-label="Toggle theme">
                 <i class="fas fa-moon"></i>
             </div>
         </div>
     </nav>
 
-    <!-- Sidebar -->
+    <!-- ===== SIDEBAR ===== -->
     <div class="sidebar" id="sidebar">
         <div class="sidebar-header">
             <h3>Menu</h3>
-            <button class="close-sidebar" id="closeSidebar">
+            <button class="close-sidebar" id="closeSidebar" aria-label="Close menu">
                 <i class="fas fa-times"></i>
             </button>
         </div>
@@ -302,125 +402,254 @@
         </div>
     </div>
 
-    <!-- Hero -->
+    <!-- ===== HERO SECTION ===== -->
     <section class="contact-hero">
         <div class="container">
-            <h1>Contact Us</h1>
-            <p>Have a question, suggestion, or just want to say hello? We'd love to hear from you.</p>
+            <h1>📬 Contact Us</h1>
+            <p>
+                Have a question, suggestion, or just want to say hello?
+                We'd love to hear from you. Our team is here to help with
+                any inquiries about <strong>stylename.in</strong>, our name
+                generator tool, or anything else you need.
+            </p>
         </div>
     </section>
 
-    <!-- Main -->
+    <!-- ===== MAIN CONTENT ===== -->
     <main>
         <div class="container">
+
+            <!-- ===== CONTACT GRID ===== -->
             <div class="contact-grid">
-                <!-- Contact Info -->
+
+                <!-- ===== LEFT: CONTACT INFO ===== -->
                 <div class="contact-info-card">
-                    <h2><i class="fas fa-info-circle"></i> Get in Touch</h2>
-                    
+                    <h2><i class="fas fa-address-card" style="color: var(--primary);"></i> Get in Touch</h2>
+
                     <div class="contact-detail">
                         <div class="contact-icon"><i class="fas fa-envelope"></i></div>
                         <div>
                             <h3>Email</h3>
                             <p><a href="mailto:stylenamein@gmail.com">stylenamein@gmail.com</a></p>
-                            <p style="font-size: 0.9rem;">We usually reply within 24 hours.</p>
+                            <p style="font-size: 0.8rem; color: var(--gray); margin-top: 0.1rem;">We reply within <strong>24 hours</strong> on business days.</p>
                         </div>
                     </div>
-                    
-                    <div class="contact-detail">
-                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
-                        <div>
-                            <h3>Office</h3>
-                            <p>India</p>
-                        </div>
-                    </div>
-                    
+
                     <div class="contact-detail">
                         <div class="contact-icon"><i class="fas fa-clock"></i></div>
                         <div>
-                            <h3>Business Hours</h3>
-                            <p>Monday – Friday: 9:00 AM – 6:00 PM (IST)<br>Saturday – Sunday: 10:00 AM – 4:00 PM (IST)</p>
+                            <h3>Response Hours</h3>
+                            <p>Monday – Friday: 9:00 AM – 6:00 PM (IST)</p>
+                            <p style="font-size: 0.85rem; color: var(--gray);">Weekend replies may take up to 48 hours.</p>
                         </div>
                     </div>
-                </div>
-                
-                <!-- Contact Form – REAL FORMSPREE INTEGRATION -->
-                <div class="contact-form-card">
-                    <h2><i class="fas fa-paper-plane"></i> Send a Message</h2>
-                    <form action="https://formspree.io/f/xzdkblzn" method="POST" id="contactForm">
-                        <div class="form-group">
-                            <label for="name">Your Name *</label>
-                            <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
+
+                    <div class="contact-detail">
+                        <div class="contact-icon"><i class="fas fa-globe"></i></div>
+                        <div>
+                            <h3>Location</h3>
+                            <p>India</p>
+                            <p style="font-size: 0.85rem; color: var(--gray);">We operate fully remotely.</p>
                         </div>
+                    </div>
+
+                    <div class="contact-detail">
+                        <div class="contact-icon"><i class="fas fa-users"></i></div>
+                        <div>
+                            <h3>Community</h3>
+                            <p style="font-size: 0.85rem; color: var(--gray);">Join our growing community of <strong>50,000+</strong> users worldwide.</p>
+                        </div>
+                    </div>
+
+                    <!-- ===== BEFORE YOU CONTACT ===== -->
+                    <div style="margin-top: 1.5rem; padding: 1rem; background: var(--gray-light); border-radius: var(--radius); border-left: 4px solid var(--primary);">
+                        <h3 style="margin: 0 0 0.4rem 0; font-size: 0.95rem;">
+                            <i class="fas fa-lightbulb" style="color: var(--primary);"></i> Before You Contact
+                        </h3>
+                        <ul style="margin: 0; padding-left: 1.2rem; font-size: 0.85rem; color: var(--gray); line-height: 1.8;">
+                            <li>Check our <a href="privacy-policy.html" style="color: var(--primary);">Privacy Policy</a> for data questions</li>
+                            <li>Most questions are answered in our <strong>FAQ</strong> section below</li>
+                            <li>For partnership or business inquiries, mention in subject</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- ===== RIGHT: CONTACT FORM ===== -->
+                <div class="contact-form-card">
+                    <h2><i class="fas fa-paper-plane" style="color: var(--primary);"></i> Send a Message</h2>
+                    <p style="font-size: 0.9rem; color: var(--gray); margin-bottom: 1.25rem;">
+                        Fill out the form below and we'll get back to you as soon as possible.
+                    </p>
+
+                    <!-- ===== FORMSPREE FORM ===== -->
+                    <form action="https://formspree.io/f/xzdkblzn" method="POST" id="contactForm">
+
+                        <div class="form-group">
+                            <label for="name">Your Full Name *</label>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="e.g., Rahul Kumar" required>
+                        </div>
+
                         <div class="form-group">
                             <label for="email">Email Address *</label>
                             <input type="email" class="form-control" id="email" name="_replyto" placeholder="you@example.com" required>
                         </div>
+
                         <div class="form-group">
                             <label for="subject">Subject *</label>
                             <select class="form-control" id="subject" name="subject" required>
-                                <option value="" disabled selected>Select a subject</option>
-                                <option value="general">General Inquiry</option>
-                                <option value="feedback">Feedback / Suggestion</option>
-                                <option value="bug">Report a Bug</option>
-                                <option value="partnership">Partnership</option>
-                                <option value="other">Other</option>
+                                <option value="" disabled selected>— Select a subject —</option>
+                                <option value="General Inquiry">📝 General Inquiry</option>
+                                <option value="Feedback / Suggestion">💡 Feedback / Suggestion</option>
+                                <option value="Bug Report">🐛 Report a Bug</option>
+                                <option value="Partnership">🤝 Partnership Opportunity</option>
+                                <option value="AdSense / Monetization">📊 AdSense / Monetization</option>
+                                <option value="Content Request">📄 Content Request</option>
+                                <option value="Other">📌 Other</option>
                             </select>
                         </div>
+
                         <div class="form-group">
-                            <label for="message">Message *</label>
-                            <textarea class="form-control" id="message" name="message" placeholder="Write your message here..." required></textarea>
+                            <label for="message">Your Message *</label>
+                            <textarea class="form-control" id="message" name="message" placeholder="Write your message here in detail..." required></textarea>
                         </div>
-                        <!-- Anti-spam field (hidden) -->
-                        <input type="text" name="_gotcha" style="display:none">
-                        <!-- Custom subject for email (optional) -->
+
+                        <!-- Anti-spam (hidden) -->
+                        <input type="text" name="_gotcha" style="display:none;">
+
+                        <!-- Custom subject for email -->
                         <input type="hidden" name="_subject" value="New message from stylename.in">
-                        <button type="submit" class="submit-btn">
+
+                        <button type="submit" class="submit-btn" id="submitBtn">
                             <i class="fas fa-paper-plane"></i> Send Message
                         </button>
-                        <div id="formStatus" style="margin-top: 1rem; display: none;"></div>
+
+                        <div class="form-status" id="formStatus"></div>
+
                     </form>
                 </div>
             </div>
-            
-            <!-- FAQ -->
+
+            <!-- ===== FAQ SECTION ===== -->
             <div class="faq-section">
-                <h2><i class="fas fa-question-circle"></i> Frequently Asked Questions</h2>
-                
-                <div class="faq-item">
+                <h2><i class="fas fa-question-circle" style="color: var(--primary);"></i> Frequently Asked Questions</h2>
+
+                <div class="faq-item active">
                     <div class="faq-question">
                         <span>How long does it take to get a reply?</span>
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>We aim to respond to all inquiries within 24 hours on business days. If you don't hear back, please check your spam folder or try a different contact method.</p>
+                        <p>We aim to respond to all inquiries within <strong>24 hours</strong> on business days (Monday–Friday). If you contact us on a weekend, we'll get back to you by the next business day. Please check your spam folder if you don't receive a reply within 48 hours.</p>
                     </div>
                 </div>
-                
+
                 <div class="faq-item">
                     <div class="faq-question">
                         <span>Can I suggest new name styles or symbols?</span>
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>Absolutely! We love community input. Just send us a message with your ideas and we'll consider adding them in our next update.</p>
+                        <p>Absolutely! We love community input. Just send us a message with your ideas – including the style name and example – and we'll consider adding it in our next update. Many of our <strong>100+ styles</strong> came from user suggestions!</p>
                     </div>
                 </div>
-                
+
                 <div class="faq-item">
                     <div class="faq-question">
                         <span>Do you offer custom name style creation?</span>
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>Currently we focus on our free public tool. For enterprise or bulk custom requests, please email us at <strong>stylenamein@gmail.com</strong>.</p>
+                        <p>Currently, we focus on our <strong>free public tool</strong> with 100+ pre-made styles. For enterprise, bulk, or custom requests, please email us at <strong>stylenamein@gmail.com</strong> with your requirements. We'll get back to you to discuss options.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Is stylename.in really free? Are there any hidden charges?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, <strong>100% free</strong> with no hidden charges! We monetize through Google AdSense only, which allows us to keep the tool free for everyone. You'll never be asked for payment or premium subscription.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How do I report a bug or technical issue?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Use our contact form and select <strong>"Bug Report"</strong> in the subject field. Please include as much detail as possible: what you were doing, what happened, and your device/browser. Screenshots are very helpful!</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Can I use stylename.in for commercial purposes?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! All generated names are free to use for <strong>personal, commercial, and business</strong> purposes. You can use them for gaming channels, social media branding, product names, and more. No attribution required.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Do you store my data or generated names?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>No.</strong> We don't store any user data or generated content. Your privacy is our top priority. The only data we collect is anonymous usage statistics for improving our service. See our <a href="privacy-policy.html" style="color: var(--primary);">Privacy Policy</a> for more details.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How can I support stylename.in?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>You can support us by:
+                            <br><br>
+                            ✅ <strong>Sharing</strong> the tool with your friends and followers<br>
+                            ✅ <strong>Disabling ad blocker</strong> (ads help us keep it free)<br>
+                            ✅ <strong>Following</strong> our social media channels<br>
+                            ✅ <strong>Giving feedback</strong> – we love hearing from you!
+                        </p>
                     </div>
                 </div>
             </div>
+
+            <!-- ===== COMMITMENT SECTION ===== -->
+            <div style="margin: 2rem 0; padding: 1.5rem; background: var(--gray-light); border-radius: var(--radius); text-align: center;">
+                <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem;">
+                    <i class="fas fa-heart" style="color: var(--primary);"></i> Our Commitment to You
+                </h3>
+                <p style="margin: 0; color: var(--gray); font-size: 0.95rem; max-width: 700px; margin: 0 auto;">
+                    We're dedicated to providing the <strong>best free name generator</strong> on the internet.
+                    Your feedback drives our improvements. Every message is read by a real human,
+                    and we genuinely care about your experience.
+                </p>
+                <div style="display: flex; justify-content: center; gap: 2rem; margin-top: 1rem; flex-wrap: wrap;">
+                    <span style="font-size: 0.85rem; color: var(--gray);">
+                        <i class="fas fa-check-circle" style="color: #10b981;"></i> 100% Free
+                    </span>
+                    <span style="font-size: 0.85rem; color: var(--gray);">
+                        <i class="fas fa-check-circle" style="color: #10b981;"></i> No Data Storage
+                    </span>
+                    <span style="font-size: 0.85rem; color: var(--gray);">
+                        <i class="fas fa-check-circle" style="color: #10b981;"></i> 24hr Response
+                    </span>
+                    <span style="font-size: 0.85rem; color: var(--gray);">
+                        <i class="fas fa-check-circle" style="color: #10b981;"></i> Community Driven
+                    </span>
+                </div>
+            </div>
+
         </div>
     </main>
 
-    <!-- Footer -->
+    <!-- ===== FOOTER ===== -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
@@ -439,10 +668,12 @@
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h3>Legal</h3>
+                    <h3>Popular Categories</h3>
                     <ul>
-                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                        <li><a href="terms.html">Terms & Conditions</a></li>
+                        <li><a href="index.html">Love Names</a></li>
+                        <li><a href="index.html">Gamer Names</a></li>
+                        <li><a href="index.html">Fancy Names</a></li>
+                        <li><a href="index.html">Font Styles</a></li>
                     </ul>
                 </div>
             </div>
@@ -452,60 +683,82 @@
         </div>
     </footer>
 
-    <!-- Scroll to Top -->
+    <!-- ===== SCROLL TO TOP ===== -->
     <button class="scroll-top" id="scrollTop">
         <i class="fas fa-chevron-up"></i>
     </button>
 
+    <!-- ===== TOAST ===== -->
     <div class="toast" id="toast"></div>
 
+    <!-- ===== SCRIPTS ===== -->
     <script src="script.js"></script>
+
+    <!-- ===== CONTACT FORM HANDLER ===== -->
     <script>
-        // Real Formspree submission (replaces the fake demo)
-        document.getElementById('contactForm').addEventListener('submit', async function(e) {
-            e.preventDefault();
-            const form = e.target;
-            const formData = new FormData(form);
+        (function() {
+            'use strict';
+
+            const form = document.getElementById('contactForm');
             const statusDiv = document.getElementById('formStatus');
-            const submitBtn = form.querySelector('.submit-btn');
-            
-            // Disable button and show loading state
-            submitBtn.disabled = true;
-            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-            
-            try {
-                const response = await fetch(form.action, {
-                    method: 'POST',
-                    body: formData,
-                    headers: { 'Accept': 'application/json' }
-                });
-                
-                if (response.ok) {
-                    statusDiv.innerHTML = '<div style="background: #10b981; color: white; padding: 1rem; border-radius: var(--radius);"><i class="fas fa-check-circle"></i> ✅ Thank you! Your message has been sent. We\'ll get back to you soon.</div>';
+            const submitBtn = document.getElementById('submitBtn');
+
+            form.addEventListener('submit', async function(e) {
+                e.preventDefault();
+
+                // Disable button
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+
+                const formData = new FormData(form);
+
+                try {
+                    const response = await fetch(form.action, {
+                        method: 'POST',
+                        body: formData,
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    });
+
+                    if (response.ok) {
+                        statusDiv.className = 'form-status success';
+                        statusDiv.innerHTML = '<i class="fas fa-check-circle"></i> ✅ Thank you! Your message has been sent. We\'ll get back to you within 24 hours.';
+                        statusDiv.style.display = 'block';
+                        form.reset();
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+
+                        // Hide after 6 seconds
+                        setTimeout(function() {
+                            statusDiv.style.display = 'none';
+                        }, 6000);
+                    } else {
+                        throw new Error('Server error');
+                    }
+                } catch (error) {
+                    statusDiv.className = 'form-status error';
+                    statusDiv.innerHTML = '<i class="fas fa-exclamation-circle"></i> ❌ Oops! Something went wrong. Please try again later. If the issue persists, email us directly at <strong>stylenamein@gmail.com</strong>.';
                     statusDiv.style.display = 'block';
-                    form.reset();
-                    setTimeout(() => statusDiv.style.display = 'none', 5000);
-                } else {
-                    throw new Error('Server responded with error');
+                    setTimeout(function() {
+                        statusDiv.style.display = 'none';
+                    }, 8000);
                 }
-            } catch (error) {
-                statusDiv.innerHTML = '<div style="background: #ef4444; color: white; padding: 1rem; border-radius: var(--radius);"><i class="fas fa-exclamation-circle"></i> ❌ Oops! Something went wrong. Please try again later.</div>';
-                statusDiv.style.display = 'block';
-                setTimeout(() => statusDiv.style.display = 'none', 5000);
-            } finally {
+
+                // Re-enable button
                 submitBtn.disabled = false;
                 submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
-            }
-        });
+            });
 
-        // FAQ toggle
-        document.addEventListener('DOMContentLoaded', function() {
-            document.querySelectorAll('.faq-question').forEach(q => {
+            // ===== FAQ TOGGLE =====
+            document.querySelectorAll('.faq-question').forEach(function(q) {
                 q.addEventListener('click', function() {
-                    this.parentElement.classList.toggle('active');
+                    var item = this.parentElement;
+                    item.classList.toggle('active');
                 });
             });
-        });
+
+        })();
     </script>
+
 </body>
 </html>
