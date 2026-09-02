@@ -155,7 +155,7 @@ if (index === 61) {
                                 L𖹭ᴠᴇ Sᴛʏʟᴇɴᴀᴍᴇ  
                             </a>  
                             <a href="attitude.html" style="color: #333; text-decoration: none; border-bottom: 1px solid #ccc; padding: 10px 0; display: block; font-size: 1.05rem; transition: all 0.2s ease;" onmouseover="this.style.color='#4f46e5'" onmouseout="this.style.color='#333'">  
-                                😈 Aττɪτυɗε ѕτγℓεηαмε  
+                                😈 Attitude stylename 
                             </a>  
                         </div>  
                         
@@ -233,7 +233,7 @@ function loadMiniSuggestions() {
         return;
     }
     const shuffled = [...categorySuggestions].sort(() => Math.random() - 0.5);
-    const displaySuggestions = shuffled.slice(0, 40);
+    const displaySuggestions = shuffled.slice(0, 15);
     currentMiniSuggestions = displaySuggestions;
     let html = '';
     displaySuggestions.forEach((suggestion, index) => {
@@ -246,7 +246,7 @@ function loadMiniSuggestions() {
                 </button>
             </div>
         `;
-      if (index === 19) {
+      if (index === 5) {
     html += `
         <div style="grid-column: 1 / -1; margin: 15px 0; text-align: center;">
             <img src="https://jayan-9.github.io/ego.github.io/stylish.webp" 
