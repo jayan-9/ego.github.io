@@ -1,1313 +1,320 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="google-site-verification" content="cKGfHx3401UeyzijckfH4-0-Km0WQ33kICn3MIs3J04" />
+    <!-- Google AdSense -->
+    <meta name="google-adsense-account" content="ca-pub-5781318703267732">
+    <!-- Google Search Console -->
+    <meta name="google-site-verification" content="cKGfHx3401UeyzijckfH4-0-Km0WQ33kICn3MIs3J04">
+    <!-- AdSense Script -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5781318703267732" crossorigin="anonymous"></script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>✨ Text Changer - 100+ Stylish 𝗡⃤𝗮⃤𝗺⃤𝗲⃤ Text Converter | stylename.in</title>
+    <title>Text Changer – 30+ Stylish Font Styles | stylename.in</title>
     <meta name="description" content="Transform your name into 30+ amazing font styles including box font, triangle font, circle font, arrow styles and more. Free online text changer tool with instant preview and copy.">
-    <meta name="keywords" content="font changer, text converter, stylish text, fancy fonts, name style generator, Instagram fonts, Unicode text converter">
-    <meta name="author" content="stylename.in">
-    
-    <!-- Open Graph / Social Media -->
-    <meta property="og:title" content="✨ Text Changer - 100+ Amazing Styles">
-    <meta property="og:description" content="Convert your name into cool fonts with box, triangle, circle and more! Instant preview and one-click copy.">
-    <meta property="og:url" content="https://stylename.in/text-changer.html">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://stylename.in/favicon.png">
-    
-    <!-- Canonical URL -->
+    <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://stylename.in/text-changer.html">
-    
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-    <style>
-        /* ===== RESET & BASE STYLES ===== */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --primary: #4f46e5;
-            --primary-dark: #4338ca;
-            --secondary: #10b981;
-            --dark: #1f2937;
-            --light: #f9fafb;
-            --gray: #6b7280;
-            --gray-light: #e5e7eb;
-            --gray-dark: #374151;
-            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-            --shadow-lg: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
-            --radius: 12px;
-            --transition: all 0.3s ease;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            color: var(--dark);
-            line-height: 1.6;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* ===== NAVBAR ===== */
-        .navbar {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            box-shadow: var(--shadow);
-            padding: 1rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .navbar .container {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .menu-toggle {
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            color: var(--dark);
-            cursor: pointer;
-            padding: 0.5rem;
-            border-radius: var(--radius);
-            transition: var(--transition);
-        }
-
-        .menu-toggle:hover {
-            background: var(--gray-light);
-        }
-
-        .logo h1 {
-            font-size: 1.8rem;
-            font-weight: 700;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin: 0;
-        }
-
-        .logo-dot {
-            color: var(--primary);
-            -webkit-text-fill-color: var(--primary);
-        }
-
-        .tagline {
-            font-size: 0.8rem;
-            color: var(--gray);
-            margin: 0;
-            text-align: center;
-        }
-
-        .theme-toggle {
-            background: none;
-            border: none;
-            font-size: 1.25rem;
-            color: var(--dark);
-            cursor: pointer;
-            padding: 0.5rem;
-            border-radius: var(--radius);
-            transition: var(--transition);
-        }
-
-        .theme-toggle:hover {
-            background: var(--gray-light);
-        }
-
-        /* ===== SIDEBAR ===== */
-        .sidebar {
-            position: fixed;
-            top: 0;
-            left: -300px;
-            width: 300px;
-            height: 100vh;
-            background: white;
-            box-shadow: var(--shadow-lg);
-            z-index: 1100;
-            transition: var(--transition);
-            display: flex;
-            flex-direction: column;
-        }
-
-        .sidebar.open {
-            left: 0;
-        }
-
-        .sidebar-header {
-            padding: 1.5rem;
-            border-bottom: 1px solid var(--gray-light);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .close-sidebar {
-            background: none;
-            border: none;
-            font-size: 1.25rem;
-            color: var(--gray);
-            cursor: pointer;
-        }
-
-        .sidebar-content {
-            flex: 1;
-            padding: 1rem 0;
-            overflow-y: auto;
-        }
-
-        .sidebar-item {
-            display: flex;
-            align-items: center;
-            padding: 1rem 1.5rem;
-            cursor: pointer;
-            transition: var(--transition);
-            border-left: 4px solid transparent;
-        }
-
-        .sidebar-item:hover {
-            background: var(--gray-light);
-            border-left: 4px solid var(--primary);
-        }
-
-        .sidebar-item i {
-            margin-right: 1rem;
-            width: 20px;
-            text-align: center;
-        }
-
-        .sidebar-item span {
-            flex: 1;
-        }
-
-        .theme-status {
-            font-size: 0.8rem;
-            padding: 0.25rem 0.75rem;
-            border-radius: 20px;
-            background: var(--gray-light);
-            color: var(--dark);
-        }
-
-        .badge {
-            background: var(--secondary);
-            color: white;
-            font-size: 0.7rem;
-            padding: 0.2rem 0.5rem;
-            border-radius: 4px;
-            margin-left: 8px;
-        }
-
-        .sidebar-divider {
-            height: 1px;
-            background: var(--gray-light);
-            margin: 1rem 0;
-        }
-
-        /* ===== HERO SECTION ===== */
-        .hero-section {
-            text-align: center;
-            padding: 40px 20px;
-            color: white;
-        }
-
-        .hero-section h1 {
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 15px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-        }
-
-        .hero-section p {
-            font-size: 1.2rem;
-            opacity: 0.95;
-            max-width: 800px;
-            margin: 0 auto 20px;
-        }
-
-        .domain-badge {
-            background: rgba(255,255,255,0.2);
-            display: inline-block;
-            padding: 8px 25px;
-            border-radius: 50px;
-            font-weight: 600;
-            border: 2px solid white;
-            backdrop-filter: blur(5px);
-        }
-
-        /* ===== MAIN TOOL CARD ===== */
-        .tool-card {
-            background: white;
-            border-radius: 20px;
-            padding: 30px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-            margin-bottom: 40px;
-        }
-
-        /* Input Section */
-        .input-section {
-            margin-bottom: 30px;
-        }
-
-        .input-label {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            margin-bottom: 10px;
-            font-weight: 600;
-            color: var(--dark);
-            font-size: 1.1rem;
-        }
-
-        .input-label i {
-            color: var(--primary);
-        }
-
-        .input-wrapper {
-            display: flex;
-            gap: 15px;
-            align-items: center;
-        }
-
-        .name-input {
-            flex: 1;
-            padding: 16px 20px;
-            font-size: 1.2rem;
-            border: 2px solid var(--gray-light);
-            border-radius: var(--radius);
-            transition: var(--transition);
-            font-family: 'Inter', sans-serif;
-        }
-
-        .name-input:focus {
-            border-color: var(--primary);
-            outline: none;
-            box-shadow: 0 0 0 3px rgba(79,70,229,0.1);
-        }
-
-        .clear-btn {
-            background: var(--gray-light);
-            border: none;
-            width: 50px;
-            height: 50px;
-            border-radius: var(--radius);
-            cursor: pointer;
-            transition: var(--transition);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--dark);
-        }
-
-        .clear-btn:hover {
-            background: var(--gray);
-            color: white;
-        }
-
-        .input-hint {
-            margin-top: 8px;
-            color: var(--gray);
-            font-size: 0.9rem;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-
-        /* Live Preview */
-        .preview-section {
-            background: linear-gradient(135deg, #f5f7fa 0%, #ffffff 100%);
-            border-radius: var(--radius);
-            padding: 30px;
-            margin: 25px 0;
-            border: 3px dashed var(--primary);
-        }
-
-        .preview-header {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 15px;
-        }
-
-        .preview-header h3 {
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: var(--dark);
-        }
-
-        .preview-box {
-            background: white;
-            border-radius: var(--radius);
-            padding: 30px;
-            min-height: 120px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2.5rem;
-            word-break: break-word;
-            text-align: center;
-            border: 1px solid var(--gray-light);
-            box-shadow: inset 0 2px 10px rgba(0,0,0,0.05);
-        }
-
-        /* Font Selector Grid */
-        .font-selector-title {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin: 30px 0 20px;
-        }
-
-        .font-selector-title h2 {
-            font-size: 1.8rem;
-            font-weight: 600;
-            color: var(--dark);
-        }
-
-        .font-count {
-            background: var(--primary);
-            color: white;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-        }
-
-        .font-selector {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-            gap: 15px;
-            margin: 20px 0;
-        }
-
-        .font-card {
-            background: var(--light);
-            border: 2px solid var(--gray-light);
-            border-radius: var(--radius);
-            padding: 20px 10px;
-            text-align: center;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .font-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-lg);
-            border-color: var(--primary);
-        }
-
-        .font-card.selected {
-            border-color: var(--primary);
-            background: linear-gradient(145deg, #eef2ff, #ffffff);
-            box-shadow: 0 5px 15px rgba(79,70,229,0.2);
-        }
-
-        .font-preview {
-            font-size: 2.2rem;
-            margin-bottom: 10px;
-            min-height: 50px;
-            color: var(--dark);
-        }
-
-        .font-name {
-            font-weight: 600;
-            color: var(--dark);
-            margin-bottom: 5px;
-        }
-
-        .font-category {
-            font-size: 0.75rem;
-            color: var(--gray);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        /* Copy Button */
-        .copy-section {
-            margin: 30px 0;
-        }
-
-        .copy-btn {
-            width: 100%;
-            padding: 18px;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: white;
-            border: none;
-            border-radius: 50px;
-            font-size: 1.3rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: var(--transition);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            box-shadow: 0 10px 20px rgba(79,70,229,0.3);
-        }
-
-        .copy-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 30px rgba(79,70,229,0.4);
-        }
-
-        .copy-btn i {
-            font-size: 1.5rem;
-        }
-
-        /* Message */
-        .message {
-            text-align: center;
-            margin-top: 15px;
-            padding: 12px;
-            border-radius: var(--radius);
-            display: none;
-            font-weight: 500;
-        }
-
-        .message.show {
-            display: block;
-        }
-
-        .message.success {
-            background: #d4edda;
-            color: #155724;
-            border: 2px solid #c3e6cb;
-        }
-
-        .message.error {
-            background: #f8d7da;
-            color: #721c24;
-            border: 2px solid #f5c6cb;
-        }
-
-        /* ===== DETAILED EXAMPLES SECTION ===== */
-        .examples-section {
-            background: white;
-            border-radius: 20px;
-            padding: 30px;
-            margin: 40px 0;
-        }
-
-        .examples-section h2 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-            color: var(--dark);
-        }
-
-        .examples-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
-
-        .example-card {
-            background: var(--light);
-            border-radius: var(--radius);
-            padding: 20px;
-            border-left: 4px solid var(--primary);
-        }
-
-        .example-card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 10px;
-            color: var(--dark);
-        }
-
-        .example-demo {
-            background: white;
-            padding: 15px;
-            border-radius: 8px;
-            margin: 15px 0;
-            font-size: 1.3rem;
-            text-align: center;
-            border: 1px solid var(--gray-light);
-        }
-
-        .example-desc {
-            color: var(--gray);
-            font-size: 0.95rem;
-            line-height: 1.6;
-        }
-
-        .example-tag {
-            display: inline-block;
-            background: var(--primary);
-            color: white;
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            margin-top: 10px;
-        }
-
-        /* ===== CATEGORY GUIDES ===== */
-        .category-guide {
-            background: white;
-            border-radius: 20px;
-            padding: 30px;
-            margin: 40px 0;
-        }
-
-        .category-guide h2 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-            color: var(--dark);
-        }
-
-        .guide-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-
-        .guide-item {
-            background: var(--light);
-            padding: 20px;
-            border-radius: var(--radius);
-        }
-
-        .guide-item h3 {
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-            color: var(--primary);
-        }
-
-        .guide-item p {
-            color: var(--gray);
-            margin-bottom: 10px;
-        }
-
-        .guide-example {
-            font-size: 1.2rem;
-            background: white;
-            padding: 8px;
-            border-radius: 4px;
-            text-align: center;
-        }
-
-        /* ===== RELATED ARTICLES ===== */
-        .related-articles {
-            background: white;
-            border-radius: 20px;
-            padding: 30px;
-            margin: 40px 0;
-        }
-
-        .related-articles h2 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-            color: var(--dark);
-        }
-
-        .articles-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
-
-        .article-card {
-            background: var(--light);
-            border-radius: var(--radius);
-            padding: 20px;
-            text-decoration: none;
-            color: inherit;
-            transition: var(--transition);
-            border: 1px solid var(--gray-light);
-        }
-
-        .article-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--primary);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .article-card h3 {
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-            color: var(--dark);
-        }
-
-        .article-card p {
-            color: var(--gray);
-            font-size: 0.9rem;
-            margin-bottom: 15px;
-        }
-
-        .article-meta {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .article-category {
-            background: var(--primary);
-            color: white;
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 0.75rem;
-        }
-
-        .article-icon {
-            font-size: 1.5rem;
-            color: var(--primary);
-        }
-
-        /* ===== AD PLACEHOLDER ===== */
-        .ad-container {
-            background: white;
-            border-radius: 20px;
-            padding: 30px;
-            margin: 40px 0;
-            text-align: center;
-        }
-
-        .ad-label {
-            color: var(--gray);
-            font-size: 0.8rem;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .ad-space {
-            background: linear-gradient(135deg, #f5f5f5, #e0e0e0);
-            height: 250px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: var(--radius);
-            color: var(--gray);
-            font-size: 1rem;
-        }
-
-        /* ===== FAQ SECTION ===== */
-        .faq-section {
-            background: white;
-            border-radius: 20px;
-            padding: 30px;
-            margin: 40px 0;
-        }
-
-        .faq-section h2 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-            color: var(--dark);
-        }
-
-        .faq-item {
-            margin-bottom: 20px;
-            border-bottom: 1px solid var(--gray-light);
-            padding-bottom: 20px;
-        }
-
-        .faq-item:last-child {
-            border-bottom: none;
-        }
-
-        .faq-question {
-            font-weight: 600;
-            font-size: 1.1rem;
-            margin-bottom: 10px;
-            color: var(--dark);
-        }
-
-        .faq-answer {
-            color: var(--gray);
-            line-height: 1.6;
-        }
-
-        /* ===== FOOTER ===== */
-        .footer {
-            background: var(--dark);
-            color: white;
-            padding: 60px 0 30px;
-            margin-top: 50px;
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-
-        .footer-section h3 {
-            color: white;
-            font-size: 1.2rem;
-            margin-bottom: 20px;
-        }
-
-        .footer-section p {
-            color: #9ca3af;
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-
-        .footer-section ul {
-            list-style: none;
-        }
-
-        .footer-section li {
-            margin-bottom: 12px;
-        }
-
-        .footer-section a {
-            color: #9ca3af;
-            text-decoration: none;
-            transition: var(--transition);
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .footer-section a:hover {
-            color: white;
-        }
-
-        .footer-bottom {
-            text-align: center;
-            padding-top: 30px;
-            border-top: 1px solid #374151;
-            color: #9ca3af;
-        }
-
-        /* Scroll to Top */
-        .scroll-top {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 50px;
-            height: 50px;
-            background: var(--primary);
-            color: white;
-            border: none;
-            border-radius: 50%;
-            cursor: pointer;
-            display: none;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2rem;
-            box-shadow: var(--shadow-lg);
-            z-index: 100;
-        }
-
-        .scroll-top.show {
-            display: flex;
-        }
-
-        .scroll-top:hover {
-            background: var(--primary-dark);
-            transform: translateY(-3px);
-        }
-
-        /* Toast */
-        .toast {
-            position: fixed;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: var(--dark);
-            color: white;
-            padding: 12px 24px;
-            border-radius: 50px;
-            font-size: 0.9rem;
-            box-shadow: var(--shadow-lg);
-            z-index: 1000;
-            display: none;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero-section h1 {
-                font-size: 2rem;
-            }
-            
-            .input-wrapper {
-                flex-direction: column;
-            }
-            
-            .clear-btn {
-                width: 100%;
-            }
-            
-            .preview-box {
-                font-size: 1.8rem;
-            }
-            
-            .font-selector {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (max-width: 480px) {
-            .font-selector {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    <link rel="icon" href="favicon.png" type="image/png">
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="container">
-            <button class="menu-toggle" id="menuToggle">
-                <i class="fas fa-bars"></i>
-            </button>
-            <div class="logo">
-                <h1>stylename<span class="logo-dot">.</span>in</h1>
-                <p class="tagline">Style Your Identity</p>
-            </div>
-            <div class="theme-toggle" id="themeToggle">
-                <i class="fas fa-moon"></i>
-            </div>
-        </div>
-    </nav>
 
-    <!-- Sidebar -->
-    <div class="sidebar" id="sidebar">
-        <div class="sidebar-header">
-            <h3>Menu</h3>
-            <button class="close-sidebar" id="closeSidebar">
-                <i class="fas fa-times"></i>
-            </button>
-        </div>
-        <div class="sidebar-content">
-            <div class="sidebar-item" onclick="toggleTheme()">
-                <i class="fas fa-palette"></i>
-                <span>Theme</span>
-                <span class="theme-status" id="themeStatus">Light</span>
-            </div>
-            <div class="sidebar-item" onclick="openSymbolModal()">
-                <i class="fas fa-symbols"></i>
-                <span>Symbols Library</span>
-            </div>
-            <div class="sidebar-divider"></div>
-            <div class="sidebar-item" onclick="window.location.href='index.html'">
-                <i class="fas fa-home"></i>
-                <span>Home</span>
-            </div>
-            <div class="sidebar-item" onclick="window.location.href='about.html'">
-                <i class="fas fa-info-circle"></i>
-                <span>About Us</span>
-            </div>
-            <div class="sidebar-item" onclick="window.location.href='contact.html'">
-                <i class="fas fa-envelope"></i>
-                <span>Contact</span>
-            </div>
-            <div class="sidebar-item" onclick="window.location.href='privacy-policy.html'">
-                <i class="fas fa-shield-alt"></i>
-                <span>Privacy Policy</span>
-            </div>
-            <div class="sidebar-item" onclick="window.location.href='terms.html'">
-                <i class="fas fa-file-contract"></i>
-                <span>Terms & Conditions</span>
-            </div>
-        </div>
+    <!-- ===== HEADER ===== -->
+    <div style="background:#1a0a2e;padding:12px 20px;border-bottom:3px solid #4f46e5;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;margin-bottom:20px;">
+        <a href="index.html" style="color:#4f46e5;font-size:1.6rem;font-weight:700;text-decoration:none;">StyleName</a>
+        <nav>
+            <a href="index.html" style="color:#fff;margin:0 8px;text-decoration:none;">Home</a>
+            <a href="about.html" style="color:#fff;margin:0 8px;text-decoration:none;">About</a>
+            <a href="contact.html" style="color:#fff;margin:0 8px;text-decoration:none;">Contact</a>
+        </nav>
     </div>
 
-    <!-- Main Content -->
-    <div class="container">
-        <!-- Hero Section -->
-        <div class="hero-section">
-            <h1>✨ Font Changer & Text Converter</h1>
-            <p>Transform your name into 30+ amazing font styles with one click. Perfect for Instagram, gaming profiles, and social media.</p>
-            <div class="domain-badge">
-                <i class="fas fa-link"></i> stylename.in/text-changer
-            </div>
+    <!-- ===== MAIN CONTENT ===== -->
+    <div style="max-width:900px;margin:0 auto;padding:0 12px;">
+
+        <!-- ===== HERO ===== -->
+        <div style="background:linear-gradient(135deg,#667eea,#764ba2);padding:20px;border-radius:12px;text-align:center;margin-bottom:20px;color:#fff;">
+            <h1 style="font-size:1.8rem;margin:4px 0;">✨ Font Changer &amp; Text Converter</h1>
+            <p style="font-size:1rem;">Transform your name into 30+ amazing font styles with one click.</p>
+            <div style="background:rgba(255,255,255,0.2);display:inline-block;padding:6px 20px;border-radius:30px;margin-top:10px;border:2px solid #fff;">stylename.in/text-changer</div>
         </div>
 
-        <!-- Main Tool Card -->
-        <div class="tool-card">
-            <!-- Input Section -->
-            <div class="input-section">
-                <div class="input-label">
-                    <i class="fas fa-pen"></i>
-                    <span>Enter Your Name</span>
+        <!-- ===== TOOL CARD ===== -->
+        <div style="background:#fff;padding:20px;border-radius:12px;margin-bottom:20px;border:1px solid #e5e7eb;">
+
+            <!-- ===== INPUT ===== -->
+            <div style="margin-bottom:20px;">
+                <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;font-weight:600;">
+                    <span style="font-size:1.1rem;">✏️ Enter Your Name</span>
                 </div>
-                <div class="input-wrapper">
-                    <input type="text" 
-                           id="name" 
-                           class="name-input" 
-                           placeholder="e.g., John"
-                           maxlength="30"
-                           autofocus>
-                    <button class="clear-btn" id="clearBtn" title="Clear input">
-                        <i class="fas fa-times"></i>
-                    </button>
+                <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;">
+                    <input type="text" id="name" placeholder="e.g., John" maxlength="30" style="flex:1;padding:14px 18px;font-size:1.1rem;border:2px solid #e5e7eb;border-radius:8px;min-width:150px;">
+                    <button onclick="clearInput()" style="background:#e5e7eb;border:none;padding:10px 16px;border-radius:8px;cursor:pointer;font-size:1rem;">✖</button>
                 </div>
-                <div class="input-hint">
-                    <i class="fas fa-info-circle"></i>
-                    <span>Type your name above and see it transform instantly in 30+ styles</span>
-                </div>
+                <div style="margin-top:6px;color:#6b7280;font-size:.85rem;">💡 Type your name above and see it transform instantly</div>
             </div>
 
-            <!-- Live Preview Section -->
-            <div class="preview-section">
-                <div class="preview-header">
-                    <i class="fas fa-eye" style="color: var(--primary);"></i>
-                    <h3>Live Preview</h3>
+            <!-- ===== PREVIEW ===== -->
+            <div style="background:#f5f7fa;border-radius:10px;padding:20px;margin:16px 0;border:3px dashed #4f46e5;">
+                <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;font-weight:600;">
+                    <span>👁️ Live Preview</span>
                 </div>
-                <div class="preview-box" id="preview">
+                <div id="preview" style="background:#fff;border-radius:8px;padding:20px;min-height:80px;display:flex;align-items:center;justify-content:center;font-size:2rem;text-align:center;word-break:break-word;border:1px solid #e5e7eb;">
                     👆 Enter your name above
                 </div>
             </div>
 
-            <!-- Font Selector Title -->
-            <div class="font-selector-title">
-                <i class="fas fa-font" style="color: var(--primary); font-size: 1.5rem;"></i>
-                <h2>Choose Your Font Style</h2>
-                <span class="font-count" id="fontCount">30+ styles</span>
+            <!-- ===== FONT GRID ===== -->
+            <div style="display:flex;align-items:center;gap:10px;margin:20px 0 14px 0;">
+                <span style="font-size:1.3rem;font-weight:600;">🔤 Choose Your Font Style</span>
+                <span style="background:#4f46e5;color:#fff;padding:3px 14px;border-radius:20px;font-size:.8rem;" id="fontCount">30+ styles</span>
+            </div>
+            <div id="fontSelector" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:10px;"></div>
+
+            <!-- ===== COPY ===== -->
+            <div style="margin-top:20px;">
+                <button id="copyBtn" style="width:100%;padding:14px;background:#4f46e5;color:#fff;border:none;border-radius:30px;font-size:1.1rem;font-weight:600;cursor:pointer;">📋 Copy Converted Text</button>
+                <div id="message" style="text-align:center;margin-top:10px;padding:10px;border-radius:8px;display:none;font-weight:500;"></div>
             </div>
 
-            <!-- Font Selector Grid -->
-            <div class="font-selector" id="fontSelector"></div>
+        </div>
 
-            <!-- Copy Button -->
-            <div class="copy-section">
-                <button class="copy-btn" id="copyBtn">
-                    <i class="fas fa-copy"></i>
-                    <span>Copy Converted Text</span>
-                </button>
-                <div id="message" class="message"></div>
+        <!-- ===== EXAMPLES ===== -->
+        <div style="background:#fff;padding:20px;border-radius:12px;margin-bottom:20px;border:1px solid #e5e7eb;">
+            <h2 style="font-size:1.3rem;border-left:4px solid #4f46e5;padding-left:12px;">🌟 Font Style Examples</h2>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-top:14px;">
+
+                <div style="background:#f8f9fc;padding:14px;border-radius:8px;border-left:4px solid #4f46e5;">
+                    <div style="font-weight:600;">🔲 Box Font</div>
+                    <div id="exampleBox" style="background:#fff;padding:10px;border-radius:6px;margin:8px 0;font-size:1.2rem;text-align:center;border:1px solid #e5e7eb;">J⃞o⃞h⃞n⃞</div>
+                    <div style="color:#6b7280;font-size:.85rem;">Box enclosed letters - structured look</div>
+                </div>
+
+                <div style="background:#f8f9fc;padding:14px;border-radius:8px;border-left:4px solid #4f46e5;">
+                    <div style="font-weight:600;">🔺 Triangle Font</div>
+                    <div id="exampleTriangle" style="background:#fff;padding:10px;border-radius:6px;margin:8px 0;font-size:1.2rem;text-align:center;border:1px solid #e5e7eb;">J⃤o⃤h⃤n⃤</div>
+                    <div style="color:#6b7280;font-size:.85rem;">Sharp triangular accent - edgy look</div>
+                </div>
+
+                <div style="background:#f8f9fc;padding:14px;border-radius:8px;border-left:4px solid #4f46e5;">
+                    <div style="font-weight:600;">⭕ Circle Font</div>
+                    <div id="exampleCircle" style="background:#fff;padding:10px;border-radius:6px;margin:8px 0;font-size:1.2rem;text-align:center;border:1px solid #e5e7eb;">J⃝o⃝h⃝n⃝</div>
+                    <div style="color:#6b7280;font-size:.85rem;">Soft circular enclosure - aesthetic</div>
+                </div>
+
+                <div style="background:#f8f9fc;padding:14px;border-radius:8px;border-left:4px solid #4f46e5;">
+                    <div style="font-weight:600;">💎 Diamond Font</div>
+                    <div id="exampleDiamond" style="background:#fff;padding:10px;border-radius:6px;margin:8px 0;font-size:1.2rem;text-align:center;border:1px solid #e5e7eb;">J⃟o⃟h⃟n⃟</div>
+                    <div style="color:#6b7280;font-size:.85rem;">Royal diamond overlay - premium look</div>
+                </div>
+
+                <div style="background:#f8f9fc;padding:14px;border-radius:8px;border-left:4px solid #4f46e5;">
+                    <div style="font-weight:600;">⬆️ Arrow Font</div>
+                    <div id="exampleArrow" style="background:#fff;padding:10px;border-radius:6px;margin:8px 0;font-size:1.2rem;text-align:center;border:1px solid #e5e7eb;">J⃗o⃗h⃗n⃗</div>
+                    <div style="color:#6b7280;font-size:.85rem;">Dynamic right-pointing arrows</div>
+                </div>
+
+                <div style="background:#f8f9fc;padding:14px;border-radius:8px;border-left:4px solid #4f46e5;">
+                    <div style="font-weight:600;">🔴 Dotted Font</div>
+                    <div id="exampleDots" style="background:#fff;padding:10px;border-radius:6px;margin:8px 0;font-size:1.2rem;text-align:center;border:1px solid #e5e7eb;">J⃛o⃛h⃛n⃛</div>
+                    <div style="color:#6b7280;font-size:.85rem;">Playful triple dots above</div>
+                </div>
+
             </div>
         </div>
 
-        <!-- Detailed Examples Section -->
-        <div class="examples-section">
-            <h2><i class="fas fa-star" style="color: var(--primary);"></i> Font Style Examples</h2>
-            <div class="examples-grid">
-                <div class="example-card">
-                    <h3>🔲 Box Font Style</h3>
-                    <div class="example-demo" id="exampleBox">J⃞o⃞h⃞n⃞</div>
-                    <p class="example-desc">Perfect for creating standout usernames. Each letter is enclosed in a box, giving your name a unique, structured look. Great for gaming profiles and Instagram bios.</p>
-                    <span class="example-tag">#BoxStyle</span>
+        <!-- ===== CATEGORY GUIDE ===== -->
+        <div style="background:#fff;padding:20px;border-radius:12px;margin-bottom:20px;border:1px solid #e5e7eb;">
+            <h2 style="font-size:1.3rem;border-left:4px solid #4f46e5;padding-left:12px;">🗺️ Font Category Guide</h2>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-top:14px;">
+
+                <div style="background:#f8f9fc;padding:14px;border-radius:8px;">
+                    <div style="font-weight:600;color:#4f46e5;">📦 Enclosing Marks</div>
+                    <div style="color:#6b7280;font-size:.85rem;">Box ⃞, Triangle ⃤, Circle ⃝, Diamond ⃟</div>
+                    <div style="background:#fff;padding:6px;border-radius:4px;text-align:center;font-size:1.2rem;margin-top:6px;">A⃞ → A⃤ → A⃝</div>
                 </div>
-                <div class="example-card">
-                    <h3>🔺 Triangle Font Style</h3>
-                    <div class="example-demo" id="exampleTriangle">J⃤o⃤h⃤n⃤</div>
-                    <p class="example-desc">Add a triangular accent above each letter for a sharp, edgy appearance. Ideal for attitude names and gaming tags.</p>
-                    <span class="example-tag">#TriangleStyle</span>
+
+                <div style="background:#f8f9fc;padding:14px;border-radius:8px;">
+                    <div style="font-weight:600;color:#4f46e5;">➡️ Arrow Marks</div>
+                    <div style="color:#6b7280;font-size:.85rem;">Right ⃗, Left ⃖, Double ⃡</div>
+                    <div style="background:#fff;padding:6px;border-radius:4px;text-align:center;font-size:1.2rem;margin-top:6px;">A⃗ → A⃖ → A⃡</div>
                 </div>
-                <div class="example-card">
-                    <h3>⭕ Circle Font Style</h3>
-                    <div class="example-demo" id="exampleCircle">J⃝o⃝h⃝n⃝</div>
-                    <p class="example-desc">Enclose your name in circles for a soft, aesthetic look. Popular among romantic and cute profile names.</p>
-                    <span class="example-tag">#CircleStyle</span>
+
+                <div style="background:#f8f9fc;padding:14px;border-radius:8px;">
+                    <div style="font-weight:600;color:#4f46e5;">🔴 Dot Marks</div>
+                    <div style="color:#6b7280;font-size:.85rem;">Three ⃛, Four ⃜, Underdot ⃨</div>
+                    <div style="background:#fff;padding:6px;border-radius:4px;text-align:center;font-size:1.2rem;margin-top:6px;">A⃛ → A⃜ → A⃨</div>
                 </div>
-                <div class="example-card">
-                    <h3>💎 Diamond Font Style</h3>
-                    <div class="example-demo" id="exampleDiamond">J⃟o⃟h⃟n⃟</div>
-                    <p class="example-desc">Add a diamond shape overlay for a royal, premium feel. Perfect for VIP usernames and exclusive profiles.</p>
-                    <span class="example-tag">#DiamondStyle</span>
+
+                <div style="background:#f8f9fc;padding:14px;border-radius:8px;">
+                    <div style="font-weight:600;color:#4f46e5;">⚡ Line Marks</div>
+                    <div style="color:#6b7280;font-size:.85rem;">Double ⃫, Reverse ⃥, Double Line ⃦</div>
+                    <div style="background:#fff;padding:6px;border-radius:4px;text-align:center;font-size:1.2rem;margin-top:6px;">A⃫ → A⃥ → A⃦</div>
                 </div>
-                <div class="example-card">
-                    <h3>⬆️ Arrow Font Style</h3>
-                    <div class="example-demo" id="exampleArrow">J⃗o⃗h⃗n⃗</div>
-                    <p class="example-desc">Arrows pointing right give your name a forward-moving, dynamic energy. Great for motivational or progressive profiles.</p>
-                    <span class="example-tag">#ArrowStyle</span>
+
+                <div style="background:#f8f9fc;padding:14px;border-radius:8px;">
+                    <div style="font-weight:600;color:#4f46e5;">💍 Ring Marks</div>
+                    <div style="color:#6b7280;font-size:.85rem;">Ring ⃘, Clockwise ⃙, Anticlockwise ⃚</div>
+                    <div style="background:#fff;padding:6px;border-radius:4px;text-align:center;font-size:1.2rem;margin-top:6px;">A⃘ → A⃙ → A⃚</div>
                 </div>
-                <div class="example-card">
-                    <h3>🔴 Dotted Font Style</h3>
-                    <div class="example-demo" id="exampleDots">J⃛o⃛h⃛n⃛</div>
-                    <p class="example-desc">Three dots above each letter create a playful, whimsical effect. Perfect for cute and fun usernames.</p>
-                    <span class="example-tag">#DottedStyle</span>
+
+                <div style="background:#f8f9fc;padding:14px;border-radius:8px;">
+                    <div style="font-weight:600;color:#4f46e5;">🎯 Special Marks</div>
+                    <div style="color:#6b7280;font-size:.85rem;">Annuity ⃧, Bridge ⃩, Asterisk ⃰</div>
+                    <div style="background:#fff;padding:6px;border-radius:4px;text-align:center;font-size:1.2rem;margin-top:6px;">A⃧ → A⃩ → A⃰</div>
                 </div>
+
             </div>
         </div>
 
-        <!-- Category Guide Section -->
-        <div class="category-guide">
-            <h2><i class="fas fa-compass" style="color: var(--primary);"></i> Font Category Guide</h2>
-            <div class="guide-grid">
-                <div class="guide-item">
-                    <h3>📦 Enclosing Marks</h3>
-                    <p>Box (⃞), Triangle (⃤), Circle (⃝), Diamond (⃟) – These marks surround your letters for a framed look.</p>
-                    <div class="guide-example">A⃞ → A⃤ → A⃝</div>
-                </div>
-                <div class="guide-item">
-                    <h3>➡️ Arrow Marks</h3>
-                    <p>Right arrow (⃗), Left arrow (⃖), Double arrow (⃡) – Add directional energy to your text.</p>
-                    <div class="guide-example">A⃗ → A⃖ → A⃡</div>
-                </div>
-                <div class="guide-item">
-                    <h3>🔴 Dot Marks</h3>
-                    <p>Three dots (⃛), Four dots (⃜), Underdot (⃨) – Create playful, dotted variations.</p>
-                    <div class="guide-example">A⃛ → A⃜ → A⃨</div>
-                </div>
-                <div class="guide-item">
-                    <h3>⚡ Line Marks</h3>
-                    <p>Double solidus (⃫), Reverse solidus (⃥), Double line (⃦) – Add clean, modern line effects.</p>
-                    <div class="guide-example">A⃫ → A⃥ → A⃦</div>
-                </div>
-                <div class="guide-item">
-                    <h3>💍 Ring Marks</h3>
-                    <p>Ring overlay (⃘), Clockwise (⃙), Anticlockwise (⃚) – Circular accents for elegant text.</p>
-                    <div class="guide-example">A⃘ → A⃙ → A⃚</div>
-                </div>
-                <div class="guide-item">
-                    <h3>🎯 Special Marks</h3>
-                    <p>Annuity (⃧), Wide bridge (⃩), Asterisk (⃰) – Unique symbols for truly distinctive names.</p>
-                    <div class="guide-example">A⃧ → A⃩ → A⃰</div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Related Articles Section -->
-        <div class="related-articles">
-            <h2><i class="fas fa-newspaper" style="color: var(--primary);"></i> Popular Articles</h2>
-            <div class="articles-grid">
-                <a href="pubg-stylish-names-with-symbols.html" class="article-card">
-                    <h3>🎯 PUBG Stylish Names</h3>
-                    <p>100+ pro player names with cool symbols. Make your PUBG profile legendary.</p>
-                    <div class="article-meta">
-                        <span class="article-category">Gaming</span>
-                        <span class="article-icon">🎮</span>
-                    </div>
+        <!-- ===== RELATED ARTICLES ===== -->
+        <div style="background:#fff;padding:20px;border-radius:12px;margin-bottom:20px;border:1px solid #e5e7eb;">
+            <h2 style="font-size:1.3rem;border-left:4px solid #4f46e5;padding-left:12px;">📰 Popular Articles</h2>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:14px;">
+                <a href="pubg-stylish-names-with-symbols.html" style="background:#f8f9fc;padding:14px;border-radius:8px;text-decoration:none;color:inherit;border:1px solid #e5e7eb;">
+                    <div style="font-weight:600;">🎯 PUBG Stylish Names</div>
+                    <div style="color:#6b7280;font-size:.85rem;">100+ pro player names with symbols</div>
+                    <div style="margin-top:8px;font-size:.75rem;color:#4f46e5;">Gaming ▸</div>
                 </a>
-                <a href="attitude-names-for-boys.html" class="article-card">
-                    <h3>⚡ Attitude Names for Boys</h3>
-                    <p>Powerful attitude names for gaming and social media.</p>
-                    <div class="article-meta">
-                        <span class="article-category">Attitude</span>
-                        <span class="article-icon">⚡</span>
-                    </div>
+                <a href="attitude-names-for-boys.html" style="background:#f8f9fc;padding:14px;border-radius:8px;text-decoration:none;color:inherit;border:1px solid #e5e7eb;">
+                    <div style="font-weight:600;">⚡ Attitude Names for Boys</div>
+                    <div style="color:#6b7280;font-size:.85rem;">Powerful attitude names for gaming</div>
+                    <div style="margin-top:8px;font-size:.75rem;color:#4f46e5;">Attitude ▸</div>
                 </a>
-                <a href="instagram-stylish-names-2026.html" class="article-card">
-                    <h3>📸 Instagram Names</h3>
-                    <p>Make your Instagram profile attractive with stylish fonts and symbols.</p>
-                    <div class="article-meta">
-                        <span class="article-category">Social</span>
-                        <span class="article-icon">📱</span>
-                    </div>
+                <a href="instagram-stylish-names-2026.html" style="background:#f8f9fc;padding:14px;border-radius:8px;text-decoration:none;color:inherit;border:1px solid #e5e7eb;">
+                    <div style="font-weight:600;">📸 Instagram Names</div>
+                    <div style="color:#6b7280;font-size:.85rem;">Make your profile attractive with fonts</div>
+                    <div style="margin-top:8px;font-size:.75rem;color:#4f46e5;">Social ▸</div>
                 </a>
             </div>
         </div>
 
-        <!-- Ad Placeholder -->
-        <div class="ad-container">
-            <div class="ad-label">Advertisement</div>
-            <div class="ad-space">
-                <!-- Google AdSense will be placed here -->
-                <span>Responsive Ad Space</span>
+        <!-- ===== FAQ ===== -->
+        <div style="background:#fff;padding:20px;border-radius:12px;margin-bottom:20px;border:1px solid #e5e7eb;">
+            <h2 style="font-size:1.3rem;border-left:4px solid #4f46e5;padding-left:12px;">❓ Frequently Asked Questions</h2>
+
+            <div style="padding:10px 0;border-bottom:1px solid #e5e7eb;">
+                <div style="font-weight:600;">How does this font changer work?</div>
+                <div style="color:#6b7280;font-size:.9rem;">Our tool uses Unicode combining characters. Each font style adds a special mark (like ⃞, ⃤, ⃝) after each letter. This creates the unique font effect while keeping the text compatible across all platforms.</div>
+            </div>
+
+            <div style="padding:10px 0;border-bottom:1px solid #e5e7eb;">
+                <div style="font-weight:600;">Will these fonts work on Instagram, WhatsApp, and games?</div>
+                <div style="color:#6b7280;font-size:.9rem;">Yes! All our font styles use standard Unicode characters, supported by most platforms including Instagram, WhatsApp, TikTok, PUBG, Free Fire, and BGMI.</div>
+            </div>
+
+            <div style="padding:10px 0;border-bottom:1px solid #e5e7eb;">
+                <div style="font-weight:600;">Can I use multiple font styles together?</div>
+                <div style="color:#6b7280;font-size:.9rem;">Absolutely! You can combine different styles. Simply type both words and select different styles – the converter will apply each style separately.</div>
+            </div>
+
+            <div style="padding:10px 0;">
+                <div style="font-weight:600;">Is this tool free to use?</div>
+                <div style="color:#6b7280;font-size:.9rem;">100% free! No sign-up, no hidden charges, no watermarks. Just type your name and copy.</div>
             </div>
         </div>
 
-        <!-- FAQ Section -->
-        <div class="faq-section">
-            <h2><i class="fas fa-question-circle" style="color: var(--primary);"></i> Frequently Asked Questions</h2>
-            
-            <div class="faq-item">
-                <div class="faq-question">❓ How does this font changer work?</div>
-                <div class="faq-answer">Our tool uses Unicode combining characters. Each font style adds a special mark (like ⃞, ⃤, ⃝) after each letter. This creates the unique font effect while keeping the text compatible across all platforms and devices.</div>
-            </div>
-            
-            <div class="faq-item">
-                <div class="faq-question">❓ Will these fonts work on Instagram, WhatsApp, and games?</div>
-                <div class="faq-answer">Yes! All our font styles use standard Unicode characters, which are supported by most modern platforms including Instagram, WhatsApp, Facebook, TikTok, PUBG, Free Fire, and BGMI. The text will appear exactly as shown.</div>
-            </div>
-            
-            <div class="faq-item">
-                <div class="faq-question">❓ Can I use multiple font styles together?</div>
-                <div class="faq-answer">Absolutely! You can combine different styles, for example, using box font for your first name and triangle font for your last name. Simply type both words and select different styles – the converter will apply each style separately.</div>
-            </div>
-            
-            <div class="faq-item">
-                <div class="faq-question">❓ Is this tool free to use?</div>
-                <div class="faq-answer">100% free! No sign-up, no hidden charges, no watermarks. Just type your name and copy. We believe everyone should have access to stylish names.</div>
-            </div>
-            
-            <div class="faq-item">
-                <div class="faq-question">❓ Why do some platforms not show the fonts correctly?</div>
-                <div class="faq-answer">While most modern platforms support these Unicode characters, some older apps or specific fonts might not render them properly. If you face issues, try our other font styles as they're all tested on major platforms.</div>
-            </div>
+        <!-- ===== BACK BUTTON ===== -->
+        <div style="text-align:center;margin:20px 0;">
+            <a href="index.html" style="display:inline-block;padding:10px 30px;background:#4f46e5;color:#fff;text-decoration:none;border-radius:30px;font-weight:500;">← Back to Generator</a>
         </div>
 
-        <!-- Second Ad Placeholder -->
-        <div class="ad-container">
-            <div class="ad-label">Advertisement</div>
-            <div class="ad-space">
-                <!-- Google AdSense will be placed here -->
-                <span>Responsive Ad Space</span>
-            </div>
-        </div>
     </div>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>stylename.in</h3>
-                    <p>Create unique and stylish names for gaming and social media. 100% free online tool with 30+ amazing font styles.</p>
-                </div>
-                <div class="footer-section">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
-                        <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
-                        <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
-                        <li><a href="privacy-policy.html"><i class="fas fa-shield-alt"></i> Privacy Policy</a></li>
-                        <li><a href="terms.html"><i class="fas fa-file-contract"></i> Terms & Conditions</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Popular Tools</h3>
-                    <ul>
-                        <li><a href="pubg-stylish-names-with-symbols.html"><i class="fas fa-crosshairs"></i> PUBG Names</a></li>
-                        <li><a href="free-fire-stylish-nicknames.html"><i class="fas fa-fire"></i> Free Fire Names</a></li>
-                        <li><a href="attitude-names-for-boys.html"><i class="fas fa-bolt"></i> Attitude Names</a></li>
-                        <li><a href="instagram-stylish-names-2026.html"><i class="fab fa-instagram"></i> Instagram Names</a></li>
-                        <li><a href="love-nicknames-2026-collection.html"><i class="fas fa-heart"></i> Love Names</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>© 2026 stylename.in. All rights reserved. | Made with ❤️ for creators worldwide</p>
-            </div>
+    <!-- ===== FOOTER ===== -->
+    <div style="text-align:center;margin-top:30px;padding:16px;border-top:2px solid #4f46e5;color:#666;font-size:.85rem;background:#fff;">
+        <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-bottom:6px;">
+            <a href="index.html" style="color:#666;text-decoration:none;">Home</a>
+            <a href="about.html" style="color:#666;text-decoration:none;">About</a>
+            <a href="contact.html" style="color:#666;text-decoration:none;">Contact</a>
+            <a href="privacy-policy.html" style="color:#666;text-decoration:none;">Privacy</a>
+            <a href="terms.html" style="color:#666;text-decoration:none;">Terms</a>
         </div>
-    </footer>
+        <p style="margin:4px 0 0 0;">© 2026 stylename.in — All rights reserved</p>
+    </div>
 
-    <!-- Scroll to Top Button -->
-    <button class="scroll-top" id="scrollTop">
-        <i class="fas fa-chevron-up"></i>
-    </button>
+    <!-- ===== TOAST ===== -->
+    <div id="toastMsg" style="position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#1a0a2e;color:#fff;padding:6px 20px;border-radius:30px;font-size:.85rem;z-index:1000;opacity:0;transition:opacity .3s;pointer-events:none;border:1px solid #4f46e5;">✅ Copied!</div>
 
-    <!-- Toast Notification -->
-    <div class="toast" id="toast"></div>
-
+    <!-- ===== SCRIPT ===== -->
     <script>
         // ===== FONTS DATA =====
         const fonts = [
-            // Box Style
-            { name: "Box Font", mark: "⃞", preview: "A⃞", category: "Enclosing", description: "Each letter in a box - clean and structured" },
-            // Triangle Style  
-            { name: "Triangle Font", mark: "⃤", preview: "A⃤", category: "Enclosing", description: "Triangular accent for edgy names" },
-            // Circle Style
-            { name: "Circle Font", mark: "⃝", preview: "A⃝", category: "Enclosing", description: "Soft circular enclosure - aesthetic look" },
-            // Diamond Style
-            { name: "Diamond Font", mark: "⃟", preview: "A⃟", category: "Enclosing", description: "Royal diamond shape overlay" },
-            // Cross Style
-            { name: "Cross Font", mark: "⃠", preview: "A⃠", category: "Enclosing", description: "Crossed circle - unique symbol" },
-            // Keycap Style
-            { name: "Keycap Font", mark: "⃣", preview: "A⃣", category: "Enclosing", description: "Mobile button style" },
-            // Screen Style
-            { name: "Screen Font", mark: "⃢", preview: "A⃢", category: "Enclosing", description: "Monitor display effect" },
-            
-            // Arrow Styles
-            { name: "Right Arrow", mark: "⃗", preview: "A⃗", category: "Arrows", description: "Dynamic right-pointing arrows" },
-            { name: "Left Arrow", mark: "⃖", preview: "A⃖", category: "Arrows", description: "Left-pointing directional arrows" },
-            { name: "Down Arrow", mark: "⃯", preview: "A⃯", category: "Arrows", description: "Downward arrows for unique look" },
-            { name: "Double Arrow", mark: "⃡", preview: "A⃡", category: "Arrows", description: "Left-right arrows for balance" },
-            
-            // Dot Styles
-            { name: "Three Dots", mark: "⃛", preview: "A⃛", category: "Dots", description: "Playful triple dots above" },
-            { name: "Four Dots", mark: "⃜", preview: "A⃜", category: "Dots", description: "Elegant four-dot pattern" },
-            { name: "Underdot", mark: "⃨", preview: "A⃨", category: "Dots", description: "Subtle dots below letters" },
-            
-            // Line Styles
-            { name: "Double Solidus", mark: "⃫", preview: "A⃫", category: "Lines", description: "Double slash modern effect" },
-            { name: "Reverse Solidus", mark: "⃥", preview: "A⃥", category: "Lines", description: "Backward slash style" },
-            { name: "Double Line", mark: "⃦", preview: "A⃦", category: "Lines", description: "Clean double vertical lines" },
-            
-            // Harpoon Styles
-            { name: "Left Harpoon", mark: "⃐", preview: "A⃐", category: "Harpoons", description: "Harpoon pointing left" },
-            { name: "Right Harpoon", mark: "⃑", preview: "A⃑", category: "Harpoons", description: "Harpoon pointing right" },
-            
-            // Ring Styles  
-            { name: "Ring Overlay", mark: "⃘", preview: "A⃘", category: "Rings", description: "Elegant ring above letters" },
-            { name: "Clockwise Ring", mark: "⃙", preview: "A⃙", category: "Rings", description: "Clockwise circular accent" },
-            { name: "Anticlockwise Ring", mark: "⃚", preview: "A⃚", category: "Rings", description: "Reverse ring for variety" },
-            
-            // Tack Styles
-            { name: "Left Tack", mark: "⃘", preview: "A⃘", category: "Tacks", description: "Left-pointing tack mark" },
-            { name: "Right Tack", mark: "⃙", preview: "A⃙", category: "Tacks", description: "Right-pointing tack mark" },
-            
-            // Vertical Line Styles
-            { name: "Long Vertical", mark: "⃒", preview: "A⃒", category: "Vertical", description: "Long line through letters" },
-            { name: "Short Vertical", mark: "⃓", preview: "A⃓", category: "Vertical", description: "Short vertical accent" },
-            
-            // Special Styles
-            { name: "Annuity", mark: "⃧", preview: "A⃧", category: "Special", description: "Unique annuity symbol" },
-            { name: "Wide Bridge", mark: "⃩", preview: "A⃩", category: "Special", description: "Bridge above letters" },
-            { name: "Asterisk", mark: "⃰", preview: "A⃰", category: "Special", description: "Star-like asterisk overlay" },
-            
-            // Extra marks
-            { name: "Left Arrow Overlay", mark: "⃪", preview: "A⃪", category: "Special", description: "Arrow overlay effect" },
-            { name: "Music Note", mark: "⃬", preview: "A⃬", category: "Special", description: "Musical note accent" }
+            { name: "Box Font", mark: "⃞", preview: "A⃞", category: "Enclosing" },
+            { name: "Triangle Font", mark: "⃤", preview: "A⃤", category: "Enclosing" },
+            { name: "Circle Font", mark: "⃝", preview: "A⃝", category: "Enclosing" },
+            { name: "Diamond Font", mark: "⃟", preview: "A⃟", category: "Enclosing" },
+            { name: "Cross Font", mark: "⃠", preview: "A⃠", category: "Enclosing" },
+            { name: "Keycap Font", mark: "⃣", preview: "A⃣", category: "Enclosing" },
+            { name: "Screen Font", mark: "⃢", preview: "A⃢", category: "Enclosing" },
+            { name: "Right Arrow", mark: "⃗", preview: "A⃗", category: "Arrows" },
+            { name: "Left Arrow", mark: "⃖", preview: "A⃖", category: "Arrows" },
+            { name: "Down Arrow", mark: "⃯", preview: "A⃯", category: "Arrows" },
+            { name: "Double Arrow", mark: "⃡", preview: "A⃡", category: "Arrows" },
+            { name: "Three Dots", mark: "⃛", preview: "A⃛", category: "Dots" },
+            { name: "Four Dots", mark: "⃜", preview: "A⃜", category: "Dots" },
+            { name: "Underdot", mark: "⃨", preview: "A⃨", category: "Dots" },
+            { name: "Double Solidus", mark: "⃫", preview: "A⃫", category: "Lines" },
+            { name: "Reverse Solidus", mark: "⃥", preview: "A⃥", category: "Lines" },
+            { name: "Double Line", mark: "⃦", preview: "A⃦", category: "Lines" },
+            { name: "Left Harpoon", mark: "⃐", preview: "A⃐", category: "Harpoons" },
+            { name: "Right Harpoon", mark: "⃑", preview: "A⃑", category: "Harpoons" },
+            { name: "Ring Overlay", mark: "⃘", preview: "A⃘", category: "Rings" },
+            { name: "Clockwise Ring", mark: "⃙", preview: "A⃙", category: "Rings" },
+            { name: "Anticlockwise Ring", mark: "⃚", preview: "A⃚", category: "Rings" },
+            { name: "Annuity", mark: "⃧", preview: "A⃧", category: "Special" },
+            { name: "Wide Bridge", mark: "⃩", preview: "A⃩", category: "Special" },
+            { name: "Asterisk", mark: "⃰", preview: "A⃰", category: "Special" },
+            { name: "Left Arrow Overlay", mark: "⃪", preview: "A⃪", category: "Special" },
+            { name: "Music Note", mark: "⃬", preview: "A⃬", category: "Special" },
+            { name: "Long Vertical", mark: "⃒", preview: "A⃒", category: "Vertical" },
+            { name: "Short Vertical", mark: "⃓", preview: "A⃓", category: "Vertical" }
         ];
 
         let currentFont = fonts[0];
         let currentName = "";
 
-        // Initialize font selector
+        // ===== BUILD FONT GRID =====
         const fontSelector = document.getElementById('fontSelector');
         fonts.forEach((font, index) => {
             const card = document.createElement('div');
-            card.className = `font-card ${index === 0 ? 'selected' : ''}`;
-            card.innerHTML = `
-                <div class="font-preview">${font.preview}</div>
-                <div class="font-name">${font.name}</div>
-                <div class="font-category">${font.category}</div>
-            `;
-            
-            card.onclick = () => {
-                document.querySelectorAll('.font-card').forEach(c => 
-                    c.classList.remove('selected')
-                );
-                card.classList.add('selected');
+            card.style.cssText = 'background:#f8f9fc;border:2px solid #e5e7eb;border-radius:8px;padding:14px 8px;text-align:center;cursor:pointer;transition:all .3s;' + (index === 0 ? 'border-color:#4f46e5;background:#eef2ff;' : '');
+            card.innerHTML = '<div style="font-size:1.8rem;margin-bottom:6px;">' + font.preview + '</div><div style="font-weight:600;font-size:.85rem;">' + font.name + '</div><div style="font-size:.7rem;color:#6b7280;">' + font.category + '</div>';
+            card.onclick = function() {
+                document.querySelectorAll('#fontSelector > div').forEach(c => {
+                    c.style.borderColor = '#e5e7eb';
+                    c.style.background = '#f8f9fc';
+                });
+                this.style.borderColor = '#4f46e5';
+                this.style.background = '#eef2ff';
                 currentFont = font;
-                if (currentName) {
-                    updatePreview();
-                    updateExamples();
-                }
+                if (currentName) updatePreview();
             };
-            
             fontSelector.appendChild(card);
         });
 
-        // Convert function - single word only
+        // ===== CONVERT FUNCTION =====
         function convertName(name, mark) {
             if (!name) return "";
-            
-            // Take only first word (remove any extra words)
             const words = name.trim().split(/\s+/);
             const singleWord = words[0] || "";
-            
-            return singleWord.split('').map(letter => {
-                return letter + mark;
-            }).join('');
+            return singleWord.split('').map(letter => letter + mark).join('');
         }
 
+        // ===== UPDATE PREVIEW =====
         function updatePreview() {
             const input = document.getElementById('name');
             const preview = document.getElementById('preview');
-            
             currentName = input.value.trim();
-            
             if (!currentName) {
                 preview.innerHTML = '👆 Enter your name above';
                 return;
             }
-            
             preview.innerHTML = convertName(currentName, currentFont.mark) || 'Error';
         }
 
-        function updateExamples() {
-            const name = document.getElementById('name')?.value.trim() || "John";
-            const firstName = name.split(/\s+/)[0] || "John";
-            
+        // ===== UPDATE EXAMPLES =====
+        function updateExamples(name) {
+            const firstName = name || "John";
             document.getElementById('exampleBox').innerHTML = convertName(firstName, "⃞");
             document.getElementById('exampleTriangle').innerHTML = convertName(firstName, "⃤");
             document.getElementById('exampleCircle').innerHTML = convertName(firstName, "⃝");
@@ -1316,137 +323,77 @@
             document.getElementById('exampleDots').innerHTML = convertName(firstName, "⃛");
         }
 
-        // Input listener
+        // ===== INPUT LISTENER =====
         document.getElementById('name').addEventListener('input', function(e) {
             const value = e.target.value;
-            // Allow only single word (remove spaces if they try to add multiple)
             if (value.includes(' ')) {
                 const words = value.split(/\s+/);
                 if (words.length > 1) {
-                    e.target.value = words[0]; // Keep only first word
-                    showToast('Only one word allowed', 'info');
+                    e.target.value = words[0];
+                    showToast('Only one word allowed');
                 }
             }
             updatePreview();
+            updateExamples(e.target.value.trim() || "John");
         });
 
-        // Clear button
-        document.getElementById('clearBtn').addEventListener('click', function() {
+        // ===== CLEAR =====
+        function clearInput() {
             document.getElementById('name').value = '';
             document.getElementById('preview').innerHTML = '👆 Enter your name above';
             currentName = '';
-            showToast('Input cleared', 'info');
-        });
+            updateExamples("John");
+            showToast('Cleared');
+        }
 
-        // Copy button
+        // ===== COPY =====
         document.getElementById('copyBtn').addEventListener('click', function() {
             const preview = document.getElementById('preview');
             const text = preview.innerText;
-            
             if (text && !text.includes('👆') && text !== 'Error') {
                 navigator.clipboard.writeText(text).then(() => {
-                    showMessage('✅ Copied to clipboard!', 'success');
-                    showToast('✅ Copied successfully!');
+                    showToast('✅ Copied: ' + text);
+                    const msg = document.getElementById('message');
+                    msg.innerHTML = '✅ Copied to clipboard!';
+                    msg.style.display = 'block';
+                    msg.style.background = '#d4edda';
+                    msg.style.color = '#155724';
+                    msg.style.border = '2px solid #c3e6cb';
+                    setTimeout(() => msg.style.display = 'none', 3000);
                 }).catch(() => {
-                    showMessage('❌ Failed to copy', 'error');
+                    showToast('❌ Failed to copy');
                 });
             } else {
-                showMessage('❌ Please enter your name first', 'error');
+                const msg = document.getElementById('message');
+                msg.innerHTML = '❌ Please enter your name first';
+                msg.style.display = 'block';
+                msg.style.background = '#f8d7da';
+                msg.style.color = '#721c24';
+                msg.style.border = '2px solid #f5c6cb';
+                setTimeout(() => msg.style.display = 'none', 3000);
             }
         });
 
-        function showMessage(msg, type) {
-            const messageDiv = document.getElementById('message');
-            messageDiv.textContent = msg;
-            messageDiv.className = `message show ${type}`;
-            setTimeout(() => messageDiv.classList.remove('show'), 3000);
-        }
-
-        function showToast(msg, type = 'info') {
-            const toast = document.getElementById('toast');
+        // ===== TOAST =====
+        function showToast(msg) {
+            const toast = document.getElementById('toastMsg');
             toast.textContent = msg;
-            toast.style.display = 'block';
+            toast.style.opacity = '1';
             if (window.toastTimeout) clearTimeout(window.toastTimeout);
-            window.toastTimeout = setTimeout(() => {
-                toast.style.display = 'none';
-            }, 2000);
+            window.toastTimeout = setTimeout(() => toast.style.opacity = '0', 2500);
         }
 
-        // Sidebar functionality
-        document.getElementById('menuToggle').addEventListener('click', function() {
-            document.getElementById('sidebar').classList.add('open');
-        });
-
-        document.getElementById('closeSidebar').addEventListener('click', function() {
-            document.getElementById('sidebar').classList.remove('open');
-        });
-
-        // Theme toggle
-        let isDarkTheme = false;
-        window.toggleTheme = function() {
-            isDarkTheme = !isDarkTheme;
-            const body = document.body;
-            const themeToggle = document.getElementById('themeToggle');
-            const themeStatus = document.getElementById('themeStatus');
-            
-            if (isDarkTheme) {
-                body.classList.add('dark-theme');
-                themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
-                themeStatus.textContent = 'Dark';
-                localStorage.setItem('theme', 'dark');
-            } else {
-                body.classList.remove('dark-theme');
-                themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
-                themeStatus.textContent = 'Light';
-                localStorage.setItem('theme', 'light');
-            }
-        };
-        
-        document.getElementById('themeToggle').addEventListener('click', toggleTheme);
-
-        // Load saved theme
-        const savedTheme = localStorage.getItem('theme');
-        if (savedTheme === 'dark') {
-            isDarkTheme = true;
-            document.body.classList.add('dark-theme');
-            document.getElementById('themeToggle').innerHTML = '<i class="fas fa-sun"></i>';
-            document.getElementById('themeStatus').textContent = 'Dark';
-        }
-
-        // Symbol modal function (placeholder)
-        window.openSymbolModal = function() {
-            alert('Symbol picker coming soon! Visit our home page for full symbol library.');
-        };
-
-        // Scroll to top
-        function initScrollTop() {
-            const scrollBtn = document.getElementById('scrollTop');
-            window.addEventListener('scroll', function() {
-                if (window.pageYOffset > 300) {
-                    scrollBtn.classList.add('show');
-                } else {
-                    scrollBtn.classList.remove('show');
-                }
-            });
-            scrollBtn.addEventListener('click', function() {
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            });
-        }
-
-        // Initialize
-        document.addEventListener('DOMContentLoaded', function() {
-            updateExamples();
-            initScrollTop();
-            document.getElementById('fontCount').textContent = fonts.length + ' styles';
-        });
-
-        // Enter key to copy
+        // ===== ENTER KEY =====
         document.getElementById('name').addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') {
-                document.getElementById('copyBtn').click();
-            }
+            if (e.key === 'Enter') document.getElementById('copyBtn').click();
+        });
+
+        // ===== INIT =====
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('fontCount').textContent = fonts.length + ' styles';
+            updateExamples("John");
         });
     </script>
-   
+
 </body>
 </html>
