@@ -2840,3 +2840,53 @@ body.dark-theme .discover-example-text {
     }
       } 
 
+/* ===== Breadcrumb cards StyleName ===== */
+
+.explore-stylename {
+    margin: 24px auto;
+    padding: 0 10px;
+    max-width: 900px;
+    content-visibility: auto;
+    contain-intrinsic-size: 180px;
+}
+
+.explore-stylename h2 {
+    margin: 0 0 12px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.style-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+}
+
+.style-links a {
+    display: block;
+    padding: 9px 13px;
+    background: #e2f6e8;
+    color: #176b35;
+    border: 1px solid #c9e9d2;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.style-links a:active {
+    transform: scale(.98);
+}
+
+@media (max-width: 480px) {
+    .style-links a {
+        flex: 1 1 calc(33.333% - 8px);
+        min-width: 95px;
+        padding: 9px 6px;
+        font-size: 13px;
+    }
+}
