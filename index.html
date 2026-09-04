@@ -11,8 +11,6 @@
 <meta name="google-adsense-account" content="ca-pub-5781318703267732">
 <!-- 2. META TAG – Search Console Verification के लिए -->
 <meta name="google-site-verification" content="cKGfHx3401UeyzijckfH4-0-Km0WQ33kICn3MIs3J04" />
-<!-- 3. ADSENSE SCRIPT – Ads दिखाने के लिए -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5781318703267732" crossorigin="anonymous"></script>
      
     <!-- SEO -->
     <meta name="description"
@@ -35,16 +33,24 @@
     <meta property="og:type"
           content="website">
     <!-- Page Title -->
-    <title>StyleName ➩😍 𖣿ⒼⒺⓃⒺⓇⒶⓉⒺ࿐ 𝗦𝗧𝕐𝗟𝕀𝗦𝗛 𝗡𝔸𝗠𝔼 ˣ‿ˣ</title>
+    <title>StyleName ➩😍 𖣿ⒼⒺⓃⒺⓇⒶⓉⒺ࿐ 𝗦𝗧𝕐𝗟𝗜𝗦𝗛 𝗡𝔸𝗠𝔼 ˣ‿ˣ</title>
     <!-- Favicon -->
     <link rel="icon"
           href="favicon.png"
           type="image/png">
-    <!-- ================= MAIN CSS ================= -->
-    <link rel="stylesheet"
-          href="style.css">
+          
+    <!-- ================= MAIN CSS (Non-blocking) ================= -->
+    <link rel="preload"
+          href="style.css"
+          as="style"
+          onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet"
+              href="style.css">
+    </noscript>
+
     <!-- ================= FONT AWESOME ================= -->
-  <link rel="preload"
+    <link rel="preload"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
           as="style"
           onload="this.onload=null;this.rel='stylesheet'">
@@ -7820,6 +7826,8 @@ document.addEventListener('DOMContentLoaded', function() {
   <!-- ===== DATA & SCRIPTS ===== -->
 <script src="script.js" defer></script>
 <script src="data.js" defer></script>
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5781318703267732" crossorigin="anonymous"></script>
                                   
        
    </body>
