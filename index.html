@@ -1732,122 +1732,238 @@
 <div style="height: 10px;"></div>
 
     
-          
-           <!-- ===== PRO TIPS SECTION ===== -->
-<div class="pro-tips-wrapper">
-    <div class="pro-tips-header">
-        <span class="pro-tips-icon">💡</span>
-        <h2 class="pro-tips-title">Pro Tips for Stylish Names</h2>
-        <p class="pro-tips-subtitle">Expert tips to make your name look cool, unique, and professional</p>
-    </div>
+          /* ============================================
+   PRO TIPS - COMPACT + SEE MORE
+   ============================================ */
 
-    <div class="pro-tips-grid">
+.pro-tips-wrapper {
+    max-width: 820px;
+    width: 100%;
+    margin: 50px auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Header */
+.pro-tips-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.pro-tips-icon {
+    display: block;
+    font-size: 2.8rem;
+    margin-bottom: 6px;
+}
+
+.pro-tips-title {
+    margin: 0 0 6px;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--dark);
+}
+
+.dark-theme .pro-tips-title {
+    color: #f0f0f0;
+}
+
+.pro-tips-subtitle {
+    margin: 0;
+    font-size: 1rem;
+    color: var(--gray);
+}
+
+.dark-theme .pro-tips-subtitle {
+    color: #94a3b8;
+}
+
+/* Grid */
+.pro-tips-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    /* Initially show only 2 */
+    max-height: 430px;
+    overflow: hidden;
+}
+
+/* Open state */
+.pro-tips-grid.show-all {
+    max-height: none;
+}
+
+/* Tip */
+.pro-tip-card {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    padding: 14px 18px;
+    background: var(--light);
+    border: 1px solid #e8ecf0;
+    border-radius: 12px;
+    box-sizing: border-box;
+}
+
+.dark-theme .pro-tip-card {
+    background: #1a1a2e;
+    border-color: #2d3a4f;
+}
+
+/* Number */
+.pro-tip-number {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2px;
+    border-radius: 50%;
+    background: #4f46e5;
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: 700;
+}
+
+.dark-theme .pro-tip-number {
+    background: #818cf8;
+}
+
+/* Icon */
+.pro-tip-icon {
+    flex-shrink: 0;
+}
+
+/* Content */
+.pro-tip-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.pro-tip-heading {
+    margin: 0 0 4px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--dark);
+}
+
+.dark-theme .pro-tip-heading {
+    color: #f0f0f0;
+}
+
+.pro-tip-text {
+    margin: 0;
+    font-size: 0.92rem;
+    line-height: 1.7;
+    color: #475569;
+}
+
+.dark-theme .pro-tip-text {
+    color: #b8b0c8;
+}
+
+.pro-tip-text strong {
+    color: var(--dark);
+}
+
+.dark-theme .pro-tip-text strong {
+    color: #d4af37;
+}
+
+/* See More */
+.pro-tips-toggle {
+    display: block;
+    margin: 14px auto 0;
+    padding: 9px 16px;
+    border: 1px solid #d4af37;
+    border-radius: 8px;
+    background: transparent;
+    color: var(--dark);
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.dark-theme .pro-tips-toggle {
+    color: #f0f0f0;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    .pro-tips-wrapper {
+        padding: 12px;
+        margin: 30px auto;
+    }
+
+    .pro-tips-title {
+        font-size: 1.8rem;
+    }
+
+    .pro-tip-card {
+        padding: 12px 16px;
+        gap: 12px;
+    }
+
+    .pro-tip-heading {
+        font-size: 0.95rem;
+    }
+
+    .pro-tip-text {
+        font-size: 0.85rem;
+    }
+
+    .pro-tip-number {
+        width: 28px;
+        height: 28px;
+        font-size: 0.6rem;
+    }
+
+    .pro-tips-grid {
+        max-height: 390px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .pro-tips-wrapper {
+        padding: 8px;
+        margin: 20px auto;
+    }
+
+    .pro-tips-title {
+        font-size: 1.4rem;
+    }
+
+    .pro-tips-subtitle {
+        font-size: 0.85rem;
+    }
+
+    .pro-tip-card {
+        padding: 10px 14px;
+        gap: 10px;
+    }
+
+    .pro-tip-heading {
+        font-size: 0.85rem;
+    }
+
+    .pro-tip-text {
+        font-size: 0.78rem;
+    }
+
+    .pro-tip-number {
+        width: 24px;
+        height: 24px;
+        font-size: 0.5rem;
+    }
+
+    .pro-tips-grid {
+        max-height: 355px;
+    }
+}
         
-        <!-- TIP 1 -->
-        <div class="pro-tip-card">
-            <div class="pro-tip-number">01</div>
-            <div class="pro-tip-icon">📏</div>
-            <div class="pro-tip-content">
-                <h3 class="pro-tip-heading">Keep It Short &amp; Simple</h3>
-                <p class="pro-tip-text">Short names (5-15 characters) always look better. They're easy to remember, easy to type, and fit perfectly in games and social media profiles. Long names often get cut off or look messy. Keep it crisp and clean!</p>
-            </div>
-        </div>
-
-        <!-- TIP 2 -->
-        <div class="pro-tip-card">
-            <div class="pro-tip-number">02</div>
-            <div class="pro-tip-icon">🎯</div>
-            <div class="pro-tip-content">
-                <h3 class="pro-tip-heading">Choose the Right Category</h3>
-                <p class="pro-tip-text">Each category serves a different purpose. Use <strong>Love</strong> for romantic names, <strong>Gamer</strong> for gaming profiles, <strong>Fancy</strong> for Instagram/YouTube, and <strong>Fonts</strong> for creative typography. Choosing the right category makes your name look natural and fitting.</p>
-            </div>
-        </div>
-
-        <!-- TIP 3 -->
-        <div class="pro-tip-card">
-            <div class="pro-tip-number">03</div>
-            <div class="pro-tip-icon">🎨</div>
-            <div class="pro-tip-content">
-                <h3 class="pro-tip-heading">Match Symbols with Your Personality</h3>
-                <p class="pro-tip-text">Use symbols that reflect your style. Hearts (❣, ♡) for romantic souls, swords (⚔️) for gamers, crowns (♛) for royal vibes, stars (☆) for dreamers, and skulls (☠) for attitude. Your symbols should tell a story about who you are!</p>
-            </div>
-        </div>
-
-        <!-- TIP 4 -->
-        <div class="pro-tip-card">
-            <div class="pro-tip-number">04</div>
-            <div class="pro-tip-icon">👑</div>
-            <div class="pro-tip-content">
-                <h3 class="pro-tip-heading">Use Attitude Words for Boys</h3>
-                <p class="pro-tip-text">Boys should use powerful words like <strong>King, Lord, Legend, Savage, Killer, Shadow, Dark, Pro</strong>. These words give a strong and confident vibe. Avoid cute words like "sweet" or "cute" – they don't match the attitude. Be bold and fearless!</p>
-            </div>
-        </div>
-
-        <!-- TIP 5 -->
-        <div class="pro-tip-card">
-            <div class="pro-tip-number">05</div>
-            <div class="pro-tip-icon">🌸</div>
-            <div class="pro-tip-content">
-                <h3 class="pro-tip-heading">Use Cute Words for Girls</h3>
-                <p class="pro-tip-text">Girls should use soft and sweet words like <strong>Queen, Princess, Angel, Sweet, Cute, Pearl, Rose, Lily, Star</strong>. These words reflect beauty and grace. Avoid aggressive words like "killer" or "deadly" – they don't suit the soft image. Embrace your elegance!</p>
-            </div>
-        </div>
-
-        <!-- TIP 6 -->
-        <div class="pro-tip-card">
-            <div class="pro-tip-number">06</div>
-            <div class="pro-tip-icon">🔢</div>
-            <div class="pro-tip-content">
-                <h3 class="pro-tip-heading">Numbers Add Uniqueness</h3>
-                <p class="pro-tip-text">Add numbers to your name to make it unique. But don't use regular numbers – use stylish ones like <strong>❶❷❸, ①②③, 𝟙𝟚𝟛, ¹²³</strong>. They look much cooler and professional. Example: <strong>King𝟬𝟳</strong> or <strong>Pro❶❶</strong>. Numbers can make your name truly one-of-a-kind!</p>
-            </div>
-        </div>
-
-        <!-- TIP 7 -->
-        <div class="pro-tip-card">
-            <div class="pro-tip-number">07</div>
-            <div class="pro-tip-icon">📱</div>
-            <div class="pro-tip-content">
-                <h3 class="pro-tip-heading">Check Platform Compatibility</h3>
-                <p class="pro-tip-text">Not all symbols work on all platforms. Free Fire, PUBG, Instagram, and WhatsApp all have different symbol support. Before finalizing your name, test it on your target platform to make sure it displays correctly. What looks amazing on one platform might break on another!</p>
-            </div>
-        </div>
-
-        <!-- TIP 8 -->
-        <div class="pro-tip-card">
-            <div class="pro-tip-number">08</div>
-            <div class="pro-tip-icon">🔤</div>
-            <div class="pro-tip-content">
-                <h3 class="pro-tip-heading">Use Different Font Styles</h3>
-                <p class="pro-tip-text">Don't stick to regular fonts. Try different styles – <strong>bold (𝗛𝗲𝗹𝗹𝗼), italic (𝘏𝘦𝘭𝘭𝘰), cursive (𝓗𝓮𝓵𝓵𝓸), double struck (ℍ𝕖𝕝𝕝𝕠), or monospace (𝙷𝚎𝚕𝚕𝚘)</strong>. Each font gives a different vibe. Experiment and find what suits you best. The right font can completely transform your name!</p>
-            </div>
-        </div>
-
-        <!-- TIP 9 -->
-        <div class="pro-tip-card">
-            <div class="pro-tip-number">09</div>
-            <div class="pro-tip-icon">☺</div>
-            <div class="pro-tip-content">
-                <h3 class="pro-tip-heading">Use the Symbol Picker</h3>
-                <p class="pro-tip-text">Don't limit yourself to keyboard symbols. Our <strong>☺ Symbol Picker</strong> has hundreds of symbols – hearts, stars, arrows, gaming symbols, decorative symbols. Explore and find hidden gems that others don't use! The right symbol can make your name stand out from the crowd.</p>
-            </div>
-        </div>
-
-        <!-- TIP 10 -->
-        <div class="pro-tip-card">
-            <div class="pro-tip-number">10</div>
-            <div class="pro-tip-icon">🔄</div>
-            <div class="pro-tip-content">
-                <h3 class="pro-tip-heading">Experiment &amp; Have Fun</h3>
-                <p class="pro-tip-text">Don't be afraid to try different combinations! Mix and match categories, try different symbols, experiment with fonts. The best names often come from unexpected combinations. Keep experimenting until you find a name that truly represents you!</p>
-            </div>
-        </div>
-
-    </div>
-</div>
-
-     <div style="height: 5px;"></div>
-
 <!-- ===== STYLISH BIO COLLECTION ===== -->
 <div class="bio-collection-wrapper">
     <div class="bio-header">
