@@ -492,22 +492,6 @@ window.addSymbols = function(cat, sym, name) {
 };
 
 // ===== INIT =====
-document.addEventListener("DOMContentLoaded", function () {
-    const grid = document.querySelector(".pro-tips-grid");
-    const button = document.querySelector(".pro-tips-toggle");
-
-    if (!grid || !button) return;
-
-    button.addEventListener("click", function () {
-        const expanded = grid.classList.toggle("show-all");
-
-        button.setAttribute("aria-expanded", expanded);
-
-        button.textContent = expanded
-            ? "Show Less ↑"
-            : "See More Tips ↓";
-    });
-});
 
 document.addEventListener('DOMContentLoaded', function() {
     const savedTheme = localStorage.getItem('theme');
