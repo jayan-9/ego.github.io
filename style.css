@@ -81,13 +81,15 @@ p {
 
 .navbar {
     width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     background: var(--light);
     border-bottom: 1px solid var(--gray-light);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
 .navbar-container {
-    min-height: 72px;
+    min-height: 56px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -97,8 +99,8 @@ p {
 /* ===== MENU BUTTON ===== */
 
 .menu-toggle {
-    width: 44px;
-    height: 44px;
+    width: 40px;
+    height: 40px;
 
     display: flex;
     align-items: center;
@@ -106,19 +108,10 @@ p {
 
     background: transparent;
     border: none;
-
     color: var(--dark);
-    font-size: 1.35rem;
 
+    font-size: 1.2rem;
     cursor: pointer;
-    border-radius: var(--radius);
-
-    transition: var(--transition);
-}
-
-.menu-toggle:hover,
-.menu-toggle:focus-visible {
-    background: var(--gray-light);
 }
 
 
@@ -126,15 +119,13 @@ p {
 
 .logo {
     text-align: center;
-    line-height: 1.2;
+    line-height: 1.1;
 }
 
 .logo h1 {
     margin: 0;
-
-    font-size: 1.5rem;
+    font-size: 1.35rem;
     font-weight: 700;
-
     color: var(--dark);
 }
 
@@ -143,11 +134,9 @@ p {
 }
 
 .tagline {
-    margin: 3px 0 0;
-
-    font-size: 0.72rem;
-    line-height: 1.2;
-
+    margin: 2px 0 0;
+    font-size: 0.65rem;
+    line-height: 1.1;
     color: var(--gray);
     text-align: center;
 }
@@ -156,8 +145,8 @@ p {
 /* ===== THEME BUTTON ===== */
 
 .theme-toggle {
-    width: 44px;
-    height: 44px;
+    width: 40px;
+    height: 40px;
 
     display: flex;
     align-items: center;
@@ -165,21 +154,11 @@ p {
 
     background: transparent;
     border: none;
-
     color: var(--dark);
-    font-size: 1.2rem;
 
+    font-size: 1.1rem;
     cursor: pointer;
-    border-radius: var(--radius);
-
-    transition: var(--transition);
 }
-
-.theme-toggle:hover,
-.theme-toggle:focus-visible {
-    background: var(--gray-light);
-}
-
 
 /* =========================================
    SIDEBAR
