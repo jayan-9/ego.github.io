@@ -1,4 +1,3 @@
-document.addEventListener("DOMContentLoaded", () => {
 
 // ===== GLOBAL VARIABLES =====
 let currentFilter = "love";
@@ -538,5 +537,4 @@ document.getElementById('nameInput').addEventListener('input', function() {
     generateStyles();
     loadMiniSuggestions();
     loadTop3Styles();
-});
 });
