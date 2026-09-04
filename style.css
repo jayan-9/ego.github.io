@@ -2890,3 +2890,61 @@ body.dark-theme .discover-example-text {
         font-size: 13px;
     }
 }
+
+/* ===== Article Page===== */
+
+.home-guides {
+    max-width: 900px;
+    margin: 26px auto;
+    padding: 0 10px;
+}
+
+.home-guides-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.home-guides-head h2 {
+    margin: 0;
+    font-size: 19px;
+}
+
+.home-guides-head a {
+    color: #176b35;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.home-guide-links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+}
+
+.home-guide-links a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 11px 13px;
+    background: #f2faf4;
+    border: 1px solid #d5ead9;
+    border-radius: 8px;
+    color: #185f31;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.home-guide-links span {
+    color: #4c805b;
+    font-size: 15px;
+}
+
+@media (max-width: 500px) {
+    .home-guide-links {
+        grid-template-columns: 1fr;
+    }
+}
