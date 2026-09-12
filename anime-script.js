@@ -294,9 +294,19 @@ function convertName(name, map) {
     for (let i = 0; i < name.length; i++) {
         const ch = name[i];
         let mapped;
-        if (map[ch] !== undefined) mapped = map[ch];
-        else if (map[ch.toLowerCase()] !== undefined) mapped = map[ch.toLowerCase()];
-        else mapped = ch;
+        
+        // 1. Exact match (agar map mein uppercase key hai)
+        if (map[ch] !== undefined) {
+            mapped = map[ch];
+        }
+        // 2. Lowercase version ka match (uppercase input ke liye)
+        else if (map[ch.toLowerCase()] !== undefined) {
+            mapped = map[ch.toLowerCase()];
+        }
+        // 3. Agar kuch na mile toh original character
+        else {
+            mapped = ch;
+        }
         out += mapped;
     }
     return out;
