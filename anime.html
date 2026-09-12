@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-    
 <head>
 
     <!-- Character Encoding -->
@@ -15,6 +14,8 @@
     <!-- Google AdSense Account Verification -->
     <meta name="google-adsense-account" content="ca-pub-5781318703267732">
 
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5781318703267732" crossorigin="anonymous"></script>
     
     <!-- SEO -->
     <meta name="description" content="Generate anime stylish names with cool symbols, Japanese fonts and anime-inspired styles. Find unique anime name ideas for gaming, cosplay and social media. Copy and paste instantly for free.">
@@ -29,11 +30,8 @@
     
     <!-- Open Graph -->
     <meta property="og:title" content="stylename.in – Anime Stylish Names for Otaku & Gamers">
-    
     <meta property="og:description" content="Generate anime stylish names with Japanese fonts and cool symbols. Perfect for anime fans, cosplay, gaming and social media. Copy and paste instantly.">
-    
     <meta property="og:url" content="https://stylename.in/anime.html">
-    
     <meta property="og:type" content="website">
     
     <!-- Page Title -->
@@ -42,17 +40,19 @@
     <!-- Favicon -->
     <link rel="icon" href="favicon.png" type="image/png">
     
-    <!-- ================= MAIN CSS ================= -->
+    <!-- Common CSS (Navbar, Sidebar, Footer) -->
     <link rel="stylesheet" href="style.css">
     
-    <!-- ================= FONT AWESOME (PRELOAD) ================= -->
+    <!-- Anime Page CSS -->
+    <link rel="stylesheet" href="anime-style.css">
+    
+    <!-- Font Awesome (Preload) -->
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-
     <noscript>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     </noscript>
 
-    <!-- ================= BREADCRUMB SCHEMA ================= -->
+    <!-- Breadcrumb Schema -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -75,1099 +75,165 @@
     </script>
 
 </head>
-    
-    <body>
-    
-  <!-- ================= NAVBAR ================= -->
-<nav class="navbar" aria-label="Main navigation">
-    <div class="container navbar-container">
-
-        <!-- Menu Button -->
-        <button
-            class="menu-toggle"
-            id="menuToggle"
-            type="button"
-            aria-label="Open menu"
-            aria-controls="sidebar"
-            aria-expanded="false">
-
-            <i class="fas fa-bars" aria-hidden="true"></i>
-        </button>
-
-        <!-- Logo -->
-        <div class="logo">
-            <h1>stylename<span class="logo-dot">.</span>in</h1>
-            <p class="tagline">Style Your Identity</p>
-        </div>
-
-        <!-- Theme Button -->
-        <button
-            class="theme-toggle"
-            id="themeToggle"
-            type="button"
-            aria-label="Toggle dark mode">
-
-            <i class="fas fa-moon" aria-hidden="true"></i>
-        </button>
-
-    </div>
-</nav>
-
-
-<!-- ================= SIDEBAR ================= -->
-<aside
-    class="sidebar"
-    id="sidebar"
-    aria-label="Sidebar menu"
-    aria-hidden="true">
-
-    <!-- Sidebar Header -->
-    <div class="sidebar-header">
-
-        <h2 class="sidebar-title">Menu</h2>
-
-        <button
-            class="close-sidebar"
-            id="closeSidebar"
-            type="button"
-            aria-label="Close menu">
-
-            <i class="fas fa-times" aria-hidden="true"></i>
-        </button>
-
-    </div>
-
-
-    <!-- Sidebar Content -->
-    <div class="sidebar-content">
-
-        <!-- Theme -->
-        <button
-            class="sidebar-item"
-            type="button"
-            onclick="toggleTheme()">
-
-            <i class="fas fa-palette" aria-hidden="true"></i>
-
-            <span>Theme</span>
-
-            <span class="theme-status" id="themeStatus">
-                Light
-            </span>
-
-        </button>
-
-
-        <!-- Symbols -->
-        <button
-            class="sidebar-item"
-            type="button"
-            onclick="openSymbolModal()">
-
-            <i class="fas fa-symbols" aria-hidden="true"></i>
-
-            <span>Symbols Library</span>
-
-        </button>
-
-
-        <!-- Guide -->
-        <button
-            class="sidebar-item"
-            type="button"
-            onclick="showGuide()">
-
-            <i class="fas fa-book" aria-hidden="true"></i>
-
-            <span>How to Use</span>
-
-        </button>
-
-
-        <!-- Quick Notes -->
-        <button
-            class="sidebar-item"
-            id="noteSection"
-            type="button">
-
-            <i class="fas fa-sticky-note" aria-hidden="true"></i>
-
-            <span>Quick Notes</span>
-
-            <span class="note-badge" id="noteCount">
-                0/100
-            </span>
-
-        </button>
-
-
-        <!-- Coming Soon -->
-        <div class="sidebar-item coming-soon">
-
-            <i class="fas fa-robot" aria-hidden="true"></i>
-
-            <span>AI Name Generator</span>
-
-            <span class="badge">
-                Soon
-            </span>
-
-        </div>
-
-
-        <div class="sidebar-divider"></div>
-
-
-        <!-- About -->
-        <a href="about.html" class="sidebar-item">
-
-            <i class="fas fa-info-circle" aria-hidden="true"></i>
-
-            <span>About Us</span>
-
-        </a>
-
-
-        <!-- Contact -->
-        <a href="contact.html" class="sidebar-item">
-
-            <i class="fas fa-envelope" aria-hidden="true"></i>
-
-            <span>Contact</span>
-
-        </a>
-
-
-        <!-- Privacy -->
-        <a href="privacy-policy.html" class="sidebar-item">
-
-            <i class="fas fa-shield-alt" aria-hidden="true"></i>
-
-            <span>Privacy Policy</span>
-
-        </a>
-
-
-        <!-- Terms -->
-        <a href="terms.html" class="sidebar-item">
-
-            <i class="fas fa-file-contract" aria-hidden="true"></i>
-
-            <span>Terms &amp; Conditions</span>
-
-        </a>
-
-    </div>
-
-
-    <!-- ================= NOTE EDITOR ================= -->
-    <div class="note-editor" id="noteEditor">
-
-        <div class="note-actions-top">
-
-            <button
-                onclick="saveNote()"
-                class="save-note"
-                type="button">
-
-                <i class="fas fa-save" aria-hidden="true"></i>
-                Save
-
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+    <nav class="navbar">
+        <div class="container">
+            <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+                <i class="fas fa-bars"></i>
             </button>
+            <div class="logo">
+                <h1>stylename<span class="logo-dot">.</span>in</h1>
+                <p class="tagline">Anime Style</p>
+            </div>
+            <div style="width: 40px;"></div>
+        </div>
+    </nav>
 
-
-            <button
-                onclick="clearNote()"
-                class="clear-note"
-                type="button">
-
-                <i class="fas fa-trash" aria-hidden="true"></i>
-                Clear
-
+    <!-- ================= SIDEBAR ================= -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h3>Menu</h3>
+            <button class="close-sidebar" id="closeSidebar" aria-label="Close">
+                <i class="fas fa-times"></i>
             </button>
-
         </div>
-
-
-        <textarea
-            placeholder="Type your notes here... (Max 100 words)"
-            maxlength="500"
-            id="noteText"
-            aria-label="Quick notes">
-        </textarea>
-
-    </div>
-
-</aside>
-
-
-<!-- ================= WELCOME TEXT ================= -->
-<div class="welcome-container">
-
-    <p class="welcome-heading">
-        ✨ Generate stylish &amp; creative names instantly ✨
-    </p>
-
-    <p class="welcome-text">
-        100% free • One-click copy • Perfect for gaming &amp; social media
-    </p>
-
-</div>
-
-    <div style="height: 60px;"></div>
-
-         <!-- 👇 YEH LINE ADD KARO COSE YOUR CATAGORY -->
-      <div style="text-align: center; margin: 15px 0; padding: 8px 0; background: var(--gray-light); width: 100%; border-top: 1px solid #333; border-bottom: 1px solid #333;">
-    <p style="margin: 0; color: var(--dark); font-size: 1rem; font-weight: 500; letter-spacing: 0.5px;">
-          What's Your Mood
-    </p>
-</div> 
-    
-    <!-- Categories -->
-    <div class="categories-section">
-        <div class="container">
-            <div class="categories-scroll">
-                <button class="category-btn active" onclick="selectCategory('love')">
-                    <i class="fas fa-heart"></i> Love Name
-                </button>
-                <button class="category-btn" onclick="selectCategory('gamer')">
-                    <i class="fas fa-gamepad"></i> Attitude 
-                </button>
-                <button class="category-btn" onclick="selectCategory('fancy')">
-                    <i class="fas fa-crown"></i> Stylish Name
-                </button>
-                <button class="category-btn" onclick="selectCategory('font')">
-                    <i class="fas fa-font"></i> Fonts
-                </button>
+        <div class="sidebar-content">
+            <div class="sidebar-item" onclick="showHowToUse()">
+                <i class="fas fa-book"></i>
+                <span>How to Use</span>
             </div>
+            <div class="sidebar-item" id="noteSection">
+                <i class="fas fa-sticky-note"></i>
+                <span>Quick Notes</span>
+                <span class="note-badge" id="noteCount">0/100</span>
+            </div>
+            <div class="sidebar-divider"></div>
+            <div class="sidebar-item" onclick="window.location.href='about.html'">
+                <i class="fas fa-info-circle"></i>
+                <span>About Us</span>
+            </div>
+            <div class="sidebar-item" onclick="window.location.href='contact.html'">
+                <i class="fas fa-envelope"></i>
+                <span>Contact</span>
+            </div>
+            <div class="sidebar-item" onclick="window.location.href='privacy-policy.html'">
+                <i class="fas fa-shield-alt"></i>
+                <span>Privacy Policy</span>
+            </div>
+            <div class="sidebar-item" onclick="window.location.href='terms.html'">
+                <i class="fas fa-file-contract"></i>
+                <span>Terms & Conditions</span>
+            </div>
+        </div>
+        <div class="note-editor" id="noteEditor">
+            <div class="note-actions-top">
+                <button onclick="saveNote()" class="save-note"><i class="fas fa-save"></i> Save</button>
+                <button onclick="clearNote()" class="clear-note"><i class="fas fa-trash"></i> Clear</button>
+            </div>
+            <textarea placeholder="Type your notes here... (Max 100 words)" maxlength="500" id="noteText"></textarea>
         </div>
     </div>
 
-             
-            <!-- ===== TOP 3 STYLES SECTION ===== -->
-<div class="top3-section">
-    <div class="container">
-        <h3 class="top3-title">TOP 3 NAME</h3>
-        
-        <div id="top3Styles" class="top3-grid">
-            <!-- 3 random styles will load here -->
-        </div>
-        
-        <button class="generate-another-btn" onclick="refreshTop3Styles()">
-            GENERATE ANOTHER
-        </button>
-    </div>
-</div>
-             
-<!-- Results Section -->
-<section class="results-section">
-    <div class="container">
-        <div class="section-header">
-            <h2><i class="fas fa-star"></i> Generated Name Styles</h2>
-        </div>
-        <div id="result" class="results-grid">
-
-            <!-- ============================================ -->
-            <!-- ===== EXAMPLES – USERS को दिखेंगे ===== -->
-            <!-- ============================================ -->
-            <div id="exampleContainer" style="display: contents;">
-
-                <!-- ================================================== -->
-<!-- ===== LOVE EXAMPLES – सारे ===== -->
-<!-- ================================================== -->
-
-<div class="style-card love" onclick="copyText('●──🅝Ⓐ🅜Ⓔ ꕤ࿐', this)">
-    <div class="style-text">●──🅝Ⓐ🅜Ⓔ ꕤ࿐</div>
-</div>
-<div class="style-card love" onclick="copyText('៚ꕤη𝚊𝚖𝚎ꕤ 🐼᭄', this)">
-    <div class="style-text">៚ꕤη𝚊𝚖𝚎ꕤ 🐼᭄</div>
-</div>
-<div class="style-card love" onclick="copyText('🐼⃞ᴵᵐ•𝑁𝑎𝑚𝑒᭄࿐', this)">
-    <div class="style-text">🐼⃞ᴵᵐ•𝑁𝑎𝑚𝑒᭄࿐</div>
-</div>
-<div class="style-card love" onclick="copyText('Ｉ Lᵒᵛᵉᵧₒᵤ♡𝓝𝓪𝓶𝓮 (๑′ᴗ‵๑)', this)">
-    <div class="style-text">Ｉ Lᵒᵛᵉᵧₒᵤ♡𝓝𝓪𝓶𝓮 (๑′ᴗ‵๑)</div>
-</div>
-<div class="style-card love" onclick="copyText('✨✿ ┊ɴคᴍᴇ┊ ꫂ✿', this)">
-    <div class="style-text">✨✿ ┊ɴคᴍᴇ┊ ꫂ✿</div>
-</div>
-<div class="style-card love" onclick="copyText('𝚰 ♥️ ᑎᗩᗰᗴ', this)">
-    <div class="style-text">𝚰 ♥️ ᑎᗩᗰᗴ</div>
-</div>
-<div class="style-card love" onclick="copyText('✿Ｎａｍｅ.. ✨☂', this)">
-    <div class="style-text">✿Ｎａｍｅ.. ✨☂</div>
-</div>
-<div class="style-card love" onclick="copyText('😇☘. Ναмᥱ ☘.࿐', this)">
-    <div class="style-text">😇☘. Ναмᥱ ☘.࿐</div>
-</div>
-<div class="style-card love" onclick="copyText('ᴍɪꜱꜱ❀ɴᴀᴍᴇ ┊❀.࿐', this)">
-    <div class="style-text">ᴍɪꜱꜱ❀ɴᴀᴍᴇ ┊❀.࿐</div>
-</div>
-<div class="style-card love" onclick="copyText('☂»»—N̷̷𝑎𝑚𝑒—««☂', this)">
-    <div class="style-text">☂»»—N̷̷𝑎𝑚𝑒—««☂</div>
-</div>
-<div class="style-card love" onclick="copyText('👩🏻‍❤️‍👨🏼ᑄ 🅽🅰🅼🅴 🙇🏻‍♀️💞', this)">
-    <div class="style-text">👩🏻‍❤️‍👨🏼ᑄ 🅽🅰🅼🅴 🙇🏻‍♀️💞</div>
-</div>
-<div class="style-card love" onclick="copyText('⋆˙⟡ ᥒᥲᴍᥱ ⋆˙⟡ 🥰', this)">
-    <div class="style-text">⋆˙⟡ ᥒᥲᴍᥱ ⋆˙⟡ 🥰</div>
-</div>
-<div class="style-card love" onclick="copyText('𖣿┆Νᴀᴍᴇ ❣️࿐', this)">
-    <div class="style-text">𖣿┆Νᴀᴍᴇ ❣️࿐</div>
-</div>
-<div class="style-card love" onclick="copyText('☘·˚₊𝘕ꪖꪑꫀ«━━━❥🔖', this)">
-    <div class="style-text">☘·˚₊𝘕ꪖꪑꫀ«━━━❥🔖</div>
-</div>
-<div class="style-card love" onclick="copyText('✿Ｎａｍｅ.. ✨☂', this)">
-    <div class="style-text">✿Ｎａｍｅ.. ✨☂</div>
-</div>
-<div class="style-card love" onclick="copyText('⸝⸝⸝✿⸝⸝⸝𝙽𝚊𝚖𝚎⸝⸝⸝✿⸝⸝⸝', this)">
-    <div class="style-text">⸝⸝⸝✿⸝⸝⸝𝙽𝚊𝚖𝚎⸝⸝⸝✿⸝⸝⸝</div>
-</div>
-<div class="style-card love" onclick="copyText('𝚾- N̷̷a̷m̷e̷ 모', this)">
-    <div class="style-text">𝚾- N̷̷a̷m̷e̷ 모</div>
-</div>
-<div class="style-card love" onclick="copyText('ᴏᴘ メɴᴀᴍᴇメ࿐', this)">
-    <div class="style-text">ᴏᴘ メɴᴀᴍᴇメ࿐</div>
-</div>
-<div class="style-card love" onclick="copyText('✿┊ɴ ᴀ ᴍ ᴇ ᭄ᵇˡᵃ̸ᶜᵏ', this)">
-    <div class="style-text">✿┊ɴ ᴀ ᴍ ᴇ ᭄ᵇˡᵃ̸ᶜᵏ</div>
-</div>
-<div class="style-card love" onclick="copyText('ᴰᵃ͢͢͢ᵛⁱˡ Ｎａｍｅ⁔모࿐', this)">
-    <div class="style-text">ᴰᵃ͢͢͢ᵛⁱˡ Ｎａｍｅ⁔모࿐</div>
-</div>
-<div class="style-card love" onclick="copyText('╰⁔╯☯ ɴ̑ᴀ̑ᴍ̑ᴇ̑ ⓥ࿐', this)">
-    <div class="style-text">╰⁔╯☯ ɴ̑ᴀ̑ᴍ̑ᴇ̑ ⓥ࿐</div>
-</div>
-<div class="style-card love" onclick="copyText('៚Ν α м ε ‼  ᴳ̸ᴬ̸ᴹ̸ᴱ̸ᴿ̸', this)">
-    <div class="style-text">៚Ν α м ε ‼  ᴳ̸ᴬ̸ᴹ̸ᴱ̸ᴿ̸</div>
-</div>
-<div class="style-card love" onclick="copyText('ᴹᴿ°᭄✰𝙽𝚊𝚖𝚎࿐⓿❼', this)">
-    <div class="style-text">ᴹᴿ°᭄✰𝙽𝚊𝚖𝚎࿐⓿❼</div>
-</div>
-<div class="style-card love" onclick="copyText('모ܔ☆⃟𝘕 𝘈 𝘔 𝘌 ࿐ᴮᴼˢˢ', this)">
-    <div class="style-text">모ܔ☆⃟𝘕 𝘈 𝘔 𝘌 ࿐ᴮᴼˢˢ</div>
-</div>
-<div class="style-card love" onclick="copyText('☬█▓▒░ 𝓝𝒶𝓂𝑒 ░▒▓█☬', this)">
-    <div class="style-text">☬█▓▒░ 𝓝𝒶𝓂𝑒 ░▒▓█☬</div>
-</div>
-<div class="style-card love" onclick="copyText('ᴮᴼˢˢܔⓃⓐⓜⓔ☆࿐', this)">
-    <div class="style-text">ᴮᴼˢˢܔⓃⓐⓜⓔ☆࿐</div>
-</div>
-<div class="style-card love" onclick="copyText('NAME ⓿❼࿐', this)">
-    <div class="style-text">NAME ⓿❼࿐</div>
-</div>
-<div class="style-card love" onclick="copyText('♥︎♡♥︎ ₊˚ɴ ᴀ ᴍ ᴇ ˚₊┈❽❽', this)">
-    <div class="style-text">♥︎♡♥︎ ₊˚ɴ ᴀ ᴍ ᴇ ˚₊┈❽❽</div>
-</div>
-<div class="style-card love" onclick="copyText('🦋⃟𝙉𝕒𝙢𝕖˚࿔⊹❤️s࿐', this)">
-    <div class="style-text">🦋⃟𝙉𝕒𝙢𝕖˚࿔⊹❤️s࿐</div>
-</div>
-<div class="style-card love" onclick="copyText('♡✨N̸▵a̸▵m̸▵e̸▵✨🦋࿐', this)">
-    <div class="style-text">♡✨N̸▵a̸▵m̸▵e̸▵✨🦋࿐</div>
-</div>
-<div class="style-card love" onclick="copyText('░✰☺︎ɴ·ᴀ·ᴍ·ᴇ·☺︎✰░ 🫀', this)">
-    <div class="style-text">░✰☺︎ɴ·ᴀ·ᴍ·ᴇ·☺︎✰░ 🫀</div>
-</div>
-<div class="style-card love" onclick="copyText('🦋⃟𝙉𝙖𝙢𝙚⋆˙⟡💗᪲᪲᪲🩹', this)">
-    <div class="style-text">🦋⃟𝙉𝙖𝙢𝙚⋆˙⟡💗᪲᪲᪲🩹</div>
-</div>
-<div class="style-card love" onclick="copyText('ΝΛΜΞ', this)">
-    <div class="style-text">ΝΛΜΞ</div>
-</div>
-<div class="style-card love" onclick="copyText('♥️┈━═❥•·˚𝓝𝓪𝓶𝓮•˚·❥·˚═━┈', this)">
-    <div class="style-text">♥️┈━═❥•·˚𝓝𝓪𝓶𝓮•˚·❥·˚═━┈</div>
-</div>
-<div class="style-card love" onclick="copyText('𐙚✨˚N̷̷a̷m̷e̷˚✨𐙚 ツ', this)">
-    <div class="style-text">𐙚✨˚N̷̷a̷m̷e̷˚✨𐙚 ツ</div>
-</div>
-<div class="style-card love" onclick="copyText('𐙚˚⊹ηαмε ☺︎ˎˊ˗࿐', this)">
-    <div class="style-text">𐙚˚⊹ηαмε ☺︎ˎˊ˗࿐</div>
-</div>
-<div class="style-card love" onclick="copyText('┈━═✨🫀🄽🄰🄼🄴🫀✨═━┈', this)">
-    <div class="style-text">┈━═✨🫀🄽🄰🄼🄴🫀✨═━┈</div>
-</div>                
-<div class="style-card love" onclick="copyText('ᶦᶰᵈ᭄Nᴀᴍᴇ𓂃모', this)">
-    <div class="style-text">ᶦᶰᵈ᭄Nᴀᴍᴇ𓂃모</div>
-</div>
-<div class="style-card love" onclick="copyText('R̵̔2⸝⸝⸝ N̵̔A̵̔M̵̔E̵̔ ⸝⸝⸝╰⁔╯', this)">
-    <div class="style-text">R̵̔2⸝⸝⸝ N̵̔A̵̔M̵̔E̵̔ ⸝⸝⸝╰⁔╯</div>
-</div>
-<div class="style-card love" onclick="copyText('Nɐɯǝ ⅄⊥', this)">
-    <div class="style-text">Nɐɯǝ ⅄⊥</div>
-</div>
-<div class="style-card love" onclick="copyText('⸙⸙ Nᴀᴍᴇ ❀ ™', this)">
-    <div class="style-text">⸙⸙ Nᴀᴍᴇ ❀ ™</div>
-</div>
-<div class="style-card love" onclick="copyText('ᴳ̸ᴬ̸ᴹ̸ᴱ̸ᴿ̸ ᴹᴿ°᭄✰𝙽𝚊𝚖𝚎࿐', this)">
-    <div class="style-text">ᴳ̸ᴬ̸ᴹ̸ᴱ̸ᴿ̸ ᴹᴿ°᭄✰𝙽𝚊𝚖𝚎࿐</div>
-</div>
-<div class="style-card love" onclick="copyText('⓿❼ ╰‿╯𝘕 ꫝ 𝘔 Ξ   ꤪꤨꤪ𝟗𝟓᭄', this)">
-    <div class="style-text">⓿❼ ╰‿╯𝘕 ꫝ 𝘔 Ξ   ꤪꤨꤪ𝟗𝟓᭄</div>
-</div>
-<div class="style-card love" onclick="copyText('ɴ ᴀ ᴍ ᴇ ⁹⁹⁹⁺', this)">
-    <div class="style-text">ɴ ᴀ ᴍ ᴇ ⁹⁹⁹⁺</div>
-</div>
-<div class="style-card love" onclick="copyText('βØᎩ‹𝟹 🄽🄰🄼🄴༻', this)">
-    <div class="style-text">βØᎩ‹𝟹 🄽🄰🄼🄴༻</div>
-</div>
-<div class="style-card love" onclick="copyText('ɪᴍ࿐ ɴคᴍᴇ ❻❼', this)">
-    <div class="style-text">ɪᴍ࿐ ɴคᴍᴇ ❻❼</div>
-</div>
-<div class="style-card love" onclick="copyText('🖤₊˚ ɴ̑ᴀ̑ᴍ̑ᴇ̑˚₊🖤༒', this)">
-    <div class="style-text">🖤₊˚ ɴ̑ᴀ̑ᴍ̑ᴇ̑˚₊🖤༒</div>
-</div>
-<div class="style-card love" onclick="copyText('ᴠͥɪͣᴘͫ 🩵⃟ɴꫝᴍᴇ ᭄', this)">
-    <div class="style-text">ᴠͥɪͣᴘͫ 🩵⃟ɴꫝᴍᴇ ᭄</div>
-</div>
-<div class="style-card love" onclick="copyText('💗✿⃟Nꫝme𓆪₊˚💫࿐', this)">
-    <div class="style-text">💗✿⃟Nꫝme𓆪₊˚💫࿐</div>
-</div>
-<div class="style-card love" onclick="copyText('░🄽✰🄰✰🄼✰🄴░', this)">
-    <div class="style-text">░🄽✰🄰✰🄼✰🄴░</div>
-</div>
-<div class="style-card love" onclick="copyText('𓆩☠ɴᴀᴍᴇ☠𓆪', this)">
-    <div class="style-text">𓆩☠ɴᴀᴍᴇ☠𓆪</div>
-</div>
-<div class="style-card love" onclick="copyText('𒆜┋N̾A̾M̾E̾┋𒆜', this)">
-    <div class="style-text">𒆜┋N̾A̾M̾E̾┋𒆜</div>
-</div>
-<div class="style-card love" onclick="copyText('☂𐙚✿ПΔMΣ𐙚✿.࿐', this)">
-    <div class="style-text">☂𐙚✿ПΔMΣ𐙚✿.࿐</div>
-</div>
-<div class="style-card love" onclick="copyText('⧉░𝙉𝙖𝙢𝙚░⧉🧊', this)">
-    <div class="style-text">⧉░𝙉𝙖𝙢𝙚░⧉🧊</div>
-</div>
-<div class="style-card love" onclick="copyText('▄▀▄🄽🄰🄼🄴▄▀▄', this)">
-    <div class="style-text">▄▀▄🄽🄰🄼🄴▄▀▄</div>
-</div>
-<div class="style-card love" onclick="copyText('꧁┋✿[N̲̅][a̲̅][m̲̅][e̲̅]✿┋꧂', this)">
-    <div class="style-text">꧁┋✿[N̲̅][a̲̅][m̲̅][e̲̅]✿┋꧂</div>
-</div>
-<div class="style-card love" onclick="copyText('✿ ┊✨ɴคᴍᴇ ꫂ✿ꪶ 🦚', this)">
-    <div class="style-text">✿ ┊✨ɴคᴍᴇ ꫂ✿ꪶ 🦚</div>
-</div>
-<div class="style-card love" onclick="copyText('×º°”˜`”°º×₦₳₥₳×º°”˜`”°º×', this)">
-    <div class="style-text">×º°”˜`”°º×₦₳₥₳×º°”˜`”°º×</div>
-</div>
-<div class="style-card love" onclick="copyText('ɪτѕ_NAME_ꪎꪎ 👿', this)">
-    <div class="style-text">ɪτѕ_NAME_ꪎꪎ 👿</div>
-</div>
-<div class="style-card love" onclick="copyText('ϟ ꕤ 🅝❼🅜❸ ϟⓥϟꪶ', this)">
-    <div class="style-text">ϟ ꕤ 🅝❼🅜❸ ϟⓥϟꪶ</div>
-</div>
-<div class="style-card love" onclick="copyText('▶●──卄🅝Ⓐ🅜Ⓔ卄ꕤ࿐', this)">
-    <div class="style-text">▶●──卄🅝Ⓐ🅜Ⓔ卄ꕤ࿐</div>
-</div>
-<div class="style-card love" onclick="copyText('╰⁔╯⚠ 𝙉𝕒𝙢𝕖║▌💕✿', this)">
-    <div class="style-text">╰⁔╯⚠ 𝙉𝕒𝙢𝕖║▌💕✿</div>
-</div>
-<div class="style-card love" onclick="copyText('Cᵒᵒˡジ 𐌽 𐌰 𐌼 𐌴 ⟡‿⟡😎', this)">
-    <div class="style-text">Cᵒᵒˡジ 𐌽 𐌰 𐌼 𐌴 ⟡‿⟡😎</div>
-</div>
-<div class="style-card love" onclick="copyText('✩°｡⋆ 𝙉𝙖𝙢𝙚 ⋆｡°✩', this)">
-    <div class="style-text">✩°｡⋆ 𝙉𝙖𝙢𝙚 ⋆｡°✩</div>
-</div>
-<div class="style-card love" onclick="copyText('𝗡⃤𝗮⃤𝗺⃤𝗲⃤❣', this)">
-    <div class="style-text">𝗡⃤𝗮⃤𝗺⃤𝗲⃤❣</div>
-</div>
-<div class="style-card love" onclick="copyText('ΝΛΜΞ', this)">
-    <div class="style-text">ΝΛΜΞ</div>
-</div>
-                <!-- ... सारे LOVE EXAMPLES ... -->
-
-                <!-- ===== GAMER EXAMPLES ===== -->
-                <div class="style-card gamer" onclick="copyText('ＯＰܔ𝘕𝘈𝘔𝘌Ⓥ࿐', this)">
-                    <div class="style-text">ＯＰܔ𝘕𝘈𝘔𝘌Ⓥ࿐</div>
-                </div>
-                <!-- ================================================== -->
-<!-- ===== GAMER EXAMPLES – सारे ===== -->
-<!-- ================================================== -->
-
-<div class="style-card gamer" onclick="copyText('★Nᴀᴍᴇ★࿐', this)">
-    <div class="style-text">★Nᴀᴍᴇ★࿐</div>
-</div>
-<div class="style-card gamer" onclick="copyText('𐌱ʀợ ☂ Ναʍᥱ ༒꧂', this)">
-    <div class="style-text">𐌱ʀợ ☂ Ναʍᥱ ༒꧂</div>
-</div>
-
-                <!-- ===== FANCY EXAMPLES ===== -->
-                <div class="style-card fancy" onclick="copyText('ᶜ̸ʳ̸ᴬ̸ᶻ̸ʸ̸·˚✗✗𝑁𝑎𝑚𝑒✗✗˚·❄️', this)">
-                    <div class="style-text">ᶜ̸ʳ̸ᴬ̸ᶻ̸ʸ̸·˚✗✗𝑁𝑎𝑚𝑒✗✗˚·❄️</div>
-                </div>
-                <!-- ================================================== -->
-<!-- ===== FANCY EXAMPLES – सारे ===== -->
-<!-- ================================================== -->
-
-<div class="style-card fancy" onclick="copyText('♬lııl𐌽𐌻𐌼𐌴lııl♬┈', this)">
-    <div class="style-text">♬lııl𐌽𐌻𐌼𐌴lııl♬┈</div>
-</div>
-<div class="style-card fancy" onclick="copyText('no1 亗 ⲛคʍⲉ ʚ♡ɞ 😎', this)">
-    <div class="style-text">no 1 亗 ⲛคʍⲉ ʚ♡ɞ 😎</div>
-</div>
-
-                <!-- ===== FONT EXAMPLES ===== -->
-                <div class="style-card font" onclick="copyText('Ⓝⓐⓜⓔ', this)">
-                    <div class="style-text">Ⓝⓐⓜⓔ</div>
-                </div>
-                <!-- ================================================== -->
-<!-- ===== FONT EXAMPLES – सारे ===== -->
-<!-- ================================================== -->
-
-<div class="style-card font" onclick="copyText('ᑎᗩᗰᗴ', this)">
-    <div class="style-text">ᑎᗩᗰᗴ</div>
-</div>
-<div class="style-card font" onclick="copyText('𝘕𝘢𝘮𝘦', this)">
-    <div class="style-text">𝘕𝘢𝘮𝘦</div>
-</div>
-
+    <!-- ================= EXAMPLES SECTIONS ================= -->
+    <main>
+        <!-- Section 1 -->
+        <section class="anime-section" data-section="1">
+            <div class="container">
+                <div class="anime-grid" id="animeGrid1"></div>
             </div>
-            <!-- ===== EXAMPLES END ===== -->
+        </section>
 
-        </div>
-        <div style="height: 50px;"></div>
-    </div>
-</section>
+        <div class="anime-spacer"></div>
 
-        <!-- 👇 50px KHALI SPACE -->
-<div style="height: 20px;"></div>
-
-   <!-- ===== DISCOVER MORE SECTION ===== -->
-<section class="discover-more-section">
-    <div class="container">
-        
-        <!-- Heading -->
-        <div class="discover-heading">✨ Discover More</div>
-
-        <!-- Accordion Items -->
-        <div class="discover-accordion">
-            
-            <!-- ===== ITEM 1: UNIQUE FONT ===== -->
-            <div class="discover-item">
-                <div class="discover-item-header" onclick="toggleDiscover(this)">
-                    <span class="discover-item-title">1️⃣ Unique Font</span>
-                    <span class="discover-item-arrow">▾</span>
-                </div>
-                <div class="discover-item-content">
-                    <p>We have used many unique fonts on this website:</p>
-                    <p>• Which fonts we used<br>
-                    • How to use them for style names<br>
-                    • All font names and their differences</p>
-                    
-                    <div class="discover-example-box">
-                        <p class="discover-example-label">✨ Font Examples:</p>
-                        <p class="discover-example-text">𝑺𝒆𝒓𝒊𝒇 • 𝖲𝖺𝗇𝗌 𝖲𝖾𝗋𝗂𝖿 • 𝓢𝓬𝓻𝓲𝓹𝓽</p>
-                        <p class="discover-example-text">𝓒𝓾𝓻𝓼𝓲𝓿𝓮 • 𝒞𝒶𝓁𝓁𝒾𝑔𝓇𝒶𝓅𝒽𝓎 • 𝔊𝔬𝔱𝔥𝔦𝔠</p>
-                    </div>
-                </div>
+        <!-- Section 2 -->
+        <section class="anime-section" data-section="2">
+            <div class="container">
+                <div class="anime-grid" id="animeGrid2"></div>
             </div>
-            
-            <!-- ===== ITEM 2: STYLISH BIO ===== -->
-            <div class="discover-item">
-                <div class="discover-item-header" onclick="toggleDiscover(this)">
-                    <span class="discover-item-title">2️⃣ Stylish Bio</span>
-                    <span class="discover-item-arrow">▾</span>
-                </div>
-                <div class="discover-item-content">
-                    <p>All stylish bios are specially designed for Instagram, WhatsApp, YouTube & Gaming profiles.</p>
-                    
-                    <div class="discover-example-box">
-                        <p class="discover-example-label">💫 Gaming Vibe Bios:</p>
-                        <p class="discover-example-text">⚔️ 𝓘 𝓹𝓵𝓪𝔂 𝓼𝓲𝓵𝓮𝓷𝓽 𝓫𝓾𝓽 𝓱𝓲𝓽 𝓵𝓲𝓴𝓮 𝓽𝓱𝓾𝓷𝓭𝓮𝓻 🌩️</p>
-                        <p class="discover-example-text">💀 𓆩𝙸 𝙳𝚘𝚗’𝚝 𝚁𝚞𝚗 𝙵𝚛𝚘𝚖 𝙵𝚒𝚐𝚑𝚝𝚜𓆪 🎮</p>
-                    </div>
-                    
-                    <div class="discover-example-box">
-                        <p class="discover-example-label">🌟 Motivational Bios:</p>
-                        <p class="discover-example-text">「⚡ 𝗛𝗨𝗦𝗧𝗟𝗘 𝗦𝗜𝗟𝗘𝗡𝗧𝗟𝗬, 𝗟𝗘𝗧 𝗧𝗛𝗘 𝗦𝗨𝗖𝗖𝗘𝗦𝗦 𝗠𝗔𝗞𝗘 𝗧𝗛𝗘 𝗡𝗢𝗜𝗦𝗘」</p>
-                    </div>
-                </div>
+        </section>
+
+        <div class="anime-spacer"></div>
+
+        <!-- Section 3 -->
+        <section class="anime-section" data-section="3">
+            <div class="container">
+                <div class="anime-grid" id="animeGrid3"></div>
             </div>
-            
-            <!-- ===== ITEM 3: REAL SUGGESTIONS ===== -->
-            <div class="discover-item">
-                <div class="discover-item-header" onclick="toggleDiscover(this)">
-                    <span class="discover-item-title">3️⃣ Real Suggestions</span>
-                    <span class="discover-item-arrow">▾</span>
-                </div>
-                <div class="discover-item-content">
-                    <p>We have personally created real suggestions in 4 categories:</p>
-                    
-                    <div class="discover-example-box">
-                        <p class="discover-example-label">❤️ Love Style:</p>
-                        <p class="discover-example-text">• 亗 Ꮮᴏᴠᴇ ❥Kiss 𓏧♥️</p>
-                        <p class="discover-example-text">• ♔𝓐𝓷𝓰𝓮𝓵 𝓸𝓯 𝓛𝓸𝓿𝓮 ｡• . • ｡⑅</p>
-                    </div>
-                    
-                    <div class="discover-example-box">
-                        <p class="discover-example-label">🎮 Gamer Style:</p>
-                        <p class="discover-example-text">• ░Ｂ░Ｏ░Ｓ░Ｓ░</p>
-                        <p class="discover-example-text">• 𝙰𝙻𝙾𝙽𝙴 𝙱𝙾𝚈 ×͜×</p>
-                    </div>
-                    
-                    <div class="discover-example-box">
-                        <p class="discover-example-label">✨ Fancy Style:</p>
-                        <p class="discover-example-text">• ＬＡＳＴ⚠︎ ＷＡＲＮＩＮＧ</p>
-                    </div>
-                    
-                    <div class="discover-example-box">
-                        <p class="discover-example-label">💎 Font Style (Premium):</p>
-                        <p class="discover-example-text">• ċ ο в 𓆗 α</p>
-                        <p class="discover-example-text">• ℍ𐚁𝕋</p>
-                    </div>
-                </div>
-            </div>
-            
-        </div>
-    </div>
-</section>
-         
-<div style="height: 40px;"></div>
+        </section>
+    </main>
 
-            <!-- ===== HOW TO USE GUIDE ===== -->
-    <section class="guide-section">
-        <div class="container">
-            <h2><i class="fas fa-book-open"></i> How to Create Stylish Names</h2>
-            <div class="guide-steps">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <h3>Enter Your Name</h3>
-                    <p>Type your original name or nickname in the input box above.</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <h3>Choose Category</h3>
-                    <p>Select from Love, Gamer, Fancy, or Font styles based on your preference.</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <h3>Generate & Copy</h3>
-                    <p>Click generate and copy your favorite style with one click.</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">4</div>
-                    <h3>Use Anywhere</h3>
-                    <p>Use your new stylish name in games, social media, or anywhere online.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-        
-
-         <div style="height: 1px;"></div>
-             <!-- ===== ADVERTISEMENT LABEL ===== -->
-<div class="ad-label">
-    <span>ADVERTISEMENT</span>
-</div>
-         
-       
-<div style="height: 1px;"></div>
-        
-        <!-- ===== bottom Tranding STYLES SECTION ===== -->
-<section class="results-section bottom-styles-section">
-    <div class="container">
-        <div class="section-header">
-            <h2><i class="fas fa-bolt"></i> Trending Stylish Names</h2>
-            <p>✨🦋</p>
-        </div>
-        <div id="resultBottom" class="results-grid"></div>
-    </div>
-</section>
-
-           
-       
-     <!-- 🔥 COMPLETE NAME STYLE GUIDE – LOVE | GAMER | FANCY | FONT 🔥 -->
-<section class="style-guide-section">
-    <div class="container">
-        <h2 class="guide-main-heading"><i class="fas fa-crown"></i> Complete Stylename Guide</h2>
-        <p class="guide-subheading">This professional guide helps users understand which symbols, fonts, and words they can combine to create powerful, attractive, and unique usernames. Each category has its own personality and visual identity.</p>
-        
-        <div class="guide-divider">━━━━━━━━━━━━━━━━━━━━━━━━</div>
-        
-        <!-- 3️⃣ SNAPCHAT STYLE -->
-<div class="guide-category">
-    <h3 class="category-heading fancy-heading">
-        👻 SNAPCHAT STYLE – For Snapchat Profiles & Social Media Identity
-    </h3>
-
-    <p class="category-desc">
-        Snapchat style focuses on aesthetic, cute and visually appealing names. Perfect for Snapchat users, content creators, and anyone who wants to make their profile look stylish and unique.
-    </p>
-</div>
-
-<div class="guide-section">
-    <h4>◆ Snapchat Symbols:</h4>
-    <div class="guide-tags">
-        <span class="guide-tag" onclick="copyText('🎀')">🎀</span>
-        <span class="guide-tag" onclick="copyText('𝄟')">𝄟</span>
-        <span class="guide-tag" onclick="copyText('୨')">୨</span>
-        <span class="guide-tag" onclick="copyText('୧')">୧</span>
-        <span class="guide-tag" onclick="copyText('𓆩')">𓆩</span>
-        <span class="guide-tag" onclick="copyText('✤')">✤</span>
-        <span class="guide-tag" onclick="copyText('⊹')">⊹</span>
-        <span class="guide-tag" onclick="copyText('࿐')">࿐</span>
-        <span class="guide-tag" onclick="copyText('₊˚')">₊˚</span>
-        <span class="guide-tag" onclick="copyText('⸙')">⸙</span>
-        <span class="guide-tag" onclick="copyText('☘')">☘</span>
-        <span class="guide-tag" onclick="copyText('✢')">✢</span>
-        <span class="guide-tag" onclick="copyText('💔')">💔</span>
-        <span class="guide-tag" onclick="copyText('🖤')">🖤</span>
-        <span class="guide-tag" onclick="copyText('🎀')">🎀</span>
-        <span class="guide-tag" onclick="copyText('❣')">❣</span>
-           </div>
-</div>
-
-<div class="guide-section">
-    <h4>◆ Snapchat Text Styles:</h4>
-    <div class="guide-tags">
-        <span class="guide-tag" onclick="copyText('❥ ་ ༌ ❥')">❥ ་ ༌ ❥</span>
-        <span class="guide-tag" onclick="copyText('⊹⊹  ꨄ')">⊹⊹  ꨄ</span>
-        <span class="guide-tag" onclick="copyText('ʚ♡ɞ ⲛคʍⲉ˚｡⋆🎀')">ʚ♡ɞ ⲛคʍⲉ˚｡⋆🎀</span>
-        <span class="guide-tag" onclick="copyText('ꜱᴍɪʟєʏ𝄟')">ꜱᴍɪʟєʏ𝄟</span>
-        <span class="guide-tag" onclick="copyText('𝙻𝚘𝚟𝚎 ୨୧')">𝙻𝚘𝚟𝚎 ୨୧</span>
-        <span class="guide-tag" onclick="copyText('𐌺ἷѕѕ💋')">𐌺ἷѕѕ💋</span>
-        <span class="guide-tag" onclick="copyText('𐌱ʀợ𐌺ᥱꪀ💔Ναʍᥱ')">𐌱ʀợ𐌺ᥱꪀ💔Ναʍᥱ</span>
-        <span class="guide-tag" onclick="copyText('ค𐌹ợꪀᥱ🖤Ναʍᥱ')">ค𐌹ợꪀᥱ🖤Ναʍᥱ</span>
-        <span class="guide-tag" onclick="copyText('尺丂 🎀 几卂爪乇')">尺丂 🎀 几卂爪乇</span>
-        <span class="guide-tag" onclick="copyText('𝗡⃤𝗮⃤𝗺⃤𝗲⃤❣')">𝗡⃤𝗮⃤𝗺⃤𝗲⃤❣</span>
-    </div>
-</div>
-
-<div class="guide-section">
-    <h4>◆ Snapchat Name Combinations:</h4>
-    <div class="guide-examples">
-        <div class="example-item" onclick="copyText('⊹⊹ ⲛⲇϻꫀ ꨄ')">⊹⊹ ⲛⲇϻꫀ ꨄ</div>
-        <div class="example-item" onclick="copyText('ʚ♡ɞ ⲛคʍⲉ˚｡⋆🎀')">ʚ♡ɞ ⲛคʍⲉ˚｡⋆🎀</div>
-        <div class="example-item" onclick="copyText('ꜱᴍɪʟєʏ𝄟ՈAѪ૯')">ꜱᴍɪʟєʏ𝄟ՈAѪ૯</div>
-        <div class="example-item" onclick="copyText('𝙻𝚘𝚟𝚎 ୨୧')">𝙻𝚘𝚟𝚎 ୨୧</div>
-        <div class="example-item" onclick="copyText('ⲛⲇϻⲉ ୨♡୧')">ⲛⲇϻⲉ ୨♡୧</div>
-        <div class="example-item" onclick="copyText('𓆩💎𓆪  ή𝔞爪Ｅ˚｡⋆𝄟')">𓆩💎𓆪  ή𝔞爪Ｅ˚｡⋆𝄟</div>
-        <div class="example-item" onclick="copyText('📚 ꪀα𐌼ᥱ・༈༈༈')">📚 ꪀα𐌼ᥱ・༈༈༈</div>
-        <div class="example-item" onclick="copyText('✤ ɴᵃᴍᵉ ⊹࿐')">✤ ɴᵃᴍᵉ ⊹࿐</div>
-        <div class="example-item" onclick="copyText('💋 𝙽ᦵ𝚖ᥱ ✢✢✢')">💋 𝙽ᦵ𝚖ᥱ ✢✢✢</div>
-        <div class="example-item" onclick="copyText('𐌺ἷѕѕ💋Ναʍᥱ')">𐌺ἷѕѕ💋Ναʍᥱ</div>
-        <div class="example-item" onclick="copyText('𐌱ʀợ𐌺ᥱꪀ💔Ναʍᥱ')">𐌱ʀợ𐌺ᥱꪀ💔Ναʍᥱ</div>
-        <div class="example-item" onclick="copyText('ค𐌹ợꪀᥱ🖤Ναʍᥱ')">ค𐌹ợꪀᥱ🖤Ναʍᥱ</div>
-        <div class="example-item" onclick="copyText('尺丂 🎀 几卂爪乇')">尺丂 🎀 几卂爪乇</div>
-        <div class="example-item" onclick="copyText('𝗡⃤𝗮⃤𝗺⃤𝗲⃤❣')">𝗡⃤𝗮⃤𝗺⃤𝗲⃤❣</div>
-    </div>
-</div>
-
-<p class="guide-tip"><i class="fas fa-lightbulb"></i> Tip: Use aesthetic symbols like ❥, ⊹, ʚ♡ɞ and 🎀 to create cute and beautiful Snapchat names that look professional and stylish.</p>
-</div>
-
-<div class="guide-divider">━━━━━━━━━━━━━━━━━━━━━━━━</div>
-
-<p class="guide-footer">...</p>
-</div>
-</section>
-    
-    <div style="height: 30px;"></div>
-
-    <!-- Full Suggestions Modal -->
-    <div class="modal" id="fullSuggestionsModal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h3><i class="fas fa-lightbulb"></i> <span id="modalCategoryName">Love</span> Name Ideas</h3>
-                <button class="close-modal" onclick="closeFullSuggestions()">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-            <div class="modal-body">
-                <div id="fullSuggestionsGrid" class="suggestions-grid-full">
-                    <!-- Full suggestions will load here -->
-                </div>
-            </div>
-        </div>
-    </div>
-
-         <!-- Symbol Modal -->
-    <div class="modal" id="symbolModal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h3><i class="fas fa-symbols"></i> Symbol Picker</h3>
-                <button class="close-modal" onclick="closeSymbolModal()">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-            <div class="modal-body">
-                <div class="symbol-categories" id="symbolCategories">
-                    <!-- Categories loaded by JavaScript -->
-                </div>
-                <div class="symbols-grid" id="symbolsGrid">
-                    <!-- Symbols loaded by JavaScript -->
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Guide Modal -->
-    <div class="modal guide-modal" id="guideModal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h3><i class="fas fa-book"></i> How to Use This Tool</h3>
-                <button class="close-modal" onclick="closeGuide()">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-            <div class="modal-body">
-                <div class="guide-content">
-                    <h4>Complete Guide to Creating Perfect Nicknames</h4>
-                    <div class="guide-section">
-                        <h5>Getting Started</h5>
-                        <p>Our nickname generator is designed to be simple and intuitive. Follow these steps to create the perfect stylish name:</p>
-                        <ul>
-                            <li><strong>Step 1:</strong> Enter your desired name in the input field at the top</li>
-                            <li><strong>Step 2:</strong> Choose a category that matches your style preference</li>
-                            <li><strong>Step 3:</strong> Click "Generate" to see hundreds of variations</li>
-                            <li><strong>Step 4:</strong> Click the copy button next to your favorite style</li>
-                        </ul>
-                    </div>
-                    <div class="guide-section">
-                        <h5>Category Descriptions</h5>
-                        <p><span class="category-tag love-tag"><i class="fas fa-heart"></i> Love</span> – Romantic and affectionate styles.</p>
-                        <p><span class="category-tag gamer-tag"><i class="fas fa-gamepad"></i> Gamer</span> – Bold and aggressive gaming styles.</p>
-                        <p><span class="category-tag fancy-tag"><i class="fas fa-crown"></i> Fancy</span> – Elegant and sophisticated styles.</p>
-                        <p><span class="category-tag font-tag"><i class="fas fa-font"></i> Fonts</span> – Unique text transformations.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-         
-        
-        <div style="height: 20px;"></div>
-      
-        <!-- ===== MORE STYLES SECTION (FAQ ke baad) ===== -->
-<section class="results-section mid-styles-section">
-    <div class="container">
-        <div class="section-header">
-            <h2><i class="fas fa-fire"></i> More Stylish Names</h2>
-            <p>✨🐞</p>
-        </div>
-        <div id="resultMid" class="results-grid"></div>
-    </div>
-</section>
-        
- <div style="height: 20px;"></div>
-       
-
-    <!-- 👇 50px KHALI SPACE -->
-<div style="height: 40px;"></div>
-
-    
-          
-       <!-- ===== PRO TIPS SECTION - SNAPCHAT STYLISH NAMES ===== -->
-<div class="pro-tips-wrapper">
-
-    <div class="pro-tips-header">
-        <span class="pro-tips-icon">👻</span>
-        <h2 class="pro-tips-title">Pro Tips for Snapchat Stylish Names</h2>
-        <p class="pro-tips-subtitle">
-            Creative tips to make your Snapchat name look aesthetic, cute and stylish
-        </p>
-    </div>
-
-    <div class="pro-tips-grid">
-
-        <!-- TIP 1 -->
-        <div class="pro-tip-card">
-            <div class="pro-tip-number">01</div>
-            <div class="pro-tip-icon">🎀</div>
-            <div class="pro-tip-content">
-                <h3 class="pro-tip-heading">Make Your Snapchat Name Aesthetic</h3>
-                <p class="pro-tip-text">
-                    Snapchat names look best when they are cute and visually appealing. 
-                    Try styles like <strong>ʚ♡ɞ ⲛคʍⲉ˚｡⋆🎀</strong> or 
-                    <strong>⊹⊹ ⲛⲇϻꫀ ꨄ</strong>. 
-                    Use elegant symbols like <strong>❥</strong>, <strong>⊹</strong>, <strong>ʚ♡ɞ</strong> and <strong>🎀</strong> to create a beautiful profile identity.
-                </p>
-            </div>
-        </div>
-
-        <!-- TIP 2 -->
-        <div class="pro-tip-card">
-            <div class="pro-tip-number">02</div>
-            <div class="pro-tip-icon">💋</div>
-            <div class="pro-tip-content">
-                <h3 class="pro-tip-heading">Use Cute & Romantic Symbols</h3>
-                <p class="pro-tip-text">
-                    Symbols like <strong>💋</strong>, <strong>💔</strong>, <strong>🖤</strong>, <strong>❣</strong> and 
-                    <strong>ꨄ</strong> give your Snapchat name a romantic and soft vibe. 
-                    Try combinations like <strong>💋 𝙽ᦵ𝚖ᥱ ✢✢✢</strong> or 
-                    <strong>𐌺ἷѕѕ💋Ναʍᥱ</strong> for a cute and attractive Snapchat name.
-                </p>
-            </div>
-        </div>
-
-        <!-- TIP 3 -->
-        <div class="pro-tip-card">
-            <div class="pro-tip-number">03</div>
-            <div class="pro-tip-icon">✨</div>
-            <div class="pro-tip-content">
-                <h3 class="pro-tip-heading">Add Aesthetic Decorative Elements</h3>
-                <p class="pro-tip-text">
-                    Decorative symbols like <strong>𓆩💎𓆪</strong>, <strong>📚</strong>, <strong>・༈༈༈</strong> and 
-                    <strong>✤</strong> make your name look unique. 
-                    Examples: <strong>𓆩💎𓆪  ή𝔞爪Ｅ˚｡⋆𝄟</strong> or 
-                    <strong>📚 ꪀα𐌼ᥱ・༈༈༈</strong> for a premium and elegant Snapchat profile.
-                </p>
-            </div>
-        </div>
-
-        <!-- TIP 4 -->
-        <div class="pro-tip-card">
-            <div class="pro-tip-number">04</div>
-            <div class="pro-tip-icon">🔤</div>
-            <div class="pro-tip-content">
-                <h3 class="pro-tip-heading">Mix Different Font Styles</h3>
-                <p class="pro-tip-text">
-                    Experiment with combinations like <strong>𝙻𝚘𝚟𝚎 ୨୧</strong> or 
-                    <strong>ⲛⲇϻⲉ ୨♡୧</strong>. 
-                    Try styles like <strong>𝗡⃤𝗮⃤𝗺⃤𝗲⃤❣</strong> or 
-                    <strong>尺丂 🎀 几卂爪乇</strong> to create elegant and stylish Snapchat names that stand out.
-                </p>
-            </div>
-        </div>
-
-        <!-- TIP 5 -->
-        <div class="pro-tip-card">
-            <div class="pro-tip-number">05</div>
-            <div class="pro-tip-icon">🧩</div>
-            <div class="pro-tip-content">
-                <h3 class="pro-tip-heading">Keep It Clean & Recognizable</h3>
-                <p class="pro-tip-text">
-                    The best Snapchat names are easy to remember. 
-                    Use 1-2 meaningful symbols and a stylish font. 
-                    A clean name like <strong>❥ ❥N͎a͎m͎e͎ ་ ༌ ❥</strong> or 
-                    <strong>✤ ɴᵃᴍᵉ ⊹࿐</strong> is both beautiful and easy for friends to find.
-                </p>
-            </div>
-        </div>
-
-    </div>
-</div>
-             
-     <div style="height: 40px;"></div>
-
-
-                          <!-- 👇 50px KHALI SPACE -->
-<div style="height: 60px;"></div>
-        
-         <!-- ===== WHY CHOOSE OUR GENERATOR ===== -->
-    <section class="features-section">
-        <div class="container">
-            <h2><i class="fas fa-award"></i> Why Choose Our Generator</h2>
-            <div class="features-grid">
-                <div class="feature">
-                    <i class="fas fa-bolt"></i>
-                    <h3>Instant Generation</h3>
-                    <p>Create 100+ unique and professionall Stylish Name within seconds using our highly optimized, performance-focused algorithm that intelligently transforms your plain text into stylish, creative, aesthetic, gaming-ready, attitude-filled, romantic, decorative, and premium-looking variations instantly.</p>
-                </div>
-                <div class="feature">
-                    <i class="fas fa-mobile-alt"></i>
-                    <h3>Mobile Friendly</h3>
-                    <p>Perfectly optimized for mobile devices and touch screens.</p>
-                </div>
-                <div class="feature">
-                    <i class="fas fa-lock"></i>
-                    <h3>Privacy Protected</h3>
-                    <p>Your names are processed locally, never stored on servers.</p>
-                </div>
-                <div class="feature">
-                    <i class="fas fa-sync-alt"></i>
-                    <h3>Always Updated</h3>
-                    <p>Experience consistent and reliable weekly updates featuring newly introduced love-inspired styles, gamer-focused name designs, fancy and decorative text patterns, and exclusive font variations carefully crafted to keep your name styling options fresh, modern, and aligned with the latest global trends. your usernames, bios, social media profiles, gaming tags, chat names, and personal branding.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-          
-
-             <div style="height: 10px;"></div>
-
-
-      
-    
- 
-    <!-- Footer -->
+    <!-- ================= FOOTER ================= -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>stylename.in</h3>
-                    <p>Create unique and stylish names for gaming and social media. 100% free online tool.</p>
+                    <p>Style Your Identity — Free stylish names for gaming, social media & more.</p>
                 </div>
                 <div class="footer-section">
                     <h3>Quick Links</h3>
                     <ul>
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="#" onclick="showGuide()">How to Use</a></li>
                         <li><a href="about.html">About</a></li>
                         <li><a href="contact.html">Contact</a></li>
-                        <li><a href="terms.html">Terms & Conditions</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h3>Legal</h3>
+                    <h3>Popular Pages</h3>
                     <ul>
-                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="gaming.html">Gaming Names</a></li>
+                        <li><a href="attitude.html">Attitude Names</a></li>
+                        <li><a href="love.html">Love Names</a></li>
+                        <li><a href="pubg.html">PUBG Names</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>© 2026 stylename.in. All rights reserved.</p>
+                <p>© 2026 stylename.in — All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Sticky Toolbar -->
-    <div class="sticky-toolbar">
+    <!-- ================= STICKY BOTTOM BAR ================= -->
+    <div class="sticky-toolbar" id="stickyToolbar">
         <div class="container">
             <div class="toolbar-content">
                 <div class="input-group">
-                    <input type="text" id="nameInput" placeholder="Enter your name or nickname..." autocomplete="off">
-                    <button class="symbol-btn" onclick="openSymbolModal()" title="Insert Symbols">
-                        ☺
-                    </button>
+                    <input type="text" id="animeInput" placeholder="Enter your name..." autocomplete="off">
                 </div>
-                <button class="generate-btn" onclick="generateStyles()">
-                    <i class="fas fa-wand-magic-sparkles"></i> Generate
+                <button class="generate-btn" id="generateBtn">
+                    <i class="fas fa-bolt"></i> Generate
                 </button>
             </div>
         </div>
     </div>
 
-    <!-- Scroll to Top Button -->
-    <button class="scroll-top" id="scrollTop">
-        <i class="fas fa-chevron-up"></i>
-    </button>
-    
+    <!-- ================= HOW TO USE MODAL ================= -->
+    <div class="modal" id="howToUseModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>How to Use</h3>
+                <button class="close-modal" onclick="closeHowToUse()"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body">
+                <p><strong>1.</strong> Scroll down to see anime name examples.</p>
+                <p><strong>2.</strong> Click any card to <strong>copy</strong> it instantly.</p>
+                <p><strong>3.</strong> Tap the <i class="far fa-heart"></i> icon to save as favorite.</p>
+                <p><strong>4.</strong> Tap the <i class="fas fa-share-alt"></i> icon to share.</p>
+                <p><strong>5.</strong> Enter your name in the bottom bar and click <strong>Generate</strong> to create your own anime-style names!</p>
+            </div>
+        </div>
+    </div>
 
-    <!-- Toast Notification -->
+    <!-- ================= TOAST ================= -->
     <div class="toast" id="toast"></div>
 
-        <script>
-    
-function copyCurrentUrl() {
-    navigator.clipboard.writeText(window.location.href).then(() => {
-        alert('Link copied to clipboard!');
-    }).catch(() => {
-        alert('Failed to copy link');
-    });
-}
-        </script>
-        
+    <!-- ================= SCRIPTS (Lazy / Deferred) ================= -->
+    <script src="anime-data.js" defer></script>
+    <script src="anime-script.js" defer></script>
 
-             <script src="data.js"></script>
-<script src="script.js"></script>
-
-         <!-- Google AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5781318703267732" crossorigin="anonymous"></script>
-   
- 
 </body>
 </html>
