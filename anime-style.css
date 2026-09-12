@@ -1,0 +1,150 @@
+/* ===== ANIME PAGE — LIGHTWEIGHT STYLES ===== */
+
+/* Extra spacing between sections (40px) */
+.anime-spacer {
+    height: 40px;
+}
+
+/* Section wrapper */
+.anime-section {
+    padding: 20px 0;
+    content-visibility: auto;
+    contain-intrinsic-size: 400px;
+}
+
+/* ===== GRID — 3 column layout, responsive ===== */
+.anime-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 10px;
+}
+
+/* ===== ANIME CARD ===== */
+.anime-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    transition: border-color 0.2s, transform 0.15s;
+    contain: layout style;
+}
+
+.anime-card:hover {
+    border-color: #4f46e5;
+    transform: translateY(-2px);
+}
+
+/* Favorite card — highlighted */
+.anime-card.is-fav {
+    border-color: #ec4899;
+    background: rgba(236, 72, 153, 0.04);
+}
+
+/* Style text */
+.anime-card-text {
+    font-size: 0.95rem;
+    color: #1f2937;
+    word-break: break-word;
+    line-height: 1.5;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+    flex: 1;
+}
+
+/* Action buttons row */
+.anime-card-actions {
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+    border-top: 1px solid #f3f4f6;
+    padding-top: 8px;
+}
+
+/* Small icon buttons */
+.ac-btn {
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #6b7280;
+    font-size: 0.85rem;
+    transition: background 0.15s, color 0.15s, border-color 0.15s;
+    padding: 0;
+}
+
+.ac-btn:hover {
+    background: #eef2ff;
+    color: #4f46e5;
+    border-color: #c7d2fe;
+}
+
+.ac-btn.is-fav {
+    color: #ec4899;
+    border-color: #fbcfe8;
+    background: #fdf2f8;
+}
+
+.ac-btn.ac-fav.is-fav i::before {
+    content: "\f004"; /* solid heart */
+    font-weight: 900;
+}
+
+/* Toast (lightweight) */
+.toast {
+    position: fixed;
+    bottom: 90px;
+    left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    background: #1f2937;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 0.82rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s, transform 0.25s;
+    z-index: 2000;
+}
+
+.toast.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 600px) {
+    .anime-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 8px;
+    }
+    .anime-card {
+        padding: 8px;
+    }
+    .anime-card-text {
+        font-size: 0.85rem;
+        min-height: 36px;
+    }
+    .ac-btn {
+        width: 30px;
+        height: 30px;
+        font-size: 0.78rem;
+    }
+}
+
+@media (max-width: 380px) {
+    .anime-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
