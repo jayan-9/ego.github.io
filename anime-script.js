@@ -38,17 +38,20 @@ function lazyLoadSections() {
     document.querySelectorAll('.anime-section').forEach(sec => observer.observe(sec));
 }
 
-// ---------- Load Section (Render Examples) ----------
+// ---------- Load Section (Render Examples — RANDOM) ----------
 function loadSection(n) {
     const grid = document.getElementById('animeGrid' + n);
     if (!grid) return;
 
-    // Split examples into 3 groups of ~equal size
-    const total = animeExamples.length;
+    // Shuffle ALL examples (random like other pages)
+    const shuffled = [...animeExamples].sort(() => Math.random() - 0.5);
+
+    // Split into 3 groups of ~25 each
+    const total = shuffled.length;
     const perSection = Math.ceil(total / 3);
     const start = (n - 1) * perSection;
     const end = Math.min(start + perSection, total);
-    const slice = animeExamples.slice(start, end);
+    const slice = shuffled.slice(start, end);
 
     // Sort: favorites first
     const sorted = [...slice].sort((a, b) => {
@@ -73,14 +76,14 @@ function createCard(text, isGenerated) {
     const isFav = animeFavorites.includes(text);
     if (isFav) card.classList.add('is-fav');
 
-    // Style text (click to copy)
+    // Style text (click to copy) — LEFT SIDE
     const textEl = document.createElement('div');
     textEl.className = 'anime-card-text';
     textEl.textContent = text;
     textEl.addEventListener('click', () => copyText(text, textEl));
     card.appendChild(textEl);
 
-    // Actions
+    // Actions — RIGHT SIDE
     const actions = document.createElement('div');
     actions.className = 'anime-card-actions';
 
