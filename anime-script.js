@@ -155,19 +155,19 @@ function fallbackCopy(text, cb) {
     document.body.removeChild(ta);
 }
 
-// ---------- Share (Web Share API) ----------
+// ---------- Share (Only the style text) ----------
 function shareText(text) {
-    const shareData = {
-        title: 'Anime Stylish Name',
-        text: text,
-        url: 'https://stylename.in/anime.html'
-    };
+    // Sirf style text share karo — koi URL nahi
     if (navigator.share) {
-        navigator.share(shareData).catch(() => {});
+        navigator.share({
+            title: 'Anime Stylish Name',
+            text: text
+        }).catch(() => {
+            // User cancelled ya error — kuch mat karo
+        });
     } else {
-        // Fallback — copy text + URL
-        const combined = text + ' — https://stylename.in/anime.html';
-        fallbackCopy(combined, () => showToast('🔗 Link copied!'));
+        // Fallback — sirf text copy karo (URL nahi)
+        fallbackCopy(text, () => showToast('📋 Copied to share!'));
     }
 }
 
@@ -253,14 +253,14 @@ function doGenerate() {
     const grids = [1, 2, 3].map(i => document.getElementById('animeGrid' + i));
     if (!grids[0]) return;
 
-    // Generate styles
+    // 🔀 Generate shuffled styles
     const generated = generateAnimeStylesFor(name);
     animeUserGenerated = true;
 
     // Clear all sections
     grids.forEach(g => { if (g) g.innerHTML = ''; });
 
-    // Split into 3 sections (25 each ideal, but distribute evenly)
+    // Split into 3 sections
     const total = generated.length;
     const perSection = Math.ceil(total / 3);
 
@@ -279,12 +279,16 @@ function doGenerate() {
     showToast('✨ ' + total + ' styles generated!');
 }
 
-// ---------- Generate Styles Logic ----------
+// ---------- Generate Styles (RANDOM ORDER) ----------
 function generateAnimeStylesFor(name) {
-    const results = [];
     const styles = (typeof animeStyles !== 'undefined') ? animeStyles : [];
+    if (styles.length === 0) return [];
 
-    styles.forEach(style => {
+    // 🔀 SHUFFLE the styles array — random order har baar
+    const shuffled = [...styles].sort(() => Math.random() - 0.5);
+
+    const results = [];
+    shuffled.forEach(style => {
         const styled = style.prefix + convertName(name, style.map) + style.suffix;
         results.push(styled);
     });
